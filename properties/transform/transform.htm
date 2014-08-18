@@ -1,0 +1,237 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>transform</title>
+<meta name="description" content="CSS3参考手册之: transform" />
+<meta name="keywords" content="transform, css3, css3参考手册" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../../skin/article.css" />
+</head>
+<body>
+<nav id="guide" class="g-mod">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="../index.htm">属性列表</a>
+		<span>&#187;</span>
+		<a href="index.htm" id="category" rel="properties/transform" name="transform">变换属性</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它变换属性参考</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入快速分类导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">transform</h1>
+		<ul class="info">
+			<li><strong>版本：CSS3</strong></li>
+			<li>继承性：无</li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="syntax" class="g-mod g-attr">
+		<h2 class="tit">语法：</h2>
+		<div class="cont">
+			<p><strong>transform</strong>：none | matrix(&lt;number&gt;,&lt;number&gt;,&lt;number&gt;,&lt;number&gt;,&lt;number&gt;,&lt;number&gt;)? translate(&lt;length&gt;[,&lt;length&gt;])? translateX(&lt;length&gt;)? translateY(&lt;length&gt;)? rotate(&lt;angle&gt;)? scale(&lt;number&gt;[,&lt;number&gt;])? scaleX(&lt;number&gt;)? scaleY(&lt;number&gt;)? skew(&lt;angle&gt;[,&lt;angle&gt;])? skewX(&lt;angle&gt;) || skewY(&lt;angle&gt;)?</p>
+			<p><strong>默认值</strong>：<mark class="defaultvalue">none</mark></p>
+			<p><strong>适用于</strong>：所有块级元素及某些内联元素</p>
+		    <p><strong>继承性</strong>：无</p>
+		</div>
+	</section>
+	<section id="value" class="g-mod g-attr">
+		<h2 class="tit">取值：</h2>
+		<div class="cont">
+			<dl>
+				<dt>none：</dt>
+				<dd>无转换</dd>
+				<dt>matrix(&lt;number&gt;,&lt;number&gt;,&lt;number&gt;,&lt;number&gt;,&lt;number&gt;,&lt;number&gt;)：</dt>
+				<dd>以一个含六值的(a,b,c,d,e,f)变换矩阵的形式指定一个2D变换，相当于直接应用一个[a,b,c,d,e,f]变换矩阵</dd>
+				<dt>translate(&lt;length&gt;[, &lt;length&gt;])：</dt>
+				<dd>指定对象的2D translation（2D平移）。第一个参数对应X轴，第二个参数对应Y轴。如果第二个参数未提供，则默认值为0</dd>
+				<dt>translateX(&lt;length&gt;)：</dt>
+				<dd>指定对象X轴（水平方向）的平移</dd>
+				<dt>translateY(&lt;length&gt;)：</dt>
+				<dd>指定对象Y轴（垂直方向）的平移</dd>
+				<dt>rotate(&lt;angle&gt;)：</dt>
+				<dd>指定对象的2D rotation（2D旋转），需先有transform-origin属性的定义</dd>
+				<dt>scale(&lt;number&gt;[, &lt;number&gt;])：</dt>
+				<dd>指定对象的2D scale（2D缩放）。第一个参数对应X轴，第二个参数对应Y轴。如果第二个参数未提供，则默认取第一个参数的值</dd>
+				<dt>scaleX(&lt;number&gt;)：</dt>
+				<dd>指定对象X轴的（水平方向）缩放</dd>
+				<dt>scaleY(&lt;number&gt;)：</dt>
+				<dd>指定对象Y轴的（垂直方向）缩放</dd>
+				<dt>skew(&lt;angle&gt; [, &lt;angle&gt;])：</dt>
+				<dd>指定对象skew transformation（斜切扭曲）。第一个参数对应X轴，第二个参数对应Y轴。如果第二个参数未提供，则默认值为0</dd>
+				<dt>skewX(&lt;angle&gt;)：</dt>
+				<dd>指定对象X轴的（水平方向）扭曲</dd>
+				<dt>skewY(&lt;angle&gt;)：</dt>
+				<dd>指定对象Y轴的（垂直方向）扭曲</dd>
+			</dl>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
+		<h2 class="tit">说明：</h2>
+		<div class="cont">
+			<strong>设置或检索对象的转换。</strong>
+			<ul>
+				<li>对应的脚本特性为<strong>transform</strong>。</li>
+			</ul>
+		</div>
+	</section>
+	<section id="compatible" class="g-mod g-attr">
+		<h2 class="tit">兼容性：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">墨绿</span> = 部分支持</li>
+				<li><span class="experimentsupport">橙色</span> = 实验性质</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
+						<th><span class="browser-ie">IE</span></th>
+						<th><span class="browser-firefox">Firefox</span></th>
+						<th><span class="browser-safari">Safari</span></th>
+						<th><span class="browser-chrome">Chrome</span></th>
+						<th><span class="browser-opera">Opera</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>版本</th>
+						<td class="unsupport">6-8</td>
+						<td rowspan="2" class="experimentsupport">4-18</td>
+						<td rowspan="2" class="experimentsupport">5.1.7</td>
+						<td rowspan="2" class="experimentsupport">13-23</td>
+						<td rowspan="2" class="experimentsupport">11.5-12.5</td>
+					</tr>
+					<tr>
+						<th>版本</th>
+						<td class="experimentsupport">9-10</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+	<section id="example" class="g-mod g-attr">
+		<h2 class="tit">示例：</h2>
+		<div class="cont">
+			<textarea cols="90" rows="10">
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>2D transform_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<style>
+h1{clear:both;padding-top:10px;font-size:16px;font-family:Arial;}
+.test{zoom:1;width:700px;margin:0;padding:0;list-style:none;}
+.test li{float:left;margin:20px 30px 0 0;border:1px solid #000;}
+.test li p{width:300px;height:100px;margin:0;background:#ddd;}
+.test .matrix{-moz-transform:matrix(0,1,1,1,10px,10px);-webkit-transform:matrix(0,1,1,1,10,10);-o-transform:matrix(0,1,1,1,10,10);-ms-transform:matrix(0,1,1,1,10,10);transform:matrix(0,1,1,1,10,10);}
+.test .translate p{-moz-transform:translate(5%,10px);-webkit-transform:translate(10px,10px);-o-transform:translate(10px,10px);-ms-transform:translate(10px,10px);transform:translate(10px,10px);}
+.test .translate2 p{-moz-transform:translate(-10px,-10px);-webkit-transform:translate(-10px,-10px);-o-transform:translate(-10px,-10px);-ms-transform:translate(-10px,-10px);transform:translate(-10px,-10px);}
+.test .translateX p{-moz-transform:translateX(20px);-webkit-transform:translateX(20px);-o-transform:translateX(20px);-ms-transform:translateX(20px);transform:translateX(20px);}
+.test .translate3 p{-moz-transform:translate(20px);-webkit-transform:translate(20px);-o-transform:translate(20px);-ms-transform:translate(20px);transform:translate(20px);}
+.test .translateY p{-moz-transform:translateY(10px);-webkit-transform:translateY(10px);-o-transform:translateY(10px);-ms-transform:translateY(10px);transform:translateY(10px);}
+.test .translate4 p{-moz-transform:translate(0,10px);-webkit-transform:translate(0,10px);-o-transform:translate(0,10px);-ms-transform:translate(0,10px);transform:translate(0,10px);}
+.test .rotate{-moz-transform:rotate(-5deg);-webkit-transform:rotate(-5deg);-o-transform:rotate(-5deg);-ms-transform:rotate(-5deg);transform:rotate(-5deg);}
+.test .rotate2{-moz-transform:rotate(5deg);-webkit-transform:rotate(5deg);-o-transform:rotate(5deg);-ms-transform:rotate(5deg);transform:rotate(5deg);}
+.test .scale{-moz-transform:scale(.8);-webkit-transform:scale(.8);-o-transform:scale(.8);-ms-transform:scale(.8);transform:scale(.8);}
+.test .scale2{-moz-transform:scale(1.2);-webkit-transform:scale(1.2);-o-transform:scale(1.2);-ms-transform:scale(1.2);transform:scale(1.2);}
+.test .skew{-moz-transform:skew(-5deg);-webkit-transform:skew(-5deg);-o-transform:skew(-5deg);-ms-transform:skew(-5deg);transform:skew(-5deg);}
+.test .skew2{-moz-transform:skew(-5deg,-5deg);-webkit-transform:skew(-5deg,-5deg);-o-transform:skew(-5deg,-5deg);-ms-transform:skew(-5deg,-5deg);transform:skew(-5deg,-5deg);}
+</style>
+</head>
+<body>
+<h1>矩阵变换：matrix()</h1>
+<ul class="test">
+	<li class="matrix">
+		<p>transform:matrix(0,1,1,1,10,10)</p>
+	</li>
+</ul>
+<h1>平移：translate(), translateX(), translateY()</h1>
+<ul class="test">
+	<li class="translate">
+		<p>transform:translate(5%,10px)</p>
+	</li>
+	<li class="translate2">
+		<p>transform:translate(-10px,-10px)</p>
+	</li>
+	<li class="translateX">
+		<p>transform:translateX(20px)</p>
+	</li>
+	<li class="translate3">
+		<p>transform:translate(20px)</p>
+	</li>
+	<li class="translateY">
+		<p>transform:translateY(10px)</p>
+	</li>
+	<li class="translate4">
+		<p>transform:translate(0,10px)</p>
+	</li>
+</ul>
+<h1>旋转：rotate()</h1>
+<ul class="test">
+	<li class="rotate">
+		<p>transform:rotate(-15deg)</p>
+	</li>
+	<li class="rotate2">
+		<p>transform:rotate(15deg)</p>
+	</li>
+</ul>
+<h1>缩放：scale()</h1>
+<ul class="test">
+	<li class="scale">
+		<p>transform:scale(.8)</p>
+	</li>
+	<li class="scale2">
+		<p>transform:scale(1.2)</p>
+	</li>
+</ul>
+<h1>扭曲：skew()</h1>
+<ul class="test">
+	<li class="skew">
+		<p>transform:skew(-5deg)</p>
+	</li>
+	<li class="skew2">
+		<p>transform:skew(-5deg,-5deg)</p>
+	</li>
+</ul>
+</body>
+</html>
+			</textarea>
+			<p><input type="button" value="运行" class="g-btn g-btn-sure" /></p>
+		</div>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/inner.js"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>Introduction To CSS</title>
+<meta name="description" content="层叠样式表简介" />
+<meta name="keywords" content="CSS, CSS3, CSS简介" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../skin/article.css" />
+</head>
+<body>
+<nav id="guide" class="g-mod">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="index.htm" id="category" rel="introduction" name="what-is-css">简介</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它简介条目</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入分类快速导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">Introduction To CSS</h1>
+		<ul class="info">
+			<li>层叠样式表简介</li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="about-book" class="g-mod g-about">
+		<h2>说明：</h2>
+		<ul>
+			<li>本手册针对的是已有一定网页设计制作经验的读者。其目的是提供最新的样式表内容的快速索引及注释。所以对于样式表的基础知识，在此仅简单介绍，恕不赘述。</li>
+			<li>本手册的升级信息与版权声明请参阅<a href="about-this-handbook.htm">关于本手册</a>页面。</li>
+		</ul>
+	</section>
+	<section id="about-css" class="g-mod g-about">
+		<h2>什么是层叠样式表：</h2>
+		<ul>
+			<li>CSS是Cascading Style Sheet（层叠样式表）的缩写。是用于（增强）控制网页样式并允许将样式信息与网页内容分离的一种标记性语言。</li>
+			<li>CSS不需要编译,可以直接由浏览器执行(属于浏览器解释型语言)。</li>
+			<li>CSS2.1是目前被使用最广泛的版本，而目前还在开发中的CSS3具有更吸引人的特性。</li>
+			<li>本手册除了CSS2.1外，还涵盖了大部分的CSS3内容。但由于CSS3尚未定稿，不可避免会出现一些变动。</li>
+		</ul>
+	</section>
+	<section id="about-rule" class="g-mod g-about">
+		<h2>样式语法：</h2>
+		<ul>
+			<li>Selector {property:value}</li>
+		</ul>
+	</section>
+	<section id="about-import" class="g-mod g-about">
+		<h2>如何将样式表加入您的网页：</h2>
+		<p class="note">你可以用以下三种方式将样式表加入您的网页。而最接近目标的样式定义优先权越高。高优先权样式将继承低优先权样式的未重叠定义但覆盖重叠的定义。例外请参阅<a href="../rules/!important.htm">!important</a>声明。</p>
+		<ul>
+			<li>
+				<h3>内联方式 Inline Styles</h3>
+				<p>内联定义即是在对象的标记内使用对象的style属性定义适用其的样式表属性。</p>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>示例代码：</strong></p>
+					<blockquote class="gquote-cont"><pre><code>&lt;p style=&quot;color:#f00&quot;&gt;这一行的字体颜色将显示为红色&lt;/p&gt;</code></pre></blockquote>
+				</div>
+			</li>
+			<li>
+				<h3>内部样式块对象 Embedding a Style Block</h3>
+				<p>你可以在你的HTML文档的&lt;head&gt;标记里插入一个&lt;style&gt;块对象。</p>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>示例代码：</strong></p>
+					<blockquote class="gquote-cont"><pre><code>&lt;style&gt;
+body{background:#fff;color:#000;}
+p{font-size:14px;}
+&lt;/style&gt;</code></pre></blockquote>
+				</div>
+			</li>
+			<li>
+				<h3>外部样式表 Linking to a Style Sheet</h3>
+				<p>你可以先建立外部样式表文件*.css，然后使用HTML的link对象。</p>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>示例代码：</strong></p>
+					<blockquote class="gquote-cont"><pre><code>&lt;link rel="stylesheet" href="*.css" /&gt;</code></pre></blockquote>
+				</div>
+			</li>
+		</ul>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../js/jquery.js"></script>
+<script src="../js/inner.js"></script>
+</body>
+</html>

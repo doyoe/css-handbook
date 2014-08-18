@@ -1,0 +1,214 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>justify-content</title>
+<meta name="description" content="CSS3参考手册弹性盒模型之: justify-content" />
+<meta name="keywords" content="justify-content, 弹性盒模型, css3, css3参考手册" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../../skin/article.css" />
+</head>
+<body>
+<nav id="guide" class="g-mod">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="../index.htm">属性列表</a>
+		<span>&#187;</span>
+		<a href="index.htm" id="category" rel="properties/flex" name="justify-content">新弹性盒模型属性</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它弹性盒模型属性</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入快速分类导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">justify-content</h1>
+		<ul class="info">
+			<li><strong>版本：CSS3</strong></li>
+			<li>继承性：无</li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="syntax" class="g-mod g-attr">
+		<h2 class="tit">语法：</h2>
+		<div class="cont">
+			<p><strong>justify-content</strong>：flex-start | flex-end | center | space-between | space-around</p>
+			<p><strong>默认值</strong>：<mark class="defaultvalue">flex-start</mark></p>
+			<p><strong>适用于</strong>：弹性盒模型容器</p>
+		    <p><strong>继承性</strong>：无</p>
+		</div>
+	</section>
+	<section id="value" class="g-mod g-attr">
+		<h2 class="tit">取值：</h2>
+		<div class="cont">
+			<dl>
+				<dt>flex-start：</dt>
+				<dd>弹性盒子元素将向行起始位置对齐。该行的第一个子元素的主起始位置的边界将与该行的主起始位置的边界对齐，同时所有后续的伸缩盒项目与其前一个项目对齐。</dd>
+				<dt>flex-end：</dt>
+				<dd>弹性盒子元素将向行结束位置对齐。该行的第一个子元素的主结束位置的边界将与该行的主结束位置的边界对齐，同时所有后续的伸缩盒项目与其前一个项目对齐。</dd>
+				<dt>center：</dt>
+				<dd>弹性盒子元素将向行中间位置对齐。该行的子元素将相互对齐并在行中居中对齐，同时第一个元素与行的主起始位置的边距等同与最后一个元素与行的主结束位置的边距（如果剩余空间是负数，则保持两端相等长度的溢出）。</dd>
+				<dt>space-between：</dt>
+				<dd>弹性盒子元素会平均地分布在行里。如果最左边的剩余空间是负数，或该行只有一个子元素，则该值等效于'flex-start'。在其它情况下，第一个元素的边界与行的主起始位置的边界对齐，同时最后一个元素的边界与行的主结束位置的边距对齐，而剩余的伸缩盒项目则平均分布，并确保两两之间的空白空间相等。</dd>
+				<dt>space-around：</dt>
+				<dd>弹性盒子元素会平均地分布在行里，两端保留子元素与子元素之间间距大小的一半。如果最左边的剩余空间是负数，或该行只有一个伸缩盒项目，则该值等效于'center'。在其它情况下，伸缩盒项目则平均分布，并确保两两之间的空白空间相等，同时第一个元素前的空间以及最后一个元素后的空间为其他空白空间的一半。</dd>
+			</dl>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
+		<h2 class="tit">说明：</h2>
+		<div class="cont">
+			<strong>设置或检索弹性盒子元素在主轴（横轴）方向上的对齐方式。</strong>
+			<ul>
+				<li>当弹性盒里一行上的所有子元素都不能伸缩或已经达到其最大值时，这一属性可协助对多余的空间进行分配。当元素溢出某行时，这一属性同样会在对齐上进行控制。</li>
+				<li>对应的脚本特性为<strong>justifyContent</strong>。</li>
+			</ul>
+		</div>
+	</section>
+	<section id="compatible" class="g-mod g-attr">
+		<h2 class="tit">兼容性：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">墨绿</span> = 部分支持</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
+						<th><span class="browser-ie">IE</span></th>
+						<th><span class="browser-firefox">Firefox</span></th>
+						<th><span class="browser-safari">Safari</span></th>
+						<th><span class="browser-chrome">Chrome</span></th>
+						<th><span class="browser-opera">Opera</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>较早版本</th>
+						<td class="unsupport">6.0-10.0</td>
+						<td class="unsupport">4.0-19.0</td>
+						<td class="unsupport">5.1.7-6.0</td>
+						<td class="support">21.0-28.0<sup class="fix">-webkit-</sup></td>
+						<td class="unsupport">9.5-12.0</td>
+					</tr>
+					<tr>
+						<th>较新版本</th>
+						<td class="support">11.0</td>
+						<td class="support">20.0</td>
+						<td class="support">7.0<sup class="fix">-webkit-</sup></td>
+						<td class="support">29.0</td>
+						<td class="support">12.1</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+	<section id="example" class="g-mod g-attr">
+		<h2 class="tit">示例：</h2>
+		<div class="cont">
+			<textarea cols="90" rows="10">
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>justify-content_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<style>
+h1{font:bold 20px/1.5 georgia,simsun,sans-serif;}
+.box{
+	display:-webkit-flex;
+	display:flex;
+	width:400px;height:100px;margin:0;padding:0;border-radius:5px;list-style:none;background-color:#eee;}
+.box li{margin:5px;padding:10px;border-radius:5px;background:#aaa;text-align:center;}
+#box{
+	-webkit-justify-content:flex-start;
+	justify-content:flex-start;
+}
+#box2{
+	-webkit-justify-content:flex-end;
+	justify-content:flex-end;
+}
+#box3{
+	-webkit-justify-content:center;
+	justify-content:center;
+}
+#box4{
+	-webkit-justify-content:space-between;
+	justify-content:space-between;
+}
+#box5{
+	-webkit-justify-content:space-around;
+	justify-content:space-around;
+}
+</style>
+</head>
+<body>
+<h1>justify-content示例：</h1>
+<h2>justify-content:flex-start</h2>
+<ul id="box" class="box">
+	<li>a</li>
+	<li>b</li>
+	<li>c</li>
+</ul>
+<h2>justify-content:flex-end</h2>
+<ul id="box2" class="box">
+	<li>a</li>
+	<li>b</li>
+	<li>c</li>
+</ul>
+<h2>justify-content:center</h2>
+<ul id="box3" class="box">
+	<li>a</li>
+	<li>b</li>
+	<li>c</li>
+</ul>
+<h2>justify-content:space-between</h2>
+<ul id="box4" class="box">
+	<li>a</li>
+	<li>b</li>
+	<li>c</li>
+</ul>
+<h2>justify-content:space-around</h2>
+<ul id="box5" class="box">
+	<li>a</li>
+	<li>b</li>
+	<li>c</li>
+</ul>
+</body>
+</html>
+			
+			</textarea>
+			<p><input type="button" class="g-btn g-btn-sure" value="运行"></p>
+		</div>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/inner.js"></script>
+</body>
+</html>

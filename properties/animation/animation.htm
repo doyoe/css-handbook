@@ -1,0 +1,303 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>animation</title>
+<meta name="description" content="CSS3 animation属性用于检索或设置对象所应用的动画特效" />
+<meta name="keywords" content="animation, css3, css3参考手册" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../../skin/article.css" />
+</head>
+<body>
+<nav id="guide" class="g-mod">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="../index.htm">属性列表</a>
+		<span>&#187;</span>
+		<a href="index.htm" id="category" rel="properties/animation" name="animation">动画属性</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它动画属性参考</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入快速分类导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">animation</h1>
+		<ul class="info">
+			<li><strong>版本：CSS3</strong></li>
+			<li>继承性：无</li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="syntax" class="g-mod g-attr">
+		<h2 class="tit">语法：</h2>
+		<div class="cont">
+			<p><strong>animation</strong>：[[ <a href="animation-name.htm">animation-name</a> ] || [ <a href="animation-duration.htm">animation-duration</a> ] || [ <a href="animation-timing-function.htm">animation-timing-function</a> ] || [ <a href="animation-delay.htm">animation-delay</a> ] || [ <a href="animation-iteration-count.htm">animation-iteration-count</a> ] || [ <a href="animation-direction.htm">animation-direction</a> ]] [ , [ <a href="animation-name.htm">animation-name</a> ] || [ <a href="animation-duration.htm">animation-duration</a> ] || [  <a href="animation-timing-function.htm">animation-timing-function</a> ] || [ <a href="animation-delay.htm">animation-delay</a> ] || [ <a href="animation-iteration-count.htm">animation-iteration-count</a> ] || [ <a href="animation-direction.htm">animation-direction</a> ]]*</p>
+			<p><strong>默认值</strong>：<mark class="defaultvalue">看每个独立属性</mark></p>
+			<p><strong>适用于</strong>：所有元素，包含伪对象:after和:before</p>
+		    <p><strong>继承性</strong>：无</p>
+			<p><strong>相关属性</strong>：[ <a href="animation-play-state.htm">animation-play-state</a> ]</p>
+		</div>
+	</section>
+	<section id="value" class="g-mod g-attr">
+		<h2 class="tit">取值：</h2>
+		<div class="cont">
+			<dl>
+				<dt>[ <a href="animation-name.htm">animation-name</a> ]：</dt>
+				<dd>检索或设置对象所应用的动画名称</dd>
+				<dt>[ <a href="animation-duration.htm">animation-duration</a> ]：</dt>
+				<dd>检索或设置对象动画的持续时间</dd>
+				<dt>[ <a href="animation-timing-function.htm">animation-timing-function</a> ]：</dt>
+				<dd>检索或设置对象动画的过渡类型</dd>
+				<dt>[ <a href="animation-delay.htm">animation-delay</a> ]：</dt>
+				<dd>检索或设置对象动画延迟的时间</dd>
+				<dt>[ <a href="animation-iteration-count.htm">animation-iteration-count</a> ]：</dt>
+				<dd>检索或设置对象动画的循环次数</dd>
+				<dt>[ <a href="animation-direction.htm">animation-direction</a> ]：</dt>
+				<dd>检索或设置对象动画在循环中是否反向运动</dd>
+				<dt>[ <a href="animation-play-state.htm">animation-play-state</a> ]：</dt>
+				<dd>检索或设置对象动画的状态。<em class="glight">w3c正考虑是否将该属性移除，因为动画的状态可以通过其它的方式实现，比如重设样式</em></dd>
+			</dl>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
+		<h2 class="tit">说明：</h2>
+		<div class="cont">
+			<strong>复合属性。检索或设置对象所应用的动画特效。</strong>
+			<ul>
+				<li>如果提供多组属性值，以逗号进行分隔。</li>
+				<li>对应的脚本特性为<strong>animation</strong>。</li>
+			</ul>
+		</div>
+	</section>
+	<section id="compatible" class="g-mod g-attr">
+		<h2 class="tit">兼容性：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">墨绿</span> = 部分支持</li>
+				<li><span class="experimentsupport">橙色</span> = 实验性质</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
+						<th><span class="browser-ie">IE</span></th>
+						<th><span class="browser-firefox">Firefox</span></th>
+						<th><span class="browser-safari">Safari</span></th>
+						<th><span class="browser-chrome">Chrome</span></th>
+						<th><span class="browser-opera">Opera</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>版本</th>
+						<td class="unsupport">6-9</td>
+						<td class="unsupport">4</td>
+						<td rowspan="2" class="experimentsupport">5.1.7</td>
+						<td rowspan="2" class="experimentsupport">13-23</td>
+						<td rowspan="2" class="unsupport">11.5-11.6</td>
+					</tr>
+					<tr>
+						<th>版本</th>
+						<td class="experimentsupport">10</td>
+						<td class="experimentsupport">5-18</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+	<section id="example" class="g-mod g-attr">
+		<h2 class="tit">示例：</h2>
+		<div class="cont">
+			<textarea cols="90" rows="10">
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>animation_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<style>
+div{position:absolute;top:50%;left:50%;overflow:hidden;width:300px;height:150px;margin:-75px 0 0 -150px;border:3px solid #eee;background:#e0e0e0;}
+span{opacity:0;display:block;height:50px;font:bold 14px/50px Georgia;}
+.a1{
+	-webkit-transform:translate(60px);
+	-webkit-animation:animations 2s ease-out;
+	-moz-transform:translate(55px);
+	-moz-animation:animations 2s ease-out;
+	-o-transform:translate(55px);
+	-o-animation:animations 2s ease-out;
+	-ms-transform:translate(55px);
+	-ms-animation:animations 2s ease-out;
+	transform:translate(55px);
+	animation:animations 2s ease-out;
+}
+@-webkit-keyframes animations{
+	0%{-webkit-transform:translate(0);opacity:0;}
+	50%{-webkit-transform:translate(30px);opacity:1;}
+	70%{-webkit-transform:translate(35px);opacity:1;}
+	100%{-webkit-transform:translate(60px);opacity:0;}
+}
+@-moz-keyframes animations{
+	0%{-moz-transform:translate(0);opacity:0;}
+	50%{-moz-transform:translate(30px);opacity:1;}
+	70%{-moz-transform:translate(35px);opacity:1;}
+	100%{-moz-transform:translate(60px);opacity:0;}
+}
+@-o-keyframes animations{
+	0%{-o-transform:translate(0);opacity:0;}
+	50%{-o-transform:translate(30px);opacity:1;}
+	70%{-o-transform:translate(35px);opacity:1;}
+	100%{-o-transform:translate(60px);opacity:0;}
+}
+@-ms-keyframes animations{
+	0%{-ms-transform:translate(0);opacity:0;}
+	50%{-ms-transform:translate(30px);opacity:1;}
+	70%{-ms-transform:translate(35px);opacity:1;}
+	100%{-ms-transform:translate(60px);opacity:0;}
+}
+@keyframes animations{
+	0%{transform:translate(0);opacity:0;}
+	50%{transform:translate(30px);opacity:1;}
+	70%{transform:translate(35px);opacity:1;}
+	100%{transform:translate(60px);opacity:0;}
+}
+.a3{
+	-webkit-transform:translate(100px);
+	-webkit-animation:animations3 2s ease-out 2s;
+	-moz-transform:translate(100px);
+	-moz-animation:animations3 2s ease-out 2s;
+	-o-transform:translate(100px);
+	-o-animation:animations3 2s ease-out 2s;
+	-ms-transform:translate(100px);
+	-ms-animation:animations3 2s ease-out 2s;
+	transform:translate(100px);
+	animation:animations3 2s ease-out 2s;
+}
+@-webkit-keyframes animations3{
+	0%{-webkit-transform:translate(160px);opacity:0;}
+	50%{-webkit-transform:translate(130px);opacity:1;}
+	70%{-webkit-transform:translate(125px);opacity:1;}
+	100%{-webkit-transform:translate(100px);opacity:0;}
+}
+@-moz-keyframes animations3{
+	0%{-moz-transform:translate(160px);opacity:0;}
+	50%{-moz-transform:translate(130px);opacity:1;}
+	70%{-moz-transform:translate(125px);opacity:1;}
+	100%{-moz-transform:translate(100px);opacity:0;}
+}
+@-o-keyframes animations3{
+	0%{-o-transform:translate(160px);opacity:0;}
+	50%{-o-transform:translate(130px);opacity:1;}
+	70%{-o-transform:translate(125px);opacity:1;}
+	100%{-o-transform:translate(100px);opacity:0;}
+}
+@-ms-keyframes animations3{
+	0%{-ms-transform:translate(160px);opacity:0;}
+	50%{-ms-transform:translate(130px);opacity:1;}
+	70%{-ms-transform:translate(125px);opacity:1;}
+	100%{-ms-transform:translate(100px);opacity:0;}
+}
+@keyframes animations3{
+	0%{transform:translate(160px);opacity:0;}
+	50%{transform:translate(130px);opacity:1;}
+	70%{transform:translate(125px);opacity:1;}
+	100%{transform:translate(100px);opacity:0;}
+}
+.a2{
+	text-align:center;font-size:26px;
+	-webkit-animation:animations2 5s ease-in-out 4s;
+	-moz-animation:animations2 5s ease-in-out 4s;
+	-o-animation:animations2 5s ease-in-out 4s;
+	-ms-animation:animations2 5s ease-in-out 4s;
+	animation:animations2 5s ease-in-out 4s;
+}
+@-webkit-keyframes animations2{
+	0%{opacity:0;}
+	40%{opacity:.8;}
+	45%{opacity:.3;}
+	50%{opacity:.8;}
+	55%{opacity:.3;}
+	60%{opacity:.8;}
+	100%{opacity:0;}
+}
+@-moz-keyframes animations2{
+	0%{opacity:0;}
+	40%{opacity:.8;}
+	45%{opacity:.3;}
+	50%{opacity:.8;}
+	55%{opacity:.3;}
+	60%{opacity:.8;}
+	100%{opacity:0;}
+}
+@-o-keyframes animations2{
+	0%{opacity:0;}
+	40%{opacity:.8;}
+	45%{opacity:.3;}
+	50%{opacity:.8;}
+	55%{opacity:.3;}
+	60%{opacity:.8;}
+	100%{opacity:0;}
+}
+@-ms-keyframes animations2{
+	0%{opacity:0;}
+	40%{opacity:.8;}
+	45%{opacity:.3;}
+	50%{opacity:.8;}
+	55%{opacity:.3;}
+	60%{opacity:.8;}
+	100%{opacity:0;}
+}
+@keyframes animations2{
+	0%{opacity:0;}
+	40%{opacity:.8;}
+	45%{opacity:.3;}
+	50%{opacity:.8;}
+	55%{opacity:.3;}
+	60%{opacity:.8;}
+	100%{opacity:0;}
+}
+</style>
+</head>
+<body>
+<div>
+	<span class="a1">CSS3 Animations</span>
+	<span class="a2">CSS3 Animations</span>
+	<span class="a3">CSS3 Animations</span>
+</div>
+</body>
+</html>
+			</textarea>
+			<p><input type="button" value="运行" class="g-btn g-btn-sure" /></p>
+		</div>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/inner.js"></script>
+</body>
+</html>

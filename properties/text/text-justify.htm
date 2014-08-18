@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>text-justify</title>
+<meta name="description" content="CSS3参考手册之:text-justify" />
+<meta name="keywords" content="text-justify, css3, css3参考手册" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../../skin/article.css" />
+</head>
+<body>
+<nav id="guide" class="g-mod">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="../index.htm">属性列表</a>
+		<span>&#187;</span>
+		<a href="index.htm" id="category" rel="properties/text" name="text-justify">文本属性</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它文本属性参考</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入快速分类导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">text-justify</h1>
+		<ul class="info">
+			<li><strong>版本：CSS3</strong></li>
+			<li>媒体：视觉</li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="syntax" class="g-mod g-attr">
+		<h2 class="tit">语法：</h2>
+		<div class="cont">
+			<p><strong>text-justify</strong>：auto | none | inter-word | inter-ideograph | inter-cluster | distribute | kashida</p>
+			<p><strong>默认值</strong>：<mark class="defaultvalue">auto</mark></p>
+			<p><strong>适用于</strong>：块元素及某些视情况而定的内联元素</p>
+		    <p><strong>继承性</strong>：有</p>
+		    <p><strong>动画性</strong>：否</p>
+		    <p><strong>计算值</strong>：指定值</p>
+		</div>
+	</section>
+	<section id="value" class="g-mod g-attr">
+		<h2 class="tit">取值：</h2>
+		<div class="cont">
+			<dl>
+				<dt>auto：</dt>
+				<dd>允许浏览器用户代理确定使用的两端对齐法则。</dd>
+				<dt>none：</dt>
+				<dd>禁止两端对齐。</dd>
+				<dt>inter-word：</dt>
+				<dd>通过增加字之间的空格对齐文本。该行为是对齐所有文本行最快的方法，它的两端对齐行为对段落的最后一行无效。</dd>
+				<dt>inter-ideograph：</dt>
+				<dd>为表意字文本提供完全两端对齐，增加或减少表意字和词间的空格。</dd>
+				<dt>inter-cluster：</dt>
+				<dd>调整文本无词间空格的行。这种模式的调整是用于优化亚洲语言文档的</dd>
+				<dt>distribute：</dt>
+				<dd>通过增加或减少字或字母之间的空格对齐文本，适用于东亚文档，尤其是泰国。</dd>
+				<dt>kashida：</dt>
+				<dd>通过拉长选定点的字符调整文本。这种调整模式是特别为阿拉伯脚本语言提供的。需要IE5.5+支持</dd>
+			</dl>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
+		<h2 class="tit">说明：</h2>
+		<div class="cont">
+			<strong>设置或检索对象内调整文本使用的对齐方式。</strong>
+			<ul>
+				<li>因为这个属性影响文本布局，所以 <a href="text-align.htm">text-align</a> 属性必须被设置为 justify 。</li>
+				<li>对应的脚本特性为<strong>textJustify</strong>。</li>
+			</ul>
+		</div>
+	</section>
+	<section id="compatible" class="g-mod g-attr">
+		<h2 class="tit">兼容性：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">墨绿</span> = 部分支持</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
+						<th><span class="browser-ie">IE</span></th>
+						<th><span class="browser-firefox">Firefox</span></th>
+						<th><span class="browser-safari">Safari</span></th>
+						<th><span class="browser-chrome">Chrome</span></th>
+						<th><span class="browser-opera">Opera</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>版本</th>
+						<td class="partsupport">5.5-9 <sup><a href="#support1">#1</a></sup></td>
+						<td class="unsupport">1.0-28.0</td>
+						<td class="unsupport">1.0-7.0</td>
+						<td class="unsupport">1.0-31.0</td>
+						<td class="unsupport">1.0-18.0</td>
+					</tr>
+				</tbody>
+			</table>
+			<ol class="support-info">
+				<li id="support1">不支持：none</li>
+			</ol>
+		</div>
+	</section>
+	<section id="example" class="g-mod g-attr">
+		<h2 class="tit">示例：</h2>
+		<div class="cont">
+			<textarea cols="90" rows="10">
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>text-justify_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<style>
+div{width:300px;margin-top:10px;background:#aaa;text-align:justify;text-justify:inter-word;}
+</style>
+</head>
+<body>
+<div>我是第一行，后面紧接着强 制换行一些随意的文字 内容一些随意的文字内容一些随意的文字内容一些随意的文 字内容一些随意的文字内容一些随意的文字内容我后 面紧跟着强制换行 一些随意的文字内容一些随意 的文字内容一些随意的文字内容一些随意的文字内容一些 随意的文字内容我是最后一行</div>
+</body>
+</html>
+			</textarea>
+			<p><input type="button" value="运行" class="g-btn g-btn-sure" /></p>
+		</div>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/inner.js"></script>
+</body>
+</html>

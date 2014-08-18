@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>text-decoration</title>
+<meta name="description" content="CSS3参考手册之:text-decoration" />
+<meta name="keywords" content="text-decoration, css3, css3参考手册" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../../skin/article.css" />
+</head>
+<body>
+<nav id="guide" class="g-mod">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="../index.htm">属性列表</a>
+		<span>&#187;</span>
+		<a href="index.htm" id="category" rel="properties/text-decoration" name="text-decoration">文本装饰属性</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它文本装饰属性</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入快速分类导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">text-decoration</h1>
+		<ul class="info">
+			<li><strong>版本：CSS1/3</strong></li>
+			<li>媒体：视觉</li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="syntax" class="g-mod g-attr">
+		<h2 class="tit">语法：</h2>
+		<div class="cont">
+			<p><strong>text-decoration</strong>：[ <a href="text-decoration-line.htm">text-decoration-line</a> ] || [ <a href="text-decoration-style.htm">text-decoration-style</a> ] || [ <a href="text-decoration-color.htm">text-decoration-color</a> ]</p>
+		    <p><strong>默认值</strong>：<mark class="defaultvalue">看每个独立属性</mark></p>
+			<p><strong>适用于</strong>：所有元素</p>
+		    <p><strong>继承性</strong>：无</p>
+		    <p><strong>动画性</strong>：看每个独立属性</p>
+		    <p><strong>计算值</strong>：看每个独立属性</p>
+			<p><strong>相关属性</strong>：[ <a href="text-decoration-skip.htm">text-decoration-skip</a> ] || [ <a href="text-underline-position.htm">text-underline-position</a> ]</p>
+		</div>
+	</section>
+	<section id="value" class="g-mod g-attr">
+		<h2 class="tit">取值：</h2>
+		<div class="cont">
+			<dl>
+				<dt>[ <a href="text-decoration-line.htm">text-decoration-line</a> ]：</dt>
+				<dd>指定文本装饰的种类。<em class="g-color-light">相当于CSS2.1的 text-decoration 属性，可取值：none | underline | overline | line-through | blink</em></dd>
+				<dt>[ <a href="text-decoration-style.htm">text-decoration-style</a> ]：</dt>
+				<dd>指定文本装饰的样式。</dd>
+				<dt>[ <a href="text-decoration-color.htm">text-decoration-color</a> ]：</dt>
+				<dd>指定文本装饰的颜色。</dd>
+			</dl>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
+		<h2 class="tit">说明：</h2>
+		<div class="cont">
+			<strong>复合属性。检索或设置对象中的文本的装饰。</strong>
+			<ul>
+				<li>所有浏览器均支持CSS2.1中的text-decoration属性，在CSS3中，原CSS2.1中的text-decoration属性被移植到新text-decoration属性的分解属性<a href="text-decoration-line.htm">text-decoration-line</a>上；</li>
+				<li>对应的脚本特性为<strong>textDecoration</strong>。</li>
+			</ul>
+		</div>
+	</section>
+	<section id="compatible" class="g-mod g-attr">
+		<h2 class="tit">兼容性：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">墨绿</span> = 部分支持</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
+						<th><span class="browser-ie">IE</span></th>
+						<th><span class="browser-firefox">Firefox</span></th>
+						<th><span class="browser-safari">Safari</span></th>
+						<th><span class="browser-chrome">Chrome</span></th>
+						<th><span class="browser-opera">Opera</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>版本</th>
+						<td class="partsupport">6.0-11.0 <sup><a href="#support1">#1</a> <a href="#support4">#4</a></sup></td>
+						<td class="partsupport">1.0-29.0 <sup><a href="#support2">#2</a> <a href="#support4">#4</a></sup></td>
+						<td class="partsupport">5.1.7 <sup><a href="#support1">#1</a> <a href="#support4">#4</a></sup></td>
+						<td class="partsupport">1.0-31.0 <sup><a href="#support1">#1</a> <a href="#support4">#4</a></sup></td>
+						<td class="partsupport">3.5-21.0 <sup><a href="#support3">#3</a> <a href="#support4">#4</a></sup></td>
+					</tr>
+				</tbody>
+			</table>
+			<ol class="support-info">
+				<li id="support1">支持blink但无效果。</li>
+				<li id="support2">Firefox1.0开始支持blink，并在Firefox23.0时移除。</li>
+				<li id="support3">Opera4.0开始支持blink，并在Opera15.0时移除。</li>
+				<li id="support4">不支持：CSS3下的text-decoration复合属性写法。</li>
+			</ol>
+		</div>
+	</section>
+	<section id="example" class="g-mod g-attr">
+		<h2 class="tit">示例：</h2>
+		<div class="cont">
+			<textarea cols="90" rows="10">
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>text-decoration_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<style>
+.test li{margin-top:10px;}
+.test .none{text-decoration:none;}
+.test .underline{text-decoration:underline;}
+.test .overline{text-decoration:overline;}
+.test .line-through{text-decoration:line-through;}
+.test .blink{text-decoration:blink;}
+.test .text-decoration-css3{
+	text-decoration:#f00 dotted underline;
+}
+</style>
+</head>
+<body>
+<ul class="test">
+	<li class="none">无装饰文字</li>
+	<li class="underline">带下划线文字</li>
+	<li class="overline">带上划线文字</li>
+	<li class="line-through">带贯穿线文字</li>
+	<li class="blink">带闪烁文字</li>
+	<li class="text-decoration-css3">如果你的浏览器支持text-decoration在CSS3下的改变，将会看到本行文字有一条红色的下划虚线</li>
+</ul>
+</body>
+</html>
+			</textarea>
+			<p><input type="button" value="运行" class="g-btn g-btn-sure" /></p>
+		</div>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/inner.js"></script>
+</body>
+</html>

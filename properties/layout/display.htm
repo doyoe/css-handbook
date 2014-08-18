@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>display</title>
+<meta name="description" content="CSS3参考手册之:display" />
+<meta name="keywords" content="display, css3, css3参考手册" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../../skin/article.css" />
+</head>
+<body>
+<nav id="guide" class="g-mod">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="../index.htm">属性列表</a>
+		<span>&#187;</span>
+		<a href="index.htm" id="category" rel="properties/layout" name="display">布局属性</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它布局属性参考</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入分类快速导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">display</h1>
+		<ul class="info">
+			<li><strong>版本：CSS2/3</strong></li>
+			<li>媒体：视觉</li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="syntax" class="g-mod g-attr">
+		<h2 class="tit">语法：</h2>
+		<div class="cont">
+			<p><strong>display</strong>：none | <mark class="defaultvalue">inline</mark> | block | list-item | inline-block | table | inline-table | table-caption | table-cell | table-row | table-row-group | table-column | table-column-group | table-footer-group | table-header-group | <ins class="css3-value g-color-css3-new">run-in</ins><!--  | <ins class="css3-value g-color-css3-new">compact</ins> | <ins class="css3-value g-color-css3-new">ruby</ins> | <ins class="css3-value g-color-css3-new">ruby-base</ins> | <ins class="css3-value g-color-css3-new">ruby-text</ins> | <ins class="css3-value g-color-css3-new">ruby-base-group</ins> | <ins class="css3-value g-color-css3-new">ruby-text-group</ins> --> | <ins class="css3-value g-color-css3-new">box</ins> | <ins class="css3-value g-color-css3-new">inline-box</ins> | <ins class="css3-value g-color-css3-new">flexbox</ins> | <ins class="css3-value g-color-css3-new">inline-flexbox</ins> | <ins class="css3-value g-color-css3-new">flex</ins> | <ins class="css3-value g-color-css3-new">inline-flex</ins></p>
+			<p><strong>默认值</strong>：<mark class="defaultvalue">inline</mark></p>
+            <p><strong>适用于</strong>：所有元素</p>
+		    <p><strong>继承性</strong>：无</p>
+		    <p><strong>动画性</strong>：否</p>
+		    <p><strong>计算值</strong>：指定值，除浮动，绝对定位和根元素外</p>
+		</div>
+	</section>
+	<section id="value" class="g-mod g-attr">
+		<h2 class="tit">取值：</h2>
+		<div class="cont">
+			<dl>
+				<dt>none：</dt>
+				<dd>隐藏对象。与<a href="visibility.htm">visibility</a>属性的hidden值不同，其不为被隐藏的对象保留其物理空间</dd>
+				<dt>inline：</dt>
+				<dd>指定对象为内联元素。</dd>
+				<dt>block：</dt>
+				<dd>指定对象为块元素。</dd>
+				<dt>list-item：</dt>
+				<dd>指定对象为列表项目。</dd>
+				<dt>inline-block：</dt>
+				<dd>指定对象为内联块元素。（CSS2）</dd>
+				<dt>table：</dt>
+				<dd>指定对象作为块元素级的表格。类同于html标签&lt;table&gt;（CSS2）</dd>
+				<dt>inline-table：</dt>
+				<dd>指定对象作为内联元素级的表格。类同于html标签&lt;table&gt;（CSS2）</dd>
+				<dt>table-caption：</dt>
+				<dd>指定对象作为表格标题。类同于html标签&lt;caption&gt;（CSS2）</dd>
+				<dt>table-cell：</dt>
+				<dd>指定对象作为表格单元格。类同于html标签&lt;td&gt;（CSS2）</dd>
+				<dt>table-row：</dt>
+				<dd>指定对象作为表格行。类同于html标签&lt;tr&gt;（CSS2）</dd>
+				<dt>table-row-group：</dt>
+				<dd>指定对象作为表格行组。类同于html标签&lt;tbody&gt;（CSS2）</dd>
+				<dt>table-column：</dt>
+				<dd>指定对象作为表格列。类同于html标签&lt;col&gt;（CSS2）</dd>
+				<dt>table-column-group：</dt>
+				<dd>指定对象作为表格列组显示。类同于html标签&lt;colgroup&gt;（CSS2）</dd>
+				<dt>table-header-group：</dt>
+				<dd>指定对象作为表格标题组。类同于html标签&lt;thead&gt;（CSS2）</dd>
+				<dt>table-footer-group：</dt>
+				<dd>指定对象作为表格脚注组。类同于html标签&lt;tfoot&gt;（CSS2）</dd>
+
+				<dt class="g-color-css3-new">run-in：</dt>
+				<dd>根据上下文决定对象是内联对象还是块级对象。（CSS3）</dd>
+				<!-- <dt class="g-color-css3-new">compact：</dt>
+				<dd>分配对象为块对象或基于内容之上的内联对象。（CSS3）</dd>
+				<dd>如果run-in元素包含了一个块级元素，run-in元素将变成块级元素；</dd>
+				<dd>如果块内有一个块级元素（非float和position定义）紧跟run-in元素之后，run-in元素将变成块内第一个内联元素；</dd>
+				<dd>一个run-in元素不能插入开始已有run-in元素或者本身就是run-in元素的块中；</dd>
+				<dd>其它情况下，run-in元素都将是一个块级元素。</dd>
+				<dt class="g-color-css3-new">ruby：</dt>
+				<dd>将对象作为表格脚注组显示。（CSS3）</dd>
+				<dt class="g-color-css3-new">ruby-base：</dt>
+				<dd>将对象作为表格脚注组显示。（CSS3）</dd>
+				<dt class="g-color-css3-new">ruby-text：</dt>
+				<dd>将对象作为表格脚注组显示。（CSS3）</dd>
+				<dt class="g-color-css3-new">ruby-base-group：</dt>
+				<dd>将对象作为表格脚注组显示。（CSS3）</dd>
+				<dt class="g-color-css3-new">ruby-text-group：</dt>
+				<dd>将对象作为表格脚注组显示。（CSS3）</dd> -->
+
+				<dt class="g-color-css3-new">box：</dt>
+				<dd>将对象作为弹性伸缩盒显示。<em class="g-color-light">（伸缩盒最老版本）</em>（CSS3）</dd>
+				<dt class="g-color-css3-new">inline-box：</dt>
+				<dd>将对象作为内联块级弹性伸缩盒显示。<em class="g-color-light">（伸缩盒最老版本）</em>（CSS3）</dd>
+				<dt class="g-color-css3-new">flexbox：</dt>
+				<dd>将对象作为弹性伸缩盒显示。<em class="g-color-light">（伸缩盒过渡版本）</em>（CSS3）</dd>
+				<dt class="g-color-css3-new">inline-flexbox：</dt>
+				<dd>将对象作为内联块级弹性伸缩盒显示。<em class="g-color-light">（伸缩盒过渡版本）</em>（CSS3）</dd>
+				<dt class="g-color-css3-new">flex：</dt>
+				<dd>将对象作为弹性伸缩盒显示。<em class="g-color-light">（伸缩盒最新版本）</em>（CSS3）</dd>
+				<dt class="g-color-css3-new">inline-flex：</dt>
+				<dd>将对象作为内联块级弹性伸缩盒显示。<em class="g-color-light">（伸缩盒最新版本）</em>（CSS3）</dd>
+			</dl>
+		</div>
+		<div class="related">
+			<p class="g-color-light">* CSS3新增属性可能存在描述错误及变更，仅供参考，持续更新</p>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
+		<h2 class="tit">说明：</h2>
+		<div class="cont">
+			<strong>设置或检索对象是否及如何显示。</strong>
+			<ul>
+				<li>如果display设置为none，<a href="float.htm">float</a>及<a href="../positioning/position.htm">position</a>属性定义将不生效；</li>
+				<li>如果<a href="../positioning/position.htm">position</a>既不是static也不是relative或者<a href="float.htm">float</a>不是none或者元素是根元素，当display:inline-table时，display的计算值为table；当display:inline | inline-block | run-in | table-* 系时，display的计算值为block，其它情况为指定值；</li>
+				<li>
+					<p class="g-color-light">IE6,7支持inline元素转换成inline-block，但不支持block元素转换成inline-block，所以非inline元素在IE6,7下要转换成inline-block，需先转换成inline，然后触发hasLayout，以此来获得和inline-block类似的效果；你可以这样：</p>
+				<div class="gquote">
+						<p class="gquote-tit"><strong>全兼容的inline-block：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp>div{display:inline-block;*display:inline;*zoom:1;}</xmp></code></blockquote>
+					</div>
+				</li>
+				<li>对应的脚本特性为<strong>display</strong>。</li>
+			</ul>
+		</div>
+	</section>
+	<section id="compatible" class="g-mod g-attr">
+		<h2 class="tit">兼容性：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">墨绿</span> = 部分支持</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
+						<th><span class="browser-ie">IE</span></th>
+						<th><span class="browser-firefox">Firefox</span></th>
+						<th><span class="browser-safari">Safari</span></th>
+						<th><span class="browser-chrome">Chrome</span></th>
+						<th><span class="browser-opera">Opera</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>版本</th>
+						<td class="partsupport">6.0-7.0 <sup><a href="#support1">#1</a> <a href="#support2">#2</a></sup></td>
+						<td class="partsupport" rowspan="2">1.0-25.0 <sup><a href="#support2">#2</a></sup></td>
+						<td class="support" rowspan="2">1.0</td>
+						<td class="support" rowspan="2">1.0</td>
+						<td class="support" rowspan="2">7.0</td>
+					</tr>
+					<tr>
+						<th>版本</th>
+						<td class="support">8.0-11.0</td>
+					</tr>
+				</tbody>
+			</table>
+			<ol class="support-info">
+				<li id="support1">不支持：table | inline-table | table-caption | table-cell | table-row | table-row-group | table-column | table-column-group | table-footer-group | table-header-group 属性值。</li>
+				<li id="support2">不支持：<ins class="css3-value g-color-css3-new">run-in</ins> 属性值。</li>
+				<!-- <li id="support3">不支持：<ins class="css3-value g-color-css3-new">ruby</ins> | <ins class="css3-value g-color-css3-new">ruby-base</ins> | <ins class="css3-value g-color-css3-new">ruby-text</ins> | <ins class="css3-value g-color-css3-new">ruby-base-group</ins> | <ins class="css3-value g-color-css3-new">ruby-text-group</ins> 属性值。</li>
+				<li id="support4">不支持：<ins class="css3-value g-color-css3-new">compact</ins> 属性值。</li> -->
+			</ol>
+		</div>
+	</section>
+	<section id="compatible" class="g-mod g-attr">
+		<h2 class="tit">兼容性（老版本伸缩盒: box | inline-box）：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">墨绿</span> = 部分支持</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
+						<th><span class="browser-ie">IE</span></th>
+						<th><span class="browser-firefox">Firefox</span></th>
+						<th><span class="browser-safari">Safari</span></th>
+						<th><span class="browser-chrome">Chrome</span></th>
+						<th><span class="browser-opera">Opera</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>版本</th>
+						<td class="unsupport" rowspan="2">6.0-11.0</td>
+						<td class="support" rowspan="2">4.0-25 <sup class="fix">-moz-</sup></td>
+						<td class="support" rowspan="2">5.1.7 <sup class="fix">-webkit-</sup></td>
+						<td class="support" rowspan="2">4.0-31.0 <sup class="fix">-webkit-</sup></td>
+						<td class="unsupport">9.5-14.0</td>
+					</tr>
+					<tr>
+						<th>版本</th>
+						<td class="support">15.0-18.0 <sup class="fix">-webkit-</sup></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+	<section id="compatible" class="g-mod g-attr">
+		<h2 class="tit">兼容性（过渡版本伸缩盒: flexbox | inline-flexbox）：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">墨绿</span> = 部分支持</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
+						<th><span class="browser-ie">IE</span></th>
+						<th><span class="browser-firefox">Firefox</span></th>
+						<th><span class="browser-safari">Safari</span></th>
+						<th><span class="browser-chrome">Chrome</span></th>
+						<th><span class="browser-opera">Opera</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>版本</th>
+						<td class="unsupport">6.0-9.0</td>
+						<td class="unsupport" rowspan="2">4.0-25.0</td>
+						<td class="unsupport" rowspan="2">5.1.7</td>
+						<td class="unsupport" rowspan="2">4.0-31.0</td>
+						<td class="unsupport" rowspan="2">9.5-18.0</td>
+					</tr>
+					<tr>
+						<th>版本</th>
+						<td class="support">10.0 <sup class="fix">-ms-</sup></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+	<section id="compatible" class="g-mod g-attr">
+		<h2 class="tit">兼容性（最新版本伸缩盒: flex | inline-flex）：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">墨绿</span> = 部分支持</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
+						<th><span class="browser-ie">IE</span></th>
+						<th><span class="browser-firefox">Firefox</span></th>
+						<th><span class="browser-safari">Safari</span></th>
+						<th><span class="browser-chrome">Chrome</span></th>
+						<th><span class="browser-opera">Opera</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>版本</th>
+						<td class="unsupport" rowspan="2">6.0-10.0</td>
+						<td class="unsupport" rowspan="2">4.0-19.0</td>
+						<td class="unsupport" rowspan="3">5.1.7</td>
+						<td class="unsupport">4.0-20.0</td>
+						<td class="unsupport" rowspan="2">9.5-12.0</td>
+					</tr>
+					<tr>
+						<th>版本</th>
+						<td class="support">21.0-28.0 <sup class="fix">-webkit-</sup></td>
+					</tr>
+					<tr>
+						<th>版本</th>
+						<td class="support">11.0</td>
+						<td class="support">20.0</td>
+						<td class="support">29.0</td>
+						<td class="support">12.1</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+	<section id="example" class="g-mod g-attr">
+		<h2 class="tit">示例：</h2>
+		<div class="cont">
+			<textarea cols="90" rows="10">
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>display_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<style>
+body{font:14px/1.5 georgia,simsun,arial;}
+h1{margin:10px 0;font-size:20px;}
+ul{margin:0;padding:0;list-style:none;}
+.table{display:table;border-collapse:collapse;border:1px solid #ccc;}
+.table-caption{display:table-caption;margin:0;padding:0;font-size:16px;}
+.table-column-group{display:table-column-group;}
+.table-column{display:table-column;width:100px;}
+.table-row-group{display:table-row-group;}
+.table-row{display:table-row;}
+.table-row-group .table-row:hover,.table-footer-group .table-row:hover{background:#f6f6f6;}
+.table-cell{display:table-cell;padding:0 5px;border:1px solid #ccc;}
+.table-header-group{display:table-header-group;background:#eee;font-weight:bold;}
+.table-footer-group{display:table-footer-group;}
+</style>
+</head>
+<body>
+<h1>display构造的table小例子，IE7及以下浏览器不支持本示例</h1>
+<div class="table">
+	<h2 class="table-caption">花名册：</h2>
+	<div class="table-column-group">
+		<div class="table-column"></div>
+		<div class="table-column"></div>
+		<div class="table-column"></div>
+	</div>
+	<div class="table-header-group">
+		<ul class="table-row">
+			<li class="table-cell">序号</li>
+			<li class="table-cell">姓名</li>
+			<li class="table-cell">年龄</li>
+		</ul>
+	</div>
+	<div class="table-footer-group">
+		<ul class="table-row">
+			<li class="table-cell">footer</li>
+			<li class="table-cell">footer</li>
+			<li class="table-cell">footer</li>
+		</ul>
+	</div>
+	<div class="table-row-group">
+		<ul class="table-row">
+			<li class="table-cell">1</li>
+			<li class="table-cell">John</li>
+			<li class="table-cell">19</li>
+		</ul>
+		<ul class="table-row">
+			<li class="table-cell">2</li>
+			<li class="table-cell">Mark</li>
+			<li class="table-cell">21</li>
+		</ul>
+		<ul class="table-row">
+			<li class="table-cell">3</li>
+			<li class="table-cell">Kate</li>
+			<li class="table-cell">26</li>
+		</ul>
+	</div>
+</div>
+</body>
+</html>
+			</textarea>
+			<p><input type="button" value="运行" class="g-btn g-btn-sure" /></p>
+		</div>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/inner.js"></script>
+</body>
+</html>

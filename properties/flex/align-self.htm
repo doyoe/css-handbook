@@ -1,0 +1,206 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>align-self</title>
+<meta name="description" content="CSS3参考手册弹性盒模型之: align-self" />
+<meta name="keywords" content="align-self, 弹性盒模型, css3, css3参考手册" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../../skin/article.css" />
+</head>
+<body>
+<nav id="guide" class="g-mod">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="../index.htm">属性列表</a>
+		<span>&#187;</span>
+		<a href="index.htm" id="category" rel="properties/flex" name="align-self">新弹性盒模型属性</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它弹性盒模型属性</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入快速分类导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">align-self</h1>
+		<ul class="info">
+			<li><strong>版本：CSS3</strong></li>
+			<li>继承性：无</li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="syntax" class="g-mod g-attr">
+		<h2 class="tit">语法：</h2>
+		<div class="cont">
+			<p><strong>align-self</strong>：auto | flex-start | flex-end | center | baseline | stretch</p>
+			<p><strong>默认值</strong>：<mark class="defaultvalue">auto</mark></p>
+			<p><strong>适用于</strong>：弹性盒模型子元素</p>
+		    <p><strong>继承性</strong>：无</p>
+		</div>
+	</section>
+	<section id="value" class="g-mod g-attr">
+		<h2 class="tit">取值：</h2>
+		<div class="cont">
+			<dl>
+				<dt>auto：</dt>
+				<dd>如果'align-self'的值为'auto'，则其计算值为元素的父元素的'align-items'值，如果其没有父元素，则计算值为'stretch'。</dd>
+				<dt>flex-start：</dt>
+				<dd>弹性盒子元素的侧轴（纵轴）起始位置的边界紧靠住该行的侧轴起始边界。</dd>
+				<dt>flex-end：</dt>
+				<dd>弹性盒子元素的侧轴（纵轴）起始位置的边界紧靠住该行的侧轴结束边界。</dd>
+				<dt>center：</dt>
+				<dd>弹性盒子元素在该行的侧轴（纵轴）上居中放置。（如果该行的尺寸小于弹性盒子元素的尺寸，则会向两个方向溢出相同的长度）。</dd>
+				<dt>baseline：</dt>
+				<dd>如弹性盒子元素的行内轴与侧轴为同一条，则该值与'flex-start'等效。其它情况下，该值将参与基线对齐。</dd>
+				<dt>stretch：</dt>
+				<dd>如果指定侧轴大小的属性值为'auto'，则其值会使项目的边距盒的尺寸尽可能接近所在行的尺寸，但同时会遵照'min/max-width/height'属性的限制。</dd>
+			</dl>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
+		<h2 class="tit">说明：</h2>
+		<div class="cont">
+			<strong>设置或检索弹性盒子元素在侧轴（纵轴）方向上的对齐方式。</strong>
+			<ul>
+				<li>对应的脚本特性为<strong>alignItems</strong>。</li>
+			</ul>
+		</div>
+	</section>
+	<section id="compatible" class="g-mod g-attr">
+		<h2 class="tit">兼容性：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">墨绿</span> = 部分支持</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
+						<th><span class="browser-ie">IE</span></th>
+						<th><span class="browser-firefox">Firefox</span></th>
+						<th><span class="browser-safari">Safari</span></th>
+						<th><span class="browser-chrome">Chrome</span></th>
+						<th><span class="browser-opera">Opera</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>较早版本</th>
+						<td class="unsupport">6.0-10.0</td>
+						<td class="unsupport">4.0-19.0</td>
+						<td class="unsupport">5.1.7-6.0</td>
+						<td class="support">21.0-28.0<sup class="fix">-webkit-</sup></td>
+						<td class="unsupport">9.5-12.0</td>
+					</tr>
+					<tr>
+						<th>较新版本</th>
+						<td class="support">11.0</td>
+						<td class="support">20.0</td>
+						<td class="support">7.0<sup class="fix">-webkit-</sup></td>
+						<td class="support">29.0</td>
+						<td class="support">12.1</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+	<section id="example" class="g-mod g-attr">
+		<h2 class="tit">示例：</h2>
+		<div class="cont">
+			<textarea cols="90" rows="10">
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>align-self_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<style>
+h1{font:bold 20px/1.5 georgia,simsun,sans-serif;}
+.box{
+	display:-webkit-flex;
+	display:flex;
+	-webkit-align-items: flex-end;
+	height:100px;margin:0;padding:10px;border-radius:5px;list-style:none;background-color:#eee;}
+.box li{margin:5px;padding:10px;border-radius:5px;background:#aaa;text-align:center;}
+.box li:nth-child(1){
+	-webkit-align-self: flex-end;
+	align-self: flex-end;
+}
+.box li:nth-child(2){
+	-webkit-align-self: center;
+	align-self: center;
+}
+.box li:nth-child(3){
+	-webkit-align-self: flex-start;
+	align-self: flex-start;
+}
+.box li:nth-child(4){
+	-webkit-align-self: baseline;
+	align-self: baseline;
+	padding:20px 10px;
+}
+.box li:nth-child(5){
+	-webkit-align-self: baseline;
+	align-self: baseline;
+}
+.box li:nth-child(6){
+	-webkit-align-self: stretch;
+	align-self: stretch;
+}
+.box li:nth-child(7){
+	-webkit-align-self: auto;
+	align-self: auto;
+}
+</style>
+</head>
+<body>
+<h1>align-self示例：</h1>
+<ul id="box" class="box">
+	<li>a</li>
+	<li>b</li>
+	<li>c</li>
+	<li>d</li>
+	<li>e</li>
+	<li>f</li>
+	<li>g</li>
+	<li>h</li>
+	<li>i</li>
+</ul>
+</body>
+</html>
+			
+			</textarea>
+			<p><input type="button" class="g-btn g-btn-sure" value="运行"></p>
+		</div>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/inner.js"></script>
+</body>
+</html>

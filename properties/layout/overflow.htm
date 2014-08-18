@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>overflow</title>
+<meta name="description" content="CSS3参考手册之:overflow" />
+<meta name="keywords" content="overflow, css3, css3参考手册" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../../skin/article.css" />
+</head>
+<body>
+<nav id="guide" class="g-mod">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="../index.htm">属性列表</a>
+		<span>&#187;</span>
+		<a href="index.htm" id="category" rel="properties/layout" name="overflow">布局属性</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它布局属性参考</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入分类快速导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">overflow</h1>
+		<ul class="info">
+			<li><strong>版本：CSS2/3</strong></li>
+			<li>媒体：视觉</li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="syntax" class="g-mod g-attr">
+		<h2 class="tit">语法：</h2>
+		<div class="cont">
+			<p><strong>overflow</strong>：<a href="#dfn-syntax">&lt;overflow-style&gt;</a></p>
+			<p id="dfn-syntax"><strong>&lt;overflow-style&gt;</strong> = <mark class="defaultvalue">visible</mark> | hidden | scroll | auto | <ins class="css3-value g-color-css3-new">paged-x</ins> | <ins class="css3-value g-color-css3-new">paged-y</ins> | <ins class="css3-value g-color-css3-new">paged-x-controls</ins> | <ins class="css3-value g-color-css3-new">paged-y-controls</ins> | <ins class="css3-value g-color-css3-new">fragments</ins></p>
+			<p><strong>默认值</strong>：<mark class="defaultvalue">visible</mark></p>
+			<p><strong>适用于</strong>：块容器，伸缩盒容器，grid容器</p>
+		    <p><strong>继承性</strong>：无</p>
+		    <p><strong>动画性</strong>：否</p>
+		    <p><strong>计算值</strong>：指定值</p>
+		</div>
+	</section>
+	<section id="value" class="g-mod g-attr">
+		<h2 class="tit">取值：</h2>
+		<div class="cont">
+			<dl>
+				<dt>visible：</dt>
+				<dd>对溢出内容不做处理，内容可能会超出容器。</dd>
+				<dt>hidden：</dt>
+				<dd>隐藏溢出容器的内容且不出现滚动条。</dd>
+				<dt>scroll：</dt>
+				<dd>隐藏溢出容器的内容，溢出的内容将以卷动滚动条的方式呈现。</dd>
+				<dt>auto：</dt>
+				<dd>当内容没有溢出容器时不出现滚动条，当内容溢出容器时出现滚动条，按需出现滚动条。此为body对象和textarea的默认值。</dd>
+				<dt class="css3-value g-color-css3-new">paged-x：</dt>
+				<dd>TODO...（CSS3）</dd>
+				<dt class="css3-value g-color-css3-new">paged-y：</dt>
+				<dd>TODO...（CSS3）</dd>
+				<dt class="css3-value g-color-css3-new">paged-x-controls：</dt>
+				<dd>TODO...（CSS3）</dd>
+				<dt class="css3-value g-color-css3-new">paged-y-controls：</dt>
+				<dd>TODO...（CSS3）</dd>
+				<dt class="css3-value g-color-css3-new">fragments：</dt>
+				<dd>TODO...（CSS3）</dd>
+			</dl>
+		</div>
+		<div class="related">
+			<p class="g-color-light">* CSS3新增属性可能存在描述错误及变更，仅供参考，持续更新</p>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
+		<h2 class="tit">说明：</h2>
+		<div class="cont">
+			<strong>复合属性。检索或设置对象处理溢出内容的方式。</strong>参阅<a href="overflow-x.htm">overflow-x</a>、<a href="overflow-y.htm">overflow-y</a>属性
+			<ul>
+				<li>overflow的效果等同于<a href="overflow-x.htm">overflow-x</a> + <a href="overflow-y.htm">overflow-y</a>。</li>
+				<li>对于table来说，假如<a href="../table/table-layout.htm">table-layout</a>属性设置为fixed，则td对象支持带有默认值为hidden的overflow属性。如果设为hidden，scroll或者auto，那么超出td尺寸的内容将被剪切。如果设为visible，将导致额外的文本溢出到右边或左边（视direction属性设置而定）的单元格。</li>
+				<li>对应的脚本特性为<strong>overflow</strong>。</li>
+			</ul>
+		</div>
+	</section>
+	<section id="compatible" class="g-mod g-attr">
+		<h2 class="tit">兼容性：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">墨绿</span> = 部分支持</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
+						<th><span class="browser-ie">IE</span></th>
+						<th><span class="browser-firefox">Firefox</span></th>
+						<th><span class="browser-safari">Safari</span></th>
+						<th><span class="browser-chrome">Chrome</span></th>
+						<th><span class="browser-opera">Opera</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>版本</th>
+						<td class="partsupport">6.0-11.0 <sup><a href="#support1">#1</a></sup></td>
+						<td class="partsupport">1.0-25.0 <sup><a href="#support1">#1</a></sup></td>
+						<td class="partsupport">1.0-5.1.7 <sup><a href="#support1">#1</a></sup></td>
+						<td class="partsupport">1.0-31.0 <sup><a href="#support1">#1</a></sup></td>
+						<td class="partsupport">7.0-18.0 <sup><a href="#support1">#1</a></sup></td>
+					</tr>
+				</tbody>
+			</table>
+			<ol class="support-info">
+				<li id="support1">不支持：<ins class="css3-value g-color-css3-new">paged-x</ins> | <ins class="css3-value g-color-css3-new">paged-y</ins> | <ins class="css3-value g-color-css3-new">paged-x-controls</ins> | <ins class="css3-value g-color-css3-new">paged-y-controls</ins> | <ins class="css3-value g-color-css3-new">fragments</ins>。</li>
+			</ol>
+		</div>
+	</section>
+	<section id="example" class="g-mod g-attr">
+		<h2 class="tit">示例：</h2>
+		<div class="cont">
+			<textarea cols="90" rows="10">
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>overflow_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<style>
+.test{overflow:auto;width:200px;height:100px;background:#eee;}
+</style>
+</head>
+<body>
+<div class="test">
+	<p>苏打速度</p>
+	<p>苏打速度</p>
+	<p>苏打速度</p>
+	<p>苏打速度</p>
+	<p>苏打速度</p>
+</div>
+</body>
+</html>
+			</textarea>
+			<p><input type="button" value="运行" class="g-btn g-btn-sure" /></p>
+		</div>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/inner.js"></script>
+</body>
+</html>

@@ -1,0 +1,221 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>Media Queries Index</title>
+<meta name="Description" content="CSS媒体查询: CSS Media Queries Module" />
+<meta name="Keywords" content="CSS媒体查询, CSS Media Queries" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../../skin/article.css" />
+</head>
+<body>
+<nav id="guide" class="g-mod">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="../index.htm">属性列表</a>
+		<span>&#187;</span>
+		<span id="category" rel="properties/media-queries" name="index">媒体查询属性</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它媒体查询属性</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入分类快速导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">CSS Media Queries Module</h1>
+		<ul class="info">
+			<li>CSS媒体查询</li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="syntax" class="g-mod g-attr">
+		<h2 class="tit">语法：</h2>
+		<div class="cont">
+			<p><strong>&lt;media_query_list&gt;</strong>：[<a href="#dfn-syntax">&lt;media_query&gt;</a>[',' <a href="#dfn-syntax">&lt;media_query&gt;</a>]*]?<p>
+			<p id="dfn-syntax"><strong>&lt;media_query&gt;</strong>：[only | not]? <a href="../../appendix/media-types.htm">&lt;media_type&gt;</a> [and <a href="#dfn-syntax2">&lt;expression&gt;</a>]* | <a href="#dfn-syntax2">&lt;expression&gt;</a> [and <a href="#dfn-syntax2">&lt;expression&gt;</a>]*</p>
+			<p id="dfn-syntax2"><strong>&lt;expression&gt;</strong>：'('<a href="#media-features-listing">&lt;media_feature&gt;</a>[:&lt;value&gt;]?')'</p>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
+		<h2 class="tit">说明：</h2>
+		<div class="cont">
+			<strong>通过不同的媒体类型和条件定义样式表规则。</strong>
+			<ul>
+				<li>媒体查询让CSS可以更精确作用于不同的媒体类型和同一媒体的不同条件。</li>
+				<li>媒体查询的大部分媒体特性都接受min和max用于表达“大于或等于”和“小与或等于”。如：width会有min-width和max-width</li>
+				<li>
+					<p>媒体查询可以被用在CSS中的@media和@import规则上，也可以被用在HTML和XML中。</p>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>示例代码：</strong></p>
+						<blockquote class="gquote-cont"><pre><code>@media screen and (width:800px){ … }
+@import url(example.css) screen and (width:800px);
+&lt;link media="screen and (width:800px)" rel="stylesheet" href="example.css" /&gt;
+&lt;?xml-stylesheet media="screen and (width:800px)" rel="stylesheet" href="example.css" ?&gt;</code></pre></blockquote>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<section id="media-features-listing" class="g-mod g-attr">
+		<h2 class="tit">媒体特性 Media Features</h2>
+		<div class="cont">
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th>Media Features<br />媒体特性</th>
+						<th>Value<br />取值</th>
+						<th>Accepts min/max<br />接受min/max</th>
+						<th>Description<br />简介</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><a href="width.htm" class="g-color-css3-new">width</a></td>
+						<td><a href="../../values/other/length.htm">&lt;length&gt;</a></td>
+						<td>yes</td>
+						<td>定义输出设备中的页面可见区域宽度</td>
+					</tr>
+					<tr>
+						<td><a href="height.htm" class="g-color-css3-new">height</a></td>
+						<td><a href="../../values/other/length.htm">&lt;length&gt;</a></td>
+						<td>yes</td>
+						<td>定义输出设备中的页面可见区域高度</td>
+					</tr>
+					<tr>
+						<td><a href="device-width.htm" class="g-color-css3-new">device-width</a></td>
+						<td><a href="../../values/other/length.htm">&lt;length&gt;</a></td>
+						<td>yes</td>
+						<td>定义输出设备的屏幕可见宽度</td>
+					</tr>
+					<tr>
+						<td><a href="device-height.htm" class="g-color-css3-new">device-height</a></td>
+						<td><a href="../../values/other/length.htm">&lt;length&gt;</a></td>
+						<td>yes</td>
+						<td>定义输出设备的屏幕可见高度</td>
+					</tr>
+					<tr>
+						<td><a href="orientation.htm" class="g-color-css3-new">orientation</a></td>
+						<td>portrait | landscape</td>
+						<td>no</td>
+						<td>定义'height'是否大于或等于'width'。值portrait代表是，landscape代表否</td>
+					</tr>
+					<tr>
+						<td><a href="aspect-ratio.htm" class="g-color-css3-new">aspect-ratio</a></td>
+						<td>&lt;ratio&gt;</td>
+						<td>yes</td>
+						<td>定义'width'与'height'的比率</td>
+					</tr>
+					<tr>
+						<td><a href="device-aspect-ratio.htm" class="g-color-css3-new">device-aspect-ratio</a></td>
+						<td>&lt;ratio&gt;</td>
+						<td>yes</td>
+						<td>定义'device-width'与'device-height'的比率。如常见的显示器比率：4/3, 16/9, 16/10</td>
+					</tr>
+					<tr>
+						<td><a href="color.htm" class="g-color-css3-new">color</a></td>
+						<td><a href="../../values/numeric/integer.htm">&lt;integer&gt;</a></td>
+						<td>yes</td>
+						<td>定义每一组输出设备的彩色原件个数。如果不是彩色设备，则值等于0</td>
+					</tr>
+					<tr>
+						<td><a href="color-index.htm" class="g-color-css3-new">color-index</a></td>
+						<td><a href="../../values/numeric/integer.htm">&lt;integer&gt;</a></td>
+						<td>yes</td>
+						<td>定义在输出设备的彩色查询表中的条目数。如果没有使用彩色查询表，则值等于0</td>
+					</tr>
+					<tr>
+						<td><a href="monochrome.htm" class="g-color-css3-new">monochrome</a></td>
+						<td><a href="../../values/numeric/integer.htm">&lt;integer&gt;</a></td>
+						<td>yes</td>
+						<td>定义在一个单色框架缓冲区中每像素包含的单色原件个数。如果不是单色设备，则值等于0</td>
+					</tr>
+					<tr>
+						<td><a href="resolution.htm" class="g-color-css3-new">resolution</a></td>
+						<td>&lt;resolution&gt;</td>
+						<td>yes</td>
+						<td>定义设备的分辨率。如：96dpi, 300dpi, 118dpcm</td>
+					</tr>
+					<tr>
+						<td><a href="scan.htm" class="g-color-css3-new">scan</a></td>
+						<td>progressive | interlace</td>
+						<td>no</td>
+						<td>定义电视类设备的扫描工序</td>
+					</tr>
+					<tr>
+						<td><a href="grid.htm" class="g-color-css3-new">grid</a></td>
+						<td><a href="../../values/numeric/integer.htm">&lt;integer&gt;</a></td>
+						<td>no</td>
+						<td>用来查询输出设备是否使用栅格或点阵。只有1和0才是有效值，1代表是，0代表否</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="related">
+			<p class="g-color-light"><strong class="g-color-css3-change">紫色</strong> 链接表示该属性在CSS3有修改或者增加了新的属性值；<strong class="g-color-css3-new">橙色</strong> 链接表示该属性是CSS3新增属性</p>
+		</div>
+	</section>
+	<section id="compatible" class="g-mod g-attr">
+		<h2 class="tit">兼容性：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">墨绿</span> = 部分支持</li>
+				<li><span class="experimentsupport">橙色</span> = 实验性质</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
+						<th><span class="browser-ie">IE</span></th>
+						<th><span class="browser-firefox">Firefox</span></th>
+						<th><span class="browser-safari">Safari</span></th>
+						<th><span class="browser-chrome">Chrome</span></th>
+						<th><span class="browser-opera">Opera</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>版本</th>
+						<td class="unsupport">6-8</td>
+						<td rowspan="2" class="support">4</td>
+						<td rowspan="2" class="support">5.1.7</td>
+						<td rowspan="2" class="support">13</td>
+						<td rowspan="2" class="support">11.5</td>
+					</tr>
+					<tr>
+						<th>版本</th>
+						<td class="support">9</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/inner.js"></script>
+</body>
+</html>

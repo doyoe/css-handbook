@@ -1,0 +1,209 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>animation-delay</title>
+<meta name="description" content="CSS3 animation-delay属性用于检索或设置对象动画延迟的时间" />
+<meta name="keywords" content="animation-delay, css3, css3参考手册" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../../skin/article.css" />
+</head>
+<body>
+<nav id="guide" class="g-mod">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="../index.htm">属性列表</a>
+		<span>&#187;</span>
+		<a href="index.htm" id="category" rel="properties/animation" name="animation-delay">动画属性</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它动画属性参考</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入快速分类导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">animation-delay</h1>
+		<ul class="info">
+			<li><strong>版本：CSS3</strong></li>
+			<li>继承性：无</li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="syntax" class="g-mod g-attr">
+		<h2 class="tit">语法：</h2>
+		<div class="cont">
+			<p><strong>animation-delay</strong>：<a href="../../values/other/time.htm">&lt;time&gt;</a> [ , <a href="../../values/other/time.htm">&lt;time&gt;</a> ]*</p>
+			<p><strong>默认值</strong>：<mark class="defaultvalue">0</mark></p>
+			<p><strong>适用于</strong>：所有元素，包含伪对象:after和:before</p>
+		    <p><strong>继承性</strong>：无</p>
+		</div>
+	</section>
+	<section id="value" class="g-mod g-attr">
+		<h2 class="tit">取值：</h2>
+		<div class="cont">
+			<dl>
+				<dt><a href="../../values/other/time.htm">&lt;time&gt;</a>：</dt>
+				<dd>指定对象动画延迟的时间</dd>
+			</dl>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
+		<h2 class="tit">说明：</h2>
+		<div class="cont">
+			<strong>检索或设置对象动画的延迟时间</strong>
+			<ul>
+				<li>如果提供多个属性值，以逗号进行分隔。</li>
+				<li>对应的脚本特性为<strong>animationDelay</strong>。</li>
+			</ul>
+		</div>
+	</section>
+	<section id="compatible" class="g-mod g-attr">
+		<h2 class="tit">兼容性：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">墨绿</span> = 部分支持</li>
+				<li><span class="experimentsupport">橙色</span> = 实验性质</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
+						<th><span class="browser-ie">IE</span></th>
+						<th><span class="browser-firefox">Firefox</span></th>
+						<th><span class="browser-safari">Safari</span></th>
+						<th><span class="browser-chrome">Chrome</span></th>
+						<th><span class="browser-opera">Opera</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>版本</th>
+						<td class="unsupport">6-9</td>
+						<td class="unsupport">4</td>
+						<td rowspan="2" class="experimentsupport">5.1.7</td>
+						<td rowspan="2" class="experimentsupport">13-23</td>
+						<td rowspan="2" class="unsupport">11.5-11.6</td>
+					</tr>
+					<tr>
+						<th>版本</th>
+						<td class="experimentsupport">10</td>
+						<td class="experimentsupport">5-18</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+	<section id="example" class="g-mod g-attr">
+		<h2 class="tit">示例：</h2>
+		<div class="cont">
+			<textarea cols="90" rows="10">
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>animation-delay_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<style>
+h1{font-size:16px;}
+p{position:relative;z-index:2;height:200px;margin:300px 0 0 0;background:#fff;}
+p:after{position:absolute;z-index:3;top:0px;left:0;width:100%;height:1px;background:#ddd;content:'';box-shadow:0 0 30px 1px rgba(0,0,0,.9);}
+div{width:100px;height:100px;padding:10px;border-radius:61px;box-shadow:0 0 10px rgba(204,102,0,.8);background:#F6D66E;background:-moz-linear-gradient(top,#fff,#F6D66E);background:-webkit-linear-gradient(top,#fff,#F6D66E);background:-o-linear-gradient(top,#fff,#F6D66E);background:-ms-linear-gradient(top,#fff,#F6D66E);background:linear-gradient(top,#fff,#F6D66E);
+	-moz-transform:translate(600px,450px);
+	-webkit-transform:translate(600px,450px);
+	-o-transform:translate(600px,450px);
+	-ms-transform:translate(600px,450px);
+	transform:translate(600px,450px);
+	-moz-animation:animations2 1s ease,animations 6s ease 1s;
+	-webkit-animation:animations2 1s ease,animations 6s ease 1s;
+	-o-animation:animations2 1s ease,animations 6s ease 1s;
+	-ms-animation:animations2 1s ease,animations 6s ease 1s;
+	animation:animations2 1s ease,animations 6s ease 1s;
+}
+@-webkit-keyframes animations{
+	0%{-webkit-transform:translate(0,0);}
+	55%{-webkit-transform:translate(480px,360px);}
+	100%{-webkit-transform:translate(600px,450px);}
+}
+@-moz-keyframes animations{
+	0%{-moz-transform:translate(0,0);}
+	55%{-moz-transform:translate(480px,360px);}
+	100%{-moz-transform:translate(600px,450px);}
+}
+@-o-keyframes animations{
+	0%{-o-transform:translate(0,0);}
+	55%{-o-transform:translate(480px,360px);}
+	100%{-o-transform:translate(600px,450px);}
+}
+@-ms-keyframes animations{
+	0%{-ms-transform:translate(0,0);}
+	55%{-ms-transform:translate(480px,360px);}
+	100%{-ms-transform:translate(600px,450px);}
+}
+@keyframes animations{
+	0%{transform:translate(0,0);}
+	55%{transform:translate(480px,360px);}
+	100%{transform:translate(600px,450px);}
+}
+@-moz-keyframes animations2{
+	0%{-moz-transform:translate(0,0);}
+	100%{-moz-transform:translate(0,0);}
+}
+@-webkit-keyframes animations2{
+	0%{-webkit-transform:translate(0,0);}
+	100%{-webkit-transform:translate(0,0);}
+}
+@-o-keyframes animations2{
+	0%{-o-transform:translate(0,0);}
+	100%{-o-transform:translate(0,0);}
+}
+@-ms-keyframes animations2{
+	0%{-ms-transform:translate(0,0);}
+	100%{-ms-transform:translate(0,0);}
+}
+@keyframes animations2{
+	0%{transform:translate(0,0);}
+	100%{transform:translate(0,0);}
+}
+</style>
+</head>
+<body>
+<h1>太阳将在1s后开始下山：</h1>
+<div></div>
+<p></p>
+</body>
+</html>
+			</textarea>
+			<p><input type="button" value="运行" class="g-btn g-btn-sure" /></p>
+		</div>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/inner.js"></script>
+</body>
+</html>

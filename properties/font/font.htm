@@ -1,0 +1,223 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>font</title>
+<meta name="description" content="CSS3参考手册之:font" />
+<meta name="keywords" content="font, css3, css3参考手册" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../../skin/article.css" />
+</head>
+<body>
+<nav id="guide" class="g-mod">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="../index.htm">属性列表</a>
+		<span>&#187;</span>
+		<a href="index.htm" id="category" rel="properties/font" name="font">字体属性</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它字体属性参考</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入快速分类导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">font</h1>
+		<ul class="info">
+			<li><strong>版本：CSS1/2</strong></li>
+			<li>媒体：视觉</li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="syntax" class="g-mod g-attr">
+		<h2 class="tit">语法：</h2>
+		<div class="cont">
+			<p><strong>font</strong>：[ [ <a href="font-style.htm">&lt;font-style&gt;</a> || <a href="font-variant.htm">&lt;font-variant&gt;</a> || <a href="font-weight.htm">&lt;font-weight&gt;</a> ]? <a href="font-size.htm">&lt;font-size&gt;</a> [ / <a href="../text/line-height.htm">&lt;line-height&gt;</a> ]? <a href="font-family.htm">&lt;font-family&gt;</a> ] | caption | icon | menu | message-box | small-caption | status-bar</p>
+			<p><strong>默认值</strong>：<mark class="defaultvalue">看独立属性自身</mark></p>
+			<p><strong>适用于</strong>：所有元素</p>
+		    <p><strong>继承性</strong>：有</p>
+		    <p><strong>动画性</strong>：看独立属性自身</p>
+		    <p><strong>计算值</strong>：看独立属性自身</p>
+		</div>
+	</section>
+	<section id="value" class="g-mod g-attr">
+		<h2 class="tit">取值：</h2>
+		<div class="cont">
+			<dl>
+				<dt><a href="font-style.htm">&lt;font-style&gt;</a>：</dt>
+				<dd>指定文本字体样式</dd>
+				<dt><a href="font-variant.htm">&lt;font-variant&gt;</a>：</dt>
+				<dd>指定文本是否为小型的大写字母</dd>
+				<dt><a href="font-weight.htm">&lt;font-weight&gt;</a>：</dt>
+				<dd>指定文本字体的粗细</dd>
+				<dt><a href="font-size.htm">&lt;font-size&gt;</a>：</dt>
+				<dd>指定文本字体尺寸</dd>
+				<dt><a href="../text/line-height.htm">&lt;line-height&gt;</a>：</dt>
+				<dd>指定文本字体的行高</dd>
+				<dt><a href="font-family.htm">&lt;font-family&gt;</a>：</dt>
+				<dd>指定文本使用某个字体或字体序列</dd>
+				<dt>caption：</dt>
+				<dd>使用有标题的系统控件的文本字体（如按钮，菜单等）（CSS2）</dd>
+				<dt>icon：</dt>
+				<dd>使用图标标签的字体（CSS2）</dd>
+				<dt>menu：</dt>
+				<dd>使用菜单的字体（CSS2）</dd>
+				<dt>message-box：</dt>
+				<dd>使用信息对话框的文本字体（CSS2）</dd>
+				<dt>small-caption：</dt>
+				<dd>使用小控件的字体（CSS2）</dd>
+				<dt>status-bar：</dt>
+				<dd>使用窗口状态栏的字体（CSS2）</dd>
+			</dl>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
+		<h2 class="tit">说明：</h2>
+		<div class="cont">
+			<strong>设置或检索对象中的文本特性。该属性是复合属性。</strong>
+			<ul>
+				<li>使用第一种声明方式参数必须按照如上的排列顺序，且<a href="font-size.htm">font-size</a>和<a href="font-family.htm">font-family</a>是不可忽略的。每个参数仅允许有一个值。忽略的将使用其参数对应的独立属性的默认值。</li>
+				<li>对于如何使用客户端系统可能没有的字体，可以参阅<a href="font-face.htm">@font-face</a>规则。</li>
+				<li>对应的脚本特性为<strong>font</strong>。</li>
+			</ul>
+		</div>
+	</section>
+	<section id="compatible" class="g-mod g-attr">
+		<h2 class="tit">兼容性：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">墨绿</span> = 部分支持</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
+						<th><span class="browser-ie">IE</span></th>
+						<th><span class="browser-firefox">Firefox</span></th>
+						<th><span class="browser-safari">Safari</span></th>
+						<th><span class="browser-chrome">Chrome</span></th>
+						<th><span class="browser-opera">Opera</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>版本</th>
+						<td class="support">6.0</td>
+						<td class="support">1.0</td>
+						<td class="support">1.0</td>
+						<td class="support">1.0</td>
+						<td class="support">3.5</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+	<section id="example" class="g-mod g-attr">
+		<h2 class="tit">示例：</h2>
+		<div class="cont">
+			<textarea cols="90" rows="10">
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>font_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<style>
+.test p{margin:15px 0;border:1px solid #000;}
+.font1 p{font:18px Simsun,arial,sans-serif;}
+.font2 p{font:italic 18px Simsun,arial,sans-serif;}
+.font3 p{font:italic small-caps 18px Simsun,arial,sans-serif;}
+.font4 p{font:italic small-caps bold 18px Simsun,arial,sans-serif;}
+.font5 p{font:italic small-caps bold 18px/2 Simsun,arial,sans-serif;}
+.caption p{font:caption;}
+.icon p{font:icon;}
+.menu p{font:menu;}
+.message-box p{font:message-box;}
+.small-caption p{font:small-caption;}
+.status-bar p{font:status-bar;}
+</style>
+</head>
+<body>
+<ul class="test">
+	<li class="font1">
+		<strong>只指定字体大小和字体：</strong>
+		<p>本段文字将显示为18px宋体。</p>
+	</li>
+	<li class="font2">
+		<strong>只指定字体样式、大小和字体：</strong>
+		<p>本段文字将显示为斜体的18px宋体。</p>
+	</li>
+	<li class="font3">
+		<strong>只指定字体样式、小型大写字母、大小和字体：</strong>
+		<p>本段文字将显示为斜体的带小型大写字母的18px宋体。大小型大写字母对比：AaBbCcDdEeFfGg</p>
+	</li>
+	<li class="font4">
+		<strong>只指定字体样式、小型大写字母、粗细、大小和字体：</strong>
+		<p>本段文字将显示为斜体的带小型大写字母的加粗18px宋体。</p>
+	</li>
+	<li class="font5">
+		<strong>只指定字体样式、小型大写字母、粗细、大小、行高和字体：</strong>
+		<p>本段文字将显示为行高为2的斜体的带小型大写字母的加粗18px宋体。</p>
+	</li>
+	<li class="caption">
+		<strong>指定字体为caption：</strong>
+		<p>本段文字将以caption的字体显示。</p>
+	</li>
+	<li class="icon">
+		<strong>指定字体为icon：</strong>
+		<p>本段文字将以icon的字体显示。</p>
+	</li>
+	<li class="menu">
+		<strong>指定字体为menu：</strong>
+		<p>本段文字将以menu的字体显示。</p>
+	</li>
+	<li class="message-box">
+		<strong>指定字体为message-box：</strong>
+		<p>本段文字将以message-box的字体显示。</p>
+	</li>
+	<li class="small-caption">
+		<strong>指定字体为small-caption：</strong>
+		<p>本段文字将以small-caption的字体显示。</p>
+	</li>
+	<li class="status-bar">
+		<strong>指定字体为status-bar：</strong>
+		<p>本段文字将以status-bar的字体显示。</p>
+	</li>
+</ul>
+</body>
+</html>
+			</textarea>
+			<p><input type="button" value="运行" class="g-btn g-btn-sure" /></p>
+		</div>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/inner.js"></script>
+</body>
+</html>

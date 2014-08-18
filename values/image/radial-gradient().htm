@@ -1,0 +1,230 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>radial-gradient()</title>
+<meta name="description" content="CSS3参考手册之: radial-gradient()" />
+<meta name="keywords" content="radial-gradient(), css3取值, css3, css3参考手册" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../../skin/article.css" />
+</head>
+<body>
+<nav id="guide" class="g-mod">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="../index.htm">取值列表</a>
+		<span>&#187;</span>
+		<a href="index.htm" id="category" rel="values/image" name="radial-gradient()">图像值</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它图像值参考</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入分类快速导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">radial-gradient()</h1>
+		<ul class="info">
+			<li><strong>版本：CSS3</strong></li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section class="g-mod g-attr" id="syntax">
+		<h2 class="tit">语法：</h2>
+		<div class="cont">
+			<p><strong>&lt;radial-gradient&gt;</strong>：radial-gradient([ <a href="#dfn-syntax">&lt;position&gt;</a>,]? [ [ <a href="#dfn-syntax2">&lt;shape&gt;</a> || <a href="#dfn-syntax3">&lt;size&gt;</a> ] | <a href="#dfn-syntax4">&lt;shape-size&gt;</a>{2},]? <a href="#dfn-syntax5">&lt;color-stop&gt;</a>[, <a href="#dfn-syntax5">&lt;color-stop&gt;</a>]+);</p>
+			<p id="dfn-syntax"><strong>&lt;position&gt;</strong>：[ <a href="../other/length.htm">&lt;length&gt;</a>① | <a href="../other/percentage.htm">&lt;percentage&gt;</a>① | left | center① | right ]? [ <a href="../other/length.htm">&lt;length&gt;</a>② | <a href="../other/percentage.htm">&lt;percentage&gt;</a>② | top | center② | bottom ]?</p>
+			<p id="dfn-syntax2"><strong>&lt;shape&gt;</strong>：circle | ellipse</p>
+			<p id="dfn-syntax3"><strong>&lt;size&gt;</strong>：closest-side | closest-corner | farthest-side | farthest-corner | contain | cover</p>
+			<p id="dfn-syntax4"><strong>&lt;shape-size&gt;</strong>：<a href="../other/length.htm">&lt;length&gt;</a> | <a href="../other/percentage.htm">&lt;percentage&gt;</a>
+			<p id="dfn-syntax5"><strong>&lt;color-stop&gt;</strong>：<a href="../../properties/color/color.htm">&lt;color&gt;</a> [ <a href="../other/length.htm">&lt;length&gt;</a> | <a href="../other/percentage.htm">&lt;percentage&gt;</a> ]?</p>
+		</div>
+	</section>
+	<section class="g-mod g-attr" id="value">
+		<h2 class="tit">取值：</h2>
+		<div class="cont">
+			<h3 class="g-color-light">&lt;position&gt;</h3>
+			<dl>
+				<dt><a href="../other/percentage.htm">&lt;percentage&gt;</a>①：</dt>
+				<dd>用百分比指定径向渐变圆心的横坐标值。可以为负值。</dd>
+				<dt><a href="../other/length.htm">&lt;length&gt;</a>①：</dt>
+				<dd>用长度值指定径向渐变圆心的横坐标值。可以为负值。</dd>
+				<dt>left：</dt>
+				<dd>设置左边为径向渐变圆心的横坐标值。</dd>
+				<dt>center①：</dt>
+				<dd>设置中间为径向渐变圆心的横坐标值。</dd>
+				<dt>right：</dt>
+				<dd>设置右边为径向渐变圆心的横坐标值。</dd>
+				<dt><a href="../other/percentage.htm">&lt;percentage&gt;</a>②：</dt>
+				<dd>用百分比指定径向渐变圆心的纵坐标值。可以为负值。</dd>
+				<dt><a href="../other/length.htm">&lt;length&gt;</a>②：</dt>
+				<dd>用长度值指定径向渐变圆心的纵坐标值。可以为负值。</dd>
+				<dt>top：</dt>
+				<dd>设置顶部为径向渐变圆心的纵坐标值。</dd>
+				<dt>center②：</dt>
+				<dd>设置中间为径向渐变圆心的纵坐标值。</dd>
+				<dt>bottom：</dt>
+				<dd>设置底部为径向渐变圆心的纵坐标值。</dd>
+				<dt>&lt;color-stop&gt;：</dt>
+				<dd>指定渐变的起止颜色。</dd>
+			</dl>
+			<h3 class="g-color-light">&lt;shape&gt;</h3>
+			<dl>
+				<dt>circle：</dt>
+				<dd>指定圆形的径向渐变</dd>
+				<dt>ellipse：</dt>
+				<dd>指定椭圆形的径向渐变。<em class="glight">写本文档时Chrome,Safari尚不支持该参数值</em></dd>
+			</dl>
+			<h3 class="g-color-light">&lt;size&gt;</h3>
+			<dl>
+				<dt>closest-side：</dt>
+				<dd>指定径向渐变的半径长度为从圆心到离圆心最近的边</dd>
+				<dt>closest-corner：</dt>
+				<dd>指定径向渐变的半径长度为从圆心到离圆心最近的角</dd>
+				<dt>farthest-side：</dt>
+				<dd>指定径向渐变的半径长度为从圆心到离圆心最远的边</dd>
+				<dt>farthest-corner：</dt>
+				<dd>指定径向渐变的半径长度为从圆心到离圆心最远的角</dd>
+				<dt>contain：</dt>
+				<dd>包含，指定径向渐变的半径长度为从圆心到离圆心最近的点。类同于closest-side</dd>
+				<dt>cover：</dt>
+				<dd>覆盖，指定径向渐变的半径长度为从圆心到离圆心最远的点。类同于farthest-corner</dd>
+			</dl>
+			<h3 class="g-color-light">&lt;shape-size&gt;</h3>
+			<em class="g-color-light">写本文档时Firefox尚不支持&lt;shape-size&gt;</em>
+			<dl>
+				<dt><a href="../other/percentage.htm">&lt;percentage&gt;</a>：</dt>
+				<dd>用百分比指定径向渐变的横向或纵向直径长度，并根据横向和纵向的直径来确定是圆或椭圆。不允许负值。</dd>
+				<dt><a href="../other/length.htm">&lt;length&gt;</a>：</dt>
+				<dd>用长度值指定径向渐变的横向或纵向直径长度，并根据横向和纵向的直径来确定是圆或椭圆。不允许负值。</dd>
+			</dl>
+			<h3 class="g-color-light">&lt;color-stop&gt;</h3>
+			<dl>
+				<dt><a href="../../properties/color/color.htm">&lt;color&gt;</a>：</dt>
+				<dd>指定颜色。请参阅<a href="../color/index.htm">颜色值</a></dd>
+				<dt><a href="../other/length.htm">&lt;length&gt;</a>：</dt>
+				<dd>用长度值指定起止色位置。不允许负值</dd>
+				<dt><a href="../other/percentage.htm">&lt;percentage&gt;</a>：</dt>
+				<dd>用百分比指定起止色位置。</dd>
+			</dl>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
+		<h2 class="tit">说明：</h2>
+		<div class="cont">
+			<strong>用径向渐变创建图像。</strong>
+			<ul>
+				<li>写本文档时Firefox和Chrome已经在实验性质阶段支持了该属性，Safari对该属性的支持仍停留在以私有方式实现的阶段。</li>
+				<li>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>示例代码：</strong></p>
+						<div class="gquote-cont">
+							<p class="img"><image src="images/radial-gradient.png" /><br />（图一）</p>
+							<blockquote class="code"><pre><code>radial-gradient(circle,#f00,#ff0,#080);
+radial-gradient(center,circle,#f00,#ff0,#080);
+radial-gradient(50%,circle,#f00,#ff0,#080);
+radial-gradient(circle,#f00 0%,#ff0 50%,#080 100%);
+radial-gradient(circle cover,#f00,#ff0,#080);
+</code></pre></blockquote>
+						</div>
+						<p class="gquote-info">以上几句代码都可以实现如（图一）的渐变效果</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<section id="compatible" class="g-mod g-attr">
+		<h2 class="tit">兼容性：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">墨绿</span> = 部分支持</li>
+				<li><span class="experimentsupport">橙色</span> = 实验性质</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
+						<th><span class="browser-ie">IE</span></th>
+						<th><span class="browser-firefox">Firefox</span></th>
+						<th><span class="browser-safari">Safari</span></th>
+						<th><span class="browser-chrome">Chrome</span></th>
+						<th><span class="browser-opera">Opera</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>版本</th>
+						<td class="unsupport">6-9</td>
+						<td rowspan="2" class="experimentsupport">4-18</td>
+						<td rowspan="2" class="experimentsupport">5.1.7</td>
+						<td rowspan="2" class="experimentsupport">13-23</td>
+						<td class="unsupport">11.5-12.51</td>
+					</tr>
+					<tr>
+						<th>版本</th>
+						<td class="experimentsupport">10</td>
+						<td class="experimentsupport">11.6-12.5</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+	<section id="example" class="g-mod g-attr">
+		<h2 class="tit">示例：</h2>
+		<div class="cont">
+			<textarea cols="90" rows="10">
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>radial-gradient()_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<style>
+div{width:200px;height:100px;margin-top:10px;border:1px solid #ddd;}
+.test{background:-moz-radial-gradient(center center,circle,#f00,#ff0,#080);background:-webkit-radial-gradient(center center,circle,#f00,#ff0,#080);background:-o-radial-gradient(center center,circle,#f00,#ff0,#080);background:-ms-radial-gradient(center center,circle,#f00,#ff0,#080);background:radial-gradient(center center,circle,#f00,#ff0,#080);}
+.test2{background:-moz-radial-gradient(circle contain,#f00,#ff0,#080);background:-webkit-radial-gradient(circle contain,#f00,#ff0,#080);background:-o-radial-gradient(circle contain,#f00,#ff0,#080);background:-ms-radial-gradient(circle contain,#f00,#ff0,#080);background:radial-gradient(circle contain,#f00,#ff0,#080);}
+.test3{background:-moz-radial-gradient(left top,cover,#f00 20%,#ff0 50%,#080 80%);background:-webkit-radial-gradient(left top,cover,#f00 20%,#ff0 50%,#080 80%);background:-o-radial-gradient(left top,cover,#f00 20%,#ff0 50%,#080 80%);background:-ms-radial-gradient(left top,cover,#f00 20%,#ff0 50%,#080 80%);background:radial-gradient(left top,cover,#f00 20%,#ff0 50%,#080 80%);}
+.test4{background:-moz-radial-gradient(90% 50px,closest-side,#f00,#ff0,#080);background:-webkit-radial-gradient(90% 50px,closest-side,#f00,#ff0,#080);background:-o-radial-gradient(90% 50px,closest-side,#f00,#ff0,#080);background:-ms-radial-gradient(90% 50px,closest-side,#f00,#ff0,#080);background:radial-gradient(90% 50px,closest-side,#f00,#ff0,#080);}
+</style>
+</head>
+<body>
+<div class="test"></div>
+<div class="test2"></div>
+<div class="test3"></div>
+<div class="test4"></div>
+</body>
+</html>
+			</textarea>
+			<p><input type="button" value="运行" class="g-btn g-btn-sure" /></p>
+		</div>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/inner.js"></script>
+</body>
+</html>

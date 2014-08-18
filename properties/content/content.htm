@@ -1,0 +1,241 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>content</title>
+<meta name="description" content="CSS3参考手册之: content" />
+<meta name="keywords" content="content, css3, css3参考手册" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../../skin/article.css" />
+</head>
+<body>
+<nav id="guide" class="g-mod">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="../index.htm">属性列表</a>
+		<span>&#187;</span>
+		<a href="index.htm" id="category" rel="properties/content" name="content">内容属性</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它内容属性</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入快速分类导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">content</h1>
+		<ul class="info">
+			<li><strong>版本：CSS2</strong></li>
+			<li>继承性：无</li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="syntax" class="g-mod g-attr">
+		<h2 class="tit">语法：</h2>
+		<div class="cont">
+			<p><strong>content</strong>：normal | none | [<a href="../../values/functional/attr().htm">&lt;attr&gt;</a> | <a href="../../values/textual/url.htm">&lt;url&gt;</a> | <a href="../../values/textual/string.htm">&lt;string&gt;</a> | counter(name) | counter(name,list-style-type) | counters(name,string) | counters(name,string,list-style-type) | no-close-quote | no-open-quote | close-quote | open-quote]+</p>
+			<p><strong>默认值</strong>：<mark class="defaultvalue">normal</mark></p>
+			<p><strong>适用于</strong>：所有元素，::before, ::after, ::alternate, ::marker, ::line-marker, margin areas, @footnote areas, and @page context</p>
+		    <p><strong>继承性</strong>：无</p>
+		</div>
+	</section>
+	<section id="value" class="g-mod g-attr">
+		<h2 class="tit">取值：</h2>
+		<div class="cont">
+			<dl>
+				<dt>normal：</dt>
+				<dd>默认值。表现与none值相同</dd>
+				<dt>none：</dt>
+				<dd>不生成任何值。</dd>
+				<dt><a href="../../values/functional/attr().htm">&lt;attr&gt;</a>：</dt>
+				<dd>插入标签属性值</dd>
+				<dt><a href="../../values/textual/url.htm">&lt;url&gt;</a>：</dt>
+				<dd>使用指定的绝对或相对地址插入一个外部资源（图像，声频，视频或浏览器支持的其他任何资源）</dd>
+				<dt><a href="../../values/textual/string.htm">&lt;string&gt;</a>：</dt>
+				<dd>插入字符串</dd>
+				<dt>counter(name)：</dt>
+				<dd>使用已命名的计数器</dd>
+				<dt>counter(name,list-style-type)：</dt>
+				<dd>使用已命名的计数器并遵从指定的list-style-type属性</dd>
+				<dt>counters(name,string)：</dt>
+				<dd>使用所有已命名的计数器</dd>
+				<dt>counters(name,string,list-style-type)：</dt>
+				<dd>使用所有已命名的计数器并遵从指定的list-style-type属性</dd>
+				<dt>no-close-quote：</dt>
+				<dd>并不插入quotes属性的后标记。但增加其嵌套级别</dd>
+				<dt>no-open-quote：</dt>
+				<dd>并不插入quotes属性的前标记。但减少其嵌套级别</dd>
+				<dt>close-quote：</dt>
+				<dd>插入quotes属性的后标记</dd>
+				<dt>open-quote：</dt>
+				<dd>插入quotes属性的前标记</dd>
+			</dl>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
+		<h2 class="tit">说明：</h2>
+		<div class="cont">
+			<strong>用来和<a href="../../selectors/pseudo-element/after.htm">:after</a>及<a href="../../selectors/pseudo-element/before.htm">:before</a>伪元素一起使用，在对象前或后显示内容。</strong>
+			<ul>
+				<li>对应的脚本特性为<strong>content</strong>。</li>
+			</ul>
+		</div>
+	</section>
+	<section id="compatible" class="g-mod g-attr">
+		<h2 class="tit">兼容性：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">墨绿</span> = 部分支持</li>
+				<li><span class="experimentsupport">橙色</span> = 实验性质</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
+						<th><span class="browser-ie">IE</span></th>
+						<th><span class="browser-firefox">Firefox</span></th>
+						<th><span class="browser-safari">Safari</span></th>
+						<th><span class="browser-chrome">Chrome</span></th>
+						<th><span class="browser-opera">Opera</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>版本</th>
+						<td class="unsupport">6-7</td>
+						<td rowspan="2" class="support">4</td>
+						<td rowspan="2" class="support">5.1.7</td>
+						<td rowspan="2" class="support">13</td>
+						<td rowspan="2" class="support">11.5</td>
+					</tr>
+					<tr>
+						<th>版本</th>
+						<td class="support">8</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+	<section id="example" class="g-mod g-attr">
+		<h2 class="tit">示例：</h2>
+		<div class="cont">
+			<textarea cols="90" rows="10">
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>content_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<style>
+.string p:after{margin-left:-16px;background:#fff;content:"是";color:#f00;}
+.attr p:after{content:attr(title);}
+.url p:before{content:url(../../skin/ico.png);}
+.test ol{margin:16px 0;padding:0;list-style:none;}
+.counter1 li{counter-increment:testname;}
+.counter1 li:before{content:counter(testname);color:#f00;font-family:georgia,serif,sans-serif;}
+.counter2 li{counter-increment:testname2;}
+.counter2 li:before{content:counter(testname2,lower-roman);color:#f00;font-family:georgia,serif,sans-serif;}
+.counter3 ol ol{margin:0 0 0 28px;}
+.counter3 li{padding:2px 0;counter-increment:testname3;}
+.counter3 li:before{content:counter(testname3,decimal)".";color:#f00;font-family:georgia,serif,sans-serif;}
+.counter3 li li{counter-increment:testname4;}
+.counter3 li li:before{content:counter(testname3,decimal)"."counter(testname4,decimal)".";}
+.counter3 li li li{counter-increment:testname5;}
+.counter3 li li li:before{content:counter(testname3,decimal)"."counter(testname4,decimal)"."counter(testname5,decimal)".";}
+</style>
+</head>
+<body>
+<ul class="test">
+	<li class="string">
+		<strong>string：</strong>
+		<p>你的浏览器是否支持content属性：否</p>
+	</li>
+	<li class="attr">
+		<strong>attr：</strong>
+		<p title="如果你看到我则说明你目前使用的浏览器支持content属性"></p>
+	</li>
+	<li class="url">
+		<strong>url()：</strong>
+		<p>如果你看到文字前面的图标则说明你目前使用的浏览器支持content属性</p>
+	</li>
+	<li class="counter1">
+		<strong>counter(name)：</strong>
+		<ol>
+			<li>列表项</li>
+			<li>列表项</li>
+			<li>列表项</li>
+		</ol>
+	</li>
+	<li class="counter2">
+		<strong>counter(name,list-style-type)：</strong>
+		<ol>
+			<li>列表项</li>
+			<li>列表项</li>
+			<li>列表项</li>
+		</ol>
+	</li>
+	<li class="counter3">
+		<strong>counter(name)拓展应用：</strong>
+		<ol>
+			<li>列表项
+				<ol>
+					<li>列表项
+						<ol>
+							<li>列表项</li>
+							<li>列表项</li>
+						</ol>
+					</li>
+					<li>列表项</li>
+				</ol>
+			</li>
+			<li>列表项
+				<ol>
+					<li>列表项</li>
+					<li>列表项</li>
+				</ol>
+			</li>
+			<li>列表项
+				<ol>
+					<li>列表项</li>
+					<li>列表项</li>
+				</ol>
+			</li>
+		</ol>
+	</li>
+</ul>
+</body>
+</html>
+			</textarea>
+			<p><input type="button" value="运行" class="g-btn g-btn-sure" /></p>
+		</div>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/inner.js"></script>
+</body>
+</html>

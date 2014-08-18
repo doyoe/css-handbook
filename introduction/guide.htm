@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>The Use Guides Of CSS Manual</title>
+<meta name="description" content="CSS3参考手册使用指引" />
+<meta name="keywords" content="CSS, CSS3, CSS参考手册, 指引, 帮助" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../skin/article.css" />
+</head>
+<body>
+<nav id="guide" class="g-mod">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="index.htm" id="category" rel="introduction" name="guide">简介</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它简介条目</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入分类快速导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">The Use Guides</h1>
+		<ul class="info">
+			<li>阅读及使用指引</li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="use-guides" class="g-mod g-about">
+		<h2>手册使用说明 The Instruction</h2>
+		<ul>
+			<li>关于本手册一些特定阅读方式的说明</li>
+			<li>关于本手册存在的一些问题说明及解决方法</li>
+		</ul>
+	</section>
+	<section id="read-guides" class="g-mod g-about">
+		<h2>阅读指引 The Read Guides</h2>
+		<ul>
+            <li>
+				<h3>导航指引：</h3>
+				<ul class="gitem">
+					<li>
+						<p>左侧导航区域，橙色为CSS3新增，紫色为在CSS3中有变更（比如增加了新的属性值），黑色为CSS2.1及更早前，如下所示：</p>
+						<div>
+							<ul class="level-type">
+								<li class="css3-new"><span class="g-color-css3-new">橙色</span> = CSS3新增</li>
+								<li class="css3-change"><span class="g-color-css3-change">紫色</span> = 在CSS3中有变更</li>
+								<li><span>黑色</span> = CSS2.1及更早</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<h3>兼容性：</h3>
+				<ul class="gitem">
+					<li>手册在所有参考页的头部和底部都有对浏览器兼容性测试基础环境的说明。<em class="g-color-light">如无特别说明，所有文档页均不考虑IE6以下版本。</em></li>
+					<li>兼容性表格解读：
+						<div class="cont g-attr">
+							<ul class="support-type">
+								<li><span class="support">浅绿</span> = 支持</li>
+								<li><span class="unsupport">红色</span> = 不支持</li>
+								<li><span class="partsupport">墨绿</span> = 部分支持</li>
+								<li><span class="experimentsupport">橙色</span> = 实验性质</li>
+							</ul>
+							<table class="g-data">
+								<thead>
+									<tr>
+										<th><a href="#browser" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
+										<th><span class="browser-ie">IE</span></th>
+										<th><span class="browser-firefox">Firefox</span></th>
+										<th><span class="browser-safari">Safari</span></th>
+										<th><span class="browser-chrome">Chrome</span></th>
+										<th><span class="browser-opera">Opera</span></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th>较早版本</th>
+										<td class="unsupport">6.0-7.0</td>
+										<td rowspan="3" class="experimentsupport">4.0-6.0</td>
+										<td rowspan="3" class="support">5.1</td>
+										<td rowspan="3" class="support">13.0</td>
+										<td rowspan="3" class="support">11.50</td>
+									</tr>
+									<tr>
+										<th>较新版本</th>
+										<td class="experimentsupport">8.0</td>
+									</tr>
+									<tr>
+										<th>最近版本</th>
+										<td class="support">9.0</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<p>假设上述表格是对某属性x的兼容性说明：那即表示IE6和IE7不支持该属性，IE8对该属性的支持还处在实验性质阶段，IE9及后续版本已支持该属性；Firefox4.0-6.0对该属性的支持还处在实验性质阶段；Safari、Chrome、Opera支持该属性。</p>
+						<p>如果是处在“实验性质”状态，则各浏览器的私有写法为：IE加 <strong class="g-color-light">-ms-</strong>；Firefox加 <strong class="g-color-light">-moz-</strong>；Safari和Chrome加 <strong class="g-color-light">-webkit-</strong>；Opera加 <strong class="g-color-light">-o-</strong></p>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<h3>兼容性：</h3>
+				<ul class="gitem">
+					<li>兼容性试图将会慢慢改成如下表：
+						<div class="cont g-attr">
+							<ul class="support-type">
+								<li><span class="support">浅绿</span> = 支持</li>
+								<li><span class="unsupport">红色</span> = 不支持</li>
+								<li><span class="partsupport">墨绿</span> = 部分支持</li>
+							</ul>
+							<table class="g-data">
+								<thead>
+									<tr>
+										<th><a href="#browser" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
+										<th><span class="browser-ie">IE</span></th>
+										<th><span class="browser-firefox">Firefox</span></th>
+										<th><span class="browser-safari">Safari</span></th>
+										<th><span class="browser-chrome">Chrome</span></th>
+										<th><span class="browser-opera">Opera</span></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th>较早版本</th>
+										<td class="unsupport">6.0-7.0</td>
+										<td rowspan="3" class="support">4.0-6.0<sup class="fix">-moz-</sup></td>
+										<td rowspan="3" class="support">5.1</td>
+										<td rowspan="3" class="support">13.0<sup class="fix">-webkit-</sup></td>
+										<td rowspan="3" class="support">11.50</td>
+									</tr>
+									<tr>
+										<th>较新版本</th>
+										<td class="support">8.0<sup class="fix">-ms-</sup></td>
+									</tr>
+									<tr>
+										<th>最近版本</th>
+										<td class="support">9.0</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<p>假设上述表格是对某属性x的兼容性说明：那即表示IE6和IE7不支持该属性，IE8对该属性的支持还处在实验性质阶段，IE9及后续版本已支持该属性；Firefox4.0-6.0对该属性的支持还处在实验性质阶段；Safari、Chrome、Opera支持该属性。</p>
+						<p>如果是处在“实验性质”状态，则各浏览器的私有写法为：IE加 <strong class="g-color-light">-ms-</strong>；Firefox加 <strong class="g-color-light">-moz-</strong>；Safari和Chrome加 <strong class="g-color-light">-webkit-</strong>；Opera15以前加 <strong class="g-color-light">-o-</strong>，Opera15及以后加 <strong class="g-color-light">-webkit-</strong></p>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<h3>脚本特性：</h3>
+				<ul class="gitem">
+					<li>
+						<p>每个CSS属性参考页所指定的该属性的脚本特性，是指js如何访问该CSS属性。如：float属性的脚本特性为styleFloat或cssFloat，那么js这样写：</p>
+						<div class="gquote">
+							<p class="gquote-tit"><strong>js代码：</strong></p>
+							<blockquote class="gquote-cont"><pre>IE：　<code>DOM.style.styleFloat</code>
+非IE：<code>DOM.style.cssFloat</code>
+</pre></blockquote>
+						</div>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<h3>示例：</h3>
+				<ul class="gitem">
+					<li>每个CSS参考页的示例都可以点击“运行”按钮，直接查看效果。</li>
+					<li>目前已知在win7下，本手册的chm版下的示例点击“运行”会出错，在未修复该问题前，如需查看某个示例，请将该示例代码拷贝到本地进行浏览。</li>
+				</ul>
+			</li>
+		</ul>
+	</section>
+	<section id="question-guides" class="g-mod g-about">
+		<h2>问题指引 The Question Guides</h2>
+		<ul class="gitem">
+			<li>
+				<h3>在win7下，本手册的chm版下的示例点击“运行”出错</h3>
+				<p>问题未被修复。在未修复该问题前，如需查看某个示例，请将该示例代码拷贝到本地进行浏览。</p>
+			</li>
+			<li>
+				<h3>chm版下载后打开出现网页无法访问的情况</h3>
+				<p>在chm上右键选择“属性”，勾选最下面的“解除锁定”并应用确定，再次打开就可以了。</p>
+			</li>
+		</ul>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../js/jquery.js"></script>
+<script src="../js/inner.js"></script>
+</body>
+</html>

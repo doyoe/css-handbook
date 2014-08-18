@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>word-spacing</title>
+<meta name="description" content="CSS3参考手册之:word-spacing" />
+<meta name="keywords" content="word-spacing, css3, css3参考手册" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../../skin/article.css" />
+</head>
+<body>
+<nav id="guide" class="g-mod">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="../index.htm">属性列表</a>
+		<span>&#187;</span>
+		<a href="index.htm" id="category" rel="properties/text" name="word-spacing">文本属性</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它文本属性参考</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入快速分类导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">word-spacing</h1>
+		<ul class="info">
+			<li><strong>版本：CSS1/3</strong></li>
+			<li>媒体：视觉</li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="syntax" class="g-mod g-attr">
+		<h2 class="tit">语法：</h2>
+		<div class="cont">
+			<p><strong>word-spacing</strong>：normal | <a href="../../values/other/length.htm">&lt;length&gt;</a> | <ins class="css3-value g-color-css3-new"><a href="../../values/other/percentage.htm">&lt;percentage&gt;</a></ins></p>
+			<p><strong>默认值</strong>：<mark class="defaultvalue">normal</mark></p>
+			<p><strong>适用于</strong>：所有元素</p>
+		    <p><strong>继承性</strong>：有</p>
+		    <p><strong>动画性</strong>：非normal值时</p>
+		    <p><strong>计算值</strong>：指定值</p>
+			<p><strong>相关属性</strong>：[ <a href="letter-spacing.htm">letter-spacing</a> ]</p>
+		</div>
+	</section>
+	<section id="value" class="g-mod g-attr">
+		<h2 class="tit">取值：</h2>
+		<div class="cont">
+			<dl>
+				<dt>normal：</dt>
+				<dd>默认间隔</dd>
+				<dt><a href="../../values/other/length.htm">&lt;length&gt;</a>：</dt>
+				<dd>用长度值指定间隔。可以为负值。</dd>
+				<dt><a href="../../values/other/percentage.htm">&lt;percentage&gt;</a>：</dt>
+				<dd>用百分比指定间隔。可以为负值。（CSS3）</dd>
+			</dl>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
+		<h2 class="tit">说明：</h2>
+		<div class="cont">
+			<strong>检索或设置对象中的单词之间的最小，最大和最佳间隙。</strong>
+			<ul>
+				<li>该属性将指定的间隔添加到每个单词(词内不发生)之后，但最后一个字将被排除在外。</li>
+				<li>判断是否为单词的依据是单词间是否有空格。</li>
+				<li>对应的脚本特性为<strong>wordSpacing</strong>。</li>
+			</ul>
+		</div>
+	</section>
+	<section id="compatible" class="g-mod g-attr">
+		<h2 class="tit">兼容性：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">墨绿</span> = 部分支持</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
+						<th><span class="browser-ie">IE</span></th>
+						<th><span class="browser-firefox">Firefox</span></th>
+						<th><span class="browser-safari">Safari</span></th>
+						<th><span class="browser-chrome">Chrome</span></th>
+						<th><span class="browser-opera">Opera</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>版本</th>
+						<td class="partsupport">6.0-11.0 <sup><a href="#support1">#1</a></sup></td>
+						<td class="partsupport">1.0-25.0 <sup><a href="#support1">#1</a></sup></td>
+						<td class="partsupport">1.0-7.0 <sup><a href="#support1">#1</a></sup></td>
+						<td class="partsupport">1.0-31.0 <sup><a href="#support1">#1</a></sup></td>
+						<td class="partsupport">3.5-18.0 <sup><a href="#support1">#1</a></sup></td>
+					</tr>
+				</tbody>
+			</table>
+			<ol class="support-info">
+				<li id="support1">不支持：<a href="../../values/other/percentage.htm">&lt;percentage&gt;</a>作为参数值。</li>
+			</ol>
+		</div>
+	</section>
+	<section id="example" class="g-mod g-attr">
+		<h2 class="tit">示例：</h2>
+		<div class="cont">
+			<textarea cols="90" rows="10">
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>word-spacing_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<style>
+.test p{border:1px solid #000;}
+.normal p{word-spacing:normal;}
+.length p{word-spacing:20px;}
+</style>
+</head>
+<body>
+<ul class="test">
+	<li class="normal">
+		<strong>默认间隔</strong>
+		<p>how are you!</p>
+	</li>
+	<li class="length">
+		<strong>自定义的间隔大小</strong>
+		<p>how are you!</p>
+	</li>
+</ul>
+</body>
+</html>
+			</textarea>
+			<p><input type="button" value="运行" class="g-btn g-btn-sure" /></p>
+		</div>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/inner.js"></script>
+</body>
+</html>

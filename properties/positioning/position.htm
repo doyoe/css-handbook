@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>position</title>
+<meta name="description" content="CSS3参考手册之:position" />
+<meta name="keywords" content="position, css3, css3参考手册" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../../skin/article.css" />
+</head>
+<body>
+<nav id="guide" class="g-mod">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="../index.htm">属性列表</a>
+		<span>&#187;</span>
+		<a href="index.htm" id="category" rel="properties/positioning" name="position">定位属性</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它定位属性参考</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入分类快速导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">position</h1>
+		<ul class="info">
+			<li><strong>版本：CSS2/3</strong></li>
+			<li>媒体：视觉</li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="syntax" class="g-mod g-attr">
+		<h2 class="tit">语法：</h2>
+		<div class="cont">
+			<p><strong>position</strong>：<mark class="defaultvalue">static</mark> | relative | absolute | fixed | <ins class="css3-value g-color-css3-new">center</ins> | <ins class="css3-value g-color-css3-new">page</ins> | <ins class="css3-value g-color-css3-new">sticky</ins></p>
+			<p><strong>默认值</strong>：<mark class="defaultvalue">static</mark></p>
+            <p><strong>适用于</strong>：除<a href="../layout/display.htm">display</a>属性定义为 table-column-group 和 table-column之外的所有元素</p>
+		    <p><strong>继承性</strong>：无</p>
+		    <p><strong>动画性</strong>：否</p>
+		    <p><strong>计算值</strong>：指定的值</p>
+        </div>
+	</section>
+	<section id="value" class="g-mod g-attr">
+		<h2 class="tit">取值：</h2>
+		<div class="cont">
+			<dl>
+				<dt>static：</dt>
+				<dd>对象遵循常规流。<a href="top.htm">top</a>，<a href="right.htm">right</a>，<a href="bottom.htm">bottom</a>，<a href="left.htm">left</a>等属性不会被应用。</dd>
+				<dt>relative：</dt>
+				<dd>对象遵循常规流，并且参照自身在常规流中的位置通过<a href="top.htm">top</a>，<a href="right.htm">right</a>，<a href="bottom.htm">bottom</a>，<a href="left.htm">left</a>属性进行偏移时不影响常规流中的任何元素。</dd>
+				<dt>absolute：</dt>
+				<dd>对象脱离常规流，使用<a href="top.htm">top</a>，<a href="right.htm">right</a>，<a href="bottom.htm">bottom</a>，<a href="left.htm">left</a>等属性进行绝对定位，盒子的偏移位置不影响常规流中的任何元素，其margin不与其他任何margin折叠。</dd>
+				<dt>fixed：</dt>
+				<dd>对象脱离常规流，使用<a href="top.htm">top</a>，<a href="right.htm">right</a>，<a href="bottom.htm">bottom</a>，<a href="left.htm">left</a>等属性以窗口为参考点进行定位，当出现滚动条时，对象不会随着滚动。</dd>
+                <dt class="g-color-css3-new">center：</dt>
+				<dd>对象脱离常规流，使用<a href="top.htm">top</a>，<a href="right.htm">right</a>，<a href="bottom.htm">bottom</a>，<a href="left.htm">left</a>等属性指定盒子的位置或尺寸大小。盒子在其包含容器垂直水平居中。盒子的偏移位置不影响常规流中的任何元素，其margin不与其他任何margin折叠。（CSS3）</dd>
+                <dt class="g-color-css3-new">page：</dt>
+				<dd>盒子的位置计算参照absolute。盒子在分页媒体或者区域块内，盒子的包含块始终是初始包含块，否则取决于每个absolute模式。（CSS3）</dd>
+				<dt class="g-color-css3-new">sticky：</dt>
+				<dd>对象在常态时遵循常规流。它就像是 relative 和 fixed 的合体，当在屏幕中时按常规流排版，当卷动到屏幕外时则表现如fixed。该属性的表现是现实中你见到的吸附效果。（CSS3）</dd>
+			</dl>
+		</div>
+		<div class="related">
+			<p class="g-color-light">* CSS3新增属性可能存在描述错误及变更，仅供参考，持续更新</p>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
+		<h2 class="tit">说明：</h2>
+		<div class="cont">
+			<strong>检索对象的定位方式。</strong>
+            <ul>
+            	<li>当position的值为 relative | absolute | fixed | <ins class="g-color-css3-new">center</ins> | <ins class="g-color-css3-new">page</ins> | <ins class="css3-value g-color-css3-new">sticky</ins> 时，其层叠级别通过<a href="z-index.htm">z-index</a>属性定义。</li>
+            	<li>绝对定位的元素，在<a href="top.htm">top</a>，<a href="right.htm">right</a>，<a href="bottom.htm">bottom</a>，<a href="left.htm">left</a>属性未设置时，会紧随在其前面的兄弟元素之后，但在位置上不影响常规流中的任何元素。用这个特性你或许会干这样的事：<a href="http://demo.doyoe.com/css/auto-list/absolute-flow.htm" target="_blank" class="external" rel="external">demo</a></li>
+				<li>对应的脚本特性为<strong>position</strong>。</li>
+			</ul>
+	  </div>
+	</section>
+	<section id="compatible" class="g-mod g-attr">
+		<h2 class="tit">兼容性：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">墨绿</span> = 部分支持</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
+						<th><span class="browser-ie">IE</span></th>
+						<th><span class="browser-firefox">Firefox</span></th>
+						<th><span class="browser-safari">Safari</span></th>
+						<th><span class="browser-chrome">Chrome</span></th>
+						<th><span class="browser-opera">Opera</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>版本</th>
+						<td class="partsupport">6.0 <sup><a href="#support1">#1</a> <a href="#support2">#2</a> <a href="#support3">#3</a></sup></td>
+						<td rowspan="2" class="partsupport">1.0-25.0 <sup><a href="#support2">#2</a> <a href="#support3">#3</a></sup></td>
+						<td rowspan="2" class="partsupport">1.0-5.1.7 <sup><a href="#support2">#2</a> <a href="#support3">#3</a></td>
+						<td rowspan="2" class="partsupport">1.0-31.0 <sup><a href="#support2">#2</a> <a href="#support3">#3</a></td>
+						<td rowspan="2" class="partsupport">4.0-18.0 <sup><a href="#support2">#2</a> <a href="#support3">#3</a></td>
+					</tr>
+					<tr>
+						<th>版本</th>
+						<td class="partsupport">7.0-11.0 <sup><a href="#support2">#2</a> <a href="#support3">#3</a></sup></td>
+					</tr>
+				</tbody>
+			</table>
+			<ol class="support-info">
+				<li id="support1">不支持position属性的fixed参数值。</li>
+                <li id="support2">不支持position属性的CSS3新增属性值: <ins class="g-color-css3-new">center</ins> | <ins class="g-color-css3-new">page</ins>。</li>
+                <li id="support3">不支持position属性的CSS3新增属性值: <ins class="css3-value g-color-css3-new">sticky</ins>。</li>
+			</ol>
+		</div>
+	</section>
+	<section id="example" class="g-mod g-attr">
+		<h2 class="tit">示例：</h2>
+		<div class="cont">
+			<textarea cols="90" rows="10">
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>position_CSS参考手册_web前端开发参考手册</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<style>
+#position{position:absolute;top:50%;left:50%;width:150px;height:40px;margin:-20px 0 0 -75px;padding:0 10px;background:#eee;line-height:2.4;}
+</style>
+</head>
+<body>
+<div id="position">水平垂直居中的对象</div>
+</body>
+</html>
+			</textarea>
+			<p><input type="button" value="运行" class="g-btn g-btn-sure" /></p>
+		</div>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/inner.js"></script>
+</body>
+</html>

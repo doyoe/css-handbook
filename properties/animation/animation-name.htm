@@ -1,0 +1,243 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>animation-name</title>
+<meta name="description" content="CSS3 animation-name属性用于检索或设置对象所应用的动画名称" />
+<meta name="keywords" content="animation-name, css3, css3参考手册" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../../skin/article.css" />
+</head>
+<body>
+<nav id="guide" class="g-mod">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="../index.htm">属性列表</a>
+		<span>&#187;</span>
+		<a href="index.htm" id="category" rel="properties/animation" name="animation-name">动画属性</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它动画属性参考</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入快速分类导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">animation-name</h1>
+		<ul class="info">
+			<li><strong>版本：CSS3</strong></li>
+			<li>继承性：无</li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="syntax" class="g-mod g-attr">
+		<h2 class="tit">语法：</h2>
+		<div class="cont">
+			<p><strong>animation-name</strong>：none | <a href="../../values/textual/identifier.htm">&lt;identifier&gt;</a> [ , none | <a href="../../values/textual/identifier.htm">&lt;identifier&gt;</a> ]*</p>
+			<p><strong>默认值</strong>：<mark class="defaultvalue">none</mark></p>
+			<p><strong>适用于</strong>：所有元素，包含伪对象:after和:before</p>
+		    <p><strong>继承性</strong>：无</p>
+			<p><strong>相关属性</strong>：[ <a href="../../rules/@keyframes.htm">@keyframes</a> ]</p>
+		</div>
+	</section>
+	<section id="value" class="g-mod g-attr">
+		<h2 class="tit">取值：</h2>
+		<div class="cont">
+			<dl>
+				<dt>none：</dt>
+				<dd>不引用任何动画名称</dd>
+				<dt><a href="../../values/textual/identifier.htm">&lt;identifier&gt;</a>：</dt>
+				<dd>定义一个或多个动画名称(identifier标识)</dd>
+			</dl>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
+		<h2 class="tit">说明：</h2>
+		<div class="cont">
+			<strong>检索或设置对象所应用的动画名称</strong>，必须与规则<a href="../../rules/@keyframes.htm">@keyframes</a>配合使用，因为动画名称由<a href="../../rules/@keyframes.htm">@keyframes</a>定义
+			<ul>
+				<li>如果提供多个属性值，以逗号进行分隔。</li>
+				<li>对应的脚本特性为<strong>animationName</strong>。</li>
+			</ul>
+		</div>
+	</section>
+	<section id="compatible" class="g-mod g-attr">
+		<h2 class="tit">兼容性：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">墨绿</span> = 部分支持</li>
+				<li><span class="experimentsupport">橙色</span> = 实验性质</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
+						<th><span class="browser-ie">IE</span></th>
+						<th><span class="browser-firefox">Firefox</span></th>
+						<th><span class="browser-safari">Safari</span></th>
+						<th><span class="browser-chrome">Chrome</span></th>
+						<th><span class="browser-opera">Opera</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>版本</th>
+						<td class="unsupport">6-9</td>
+						<td class="unsupport">4</td>
+						<td rowspan="2" class="experimentsupport">5.1.7</td>
+						<td rowspan="2" class="experimentsupport">13-23</td>
+						<td rowspan="2" class="unsupport">11.5-11.6</td>
+					</tr>
+					<tr>
+						<th>版本</th>
+						<td class="experimentsupport">10</td>
+						<td class="experimentsupport">5-18</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+	<section id="example" class="g-mod g-attr">
+		<h2 class="tit">示例：</h2>
+		<div class="cont">
+			<textarea cols="90" rows="10">
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>animation-name_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<style>
+div{opacity:0;position:absolute;top:50%;left:50%;width:300px;height:150px;margin:-75px 0 0 -150px;}
+.over{border:3px solid #eee;background:#e0e0e0;}
+.text{font:bold 14px/150px Georgia;text-align:center;}
+.over{
+	-webkit-animation:animations 2.5s ease-out,animations3 1s ease-out 2.5s;
+	-moz-animation:animations 2.5s ease-out,animations3 1s ease-out 2.5s;
+	-o-animation:animations 2.5s ease-out,animations3 1s ease-out 2.5s;
+	-ms-animation:animations 2.5s ease-out,animations3 1s ease-out 2.5s;
+	animation:animations 2.5s ease-out,animations3 1s ease-out 2.5s;
+}
+@-webkit-keyframes animations{
+	0%{-webkit-transform:scale(0);opacity:0;}
+	40%{-webkit-transform:scale(1);opacity:1;}
+	100%{opacity:1;}
+}
+@-moz-keyframes animations{
+	0%{-moz-transform:scale(0);opacity:0;}
+	40%{-moz-transform:scale(1);opacity:1;}
+	100%{opacity:1;}
+}
+@-o-keyframes animations{
+	0%{-o-transform:scale(0);opacity:0;}
+	40%{-o-transform:scale(1);opacity:1;}
+	100%{opacity:1;}
+}
+@-ms-keyframes animations{
+	0%{-ms-transform:scale(0);opacity:0;}
+	40%{-ms-transform:scale(1);opacity:1;}
+	100%{opacity:1;}
+}
+@keyframes animations{
+	0%{transform:scale(0);opacity:0;}
+	40%{transform:scale(1);opacity:1;}
+	100%{opacity:1;}
+}
+.text{
+	-webkit-animation:animations2 1.5s ease-out 1s;
+	-moz-animation:animations2 1.5s ease-out 1s;
+	-o-animation:animations2 1.5s ease-out 1s;
+	-ms-animation:animations2 1.5s ease-out 1s;
+	animation:animations2 1.5s ease-out 1s;
+}
+@-webkit-keyframes animations2{
+	0%{-webkit-transform:scale(4);opacity:0;}
+	40%{-webkit-transform:scale(2);opacity:1;}
+	70%{-webkit-transform:scale(2);opacity:1;}
+	100%{-webkit-transform:scale(5);opacity:0;}
+}
+@-moz-keyframes animations2{
+	0%{-moz-transform:scale(4);opacity:0;}
+	40%{-moz-transform:scale(2);opacity:1;}
+	70%{-moz-transform:scale(2);opacity:1;}
+	100%{-moz-transform:scale(5);opacity:0;}
+}
+@-o-keyframes animations2{
+	0%{-o-transform:scale(4);opacity:0;}
+	40%{-o-transform:scale(2);opacity:1;}
+	70%{-o-transform:scale(2);opacity:1;}
+	100%{-o-transform:scale(5);opacity:0;}
+}
+@-ms-keyframes animations2{
+	0%{-ms-transform:scale(4);opacity:0;}
+	40%{-ms-transform:scale(2);opacity:1;}
+	70%{-ms-transform:scale(2);opacity:1;}
+	100%{-ms-transform:scale(5);opacity:0;}
+}
+@keyframes animations2{
+	0%{transform:scale(4);opacity:0;}
+	40%{transform:scale(2);opacity:1;}
+	70%{transform:scale(2);opacity:1;}
+	100%{transform:scale(5);opacity:1;}
+}
+@-webkit-keyframes animations3{
+	0%{-webkit-transform:scale(1);opacity:1;}
+	100%{-webkit-transform:scale(0);opacity:0;}
+}
+@-moz-keyframes animations3{
+	0%{-moz-transform:scale(1);opacity:1;}
+	100%{-moz-transform:scale(0);opacity:0;}
+}
+@-o-keyframes animations3{
+	0%{-o-transform:scale(1);opacity:1;}
+	100%{-o-transform:scale(0);opacity:0;}
+}
+@-ms-keyframes animations3{
+	0%{-ms-transform:scale(1);opacity:1;}
+	100%{-ms-transform:scale(0);opacity:0;}
+}
+@keyframes animations3{
+	0%{transform:scale(1);opacity:1;}
+	100%{transform:scale(0);opacity:0;}
+}
+</style>
+</head>
+<body>
+<div class="over"></div>
+<div class="text">CSS3 Animations</div>
+</body>
+</html>
+			</textarea>
+			<p><input type="button" value="运行" class="g-btn g-btn-sure" /></p>
+		</div>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/inner.js"></script>
+</body>
+</html>

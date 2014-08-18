@@ -1,0 +1,323 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>list-style-type</title>
+<meta name="description" content="CSS3参考手册之: list-style-type" />
+<meta name="keywords" content="list-style-type, css3, css3参考手册" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../../skin/article.css" />
+</head>
+<body>
+<nav id="guide" class="g-mod">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="../index.htm">属性列表</a>
+		<span>&#187;</span>
+		<a href="index.htm" id="category" rel="properties/list" name="list-style-type">列表属性</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它列表属性</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入快速分类导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">list-style-type</h1>
+		<ul class="info">
+			<li><strong>版本：CSS1/2</strong></li>
+			<li>媒体：视觉</li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="syntax" class="g-mod g-attr">
+		<h2 class="tit">语法：</h2>
+		<div class="cont">
+			<p><strong>list-style-type</strong>：disc | circle | square | decimal | lower-roman | upper-roman | lower-alpha | upper-alpha | none | armenian | cjk-ideographic | georgian | lower-greek | hebrew | hiragana | hiragana-iroha | katakana | katakana-iroha | lower-latin | upper-latin</p>
+			<p><strong>默认值</strong>：<mark class="defaultvalue">disc</mark></p>
+			<p><strong>适用于</strong>：所有 display:list-item 的元素</p>
+		    <p><strong>继承性</strong>：有</p>
+		    <p><strong>动画性</strong>：否</p>
+		    <p><strong>计算值</strong>：特定值</p>
+		</div>
+	</section>
+	<section id="value" class="g-mod g-attr">
+		<h2 class="tit">取值：</h2>
+		<div class="cont">
+			<dl>
+				<dt>disc：</dt>
+				<dd>实心圆(CSS1)</dd>
+				<dt>circle：</dt>
+				<dd>空心圆(CSS1)</dd>
+				<dt>square：</dt>
+				<dd>实心方块(CSS1)</dd>
+				<dt>decimal：</dt>
+				<dd>阿拉伯数字(CSS1)</dd>
+				<dt>lower-roman：</dt>
+				<dd>小写罗马数字(CSS1)</dd>
+				<dt>upper-roman：</dt>
+				<dd>大写罗马数字(CSS1)</dd>
+				<dt>lower-alpha：</dt>
+				<dd>小写英文字母(CSS1)</dd>
+				<dt>upper-alpha：</dt>
+				<dd>大写英文字母(CSS1)</dd>
+				<dt>none：</dt>
+				<dd>不使用项目符号(CSS1)</dd>
+				<dt>armenian：</dt>
+				<dd>传统的亚美尼亚数字(CSS2)</dd>
+				<dt>cjk-ideographic：</dt>
+				<dd>浅白的表意数字(CSS2)</dd>
+				<dt>georgian：</dt>
+				<dd>传统的乔治数字(CSS2)</dd>
+				<dt>lower-greek：</dt>
+				<dd>基本的希腊小写字母(CSS2)</dd>
+				<dt>hebrew：</dt>
+				<dd>传统的希伯莱数字(CSS2)</dd>
+				<dt>hiragana：</dt>
+				<dd>日文平假名字符(CSS2)</dd>
+				<dt>hiragana-iroha：</dt>
+				<dd>日文平假名序号(CSS2)</dd>
+				<dt>katakana：</dt>
+				<dd>日文片假名字符(CSS2)</dd>
+				<dt>katakana-iroha：</dt>
+				<dd>日文片假名序号(CSS2)</dd>
+				<dt>lower-latin：</dt>
+				<dd>小写拉丁字母(CSS2)</dd>
+				<dt>upper-latin：</dt>
+				<dd>大写拉丁字母(CSS2)</dd>
+			</dl>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
+		<h2 class="tit">说明：</h2>
+		<div class="cont">
+			<strong>设置或检索对象的列表项所使用的预设标记。</strong>
+			<ul>
+				<li>若<a href="list-style-image.htm">list-style-image</a>属性为none或指定图像不可用时，list-style-type属性将发生作用。</li>
+				<li>仅作用于具有<a href="../layout/display.htm">display</a>值等于list-item的对象（如li对象）。</li>
+				<li>注意：ol对象和ul对象的type特性为其后的所有列表项目（如li对象）指明列表属性。</li>
+				<li>对应的脚本特性为<strong>listStyleType</strong>。</li>
+			</ul>
+		</div>
+	</section>
+	<section id="compatible" class="g-mod g-attr">
+		<h2 class="tit">兼容性：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">墨绿</span> = 部分支持</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
+						<th><span class="browser-ie">IE</span></th>
+						<th><span class="browser-firefox">Firefox</span></th>
+						<th><span class="browser-safari">Safari</span></th>
+						<th><span class="browser-chrome">Chrome</span></th>
+						<th><span class="browser-opera">Opera</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>版本</th>
+						<td class="support">6.0</td>
+						<td class="support">1.0</td>
+						<td class="support">1.0</td>
+						<td class="support">1.0</td>
+						<td class="support">3.5</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+	<section id="example" class="g-mod g-attr">
+		<h2 class="tit">示例：</h2>
+		<div class="cont">
+			<textarea cols="90" rows="10">
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>list-style-type_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<style>
+h1{font-size:16px;font-family:Arial;}
+.disc{list-style-type:disc;}
+.circle{list-style-type:circle;}
+.square{list-style-type:square;}
+.decimal{list-style-type:decimal;}
+.lower-roman{list-style-type:lower-roman;}
+.upper-roman{list-style-type:upper-roman;}
+.lower-alpha{list-style-type:lower-alpha;}
+.upper-alpha{list-style-type:upper-alpha;}
+.none{list-style-type:none;}
+.armenian{list-style-type:armenian;}
+.cjk-ideographic{list-style-type:cjk-ideographic;}
+.georgian{list-style-type:georgian;}
+.lower-greek{list-style-type:lower-greek;}
+.hebrew{list-style-type:hebrew;}
+.hiragana{list-style-type:hiragana;}
+.hiragana-iroha{list-style-type:hiragana-iroha;}
+.katakana{list-style-type:katakana;}
+.katakana-iroha{list-style-type:katakana-iroha;}
+.lower-latin{list-style-type:lower-latin;}
+.upper-latin{list-style-type:upper-latin;}
+</style>
+</head>
+<body>
+<h1>disc：</h1>
+<ul class="disc">
+	<li>这是一个项目列表</li>
+	<li>这是一个项目列表</li>
+	<li>这是一个项目列表</li>
+</ul>
+<h1>circle：</h1>
+<ul class="circle">
+	<li>这是一个项目列表</li>
+	<li>这是一个项目列表</li>
+	<li>这是一个项目列表</li>
+</ul>
+<h1>square：</h1>
+<ul class="square">
+	<li>这是一个项目列表</li>
+	<li>这是一个项目列表</li>
+	<li>这是一个项目列表</li>
+</ul>
+<h1>decimal：</h1>
+<ul class="decimal">
+	<li>这是一个项目列表</li>
+	<li>这是一个项目列表</li>
+	<li>这是一个项目列表</li>
+</ul>
+<h1>lower-roman：</h1>
+<ul class="lower-roman">
+	<li>这是一个项目列表</li>
+	<li>这是一个项目列表</li>
+	<li>这是一个项目列表</li>
+</ul>
+<h1>upper-roman：</h1>
+<ul class="upper-roman">
+	<li>这是一个项目列表</li>
+	<li>这是一个项目列表</li>
+	<li>这是一个项目列表</li>
+</ul>
+<h1>lower-alpha：</h1>
+<ul class="lower-alpha">
+	<li>这是一个项目列表</li>
+	<li>这是一个项目列表</li>
+	<li>这是一个项目列表</li>
+</ul>
+<h1>upper-alpha：</h1>
+<ul class="upper-alpha">
+	<li>这是一个项目列表</li>
+	<li>这是一个项目列表</li>
+	<li>这是一个项目列表</li>
+</ul>
+<h1>none：</h1>
+<ul class="none">
+	<li>这是一个项目列表</li>
+	<li>这是一个项目列表</li>
+	<li>这是一个项目列表</li>
+</ul>
+<h1>armenian：</h1>
+<ul class="armenian">
+	<li>这是一个项目列表</li>
+	<li>这是一个项目列表</li>
+	<li>这是一个项目列表</li>
+</ul>
+<h1>cjk-ideographic：</h1>
+<ul class="cjk-ideographic">
+	<li>这是一个项目列表</li>
+	<li>这是一个项目列表</li>
+	<li>这是一个项目列表</li>
+</ul>
+<h1>georgian：</h1>
+<ul class="georgian">
+	<li>这是一个项目列表</li>
+	<li>这是一个项目列表</li>
+	<li>这是一个项目列表</li>
+</ul>
+<h1>lower-greek：</h1>
+<ul class="lower-greek">
+	<li>这是一个项目列表</li>
+	<li>这是一个项目列表</li>
+	<li>这是一个项目列表</li>
+</ul>
+<h1>hebrew：</h1>
+<ul class="hebrew">
+	<li>这是一个项目列表</li>
+	<li>这是一个项目列表</li>
+	<li>这是一个项目列表</li>
+</ul>
+<h1>hiragana：</h1>
+<ul class="hiragana">
+	<li>这是一个项目列表</li>
+	<li>这是一个项目列表</li>
+	<li>这是一个项目列表</li>
+</ul>
+<h1>hiragana-iroha：</h1>
+<ul class="hiragana-iroha">
+	<li>这是一个项目列表</li>
+	<li>这是一个项目列表</li>
+	<li>这是一个项目列表</li>
+</ul>
+<h1>katakana：</h1>
+<ul class="katakana">
+	<li>这是一个项目列表</li>
+	<li>这是一个项目列表</li>
+	<li>这是一个项目列表</li>
+</ul>
+<h1>katakana-iroha：</h1>
+<ul class="katakana-iroha">
+	<li>这是一个项目列表</li>
+	<li>这是一个项目列表</li>
+	<li>这是一个项目列表</li>
+</ul>
+<h1>lower-latin：</h1>
+<ul class="lower-latin">
+	<li>这是一个项目列表</li>
+	<li>这是一个项目列表</li>
+	<li>这是一个项目列表</li>
+</ul>
+<h1>upper-latin：</h1>
+<ul class="upper-latin">
+	<li>这是一个项目列表</li>
+	<li>这是一个项目列表</li>
+	<li>这是一个项目列表</li>
+</ul>
+</body>
+</html>
+			</textarea>
+			<p><input type="button" value="运行" class="g-btn g-btn-sure" /></p>
+		</div>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/inner.js"></script>
+</body>
+</html>

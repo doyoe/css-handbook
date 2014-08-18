@@ -1,0 +1,307 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>@keyframes</title>
+<meta name="Description" content="CSS3参考手册之: @keyframes" />
+<meta name="Keywords" content="@keyframes, 动画" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../skin/article.css" />
+</head>
+<body>
+<nav id="guide" class="g-mod">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="../index.htm" id="category" rel="rules" name="@keyframes">语法与规则列表</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它语法与规则参考</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入快速分类导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">@keyframes</h1>
+		<ul class="info">
+			<li><strong>版本：CSS3</strong></li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="syntax" class="g-mod g-attr">
+		<h2 class="tit">语法：</h2>
+		<div class="cont">
+			<p><strong>@keyframes</strong> <a href="../../values/textual/identifier.htm">&lt;identifier&gt;</a> '{' <a href="#dfn-syntax">&lt;keyframes-blocks&gt;</a> '}';</p>
+			<p id="dfn-syntax"><strong>&lt;keyframes-blocks&gt;</strong>：[ [ from | to | <a href="../values/other/percentage.htm">&lt;percentage&gt;</a> ]{ sRules } ] [ [ , from | to | <a href="../values/other/percentage.htm">&lt;percentage&gt;</a> ]{ sRules } ]*<p>
+		</div>
+	</section>
+	<section id="value" class="g-mod g-attr">
+		<h2 class="tit">取值：</h2>
+		<div class="cont">
+			<dl>
+				<dt><a href="../../values/textual/identifier.htm">&lt;identifier&gt;</a>：</dt>
+				<dd>identifier定义一个动画名称</dd>
+				<dt>&lt;keyframes-blocks&gt;：</dt>
+				<dd>定义动画在每个阶段的样式，即帧动画。</dd>
+			</dl>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
+		<h2 class="tit">说明：</h2>
+		<div class="cont">
+			<strong>指定动画名称和动画效果。</strong>
+			<ul>
+				<li><a href="@keyframes.htm">@keyframes</a>定义的动画名称用来被<a href="../properties/animation/animation-name.htm">animation-name</a>所使用。</li>
+				<li>
+					<strong>定义动画时，简单的动画可以直接使用关键字from和to，即从一种状态过渡到另一种状态：</strong>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>示例代码：</strong></p>
+						<blockquote class="gquote-cont"><pre><code>@keyframes testanimations{
+	from{opacity:1;}
+	to{opacity:0;}
+}</code></pre></blockquote>
+						<p class="gquote-info">其中testanimations是该动画的名字，该动画表示某个东西将逐渐消失。</p>
+					</div>
+				</li>
+				<li>
+					<strong>如果复杂的动画，可以混合<a href="../values/other/percentage.htm">&lt;percentage&gt;</a>去设置某个时间段内的任意时间点的样式：</strong>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>示例代码：</strong></p>
+						<blockquote class="gquote-cont"><pre><code>@keyframes testanimations{
+	from{transform:translate(0,0);}
+	20%{transform:translate(20,20);}
+	40%{transform:translate(40,0);}
+	60%{transform:translate(60,20);}
+	80%{transform:translate(80,0);}
+	to{transform:translate(100,20);}
+}</code></pre></blockquote>
+					</div>
+				</li>
+				<li>
+					<strong>当然，也可以不适用关键字from和to，而都使用<a href="../values/other/percentage.htm">&lt;percentage&gt;</a>：</strong>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>示例代码：</strong></p>
+						<blockquote class="gquote-cont"><pre><code>@keyframes testanimations{
+	0%{transform:translate(0,0);}
+	20%{transform:translate(20,20);}
+	40%{transform:translate(40,0);}
+	60%{transform:translate(60,20);}
+	80%{transform:translate(80,0);}
+	100%{transform:translate(100,20);}
+}</code></pre></blockquote>
+						<p class="gquote-info">注意，这里的0%不能简写成0。</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<section id="compatible" class="g-mod g-attr">
+		<h2 class="tit">兼容性：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">墨绿</span> = 部分支持</li>
+				<li><span class="experimentsupport">橙色</span> = 实验性质</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
+						<th><span class="browser-ie">IE</span></th>
+						<th><span class="browser-firefox">Firefox</span></th>
+						<th><span class="browser-safari">Safari</span></th>
+						<th><span class="browser-chrome">Chrome</span></th>
+						<th><span class="browser-opera">Opera</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>版本</th>
+						<td class="unsupport">6-9</td>
+						<td class="unsupport">4</td>
+						<td rowspan="3" class="experimentsupport">5.1.7</td>
+						<td rowspan="3" class="experimentsupport">13-23</td>
+						<td class="unsupport">11.5</td>
+					</tr>
+					<tr>
+						<th>版本</th>
+						<td rowspan="2" class="support">10</td>
+						<td class="experimentsupport">5-18</td>
+						<td class="experimentsupport">12</td>
+					</tr>
+					<tr>
+						<th>版本</th>
+						<td class="support">16</td>
+						<td class="support">12.1</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+	<section id="example" class="g-mod g-attr">
+		<h2 class="tit">示例：</h2>
+		<div class="cont">
+			<textarea cols="90" rows="10">
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>@keyframes_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<style>
+#sport{position:relative;width:500px;height:400px;border:1px solid #ddd;}
+#staff{position:absolute;z-index:3;bottom:10px;left:10px;overflow:hidden;width:180px;height:8px;border-radius:3px;background:#ddd;line-height:20;
+	-moz-animation:staff 3s linear;
+	-webkit-animation:staff 3s linear;
+	-o-animation:staff 3s linear;
+	-ms-animation:staff 3s linear;
+	animation:staff 3s linear;
+}
+#ball{position:absolute;z-index:3;bottom:20px;left:90px;overflow:hidden;width:30px;height:30px;border-radius:15px;box-shadow:0 0 10px rgba(204,102,0,.8);background:#F6D66E;background:-moz-linear-gradient(top,#fff,#F6D66E);background:-webkit-linear-gradient(top,#fff,#F6D66E);background:-o-linear-gradient(top,#fff,#F6D66E);background:-ms-linear-gradient(top,#fff,#F6D66E);background:linear-gradient(top,#fff,#F6D66E);line-height:20;
+	-moz-animation:ball 3s linear;
+	-webkit-animation:ball 3s linear;
+	-o-animation:ball 3s linear;
+	-ms-animation:ball 3s linear;
+	animation:ball 3s linear;
+}
+@-moz-keyframes ball{
+	0%{-moz-transform:translate(0,0);}
+	5%{-moz-transform:translate(-90px,-100px);}
+	18%{-moz-transform:translate(0,-350px);}
+	35%{-moz-transform:translate(200px,0);}
+	46%{-moz-transform:translate(380px,-160px);}
+	60%{-moz-transform:translate(250px,-350px);}
+	78%{-moz-transform:translate(60px,0);}
+	100%{-moz-transform:translate(0,0);}
+}
+@-webkit-keyframes ball{
+	0%{-webkit-transform:translate(0,0);}
+	5%{-webkit-transform:translate(-90px,-100px);}
+	18%{-webkit-transform:translate(0,-350px);}
+	35%{-webkit-transform:translate(200px,0);}
+	46%{-webkit-transform:translate(380px,-160px);}
+	60%{-webkit-transform:translate(250px,-350px);}
+	78%{-webkit-transform:translate(60px,0);}
+	100%{-webkit-transform:translate(0,0);}
+}
+@-o-keyframes ball{
+	0%{-o-transform:translate(0,0);}
+	5%{-o-transform:translate(-90px,-100px);}
+	18%{-o-transform:translate(0,-350px);}
+	35%{-o-transform:translate(200px,0);}
+	46%{-o-transform:translate(380px,-160px);}
+	60%{-o-transform:translate(250px,-350px);}
+	78%{-o-transform:translate(60px,0);}
+	100%{-o-transform:translate(0,0);}
+}
+@-ms-keyframes ball{
+	0%{-ms-transform:translate(0,0);}
+	5%{-ms-transform:translate(-90px,-100px);}
+	18%{-ms-transform:translate(0,-350px);}
+	35%{-ms-transform:translate(200px,0);}
+	46%{-ms-transform:translate(380px,-160px);}
+	60%{-ms-transform:translate(250px,-350px);}
+	78%{-ms-transform:translate(60px,0);}
+	100%{-ms-transform:translate(0,0);}
+}
+@keyframes ball{
+	0%{transform:translate(0,0);}
+	5%{transform:translate(-90px,-100px);}
+	18%{transform:translate(0,-350px);}
+	35%{transform:translate(200px,0);}
+	46%{transform:translate(380px,-160px);}
+	60%{transform:translate(250px,-350px);}
+	78%{transform:translate(60px,0);}
+	100%{transform:translate(0,0);}
+}
+@-moz-keyframes staff{
+	0%{-moz-transform:translate(0,0);}
+	6%{-moz-transform:translate(260px,0);}
+	20%{-moz-transform:translate(300px,0);}
+	30%{-moz-transform:translate(300px,0);}
+	40%{-moz-transform:translate(200px,0);}
+	65%{-moz-transform:translate(40px,0);}
+	79%{-moz-transform:translate(0,0);}
+	100%{-moz-transform:translate(0,0);}
+}
+@-webkit-keyframes staff{
+	0%{-webkit-transform:translate(0,0);}
+	6%{-webkit-transform:translate(260px,0);}
+	20%{-webkit-transform:translate(300px,0);}
+	30%{-webkit-transform:translate(300px,0);}
+	40%{-webkit-transform:translate(200px,0);}
+	65%{-webkit-transform:translate(40px,0);}
+	79%{-webkit-transform:translate(0,0);}
+	100%{-webkit-transform:translate(0,0);}
+}
+@-o-keyframes staff{
+	0%{-o-transform:translate(0,0);}
+	6%{-o-transform:translate(260px,0);}
+	20%{-o-transform:translate(300px,0);}
+	30%{-o-transform:translate(300px,0);}
+	40%{-o-transform:translate(200px,0);}
+	65%{-o-transform:translate(40px,0);}
+	79%{-o-transform:translate(0,0);}
+	100%{-o-transform:translate(0,0);}
+}
+@-ms-keyframes staff{
+	0%{-ms-transform:translate(0,0);}
+	6%{-ms-transform:translate(260px,0);}
+	20%{-ms-transform:translate(300px,0);}
+	30%{-ms-transform:translate(300px,0);}
+	40%{-ms-transform:translate(200px,0);}
+	65%{-ms-transform:translate(40px,0);}
+	79%{-ms-transform:translate(0,0);}
+	100%{-ms-transform:translate(0,0);}
+}
+@keyframes staff{
+	0%{transform:translate(0,0);}
+	6%{transform:translate(260px,0);}
+	20%{transform:translate(300px,0);}
+	30%{transform:translate(300px,0);}
+	40%{transform:translate(200px,0);}
+	65%{transform:translate(40px,0);}
+	79%{transform:translate(0,0);}
+	100%{transform:translate(0,0);}
+}
+</style>
+</head>
+<body>
+<div id="sport">
+	<span id="ball">弹球</span>
+	<span id="staff">滑杆</span>
+</div>
+</body>
+</html>
+			</textarea>
+			<p><input type="button" value="运行" class="g-btn g-btn-sure" /></p>
+		</div>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../js/jquery.js"></script>
+<script src="../js/inner.js"></script>
+</body>
+</html>

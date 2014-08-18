@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>Properties Level Hack</title>
+<meta name="description" content="CSS3参考手册之: 属性级Hack" />
+<meta name="keywords" content="css属性级Hack" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../skin/article.css" />
+</head>
+<body>
+<nav id="guide" class="g-mod">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="index.htm" id="category" rel="hack" name="properties">CSS Hack列表</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>CSS Hack属性</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入分类快速导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">属性级Hack</h1>
+		<ul class="info">
+			<li>CSS内部属性级Hack</li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="syntax" class="g-mod g-attr">
+		<h2 class="tit">语法：</h2>
+		<div class="cont">
+			<p><strong>selector</strong>{&lt;hack&gt;?property:value&lt;hack&gt;?;}</p>
+		</div>
+	</section>
+	<section class="g-mod g-attr" id="value">
+		<h2 class="tit">取值：</h2>
+		<div class="cont">
+			<dl>
+				<dt>_：</dt>
+				<dd>选择IE6及以下。<em class="g-color-light">连接线（中划线）（-）亦可使用，为了避免与某些带中划线的属性混淆，所以使用下划线（_）更为合适。</em></dd>
+				<dt>*：</dt>
+				<dd>选择IE7及以下。<em class="g-color-light">诸如：（+）与（#）之类的均可使用，不过业界对（*）的认知度更高</em></dd>
+				<dt>\9：</dt>
+				<dd>选择IE6+</dd>
+				<dt>\0：</dt>
+				<dd>选择IE8+和Opera</dd>
+				<dt>[;property:value;];：</dt>
+				<dd>选择webkit核心浏览器（Chrome,Safari）。IE7及以下也能识别。<em class="g-color-light">中括号内外的3个分号必须保留，第一个分号前可以是任意规则或任意多个规则</em></dd>
+				<dd><em class="g-color-light">[;color:#f00;];</em> 与 <em class="g-color-light">[color:#f00;color:#f00;];</em> 与 <em class="g-color-light">[margin:0;padding:0;color:#f00;];</em> 是等价的。生效的始终是中括号内的最后一条规则，所以通常选用第一种写法最为简洁。</dd>
+			</dl>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
+		<h2 class="tit">说明：</h2>
+		<div class="cont">
+			<strong>选择不同的浏览器及版本</strong>
+			<ul>
+				<li>尽可能减少对CSS Hack的使用。<em class="g-color-light">Hack有风险，使用需谨慎</em></li>
+				<li>通常如未作特别说明，本文档所有的代码和示例的默认运行环境都为标准模式。</li>
+				<li>
+					<p>一些CSS Hack由于浏览器存在交叉认识，所以需要通过层层覆盖的方式来实现对不同浏览器进行Hack的。如下面这个例子：</p>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>如想同一段文字在IE6,7,8显示为不同颜色，可这样写：</strong></p>
+						<blockquote class="gquote-cont"><pre><code>.test{
+	color:#090\9; /* For IE8+ */
+	*color:#f00;  /* For IE7 and earlier */
+	_color:#ff0;  /* For IE6 and earlier */
+}</code></pre></blockquote>
+						<p class="gquote-info">* 上述Hack均需运行在标准模式下，若在怪异模式下运行，这些Hack将会被不同版本的IE相互识别，导致失效。</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<section id="example" class="g-mod g-attr">
+		<h2 class="tit">示例：</h2>
+		<div class="cont">
+			<textarea cols="90" rows="10">
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>属性级Hack_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<style>
+h1{margin:10px 0;font-size:16px;}
+.test{
+	color:#c30;          /* For Firefox */
+	[;color:#ddd;];      /* For webkit(Chrome and Safari) */
+	color:#090\0;        /* For Opera */
+	color:#00f\9;        /* For IE8+ */
+	*color:#f00;         /* For IE7 */
+	_color:#ff0;         /* For IE6 */
+}
+</style>
+</head>
+<body>
+<div class="test">在不同浏览器下看看我的颜色吧</div>
+</body>
+</html>
+			</textarea>
+			<p><input type="button" value="运行" class="g-btn g-btn-sure" /></p>
+		</div>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../js/jquery.js"></script>
+<script src="../js/inner.js"></script>
+</body>
+</html>

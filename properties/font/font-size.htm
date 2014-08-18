@@ -1,0 +1,207 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>font-size</title>
+<meta name="description" content="CSS3参考手册之:font-size" />
+<meta name="keywords" content="font-size, css3, css3参考手册" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../../skin/article.css" />
+</head>
+<body>
+<nav id="guide" class="g-mod">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="../index.htm">属性列表</a>
+		<span>&#187;</span>
+		<a href="index.htm" id="category" rel="properties/font" name="font-size">字体属性</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它字体属性参考</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入快速分类导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">font-size</h1>
+		<ul class="info">
+			<li><strong>版本：CSS1</strong></li>
+			<li>媒体：视觉</li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="syntax" class="g-mod g-attr">
+		<h2 class="tit">语法：</h2>
+		<div class="cont">
+			<p><strong>font-size</strong>：&lt;absolute-size&gt; | &lt;relative-size&gt; | <a href="../../values/other/length.htm">&lt;length&gt;</a> | <a href="../../values/other/percentage.htm">&lt;percentage&gt;</a></p>
+			<p><strong>默认值</strong>：<mark class="defaultvalue">medium</mark></p>
+			<p><strong>适用于</strong>：所有元素</p>
+		    <p><strong>继承性</strong>：有</p>
+		    <p><strong>动画性</strong>：是</p>
+		    <p><strong>计算值</strong>：指定值</p>
+		</div>
+	</section>
+	<section id="value" class="g-mod g-attr">
+		<h2 class="tit">取值：</h2>
+		<div class="cont">
+			<dl>
+				<dt>&lt;absolute-size&gt;：</dt>
+				<dd>根据对象字体进行调节。可选参数值：xx-small | x-small | small | medium | large | x-large | xx-large</dd>
+				<dd>以 medium 作为基础参照，xx-small相当于medium 3/5 (h6)，x-small: 3/4，small: 8/9 (h5)，medium: 1 (h4)，large: 6/5 (h3)，x-large: 3/2 (h2)，xx-large: 2/1 (h1)，</dd>
+				<dt>&lt;relative-size&gt;：</dt>
+				<dd>相对于父对像中字体尺寸进行相对调节。使用成比例的em单位计算。可选参数值：smaller | larger</dd>
+				<dt><a href="../../values/other/length.htm">&lt;length&gt;</a>：</dt>
+				<dd>用长度值指定文字大小。不允许负值。</dd>
+				<dt><a href="../../values/other/percentage.htm">&lt;percentage&gt;</a>：</dt>
+				<dd>用百分比指定文字大小。其百分比取值是基于父对象中字体的尺寸。不允许负值。</dd>
+			</dl>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
+		<h2 class="tit">说明：</h2>
+		<div class="cont">
+			<strong>设置或检索对象中的字体尺寸。</strong>
+			<ul>
+				<li>对应的脚本特性为<strong>fontSize</strong>。</li>
+			</ul>
+		</div>
+	</section>
+	<section id="compatible" class="g-mod g-attr">
+		<h2 class="tit">兼容性：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">墨绿</span> = 部分支持</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
+						<th><span class="browser-ie">IE</span></th>
+						<th><span class="browser-firefox">Firefox</span></th>
+						<th><span class="browser-safari">Safari</span></th>
+						<th><span class="browser-chrome">Chrome</span></th>
+						<th><span class="browser-opera">Opera</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>版本</th>
+						<td class="support">6.0</td>
+						<td class="support">1.0</td>
+						<td class="support">1.0</td>
+						<td class="support">1.0</td>
+						<td class="support">7.0</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+	<section id="example" class="g-mod g-attr">
+		<h2 class="tit">示例：</h2>
+		<div class="cont">
+			<textarea cols="90" rows="10">
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>font-size_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<style>
+.test p{margin:15px 0;border:1px solid #000;}
+.xx-small p{font-size:xx-small;}
+.x-small p{font-size:x-small;}
+.small p{font-size:small;}
+.medium p{font-size:medium;}
+.large p{font-size:large;}
+.x-large p{font-size:x-large;}
+.xx-large p{font-size:xx-large;}
+.smaller p{font-size:smaller;}
+.larger p{font-size:larger;}
+.float p{font-size:20px;}
+.percentage{font-size:20px;}
+.percentage span{font-size:60%;}
+</style>
+</head>
+<body>
+<ul class="test">
+	<li class="xx-small">
+		<strong>尺寸大小为xx-small：</strong>
+		<p>xx-small尺寸的文字。</p>
+	</li>
+	<li class="x-small">
+		<strong>尺寸大小为x-small：</strong>
+		<p>x-small尺寸的文字。</p>
+	</li>
+	<li class="small">
+		<strong>尺寸大小为small：</strong>
+		<p>small尺寸的文字。</p>
+	</li>
+	<li class="medium">
+		<strong>尺寸大小为medium：</strong>
+		<p>medium尺寸的文字。</p>
+	</li>
+	<li class="large">
+		<strong>尺寸大小为large：</strong>
+		<p>large尺寸的文字。</p>
+	</li>
+	<li class="x-large">
+		<strong>尺寸大小为x-large：</strong>
+		<p>x-large尺寸的文字。</p>
+	</li>
+	<li class="xx-large">
+		<strong>尺寸大小为xx-large：</strong>
+		<p>xx-large尺寸的文字。</p>
+	</li>
+	<li class="samller">
+		<strong>尺寸大小为samller：</strong>
+		<p>samller尺寸的文字。</p>
+	</li>
+	<li class="larger">
+		<strong>尺寸大小为larger：</strong>
+		<p>larger尺寸的文字。</p>
+	</li>
+	<li class="float">
+		<strong>尺寸大小为20px：</strong>
+		<p>20px尺寸的文字。</p>
+	</li>
+	<li class="percentage">
+		<strong>尺寸大小为20px：</strong>
+		<p>父对象20px尺寸的文字。<span>我的尺寸只是父对象的60%</span></p>
+	</li>
+</ul>
+</body>
+</html>
+			</textarea>
+			<p><input type="button" value="运行" class="g-btn g-btn-sure" /></p>
+		</div>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/inner.js"></script>
+</body>
+</html>

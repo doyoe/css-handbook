@@ -1,0 +1,190 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>box-flex</title>
+<meta name="description" content="CSS3参考手册伸缩盒之: box-flex" />
+<meta name="keywords" content="box-flex, flexbox, 伸缩盒, css3, css3参考手册" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../../skin/article.css" />
+</head>
+<body>
+<nav id="guide" class="g-mod">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="../index.htm">属性列表</a>
+		<span>&#187;</span>
+		<a href="index.htm" id="category" rel="properties/flexible-box" name="box-flex">伸缩盒属性</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它媒体查询属性</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入快速分类导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">box-flex</h1>
+		<ul class="info">
+			<li><strong>版本：CSS3</strong></li>
+			<li>媒体：视觉</li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="syntax" class="g-mod g-attr">
+		<h2 class="tit">语法：</h2>
+		<div class="cont">
+			<p><strong>box-flex</strong>：<a href="../../values/numeric/number.htm">&lt;number&gt;</a></p>
+			<p><strong>默认值</strong>：<mark class="defaultvalue">0</mark></p>
+			<p><strong>适用于</strong>：伸缩盒子元素</p>
+		    <p><strong>继承性</strong>：无</p>
+		    <p><strong>动画性</strong>：否</p>
+		    <p><strong>计算值</strong>：指定值</p>
+		</div>
+	</section>
+	<section id="value" class="g-mod g-attr">
+		<h2 class="tit">取值：</h2>
+		<div class="cont">
+			<dl>
+				<dt><a href="../../values/numeric/number.htm">&lt;number&gt;</a>：</dt>
+				<dd>使用浮点数指定对象所分配其父元素剩余空间的比例。</dd>
+			</dl>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
+		<h2 class="tit">说明：</h2>
+		<div class="cont">
+			<strong>设置或检索伸缩盒对象的子元素如何分配其剩余空间。</strong>
+			<ul>
+				<li>效果类似于过渡版本和新版本的flex属性；</li>
+				<li>
+					<strong>示例：将一个容器分成6份，子对象a分1份，b分2份，c分3份</strong>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>HTML Code：</strong></p>
+						<blockquote class="gquote-cont"><pre><code>&lt;ul id="box"&gt;
+	&lt;li&gt;a&lt;/li&gt;
+	&lt;li&gt;b&lt;/li&gt;
+	&lt;li&gt;c&lt;/li&gt;
+&lt;/ul&gt;</code></pre></blockquote>
+					</div>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>CSS Code：</strong></p>
+						<blockquote class="gquote-cont"><pre><code>#box{display:box;width:240px;height:100px;margin:0;padding:10px;list-style:none;}
+#box li:nth-child(1){box-flex:1;}
+#box li:nth-child(2){box-flex:1;}
+#box li:nth-child(3){box-flex:2;}</code></pre></blockquote>
+						<p class="gquote-info">上面代码请自行加上-moz-,-webkit-之类的。box-flex生效需定义其父元素<a href="../layout/display.htm">display</a>为box或inline-box</p>
+					</div>
+				</li>
+				<li>误区：注意box-flex只是动态分配父元素的剩余空间，而不是整个父元素的空间。如上例，父元素#box的宽度为240px，如果你认为a,b,c的宽度分别为60, 60, 120那么就错了，因为box-flex只是分配父元素的剩余空间而已，所以a,b,c所分到的应该是除内容外所剩余下来的宽度</li>
+				<li>
+					<strong>为了清晰所谓的剩余空间分配，对上例稍作修改，HTML Code不变</strong>
+
+					<div class="gquote">
+						<p class="gquote-tit"><strong>CSS Code：</strong></p>
+						<blockquote class="gquote-cont"><pre><code>#box{display:box;width:240px;height:100px;margin:0;padding:10px;list-style:none;}
+.box li{width:50px;padding:7px;}
+#box li:nth-child(1){box-flex:1;}
+#box li:nth-child(2){box-flex:1;}
+#box li:nth-child(3){box-flex:2;}</code></pre></blockquote>
+						<p class="gquote-info">从上面的代码，我们可以知道a,b,c的宽度分别为50+7*2=64px，三者加起来即192px，所以剩下的240-192=48px才是父元素的剩余空间，于是a,b,c按照设定的1:1:2来分配这48px，a分得12px，b分得12px，c分得24px，所以最终a=64+12=76px，b=64+12=76px，c=64+24=88px</p>
+					</div>
+				</li>
+				<li>对应的脚本特性为<strong>boxFlex</strong>。</li>
+			</ul>
+		</div>
+	</section>
+	<section id="compatible" class="g-mod g-attr">
+		<h2 class="tit">兼容性：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">墨绿</span> = 部分支持</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
+						<th><span class="browser-ie">IE</span></th>
+						<th><span class="browser-firefox">Firefox</span></th>
+						<th><span class="browser-safari">Safari</span></th>
+						<th><span class="browser-chrome">Chrome</span></th>
+						<th><span class="browser-opera">Opera</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>较早版本</th>
+						<td class="unsupport" rowspan="2">6.0-11.0</td>
+						<td class="support" rowspan="2">4.0.-25.0 <sup class="fix">-moz-</sup></td>
+						<td class="support" rowspan="2">5.1.7 <sup class="fix">-webkit-</sup></td>
+						<td class="support" rowspan="2">4.0-31.0 <sup class="fix">-webkit-</sup></td>
+						<td class="unsupport">9.5-14.0</td>
+					</tr>
+					<tr>
+						<th>较新版本</th>
+						<td class="support">15.0-18.0 <sup class="fix">-webkit-</sup></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+	<section id="example" class="g-mod g-attr">
+		<h2 class="tit">示例：</h2>
+		<div class="cont">
+			<textarea cols="90" rows="10">
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>box-flex_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<style>
+h1{font:bold 20px/1.5 georgia,simsun,sans-serif;}
+.box{display:-webkit-box;display:-moz-box;display:-ms-box;background:#000;width:240px;height:100px;margin:0;padding:10px;list-style:none;vertical-align:top;}
+#box li:nth-child(1){-webkit-box-flex:1;-moz-box-flex:1;-ms-box-flex:1;background:#666;}
+#box li:nth-child(2){-webkit-box-flex:1;-moz-box-flex:1;-ms-box-flex:1;background:#999;}
+#box li:nth-child(3){-webkit-box-flex:2;-moz-box-flex:2;-ms-box-flex:2;background:#ccc;}
+</style>
+</head>
+<body>
+<h1>box-flex示例：</h1>
+<ul id="box" class="box">
+	<li>a</li>
+	<li>b</li>
+	<li>c</li>
+</ul>
+</body>
+</html>
+			</textarea>
+			<p><input type="button" class="g-btn g-btn-sure" value="运行"></p>
+		</div>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/inner.js"></script>
+</body>
+</html>
