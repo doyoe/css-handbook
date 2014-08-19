@@ -45,63 +45,87 @@ jQuery.cookie = function(name, value, options) {
 window.topDocument = window.top.document;
 
 /*
- *  url地址的页面跳转,chm版本中应去掉。(该删除，其他不用删除)
- */
-(function(){
-	if(window == window.top){
-		var host = window.location.host,
-			path = window.location.pathname;
-		$.cookie('pos',path,{expires:3600000*24, path: '/'});
-		var codeWin = window.open('http://' + host,'_self');
-		codeWin.document.close();
-	}
-	if(window != window.top){
-		var pos = $.cookie('pos');
-		if(pos){
-			$.cookie('pos',null,{path:'/'});
-			$('#archives',topDocument).attr('src',pos);
-		}
-	}
-})();
-
-/*
  *  全局函数的封装
  */
-var Global = {};
+var Global = {
+	//在线手册根目录，默认值
+	rootPath: "http://css.doyoe.com/",
+	//是否本地浏览或者chm浏览方式
+	isLocal: /^mk:$/i.test(location.protocol)
+};
 
 // 下拉菜单的展开收起的构造函数,参数s为下拉菜单最外层的容器;
 Global.folding = function(s){
-	s.live({
-		mouseenter : function() {
-			$(this).addClass('on');
-		},
-		mouseleave : function(){
-			$(this).removeClass('on');
-		}
+	s.hover(function() {
+		$(this).addClass('on');
+	}, function() {
+		$(this).removeClass('on');
 	});
 };
 
 //取得标识里定位data位置的rel和标识着此项信息的name
-Global.getRel = function(id){
+(function(id){
 	var tag = $(id);
 	if(!tag.length){return};
 	Global.rel = tag.attr('rel');
 	Global.name = tag.attr('name');
-	Global.url = 'http://css.doyoe.com/' + Global.rel + '/' + Global.name + '.htm';
-}('#category');
+	Global.pathname = (Global.rel ? '/' + Global.rel : '') + '/' + Global.name + '.htm';
+	if (Global.isLocal) {
+		Global.url = Global.rootPath + Global.pathname;
+	} else {
+		Global.url = location.href;
+		Global.rootPath = Global.url.replace(Global.pathname, "");
+	}
+})('#category');
+
+//url地址的页面跳转
+if (!Global.isLocal && Global.name) {
+	(function(){
+		if(window === window.top){
+			$.cookie('pos', Global.url, {path: '/'});
+			location = Global.rootPath + (/^file:$/i.test(location.protocol) ? "/index.htm" : "");
+		} else {
+			var pos = $.cookie('pos');
+			if(pos){
+				$.cookie('pos',null,{path:'/'});
+				$('#archives',topDocument).attr('src',pos);
+			}
+		}
+	})();
+}
 
 //复制函数
-Global.copy = function(content,isAlertContent){
-	//判断浏览器,目前仅支持IE
-    if(window.clipboardData) {
-	    window.clipboardData.setData('text',content);
-	    alert('复制成功!');
-    }else{
-    	var tip = "你的浏览器不支持此功能,请手动进行复制。";
-    	// 如果带入了isAlertContent参数，火狐无法复制时，弹出的tip包含content。
-    	if(isAlertContent){prompt(tip+'链接地址为：',content)}else{alert(tip)}
-    }
-};
+(function() {
+	var tip = "你的浏览器不支持此功能,请手动进行复制。",
+		clipboardData = window.clipboardData;
+	if(!clipboardData){
+		!function a(b,c,e){function f(d,j){if(!c[d]){if(!b[d]){var i=typeof require=='function'&&require;if(!j&&i)return i(d,!0);if(g)return g(d,!0);throw new Error("Cannot find module '"+d+"'")}var h=c[d]={exports:{}};b[d][0].call(h.exports,function(c){var a=b[d][1][c];return f(a?a:c)},h,h.exports,a,b,c,e)}return c[d].exports}var g=typeof require=='function'&&require;for(var d=0;d<e.length;d++)f(e[d]);return f}({1:[function(b,a,c){!function(e,h,p,n,k,g,q,j,l,m,i,b,c,d,f,o){'use strict';e=function(a,c){var b=a.style[c];if(a.currentStyle?b=a.currentStyle[c]:window.getComputedStyle&&(b=document.defaultView.getComputedStyle(a,null).getPropertyValue(c)),b=='auto'&&c=='cursor'){var e=['a'];for(var d=0;d<e.length;d++)if(a.tagName.toLowerCase()==e[d])return'pointer'}return b},h=function(a){if(!b.prototype._singleton)return;a||(a=window.event);var c;this!==window?c=this:a.target?c=a.target:a.srcElement&&(c=a.srcElement),b.prototype._singleton.setCurrent(c)},p=function(a,b,c){a.addEventListener?a.addEventListener(b,c,!1):a.attachEvent&&a.attachEvent('on'+b,c)},n=function(a,b,c){a.removeEventListener?a.removeEventListener(b,c,!1):a.detachEvent&&a.detachEvent('on'+b,c)},k=function(a,b){if(a.addClass)return a.addClass(b),a;if(b&&typeof b==='string'){var d=(b||'').split(/\s+/);if(a.nodeType===1)if(!a.className)a.className=b;else{var f=' '+a.className+' ',e=a.className;for(var c=0,g=d.length;c<g;c++)f.indexOf(' '+d[c]+' ')<0&&(e+=' '+d[c]);a.className=e.replace(/^\s+|\s+$/g,'')}}return a},g=function(a,b){if(a.removeClass)return a.removeClass(b),a;if(b&&typeof b==='string'||b===undefined){var e=(b||'').split(/\s+/);if(a.nodeType===1&&a.className)if(b){var c=(' '+a.className+' ').replace(/[\n\t]/g,' ');for(var d=0,f=e.length;d<f;d++)c=c.replace(' '+e[d]+' ',' ');a.className=c.replace(/^\s+|\s+$/g,'')}else a.className=''}return a},q=function(a){var b={left:0,top:0,width: $(a).outerWidth(),height:$(a).outerHeight(),zIndex:9999},c=e(a,'zIndex');c&&c!='auto'&&(b.zIndex=parseInt(c,10));while(a){var d=parseInt(e(a,'borderLeftWidth'),10),f=parseInt(e(a,'borderTopWidth'),10);b.left+=isNaN(a.offsetLeft)?0:a.offsetLeft,b.left+=isNaN(d)?0:d,b.top+=isNaN(a.offsetTop)?0:a.offsetTop,b.top+=isNaN(f)?0:f,a=a.offsetParent}return b},j=function(a){return(a.indexOf('?')>=0?'&nocache=':'?nocache=')+new Date().getTime()},l=function(a){var b=[];return a.trustedDomains&&(typeof a.trustedDomains==='string'?b.push('trustedDomain='+a.trustedDomains):b.push('trustedDomain='+a.trustedDomains.join(','))),b.join('&')},m=function(c,b){if(b.indexOf)return b.indexOf(c);for(var a=0,d=b.length;a<d;a++)if(b[a]===c)return a;return-1},i=function(a){if(typeof a==='string')throw new TypeError("ZeroClipboard doesn't accept query strings.");return a.length?a:[a]},b=function(d,e){if(d&&(b.prototype._singleton||this).glue(d),b.prototype._singleton)return b.prototype._singleton;b.prototype._singleton=this,this.options={};for(var a in f)this.options[a]=f[a];for(var c in e)this.options[c]=e[c];this.handlers={},b.detectFlashSupport()&&o()},d=[],b.prototype.setCurrent=function(a){c=a,this.reposition(),a.getAttribute('title')&&this.setTitle(a.getAttribute('title')),this.setHandCursor(e(a,'cursor')=='pointer')},b.prototype.setText=function(a){a&&a!==''&&(this.options.text=a,this.ready()&&this.flashBridge.setText(a))},b.prototype.setTitle=function(a){a&&a!==''&&this.htmlBridge.setAttribute('title',a)},b.prototype.setSize=function(a,b){this.ready()&&this.flashBridge.setSize(a,b)},b.prototype.setHandCursor=function(a){this.ready()&&this.flashBridge.setHandCursor(a)},b.version='1.1.7',f={moviePath:'ZeroClipboard.swf',trustedDomains:null,text:null,hoverClass:'zeroclipboard-is-hover',activeClass:'zeroclipboard-is-active',allowScriptAccess:'sameDomain'},b.setDefaults=function(b){for(var a in b)f[a]=b[a]},b.destroy=function(){b.prototype._singleton.unglue(d);var a=b.prototype._singleton.htmlBridge;a.parentNode.removeChild(a),delete b.prototype._singleton},b.detectFlashSupport=function(){var a=!1;try{new ActiveXObject('ShockwaveFlash.ShockwaveFlash'),a=!0}catch(b){navigator.mimeTypes['application/x-shockwave-flash']&&(a=!0)}return a},o=function(){var c=b.prototype._singleton,a=document.getElementById('global-zeroclipboard-html-bridge');if(!a){var d='      <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" id="global-zeroclipboard-flash-bridge" width="100%" height="100%">         <param name="movie" value="'+c.options.moviePath+j(c.options.moviePath)+'"/>         <param name="allowScriptAccess" value="'+c.options.allowScriptAccess+'"/>         <param name="scale" value="exactfit"/>         <param name="loop" value="false"/>         <param name="menu" value="false"/>         <param name="quality" value="best" />         <param name="bgcolor" value="#ffffff"/>         <param name="wmode" value="transparent"/>         <param name="flashvars" value="'+l(c.options)+'"/>         <embed src="'+c.options.moviePath+j(c.options.moviePath)+'"           loop="false" menu="false"           quality="best" bgcolor="#ffffff"           width="100%" height="100%"           name="global-zeroclipboard-flash-bridge"           allowScriptAccess="always"           allowFullScreen="false"           type="application/x-shockwave-flash"           wmode="transparent"           pluginspage="http://www.macromedia.com/go/getflashplayer"           flashvars="'+l(c.options)+'"           scale="exactfit">         </embed>       </object>';a=document.createElement('div'),a.id='global-zeroclipboard-html-bridge',a.setAttribute('class','global-zeroclipboard-container'),a.setAttribute('data-clipboard-ready',!1),a.style.position='absolute',a.style.left='-9999px',a.style.top='-9999px',a.style.width='15px',a.style.height='15px',a.style.zIndex='9999',a.innerHTML=d,document.body.appendChild(a)}c.htmlBridge=a,c.flashBridge=document['global-zeroclipboard-flash-bridge']||a.children[0].lastElementChild},b.prototype.resetBridge=function(){this.htmlBridge.style.left='-9999px',this.htmlBridge.style.top='-9999px',this.htmlBridge.removeAttribute('title'),this.htmlBridge.removeAttribute('data-clipboard-text'),g(c,this.options.activeClass),c=null,this.options.text=null},b.prototype.ready=function(){var a=this.htmlBridge.getAttribute('data-clipboard-ready');return a==='true'||a===!0},b.prototype.reposition=function(){if(!c)return!1;var a=q(c);this.htmlBridge.style.top=a.top+'px',this.htmlBridge.style.left=a.left+'px',this.htmlBridge.style.width=a.width+'px',this.htmlBridge.style.height=a.height+'px',this.htmlBridge.style.zIndex=a.zIndex+1,this.setSize(a.width,a.height)},b.dispatch=function(a,c){b.prototype._singleton.receiveEvent(a,c)},b.prototype.on=function(a,e){var d=a.toString().split(/\s/g);for(var c=0;c<d.length;c++)a=d[c].toLowerCase().replace(/^on/,''),this.handlers[a]||(this.handlers[a]=e);this.handlers.noflash&&!b.detectFlashSupport()&&this.receiveEvent('onNoFlash',null)},b.prototype.addEventListener=b.prototype.on,b.prototype.off=function(c,e){var d=c.toString().split(/\s/g);for(var a=0;a<d.length;a++){c=d[a].toLowerCase().replace(/^on/,'');for(var b in this.handlers)b===c&&this.handlers[b]===e&&delete this.handlers[b]}},b.prototype.removeEventListener=b.prototype.off,b.prototype.receiveEvent=function(b,d){b=b.toString().toLowerCase().replace(/^on/,'');var a=c;switch(b){case'load':if(d&&parseFloat(d.flashVersion.replace(',','.').replace(/[^0-9\.]/gi,''))<10){this.receiveEvent('onWrongFlash',{flashVersion:d.flashVersion});return}this.htmlBridge.setAttribute('data-clipboard-ready',!0);break;case'mouseover':k(a,this.options.hoverClass);break;case'mouseout':g(a,this.options.hoverClass);this.resetBridge();break;case'mousedown':k(a,this.options.activeClass);break;case'mouseup':g(a,this.options.activeClass);break;case'datarequested':var h=a.getAttribute('data-clipboard-target'),e=h?document.getElementById(h):null;if(e){var i=e.value||e.textContent||e.innerText;i&&this.setText(i)}else{var j=a.getAttribute('data-clipboard-text');j&&this.setText(j)}break;case'complete':this.options.text=null;break}if(this.handlers[b]){var f=this.handlers[b];typeof f=='function'?f.call(a,this,d):typeof f=='string'&&window[f].call(a,this,d)}},b.prototype.glue=function(a){a=i(a);for(var b=0;b<a.length;b++)m(a[b],d)==-1&&(d.push(a[b]),p(a[b],'mouseover',h))},b.prototype.unglue=function(a){a=i(a);for(var b=0;b<a.length;b++){n(a[b],'mouseover',h);var c=m(a[b],d);c!=-1&&d.splice(c,1)}},a!==void 0?a.exports=b:typeof define==='function'&&define.amd?define(function(){return b}):window.ZeroClipboard=b}()},{}],2:[function(h,j,i){var c=typeof self!=='undefined'?self:typeof window!=='undefined'?window:{},e=c.ZeroClipboard=h('ZeroClipboard'),g={path:'ZeroClipboard.swf',copy:null,beforeCopy:null,afterCopy:null,clickAfter:!0},f=function(a){return a=0,function(){return a++}}(),d={},b,a=jQuery;a.fn.zclip=function(i){var h,j;if(a.isPlainObject(i))h=a.extend({},g,i),j=f(),d[j]=h,this.data('zclip-client',j),b?b.glue(this):b=new e(this,{moviePath:h.path,trustedDomains:[c.location.protocol+'//'+c.location.host],hoverClass:'hover',activeClass:'active'}),a.isFunction(h.copy)&&this.on('zClip_copy',a.proxy(h.copy,this)),a.isFunction(h.beforeCopy)&&this.on('zClip_beforeCopy',a.proxy(h.beforeCopy,this)),a.isFunction(h.afterCopy)&&this.on('zClip_afterCopy',a.proxy(h.afterCopy,this)),b.on('mouseover',function(){var b=a(this);b.trigger('mouseenter')}),b.on('mouseout',function(){var b=a(this);b.trigger('mouseleave')}),b.on('mousedown',function(){var b=a(this);b.trigger('mousedown')}),b.on('load',function(a){a.setHandCursor(h.setHandCursor)}),b.on('complete',function(h,g){var b=g.text,e=a(this),f=d[e.data('zclip-client')];a.isFunction(f.afterCopy)?e.trigger('zClip_afterCopy',b):(b.length>500&&(b=b.substr(0,500)+'\u2026\n\n('+(b.length-500)+'characters not shown)'),c.alert('Copied text to clipboard:\n\n'+g.text)),f.clickAfter&&e.trigger('click')}),b.on('dataRequested',function(e){var b=a(this),c=d[b.data('zclip-client')];b.trigger('zClip_beforeCopy'),a.isFunction(c.copy)?e.setText(String(b.triggerHandler('zClip_copy'))):e.setText(c.copy)}),a(c).on('load resize',function(){b.reposition()});else if(b&&typeof i==='string')switch(i){case'remove':case'hide':b.unglue(this);break;case'show':b.glue(this)}}},{ZeroClipboard:1}]},{},[2])
+	}
+	Global.copy = function(btn, content, isAlertContent) {
+		btn.click(function(e) {
+			e.preventDefault();
+			try {
+				clipboardData.setData("text", content);
+			} catch (ex) {
+				// 如果带入了isAlertContent参数，火狐无法复制时，弹出的tip包含content。
+				if (isAlertContent) {
+					prompt(tip + "\n链接地址为：", content);
+				} else {
+					alert(tip);
+				}
+			}
+		});
+		if ($.fn.zclip) {
+			btn.zclip({
+				afterCopy: function() {},
+				path: Global.rootPath + "/js/ZeroClipboard.swf",
+				clickAfter: false,
+				copy: content
+			});
+		}
+	};
+})();
+
 
 /*
  * 建立下拉菜单
@@ -239,7 +263,8 @@ Global.copy = function(content,isAlertContent){
 					'font-weight' : [],
 					'font-size' : [],
 					'font-family' : [],
-					'font-stretch' : []
+					'font-stretch' : [],
+					'font-face' : []
 				},
 				text : {
 					'index' : ['字体(text)','其它文本属性参考'],
@@ -455,6 +480,10 @@ Global.copy = function(content,isAlertContent){
 					'id' : ['ID选择符(E#id)'],
 					'class' : ['类选择符(E.class)']
 				},
+				'multiclass' : {
+					'index' : ['多类选择符','其它关系选择符参考'],
+					'mclass' : ['多类选择符(E.class1.class2)']
+				},
 				'relationship' : {
 					'index' : ['关系选择符','其它关系选择符参考'],
 					'ef' : ['包含选择符(E F)'],
@@ -572,7 +601,8 @@ Global.copy = function(content,isAlertContent){
 					'rem' : [],
 					'vw' : [],
 					'vh' : [],
-					'vm' : [],
+					'vmax' : [],
+					'vmin' : [],
 					'cm' : [],
 					'mm' : [],
 					'in' : [],
@@ -619,6 +649,7 @@ Global.copy = function(content,isAlertContent){
 
 			experience : {
 				'index' : ['问题和经验','其它问题和经验参考'],
+				'refer' : ['参考资源列表'],
 				'bugs' : ['Bugs和解决方案'],
 				'skill' : ['技巧和经验'],
 				'other' : ['其它经验']
@@ -737,7 +768,8 @@ Global.copy = function(content,isAlertContent){
 		found.find('a[type=detail]').attr('href',data['detail']);
 	};
 
-	var init = function(){
+	//init
+	(function(){
 		var found = $('#found'),
 			trans = $('#trans');
 
@@ -759,7 +791,7 @@ Global.copy = function(content,isAlertContent){
 
 		//绘制404页面
 		drawHtml(data);
-	}();
+	})();
 })();
 
 /*
@@ -768,13 +800,13 @@ Global.copy = function(content,isAlertContent){
 (function(){
 	//得到UA和浏览器版本
 	var UA = navigator.userAgent,
-		isWin7 = UA.match(/Windows NT 6.1/),
+		gteWin7 = UA.match(/Windows NT ([\d\.]+)/) && parseFloat(RegExp.$1) > 6,
 		isiPad = UA.match(/iPad/),
 		isiPhone = UA.match(/iPhone/),
 		isiPod = UA.match(/iPod/);
 
 	//给所有页面增加一些通用的模块，如执行环境，如copyright等。
-	var creatCommonMod = function (){
+	(function (){
 		//在页面头部的最后增加测试基础环境的模块
 		var testBrowser =
 		'<div class="g-browser g-clear">'+
@@ -811,20 +843,13 @@ Global.copy = function(content,isAlertContent){
 			tit.after(copyLink).after(share);
 		}
 
-	}();
+	})();
 
 	//复制本页链接功能
-	var copyLink = function(){
-		var btn = $('#copylink');
-		btn.on({
-			click : function(){
-				Global.copy(Global.url,true);
-			}
-		});
-	}();
+	Global.copy($("#copylink"), Global.url, true);
 
 	//分享功能
-	var invite = function(){
+	(function(){
 		var container = $('#share'),
 			title = Global.title ? encodeURIComponent('CSS参考手册　' + Global.title + '　精彩呈现：') : encodeURIComponent('CSS参考手册'),
 			url =  Global.url,
@@ -861,17 +886,17 @@ Global.copy = function(content,isAlertContent){
 			window.open('http://www.douban.com/recommend/?title=' + title + '&url=' + url, '_blank');
 			return false;
 		});
-	}();
+	})();
 
 	//ipad 滚动条失效，将每个页面外层包裹一层。
-	var forIOS = function(){
+	(function(){
 		if(!isiPad && !isiPhone && !isiPod){return;}
 		if($('#wrapper').length){return;}
 		$('body').children().not('script').wrapAll('<div id="wrapper"></div>');
-	}();
+	})();
 
 	//运行示例代码以及相关操作
-	var runCode = function(){
+	(function(){
 		var example = $('#example'),
 			content = example.find('textarea').val(),
 			btnRun = example.find('.g-btn-sure');
@@ -880,10 +905,8 @@ Global.copy = function(content,isAlertContent){
 		var copyCode = '<input type="button" class="g-btn g-btn-copy" value="复制">';
 			btnRun.after(copyCode);
 
-		var btnCopy = example.find('.g-btn-copy');
-
 		//运行代码
-		if(window == window.top && isWin7){
+		if(window == window.top && gteWin7){
 
 			//如果是win7下的chm版本，不支持直接打开浏览器运行
 			btnRun.on({
@@ -906,15 +929,15 @@ Global.copy = function(content,isAlertContent){
 		}
 
 		//复制代码
-		btnCopy.on({
-			click : function(){
-				Global.copy(content);
-			}
-		})
-	}();
+		Global.copy(example.find(".g-btn-copy"), content);
+	})();
 
 	//为自己和外层添加展开收起的折叠效果
 	Global.folding($('.g-combobox'));
+
+	$(".g-combobox .target").click(function(e) {
+		e.preventDefault();
+	});
 })();
 
 
@@ -925,6 +948,16 @@ Global.copy = function(content,isAlertContent){
 
 //如果是chm版本，没有父层就返回函数
 if(window == window.top){return false;}
+
+//selectivizr.js方式支持css3
+var selectivizr = topDocument.getElementById("selectivizr");
+if (selectivizr) {
+	selectivizr = selectivizr.src;
+	if (!/\w+:\/\//.test(selectivizr)) {
+		selectivizr = Global.rootPath + "/" + selectivizr;
+	}
+	document.writeln("<script src=\"" + selectivizr + "\"></script>");
+}
 
 //给父层添加下拉列表的展开收起的折叠效果
 
@@ -943,9 +976,9 @@ Global.folding($('.g-combobox',topDocument));
 		allList = dytree.find('ul');
 
 	//让父页面中的左侧的导航树中对应子页面正在打开的项 被选中.
-	var selectDefaultTree = function(){
+	(function(){
 		if(!Global.name){return false;}
-		var url = Global.rel != '' ? Global.rel+'/'+Global.name+'.htm' : Global.name+'.htm',
+			var url = Global.pathname.slice(1),
 			onLink = dytree.find('a[href="'+url+'"]'),
 			onLinkList = onLink.parents('ul'),
 			onLinkFolder = onLinkList.siblings('.haschild'),
@@ -965,10 +998,10 @@ Global.folding($('.g-combobox',topDocument));
 		onLinkList.addClass('unfold');
 		onFolder.addClass('open');
 		onFolderList.addClass('unfold');
-	}();
+	})();
 
-	if(!($.browser.msie)){
-		if(dytree.attr('loaded')){return false};
+	if(!$.browser.msie && dytree.attr('loaded')){
+		return;
 	}
 
 
@@ -1143,11 +1176,3 @@ Global.folding($('.g-combobox',topDocument));
 })();
 
 })();
-
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-3500471-4', 'doyoe.com');
-ga('send', 'pageview');

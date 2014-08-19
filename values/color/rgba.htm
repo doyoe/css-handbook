@@ -136,6 +136,26 @@
 			<p><input type="button" value="运行" class="g-btn g-btn-sure" /></p>
 		</div>
 	</section>
+    <section>
+        <h4>兼容解决方案：</h4>
+        <p>使用 rgba 模式实现透明度，针对不支持的IE6-8浏览器可使用 IE 滤镜处理，如：filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#88000000, endColorstr=#88000000);</p>
+        
+        <p>说明：#88000000 的前两位数字控制透明度，取值16进制从00 -> FF（越小越透明），00表示完全透明，FF就是全不透明，后面六位是色值。</p>
+        
+        <h4>扩展知识：</h4>
+        <p>DXImageTransform.Microsoft.gradient 滤镜里的 startColorstr 参数值是 #AARRGGBB 形式的， 其中的AA是代表不透明度的十六进制，00表示完全透明，FF就是全不透明，化成十进制的范围就是0~255，剩下的 RRGGBB 就是颜色的十六进制代码。
+        </p>
+        <p>举例如：background: rgba(125, 0, 0, .3); 表示的是30%不透明度的红色背景。把30%的不透明度转换成十六制呢的方法如下：先计算#AA的的十进制x，x/255 = 3/10，解得x=3*255/10，然后再把x换算成十六进制，约等于4C。</p>
+        
+        <h4>常用透明度对应16进制关系：</h4>
+        <p style="font-family: courier new;">
+        .0（00） .1（19） .05（0C） .15（26） <br>
+        .2（33） .3（4C） .25（3F） .35（59） <br>
+        .4（66） .5（7F） .45（72） .55（8C） <br>
+        .6（99） .7（B2） .65（A5） .75（BF） <br>
+        .8（CC） .9（E5） .85（D8） .95（F2）
+        </p>
+    </section>
 </section>
 <footer id="ft">
 	<aside id="rights" class="g-mod">

@@ -1,0 +1,194 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>E.class1.class2 多类选择符</title>
+<meta name="description" content="CSS3参考手册之: E.class1.class2" />
+<meta name="keywords" content="E.class1.class2, 多类选择符, css3选择符, css3, css3参考手册" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../../skin/article.css" />
+</head>
+<body>
+<nav id="guide" class="g-mod">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="../index.htm">选择符列表</a>
+		<span>&#187;</span>
+		<a href="index.htm"id="category" rel="selectors/multiclass" name="mclass">多类选择符</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它属性选择符参考</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入分类快速导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">多类选择符(E.class1.class2)</h1>
+		<ul class="info">
+			<li><strong>版本：CSS2</strong></li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="syntax" class="g-mod g-attr">
+		<h2 class="tit">语法：</h2>
+		<div class="cont">
+			<p><strong>E.class1.class2</strong>{ sRules }</p>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
+		<h2 class="tit">说明：</h2>
+		<div class="cont">
+			<strong>选择class属性同时包含class1和class2的E对象作为选择符。（不限两个）</strong>
+		</div>
+	</section>
+	<section class="g-mod g-attr" id="compatible">
+		<h2 class="tit">兼容性：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">墨绿</span> = 部分支持</li>
+				<li><span class="experimentsupport">橙色</span> = 实验性质</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
+						<th><span class="browser-ie">IE</span></th>
+						<th><span class="browser-firefox">Firefox</span></th>
+						<th><span class="browser-safari">Safari</span></th>
+						<th><span class="browser-chrome">Chrome</span></th>
+						<th><span class="browser-opera">Opera</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>较早版本</th>
+						<td class="unsupport">6</td>
+						<td rowspan="2" class="support">4</td>
+						<td rowspan="2" class="support">5.1.7</td>
+						<td rowspan="2" class="support">13</td>
+						<td rowspan="2" class="support">11.5</td>
+					</tr>
+					<tr>
+						<th>较新版本</th>
+						<td class="support">7</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+	<section id="example" class="g-mod g-attr">
+		<h2 class="tit">示例：</h2>
+		<div class="cont">
+			<textarea cols="90" rows="10">
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>多类选择符 E.class1.class2_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="xiaohan" />
+<style>
+.operpanel a{ /*background:url(//pandoraui.github.io/cssbook/images/operbtn.gif);*/ background:url(data:image/gif;base64,R0lGODlhZABCAPf5APDw8Pz8/Li4t6amperq6sTEw+no4rq6tvv7++7s6LW1tMrKyfHx7vn5+dDQ0Obl5Nra2vDv683Nze/v7+7u7vf39+fn59fX18XFxLu7t9rZ1MHAvf39/eDg4OTk5LGxr/r6+qampv7+/snIxKWlpaKioaSkovHx8fPz89XV1d3b1qSko/b29trY1O7u7efl352dnPLy8vX19PHw7d/e2Nzc3MfHx87Ozvj4+KmpqJ6endLS0tHR0b28ucHBwbCwr6alpLm4teLg29vb2+bm5qenpu/u7Ojo56OjotPT0vX19d3d3ePj487Ozd/d2Kqqqero46Wlo+Dg39nZ2enp6e3t7aiop6urqsvLyt7c162tra+vrqmpp9PT0+7t6Ovr69XUz9fW0fHv6+bk3ePh3LS0tN7e3vHx7eLi4uXj3evq5ejm4Ojn4M3LyL+/vuvp5Le2s7y7uKKhoNLRzLKxr6WlpNHR0MLBvufn5uTi3aurqcvLy+zs7OHh4dnZ2MPDw87Oyby8u8DAwMHBwOjo6OHf2aysq7q6uqysqra2tuXl5aenpcnJydjY2NbW1rm5uK2trMbGxdza1fPz8u/t6be3tvLx7tnY0+jo5sbGxrOzs+3s58DAv7u7usjIyObm5NjY17GxsNvZ1Pz8++rp5Ono4eTk466trMrJxerq6ejn4aCgn/Du6r29vL++u6+urLi3tNTTzs3NzM/Pz+7u68fGw+jo4efm5O3t6sjHw7a2tezq5a6ure3r57i4uLOzsfHw7N7e3bS0sunp6PLx77u7u728urGxrtjX0q2sqsXEweHg2q2tq+Xj3uHf2s3MyMTDwZ+fnqioqMvLxvT09MzMzNra2bKxsK6tq8TDv+Hh4Nva1czMy7W1srOysKiopt/d176+ut/f37W1tb+/u8C/vLKysbe3t5+fn7q6t769uqurq7+/v7y8vLOysdTSza+vr76+vra2s+Df2aGhoNDPy5ycm+jm3////////wAAAAAAAAAAAAAAAAAAAAAAACH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjAgNjEuMTM0Nzc3LCAyMDEwLzAyLzEyLTE3OjMyOjAwICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IFdpbmRvd3MiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MzdDQTZGNkVGOTc1MTFFMThDMTBDNzAxQzBERjE0OTUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MzdDQTZGNkZGOTc1MTFFMThDMTBDNzAxQzBERjE0OTUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDozN0NBNkY2Q0Y5NzUxMUUxOEMxMEM3MDFDMERGMTQ5NSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDozN0NBNkY2REY5NzUxMUUxOEMxMEM3MDFDMERGMTQ5NSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PgH//v38+/r5+Pf29fTz8vHw7+7t7Ovq6ejn5uXk4+Lh4N/e3dzb2tnY19bV1NPS0dDPzs3My8rJyMfGxcTDwsHAv769vLu6ubi3trW0s7KxsK+urayrqqmop6alpKOioaCfnp2cm5qZmJeWlZSTkpGQj46NjIuKiYiHhoWEg4KBgH9+fXx7enl4d3Z1dHNycXBvbm1sa2ppaGdmZWRjYmFgX15dXFtaWVhXVlVUU1JRUE9OTUxLSklIR0ZFRENCQUA/Pj08Ozo5ODc2NTQzMjEwLy4tLCsqKSgnJiUkIyIhIB8e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) no-repeat;  display: inline-block;*display: inline;*zoom:1; width: 33px;height: 33px; }
+
+/* 默认按钮 */
+a.btn-publish { background-position:0 0;}
+a.btn-edit    { background-position:-33px 0;}
+a.btn-delete  { background-position:-66px 0;}
+
+/* 多类选择符实现 */
+a.btn-publish.selected { background-position:0 -33px;}
+a.btn-edit.selected    { background-position:-33px -33px;}
+a.btn-delete.selected  { background-position:-66px -33px;}
+
+/* 普通实现 */
+a.btn-publish-selected { background-position:0 -33px;}
+a.btn-edit-selected    { background-position:-33px -33px;}
+a.btn-delete-selected  { background-position:-66px -33px;}
+</style>
+</head>
+<body>
+<h1>多类选择符</h1>
+<p></p>
+<h4>需求描述</h4>
+<p>每个操作按钮点击时会有选中状态显示，三个按钮六种状态各不相同。这里模拟的场景，如果使用多类选择符，实现将极为简单。</p>
+
+<p>多类选择符实现 <small>只需要4个状态class</small></p>
+<p class="operpanel multiclass">
+    <a href="javascript:;" class="btn-publish"></a>
+    <a href="javascript:;" class="btn-edit   "></a>
+    <a href="javascript:;" class="btn-delete "></a>
+</p>
+
+<p>常规实现 <small>需要6个状态class才可以</small></p>
+<p class="operpanel general">
+    <a href="javascript:;" class="btn-publish"></a>
+    <a href="javascript:;" class="btn-edit   "></a>
+    <a href="javascript:;" class="btn-delete "></a>
+</p>
+<p>不仅样式实现上复杂了，实际在使用的js代码逻辑上也复杂了N倍，所以高级的写法不仅仅是省力一点点，而是方便太多了。多类选择符不被IE6支持，其他浏览器支持良好。</p>
+
+<script src="http://pandoraui.github.io/cssbook/js/jquery.js"></script>
+<script>
+
+
+//或者使用下面的
+//var elt = document.createElement("script");
+//elt.src="http://pandoraui.github.io/cssbook/js/jquery.js";
+//document.getElementsByTagName("head")[0].appendChild(elt1);
+
+//依赖jquery.js
+$(function(){
+    //多类选择符实现
+    $(".multiclass a").bind('click',function(){
+            $(this).addClass("selected").siblings().removeClass("selected");
+        }
+    )
+    
+    //常规实现
+    var prev = null; 
+    $(".general a").bind('click',function(){
+        if(prev!=null && prev!=this){
+            //console.log($(prev).attr("class").split(" ")[0]);
+            $(prev).removeClass($(prev).attr("class").split(" ")[0] + "-selected");
+        }
+        $(this).toggleClass($(this).attr("class").split(" ")[0] + "-selected");
+        prev = this;    // 这样可以使用$(prev)记录上一步操作的选择器（比下面的添加标记class高效）
+    })
+});
+
+</script>
+</body>
+</html>
+			</textarea>
+			<p><input type="button" value="运行" class="g-btn g-btn-sure" /></p>
+		</div>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/inner.js"></script>
+</body>
+</html>

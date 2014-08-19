@@ -10,6 +10,9 @@
 <!--[if lte IE 8]>
 <script src="js/html5.js"></script>
 <![endif]-->
+<!--[if lte IE 9]>
+<script src="js/selectivizr.js" id="selectivizr"></script>
+<![endif]-->
 <link rel="stylesheet" href="skin/layout.css" />
 <link rel="shortcut icon" type="image/x-icon" href="doyoe.ico" />
 </head>
@@ -232,6 +235,7 @@
 										<li><div><a href="properties/font/font-size.htm">font-size</a></div></li>
 										<li><div><a href="properties/font/font-family.htm">font-family</a></div></li>
 										<li><div class="css3-new"><a href="properties/font/font-stretch.htm">font-stretch</a></div></li>
+										<li><div class="css3-new"><a href="properties/font/font-face.htm">@font-face</a></div></li>
 										<!--<li><div class="css3-new"><a href="properties/font/font-size-adjust.htm">font-size-adjust</a></div></li>
 										<li><div class="css3-new"><a href="properties/font/font-synthesis.htm">font-synthesis</a></div></li>
 										<li><div class="css3-new"><a href="properties/font/font-feature-settings.htm">font-feature-settings</a></div></li>
@@ -544,6 +548,12 @@
 									</ul>
 								</li>
 								<li>
+									<div class="haschild"><a href="selectors/multiclass/index.htm">多类选择符</a></div>
+									<ul>
+										<li><div><a href="selectors/multiclass/mclass.htm">多类选择符(E.class1.class2)</a></div></li>
+									</ul>
+								</li>
+								<li>
 									<div class="haschild"><a href="selectors/relationship/index.htm">关系选择符</a></div>
 									<ul>
 										<li><div><a href="selectors/relationship/ef.htm">包含选择符(E F)</a></div></li>
@@ -700,7 +710,8 @@
 										<li><div class="css3-new"><a href="units/length/rem.htm">rem</a></div></li>
 										<li><div class="css3-new"><a href="units/length/vw.htm">vw</a></div></li>
 										<li><div class="css3-new"><a href="units/length/vh.htm">vh</a></div></li>
-										<li><div class="css3-new"><a href="units/length/vm.htm">vm</a></div></li>
+										<li><div class="css3-new"><a href="units/length/vmax.htm">vmax</a></div></li>
+										<li><div class="css3-new"><a href="units/length/vmin.htm">vmin</a></div></li>
 										<li><div><a href="units/length/cm.htm">cm</a></div></li>
 										<li><div><a href="units/length/mm.htm">mm</a></div></li>
 										<li><div><a href="units/length/in.htm">in</a></div></li>
@@ -759,6 +770,7 @@
 						<li>
 							<div class="haschild"><a href="experience/index.htm">问题和经验</a></div>
 							<ul>
+								<li><div><a href="experience/refer.htm">参考资源列表</a></div></li>
 								<li><div><a href="experience/bugs.htm">Bugs和解决方案</a></div></li>
 								<li><div><a href="experience/skill.htm">技巧和经验</a></div></li>
 								<li><div><a href="experience/other.htm">其它经验</a></div></li>
@@ -799,14 +811,5 @@
 		</div>
 	</section>
 </aside>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-3500471-4', 'doyoe.com');
-  ga('send', 'pageview');
-</script>
 </body>
 </html>

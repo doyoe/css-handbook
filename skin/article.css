@@ -12,6 +12,7 @@
 .g-btn-sure:hover{background-color:#4bc4ec;background:-webkit-linear-gradient(#4bc4ec,#0494c5);background:linear-gradient(#4bc4ec,#0494c5);}
 .g-btn-sure:active{background-color:#45B5DA;background:-webkit-linear-gradient(#0382AD,#45B5DA);background:linear-gradient(#0382AD,#45B5DA);}
 .g-btn-copy{margin-left:20px;border:1px solid #4aa005;background-color:#6fb934;background:-webkit-linear-gradient(#6fb934,#458611);background:linear-gradient(#6fb934,#458611);}
+.g-btn-copy.hover,
 .g-btn-copy:hover{background-color:#5fa924;background:-webkit-linear-gradient(#67b727,#5fa924);background:linear-gradient(#67b727,#5fa924);}
 .g-btn-copy:active{background-color:#548d27;background:-webkit-linear-gradient(#548d27,#6fb934);background:linear-gradient(#548d27,#6fb934);}
 /* comm: gitem */
@@ -83,6 +84,7 @@ ol.gitem{list-style-type:decimal;}
 #title{min-height:69px;_height:69px;margin-top:0;}
 #title .tit{float:left;padding-left:10px;font-size:25px;font-family:arial;text-shadow:1px 1px 0 rgba(255,255,255,1),1px 1px 2px rgba(0,0,0,.3);}
 #title .copylink{display:inline;float:left;overflow:hidden;height:19px;margin-top:10px;padding-left:15px;background:url(ico.png) no-repeat 0 -40px;}
+#copylink.hover{color:#C30;text-decoration:underline;}
 #title .share{display:inline;float:left;position:relative;margin:8px 15px 0 15px;}
 #title .share .target{padding-right:16px;border:1px solid #0382AD;box-shadow:none;background-color:#45B5DA;background:-webkit-linear-gradient(#45B5DA,#0382AD);background:linear-gradient(#45B5DA,#0382AD);color:#fff;white-space:nowrap;}
 #title .share:hover .target{box-shadow:1px 1px 2px rgba(0,0,0,.1) inset;}
@@ -167,5 +169,8 @@ ol.gitem{list-style-type:decimal;}
 #change-list li{margin-top:10px;border:1px solid #ddd;}
 #change-list li li{margin-top:0;padding-bottom:0;border:0 none;}
 #change-list .version{padding:3px 10px;background:#DDEEFF;}
-#change-list .detail{zoom:1;overflow:hidden;padding:10px;border-top:1px solid #C3E1FF;}
+#change-list .detail{zoom:1;overflow:hidden;padding:10px;border-top:1px solid #C3E1FF;background:#fff;}
 #change-list .new{border-color:#FBACAC;box-shadow:0 0 5px rgba(255,0,0,.5);}
+.global-zeroclipboard-container * {
+    display: block;
+}
