@@ -56,7 +56,7 @@
 	<section id="intro" class="g-mod g-attr">
 		<h2 class="tit">说明：</h2>
 		<div class="cont">
-			<strong>设置在对象后（依据对象树的逻辑结构）发生的内容。用来和<a href="../../properties/content/content.htm">content</a>属性一起使用</strong>
+			<strong>设置在对象后（依据对象树的逻辑结构）发生的内容。用来和<a href="../../properties/content/content.htm">content</a>属性一起使用，并且必须定义content属性</strong>
 			<ul>
 				<li>
 					<p>CSS3将伪对象选择符(Pseudo-Element Selectors)前面的<em class="g-color-light">单个冒号(:)修改为双冒号(::)</em>用以区别伪类选择符(Pseudo-Classes Selectors)，但以前的写法仍然有效。</p>
@@ -71,8 +71,7 @@
 			<ul class="support-type">
 				<li><span class="support">浅绿</span> = 支持</li>
 				<li><span class="unsupport">红色</span> = 不支持</li>
-				<li><span class="partsupport">墨绿</span> = 部分支持</li>
-				<li><span class="experimentsupport">橙色</span> = 实验性质</li>
+				<li><span class="partsupport">粉色</span> = 部分支持</li>
 			</ul>
 			<table class="g-data">
 				<thead>
@@ -87,19 +86,30 @@
 				</thead>
 				<tbody>
 					<tr>
-						<th>较早版本</th>
-						<td class="unsupport">6-7</td>
-						<td rowspan="2" class="support">4</td>
-						<td rowspan="2" class="support">5.1.7</td>
-						<td rowspan="2" class="support">13</td>
-						<td rowspan="2" class="support">11.5</td>
+						<th>版本</th>
+						<td class="unsupport">6.0-7.0</td>
+						<td class="partsupport">1.0-3.4 <sup><a href="#support1">#1</a> <a href="#support2">#2</a></sup></td>
+						<td rowspan="3" class="partsupport">4.0-7.0.4 <sup><a href="#support2">#2</a></sup></td>
+						<td rowspan="2" class="partsupport">1.0-25.0 <sup><a href="#support2">#2</a></sup></td>
+						<td rowspan="2" class="partsupport">4.0-12.1 <sup><a href="#support2">#2</a></sup></td>
 					</tr>
 					<tr>
-						<th>最近版本</th>
-						<td class="support">8</td>
+						<th>版本</th>
+						<td rowspan="2" class="partsupport">8.0-11.0 <sup><a href="#support2">#2</a></sup></td>
+						<td class="partsupport">3.5-3.9 <sup><a href="#support2">#2</a></sup></td>
+					</tr>
+					<tr>
+						<th>版本</th>
+						<td class="support">4.0</td>
+						<td class="support">26.0</td>
+						<td class="support">15.0</td>
 					</tr>
 				</tbody>
 			</table>
+			<ol class="support-info">
+				<li id="support1">不支持设置属性position, float, list-style-*和一些display值，Firefox3.5开始取消这些限制。</li>
+				<li id="support2">不支持动画<a href="../../properties/animation/index.htm">animation</a>和过渡<a href="../../properties/transition/index.htm">transition</a>效果</li>
+			</ol>
 		</div>
 	</section>
 	<section id="compatible" class="g-mod g-attr">
@@ -108,8 +118,7 @@
 			<ul class="support-type">
 				<li><span class="support">浅绿</span> = 支持</li>
 				<li><span class="unsupport">红色</span> = 不支持</li>
-				<li><span class="partsupport">墨绿</span> = 部分支持</li>
-				<li><span class="experimentsupport">橙色</span> = 实验性质</li>
+				<li><span class="partsupport">粉色</span> = 部分支持</li>
 			</ul>
 			<table class="g-data">
 				<thead>
@@ -124,16 +133,23 @@
 				</thead>
 				<tbody>
 					<tr>
-						<th>较早版本</th>
-						<td class="unsupport">6-8</td>
-						<td rowspan="2" class="support">4</td>
-						<td rowspan="2" class="support">5.1.7</td>
-						<td rowspan="2" class="support">13</td>
-						<td rowspan="2" class="support">11.5</td>
+						<th>版本</th>
+						<td class="unsupport">6.0-8.0</td>
+						<td class="partsupport">1.5-3.4 <sup><a href="#support1">#1</a> <a href="#support2">#2</a></sup></td>
+						<td rowspan="3" class="partsupport">4.0-7.0.4 <sup><a href="#support2">#2</a></sup></td>
+						<td rowspan="2" class="partsupport">1.0-25.0 <sup><a href="#support2">#2</a></sup></td>
+						<td rowspan="2" class="partsupport">7.0-12.1 <sup><a href="#support2">#2</a></sup></td>
 					</tr>
 					<tr>
-						<th>较新版本</th>
-						<td class="support">9</td>
+						<th>版本</th>
+						<td rowspan="2" class="partsupport">9.0-11.0 <sup><a href="#support2">#2</a></sup></td>
+						<td class="partsupport">3.5-3.9 <sup><a href="#support2">#2</a></sup></td>
+					</tr>
+					<tr>
+						<th>版本</th>
+						<td class="support">4.0</td>
+						<td class="support">26.0</td>
+						<td class="support">15.0</td>
 					</tr>
 				</tbody>
 			</table>
