@@ -32,6 +32,11 @@
 			<param name="ImageNumber" value="13">
 			</OBJECT>
 		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="更新历史 Change List">
+			<param name="Local" value="introduction/change-list.htm">
+			<param name="ImageNumber" value="11">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
 			<param name="Name" value="关于本手册 About This CSS3 Handbook">
 			<param name="Local" value="introduction/about-this-handbook.htm">
 			<param name="ImageNumber" value="11">
@@ -162,23 +167,73 @@
 				<param name="ImageNumber" value="11">
 				</OBJECT>
 			<LI> <OBJECT type="text/sitemap">
-				<param name="Name" value="rotation">
-				<param name="Local" value="properties/layout/rotation.htm">
-				<param name="ImageNumber" value="11">
-				</OBJECT>
-			<LI> <OBJECT type="text/sitemap">
-				<param name="Name" value="rotation-point">
-				<param name="Local" value="properties/layout/rotation-point.htm">
-				<param name="ImageNumber" value="11">
-				</OBJECT>
-			<LI> <OBJECT type="text/sitemap">
 				<param name="Name" value="visibility">
 				<param name="Local" value="properties/layout/visibility.htm">
 				<param name="ImageNumber" value="11">
 				</OBJECT>
 		</UL>
 		<LI> <OBJECT type="text/sitemap">
-			<param name="Name" value="弹性盒模型(Flexible-box)">
+			<param name="Name" value="伸缩盒(Flexible-box)(新)">
+			<param name="Local" value="properties/flex/index.htm">
+			<param name="ImageNumber" value="1">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="align-content">
+				<param name="Local" value="properties/flex/align-content.htm">
+				<param name="ImageNumber" value="9">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="align-items">
+				<param name="Local" value="properties/flex/align-items.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="align-self">
+				<param name="Local" value="properties/flex/align-self.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="CSS Flexible Box Layout Module index">
+				<param name="Local" value="properties/flex/index.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="flex">
+				<param name="Local" value="properties/flex/flex.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="flex-basis">
+				<param name="Local" value="properties/flex/flex-basis.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="flex-direction">
+				<param name="Local" value="properties/flex/flex-direction.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="flex-flow">
+				<param name="Local" value="properties/flex/flex-flow.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="flex-grow">
+				<param name="Local" value="properties/flex/flex-grow.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="flex-shrink">
+				<param name="Local" value="properties/flex/flex-shrink.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="flex-wrap">
+				<param name="Local" value="properties/flex/flex-wrap.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="justify-content">
+				<param name="Local" value="properties/flex/justify-content.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="order">
+				<param name="Local" value="properties/flex/order.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="伸缩盒(Flexible-box)(旧)">
 			<param name="Local" value="properties/flexible-box/index.htm">
 			<param name="ImageNumber" value="1">
 			</OBJECT>
@@ -719,6 +774,11 @@
 				<param name="Local" value="properties/text/word-wrap.htm">
 				<param name="ImageNumber" value="11">
 				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="overflow-wrap">
+				<param name="Local" value="properties/text/overflow-wrap.htm">
+				<param name="ImageNumber" value="11">
+				</OBJECT>
 		</UL>
 		<LI> <OBJECT type="text/sitemap">
 			<param name="Name" value="字体装饰(Text Decoration)">
@@ -749,6 +809,16 @@
 			<LI> <OBJECT type="text/sitemap">
 				<param name="Name" value="text-decoration-style">
 				<param name="Local" value="properties/text-decoration/text-decoration-style.htm">
+				<param name="ImageNumber" value="11">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="text-decoration-skip">
+				<param name="Local" value="properties/text-decoration/text-decoration-skip.htm">
+				<param name="ImageNumber" value="11">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="text-underline-position">
+				<param name="Local" value="properties/text-decoration/text-underline-position.htm">
 				<param name="ImageNumber" value="11">
 				</OBJECT>
 			<LI> <OBJECT type="text/sitemap">
@@ -974,6 +1044,11 @@
 			<LI> <OBJECT type="text/sitemap">
 				<param name="Name" value="zoom">
 				<param name="Local" value="properties/user-interface/zoom.htm">
+				<param name="ImageNumber" value="11">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="user-select">
+				<param name="Local" value="properties/user-interface/user-select.htm">
 				<param name="ImageNumber" value="11">
 				</OBJECT>
 		</UL>

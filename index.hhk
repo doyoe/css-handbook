@@ -570,11 +570,11 @@
 		<param name="Local" value="css3-quicksearch.htm">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
-		<param name="Name" value="CSS鍙傝?冩墜鍐寁3.4.0闇?姹傚強v3.3.0閿欒鍜孊ug鍒楄〃">
+		<param name="Name" value="CSS参考手册v3.4.0需求及v3.3.0错误和Bug列表">
 		<param name="Local" value="feedback/v3.3.0.htm">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
-		<param name="Name" value="CSS鍙傝?冩墜鍐寁4.0 web鍓嶇寮?鍙戝弬鑰冩墜鍐岀郴鍒?">
+		<param name="Name" value="CSS参考手册v4.0 web前端开发参考手册系列">
 		<param name="Local" value="index.htm">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
@@ -1500,6 +1500,10 @@
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="vmin">
 		<param name="Local" value="units/length/vmin.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="vm">
+		<param name="Local" value="units/length/vm.htm">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
 		<param name="Name" value="vw">
