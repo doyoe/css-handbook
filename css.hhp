@@ -7,7 +7,7 @@ Display compile progress=No
 Full-text search=Yes
 Index file=index.hhk
 Language=0x804 中文(简体，中国)
-Title=CSS参考手册V4.1.4_Web前端开发参考手册系列
+Title=CSS参考手册V4.1.5(WD)_Web前端开发参考手册系列
 
 
 [FILES]
@@ -136,7 +136,6 @@ properties\flexible-box\box-ordinal-group.htm
 properties\flexible-box\box-orient.htm
 properties\flexible-box\box-pack.htm
 properties\flexible-box\index.htm
-properties\font\font-face.htm
 properties\font\font-family.htm
 properties\font\font-size.htm
 properties\font\font-stretch.htm
@@ -145,8 +144,6 @@ properties\font\font-variant.htm
 properties\font\font-weight.htm
 properties\font\font.htm
 properties\font\index.htm
-properties\font\font\JennaSue.eot
-properties\font\font\JennaSue.ttf
 properties\layout\clear.htm
 properties\layout\display.htm
 properties\layout\float.htm
@@ -328,8 +325,6 @@ selectors\element\class.htm
 selectors\element\e.htm
 selectors\element\id.htm
 selectors\element\index.htm
-selectors\multiclass\index.htm
-selectors\multiclass\mclass.htm
 selectors\pseudo-classes\@page-first.htm
 selectors\pseudo-classes\@page-left.htm
 selectors\pseudo-classes\@page-right.htm
