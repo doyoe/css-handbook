@@ -898,35 +898,37 @@ if (!Global.isLocal && Global.name) {
 			content = example.find('textarea').val(),
 			btnRun = example.find('.g-btn-sure');
 
-		//添加复制代码的按钮
-		var copyCode = '<input type="button" class="g-btn g-btn-copy" value="复制">';
+		if (example.length) {
+			//添加复制代码的按钮
+			var copyCode = '<input type="button" class="g-btn g-btn-copy" value="复制">';
 			btnRun.after(copyCode);
 
-		//运行代码
-		if(window == window.top && gteWin7){
+			//运行代码
+			if (window == window.top && gteWin7) {
 
-			//如果是win7下的chm版本，不支持直接打开浏览器运行
-			btnRun.on({
-				click : function(e){
-					e.preventDefault();
-					if(confirm('本次操作将在浏览器中打开，请从手册在线版中点击运行按钮')){
-						var codeWin = window.open(Global.url);
+				//如果是win7下的chm版本，不支持直接打开浏览器运行
+				btnRun.on({
+					click: function(e) {
+						e.preventDefault();
+						if (confirm('本次操作将在浏览器中打开，请从手册在线版中点击运行按钮')) {
+							var codeWin = window.open(Global.url);
+						}
 					}
-				}
-			});
-		}else{
-			btnRun.on({
-				click : function(e){
-					e.preventDefault();
-					var codeWin = window.open();
-					codeWin.document.write(content);
-					codeWin.document.close();
-				}
-			});
-		}
+				});
+			} else {
+				btnRun.on({
+					click: function(e) {
+						e.preventDefault();
+						var codeWin = window.open();
+						codeWin.document.write(content);
+						codeWin.document.close();
+					}
+				});
+			}
 
-		//复制代码
-		Global.copy(example.find(".g-btn-copy"), content);
+			//复制代码
+			Global.copy(example.find(".g-btn-copy"), content);
+		}
 	})();
 
 	//为自己和外层添加展开收起的折叠效果
