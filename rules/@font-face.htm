@@ -48,19 +48,29 @@
 	<section id="syntax" class="g-mod g-attr">
 		<h2 class="tit">语法：</h2>
 		<div class="cont">
-			<p><strong>@font-face</strong>{font-family:name;src:<a href="../values/textual/url.htm">&lt;url&gt;</a>;sRules;}</p>
+			<pre><code><strong>@font-face</strong> {
+	font-family: <a href="../values/textual/identifier.htm">&lt;identifier&gt;</a>;
+	src: <a href="#dfn-syntax">&lt;fontsrc&gt;</a> [, <a href="#dfn-syntax">&lt;fontsrc&gt;</a>]*;
+	[font-weight: weight];
+	[font-style: style];
+}</code></pre>
+			<p id="dfn-syntax"><strong>&lt;fontsrc&gt;</strong> = <a href="../values/textual/url.htm">&lt;url&gt;</a> [format(<a href="../values/textual/string.htm">&lt;string&gt;</a>)]</p>
 		</div>
 	</section>
 	<section id="value" class="g-mod g-attr">
 		<h2 class="tit">取值：</h2>
 		<div class="cont">
 			<dl>
-				<dt>&lt;name&gt;：</dt>
+				<dt><a href="../values/textual/identifier.htm">&lt;identifier&gt;</a>：</dt>
 				<dd>字体名称</dd>
 				<dt><a href="../values/textual/url.htm">&lt;url&gt;</a>：</dt>
-				<dd>使用绝对或相对地址指定OpenType字体</dd>
-				<dt>&lt;sRules&gt;：</dt>
-				<dd>样式表定义</dd>
+				<dd>此值指的是你自定义的字体的存放路径，可以是相对路径也可以是绝路径</dd>
+				<dt><a href="../values/textual/string.htm">&lt;string&gt;</a>：</dt>
+				<dd>此值指的是你自定义的字体的格式，主要用来帮助浏览器识别，其值主要有以下几种类型：truetype,opentype,truetype-aat,embedded-opentype,avg等</dd>
+				<dt><a href="../properties/font/font-weight.htm">&lt;font-weight&gt;</a>：</dt>
+				<dd>定义字体是否为粗体</dd>
+				<dt><a href="../properties/font/font-style.htm">&lt;font-style&gt;</a>：</dt>
+				<dd>定义字体样式，如斜体</dd>
 			</dl>
 		</div>
 	</section>
@@ -68,8 +78,9 @@
 		<h2 class="tit">说明：</h2>
 		<div class="cont">
 			<strong>设置嵌入HTML文档的字体。</strong>
+			
 			<ul>
-				<li>通常使用.ttf(TrueType)和.otf(OpenType)两种字体格式。</li>
+				<li>通常使用TureTpe(.ttf)、Web Open Font Format(.woff)、Embedded Open Type(.eot)、SVG(.svg)四种字体格式即可兼容几乎所有浏览器。</li>
 				<li>嵌入HTML文档的字体是指将OpenType字体（压缩的TrueType字体）文件映射到客户端系统，用来提供HTML文档使用该字体，或取代客户端系统已有的同名字体。即让客户端显示客户端所没有安装的字体。</li>
 				<li>微软的IE5已经是开始支持这个属性，但是只支持微软自有的.eot(Embedded Open Type)格式，而其他浏览器直到现在都没有支持这一字体格式。Safari从3.1开始已经可以设置.ttf(TrueType)和.otf(OpenType)两种字体做为自定义字体了。</li>
 			</ul>
@@ -99,14 +110,14 @@
 					<tr>
 						<th>版本</th>
 						<td class="partsupport">6-8 <sup><a href="#support1">#1</a></sup></td>
+						<td rowspan="2" class="support">3.5</td>
+						<td rowspan="2" class="support">3.2</td>
 						<td rowspan="2" class="support">4</td>
-						<td rowspan="2" class="support">5.1.7</td>
-						<td rowspan="2" class="support">13</td>
-						<td rowspan="2" class="support">11.5</td>
+						<td rowspan="2" class="support">10.1</td>
 					</tr>
 					<tr>
 						<th>版本</th>
-						<td class="partsupport">9-10 <sup><a href="#support2">#2</a></sup></td>
+						<td class="support">9<sup><a href="#support2">#2</a></sup></td>
 					</tr>
 				</tbody>
 			</table>
@@ -127,15 +138,121 @@
 <title>@font-face_CSS参考手册_web前端开发参考手册系列</title>
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <style>
-@font-face{
-	font-family:YH;
-	src:url(http://domain/fonts/MSYH.TTF);
+@font-face {
+	font-family: 'iconfont';
+	src: url('http://at.alicdn.com/t/font_1397098551_95441.eot'); /* IE9*/
+	src: url('http://at.alicdn.com/t/font_1397098551_95441.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	url('http://at.alicdn.com/t/font_1397098552_0142624.woff') format('woff'), /* chrome、firefox */
+	url('http://at.alicdn.com/t/font_1397098551_8732882.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+	url('http://at.alicdn.com/t/font_1397098552_0586202.svg#iconfont') format('svg'); /* iOS 4.1- */
 }
-body{font-family:'YH';}
+body {
+	font-family: 'iconfont';
+	font-style: normal;
+	font-size: 32px;
+	line-height: 2;
+	letter-spacing: .25em;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-stroke-width: 0.2px;
+	-moz-osx-font-smoothing: grayscale;
+	overflow: hidden;
+	*zoom: 1;
+}
 </style>
 </head>
 <body>
-<div>如果你的机器没有安装微软雅黑Microsoft YaHei，可以玩玩看。如果你用的是老版本IE，很遗憾你得找找看.eot格式的该字体</div>
+&#13363
+&#13364
+&#13365
+&#13366
+&#13367
+&#13368
+&#13369
+&#13370
+&#13371
+&#13372
+&#13373
+&#13374
+&#13375
+&#13376
+&#13377
+&#13378
+&#13379
+&#13380
+&#13381
+&#13382
+&#13383
+&#13384
+&#13385
+&#13386
+&#13387
+&#13388
+&#13389
+&#13390
+&#13391
+&#13392
+&#13393
+&#13394
+&#13395
+&#13396
+&#13397
+&#13398
+&#13399
+&#13400
+&#13401
+&#13402
+&#13403
+&#13404
+&#13362
+&#13367
+&#13368
+&#13369
+&#13370
+&#13371
+&#13372
+&#13373
+&#13374
+&#13375
+&#13376
+&#13377
+&#13378
+&#13387
+&#13388
+&#13389
+&#13390
+&#13391
+&#13392
+&#13393
+&#13394
+&#13395
+&#13396
+&#13397
+&#13398
+&#13399
+&#13400
+&#13401
+&#13402
+&#13403
+&#13404
+&#13405
+&#13406
+&#13407
+&#13408
+&#13409
+&#13410
+&#13411
+&#13412
+&#13413
+&#13414
+&#13415
+&#13566
+&#13567
+&#13568
+&#13569
+&#13570
+&#13571
+&#58881
+&#58882
 </body>
 </html>
 			</textarea>
