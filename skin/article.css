@@ -115,7 +115,7 @@ ol.gitem{list-style-type:decimal;}
 #value dt{clear:left;float:left;font-weight:bold;}
 #value dt.css3-value{color:#f60;}
 /* module: example */
-#example textarea{overflow:auto;margin-bottom:10px;border:1px solid #ddd;}
+#example textarea{overflow:auto;margin-bottom:10px;border:1px solid #ddd;width:95vw;height:60vh;max-width:100%;}
 /* module: about-vita */
 #about-vita li{zoom:1;overflow:hidden;}
 #about-vita li strong{float:left;width:155px;}
