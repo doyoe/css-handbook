@@ -2,9 +2,9 @@
 <html lang="zh-cn">
 <head>
 <meta charset="utf-8" />
-<title>&lt;length&gt;</title>
-<meta name="description" content="CSS3参考手册之: &lt;length&gt;" />
-<meta name="keywords" content="&lt;length&gt;, css3取值, css3, css3参考手册" />
+<title>vm</title>
+<meta name="description" content="CSS3参考手册之: vm" />
+<meta name="keywords" content="vm, css3单位, css3, css3参考手册" />
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <meta name="robots" content="all" />
 <!--[if lte IE 8]>
@@ -17,16 +17,16 @@
 	<div class="from">
 		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
 		<span>&#187;</span>
-		<a href="../index.htm">取值列表</a>
+		<a href="../index.htm">单位列表</a>
 		<span>&#187;</span>
-		<a href="index.htm" id="category" rel="values/other" name="length">其它类型值</a>
+		<a href="index.htm"id="category" rel="units/length" name="vm">长度单位</a>
 		<span>&#187;</span>
 	</div>
 	<div class="to">
 		<span class="label">相关内容：</span>
 		<div class="g-combobox g-transition">
 			<a href="?" class="g-transition target">
-				<strong>其它类型值参考</strong>
+				<strong>其它长度单位参考</strong>
 				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
 			</a>
 			<div class="g-transition list">
@@ -39,9 +39,9 @@
 </nav>
 <header id="hd">
 	<section id="title" class="g-mod">
-		<h1 class="tit">&lt;length&gt;</h1>
+		<h1 class="tit">vm</h1>
 		<ul class="info">
-			<li><strong>版本：CSS2</strong></li>
+			<li><strong>版本：CSS3</strong></li>
 		</ul>
 		<!-- 插入浏览器信息 -->
 	</section>
@@ -50,25 +50,16 @@
 	<section id="syntax" class="g-mod g-attr">
 		<h2 class="tit">说明：</h2>
 		<div class="cont">
-			<strong><a href="../numeric/number.htm">&lt;number&gt;</a>接<a href="../../units/length/">长度单位</a>。</strong>
+			<strong>相对于视口的宽度或高度中较小的那个。其中最小的那个被均分为100单位的vm</strong>
 			<ul>
-				<li>特殊值0可以省略单位。例如：<em class="g-color-light">margin:0px可以写成margin:0</em></li>
-				<li>一些属性可能允许有负长度值，或者有一定的范围限制。如果不支持负长度值，那应该变换到能够被支持的最近的一个长度值。</li>
-				<li>长度单位包括包括：相对单位和绝对单位。</li>
+				<li>CSS3中已经定义了<a href="vmin.htm">vmin</a>，所以vm最终是否会纳入W3C标准还不确定。</li>
 				<li>
-					相对长度单位包括有：
-					<a href="../../units/length/em.htm"><dfn>em</dfn></a>,
-					<a href="../../units/length/ex.htm"><dfn>ex</dfn></a>,
-					<a href="../../units/length/rem.htm"><dfn>ch</dfn></a>,
-					<a href="../../units/length/rem.htm"><dfn>rem</dfn></a>,
-					<a href="../../units/length/vw.htm"><dfn>vw</dfn></a>,
-					<a href="../../units/length/vh.htm"><dfn>vh</dfn></a>,
-					<a href="../../units/length/vmax.htm"><dfn>vmax</dfn></a>,
-					<a href="../../units/length/vmin.htm"><dfn>vmin</dfn></a>,
-					<a href="../../units/length/vm.htm"><dfn>vm</dfn></a>,
-					<a href="../../units/length/percent.htm"><dfn>%</dfn></a>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>示例代码：</strong></p>
+						<blockquote class="gquote-cont"><pre><code>h1{font-size:8vm;}</code></pre></blockquote>
+						<p class="gquote-info">如果视口的宽度是300mm，高度是200mm，那么上述代码中h1元素的字号将为16mm，即(8x200)/100，因为高度比宽度要小，所以计算的时候相对于高度。</p>
+					</div>
 				</li>
-				<li>绝对长度单位包括有：<a href="../../units/length/cm.htm"><dfn>cm</dfn></a>, <a href="../../units/length/mm.htm"><dfn>mm</dfn></a>, <a href="../../units/length/in.htm"><dfn>in</dfn></a>, <a href="../../units/length/pt.htm"><dfn>pt</dfn></a>, <a href="../../units/length/pc.htm"><dfn>pc</dfn></a>, <a href="../../units/length/px.htm"><dfn>px</dfn></a></li>
 			</ul>
 		</div>
 	</section>
@@ -95,14 +86,40 @@
 				<tbody>
 					<tr>
 						<th>版本</th>
-						<td class="support">6</td>
-						<td class="support">4</td>
-						<td class="support">5.1.7</td>
-						<td class="support">13</td>
-						<td class="support">11.5</td>
+						<td class="unsupport">6-8</td>
+						<td rowspan="2" class="unsupport">4-9</td>
+						<td rowspan="2" class="unsupport">5.1.7</td>
+						<td rowspan="2" class="unsupport">13-16</td>
+						<td rowspan="2" class="unsupport">11.5-11.6</td>
+					</tr>
+					<tr>
+						<th>版本</th>
+						<td class="support">9</td>
 					</tr>
 				</tbody>
 			</table>
+		</div>
+	</section>
+	<section id="example" class="g-mod g-attr">
+		<h2 class="tit">示例：</h2>
+		<div class="cont">
+			<textarea cols="90" rows="10">
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>vm_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<style>
+p{font-size:5vm;}
+</style>
+</head>
+<body>
+<p>相对于viewport的宽度或高度中较小的那个然后计算文字大小。</p>
+</body>
+</html>
+			</textarea>
+			<p><input type="button" value="运行" class="g-btn g-btn-sure" /></p>
 		</div>
 	</section>
 </section>

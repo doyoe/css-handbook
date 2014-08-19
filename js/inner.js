@@ -263,8 +263,7 @@ if (!Global.isLocal && Global.name) {
 					'font-weight' : [],
 					'font-size' : [],
 					'font-family' : [],
-					'font-stretch' : [],
-					'font-face' : []
+					'font-stretch' : []
 				},
 				text : {
 					'index' : ['字体(text)','其它文本属性参考'],
@@ -480,10 +479,6 @@ if (!Global.isLocal && Global.name) {
 					'id' : ['ID选择符(E#id)'],
 					'class' : ['类选择符(E.class)']
 				},
-				'multiclass' : {
-					'index' : ['多类选择符','其它关系选择符参考'],
-					'mclass' : ['多类选择符(E.class1.class2)']
-				},
 				'relationship' : {
 					'index' : ['关系选择符','其它关系选择符参考'],
 					'ef' : ['包含选择符(E F)'],
@@ -603,6 +598,7 @@ if (!Global.isLocal && Global.name) {
 					'vh' : [],
 					'vmax' : [],
 					'vmin' : [],
+					'vm' : [],
 					'cm' : [],
 					'mm' : [],
 					'in' : [],
