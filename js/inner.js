@@ -808,7 +808,7 @@ if (!Global.isLocal && Global.name) {
 		var testBrowser =
 		'<div class="g-browser g-clear">'+
 			'<ul>'+
-				'<li><a href="http://www.doyoe.com/suggestion/?sid=css" target="_blank" rel="external" class="external">提交问题</a></li>'+
+				'<li><a href="https://github.com/doyoe/css-handbook/issues" target="_blank" rel="external" class="external">提交问题</a></li>'+
 			'</ul>'+
 			'<p>说明：本文档兼容性测试基础环境为：windows系统；IE6-10, Firefox4-25, Chrome4-31, Win Safari5.1.7, Opera9.5-18</p>'+
 		'</div>';
