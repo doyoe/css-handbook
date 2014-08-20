@@ -68,7 +68,7 @@
 		</div>
 	</section>
 	<section id="compatible" class="g-mod g-attr">
-		<h2 class="tit">兼容性(E:first-line)：</h2>
+		<h2 class="tit">兼容性：</h2>
 		<div class="cont">
 			<ul class="support-type">
 				<li><span class="support">浅绿</span> = 支持</li>
@@ -78,7 +78,6 @@
 			<table class="g-data">
 				<thead>
 					<tr>
-						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
 						<th><span class="browser-ie">IE</span></th>
 						<th><span class="browser-firefox">Firefox</span></th>
 						<th><span class="browser-safari">Safari</span></th>
@@ -88,65 +87,26 @@
 				</thead>
 				<tbody>
 					<tr>
-						<th>较早版本</th>
-						<td class="partsupport">5.5-6.0 <sup><a href="#support1">#1</a></sup></td>
-						<td rowspan="2" class="support">1.0</td>
-						<td rowspan="2" class="support">1.0</td>
-						<td rowspan="2" class="support">1.0</td>
-						<td rowspan="2" class="support">3.5</td>
-					</tr>
-					<tr>
-						<th>最近版本</th>
-						<td class="support">7.0</td>
-					</tr>
-				</tbody>
-			</table>
-			<ol class="support-info">
-				<li id="support1">IE6及更早浏览器下，E:first-line选择符与包含规则的花括号之间不能紧挨着，需留有空格或换行。</li>
-			</ol>
-		</div>
-	</section>
-	<section id="compatible" class="g-mod g-attr">
-		<h2 class="tit">兼容性(E::first-line)：</h2>
-		<div class="cont">
-			<ul class="support-type">
-				<li><span class="support">浅绿</span> = 支持</li>
-				<li><span class="unsupport">红色</span> = 不支持</li>
-				<li><span class="partsupport">粉色</span> = 部分支持</li>
-			</ul>
-			<table class="g-data">
-				<thead>
-					<tr>
-						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
-						<th><span class="browser-ie">IE</span></th>
-						<th><span class="browser-firefox">Firefox</span></th>
-						<th><span class="browser-safari">Safari</span></th>
-						<th><span class="browser-chrome">Chrome</span></th>
-						<th><span class="browser-opera">Opera</span></th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<th>较早版本</th>
-						<td class="partsupport">5.5-6.0 <sup><a href="#support2">#1</a></sup></td>
+						<td class="partsupport">5.5-6.0 <sup><a href="#support1">#1</a> <a href="#support2">#2</a></sup></td>
 						<td rowspan="3" class="support">1.0</td>
 						<td rowspan="3" class="support">1.0</td>
 						<td rowspan="3" class="support">1.0</td>
-						<td rowspan="3" class="support">7.0</td>
+						<td class="partsupport">3.5 <sup><a href="#support3">#3</a></sup></td>
 					</tr>
 					<tr>
-						<th>较新版本</th>
-						<td class="unsupport">7.0-8.0</td>
+						<td class="partsupport">7.0-8.0 <sup><a href="#support3">#3</a></sup></td>
+						<td rowspan="2" class="support">7.0</td>
 					</tr>
 					<tr>
-						<th>最近版本</th>
 						<td class="support">9.0</td>
 					</tr>
 				</tbody>
 			</table>
 			<ol class="support-info">
-				<li id="support2">IE6及更早浏览器本质上并不支持E::first-line的写法，而是忽略掉了E::first-line中的一个冒号，仍以E:first-line来解释，所以它们也变相的支持了E::first-line。</li>
-			</div>
+				<li id="support1">E:first-line选择符不能紧挨着规则集大括号，需留有空格或换行。</li>
+				<li id="support2">本质上并不支持伪元素的双冒号(::)写法，而是忽略掉了其中的一个冒号，仍以单冒号来解析，所以等同变相支持了E::first-line。</li>
+				<li id="support3">不支持伪元素的双冒号(::)写法</li>
+			</ol>
 		</div>
 	</section>
 	<section id="example" class="g-mod g-attr">
