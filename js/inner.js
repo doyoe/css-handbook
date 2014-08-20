@@ -948,16 +948,6 @@ if (!Global.isLocal && Global.name) {
 //如果是chm版本，没有父层就返回函数
 if(window == window.top){return false;}
 
-//selectivizr.js方式支持css3
-var selectivizr = topDocument.getElementById("selectivizr");
-if (selectivizr) {
-	selectivizr = selectivizr.src;
-	if (!/\w+:\/\//.test(selectivizr)) {
-		selectivizr = Global.rootPath + "/" + selectivizr;
-	}
-	document.writeln("<script src=\"" + selectivizr + "\"></script>");
-}
-
 //给父层添加下拉列表的展开收起的折叠效果
 
 Global.folding($('.g-combobox',topDocument));
