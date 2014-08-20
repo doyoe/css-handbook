@@ -1,0 +1,222 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>ime-mode</title>
+<meta name="description" content="CSS3参考手册之: ime-mode" />
+<meta name="keywords" content="ime-mode, css3, css3参考手册" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../../skin/article.css" />
+</head>
+<body>
+<nav id="guide" class="g-mod">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="../index.htm">属性列表</a>
+		<span>&#187;</span>
+		<a href="index.htm" id="category" rel="properties/user-interface" name="ime-mode">用户界面属性</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它用户界面属性</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入快速分类导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">ime-mode</h1>
+		<ul class="info">
+			<li><strong>版本：CSS3</strong></li>
+			<li>继承性：无</li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="syntax" class="g-mod g-attr">
+		<h2 class="tit">语法：</h2>
+		<div class="cont">
+			<p><strong>zoom</strong>：auto | normal | active | inactive | disabled</p>
+			<p><strong>默认值</strong>：<mark class="defaultvalue">auto</mark></p>
+			<p><strong>适用于</strong>：所有输入文本框</p>
+		    <p><strong>继承性</strong>：无</p>
+		</div>
+	</section>
+	<section id="value" class="g-mod g-attr">
+		<h2 class="tit">取值：</h2>
+		<div class="cont">
+			<dl>
+				<dt>auto：</dt>
+				<dd>不影响IME的状态。</dd>
+				<dt>normal：</dt>
+				<dd>正常的IME状态</dd>
+				<dt>active：</dt>
+				<dd>指定所有使用ime输入的字符。即激活本地语言输入法。用户仍可以撤销激活ime</dd>
+				<dt>inactive：</dt>
+				<dd>指定所有不使用ime输入的字符。即激活非本地语言。用户仍可以撤销激活ime</dd>
+				<dt>disabled：</dt>
+				<dd>完全禁用ime。对于有焦点的控件(如输入框)，用户不可以激活ime</dd>
+			</dl>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
+		<h2 class="tit">说明：</h2>
+		<div class="cont">
+			<strong>设置或检索是否允许用户激活输入中文，韩文，日文等的输入法（IME）状态。</strong>
+			<ul>
+				<li>对应的脚本特性为<strong>imeMode</strong>。</li>
+			</ul>
+		</div>
+	</section>
+	<section id="compatible" class="g-mod g-attr">
+		<h2 class="tit">兼容性：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">墨绿</span> = 部分支持</li>
+				<li><span class="experimentsupport">橙色</span> = 实验性质</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
+						<th><span class="browser-ie">IE</span></th>
+						<th><span class="browser-firefox">Firefox</span></th>
+						<th><span class="browser-safari">Safari</span></th>
+						<th><span class="browser-chrome">Chrome</span></th>
+						<th><span class="browser-opera">Opera</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>版本</th>
+						<td class="support">5.5</td>
+						<td class="support">3</td>
+						<td class="unsupport">5.1.7</td>
+						<td class="unsupport">13-23</td>
+						<td class="unsupport">11.5-12.5</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+	<section id="example" class="g-mod g-attr">
+		<h2 class="tit">示例：</h2>
+		<div class="cont">
+			<textarea cols="90" rows="10">
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>ime-mode_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<style>
+#test{
+	padding:50px;
+	font:14px/1.231 georgia,宋体,arial,verdana,helvetica,sans-serif;
+}
+#test fieldset{
+	margin:0;
+	padding:10px;
+	border-radius:5px;
+}
+#test fieldset legend{
+	padding:3px 6px;
+	border-radius:3px;
+	background:#ddd;
+}
+#test ul{
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+#test li{
+	padding:5px 10px;
+}
+#test .writebox{
+	position:relative;
+	overflow:visible;
+	outline:none;
+	width:200px;
+	padding:4px 3px 5px;
+    border:1px solid #999;
+    border-radius:3px;
+    box-shadow:1px 1px 2px rgba(0,0,0,.2) inset;
+    background-color:#FFFFFF;
+	color:#666666;
+	font:14px/1.231 georgia,宋体,arial,verdana,helvetica,sans-serif;
+}
+#test .writebox:hover{
+	border-color:#777;
+	box-shadow:1px 1px 2px rgba(0,0,0,.4) inset;
+}
+#test .writebox:focus{
+	border-color:#666;
+	box-shadow:0 0 5px rgba(0,0,0,.5);
+}
+.auto{
+	ime-mode:auto;
+}
+.normal{
+	ime-mode:normal;
+}
+.active{
+	ime-mode:active;
+}
+.inactive{
+	ime-mode:inactive;
+}
+.disabled{
+	ime-mode:disabled;
+}
+.title{
+	font:bold 16px/1.5 georgia,simsun,sans-serif;
+}
+</style>
+</head>
+<body>
+<h1 class="title">在下列输入框输入试试每个值的作用：</h1>
+<form id="test" action="#" method="post">
+	<fieldset>
+		<legend>简单的表单</legend>
+		<ul>
+			<li><label>auto：<input type="text" class="writebox auto" /></label></li>
+			<li><label>normal：<input type="text" class="writebox normal" /></label></li>
+			<li><label>active：<input type="text" class="writebox active" /></label></li>
+			<li><label>inactive：<input type="text" class="writebox inactive" /></label></li>
+			<li><label>disabled：<input type="text" class="writebox disabled" /></label></li>
+		</ul>
+	</fieldset>
+</form>
+</body>
+</html>
+			</textarea>
+			<p><input type="button" value="运行" class="g-btn g-btn-sure" /></p>
+		</div>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/inner.js"></script>
+</body>
+</html>

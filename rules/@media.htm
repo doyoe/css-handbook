@@ -1,0 +1,186 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>@media</title>
+<meta name="Description" content="CSS3参考手册之: @media" />
+<meta name="Keywords" content="@media" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../skin/article.css" />
+</head>
+<body>
+<nav id="guide" class="g-mod">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="../index.htm" id="category" rel="rules" name="@media">语法与规则列表</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它语法与规则参考</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入快速分类导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">@media</h1>
+		<ul class="info">
+			<li><strong>版本：CSS2/3</strong></li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="syntax" class="g-mod g-attr">
+		<h2 class="tit">语法：</h2>
+		<div class="cont">
+			<p><strong>@media</strong>：<a href="#dfn-syntax">&lt;media_query_list&gt;</a><p>
+			<p id="dfn-syntax"><strong>&lt;media_query_list&gt;</strong>：[<a href="#dfn-syntax2">&lt;media_query&gt;</a>[',' <a href="#dfn-syntax2">&lt;media_query&gt;</a>]*]?<p>
+			<p id="dfn-syntax2"><strong>&lt;media_query&gt;</strong>：[only | not]? <a href="../appendix/media-types.htm">&lt;media_type&gt;</a> [and <a href="#dfn-syntax3">&lt;expression&gt;</a>]* | <a href="#dfn-syntax3">&lt;expression&gt;</a> [and <a href="#dfn-syntax3">&lt;expression&gt;</a>]*</p>
+			<p id="dfn-syntax3"><strong>&lt;expression&gt;</strong>：'('<a href="../properties/media-queries/index.htm#media-features-listing">&lt;media_feature&gt;</a>[:&lt;value&gt;]?')'</p>
+		</div>
+	</section>
+	<section id="value" class="g-mod g-attr">
+		<h2 class="tit">取值：</h2>
+		<div class="cont">
+			<dl>
+				<dt><a href="../appendix/media-types.htm">&lt;media_type&gt;</a>：</dt>
+				<dd>指定设备类型。媒体类型包括：参阅<a href="../appendix/media-types.htm">媒体类型</a>。(CSS2)</dd>
+				<dt>&lt;expression&gt;：</dt>
+				<dd>指定媒体查询使用的媒体特性。这类似于CSS属性，如：max-width:960px。(CSS3)</dd>
+			</dl>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
+		<h2 class="tit">说明：</h2>
+		<div class="cont">
+			<strong>指定样式表规则用于指定的媒体类型和查询条件。</strong>
+			<ul>
+				<li><em class="glight">IE8及以下只能实现CSS2中的部分，即只可以设置媒体类型。</em></li>
+				<li>
+					<p>媒体查询可以被用在CSS中的@media和@import规则上，也可以被用在HTML和XML中。</p>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>示例代码：</strong></p>
+						<blockquote class="gquote-cont"><pre><code>@media screen and (width:800px){ … }
+@import url(example.css) screen and (width:800px);
+&lt;link media="screen and (width:800px)" rel="stylesheet" href="example.css" /&gt;
+&lt;?xml-stylesheet media="screen and (width:800px)" rel="stylesheet" href="example.css" ?&gt;</code></pre></blockquote>
+					</div>
+				</li>
+				<li class="gquote">
+					<p class="gquote-tit"><strong>列举几种使用方式：</strong></p>
+					<blockquote class="gquote-cont"><pre><code>@media all and (width:1024px){
+	body{color:#f00;}
+}
+@media all and (device-height:800px){ … }
+@media all and (orientation:landscape){ … }
+@media all and (device-aspect-ratio:16/10){ … }
+@media all and (min-color:1){ … }
+@media all and (monochrome:0){ … }
+@media all and (grid:0){ … }</code></pre></blockquote>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<section id="compatible" class="g-mod g-attr">
+		<h2 class="tit">兼容性(指定媒体类型)：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">墨绿</span> = 部分支持</li>
+				<li><span class="experimentsupport">橙色</span> = 实验性质</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
+						<th><span class="browser-ie">IE</span></th>
+						<th><span class="browser-firefox">Firefox</span></th>
+						<th><span class="browser-safari">Safari</span></th>
+						<th><span class="browser-chrome">Chrome</span></th>
+						<th><span class="browser-opera">Opera</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>版本</th>
+						<td class="partsupport">6-8 <sup><a href="#support1">#1</a></sup></td>
+						<td rowspan="2" class="support">4</td>
+						<td rowspan="2" class="support">5.1.7</td>
+						<td rowspan="2" class="support">13</td>
+						<td rowspan="2" class="support">11.5</td>
+					</tr>
+					<tr>
+						<th>版本</th>
+						<td class="support">9</td>
+					</tr>
+				</tbody>
+			</table>
+			<ol class="support-info">
+				<li id="support1">IE8及更早浏览器不支持媒体查询。</li>
+			</ol>
+		</div>
+	</section>
+	<section id="example" class="g-mod g-attr">
+		<h2 class="tit">示例：</h2>
+		<div class="cont">
+			<textarea cols="90" rows="10">
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>@media_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<style>
+.test,.test2{display:none;}
+/* 本条为CSS2部分，IE8及以下只支持本条 */
+@media screen{
+	body{color:#f00;}
+}
+/* 下列为CSS3部分 */
+@media screen and (min-width:960px){
+	body{background:#999;}
+}
+@media screen and (device-width:1024px){
+	.test{display:block;}
+}
+@media screen and (width:1024px){
+	.test2{display:block;}
+}
+</style>
+</head>
+<body>
+<div>Media Queries媒体查询</div>
+<div class="test">如果你的显示器水平分辨率为1024px的话将能看到本条规则的效果（取决于输出设备屏幕分辨率的大小，不随包括浏览器在内的窗体大小而改变）</div>
+<div class="test2">如果视口宽度为1024px的话将能看到本条规则的效果（随包括浏览器在内的窗体大小而改变）</div>
+</body>
+</html>
+			</textarea>
+			<p><input type="button" value="运行" class="g-btn g-btn-sure" /></p>
+		</div>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../js/jquery.js"></script>
+<script src="../js/inner.js"></script>
+</body>
+</html>

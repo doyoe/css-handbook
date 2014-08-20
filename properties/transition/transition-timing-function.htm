@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>transition-timing-function</title>
+<meta name="description" content="CSS3参考手册之: transition-timing-function" />
+<meta name="keywords" content="transition-timing-function, css3, css3参考手册" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../../skin/article.css" />
+</head>
+<body>
+<nav id="guide" class="g-mod">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="../index.htm">属性列表</a>
+		<span>&#187;</span>
+		<a href="index.htm" id="category" rel="properties/transition" name="transition-timing-function">过渡属性</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它过渡属性参考</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入快速分类导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">transition-timing-function</h1>
+		<ul class="info">
+			<li><strong>版本：CSS3</strong></li>
+			<li>继承性：无</li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="syntax" class="g-mod g-attr">
+		<h2 class="tit">语法：</h2>
+		<div class="cont">
+			<p><strong>transition-timing-function</strong>：linear | ease | ease-in | ease-out | ease-in-out | cubic-bezier(&lt;number&gt;, &lt;number&gt;, &lt;number&gt;, &lt;number&gt;)[ ,linear | ease | ease-in | ease-out | ease-in-out | cubic-bezier(&lt;number&gt;, &lt;number&gt;, &lt;number&gt;, &lt;number&gt;) ]*</p>
+			<p><strong>默认值</strong>：<mark class="defaultvalue">ease</mark></p>
+			<p><strong>适用于</strong>：所有元素，包含伪对象:after和:before</p>
+		    <p><strong>继承性</strong>：无</p>
+		</div>
+	</section>
+	<section id="value" class="g-mod g-attr">
+		<h2 class="tit">取值：</h2>
+		<div class="cont">
+			<dl>
+				<dt>linear：</dt>
+				<dd>线性过渡。等同于贝塞尔曲线(0.0, 0.0, 1.0, 1.0)</dd>
+				<dt>ease：</dt>
+				<dd>平滑过渡。等同于贝塞尔曲线(0.25, 0.1, 0.25, 1.0)</dd>
+				<dt>ease-in：</dt>
+				<dd>由慢到快。等同于贝塞尔曲线(0.42, 0, 1.0, 1.0)</dd>
+				<dt>ease-out：</dt>
+				<dd>由快到慢。等同于贝塞尔曲线(0, 0, 0.58, 1.0)</dd>
+				<dt>ease-in-out：</dt>
+				<dd>由慢到快再到慢。等同于贝塞尔曲线(0.42, 0, 0.58, 1.0)</dd>
+				<dt>cubic-bezier(&lt;number&gt;, &lt;number&gt;, &lt;number&gt;, &lt;number&gt;)：</dt>
+				<dd>特定的贝塞尔曲线类型，4个数值需在[0, 1]区间内</dd>
+			</dl>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
+		<h2 class="tit">说明：</h2>
+		<div class="cont">
+			<strong>检索或设置对象中过渡的动画类型。</strong>
+			<ul>
+				<li>如果提供多个属性值，以逗号进行分隔。</li>
+				<li>对应的脚本特性为<strong>transitionTimingFunction</strong>。</li>
+			</ul>
+		</div>
+	</section>
+	<section id="compatible" class="g-mod g-attr">
+		<h2 class="tit">兼容性：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">墨绿</span> = 部分支持</li>
+				<li><span class="experimentsupport">橙色</span> = 实验性质</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
+						<th><span class="browser-ie">IE</span></th>
+						<th><span class="browser-firefox">Firefox</span></th>
+						<th><span class="browser-safari">Safari</span></th>
+						<th><span class="browser-chrome">Chrome</span></th>
+						<th><span class="browser-opera">Opera</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>版本</th>
+						<td class="unsupport">6-9</td>
+						<td rowspan="2" class="experimentsupport">4-18</td>
+						<td rowspan="2" class="experimentsupport">5.1.7</td>
+						<td rowspan="2" class="experimentsupport">13-23</td>
+						<td rowspan="2" class="experimentsupport">11.5-12.5</td>
+					</tr>
+					<tr>
+						<th>版本</th>
+						<td class="experimentsupport">10</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+	<section id="example" class="g-mod g-attr">
+		<h2 class="tit">示例：</h2>
+		<div class="cont">
+			<textarea cols="90" rows="10">
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>transition-timing-function_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<style>
+h1{font-size:16px;}
+.test{overflow:hidden;width:100%;margin:0;padding:0;list-style:none;}
+.test li{position:relative;left:8px;width:220px;height:100px;margin:1px 5px;padding:10px;border:1px solid #ddd;background-color:#eee;color:#000;
+	-moz-transition-property:left;
+	-moz-transition-duration:.5s;
+	-webkit-transition-property:left;
+	-webkit-transition-duration:.5s;
+	-o-transition-property:left;
+	-o-transition-duration:.5s;
+	-ms-transition-property:left;
+	-ms-transition-duration:.5s;
+	transition-property:left;
+	transition-duration:.5s;
+}
+.test li:nth-child(1){-moz-transition-timing-function:linear;-webkit-transition-timing-function:linear;-o-transition-timing-function:linear;-ms-transition-timing-function:linear;transition-timing-function:linear;}
+.test li:nth-child(2){-moz-transition-timing-function:ease;-webkit-transition-timing-function:ease;-o-transition-timing-function:ease;-ms-transition-timing-function:ease;transition-timing-function:ease;}
+.test li:nth-child(3){-moz-transition-timing-function:ease-in;-webkit-transition-timing-function:ease-in;-o-transition-timing-function:ease-in;-ms-transition-timing-function:ease-in;transition-timing-function:ease-in;}
+.test li:nth-child(4){-moz-transition-timing-function:ease-out;-webkit-transition-timing-function:ease-out;-o-transition-timing-function:ease-out;-ms-transition-timing-function:ease-out;transition-timing-function:ease-out;}
+.test li:nth-child(5){-moz-transition-timing-function:ease-in-out;-webkit-transition-timing-function:ease-in-out;-o-transition-timing-function:ease-in-out;-ms-transition-timing-function:ease-in-out;transition-timing-function:ease-in-out;}
+.test li:hover{left:100px;}
+</style>
+</head>
+<body>
+<h1>请将鼠标移动到下面的矩形上：</h1>
+<ul class="test">
+	<li>linear: 线性过渡</li>
+	<li>ease: 平滑过渡</li>
+	<li>ease-in: 由慢到快</li>
+	<li>ease-out: 由快到慢</li>
+	<li>ease-in-out: 由慢到快再到慢</li>
+</ul>
+</body>
+</html>
+			</textarea>
+			<p><input type="button" value="运行" class="gbtn btn-sure" /></p>
+		</div>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/inner.js"></script>
+</body>
+</html>

@@ -1,0 +1,234 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>text-align</title>
+<meta name="description" content="CSS3参考手册之:text-align" />
+<meta name="keywords" content="text-align, css3, css3参考手册" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../../skin/article.css" />
+</head>
+<body>
+<nav id="guide" class="g-mod">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="../index.htm">属性列表</a>
+		<span>&#187;</span>
+		<a href="index.htm" id="category" rel="properties/text" name="text-align">文本属性</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它文本属性参考</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入快速分类导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">text-align</h1>
+		<ul class="info">
+			<li><strong>版本：CSS1/3</strong></li>
+			<li>媒体：视觉</li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="syntax" class="g-mod g-attr">
+		<h2 class="tit">语法：</h2>
+		<div class="cont">
+			<p><strong>text-align</strong>：<ins class="css3-value g-color-css3-new">start end</ins> | <ins class="css3-value g-color-css3-new">match-parent</ins> | <ins class="css3-value g-color-css3-new"><a href="../../values/textual/string.htm">&lt;string&gt;</a></ins>? [ <ins class="css3-value g-color-css3-new">start</ins> | <ins class="css3-value g-color-css3-new">end</ins> | left | right | center | <ins class="css3-value g-color-css3-new">justify</ins> ]</p>
+			<p><strong>默认值</strong>：<mark class="defaultvalue">start</mark></p>
+			<p><strong>适用于</strong>：块元素</p>
+		    <p><strong>继承性</strong>：有</p>
+		    <p><strong>动画性</strong>：否</p>
+		    <p><strong>计算值</strong>：指定值，除 match-parent 值外</p>
+		</div>
+	</section>
+	<section id="value" class="g-mod g-attr">
+		<h2 class="tit">取值：</h2>
+		<div class="cont">
+			<dl>
+				<dt>left：</dt>
+				<dd>内容左对齐。</dd>
+				<dt>center：</dt>
+				<dd>内容居中对齐。</dd>
+				<dt>right：</dt>
+				<dd>内容右对齐。</dd>
+				<dt>justify：</dt>
+				<dd>内容两端对齐。</dd>
+				<dt class="g-color-css3-new">start：</dt>
+				<dd>内容对齐开始边界。（CSS3）</dd>
+				<dt class="g-color-css3-new">end：</dt>
+				<dd>内容对齐结束边界。（CSS3）</dd>
+				<dt class="g-color-css3-new"><a href="../../values/textual/string.htm">&lt;string&gt;</a>：</dt>
+				<dd>字符串必须是单一字符，否则申明将无效。（CSS3）</dd>
+				<dt class="g-color-css3-new">match-parent：</dt>
+				<dd>这个值和 inherit 表现一致，只是该值继承的 start 或 end 关键字是针对父母的 <a href="direction.htm">direction</a> 值并计算的，计算值可以是 left 和 right 。（CSS3）</dd>
+				<dt class="g-color-css3-new">start end：</dt>
+				<dd>指定 start 对齐第一行和任何强制打断的行；end 对齐所有剩余的行不受 <a href="text-align-last.htm">text-align-last</a> 影响。（CSS3）</dd>
+			</dl>
+		</div>
+		<div class="related">
+			<p class="g-color-light">* CSS3新增属性可能存在描述错误及变更，仅供参考，持续更新</p>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
+		<h2 class="tit">说明：</h2>
+		<div class="cont">
+			<strong>设置或检索对象中内容的水平对齐方式。</strong>
+			<ul>
+				<li>块级元素的文本是一些堆叠的线框</li>
+				<li class="g-color-light">要使得 text-align 的 justify 两端对齐生效，需要在汉字间插入有空白，如空格；</li>
+				<li class="g-color-light">块内的最后一行文本（包括块内仅有一行文本的情况，这时既是第一行也是最后一行）及被强制打断的行，其两端对齐需使用 <a href="text-align-last.htm">text-align-last</a>；</li>
+				<li class="g-color-light">IE浏览器下，如果 <a href="text-align-last.htm">text-align-last</a> 要生效，必须先定义 text-align 为justify；</li>
+				<li>
+					<strong>单行两端对齐效果变得比较简单：</strong>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>css code：</strong></p>
+						<blockquote class="gquote-cont"><pre><code>li{overflow:hidden;width:200px;height:21px;text-align:justify;text-align-last:justify;}
+li:after{display:inline-block;overflow:hidden;width:100%;height:0;content:'';}</code></pre></blockquote>
+						<p class="gquote-tit"><strong>html code：</strong></p>
+						<blockquote class="gquote-cont"><pre><code>&lt;ul&gt;
+	&lt;li&gt;我 是 谁&lt;/li&gt;
+	&lt;li&gt;你 又 是 谁&lt;/li&gt;
+	&lt;li&gt;世 界 末 日 2012&lt;/li&gt;
+&lt;/ul&gt;</code></pre></blockquote>
+						<div class="gquote-info">
+							<p>以上代码3个li中的内容都将两端对齐</p>
+							<strong>需注意几点：</strong>
+							<ul class="gitem">
+								<li>所有主流浏览器都支持 text-align 的 justify 属性值；</li>
+								<li>text-align不处理强制打断的行，也不处理块内的最后一行，换句话说，如果块内仅有一行文本（该行既是第一行也是最后一行），这时仅设置text-align:justify无法让该行两端对齐；</li>
+								<li><a href="text-align-last.htm">text-align-last</a> 是用来处理块内的最后一行和强制打断的行的，所以当要设置单行文本两端对齐时，需使用 <a href="text-align-last.htm">text-align-last</a>；</li>
+								<li>非Firefox浏览器要使得两端对齐生效，需在文本间插入空白，如空格（如果一行仅有2个汉字，Firefox也需在之间插入空白）；</li>
+								<li>Chrome23, Safari5.1.7, Opera12.5 尚不支持 <a href="text-align-last.htm">text-align-last</a>；</li>
+							</ul>
+							<strong>依据上述的点，要实现单行两端对齐，可以走2个方向：</strong>
+							<ol class="gitem">
+								<li>由于所有浏览器都支持 text-align 的 justify 属性值，但不全支持 <a href="text-align-last.htm">text-align-last</a>，我们可以对非IE及IE7以上浏览器使用伪对象生成额外的内容（IE7及以下浏览器不支持伪对象，使用<a href="text-align-last.htm">text-align-last</a>处理），置于第二行并将其隐藏，这时第一行文本（即要对齐的那个单行文本）可使用text-align:justify来对齐</li>
+								<li>支持 <a href="text-align-last.htm">text-align-last</a> 的浏览器，如IE, Firefox使用 <a href="text-align-last.htm">text-align-last</a> 处理，不支持的浏览器使用如上述方法处理；</li>
+							</ol>
+							<p>所以就目前情况来看，使用第一种方案是比较简约的，可以轻易的兼容IE5.5-10, Firefox, Chrome, Safari, Opera</p>
+						</div>
+					</div>
+					<p>查看 <a href="http://demo.doyoe.com/css3/justify/" class="external" rel="external" target="_blank">css两端对齐详解</a> <a href="http://demo.doyoe.com/css3/justify/justify-for-all.htm" class="external" rel="external" target="_blank">css两端对齐效果demo</a></p>
+				</li>
+				<li>对应的脚本特性为<strong>textAlign</strong>。</li>
+			</ul>
+		</div>
+	</section>
+	<section id="compatible" class="g-mod g-attr">
+		<h2 class="tit">兼容性：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">墨绿</span> = 部分支持</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
+						<th><span class="browser-ie">IE</span></th>
+						<th><span class="browser-firefox">Firefox</span></th>
+						<th><span class="browser-safari">Safari</span></th>
+						<th><span class="browser-chrome">Chrome</span></th>
+						<th><span class="browser-opera">Opera</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>版本</th>
+						<td class="partsupport">5.5-9 <sup><a href="#support1">#1</a> <a href="#support2">#2</a> <a href="#support3">#3</a></sup></td>
+						<td class="partsupport">4-18 <sup><a href="#support2">#2</a> <a href="#support3">#3</a></sup></td>
+						<td class="partsupport">5.1.7 <sup><a href="#support3">#3</a></sup></td>
+						<td class="partsupport">13-23 <sup><a href="#support3">#3</a></sup></td>
+						<td class="partsupport">11.5-12.5 <sup><a href="#support1">#1</a> <a href="#support2">#2</a> <a href="#support3">#3</a></sup></td>
+					</tr>
+				</tbody>
+			</table>
+			<ol class="support-info">
+				<li id="support1">不支持：<ins class="css3-value g-color-css3-new">start</ins> | <ins class="css3-value g-color-css3-new">end</ins>。</li>
+				<li id="support2">不支持：<ins class="css3-value g-color-css3-new"><a href="../../values/textual/string.htm">&lt;string&gt;</a></ins>。</li>
+				<li id="support3">不支持：<ins class="css3-value g-color-css3-new">match-parent</ins> | <ins class="css3-value g-color-css3-new">start end</ins>。</li>
+			</ol>
+		</div>
+	</section>
+	<section id="example" class="g-mod g-attr">
+		<h2 class="tit">示例：</h2>
+		<div class="cont">
+			<textarea cols="90" rows="10">
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>text-align_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<style>
+.test p{border:1px solid #000;}
+.left p{text-align:left;}
+.center p{text-align:center;}
+.right p{text-align:right;}
+.justify p{width:200px;text-align:justify;}
+.start p{text-align:start;}
+.end p{text-align:end;}
+</style>
+</head>
+<body>
+<ul class="test">
+	<li class="left">
+		<strong>left</strong>
+		<p>我是左对齐内容</p>
+	</li>
+	<li class="center">
+		<strong>center</strong>
+		<p>我是居中对齐内容</p>
+	</li>
+	<li class="right">
+		<strong>right</strong>
+		<p>我是右对齐内容</p>
+	</li>
+	<li class="justify">
+		<strong>justify</strong>
+		<p>我 是一段可以两端对齐的文字， 你 仔细看看， 我 的对齐方式都贴着 容器左右的边缘。</p>
+	</li>
+	<li class="start">
+		<strong>start</strong>
+		<p>start效果</p>
+	</li>
+	<li class="end">
+		<strong>end</strong>
+		<p>end效果</p>
+	</li>
+</ul>
+</body>
+</html>
+			</textarea>
+			<p><input type="button" value="运行" class="g-btn g-btn-sure" /></p>
+		</div>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/inner.js"></script>
+</body>
+</html>

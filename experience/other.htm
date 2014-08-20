@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>Other Skill And Experience</title>
+<meta name="Description" content="CSS3参考手册之: 其它技巧和经验集合" />
+<meta name="Keywords" content="CSS, HTML Skill, JavaScript Skill, CSS3参考手册" />
+<meta name="Author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="Robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../skin/article.css" />
+</head>
+<body>
+<nav id="guide" class="g-mod">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="index.htm" id="category" rel="experience" name="other">问题和经验列表</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它问题和经验参考</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入分类快速导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">Other Skill And Experience</h1>
+		<ul class="info">
+			<li>其它技巧和经验集合</li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="about-version" class="g-mod g-attr">
+		<h2 class="tit">其它技巧和经验列表（<em class="g-color-light">以下实例默认运行环境都为Standard mode</em>）：</h2>
+		<ol class="gitem">
+			<li id="no1">
+				<h3>如何让层在falsh上显示？</h3>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>方法：</strong></p>
+					<blockquote class="gquote-cont"><pre><code>&lt;param name="wmode" value="transparent" /&gt;</code></pre></blockquote>
+					<p class="gquote-info">设置flash的wmode值为transparent或opaque</p>
+				</div>
+			</li>
+			<li id="no2">
+				<h3>如何使用标准的方法在页面上插入flash？</h3>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>方法：</strong></p>
+					<blockquote class="gquote-cont"><pre><code>&lt;object id="flash-show" type="application/x-shockwave-flash" data="*.swf"&gt;
+	&lt;param name="movie" value="*.swf" /&gt;
+	&lt;param name="wmode" value="transparent" /&gt;
+	&lt;img src="*.jpg" alt="用于不支持flash或屏蔽flash时显示" /&gt;
+&lt;/object&gt;</code></pre></blockquote>
+					<p class="gquote-info">至于flash的宽高可以在css里设置</p>
+				</div>
+			</li>
+			<li id="no3">
+				<h3>如何在点文字时也选中复选框或单选框？</h3>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>方法1：</strong></p>
+					<blockquote class="gquote-cont"><pre><code>&lt;input type="checkbox" id="chk1" name="chk" /&gt;&lt;label for="chk1"&gt;选项一&lt;/label&gt;
+&lt;input type="checkbox" id="chk2" name="chk" /&gt;&lt;label for="chk2"&gt;选项二&lt;/label&gt;
+
+&lt;input type="radio" id="rad1" name="rad" /&gt;&lt;label for="rad1"&gt;选项一&lt;/label&gt;
+&lt;input type="radio" id="rad2" name="rad" /&gt;&lt;label for="rad2"&gt;选项二&lt;/label&gt;</code></pre></blockquote>
+					<p class="gquote-info">该方式所有主流浏览器都支持</p>
+				</div>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>方法2：</strong></p>
+					<blockquote class="gquote-cont"><pre><code>&lt;label&gt;&lt;input type="checkbox" name="chk" /&gt;选项一&lt;/label&gt;
+&lt;label&gt;&lt;input type="checkbox" name="chk" /&gt;选项二&lt;/label&gt;
+
+&lt;label&gt;&lt;input type="radio" name="rad" /&gt;选项一&lt;/label&gt;
+&lt;label&gt;&lt;input type="radio" name="rad" /&gt;选项二&lt;/label&gt;</code></pre></blockquote>
+					<p class="gquote-info">该方式相比方法1更简洁，但IE6及更早浏览器不支持</p>
+				</div>
+			</li>
+			<li id="no4">
+				<h3>IE下如何对Standard Mode与Quirks Mode进行切换？</h3>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>IE6的触发（在DTD申明前加上XML申明）：</strong></p>
+					<blockquote class="gquote-cont"><pre><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;!DOCTYPE html&gt;</code></pre></blockquote>
+					<p class="gquote-info">IE5.5及更早浏览器版本直接以Quirks Mode解析。</p>
+				</div>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>所有IE版本的触发（在DTD申明前加上HTML注释）：</strong></p>
+					<blockquote class="gquote-cont"><pre><code>&lt;!-- Let IE into quirks mode --&gt;
+&lt;!DOCTYPE html&gt;</code></pre></blockquote>
+					<p class="gquote-info">当没有DTD声明时，所有IE版本也会进入Quirks Mode。</p>
+				</div>
+			</li>
+			<li id="no5">
+				<h3>如何区别display:none与visibility:hidden？</h3>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>方法：</strong></p>
+					<div class="gquote-cont">相同的是display:none与visibility:hidden都可以用来隐藏某个元素；
+不同的是display:none在隐藏元素的时候，将其占位空间也去掉；而visibility:hidden只是隐藏了内容而已，其占位空间仍然保留。</div>
+				</div>
+			</li>
+			<li id="no6">
+				<h3>如何设置IE下的iframe背景透明？</h3>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>方法：</strong></p>
+					<div class="gquote-cont">设置iframe元素的标签属性allowtransparency="allowtransparency"然后设置iframe内部页面的body背景色为transparent。
+不过由此会引发IE下一些其它问题，如：设置透明后的iframe将不能遮住select</div>
+				</div>
+			</li>
+		</ol>
+		<p class="related">待续及修订。。。</p>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../js/jquery.js"></script>
+<script src="../js/inner.js"></script>
+</body>
+</html>

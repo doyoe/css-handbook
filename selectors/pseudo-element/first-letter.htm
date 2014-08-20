@@ -1,0 +1,188 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>E:first-letter/E::first-letter</title>
+<meta name="description" content="CSS3参考手册之: E:first-letter/E::first-letter" />
+<meta name="keywords" content="E:first-letter, E::first-letter, css3选择符, css3, css3参考手册" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../../skin/article.css" />
+</head>
+<body>
+<nav id="guide" class="g-mod">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="../index.htm">选择符列表</a>
+		<span>&#187;</span>
+		<a href="index.htm"id="category" rel="selectors/pseudo-element" name="first-letter">伪对象选择符</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它伪对象选择符</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入分类快速导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">E:first-letter/E::first-letter</h1>
+		<ul class="info">
+			<li><strong>版本：CSS1/3</strong></li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="syntax" class="g-mod g-attr">
+		<h2 class="tit">语法：</h2>
+		<div class="cont">
+			<p><strong>E:first-letter/E::first-letter</strong>{ sRules }</p>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
+		<h2 class="tit">说明：</h2>
+		<div class="cont">
+			<strong>设置对象内的第一个字符的样式。</strong>
+			<ul>
+				<li>此伪对象仅作用于块对象。内联对象要使用该伪对象，必须先将其设置为块级对象。</li>
+				<li>该伪类常被用来配合<a href="../../properties/font/font-size.htm">font-size</a>属性和<a href="../../properties/layout/float.htm">float</a>属性制作首字下沉效果。</li>
+				<li>IE6在使用该选择符时有个显式的BUG：<em class="g-color-light">选择符与包含规则的花括号之间不能紧挨着，需留有空格或换行</em>。同时还存在该BUG的选择符包括：<a href="first-line.htm">E:first-line</a></li>
+				<li>
+					<p>CSS3将伪对象选择符(Pseudo-Element Selectors)前面的<em class="g-color-light">单个冒号(:)修改为双冒号(::)</em>用以区别伪类选择符(Pseudo-Classes Selectors)，但以前的写法仍然有效。</p>
+					<p>即E:first-letter可转化为E::first-letter</p>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<section id="compatible" class="g-mod g-attr">
+		<h2 class="tit">兼容性(E:first-letter)：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">粉色</span> = 部分支持</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
+						<th><span class="browser-ie">IE</span></th>
+						<th><span class="browser-firefox">Firefox</span></th>
+						<th><span class="browser-safari">Safari</span></th>
+						<th><span class="browser-chrome">Chrome</span></th>
+						<th><span class="browser-opera">Opera</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>较早版本</th>
+						<td class="partsupport">5.5-6.0 <sup><a href="#support1">#1</a></sup></td>
+						<td rowspan="2" class="support">1.0</td>
+						<td rowspan="2" class="support">1.0</td>
+						<td rowspan="2" class="support">1.0</td>
+						<td rowspan="2" class="support">3.5</td>
+					</tr>
+					<tr>
+						<th>最近版本</th>
+						<td class="support">7.0</td>
+					</tr>
+				</tbody>
+			</table>
+			<ol class="support-info">
+				<li id="support1">IE6及更早浏览器下，E:first-letter选择符与包含规则的花括号之间不能紧挨着，需留有空格或换行。</li>
+			</ol>
+		</div>
+	</section>
+	<section id="compatible" class="g-mod g-attr">
+		<h2 class="tit">兼容性(E::first-letter)：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">粉色</span> = 部分支持</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
+						<th><span class="browser-ie">IE</span></th>
+						<th><span class="browser-firefox">Firefox</span></th>
+						<th><span class="browser-safari">Safari</span></th>
+						<th><span class="browser-chrome">Chrome</span></th>
+						<th><span class="browser-opera">Opera</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>较早版本</th>
+						<td class="partsupport">5.5-6.0 <sup><a href="#support2">#1</a></sup></td>
+						<td rowspan="3" class="support">1.0</td>
+						<td rowspan="3" class="support">1.0</td>
+						<td rowspan="3" class="support">1.0</td>
+						<td rowspan="3" class="support">7.0</td>
+					</tr>
+					<tr>
+						<th>较新版本</th>
+						<td class="unsupport">7.0-8.0</td>
+					</tr>
+					<tr>
+						<th>最近版本</th>
+						<td class="support">9.0</td>
+					</tr>
+				</tbody>
+			</table>
+			<ol class="support-info">
+				<li id="support2">IE6及更早浏览器本质上并不支持E::first-letter的写法，而是忽略掉了E::first-letter中的一个冒号，仍以E:first-letter来解释，所以它们也变相的支持了E::first-letter。</li>
+			</ol>
+		</div>
+	</section>
+	<section id="example" class="g-mod g-attr">
+		<h2 class="tit">示例：</h2>
+		<div class="cont">
+			<textarea cols="90" rows="10">
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>E::first-letter_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<style>
+h1{font-size:16px;}
+p{width:200px;padding:5px 10px;border:1px solid #ddd;font:14px/1.5 simsun,serif,sans-serif;}
+p:first-letter {float:left;font-size:40px;font-weight:bold;line-height:1;}
+p::first-letter {float:left;font-size:40px;font-weight:bold;line-height:1;}
+</style>
+</head>
+<body>
+<h1>杂志常用的首字下沉效果</h1>
+<p>今天，阳光明媚，晴空万里，非常适合户外活动，如踏青、远足之类的。长期坐在办公室的同学们要多注意运动。</p>
+</body>
+</html>
+			</textarea>
+			<p><input type="button" value="运行" class="g-btn g-btn-sure" /></p>
+		</div>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/inner.js"></script>
+</body>
+</html>

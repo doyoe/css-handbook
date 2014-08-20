@@ -1,0 +1,248 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>Bugs And Fixed</title>
+<meta name="Description" content="CSS3参考手册之: 浏览器Bugs及解决方案" />
+<meta name="Keywords" content="CSS, Bug,Bugs, CSS Bugs, CSS参考手册" />
+<meta name="Author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="Robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../skin/article.css" />
+</head>
+<body>
+<nav id="guide" class="g-mod">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="index.htm" id="category" rel="experience" name="bugs">问题和经验列表</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它问题和经验参考</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入分类快速导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">Bugs And Fixed</h1>
+		<ul class="info">
+			<li>Bugs和解决方案</li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="about-version" class="g-mod g-attr">
+		<h2 class="tit">Bugs及解决方案列表（<em class="g-color-light">以下实例默认运行环境都为Standard mode</em>）：</h2>
+		<ol class="gitem">
+			<li id="no1">
+				<h3>如何在IE6及更早浏览器中定义小高度的容器？</h3>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>方法：</strong></p>
+					<blockquote class="gquote-cont"><pre><code>#test{overflow:hidden;height:1px;font-size:0;line-height:0;}</code></pre></blockquote>
+					<p class="gquote-info">IE6及更早浏览器之所以无法直接定义较小高度的容器是因为默认会有行高</p>
+				</div>
+			</li>
+			<li id="no2">
+				<h3>如何解决IE6及更早浏览器浮动时产生双倍边距的BUG？</h3>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>方法：</strong></p>
+					<blockquote class="gquote-cont"><pre><code>#test{display:inline;}</code></pre></blockquote>
+					<p class="gquote-info">当在IE6及更早浏览器中出现浮动后margin值解析为双倍的情况，设置该元素的<a href="../properties/layout/display.htm">display</a>属性为inline即可。</p>
+				</div>
+			</li>
+			<li id="no3">
+				<h3>如何在IE6及更早浏览器下模拟min-height效果？</h3>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>方法：</strong></p>
+					<blockquote class="gquote-cont"><pre><code>#test{min-height:100px;_height:100px;}</code></pre></blockquote>
+					<p class="gquote-info">注意此时#test不能再设置<a href="../properties/layout/overflow.htm">overflow</a>的值为hidden，否则模拟<a href="../properties/dimension/min-height.htm">min-height</a>效果将失效</p>
+				</div>
+			</li>
+			<li id="no4">
+				<h3>如何解决按钮在IE7及更早浏览器下随着value增多两边留白也随着增加的问题？</h3>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>方法：</strong></p>
+					<blockquote class="gquote-cont"><pre><code>input,button{overflow:visible;}</code></pre></blockquote>
+				</div>
+			</li>
+			<li id="no5">
+				<h3>如何解决IE7及更早浏览器下当li中出现2个或以上的浮动时，li之间产生的空白间隙的BUG？</h3>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>方法：</strong></p>
+					<blockquote class="gquote-cont"><pre><code>li{vertical-align:top;}</code></pre></blockquote>
+					<p class="gquote-info">除了top值，还可以设置为text-top | middle | bottom | text-bottom，甚至特定的<a href="../values/other/length.htm">&lt;length&gt;</a>和<a href="../values/other/percentage.htm">&lt;percentage&gt;</a>值都可以</p>
+				</div>
+			</li>
+			<li id="no6">
+				<h3>如何解决IE6及更早浏览器下的3像素BUG？</h3>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>方法：</strong></p>
+					<blockquote class="gquote-cont"><pre><code>.a{color:#f00;}
+.main{width:950px;background:#eee;}
+.content{float:left;width:750px;height:100px;background:#ccc;_margin-right:-3px;}
+.aside{height:100px;background:#aaa;}
+
+&lt;div class="main"&gt;
+	&lt;div class="content"&gt;content&lt;/div&gt;
+	&lt;div class="aside"&gt;aside&lt;/div&gt;
+&lt;/div&gt;</code></pre></blockquote>
+					<p class="gquote-info">在IE6及更早浏览器下为.content设置margin-right:-3px；也可以设置.aside为浮动</p>
+				</div>
+			</li>
+			<li id="no7">
+				<h3>如何解决IE6下的文本溢出BUG（江湖匪号：“谍影重重”或“一只猪的故事”）？</h3>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>BUG重现：</strong></p>
+					<blockquote class="gquote-cont"><pre><code>.test{zoom:1;overflow:hidden;width:500px;}
+.box1{float:left;width:100px;}
+.box2{float:right;width:400px;}
+
+&lt;div class="test"&gt;
+	&lt;div class="box1"&gt;&lt;/div&gt;
+	&lt;!-- 注释 --&gt;
+	&lt;div class="box2"&gt;↓这就是多出来的那只猪&lt;/div&gt;
+&lt;/div&gt;</code></pre></blockquote>
+					<div class="gquote-info">
+						<p>运行如上代码，你会发现文字发生了溢出，在IE6下会多出一只“猪”。造成此BUG的原因可能是多重混合的，如浮动，注释，宽高定义等等。并且注释条数越多，溢出的文本也会随之增多。</p>
+						<p>列举几个解决方法：
+							<br />　删除box1和box2之间所有的注释；
+							<br />　不设置浮动；
+							<br />　调整box1或box2的宽度，比如将box的宽度调整为90px</p>
+					</div>
+				</div>
+			</li>
+			<li id="no8">
+				<h3>如何解决IE6使用滤镜PNG图片透明后，容器内链接失效的问题？</h3>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>方法：</strong></p>
+					<blockquote class="gquote-cont"><pre><code>div{width:300px;height:100px;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='*.png');}
+a{_position:relative;}</code></pre></blockquote>
+					<p class="gquote-info">解决方法是为容器内的链接定义相对定位属性<a href="../properties/positioning/position.htm">position</a>的值为relative</p>
+				</div>
+			</li>
+			<li id="no9">
+				<h3>如何解决IE6无法识别伪对象:first-letter/:first-line的问题？</h3>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>方法1：</strong></p>
+					<blockquote class="gquote-cont"><pre><code>p:first-letter {float:left;font-size:40px;font-weight:bold;}
+p:first-line {color:#090;}</code></pre></blockquote>
+					<p class="gquote-info">增加空格：在伪对象选择符:first-letter/:first-line与包含规则的花括号"{"间增加空格。</p>
+				</div>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>方法2：</strong></p>
+					<blockquote class="gquote-cont"><pre><code>p:first-letter
+{float:left;font-size:40px;font-weight:bold;}
+p:first-line
+{color:#090;}</code></pre></blockquote>
+					<p class="gquote-info">换行：将整个花括号"{"规则区域换行。细节参见<a href="../selectors/pseudo-element/first-letter.htm">E:first-letter</a>和<a href="../selectors/pseudo-element/first-line.htm">E:first-line</a>选择符</p>
+				</div>
+			</li>
+			<li id="no10">
+				<h3>如何解决IE8会忽略伪对象:first-letter/:first-line里的!important规则的问题？</h3>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>BUG重现：</strong></p>
+					<blockquote class="gquote-cont"><pre><code>p:first-letter {float:left;font-size:40px;font-weight:bold;color:#f00!important;color:#090;}</code></pre></blockquote>
+					<p class="gquote-info">如上代码，在IE8下color定义都会失效，原因就是因为有color使用了!important规则。鉴于此，请尽量不要在:first-letter/:first-line里使用!important规则。</p>
+				</div>
+			</li>
+			<li id="no11">
+				<h3>如何解决IE6会忽略同一条样式体内的!important规则的问题？</h3>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>BUG重现：</strong></p>
+					<blockquote class="gquote-cont"><pre><code>div{color:#f00!important;color:#000;}</code></pre></blockquote>
+					<p class="gquote-info">如上代码，IE6及以下浏览器div的文本颜色为#000，!important并没有覆盖后面的规则，也就是说!important被忽略了。解决方案是将该样式拆分为2条，细节参见<a href="../rules/!important.htm">!important</a>规则</p>
+				</div>
+			</li>
+			<li id="no12">
+				<h3>如何解决IE6及更早浏览器下当li内部元素是定义了display:block的内联元素时底部产生空白的问题？</h3>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>BUG重现：</strong></p>
+					<blockquote class="gquote-cont"><pre><code>a,span{display:block;background:#ddd;}
+
+&lt;ul&gt;
+	&lt;li&gt;&lt;a href="http://css.doyoe.com/"&gt;CSS参考手册&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="http://blog.doyoe.com/"&gt;CSS探索之旅&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="http://demo.doyoe.com/"&gt;web前端实验室&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;span&gt;测试li内部元素为设置了display:block的内联元素时底部产生空白&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre></blockquote>
+					<p class="gquote-info">如上代码，IE6及更早浏览器每个li内部的内联元素底部都会产生空白。解决方案是给li内部的内联元素再加上zoom:1</p>
+				</div>
+			</li>
+			<li id="no13">
+				<h3>如何解决IE6及更早浏览器下未定义宽度的浮动或绝对定位元素会被内部设置了zoom:1的块元素撑开的问题？</h3>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>BUG重现：</strong></p>
+					<blockquote class="gquote-cont"><pre><code>#test{zoom:1;overflow:hidden;border:1px solid #ddd;background:#eee;}
+#test h1{float:left;}
+#test .nav{float:right;background:#aaa;}
+#test .nav ul{zoom:1;overflow:hidden;margin:0;padding:0;list-style:none;}
+#test .nav li{float:left;margin:0 5px;}
+
+&lt;div id="test"&gt;
+	&lt;h1>Doyoe&lt;/h1&gt;
+	&lt;div class="nav"&gt;
+		&lt;ul&gt;
+			&lt;li&gt;&lt;a href="http://css.doyoe.com/"&gt;CSS参考手册&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href="http://blog.doyoe.com/"&gt;CSS探索之旅&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href="http://demo.doyoe.com/"&gt;web前端实验室&lt;/a&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre></blockquote>
+					<div class="gquote-info">
+						<p>如上代码，IE6及更早浏览器div.nav会被设置了zoom:1的ul给撑开。</p>
+						<p>列举几个解决方法：
+							<br />　设置ul为浮动元素；
+							<br />　设置ul为inline元素；
+							<br />　设置ul的width</p>
+					</div>
+				</div>
+			</li>
+			<li id="no14">
+				<h3>如何解决IE7及更早浏览器下子元素相对定位时父元素overflow属性的auto|hidden失效的问题？</h3>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>BUG重现：</strong></p>
+					<blockquote class="gquote-cont"><pre><code>div{overflow:auto;width:260px;height:80px;border:1px solid #ddd;}
+p{position:relative;margin:0;}
+
+&lt;div&gt;
+	&lt;p&gt;如果我是相对定位，我的父元素overflow属性设置为auto|hidden将失效。如果你使用的是IE及更早浏览器，你将可以看到这个BUG&lt;/p&gt;
+	&lt;p&gt;如果我是相对定位，我的父元素overflow属性设置为auto|hidden将失效。如果你使用的是IE及更早浏览器，你将可以看到这个BUG&lt;/p&gt;
+&lt;/div&gt;</code></pre></blockquote>
+					<p class="gquote-info">如上代码，在IE7及更早浏览器下你会看到div的滚动条将无法工作。解决方案是给div也设置相对定位position:relative</p>
+				</div>
+			</li>
+			<li id="no15">
+				<h3>如何解决Chrome在应用transition时页面闪动的问题？</h3>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>方法：</strong></p>
+					<blockquote class="gquote-cont"><pre><code>-webkit-transform-style:preserve-3d;或-webkit-backface-visibility:hidden;</code></pre></blockquote>
+					<p class="gquote-info">在Chrome下，使用过渡效果transition时有时会出现页面闪动</p>
+				</div>
+			</li>
+		</ol>
+		<p class="related">待续及修订。。。</p>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../js/jquery.js"></script>
+<script src="../js/inner.js"></script>
+</body>
+</html>

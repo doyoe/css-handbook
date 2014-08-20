@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>clip</title>
+<meta name="description" content="CSS3参考手册之:clip" />
+<meta name="keywords" content="clip, css3, css3参考手册" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../../skin/article.css" />
+</head>
+<body>
+<nav id="guide" class="g-mod">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="../index.htm">属性列表</a>
+		<span>&#187;</span>
+		<a href="index.htm" id="category" rel="properties/positioning" name="clip">定位属性</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它定位属性参考</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入分类快速导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">clip</h1>
+		<ul class="info">
+			<li><strong>版本：CSS2/3</strong></li>
+			<li>媒体：视觉</li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="syntax" class="g-mod g-attr">
+		<h2 class="tit">语法：</h2>
+		<div class="cont">
+			<p><strong>clip</strong>：<mark class="defaultvalue">auto</mark> | <a href="#dfn-syntax">&lt;shape&gt;</a></p>
+			<p id="dfn-syntax"><strong>&lt;shape&gt;</strong>：rect(<a href="../../values/numeric/number.htm">&lt;number&gt;</a>|auto <a href="../../values/numeric/number.htm">&lt;number&gt;</a>|auto <a href="../../values/numeric/number.htm">&lt;number&gt;</a>|auto <a href="../../values/numeric/number.htm">&lt;number&gt;</a>|auto) | <ins class="css3-value g-color-css3-new">inset(<a href="../../values/numeric/number.htm">&lt;number&gt;</a>|auto <a href="../../values/numeric/number.htm">&lt;number&gt;</a>|auto <a href="../../values/numeric/number.htm">&lt;number&gt;</a>|auto <a href="../../values/numeric/number.htm">&lt;number&gt;</a>|auto)</ins></p>
+			<p><strong>默认值</strong>：<mark class="defaultvalue">auto</mark></p>
+			<p><strong>适用于</strong>：绝对定位元素</p>
+            <p><strong>继承性</strong>：无</p>
+            <p><strong>动画性</strong>：当值为<a href="#dfn-syntax">&lt;shape&gt;</a>时</p>
+		    <p><strong>计算值</strong>：指定的值</p>
+		</div>
+	</section>
+	<section id="value" class="g-mod g-attr">
+		<h2 class="tit">取值：</h2>
+		<div class="cont">
+			<dl>
+				<dt>auto：</dt>
+				<dd>对象无剪切</dd>
+				<dt>rect(<a href="../../values/numeric/number.htm">&lt;number&gt;</a>|auto <a href="../../values/numeric/number.htm">&lt;number&gt;</a>|auto <a href="../../values/numeric/number.htm">&lt;number&gt;</a>|auto <a href="../../values/numeric/number.htm">&lt;number&gt;</a>|auto)：</dt>
+				<dd>依据上-右-下-左的顺序提供自对象左上角为(0,0)坐标计算的四个偏移数值，其中任一数值都可用auto替换，即此边不剪切。</dd>
+				<dd>上-左 方位的裁剪：从0开始剪裁直到设定值，即 上-左 方位的auto值等同于0；</dd>
+				<dd>右-下 方位的裁剪：从设定值开始剪裁直到最右边和最下边，即 右-下 方位的auto值为盒子的实际宽度和高度；</dd>
+				<dd>
+					<p>示例：clip:rect(auto 50px 20px auto)</p>
+					<p>说明：上边不剪切，右边从左起第50个像素开始剪切直至最右边，下边从上起第20个像素开始剪切直至最底部，左边不剪切</p>
+				</dd>
+				<dt class="g-color-css3-new">inset(<a href="../../values/numeric/number.htm">&lt;number&gt;</a>|auto <a href="../../values/numeric/number.htm">&lt;number&gt;</a>|auto <a href="../../values/numeric/number.htm">&lt;number&gt;</a>|auto <a href="../../values/numeric/number.htm">&lt;number&gt;</a>|auto)：</dt>
+				<dd>该剪裁方式与 rect() 类似，不同的是 inset() 的剪裁，每个方位都是参照该方位的边界来进行裁剪的。</dd>
+				<dd>上-右-下-左 方位的裁剪：从0开始剪裁直到设定值，即 上-右-下-左 方位的auto值都等同于0；（CSS3）</dd>
+			</dl>
+		</div>
+		<div class="related">
+			<p class="g-color-light">* CSS3新增属性可能存在描述错误及变更，仅供参考，持续更新</p>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
+		<h2 class="tit">说明：</h2>
+		<div class="cont">
+			<strong>检索或设置对象的可视区域。区域外的部分是透明的。</strong>
+			<ul>
+				<li>必须将<a href="../positioning/position.htm">position</a>的值设为absolute，此属性方可使用。</li>
+				<li>对应的脚本特性为<strong>clip</strong>。</li>
+			</ul>
+		</div>
+	</section>
+	<section id="compatible" class="g-mod g-attr">
+		<h2 class="tit">兼容性：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">墨绿</span> = 部分支持</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
+						<th><span class="browser-ie">IE</span></th>
+						<th><span class="browser-firefox">Firefox</span></th>
+						<th><span class="browser-safari">Safari</span></th>
+						<th><span class="browser-chrome">Chrome</span></th>
+						<th><span class="browser-opera">Opera</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>版本</th>
+						<td class="partsupport">6.0-7.0 <sup><a href="#support1">#1</a> <a href="#support2">#2</a></sup></td>
+						<td rowspan="2" class="partsupport">1.0-25.0 <sup><a href="#support2">#2</a></sup></td>
+						<td rowspan="2" class="partsupport">1.0-5.1.7 <sup><a href="#support2">#2</a></td>
+						<td rowspan="2" class="partsupport">1.0-31.0 <sup><a href="#support2">#2</a></td>
+						<td rowspan="2" class="partsupport">7.0-18.0 <sup><a href="#support2">#2</a></td>
+					</tr>
+					<tr>
+						<th>版本</th>
+						<td class="partsupport">8.0-11.0 <a href="#support2">#2</a></td>
+					</tr>
+				</tbody>
+			</table>
+			<ol class="support-info">
+				<li id="support1">IE7及更早浏览器只支持rect()内部的数值以空格分隔的方式，不支持以逗号分隔。</li>
+				<li id="support2">不支持clip属性的CSS3新增属性值: <ins class="g-color-css3-new">inset()</ins>。</li>
+			</ol>
+		</div>
+	</section>
+	<section id="example" class="g-mod g-attr">
+		<h2 class="tit">示例：</h2>
+		<div class="cont">
+			<textarea cols="90" rows="10">
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>clip_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<style>
+.test{position:absolute;height:50px;line-height:50px;clip:rect(0 auto 35px 10px);background:#eee;}
+</style>
+</head>
+<body>
+<div class="test">看看被剪切后的效果</div>
+</body>
+</html>
+			</textarea>
+			<p><input type="button" value="运行" class="g-btn g-btn-sure" /></p>
+		</div>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/inner.js"></script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>text-decoration-skip</title>
+<meta name="description" content="CSS3参考手册之:text-decoration-skip" />
+<meta name="keywords" content="text-decoration-skip, css3, css3参考手册" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../../skin/article.css" />
+</head>
+<body>
+<nav id="guide" class="g-mod">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="../index.htm">属性列表</a>
+		<span>&#187;</span>
+		<a href="index.htm" id="category" rel="properties/text-decoration" name="text-decoration-skip">文本装饰属性</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它文本装饰属性</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入快速分类导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">text-decoration-skip</h1>
+		<ul class="info">
+			<li><strong>版本：CSS3</strong></li>
+			<li>媒体：视觉</li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="syntax" class="g-mod g-attr">
+		<h2 class="tit">语法：</h2>
+		<div class="cont">
+			<p><strong>text-decoration-skip</strong>：none | [ objects || spaces || ink || edges || box-decoration ]</p>
+			<p><strong>默认值</strong>：<mark class="defaultvalue">objects</mark></p>
+			<p><strong>适用于</strong>：所有元素</p>
+		    <p><strong>继承性</strong>：是</p>
+		    <p><strong>动画性</strong>：否</p>
+		    <p><strong>计算值</strong>：指定的值</p>
+		</div>
+	</section>
+	<section id="value" class="g-mod g-attr">
+		<h2 class="tit">取值：</h2>
+		<div class="cont">
+			<dl>
+				<dt>none：</dt>
+				<dd>不略过：文本装饰将绘制在所有文本内容及行内盒上。</dd>
+				<dt>objects：</dt>
+				<dd>略过原子内联元素（例如图片或内联块）</dd>
+				<dt>spaces：</dt>
+				<dd>略过空白：包括常规空白（U+0020）、制表符（U+0009）以及不间断空格（U+00A0）、表意空格（U+3000）、所有固定宽度空格（U+2000至U+200A、U+202F和U+205F）、以及相邻的字母间隔或单词间隔。</dd>
+				<dt>ink：</dt>
+				<dd>略过字符绘制处：中断装饰线，以显示文本装饰件将穿过该字形的文本。用户代理可能还会在该字形轮廓的两侧额外的略过一段距离。</dd>
+				<dt>edges：</dt>
+				<dd>用户代理应当将装饰线的起始、结束位置放置于较所装饰元素的内容边缘更靠内的位置，使得诸如两个紧密相邻的元素的下划线不会显示为一条下划线。（这在中文里很重要，对于中文，下划线是一种标点符号。）</dd>
+				<dt>box-decoration：</dt>
+				<dd>略过盒子的margin,border,padding区域。需要注意的是，这只针对祖先的装饰效果，装饰盒不会绘制自身的装饰。</dd>
+			</dl>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
+		<h2 class="tit">说明：</h2>
+		<div class="cont">
+			<strong>检索或设置对象中的文本装饰线条必须略过内容中的哪些部分。</strong>
+			<ul>
+				<li>对应的脚本特性为<strong>textDecorationSkip</strong>。</li>
+			</ul>
+		</div>
+	</section>
+	<section id="compatible" class="g-mod g-attr">
+		<h2 class="tit">兼容性：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">墨绿</span> = 部分支持</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
+						<th><span class="browser-ie">IE</span></th>
+						<th><span class="browser-firefox">Firefox</span></th>
+						<th><span class="browser-safari">Safari</span></th>
+						<th><span class="browser-chrome">Chrome</span></th>
+						<th><span class="browser-opera">Opera</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>版本</th>
+						<td class="unsupport">6.0-11.0</td>
+						<td class="unsupport">6.0-29.0</td>
+						<td class="unsupport">5.1.7</td>
+						<td class="unsupport">1.0-31.0</td>
+						<td class="unsupport">3.5-21.0</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/inner.js"></script>
+</body>
+</html>

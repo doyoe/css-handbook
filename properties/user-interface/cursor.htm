@@ -1,0 +1,232 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>cursor</title>
+<meta name="description" content="CSS3参考手册之: cursor" />
+<meta name="keywords" content="cursor, css3, css3参考手册" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../../skin/article.css" />
+</head>
+<body>
+<nav id="guide" class="g-mod">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="../index.htm">属性列表</a>
+		<span>&#187;</span>
+		<a href="index.htm" id="category" rel="properties/user-interface" name="cursor">用户界面属性</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它用户界面属性</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入快速分类导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">cursor</h1>
+		<ul class="info">
+			<li><strong>版本：CSS2</strong></li>
+			<li>继承性：有</li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="syntax" class="g-mod g-attr">
+		<h2 class="tit">语法：</h2>
+		<div class="cont">
+			<p><strong>cursor</strong>：[<a href="../../../values/textual/url.htm">&lt;url&gt;</a> [&lt;x&gt; &lt;y&gt;]?,]*[ auto | default | none | context-menu | help | pointer | progress | wait | cell | crosshair | text | vertical-text | alias | copy | move | no-drop | not-allowed | e-resize | n-resize | ne-resize | nw-resize | s-resize | se-resize | sw-resize | w-resize | ew-resize | ns-resize | nesw-resize | nwse-resize | col-resize | row-resize | all-scroll]</p>
+			<p><strong>默认值</strong>：<mark class="defaultvalue">auto</mark></p>
+			<p><strong>适用于</strong>：所有元素</p>
+		    <p><strong>继承性</strong>：有</p>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
+		<h2 class="tit">说明：</h2>
+		<div class="cont">
+			<strong>设置或检索在对象上移动的鼠标指针采用何种系统预定义的光标形状。</strong>
+			<ul>
+				<li>使用自定义图像作为光标类型，IE, Opera只支持*.cur等特定的图片格式；Firefox, Chrome, Safari既支持特定图片类型也支持常见的*.jpg, *.gif, *.jpg等图片格式。</li>
+				<li>
+				<strong>cursor的属性值可以是一个序列</strong>
+				<div class="gquote">
+						<p class="gquote-tit"><strong>示例代码：</strong></p>
+						<blockquote class="gquote-cont"><pre><code>:link,:visited{
+    cursor:url(example.svg#linkcursor),
+            url(hyper.cur),
+            url(hyper.png) 2 3,
+            pointer;
+}</code></pre></blockquote>
+						<p class="gquote-info">本例用来给所有的超链接定义光标类型，客户端如果不支持SVG类型的光标，则使用下个"hyper.cur"；如果cur类型也不支持，则使用下个"hyper.png"；依次类推。</p>
+					</div>
+				</li>
+				<li>对应的脚本特性为<strong>cursor</strong>。</li>
+			</ul>
+		</div>
+	</section>
+	<section id="compatible" class="g-mod g-attr">
+		<h2 class="tit">兼容性：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">墨绿</span> = 部分支持</li>
+				<li><span class="experimentsupport">橙色</span> = 实验性质</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
+						<th><span class="browser-ie">IE</span></th>
+						<th><span class="browser-firefox">Firefox</span></th>
+						<th><span class="browser-safari">Safari</span></th>
+						<th><span class="browser-chrome">Chrome</span></th>
+						<th><span class="browser-opera">Opera</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>版本</th>
+						<td class="support">6</td>
+						<td class="support">4</td>
+						<td class="support">5.1.7</td>
+						<td class="support">13</td>
+						<td class="support">11.5</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+	<section id="example" class="g-mod g-attr">
+		<h2 class="tit">示例：</h2>
+		<div class="cont">
+			<textarea cols="90" rows="10">
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>cursor_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<style>
+.test{width:400px;border-collapse:collapse;font:14px/1.5 georgia,arial,serif,sans-serif;}
+.test td{padding:2px 10px;border:1px solid #ddd;}
+.test td:hover{background:#eee;}
+.auto{cursor:auto;}
+.default{cursor:default;}
+.none{cursor:none;}
+.context-menu{cursor:context-menu;}
+.help{cursor:help;}
+.pointer{cursor:pointer;}
+.progress{cursor:progress;}
+.wait{cursor:wait;}
+.cell{cursor:cell;}
+.crosshair{cursor:crosshair;}
+.text{cursor:text;}
+.vertical-text{cursor:vertical-text;}
+.alias{cursor:alias;}
+.copy{cursor:copy;}
+.move{cursor:move;}
+.no-drop{cursor:no-drop;}
+.not-allowed{cursor:not-allowed;}
+.e-resize{cursor:e-resize;}
+.n-resize{cursor:n-resize;}
+.ne-resize{cursor:ne-resize;}
+.nw-resize{cursor:nw-resize;}
+.s-resize{cursor:s-resize;}
+.se-resize{cursor:se-resize;}
+.sw-resize{cursor:sw-resize;}
+.w-resize{cursor:w-resize;}
+.ew-resize{cursor:ew-resize;}
+.ns-resize{cursor:ns-resize;}
+.nesw-resize{cursor:nesw-resize;}
+.nwse-resize{cursor:nwse-resize;}
+.col-resize{cursor:col-resize;}
+.row-resize{cursor:row-resize;}
+.all-scroll{cursor:all-scroll;}
+.url{cursor:url(skin/cursor.gif),
+            url(skin/cursor.png),
+			url(skin/cursor.jpg),
+            pointer;}
+</style>
+</head>
+<body>
+<table class="test">
+	<caption>cursor光标类型</caption>
+	<tbody>
+		<tr>
+			<td class="auto">auto</td>
+			<td class="default">default</td>
+			<td class="none">none</td>
+			<td class="context-menu">context-menu</td>
+			<td class="help">help</td>
+			<td class="pointer">pointer</td>
+			<td class="progress">progress</td>
+		</tr>
+		<tr>
+			<td class="wait">wait</td>
+			<td class="cell">cell</td>
+			<td class="crosshair">crosshair</td>
+			<td class="text">text</td>
+			<td class="vertical-text">vertical-text</td>
+			<td class="alias">alias</td>
+			<td class="copy">copy</td>
+		</tr>
+		<tr>
+			<td class="move">move</td>
+			<td class="no-drop">no-drop</td>
+			<td class="not-allowed">not-allowed</td>
+			<td class="e-resize">e-resize</td>
+			<td class="n-resize">n-resize</td>
+			<td class="ne-resize">ne-resize</td>
+			<td class="nw-resize">nw-resize</td>
+		</tr>
+		<tr>
+			<td class="s-resize">s-resize</td>
+			<td class="se-resize">se-resize</td>
+			<td class="sw-resize">sw-resize</td>
+			<td class="w-resize">w-resize</td>
+			<td class="ew-resize">ew-resize</td>
+			<td class="ns-resize">ns-resize</td>
+			<td class="nesw-resize">nesw-resize</td>
+		</tr>
+		<tr>
+			<td class="nwse-resize">nwse-resize</td>
+			<td class="col-resize">col-resize</td>
+			<td class="row-resize">row-resize</td>
+			<td class="all-scroll">all-scroll</td>
+			<td class="url">url</td>
+		</tr>
+	</tbody>
+</table>
+</body>
+</html>
+			</textarea>
+			<p><input type="button" value="运行" class="g-btn g-btn-sure" /></p>
+		</div>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/inner.js"></script>
+</body>
+</html>

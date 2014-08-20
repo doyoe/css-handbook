@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>@import</title>
+<meta name="Description" content="CSS3参考手册之: @import" />
+<meta name="Keywords" content="@import" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../skin/article.css" />
+</head>
+<body>
+<nav id="guide" class="g-mod">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="../index.htm" id="category" rel="rules" name="@import">语法与规则列表</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它语法与规则参考</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入快速分类导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">@import</h1>
+		<ul class="info">
+			<li><strong>版本：CSS1/3</strong></li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="syntax" class="g-mod g-attr">
+		<h2 class="tit">语法：</h2>
+		<div class="cont">
+			<p><strong>@import</strong> <a href="../values/textual/url.htm">&lt;url&gt;</a> <a href="#dfn-syntax">&lt;media_query_list&gt;</a></p>
+			<p id="dfn-syntax"><strong>&lt;media_query_list&gt;</strong>：[<a href="#dfn-syntax2">&lt;media_query&gt;</a>[',' <a href="#dfn-syntax2">&lt;media_query&gt;</a>]*]?<p>
+			<p id="dfn-syntax2"><strong>&lt;media_query&gt;</strong>：[only | not]? <a href="../appendix/media-types.htm">&lt;media_type&gt;</a> [and <a href="#dfn-syntax3">&lt;expression&gt;</a>]* | <a href="#dfn-syntax3">&lt;expression&gt;</a> [and <a href="#dfn-syntax3">&lt;expression&gt;</a>]*</p>
+			<p id="dfn-syntax3"><strong>&lt;expression&gt;</strong>：'('<a href="../properties/media-queries/index.htm#media-features-listing">&lt;media_feature&gt;</a>[:&lt;value&gt;]?')'</p>
+		</div>
+	</section>
+	<section id="value" class="g-mod g-attr">
+		<h2 class="tit">取值：</h2>
+		<div class="cont">
+			<dl>
+				<dt><a href="../values/textual/url.htm">&lt;url&gt;</a>：</dt>
+				<dd>使用绝对或相对地址指定导入的外部样式表文件。<em class="g-color-light">可以是url(url)或者直接是一个url</em></dd>
+				<dt><a href="#dfn-syntax">&lt;media_query_list&gt;</a>：</dt>
+				<dd>指定<a href="../appendix/media-types.htm">媒体类型</a>和<a href="../properties/media-queries/index.htm#media-features-listing">查询条件</a>。</dd>
+			</dl>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
+		<h2 class="tit">说明：</h2>
+		<div class="cont">
+			<strong>指定导入的外部样式表及目标媒体。</strong>
+			<ul>
+				<li>该规则必须在样式表头部最先声明。并且其后的分号是必需的，如果省略了此分号，外部样式表将无法正确导入，并会生成错误信息。</li>
+				<li>IE使用@import无法引入超过35条的样式表。</li>
+				<li>
+					<strong>使用url(url)和直接使用url需要注意的地方：</strong>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>示例代码：</strong></p>
+						<blockquote class="gquote-cont"><pre><code>@import url("global.css");
+@import url(global.css);
+@import "global.css";
+</code></pre></blockquote>
+						<p class="gquote-info">以上3种方式都有效。当使用url(url)的方式时，包住路径的引号可有可无；当直接使用url时，包住路径的引号必须保留。</p>
+					</div>
+				</li>
+				<li>
+					<strong>指定媒体查询：</strong>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>示例代码：</strong></p>
+						<blockquote class="gquote-cont"><pre><code>@import url(example.css) screen and (min-width:800px);
+@import url(example.css) screen and (width:800px),(color);
+@import url(example.css) screen and (min-device-width:500px) and (max-device-width:1024px);</code></pre></blockquote>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<section id="compatible" class="g-mod g-attr">
+		<h2 class="tit">兼容性：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">墨绿</span> = 部分支持</li>
+				<li><span class="experimentsupport">橙色</span> = 实验性质</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
+						<th><span class="browser-ie">IE</span></th>
+						<th><span class="browser-firefox">Firefox</span></th>
+						<th><span class="browser-safari">Safari</span></th>
+						<th><span class="browser-chrome">Chrome</span></th>
+						<th><span class="browser-opera">Opera</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>版本</th>
+						<td class="partsupport">6-7 <sup><a href="#support1">#1</a></sup></td>
+						<td rowspan="3" class="support">4</td>
+						<td rowspan="3" class="support">5.1.7</td>
+						<td rowspan="3" class="support">13</td>
+						<td rowspan="3" class="support">11.5</td>
+					</tr>
+					<tr>
+						<th>版本</th>
+						<td class="partsupport">8 <sup><a href="#support2">#2</a></sup></td>
+					</tr>
+					<tr>
+						<th>版本</th>
+						<td class="support">9</td>
+					</tr>
+				</tbody>
+			</table>
+			<ol class="support-info">
+				<li id="support1">IE7及更早浏览器不支持@import指定媒体类型和媒体查询。</li>
+				<li id="support2">IE8不支持@import指定媒体查询。</li>
+			</ol>
+		</div>
+	</section>
+	<section id="example" class="g-mod g-attr">
+		<h2 class="tit">示例：</h2>
+		<div class="cont">
+			<textarea cols="90" rows="10">
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>@import_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<style>
+@import url("style.css") screen, print;
+</style>
+</head>
+<body>
+
+</body>
+</html>
+			</textarea>
+			<p><input type="button" value="运行" class="g-btn g-btn-sure" /></p>
+		</div>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../js/jquery.js"></script>
+<script src="../js/inner.js"></script>
+</body>
+</html>

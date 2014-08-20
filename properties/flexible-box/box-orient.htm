@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>box-orient</title>
+<meta name="description" content="CSS3参考手册伸缩盒之: box-orient" />
+<meta name="keywords" content="box-orient, flexbox, 伸缩盒, css3, css3参考手册" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../../skin/article.css" />
+</head>
+<body>
+<nav id="guide" class="g-mod">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="../index.htm">属性列表</a>
+		<span>&#187;</span>
+		<a href="index.htm" id="category" rel="properties/flexible-box" name="box-orient">伸缩盒属性</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它媒体查询属性</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入快速分类导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">box-orient</h1>
+		<ul class="info">
+			<li><strong>版本：CSS3</strong></li>
+			<li>媒体：视觉</li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="syntax" class="g-mod g-attr">
+		<h2 class="tit">语法：</h2>
+		<div class="cont">
+			<p><strong>box-orient</strong>：horizontal | vertical | inline-axis | block-axis</p>
+			<p><strong>默认值</strong>：<mark class="defaultvalue">horizontal</mark></p>
+			<p><strong>适用于</strong>：伸缩盒容器</p>
+		    <p><strong>继承性</strong>：无</p>
+		    <p><strong>动画性</strong>：否</p>
+		    <p><strong>计算值</strong>：指定值</p>
+		</div>
+	</section>
+	<section id="value" class="g-mod g-attr">
+		<h2 class="tit">取值：</h2>
+		<div class="cont">
+			<dl>
+				<dt>horizontal：</dt>
+				<dd>设置伸缩盒对象的子元素从左到右水平排列</dd>
+				<dt>vertical：</dt>
+				<dd>设置伸缩盒对象的子元素从上到下纵向排列</dd>
+				<dt>inline-axis：</dt>
+				<dd>设置伸缩盒对象的子元素沿行轴排列</dd>
+				<dt>block-axis：</dt>
+				<dd>设置伸缩盒对象的子元素沿块轴排列</dd>
+			</dl>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
+		<h2 class="tit">说明：</h2>
+		<div class="cont">
+			<strong>设置或检索伸缩盒对象的子元素的排列方式。</strong>
+			<ul>
+				<li>可以通过box-orient:horizontal + box-direction:normal 达到新版本 flex-direction:row 的效果；</li>
+				<li>可以通过box-orient:horizontal + box-direction:reverse 达到新版本 flex-direction:row-reverse 的效果；</li>
+				<li>可以通过box-orient:vertical + box-direction:normal 达到新版本 flex-direction:column 的效果；</li>
+				<li>可以通过box-orient:horizontal + box-direction:reverse 达到新版本 flex-direction:column-reverse 的效果；</li>
+				<li>对应的脚本特性为<strong>boxOrient</strong>。</li>
+			</ul>
+		</div>
+	</section>
+	<section id="compatible" class="g-mod g-attr">
+		<h2 class="tit">兼容性：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">墨绿</span> = 部分支持</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
+						<th><span class="browser-ie">IE</span></th>
+						<th><span class="browser-firefox">Firefox</span></th>
+						<th><span class="browser-safari">Safari</span></th>
+						<th><span class="browser-chrome">Chrome</span></th>
+						<th><span class="browser-opera">Opera</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>较早版本</th>
+						<td class="unsupport" rowspan="2">6.0-11.0</td>
+						<td class="support" rowspan="2">4.0.-25.0 <sup class="fix">-moz-</sup></td>
+						<td class="support" rowspan="2">5.1.7 <sup class="fix">-webkit-</sup></td>
+						<td class="support" rowspan="2">4.0-31.0 <sup class="fix">-webkit-</sup></td>
+						<td class="unsupport">9.5-14.0</td>
+					</tr>
+					<tr>
+						<th>较新版本</th>
+						<td class="support">15.0-18.0 <sup class="fix">-webkit-</sup></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+	<section id="example" class="g-mod g-attr">
+		<h2 class="tit">示例：</h2>
+		<div class="cont">
+			<textarea cols="90" rows="10">
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>box-orient_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<style>
+h1{font:bold 20px/1.5 georgia,simsun,sans-serif;}
+.box{display:-webkit-box;display:-moz-box;display:-ms-box;width:600px;height:180px;margin:0;padding:0;list-style:none;}
+#box{-webkit-box-orient:horizontal;-moz-box-orient:horizontal;-ms-box-orient:horizontal;}
+#box2{-webkit-box-orient:vertical;-moz-box-orient:vertical;-ms-box-orient:vertical;}
+.box li:nth-child(1){-webkit-box-flex:1;-moz-box-flex:1;-ms-box-flex:1;background:#666;}
+.box li:nth-child(2){-webkit-box-flex:2;-moz-box-flex:2;-ms-box-flex:2;background:#999;}
+.box li:nth-child(3){-webkit-box-flex:3;-moz-box-flex:3;-ms-box-flex:3;background:#ccc;}
+</style>
+</head>
+<body>
+<h1>子元素横向排列 box-orient:horizontal;</h1>
+<ul id="box" class="box">
+	<li>1</li>
+	<li>2</li>
+	<li>3</li>
+</ul>
+<h1>子元素纵向排列 box-orient:vertical;</h1>
+<ul id="box2" class="box">
+	<li>1</li>
+	<li>2</li>
+	<li>3</li>
+</ul>
+</body>
+</html>
+			</textarea>
+			<p><input type="button" class="g-btn g-btn-sure" value="运行"></p>
+		</div>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/inner.js"></script>
+</body>
+</html>

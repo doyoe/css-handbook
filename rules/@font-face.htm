@@ -1,0 +1,271 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>@font-face</title>
+<meta name="Description" content="CSS3参考手册之: @font-face" />
+<meta name="Keywords" content="@font-face, 字符集, 编码, 文件编码" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../skin/article.css" />
+</head>
+<body>
+<nav id="guide" class="g-mod">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="../index.htm" id="category" rel="rules" name="@font-face">语法与规则列表</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它语法与规则参考</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入快速分类导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">@font-face</h1>
+		<ul class="info">
+			<li><strong>版本：CSS3</strong></li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="syntax" class="g-mod g-attr">
+		<h2 class="tit">语法：</h2>
+		<div class="cont">
+			<pre><code><strong>@font-face</strong> {
+	font-family: <a href="../values/textual/identifier.htm">&lt;identifier&gt;</a>;
+	src: <a href="#dfn-syntax">&lt;fontsrc&gt;</a> [, <a href="#dfn-syntax">&lt;fontsrc&gt;</a>]*;
+	[font-weight: weight];
+	[font-style: style];
+}</code></pre>
+			<p id="dfn-syntax"><strong>&lt;fontsrc&gt;</strong> = <a href="../values/textual/url.htm">&lt;url&gt;</a> [format(<a href="../values/textual/string.htm">&lt;string&gt;</a>)]</p>
+		</div>
+	</section>
+	<section id="value" class="g-mod g-attr">
+		<h2 class="tit">取值：</h2>
+		<div class="cont">
+			<dl>
+				<dt><a href="../values/textual/identifier.htm">&lt;identifier&gt;</a>：</dt>
+				<dd>字体名称</dd>
+				<dt><a href="../values/textual/url.htm">&lt;url&gt;</a>：</dt>
+				<dd>此值指的是你自定义的字体的存放路径，可以是相对路径也可以是绝路径</dd>
+				<dt><a href="../values/textual/string.htm">&lt;string&gt;</a>：</dt>
+				<dd>此值指的是你自定义的字体的格式，主要用来帮助浏览器识别，其值主要有以下几种类型：truetype,opentype,truetype-aat,embedded-opentype,avg等</dd>
+				<dt><a href="../properties/font/font-weight.htm">&lt;font-weight&gt;</a>：</dt>
+				<dd>定义字体是否为粗体</dd>
+				<dt><a href="../properties/font/font-style.htm">&lt;font-style&gt;</a>：</dt>
+				<dd>定义字体样式，如斜体</dd>
+			</dl>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
+		<h2 class="tit">说明：</h2>
+		<div class="cont">
+			<strong>设置嵌入HTML文档的字体。</strong>
+			
+			<ul>
+				<li>通常使用TureTpe(.ttf)、Web Open Font Format(.woff)、Embedded Open Type(.eot)、SVG(.svg)四种字体格式即可兼容几乎所有浏览器。</li>
+				<li>嵌入HTML文档的字体是指将OpenType字体（压缩的TrueType字体）文件映射到客户端系统，用来提供HTML文档使用该字体，或取代客户端系统已有的同名字体。即让客户端显示客户端所没有安装的字体。</li>
+				<li>微软的IE5已经是开始支持这个属性，但是只支持微软自有的.eot(Embedded Open Type)格式，而其他浏览器直到现在都没有支持这一字体格式。Safari从3.1开始已经可以设置.ttf(TrueType)和.otf(OpenType)两种字体做为自定义字体了。</li>
+			</ul>
+		</div>
+	</section>
+	<section id="compatible" class="g-mod g-attr">
+		<h2 class="tit">兼容性：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">墨绿</span> = 部分支持</li>
+				<li><span class="experimentsupport">橙色</span> = 实验性质</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
+						<th><span class="browser-ie">IE</span></th>
+						<th><span class="browser-firefox">Firefox</span></th>
+						<th><span class="browser-safari">Safari</span></th>
+						<th><span class="browser-chrome">Chrome</span></th>
+						<th><span class="browser-opera">Opera</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>版本</th>
+						<td class="partsupport">6-8 <sup><a href="#support1">#1</a></sup></td>
+						<td rowspan="2" class="support">3.5</td>
+						<td rowspan="2" class="support">3.2</td>
+						<td rowspan="2" class="support">4</td>
+						<td rowspan="2" class="support">10.1</td>
+					</tr>
+					<tr>
+						<th>版本</th>
+						<td class="support">9<sup><a href="#support2">#2</a></sup></td>
+					</tr>
+				</tbody>
+			</table>
+			<ol class="support-info">
+				<li id="support1">IE8及更早浏览器只支持微软自有的.eot(Embedded Open Type)格式。</li>
+				<li id="support2">IE9-10部分支持ttf和otf字体格式。</li>
+			</ol>
+		</div>
+	</section>
+	<section id="example" class="g-mod g-attr">
+		<h2 class="tit">示例：</h2>
+		<div class="cont">
+			<textarea cols="90" rows="10">
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>@font-face_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<style>
+@font-face {
+	font-family: 'iconfont';
+	src: url('http://at.alicdn.com/t/font_1397098551_95441.eot'); /* IE9*/
+	src: url('http://at.alicdn.com/t/font_1397098551_95441.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	url('http://at.alicdn.com/t/font_1397098552_0142624.woff') format('woff'), /* chrome、firefox */
+	url('http://at.alicdn.com/t/font_1397098551_8732882.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+	url('http://at.alicdn.com/t/font_1397098552_0586202.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+body {
+	font-family: 'iconfont';
+	font-style: normal;
+	font-size: 32px;
+	line-height: 2;
+	letter-spacing: .25em;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-stroke-width: 0.2px;
+	-moz-osx-font-smoothing: grayscale;
+	overflow: hidden;
+	*zoom: 1;
+}
+</style>
+</head>
+<body>
+&#13363
+&#13364
+&#13365
+&#13366
+&#13367
+&#13368
+&#13369
+&#13370
+&#13371
+&#13372
+&#13373
+&#13374
+&#13375
+&#13376
+&#13377
+&#13378
+&#13379
+&#13380
+&#13381
+&#13382
+&#13383
+&#13384
+&#13385
+&#13386
+&#13387
+&#13388
+&#13389
+&#13390
+&#13391
+&#13392
+&#13393
+&#13394
+&#13395
+&#13396
+&#13397
+&#13398
+&#13399
+&#13400
+&#13401
+&#13402
+&#13403
+&#13404
+&#13362
+&#13367
+&#13368
+&#13369
+&#13370
+&#13371
+&#13372
+&#13373
+&#13374
+&#13375
+&#13376
+&#13377
+&#13378
+&#13387
+&#13388
+&#13389
+&#13390
+&#13391
+&#13392
+&#13393
+&#13394
+&#13395
+&#13396
+&#13397
+&#13398
+&#13399
+&#13400
+&#13401
+&#13402
+&#13403
+&#13404
+&#13405
+&#13406
+&#13407
+&#13408
+&#13409
+&#13410
+&#13411
+&#13412
+&#13413
+&#13414
+&#13415
+&#13566
+&#13567
+&#13568
+&#13569
+&#13570
+&#13571
+&#58881
+&#58882
+</body>
+</html>
+			</textarea>
+			<p><input type="button" value="运行" class="g-btn g-btn-sure" /></p>
+		</div>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../js/jquery.js"></script>
+<script src="../js/inner.js"></script>
+</body>
+</html>

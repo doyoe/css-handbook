@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>writing-mode</title>
+<meta name="description" content="CSS3参考手册之:writing-mode" />
+<meta name="keywords" content="writing-mode, css3, css3参考手册" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../../skin/article.css" />
+</head>
+<body>
+<nav id="guide" class="g-mod">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="../index.htm">属性列表</a>
+		<span>&#187;</span>
+		<a href="index.htm" id="category" rel="properties/writing-modes" name="writing-mode">书写模式属性</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它书写模式属性参考</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入快速分类导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">writing-mode</h1>
+		<ul class="info">
+			<li><strong>版本：CSS3</strong></li>
+			<li>媒体：视觉</li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="syntax" class="g-mod g-attr">
+		<h2 class="tit">语法：</h2>
+		<div class="cont">
+			<p><strong>writing-mode</strong>：horizontal-tb | vertical-rl | vertical-lr | <ins class="ie-value g-color-ie" title="IE私有属性值">lr-tb</ins> | <ins class="ie-value g-color-ie" title="IE私有属性值">tb-rl</ins></p>
+			<p><strong>默认值</strong>：<mark class="defaultvalue">normal</mark></p>
+			<p><strong>适用于</strong>：除 table-row-group, table-column-group, table-row, table-column 之外的所有元素</p>
+		    <p><strong>继承性</strong>：有</p>
+		    <p><strong>动画性</strong>：否</p>
+		    <p><strong>计算值</strong>：特定值</p>
+		</div>
+	</section>
+	<section id="value" class="g-mod g-attr">
+		<h2 class="tit">取值：</h2>
+		<div class="cont">
+			<dl>
+				<dt>horizontal-tb：</dt>
+				<dd>水平方向自上而下的书写方式。即 left-right-top-bottom（类似IE私有值lr-tb）</dd>
+				<dt>vertical-rl：</dt>
+				<dd>垂直方向自右而左的书写方式。即 top-bottom-right-left（类似IE私有值tb-rl）</dd>
+				<dt>vertical-lr：</dt>
+				<dd>垂直方向自左而右的书写方式。即 top-bottom-left-right</dd>
+				<dt class="g-color-ie">lr-tb：</dt>
+				<dd>左-右，上-下。对象中的内容在水平方向上从左向右流入，后一行在前一行的下面。 所有的字形都是竖直向上的。这种布局是罗马语系使用的（IE）</dd>
+				<dt class="g-color-ie">tb-rl：</dt>
+				<dd>上-下，右-左。对象中的内容在垂直方向上从上向下流入，自右向左。后一竖行在前一竖行的左面。全角字符是竖直向上的，半角字符如拉丁字母或片假名顺时针旋转90度。这种布局是东亚语系通常使用的（IE）</dd>
+			</dl>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
+		<h2 class="tit">说明：</h2>
+		<div class="cont">
+			<strong>设置或检索对象的内容块固有的书写方向。西方语言一般都是 lr-tb 的书写方式，但是亚洲语言 lr-tb | tb-rl 的书写方式都有。</strong>
+			<ul>
+				<li class="g-color-light">作为IE的私有属性之一，IE5.5率先实现了 writing-mode ，后期被w3c采纳成标准属性；</li>
+				<li>此属性效果不能被累加使用。例如，父对象的此属性值设为 tb-rl ，子对象再设置该属性将不起作用，仍应用父对象的设置。</li>
+				<li>对应的脚本特性为<strong>writingMode</strong>。</li>
+			</ul>
+		</div>
+	</section>
+	<section id="compatible" class="g-mod g-attr">
+		<h2 class="tit">兼容性：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">墨绿</span> = 部分支持</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
+						<th><span class="browser-ie">IE</span></th>
+						<th><span class="browser-firefox">Firefox</span></th>
+						<th><span class="browser-safari">Safari</span></th>
+						<th><span class="browser-chrome">Chrome</span></th>
+						<th><span class="browser-opera">Opera</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>版本</th>
+						<td class="support" rowspan="2">6.0-11.0 <sup><a href="#support1">#1</a> <a href="#support2">#2</a></sup></td>
+						<td class="unsupport" rowspan="2">1.0-29.0</td>
+						<td class="unsupport">1.0-6.0</td>
+						<td class="unsupport">1.0-27.0</td>
+						<td class="unsupport">1.0-12.5</td>
+					</tr>
+					<tr>
+						<th>版本</th>
+						<td class="support">7.0 <sup class="fix">-webkit-</td>
+						<td class="support">28.0 <sup class="fix">-webkit-</sup></td>
+						<td class="support">15.0 <sup class="fix">-webkit-</sup></td>
+					</tr>
+				</tbody>
+			</table>
+			<ol class="support-info">
+				<li id="support1">不支持标准属性：horizontal-tb | vertical-rl | vertical-lr</li>
+				<li id="support2">支持自带的私有属性值：<ins class="ie-value g-color-ie" title="IE私有属性值">lr-tb</ins> | <ins class="ie-value g-color-ie" title="IE私有属性值">tb-rl</ins></li>
+			</ol>
+		</div>
+	</section>
+	<section id="example" class="g-mod g-attr">
+		<h2 class="tit">示例：</h2>
+		<div class="cont">
+			<textarea cols="90" rows="10">
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>writing-mode_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<style>
+.test{width:100px;height:100px;margin:10px;border:1px solid #aaa;}
+.lr-tb{-webkit-writing-mode:horizontal-tb;writing-mode:lr-tb;writing-mode:horizontal-tb;}
+.tb-rl{-webkit-writing-mode:vertical-rl;writing-mode:tb-rl;writing-mode:vertical-rl;}
+.tb-lr{-webkit-writing-mode:vertical-lr;writing-mode:tb-rl;writing-mode:vertical-lr;}
+</style>
+</head>
+<body>
+<div class="test lr-tb">本段文字将按照水平从左到右的书写方向进行流动。</div>
+<div class="test tb-rl">本段文字将按照垂直从右到左的书写方向进行流动。</div>
+<div class="test tb-lr">本段文字将按照垂直从左到右的书写方向进行流动。</div>
+<ul class="tb-rl">
+	<li class="test">本段文字将按照垂直从右到左的书写方向进行流动。</li>
+	<li class="test">本段文字将按照垂直从右到左的书写方向进行流动。</li>
+</ul>
+<ul class="tb-lr">
+	<li class="test">本段文字将按照垂直从左到右的书写方向进行流动。</li>
+	<li class="test">本段文字将按照垂直从左到右的书写方向进行流动。</li>
+</ul>
+</body>
+</html>
+			</textarea>
+			<p><input type="button" value="运行" class="g-btn g-btn-sure" /></p>
+		</div>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/inner.js"></script>
+</body>
+</html>

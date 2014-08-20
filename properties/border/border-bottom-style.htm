@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>border-bottom-style</title>
+<meta name="description" content="CSS3参考手册之:border-bottom-style" />
+<meta name="keywords" content="border-bottom-style, css3, css3参考手册" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../../skin/article.css" />
+</head>
+<body>
+<nav id="guide">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="../index.htm">属性列表</a>
+		<span>&#187;</span>
+		<a href="index.htm" id="category" rel="properties/border" name="border-bottom-style">边框属性</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它边框属性参考</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入快速分类导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">border-bottom-style</h1>
+		<ul class="info">
+			<li><strong>版本：CSS1</strong></li>
+			<li>媒体：视觉</li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="syntax" class="g-mod g-attr">
+		<h2 class="tit">语法：</h2>
+		<div class="cont">
+			<p><strong>border-bottom-style</strong>：<a href="#dfn-syntax">&lt;border-style&gt;</a></p>
+			<p id="dfn-syntax"><strong>&lt;border-style&gt;</strong> = none | hidden | dotted | dashed | solid | double | groove | ridge | inset | outset</p>
+			<p><strong>默认值</strong>：<mark class="defaultvalue">none</mark></p>
+			<p><strong>适用于</strong>：所有元素</p>
+		    <p><strong>继承性</strong>：无</p>
+		    <p><strong>动画性</strong>：否</p>
+		    <p><strong>计算值</strong>：指定值</p>
+			<p><strong>相关属性</strong>：[ <a href="border-style.htm">border-style</a> ] || [ <a href="border-top-style.htm">border-top-style</a> ] || [ <a href="border-right-style.htm">border-right-style</a> ] || [ <a href="border-left-style.htm">border-left-style</a> ]</p>
+		</div>
+	</section>
+	<section id="value" class="g-mod g-attr">
+		<h2 class="tit">取值：</h2>
+		<div class="cont">
+			<dl>
+				<dt>none：</dt>
+				<dd>无轮廓。<a href="border-color.htm">border-color</a>将被忽略，<a href="border-width.htm">border-width</a>计算值为0，除非边框轮廓为图像，即<a href="border-image.htm">border-image</a>。</dd>
+				<dt>hidden：</dt>
+				<dd>隐藏边框。<em class="g-color-light">IE7及以下尚不支持</em></dd>
+				<dt>dotted：</dt>
+				<dd>点状轮廓。<em class="g-color-light">IE6下显示为dashed效果</em></dd>
+				<dt>dashed：</dt>
+				<dd>虚线轮廓。</dd>
+				<dt>solid：</dt>
+				<dd>实线轮廓</dd>
+				<dt>double：</dt>
+				<dd>双线轮廓。两条单线与其间隔的和等于指定的<a href="border-width.htm">border-width</a>值</dd>
+				<dt>groove：</dt>
+				<dd>3D凹槽轮廓。</dd>
+				<dt>ridge：</dt>
+				<dd>3D凸槽轮廓。</dd>
+				<dt>inset：</dt>
+				<dd>3D凹边轮廓。</dd>
+				<dt>outset：</dt>
+				<dd>3D凸边轮廓。</dd>
+			</dl>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
+		<h2 class="tit">说明：</h2>
+		<div class="cont">
+			<strong>设置或检索对象的底部边框样式。</strong>
+			<ul>
+				<li>如果<a href="border-width.htm">border-width</a>等于0，本属性将失去作用。 </li>
+				<li>对应的脚本特性为<strong>borderBottomStyle</strong>。</li>
+			</ul>
+		</div>
+	</section>
+	<section id="compatible" class="g-mod g-attr">
+		<h2 class="tit">兼容性：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">墨绿</span> = 部分支持</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
+						<th><span class="browser-ie">IE</span></th>
+						<th><span class="browser-firefox">Firefox</span></th>
+						<th><span class="browser-safari">Safari</span></th>
+						<th><span class="browser-chrome">Chrome</span></th>
+						<th><span class="browser-opera">Opera</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>版本</th>
+						<td class="partsupport">6.0 <sup><a href="#support1">#1</a> <a href="#support2">#2</a></sup></td>
+						<td rowspan="3" class="support">1.0</td>
+						<td rowspan="3" class="support">1.0</td>
+						<td rowspan="3" class="support">1.0</td>
+						<td rowspan="3" class="support">3.5</td>
+					</tr>
+					<tr>
+						<th>版本</th>
+						<td class="partsupport">7 <sup><a href="#support1">#1</a></sup></td>
+					</tr>
+					<tr>
+						<th>版本</th>
+						<td class="support">8</td>
+					</tr>
+				</tbody>
+			</table>
+			<ol class="support-info">
+				<li id="support1">不支持hidden属性值。</li>
+				<li id="support2">dotted属性值显示为dashed的效果。</li>
+			</ol>
+		</div>
+	</section>
+	<section id="example" class="g-mod g-attr">
+		<h2 class="tit">示例：</h2>
+		<div class="cont">
+			<textarea cols="90" rows="10">
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>border-bottom-style_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<style>
+.test{border-bottom-width:5px;border-bottom-style:solid;border-bottom-color:#630}
+</style>
+</head>
+<body>
+<div class="test">底部边框样式</div>
+</body>
+</html>
+			</textarea>
+			<p><input type="button" value="运行" class="g-btn g-btn-sure" /></p>
+		</div>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/inner.js"></script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>white-space</title>
+<meta name="description" content="CSS3参考手册之:white-space" />
+<meta name="keywords" content="white-space, css3, css3参考手册" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../../skin/article.css" />
+</head>
+<body>
+<nav id="guide" class="g-mod">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="../index.htm">属性列表</a>
+		<span>&#187;</span>
+		<a href="index.htm" id="category" rel="properties/text" name="white-space">文本属性</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它文本属性参考</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入快速分类导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">white-space</h1>
+		<ul class="info">
+			<li><strong>版本：CSS1</strong></li>
+			<li>媒体：视觉</li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="syntax" class="g-mod g-attr">
+		<h2 class="tit">语法：</h2>
+		<div class="cont">
+			<p><strong>white-space</strong>：normal | pre | nowrap | pre-wrap | pre-line</p>
+			<p><strong>默认值</strong>：<mark class="defaultvalue">normal</mark></p>
+			<p><strong>适用于</strong>：所有元素</p>
+		    <p><strong>继承性</strong>：有</p>
+		    <p><strong>动画性</strong>：否</p>
+		    <p><strong>计算值</strong>：指定值</p>
+		</div>
+	</section>
+	<section id="value" class="g-mod g-attr">
+		<h2 class="tit">取值：</h2>
+		<div class="cont">
+			<dl>
+				<dt>normal：</dt>
+				<dd>默认处理方式。</dd>
+				<dt>pre：</dt>
+				<dd>用等宽字体显示预先格式化的文本，不合并文字间的空白距离，当文字超出边界时不换行。可查阅pre对象</dd>
+				<dt>nowrap：</dt>
+				<dd>强制在同一行内显示所有文本，合并文本间的多余空白，直到文本结束或者遭遇br对象。</dd>
+				<dt>pre-wrap：</dt>
+				<dd>用等宽字体显示预先格式化的文本，不合并文字间的空白距离，当文字碰到边界时发生换行。</dd>
+				<dt>pre-line：</dt>
+				<dd>保持文本的换行，不保留文字间的空白距离，当文字碰到边界时发生换行。</dd>
+			</dl>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
+		<h2 class="tit">说明：</h2>
+		<div class="cont">
+			<strong>设置或检索对象内空格的处理方式。</strong>
+			<ul>
+				<li>对应的脚本特性为<strong>whiteSpace</strong>。</li>
+			</ul>
+		</div>
+	</section>
+	<section id="compatible" class="g-mod g-attr">
+		<h2 class="tit">兼容性：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">墨绿</span> = 部分支持</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
+						<th><span class="browser-ie">IE</span></th>
+						<th><span class="browser-firefox">Firefox</span></th>
+						<th><span class="browser-safari">Safari</span></th>
+						<th><span class="browser-chrome">Chrome</span></th>
+						<th><span class="browser-opera">Opera</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>版本</th>
+						<td rowspan="2" class="partsupport">6.0-7.0 <sup><a href="#support1">#1</a> <a href="#support2">#2</a></sup></td>
+						<td rowspan="2" class="partsupport">1.0-3.0 <sup><a href="#support2">#2</a></sup></td>
+						<td rowspan="2" class="partsupport">1.0-2.0 <sup><a href="#support1">#1</a></sup></td>
+						<td rowspan="3" class="support">1.0</td>
+						<td class="partsupport">4.0-7.0 <sup><a href="#support1">#1</a> <a href="#support2">#2</a></sup></td>
+					</tr>
+					<tr>
+						<th>版本</th>
+						<td class="partsupport">8.0 <sup><a href="#support2">#2</a></sup></td>
+					</tr>
+					<tr>
+						<th>版本</th>
+						<td class="support">8.0</td>
+						<td class="support">3.5</td>
+						<td class="support">3.0</td>
+						<td class="support">9.5</td>
+					</tr>
+				</tbody>
+			</table>
+			<ol class="support-info">
+				<li id="support1">不支持：pre-wrap。</li>
+				<li id="support2">不支持：pre-line。</li>
+				<li>需要注意的是Firefox从1.0就开始支持 pre-wrap 值，但需要加上前缀 -mo-pre-wrap, 直到Firefox3.0才支持直接写 pre-wrap</li>
+			</ol>
+		</div>
+	</section>
+	<section id="example" class="g-mod g-attr">
+		<h2 class="tit">示例：</h2>
+		<div class="cont">
+			<textarea cols="90" rows="10">
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>white-space_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<style>
+.test p{width:200px;border:1px solid #000;}
+.normal p{word-wrap:normal;}
+.pre p{white-space:pre;}
+.pre-wrap p{white-space:pre-wrap;}
+.pre-line p{white-space:pre-line;}
+.nowrap p{white-space:nowrap;}
+</style>
+</head>
+<body>
+<ul class="test">
+	<li class="normal">
+		<strong>normal：</strong>
+		<p>轻轻地我走了
+	正如我轻轻地来</p>
+	</li>
+	<li class="pre">
+		<strong>pre：</strong>
+		<p>轻轻地我走了（这里接很多测试文字）
+	正如我轻轻地来</p>
+	</li>
+	<li class="pre-wrap">
+		<strong>pre-wrap：</strong>
+		<p>轻轻地    我走了（这里接很多测试文字）
+	正如我轻轻地来</p>
+	</li>
+	<li class="pre-line">
+		<strong>pre-line</strong>
+		<p>轻轻地    我走了（这里接很多测试文字）
+	正如我轻轻地来</p>
+	</li>
+	<li class="nowrap">
+		<strong>nowrap：</strong>
+		<p>轻轻地我走了
+	正如我轻轻地来</p>
+	</li>
+</ul>
+</body>
+</html>
+			</textarea>
+			<p><input type="button" value="运行" class="g-btn g-btn-sure" /></p>
+		</div>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/inner.js"></script>
+</body>
+</html>

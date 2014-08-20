@@ -1,0 +1,402 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>Skill And Experience</title>
+<meta name="Description" content="CSS3参考手册之: CSS技巧和经验集合" />
+<meta name="Keywords" content="CSS, CSS Skill, CSS参考手册" />
+<meta name="Author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="Robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../skin/article.css" />
+</head>
+<body>
+<nav id="guide" class="g-mod">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="index.htm" id="category" rel="experience" name="skill">问题和经验列表</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它问题和经验参考</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入分类快速导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">Skill And Experience</h1>
+		<ul class="info">
+			<li>CSS技巧和经验集合</li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="skill-listing" class="g-mod g-attr">
+		<h2 class="tit">CSS技巧和经验列表（<em class="g-color-light">以下实例默认运行环境都为Standard mode</em>）：</h2>
+		<ol class="gitem">
+			<li id="no1">
+				<h3>如何清除图片下方出现几像素的空白间隙？</h3>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>方法1：</strong></p>
+					<blockquote class="gquote-cont"><pre><code>img{display:block;}</code></pre></blockquote>
+				</div>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>方法2：</strong></p>
+					<blockquote class="gquote-cont"><pre><code>img{vertical-align:top;}</code></pre></blockquote>
+					<p class="gquote-info">除了top值，还可以设置为text-top | middle | bottom | text-bottom，甚至特定的<a href="../values/other/length.htm">&lt;length&gt;</a>和<a href="../values/other/percentage.htm">&lt;percentage&gt;</a>值都可以</p>
+				</div>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>方法3：</strong></p>
+					<blockquote class="gquote-cont"><pre><code>#test{font-size:0;line-height:0;}</code></pre></blockquote>
+					<p class="gquote-info">#test为img的父元素</p>
+				</div>
+			</li>
+			<li id="no2">
+				<h3>如何让文本垂直对齐文本输入框？</h3>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>方法：</strong></p>
+					<blockquote class="gquote-cont"><pre><code>input{vertical-align:middle;}</code></pre></blockquote>
+				</div>
+			</li>
+			<li id="no3">
+				<h3>如何让单行文本在容器内垂直居中？</h3>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>方法：</strong></p>
+					<blockquote class="gquote-cont"><pre><code>#test{height:25px;line-height:25px;}</code></pre></blockquote>
+					<p class="gquote-info">只需设置文本的行高等于容器的高度即可</p>
+				</div>
+			</li>
+			<li id="no4">
+				<h3>如何让超链接访问后和访问前的颜色不同且访问后仍保留hover和active效果？</h3>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>方法：</strong></p>
+					<blockquote class="gquote-cont"><pre><code>a:link{color:#03c;}
+a:visited{color:#666;}
+a:hover{color:#f30;}
+a:active{color:#c30;}</code></pre></blockquote>
+					<p class="gquote-info">按L-V-H-A的顺序设置超链接样式即可，可速记为LoVe（喜欢）HAte（讨厌）</p>
+				</div>
+			</li>
+			<li id="no5">
+				<h3>为什么Standard mode下IE无法设置滚动条的颜色？</h3>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>方法：</strong></p>
+					<blockquote class="gquote-cont"><pre><code>html{
+	scrollbar-3dlight-color:#999;
+	scrollbar-darkshadow-color:#999;
+	scrollbar-highlight-color:#fff;
+	scrollbar-shadow-color:#eee;
+	scrollbar-arrow-color:#000;
+	scrollbar-face-color:#ddd;
+	scrollbar-track-color:#eee;
+	scrollbar-base-color:#ddd;
+}</code></pre></blockquote>
+					<p class="gquote-info">将原来设置在body上的滚动条颜色样式定义到html标签选择符上即可</p>
+				</div>
+			</li>
+			<li id="no6">
+				<h3>如何使文本溢出边界不换行强制在一行内显示？</h3>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>方法：</strong></p>
+					<blockquote class="gquote-cont"><pre><code>#test{width:150px;white-space:nowrap;}</code></pre></blockquote>
+					<p class="gquote-info">设置容器的宽度和<a href="../properties/text/white-space.htm">white-space</a>为nowrap即可，其效果类似&lt;nobr&gt;标签</p>
+				</div>
+			</li>
+			<li id="no7">
+				<h3>如何使文本溢出边界显示为省略号？</h3>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>方法（此方法Firefox5.0尚不支持）：</strong></p>
+					<blockquote class="gquote-cont"><pre><code>#test{width:150px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}</code></pre></blockquote>
+					<p class="gquote-info">首先需设置将文本强制在一行内显示，然后将溢出的文本通过overflow:hidden截断，并以text-overflow:ellipsis方式将截断的文本显示为省略号。</p>
+				</div>
+			</li>
+			<li id="no8">
+				<h3>如何使连续的长字符串自动换行？</h3>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>方法：</strong></p>
+					<blockquote class="gquote-cont"><pre><code>#test{width:150px;word-wrap:break-word;}</code></pre></blockquote>
+					<p class="gquote-info"><a href="../properties/text/word-wrap.htm">word-wrap</a>的break-word值允许单词内换行</p>
+				</div>
+			</li>
+			<li id="no9">
+				<h3>如何清除浮动？</h3>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>方法1：</strong></p>
+					<blockquote class="gquote-cont"><pre><code>#test{clear:both;}</code></pre></blockquote>
+					<p class="gquote-info">#test为浮动元素的下一个兄弟元素</p>
+				</div>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>方法2：</strong></p>
+					<blockquote class="gquote-cont"><pre><code>#test{display:block;zoom:1;overflow:hidden;}</code></pre></blockquote>
+					<p class="gquote-info">#test为浮动元素的父元素。zoom:1也可以替换为固定的width或height</p>
+				</div>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>方法3：</strong></p>
+					<blockquote class="gquote-cont"><pre><code>#test{zoom:1;}
+#test:after{display:block;clear:both;visibility:hidden;height:0;content:'';}</code></pre></blockquote>
+					<p class="gquote-info">#test为浮动元素的父元素</p>
+				</div>
+			</li>
+			<li id="no10">
+				<h3>如何定义鼠标指针的光标形状为手型并兼容所有浏览器？</h3>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>方法：</strong></p>
+					<blockquote class="gquote-cont"><pre><code>#test{cursor:pointer;}</code></pre></blockquote>
+					<p class="gquote-info">若将<a href="../properties/user-interface/cursor.htm">cursor</a>设置为hand，将只有IE和Opera支持，且hand为非标准属性值</p>
+				</div>
+			</li>
+			<li id="no11">
+				<h3>如何让已知高度的容器在页面中水平垂直居中？</h3>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>方法：</strong></p>
+					<blockquote class="gquote-cont"><pre><code>#test{position:absolute;top:50%;left:50%;width:200px;height:200px;margin:-100px 0 0 -100px;}</code></pre></blockquote>
+					<p class="gquote-info">Know More：<a href="http://blog.doyoe.com/article.asp?id=74" target="_blank">已知高度的容器如何在页面中水平垂直居中</a></p>
+				</div>
+			</li>
+			<li id="no12">
+				<h3>如何让未知尺寸的图片在已知宽高的容器内水平垂直居中？</h3>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>方法：</strong></p>
+					<blockquote class="gquote-cont"><pre><code>#test{display:table-cell;*display:block;*position:relative;width:200px;height:200px;text-align:center;vertical-align:middle;}
+#test p{*position:absolute;*top:50%;*left:50%;margin:0;}
+#test p img{*position:relative;*top:-50%;*left:-50%;vertical-align:middle;}</code></pre></blockquote>
+					<p class="gquote-info">#test是img的祖父节点，p是img的父节点。Know More：<a href="http://blog.doyoe.com/article.asp?id=159" target="_blank">未知尺寸的图片如何水平垂直居中</a></p>
+				</div>
+			</li>
+			<li id="no13">
+				<h3>如何设置span的宽度和高度（即如何设置内联元素的宽高）？</h3>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>方法：</strong></p>
+					<blockquote class="gquote-cont"><pre><code>span{display:block;width:200px;height:100px;}</code></pre></blockquote>
+					<p class="gquote-info">要使内联元素可以设置宽高，只需将其定义为块级或者内联块级元素即可。所以方法非常多样，既可以设置<a href="../properties/layout/display.htm">display</a>属性，也可以设置<a href="../properties/layout/float.htm">float</a>属性，或者<a href="../properties/positioning/position.htm">position</a>属性等等。</p>
+				</div>
+			</li>
+			<li id="no14">
+				<h3>如何给一个元素定义多个不同的css规则？</h3>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>方法：</strong></p>
+					<blockquote class="gquote-cont"><pre><code>.a{color:#f00;}
+.b{background:#eee;}
+.c{background:#ccc;}
+
+&lt;div class="a b"&gt;测试1&lt;/div&gt;
+&lt;div class="a c"&gt;测试2&lt;/div&gt;</code></pre></blockquote>
+					<p class="gquote-info">多个规则之间使用空格分开，并且只有class能同时使用多个规则，id不可以</p>
+				</div>
+			</li>
+			<li id="no15">
+				<h3>如何让某个元素充满整个页面？</h3>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>方法：</strong></p>
+					<blockquote class="gquote-cont"><pre><code>html,body{height:100%;margin:0;}
+#test{height:100%;}</code></pre></blockquote>
+				</div>
+			</li>
+			<li id="no16">
+				<h3>如何让某个元素距离窗口上右下左4边各10像素？</h3>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>方法：</strong></p>
+					<blockquote class="gquote-cont"><pre><code>html,body{height:100%;margin:0;}
+html{_padding:10px;}
+#test{position:absolute;top:10px;right:10px;bottom:10px;left:10px;_position:static;_height:100%;}</code></pre></blockquote>
+				</div>
+			</li>
+			<li id="no17">
+				<h3>如何去掉超链接的虚线框？</h3>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>方法：</strong></p>
+					<blockquote class="gquote-cont"><pre><code>a{outline:none;}</code></pre></blockquote>
+					<p class="gquote-info">IE7及更早浏览器由于不支持<a href="../properties/user-interface/outline.htm">outline</a>属性，需要通过js的blur()方法来实现，如&lt;a onfocus="this.blur();"...</p>
+				</div>
+			</li>
+			<li id="no18">
+				<h3>如何容器透明，内容不透明？</h3>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>方法1：</strong></p>
+					<blockquote class="gquote-cont"><pre><code>.outer{width:200px;height:200px;background:#000;filter:alpha(opacity=20);opacity:.2;}
+.inner{width:200px;height:200px;margin-top:-200px;}
+
+&lt;div class="outer"&gt;&lt;!--我是透明的容器--&gt;&lt;/div&gt;
+&lt;div class="inner"&gt;我是不透明的内容&lt;/div&gt;</code></pre></blockquote>
+					<p class="gquote-info">原理是容器层与内容层并级，容器层设置透明度，内容层通过负<a href="../properties/margin/margin.htm">margin</a>或者<a href="../properties/positioning/position.htm">position</a>绝对定位等方式覆盖到容器层上</p>
+				</div>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>方法2：</strong></p>
+					<blockquote class="gquote-cont"><pre><code>.outer{width:200px;height:200px;background:rgba(0,0,0,.2);background:#000\9;filter:alpha(opacity=20)\9;}
+.outer .inner{position:relative\9;}
+
+&lt;div class="outer"&gt;
+	&lt;div class="inner"&gt;我是不透明的内容&lt;/div&gt;
+&lt;/div&gt;</code></pre></blockquote>
+					<p class="gquote-info">高级浏览器直接使用<a href="../values/color/rgba.htm">rgba</a>颜色值实现；IE浏览器在定义容器透明的同时，让子节点相对定位，也可达到效果</p>
+				</div>
+			</li>
+			<li id="no19">
+				<h3>如何让整个页面水平居中？</h3>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>方法：</strong></p>
+					<blockquote class="gquote-cont"><pre><code>body{text-align:center;}
+#test2{width:960px;margin:0 auto;text-align:left;}</code></pre></blockquote>
+					<p class="gquote-info">定义body的<a href="../properties/text/text-align.htm">text-align</a>值为center将使得IE5.5也能实现居中</p>
+				</div>
+			</li>
+			<li id="no20">
+				<h3>为什么容器的背景色没显示出来？为什么容器无法自适应内容高度？</h3>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>方法：</strong></p>
+					<div class="gquote-cont"><a href="#no9">清除浮动</a>，方法请参考本页第9条</div>
+					<p class="gquote-info">通常出现这样的情况都是由于没有清除浮动而引起的，所以Debug时应第一时间想到是否有未清除浮动的地方</p>
+				</div>
+			</li>
+			<li id="no21">
+				<h3>如何做1像素细边框的table？</h3>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>方法1：</strong></p>
+					<blockquote class="gquote-cont"><pre><code>#test{border-collapse:collapse;border:1px solid #ddd;}
+#test th,#test td{border:1px solid #ddd;}
+
+&lt;table id="test"&gt;
+	&lt;tr&gt;&lt;th&gt;姓名&lt;/th&gt;&lt;td&gt;Joy Du&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;th&gt;年龄&lt;/th&gt;&lt;td&gt;26&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</code></pre></blockquote>
+				</div>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>方法2：</strong></p>
+					<blockquote class="gquote-cont"><pre><code>#test{border-spacing:1px;background:#ddd;}
+#test tr{background:#fff;}
+
+&lt;table id="test" cellspacing="1"&gt;
+	&lt;tr&gt;&lt;th&gt;姓名&lt;/th&gt;&lt;td&gt;Joy Du&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;th&gt;年龄&lt;/th&gt;&lt;td&gt;26&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</code></pre></blockquote>
+					<p class="gquote-info">IE7及更早浏览器不支持<a href="../properties/table/border-spacing.htm">border-spacing</a>属性，但是可以通过table的标签属性cellspacing来替代。</p>
+				</div>
+			</li>
+			<li id="no22">
+				<h3>如何使页面文本行距始终保持为n倍字体大小的基调？</h3>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>方法：</strong></p>
+					<blockquote class="gquote-cont"><pre><code>body{line-height:n;}</code></pre></blockquote>
+					<p class="gquote-info">注意，不要给n加单位。Know More：<a href="http://blog.doyoe.com/article.asp?id=195" target="_blank">如何使页面文本行距始终保持为n倍字体大小的基调</a></p>
+				</div>
+			</li>
+			<li id="no23">
+				<h3>标准模式Standard mode和怪异模式Quirks mode下的盒模型区别？</h3>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>方法：</strong></p>
+					<div class="gquote-cont"><pre>标准模式下：Element width = width + padding + border
+怪异模式下：Element width = width</pre></div>
+					<p class="gquote-info">相关资料请参阅CSS3属性<a href="../properties/user-interface/box-sizing.htm">box-sizing</a></p>
+				</div>
+			</li>
+			<li id="no24">
+				<h3>以图换字的几种方法及优劣分析</h3>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>思路1：使用text-indent的负值，将内容移出容器</strong></p>
+					<blockquote class="gquote-cont"><pre><code>.test1{width:200px;height:50px;text-indent:-9999px;background:#eee url(*.png) no-repeat;}
+
+&lt;div class="test"&gt;以图换字之内容负缩进法&lt;/div&gt;</code></pre></blockquote>
+					<p class="gquote-info">该方法优点在于结构简洁，不理想的地方：1.由于使用场景不同，负缩进的值可能会不一样，不易抽象成公用样式；2.当该元素为链接时，在非IE下虚线框将变得不完整；3.如果该元素被定义为内联级或者内联块级，不同浏览器下会有较多的差异</p>
+				</div>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>思路2：使用display:none或visibility:hidden将内容隐藏；</strong></p>
+					<blockquote class="gquote-cont"><pre><code>.test{width:200px;height:50px;background:#eee url(*.png) no-repeat;}
+.test span{visibility:hidden;/* 或者display:none */}
+
+&lt;div class="test"&gt;&lt;span&gt;以图换字之内容隐藏法&lt;/span&gt;&lt;/div&gt;</code></pre></blockquote>
+					<p class="gquote-info">该方法优点在于兼容性强并且容易抽象成公用样式，缺点在于结构较复杂</p>
+				</div>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>思路3：使用padding或者line-height将内容挤出容器之外；</strong></p>
+					<blockquote class="gquote-cont"><pre><code>.test{overflow:hidden;width:200px;height:0;padding-top:50px;background:#eee url(*.png) no-repeat;}
+.test{overflow:hidden;width:200px;height:50px;line-height:50;background:#eee url(*.jpg) no-repeat;}
+
+&lt;div class="test"&gt;以图换字之内容排挤法&lt;/div&gt;</code></pre></blockquote>
+					<p class="gquote-info">该方法优点在于结构简洁，缺点在于：1.由于使用场景不同，padding或line-height的值可能会不一样，不易抽象成公用样式；2.要兼容IE5.5及更早浏览器还得hack</p>
+				</div>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>思路4：使用超小字体和文本全透明法；</strong></p>
+					<blockquote class="gquote-cont"><pre><code>.test{overflow:hidden;width:200px;height:50px;font-size:0;line-height:0;color:rgba(0,0,0,0);background:#eee url(*.png) no-repeat;}
+
+&lt;div class="test"&gt;以图换字之超小字体+文本全透明法&lt;/div&gt;</code></pre></blockquote>
+					<p class="gquote-info">该方法结构简单易用，推荐使用</p>
+				</div>
+			</li>
+			<li id="no25">
+				<h3>为什么2个相邻div的margin只有1个生效？</h3>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>方法：</strong></p>
+					<blockquote class="gquote-cont"><pre><code>.box1{margin:10px 0;}
+.box2{margin:20px 0;}
+
+&lt;div class="box1"&gt;box1&lt;/div&gt;
+&lt;div class="box2"&gt;box2&lt;/div&gt;</code></pre></blockquote>
+					<div class="gquote-info">
+						<p>本例中box1的底部margin为10px，box2的顶部margin为20px，但表现在页面上2者之间的间隔为20px，而不是预想中的10+20px=30px，结果是选择2者之间最大的那个margin，我们把这种机制称之为“外边距合并”；外边距合并不仅仅出现在相邻的元素间，父子间同样会出现。</p>
+						<p>简单列举几点注意事项:
+							<br />　外边距合并只出现在块级元素上；
+							<br />　浮动元素不会和相邻的元素产生外边距合并；
+							<br />　绝对定位元素不会和相邻的元素产生外边距合并；
+							<br />　内联块级元素间不会产生外边距合并；
+							<br />　根元素间不会不会产生外边距合并（如html与body间）；
+							<br />　设置了属性overflow且值不为visible的块级元素不会与它的子元素发生外边距合并；
+						</p>
+					</div>
+				</div>
+			</li>
+			<li id="no26">
+				<h3>如何在文本框中禁用中文输入法？</h3>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>方法：</strong></p>
+					<blockquote class="gquote-cont"><pre><code>input,textarea{ime-mode:disabled;}</code></pre></blockquote>
+					<p class="gquote-info">ime-mode为非标准属性，写该文档时只有IE和Firefox支持</p>
+				</div>
+			</li>
+			<li id="no27">
+				<h3>如何解决列表中list-style-image不能精准定位的问题？</h3>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>方法：</strong></p>
+					<div class="gquote-cont">不使用<a href="../properties/list/list-style-image.htm">list-style-image</a>来定义列表项目标记符号，而用<a href="../properties/background/background-image.htm">background-image</a>来代替，并通过<a href="../properties/background/background-position.htm">background-position</a>来进行定位</div>
+				</div>
+			</li>
+			<li id="no28">
+				<h3>如何解决伪对象:before和:after在input标签上的怪异表现的问题？</h3>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>现象：</strong></p>
+					<div class="gquote-cont">在编写本条目时，除了Opera，在所有浏览器下input标签使用伪对象:before和:after都没有效果，即使Opera的表现也同样令人诧异。大家可以试玩一下。浏览器版本：IE6-IE10, Firefox6.0, Chrome13.0, Safari5.1, Opera11.51</div>
+				</div>
+			</li>
+			<li id="no29">
+				<h3>如何解决伪对象:before和:after无法在Chrome,Safari,Opera上定义过渡和动画的问题？</h3>
+				<div class="gquote">
+					<p class="gquote-tit"><strong>现象：</strong></p>
+					<div class="gquote-cont">在编写本条目时，除了Firefox，在所有浏览器下伪对象:before和:after无法定义过渡和动画效果。浏览器版本：IE6-IE10, Firefox6.0, Chrome13.0, Safari5.1, Opera11.51。如果这个过渡或动画效果是必须，可以考虑使用真实对象。</div>
+				</div>
+			</li>
+		</ol>
+		<p class="related">待续及修订。。。</p>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../js/jquery.js"></script>
+<script src="../js/inner.js"></script>
+</body>
+</html>

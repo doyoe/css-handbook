@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>!important</title>
+<meta name="Description" content="CSS3参考手册之: !important" />
+<meta name="Keywords" content="!important, css优先级" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../skin/article.css" />
+</head>
+<body>
+<nav id="guide" class="g-mod">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="../index.htm" id="category" rel="rules" name="!important">语法与规则列表</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它语法与规则参考</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入快速分类导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">!important</h1>
+		<ul class="info">
+			<li><strong>版本：CSS1</strong></li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="syntax" class="g-mod g-attr">
+		<h2 class="tit">语法：</h2>
+		<div class="cont">
+			<p><strong>Selector</strong>{sRule!important;}</p>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
+		<h2 class="tit">说明：</h2>
+		<div class="cont">
+			<strong>提升指定样式规则的应用优先权。</strong>
+			<ul>
+				<li>
+					<em class="glight">IE6及以下浏览器有个比较显式的支持问题存在，!important并不覆盖掉在同一条样式的后面的规则。请看下述代码：</em>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>示例代码：</strong></p>
+						<blockquote class="gquote-cont"><pre><code>div{color:#f00!important;color:#000;}</code></pre></blockquote>
+						<p class="gquote-info">在上述代码中，IE6及以下浏览器div的文本颜色为#000，!important并没有覆盖后面的规则；其它浏览器下div的文本颜色为#f00</p>
+					</div>
+				</li>
+				<li>
+					<em class="glight">IE6及以下浏览器要使!important生效，可用以下代码：</em>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>示例代码：</strong></p>
+						<blockquote class="gquote-cont"><pre><code>div{color:#f00!important;}
+div{color:#000;}</code></pre></blockquote>
+						<p class="gquote-info">在上述代码中，IE6及以下浏览器中div的文本颜色表现与其它浏览器一致，都为#f00</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<section id="compatible" class="g-mod g-attr">
+		<h2 class="tit">兼容性：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">墨绿</span> = 部分支持</li>
+				<li><span class="experimentsupport">橙色</span> = 实验性质</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
+						<th><span class="browser-ie">IE</span></th>
+						<th><span class="browser-firefox">Firefox</span></th>
+						<th><span class="browser-safari">Safari</span></th>
+						<th><span class="browser-chrome">Chrome</span></th>
+						<th><span class="browser-opera">Opera</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>版本</th>
+						<td class="partsupport">6 <sup><a href="#support1">#1</a></sup></td>
+						<td rowspan="2" class="support">4</td>
+						<td rowspan="2" class="support">5.1。7</td>
+						<td rowspan="2" class="support">13</td>
+						<td rowspan="2" class="support">11.5</td>
+					</tr>
+					<tr>
+						<th>版本</th>
+						<td class="support">7</td>
+					</tr>
+				</tbody>
+			</table>
+			<ol class="support-info">
+				<li id="support1">IE6及更早浏览器下，!important在同一条样式内不生效。</li>
+			</ol>
+		</div>
+	</section>
+	<section id="example" class="g-mod g-attr">
+		<h2 class="tit">示例：</h2>
+		<div class="cont">
+			<textarea cols="90" rows="10">
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>!important_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<style>
+.test{color:#f00!important;color:#000;}
+.test2{color:#f00!important;}
+.test2{color:#000;}
+</style>
+</head>
+<body>
+<div class="test">同一条样式内，!important将在IE6及以下浏览器中失效</div>
+<div class="test2">在分散的样式条目内，IE6及以下浏览器对!important的支持与其它浏览器一致</div>
+</body>
+</html>
+			</textarea>
+			<p><input type="button" value="运行" class="g-btn g-btn-sure" /></p>
+		</div>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../js/jquery.js"></script>
+<script src="../js/inner.js"></script>
+</body>
+</html>

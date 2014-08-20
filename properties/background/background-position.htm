@@ -1,0 +1,188 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>background-position</title>
+<meta name="description" content="CSS3参考手册之:background-position" />
+<meta name="keywords" content="background-position, css3, css3参考手册" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../../skin/article.css" />
+</head>
+<body>
+<nav id="guide">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="../index.htm">属性列表</a>
+		<span>&#187;</span>
+		<a href="index.htm" id="category" rel="properties/background" name="background-position">背景属性</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它背景属性参考</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入快速分类导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">background-position</h1>
+		<ul class="info">
+			<li><strong>版本：CSS1/3</strong></li>
+			<li>媒体：视觉</li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="syntax" class="g-mod g-attr">
+		<h2 class="tit">语法：</h2>
+		<div class="cont">
+			<p><strong>background-position</strong>：<a href="#dfn-syntax">&lt;position&gt;</a> <ins class="css3-value g-color-css3-new">[ , <a href="#dfn-syntax">&lt;position&gt;</a> ]*</ins></p>
+			<p id="dfn-syntax"><strong>&lt;position&gt;</strong> = [ left | center | right | top | bottom | <a href="../../values/other/percentage.htm">&lt;percentage&gt;</a> | <a href="../../values/other/length.htm">&lt;length&gt;</a> ]
+|
+  [ left | center | right | <a href="../../values/other/percentage.htm">&lt;percentage&gt;</a> | <a href="../../values/other/length.htm">&lt;length&gt;</a> ]
+  [ top | center | bottom | <a href="../../values/other/percentage.htm">&lt;percentage&gt;</a> | <a href="../../values/other/length.htm">&lt;length&gt;</a> ]
+|
+  [ center | [ left | right ] [ <a href="../../values/other/percentage.htm">&lt;percentage&gt;</a> | <a href="../../values/other/length.htm">&lt;length&gt;</a> ]? ] &amp;&amp;
+  [ center | [ top | bottom ] [ <a href="../../values/other/percentage.htm">&lt;percentage&gt;</a> | <a href="../../values/other/length.htm">&lt;length&gt;</a> ]? ]</p>
+			<p><strong>默认值</strong>：<mark class="defaultvalue">0% 0%</mark>，效果等同于left top</p>
+			<p><strong>适用于</strong>：所有元素</p>
+		    <p><strong>继承性</strong>：无</p>
+		    <p><strong>动画性</strong>：是</p>
+		    <p><strong>计算值</strong>：指定值</p>
+		</div>
+	</section>
+	<section id="value" class="g-mod g-attr">
+		<h2 class="tit">取值：</h2>
+		<div class="cont">
+			<dl>
+				<dt><a href="../../values/other/percentage.htm">&lt;percentage&gt;</a>：</dt>
+				<dd>用百分比指定背景图像填充的位置。可以为负值。</dd>
+				<dt><a href="../../values/other/length.htm">&lt;length&gt;</a>：</dt>
+				<dd>用长度值指定背景图像填充的位置。可以为负值。</dd>
+				<dt>center：</dt>
+				<dd>背景图像横向和纵向居中。</dd>
+				<dt>left：</dt>
+				<dd>背景图像在横向上填充从左边开始。</dd>
+				<dt>right：</dt>
+				<dd>背景图像在横向上填充从右边开始。</dd>
+				<dt>top：</dt>
+				<dd>背景图像在纵向上填充从顶部开始。</dd>
+				<dt>bottom：</dt>
+				<dd>背景图像在纵向上填充从底部开始。</dd>
+			</dl>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
+		<h2 class="tit">说明：</h2>
+		<div class="cont">
+			<strong>设置或检索对象的背景图像位置。必须先指定<a href="background-image.htm">background-image</a>属性。</strong>
+			<ul>
+				<li>该属性提供2个参数值<span class="g-color-light">（CSS3中已允许提供4个值）</span>。</li>
+				<li class="g-color-light">如果提供四个，每个<a href="../../values/other/percentage.htm">&lt;percentage&gt;</a>或<a href="../../values/other/length.htm">&lt;length&gt;</a>偏移前都必须跟着一个关键字（即left | center | right | top | bottom），偏移量相对关键字位置进行偏移。</li>
+				<li>
+					<strong>示例：假设要定义背景图像在容器中右下方，并且距离右边和底部各有20px</strong>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>缩写方式：</strong></p>
+						<blockquote class="gquote-cont"><pre><code>background:url(test1.jpg) no-repeat right 20px bottom 20px;</code></pre></blockquote>
+					</div>
+					<strong>你也可以设置3个参数值：</strong>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>拆分方式：</strong></p>
+						<blockquote class="gquote-cont"><pre><code>background:url(test1.jpg) no-repeat left bottom 10px;</code></pre></blockquote>
+						<p class="gquote-info">要注意的是：设置3个或4个值，偏移量前必须有关键字。也就是说，形如："10px bottom 20px" ，这样的参数设置是错误的，因为10px前面没有关键字。</p>
+					</div>
+				</li>
+				<li>如果提供两个，第一个用于横坐标，第二个用于纵坐标。</li>
+				<li>如果只提供一个，该值将用于横坐标；纵坐标将默认为50%（即center）。</li>
+				<li>对应的脚本特性为<strong>backgroundPosition</strong>。</li>
+			</ul>
+		</div>
+	</section>
+	<section id="compatible" class="g-mod g-attr">
+		<h2 class="tit">兼容性：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">墨绿</span> = 部分支持</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
+						<th><span class="browser-ie">IE</span></th>
+						<th><span class="browser-firefox">Firefox</span></th>
+						<th><span class="browser-safari">Safari</span></th>
+						<th><span class="browser-chrome">Chrome</span></th>
+						<th><span class="browser-opera">Opera</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>版本</th>
+						<td class="partsupport">6-8 <sup><a href="#support1">#1</a></sup> <sup><a href="#support2">#2</a></sup></td>
+						<td rowspan="2" class="support">13.0</td>
+						<td rowspan="2" class="partsupport">5.1.7 <sup><a href="#support2">#2</a></sup></td>
+						<td class="partsupport">4.0-24.0 <sup><a href="#support2">#2</a></sup></td>
+						<td rowspan="2" class="support">10.5</td>
+					</tr>
+					<tr>
+						<th>版本</th>
+						<td class="support">9.0</td>
+						<td class="support">25.0</td>
+					</tr>
+				</tbody>
+			</table>
+			<ol class="support-info">
+				<li id="support1">不支持：设置多组背景图像位置。</li>
+				<li id="support2">不支持：每组设置3个或4个参数值。</li>
+			</ol>
+		</div>
+	</section>
+	<section id="example" class="g-mod g-attr">
+		<h2 class="tit">示例：</h2>
+		<div class="cont">
+			<textarea cols="90" rows="10">
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>background-repeat_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<style>
+.test{border:1px solid #000;width:400px;height:500px;background-image:url(skin/p_103x196_1.jpg);background-repeat:no-repeat;background-position:center;}
+</style>
+</head>
+<body>
+<div class="test">背景图水平垂直居中</div>
+</body>
+</html>
+			</textarea>
+			<p><input type="button" value="运行" class="g-btn g-btn-sure" /></p>
+		</div>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/inner.js"></script>
+</body>
+</html>

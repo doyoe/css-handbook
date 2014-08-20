@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>text-indent</title>
+<meta name="description" content="CSS3参考手册之:text-indent" />
+<meta name="keywords" content="text-indent, css3, css3参考手册" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../../skin/article.css" />
+</head>
+<body>
+<nav id="guide" class="g-mod">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="../index.htm">属性列表</a>
+		<span>&#187;</span>
+		<a href="index.htm" id="category" rel="properties/text" name="text-indent">文本属性</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它文本属性参考</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入快速分类导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">text-indent</h1>
+		<ul class="info">
+			<li><strong>版本：CSS1/3</strong></li>
+			<li>媒体：视觉</li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="syntax" class="g-mod g-attr">
+		<h2 class="tit">语法：</h2>
+		<div class="cont">
+			<p><strong>text-indent</strong>：[ <a href="../../values/other/length.htm">&lt;length&gt;</a> | <a href="../../values/other/percentage.htm">&lt;percentage&gt;</a> ] && [ <ins class="css3-value g-color-css3-new">hanging</ins> || <ins class="css3-value g-color-css3-new">each-line</ins> ]?</p>
+			<p><strong>默认值</strong>：<mark class="defaultvalue">0</mark></p>
+			<p><strong>适用于</strong>：所有元素</p>
+		    <p><strong>继承性</strong>：有</p>
+		    <p><strong>动画性</strong>：当使用值为非关键字时</p>
+		    <p><strong>计算值</strong>：指定值</p>
+		</div>
+	</section>
+	<section id="value" class="g-mod g-attr">
+		<h2 class="tit">取值：</h2>
+		<div class="cont">
+			<dl>
+				<dt><a href="../../values/other/length.htm">&lt;length&gt;</a>：</dt>
+				<dd>用长度值指定文本的缩进。可以为负值。</dd>
+				<dt><a href="../../values/other/percentage.htm">&lt;percentage&gt;</a>：</dt>
+				<dd>用百分比指定文本的缩进。可以为负值。</dd>
+				<dt class="g-color-css3-new">each-line：</dt>
+				<dd>定义缩进作用在块容器的第一行或者内部的每个强制换行的首行，软换行不受影响。（CSS3）</dd>
+				<dt class="g-color-css3-new">hanging：</dt>
+				<dd>反向所有被缩进作用的行。（CSS3）</dd>
+			</dl>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
+		<h2 class="tit">说明：</h2>
+		<div class="cont">
+			<strong>检索或设置对象中的文本的缩进。</strong>
+			<ul>
+				<li>内联对象要使用该属性必须先使该对象表现为块级或内联块级。</li>
+				<li>
+					<strong><ins class="css3-value g-color-css3-new">hanging</ins>和<ins class="css3-value g-color-css3-new">each-line</ins>关键字紧随在缩进数值之后</strong>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>示例代码：</strong></p>
+						<blockquote class="gquote-cont"><pre><code>div{text-indent:2em each-line;}</code></pre></blockquote>
+						<p class="gquote-info">以上代码将使得div内部的第一行及每个强制换行的首行都拥有2em的缩进</p>
+					</div>
+				</li>
+				<li>对应的脚本特性为<strong>textIndent</strong>。</li>
+			</ul>
+		</div>
+	</section>
+	<section id="compatible" class="g-mod g-attr">
+		<h2 class="tit">兼容性：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">墨绿</span> = 部分支持</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
+						<th><span class="browser-ie">IE</span></th>
+						<th><span class="browser-firefox">Firefox</span></th>
+						<th><span class="browser-safari">Safari</span></th>
+						<th><span class="browser-chrome">Chrome</span></th>
+						<th><span class="browser-opera">Opera</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>版本</th>
+						<td class="partsupport">6.0-11.0 <sup><a href="#support1">#1</a></sup></td>
+						<td class="partsupport">1.0-28.0 <sup><a href="#support1">#1</a></sup></td>
+						<td class="partsupport">1.0-7.0 <sup><a href="#support1">#1</a></sup></td>
+						<td class="partsupport">1.0-31.0 <sup><a href="#support1">#1</a></sup></td>
+						<td class="partsupport">1.0-18.0 <sup><a href="#support1">#1</a></sup></td>
+					</tr>
+				</tbody>
+			</table>
+			<ol class="support-info">
+				<li id="support1">不支持：<ins class="css3-value g-color-css3-new">hanging</ins> | <ins class="css3-value g-color-css3-new">each-line</ins> 关键字。</li>
+			</ol>
+		</div>
+	</section>
+	<section id="example" class="g-mod g-attr">
+		<h2 class="tit">示例：</h2>
+		<div class="cont">
+			<textarea cols="90" rows="10">
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>text-indent_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<style>
+.test p{border:1px solid #000;}
+.inline span{text-indent:30px;}
+.inline-block span{display:inline-block;text-indent:30px;}
+.block span{display:block;text-indent:30px;}
+.other{text-indent:30px;}
+.other ins{display:inline-block;background:#eee;}
+</style>
+</head>
+<body>
+<ul class="test">
+	<li class="inline">
+		<strong>内联元素span</strong>
+		<p><span>看看我的左边有没有30px的缩进　span{text-indent:30px;}</span></p>
+	</li>
+	<li class="inline-block">
+		<strong>被设置为内联块级元素的span</strong>
+		<p><span>看看我的左边有没有30px的缩进　span{display:inline-block;text-indent:30px;}</span></p>
+	</li>
+	<li class="block">
+		<strong>被设置为块级元素的span</strong>
+		<p><span>看看我的左边有没有30px的缩进　span{display:block;text-indent:30px;}</span></p>
+	</li>
+	<li class="other">
+		<strong>包含有内联块的块级元素</strong>
+		<p><span>看看我的左边有没有30px的缩进</span><ins>我是一个被插入的内联块元素</ins>.other{text-indent:30px;}</p>
+	</li>
+</ul>
+</body>
+</html>
+			</textarea>
+			<p><input type="button" value="运行" class="g-btn g-btn-sure" /></p>
+		</div>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/inner.js"></script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>E:target</title>
+<meta name="description" content="CSS3参考手册之: E:target" />
+<meta name="keywords" content="E:target, css3选择符, css3, css3参考手册" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../../skin/article.css" />
+</head>
+<body>
+<nav id="guide" class="g-mod">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="../index.htm">选择符列表</a>
+		<span>&#187;</span>
+		<a href="index.htm"id="category" rel="selectors/pseudo-classes" name="target">伪类选择符</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它伪类选择符</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入分类快速导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">E:target</h1>
+		<ul class="info">
+			<li><strong>版本：CSS3</strong></li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="syntax" class="g-mod g-attr">
+		<h2 class="tit">语法：</h2>
+		<div class="cont">
+			<p><strong>E:target</strong>{ sRules }</p>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
+		<h2 class="tit">说明：</h2>
+		<div class="cont">
+			<strong>匹配相关URL指向的E元素。</strong>
+            <p><strong class="note">解释：</strong>URL 后面跟有锚名称 #，指向文档内某个具体的元素。这个被链接的元素就是目标元素(target element)。</p>
+            <p><code>:target</code> 选择器即用于选取当前活动的目标元素。详细参看示例，IE8不支持此属性。</p>
+		</div>
+	</section>
+	<section class="g-mod g-attr" id="compatible">
+		<h2 class="tit">兼容性：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">墨绿</span> = 部分支持</li>
+				<li><span class="experimentsupport">橙色</span> = 实验性质</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
+						<th><span class="browser-ie">IE</span></th>
+						<th><span class="browser-firefox">Firefox</span></th>
+						<th><span class="browser-safari">Safari</span></th>
+						<th><span class="browser-chrome">Chrome</span></th>
+						<th><span class="browser-opera">Opera</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>较早版本</th>
+						<td class="unsupport">6-8</td>
+						<td rowspan="2" class="support">4</td>
+						<td rowspan="2" class="support">5.1.7</td>
+						<td rowspan="2" class="support">13</td>
+						<td rowspan="2" class="support">11.5</td>
+					</tr>
+					<tr>
+						<th>较新版本</th>
+						<td class="support">9</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+	<section id="example" class="g-mod g-attr">
+		<h2 class="tit">示例：</h2>
+		<div class="cont">
+			<textarea cols="90" rows="10">
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>目标伪类选择符 E:target_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<style>
+.test .hd{padding:10px 0;}
+.test .nav{position:fixed;right:10px;left: 540px;}
+.test .nav a{display:block;margin: 10px 0;}
+.test .bd .panel{width:500px;margin-top:5px;border:1px solid #ddd;}
+.test .bd h2{border-bottom:1px solid #ddd;}
+.test .bd .panel:target{border-color:#f60;}
+.test .bd .panel:target h2{border-color:#f60;}
+h2,p{margin:0;padding:10px;font-size:16px;}
+</style>
+</head>
+<body>
+<div class="test">
+	<div class="hd nav">
+		<a href="#panel1">前往区块1</a>
+		<a href="#panel2">前往区块2</a>
+		<a href="#panel3">前往区块3</a>
+		<a href="#panel4">前往区块4</a>
+		<a href="#panel5">前往区块5</a>
+	</div>
+	<div class="bd">
+		<div id="panel1" class="panel">
+			<h2>区块1</h2>
+			<div><p>区块1内容</p><p>区块1内容</p><p>区块1内容</p></div>
+		</div>
+		<div id="panel2" class="panel">
+			<h2>区块2</h2>
+			<div><p>区块2内容</p><p>区块2内容</p><p>区块2内容</p></div>
+		</div>
+		<div id="panel3" class="panel">
+			<h2>区块3</h2>
+			<div><p>区块3内容</p><p>区块3内容</p><p>区块3内容</p></div>
+		</div>
+		<div id="panel4" class="panel">
+			<h2>区块4</h2>
+			<div><p>区块4内容</p><p>区块4内容</p><p>区块4内容</p></div>
+		</div>
+		<div id="panel5" class="panel">
+			<h2>区块5</h2>
+			<div><p>区块5内容</p><p>区块5内容</p><p>区块5内容</p></div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
+			</textarea>
+			<p><input type="button" value="运行" class="g-btn g-btn-sure" /></p>
+		</div>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/inner.js"></script>
+</body>
+</html>

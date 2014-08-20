@@ -1,0 +1,218 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>flex-direction</title>
+<meta name="description" content="CSS3参考手册伸缩盒之: flex-direction" />
+<meta name="keywords" content="flex-direction, 伸缩盒, css3, css3参考手册" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../../skin/article.css" />
+</head>
+<body>
+<nav id="guide" class="g-mod">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="../index.htm">属性列表</a>
+		<span>&#187;</span>
+		<a href="index.htm" id="category" rel="properties/flex" name="flex-direction">新伸缩盒属性</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它伸缩盒属性</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入快速分类导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">flex-direction</h1>
+		<ul class="info">
+			<li><strong>版本：CSS3</strong></li>
+			<li>继承性：无</li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="syntax" class="g-mod g-attr">
+		<h2 class="tit">语法：</h2>
+		<div class="cont">
+			<p><strong>flex-direction</strong>：row | row-reverse | column | column-reverse</p>
+			<p><strong>默认值</strong>：<mark class="defaultvalue">row</mark></p>
+			<p><strong>适用于</strong>：伸缩盒容器</p>
+		    <p><strong>继承性</strong>：无</p>
+		</div>
+	</section>
+	<section id="value" class="g-mod g-attr">
+		<h2 class="tit">取值：</h2>
+		<div class="cont">
+			<dl>
+				<dt>row：</dt>
+				<dd>横向从左到右排列（左对齐），默认的排列方式。</dd>
+				<dt>row-reverse：</dt>
+				<dd>反转横向排列（右对齐，从后往前排，最后一项排在最前面。</dd>
+				<dt>column：</dt>
+				<dd>纵向排列。</dd>
+				<dt>row-reverse：</dt>
+				<dd>反转纵向排列，从后往前排，最后一项排在最上面。</dd>
+			</dl>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
+		<h2 class="tit">说明：</h2>
+		<div class="cont">
+			<strong>设置或检索伸缩盒对象的子元素在父容器中的位置。</strong>
+			<ul>
+				<li>
+					<strong>示例：将一个容器内的子元素横向排列</strong>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>HTML Code：</strong></p>
+						<blockquote class="gquote-cont"><pre><code>&lt;ul id="flex"&gt;
+	&lt;li&gt;a&lt;/li&gt;
+	&lt;li&gt;b&lt;/li&gt;
+	&lt;li&gt;c&lt;/li&gt;
+&lt;/ul&gt;</code></pre></blockquote>
+					</div>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>CSS Code：</strong></p>
+						<blockquote class="gquote-cont"><pre><code>#box{display:flex;flex-direction:row;list-style:none;}</code></pre></blockquote>
+						<p class="gquote-info">上面代码请自行加上-moz-,-webkit-之类的。flex生效需定义其父元素<a href="../layout/display.htm">display</a>为flex或inline-flex(box或inline-box，这是旧的方式)</p>
+					</div>
+				</li>
+				<li>对应的脚本特性为<strong>flexDirection</strong>。</li>
+			</ul>
+		</div>
+	</section>
+	<section id="compatible" class="g-mod g-attr">
+		<h2 class="tit">兼容性：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">墨绿</span> = 部分支持</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
+						<th><span class="browser-ie">IE</span></th>
+						<th><span class="browser-firefox">Firefox</span></th>
+						<th><span class="browser-safari">Safari</span></th>
+						<th><span class="browser-chrome">Chrome</span></th>
+						<th><span class="browser-opera">Opera</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>较早版本</th>
+						<td class="unsupport">6.0-10.0</td>
+						<td class="unsupport">4.0-19.0</td>
+						<td class="unsupport">5.1.7-6.0</td>
+						<td class="support">21.0-28.0<sup class="fix">-webkit-</sup></td>
+						<td class="unsupport">9.5-12.0</td>
+					</tr>
+					<tr>
+						<th>较新版本</th>
+						<td class="support">11.0</td>
+						<td class="support">20.0</td>
+						<td class="support">7.0<sup class="fix">-webkit-</sup></td>
+						<td class="support">29.0</td>
+						<td class="support">12.1</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+	<section id="example" class="g-mod g-attr">
+		<h2 class="tit">示例：</h2>
+		<div class="cont">
+			<textarea cols="90" rows="10">
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>flex-direction_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<style>
+h1{font:bold 20px/1.5 georgia,simsun,sans-serif;}
+.box{
+	display:-webkit-flex;
+	display:flex;
+	margin:0;padding:10px;list-style:none;background-color:#eee;}
+.box li{width:100px;height:100px;border:1px solid #aaa;text-align:center;}
+#box{
+	-webkit-flex-direction:row;
+	flex-direction:row;
+}
+#box2{
+	-webkit-flex-direction:row-reverse;
+	flex-direction:row-reverse;
+}
+#box3{
+	height:500px;
+	-webkit-flex-direction:column;
+	flex-direction:column;
+}
+#box4{
+	height:500px;
+	-webkit-flex-direction:column-reverse;
+	flex-direction:column-reverse;
+}
+</style>
+</head>
+<body>
+<h1>flex-direction示例：</h1>
+<h2>flex-direction:row</h2>
+<ul id="box" class="box">
+	<li>a</li>
+	<li>b</li>
+	<li>c</li>
+</ul>
+<h2>flex-direction:row-reverse</h2>
+<ul id="box2" class="box">
+	<li>a</li>
+	<li>b</li>
+	<li>c</li>
+</ul>
+<h2>flex-direction:column</h2>
+<ul id="box3" class="box">
+	<li>a</li>
+	<li>b</li>
+	<li>c</li>
+</ul>
+<h2>flex-direction:column-reverse</h2>
+<ul id="box4" class="box">
+	<li>a</li>
+	<li>b</li>
+	<li>c</li>
+</ul>
+</body>
+</html>
+			</textarea>
+			<p><input type="button" class="g-btn g-btn-sure" value="运行"></p>
+		</div>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/inner.js"></script>
+</body>
+</html>

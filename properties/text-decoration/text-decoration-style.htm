@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>text-decoration-style</title>
+<meta name="description" content="CSS3参考手册之:text-decoration-style" />
+<meta name="keywords" content="text-decoration-style, css3, css3参考手册" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../../skin/article.css" />
+</head>
+<body>
+<nav id="guide" class="g-mod">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="../index.htm">属性列表</a>
+		<span>&#187;</span>
+		<a href="index.htm" id="category" rel="properties/text-decoration" name="text-decoration-style">文本装饰属性</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它文本装饰属性</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入快速分类导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">text-decoration-style</h1>
+		<ul class="info">
+			<li><strong>版本：CSS3</strong></li>
+			<li>媒体：视觉</li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="syntax" class="g-mod g-attr">
+		<h2 class="tit">语法：</h2>
+		<div class="cont">
+			<p><strong>text-decoration-style</strong>：solid | double | dotted | dashed | wavy</p>
+			<p><strong>默认值</strong>：<mark class="defaultvalue">solid</mark></p>
+			<p><strong>适用于</strong>：所有元素</p>
+		    <p><strong>继承性</strong>：无</p>
+		    <p><strong>动画性</strong>：否</p>
+		    <p><strong>计算值</strong>：指定的值</p>
+		</div>
+	</section>
+	<section id="value" class="g-mod g-attr">
+		<h2 class="tit">取值：</h2>
+		<div class="cont">
+			<dl>
+				<dt>solid：</dt>
+				<dd>实线</dd>
+				<dt>double：</dt>
+				<dd>双线</dd>
+				<dt>dotted：</dt>
+				<dd>点状线条</dd>
+				<dt>dashed：</dt>
+				<dd>虚线</dd>
+				<dt>wavy：</dt>
+				<dd>波浪线</dd>
+			</dl>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
+		<h2 class="tit">说明：</h2>
+		<div class="cont">
+			<strong>检索或设置对象中的文本装饰线条的形状。</strong>
+			<ul>
+				<li>对应的脚本特性为<strong>textDecorationStyle</strong>。</li>
+			</ul>
+		</div>
+	</section>
+	<section id="compatible" class="g-mod g-attr">
+		<h2 class="tit">兼容性：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">墨绿</span> = 部分支持</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
+						<th><span class="browser-ie">IE</span></th>
+						<th><span class="browser-firefox">Firefox</span></th>
+						<th><span class="browser-safari">Safari</span></th>
+						<th><span class="browser-chrome">Chrome</span></th>
+						<th><span class="browser-opera">Opera</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>版本</th>
+						<td class="unsupport">6.0-11.0</td>
+						<td class="support">6.0-29.0 <sup class="fix">-moz-</sup></td>
+						<td class="unsupport">5.1.7</td>
+						<td class="unsupport">1.0-31.0</td>
+						<td class="unsupport">3.5-21.0</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+	<section id="example" class="g-mod g-attr">
+		<h2 class="tit">示例：</h2>
+		<div class="cont">
+			<textarea cols="90" rows="10">
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>text-decoration-style_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<style>
+.test li{margin-top:10px;}
+.test li:nth-child(1){
+	-moz-text-decoration-style:solid;
+	-moz-text-decoration-color:#f00;
+	-moz-text-decoration-line:underline;
+}
+.test li:nth-child(2){
+	-moz-text-decoration-style:dotted;
+	-moz-text-decoration-color:#f00;
+	-moz-text-decoration-line:underline;
+}
+.test li:nth-child(3){
+	-moz-text-decoration-style:dashed;
+	-moz-text-decoration-color:#f00;
+	-moz-text-decoration-line:underline;
+}
+.test li:nth-child(4){
+	-moz-text-decoration-style:double;
+	-moz-text-decoration-color:#f00;
+	-moz-text-decoration-line:underline;
+}
+.test li:nth-child(5){
+	-moz-text-decoration-style:wavy;
+	-moz-text-decoration-color:#f00;
+	-moz-text-decoration-line:underline;
+}
+</style>
+</head>
+<body>
+<ul class="test">
+	<li>下划实线文字</li>
+	<li>下划点线文字</li>
+	<li>下划虚线文字</li>
+	<li>下划双线文字</li>
+	<li>下划波浪线文字</li>
+</ul>
+</body>
+</html>
+			</textarea>
+			<p><input type="button" value="运行" class="g-btn g-btn-sure" /></p>
+		</div>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/inner.js"></script>
+</body>
+</html>

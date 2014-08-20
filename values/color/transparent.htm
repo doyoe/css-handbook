@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>transparent</title>
+<meta name="description" content="CSS3参考手册之: transparent" />
+<meta name="keywords" content="transparent, css3取值, css3, css3参考手册" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../../skin/article.css" />
+</head>
+<body>
+<nav id="guide" class="g-mod">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="../index.htm">取值列表</a>
+		<span>&#187;</span>
+		<a href="index.htm" id="category" rel="values/color" name="transparent">颜色值</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它颜色值参考</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入分类快速导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">transparent</h1>
+		<ul class="info">
+			<li><strong>版本：CSS1/3</strong></li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="syntax" class="g-mod g-attr">
+		<h2 class="tit">说明：</h2>
+		<div class="cont">
+			<p>RGBA(R,G,B,A)</p>
+		</div>
+	</section>
+	<section class="g-mod g-attr" id="value">
+		<h2 class="tit">取值：</h2>
+		<div class="cont">
+			<dl>
+				<dt>R：</dt>
+				<dd>红色值。正整数 | 百分数</dd>
+				<dt>G：</dt>
+				<dd>绿色值。正整数 | 百分数</dd>
+				<dt>B：</dt>
+				<dd>蓝色值。正整数 | 百分数</dd>
+				<dt>A：</dt>
+				<dd>Alpha透明度。取值0~1之间。</dd>
+			</dl>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
+		<h2 class="tit">说明：</h2>
+		<div class="cont">
+			<strong>用来指定全透明色彩。</strong>
+			<ul>
+				<li>transparent是全透明黑色(black)的速记法，即一个类似rgba(0,0,0,0)这样的值。</li>
+				<li>在CSS1中，transparent被用来作为<a href="../../properties/background/background-color.htm">background-color</a>的一个参数值，用于表示背景透明。</li>
+				<li>在CSS2中，<a href="../../properties/border/border-color.htm">border-color</a>也开始接受transparent作为参数值，《Open eBook(tm) Publication Structure 1.0.1》[OEB101]延伸到<a href="../../properties/color/color.htm">color</a>也接受transparent作为参数值。IE6不支持<a href="../../properties/border/border.htm">border</a>的颜色为transparent，边框色会显示为黑色。</li>
+				<li>在CSS3中，transparent被延伸到任何一个有<a href="../../properties/color/color.htm">color</a>值的属性上。IE8及以下，<a href="../../properties/color/color.htm">color</a>属性值为transparent时，文本显示为黑色。</li>
+			</ul>
+		</div>
+	</section>
+	<section id="compatible" class="g-mod g-attr">
+		<h2 class="tit">兼容性：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">墨绿</span> = 部分支持</li>
+				<li><span class="experimentsupport">橙色</span> = 实验性质</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
+						<th><span class="browser-ie">IE</span></th>
+						<th><span class="browser-firefox">Firefox</span></th>
+						<th><span class="browser-safari">Safari</span></th>
+						<th><span class="browser-chrome">Chrome</span></th>
+						<th><span class="browser-opera">Opera</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>版本</th>
+						<td class="partsupport">6 <sup><a href="#support1">#1</a></sup></td>
+						<td rowspan="3" class="support">4</td>
+						<td rowspan="3" class="support">5.1.7</td>
+						<td rowspan="3" class="support">13</td>
+						<td rowspan="3" class="support">11.5</td>
+					</tr>
+					<tr>
+						<th>版本</th>
+						<td class="partsupport">7-8 <sup><a href="#support2">#2</a></sup></td>
+					</tr>
+					<tr>
+						<th>版本</th>
+						<td class="support">9</td>
+					</tr>
+				</tbody>
+			</table>
+			<ol class="support-info">
+				<li id="support1">IE6及更早浏览器只有background-color接受transparent取值。</li>
+				<li id="support2">IE7及IE8除了background-color，还有border-color也开始接受transparent取值。</li>
+			</ol>
+		</div>
+	</section>
+	<section id="example" class="g-mod g-attr">
+		<h2 class="tit">示例：</h2>
+		<div class="cont">
+			<textarea cols="90" rows="10">
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>transparent_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<style>
+.test{color:transparent;border:1px solid transparent;background:transparent;}
+</style>
+</head>
+<body>
+<div class="test">看看各带color的属性设置为transparent时的效果</div>
+</body>
+</html>
+			</textarea>
+			<p><input type="button" value="运行" class="g-btn g-btn-sure" /></p>
+		</div>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/inner.js"></script>
+</body>
+</html>

@@ -1,0 +1,208 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>vertical-align</title>
+<meta name="description" content="CSS3参考手册之:vertical-align" />
+<meta name="keywords" content="vertical-align, css3, css3参考手册" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../../skin/article.css" />
+</head>
+<body>
+<nav id="guide" class="g-mod">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="../index.htm">属性列表</a>
+		<span>&#187;</span>
+		<a href="index.htm" id="category" rel="properties/text" name="vertical-align">文本属性</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它文本属性参考</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入快速分类导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">vertical-align</h1>
+		<ul class="info">
+			<li><strong>版本：CSS1/2</strong></li>
+			<li>媒体：视觉</li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="syntax" class="g-mod g-attr">
+		<h2 class="tit">语法：</h2>
+		<div class="cont">
+			<p><strong>vertical-align</strong>：baseline | sub | super | top | text-top | middle | bottom | text-bottom | <a href="../../values/other/percentage.htm">&lt;percentage&gt;</a> | <a href="../../values/other/length.htm">&lt;length&gt;</a></p>
+			<p><strong>默认值</strong>：<mark class="defaultvalue">baseline</mark></p>
+			<p><strong>适用于</strong>：内联及 table-cell 元素</p>
+		    <p><strong>继承性</strong>：有</p>
+		    <p><strong>动画性</strong>：当值为 <a href="../../values/other/length.htm">&lt;length&gt;</a> 时</p>
+		    <p><strong>计算值</strong>：指定值</p>
+		</div>
+	</section>
+	<section id="value" class="g-mod g-attr">
+		<h2 class="tit">取值：</h2>
+		<div class="cont">
+			<dl>
+				<dt>baseline：</dt>
+				<dd>将支持valign特性的对象的内容与基线对齐</dd>
+				<dt>sub：</dt>
+				<dd>垂直对齐文本的下标</dd>
+				<dt>super：</dt>
+				<dd>垂直对齐文本的上标</dd>
+				<dt>top：</dt>
+				<dd>将支持valign特性的对象的内容与对象顶端对齐</dd>
+				<dt>text-top：</dt>
+				<dd>将支持valign特性的对象的文本与对象顶端对齐</dd>
+				<dt>middle：</dt>
+				<dd>将支持valign特性的对象的内容与对象中部对齐</dd>
+				<dt>bottom：</dt>
+				<dd>将支持valign特性的对象的文本与对象底端对齐</dd>
+				<dt>text-bottom：</dt>
+				<dd>将支持valign特性的对象的文本与对象顶端对齐</dd>
+				<dt><a href="../../values/other/percentage.htm">&lt;percentage&gt;</a>：</dt>
+				<dd>用百分比指定由基线算起的偏移量。可以为负值。基线对于百分数来说就是0%。</dd>
+				<dt><a href="../../values/other/length.htm">&lt;length&gt;</a>：</dt>
+				<dd>用长度值指定由基线算起的偏移量。可以为负值。基线对于数值来说为0。（CSS2）</dd>
+			</dl>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
+		<h2 class="tit">说明：</h2>
+		<div class="cont">
+			<strong>设置或检索内联元素在行框内的垂直对其方式。</strong>
+			<ul>
+				<li>对应的脚本特性为<strong>verticalAlign</strong>。</li>
+			</ul>
+		</div>
+	</section>
+	<section id="compatible" class="g-mod g-attr">
+		<h2 class="tit">兼容性：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">墨绿</span> = 部分支持</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
+						<th><span class="browser-ie">IE</span></th>
+						<th><span class="browser-firefox">Firefox</span></th>
+						<th><span class="browser-safari">Safari</span></th>
+						<th><span class="browser-chrome">Chrome</span></th>
+						<th><span class="browser-opera">Opera</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>版本</th>
+						<td class="support">6.0</td>
+						<td class="support">1.0</td>
+						<td class="support">1.0</td>
+						<td class="support">1.0</td>
+						<td class="support">4.0</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+	<section id="example" class="g-mod g-attr">
+		<h2 class="tit">示例：</h2>
+		<div class="cont">
+			<textarea cols="90" rows="10">
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>vertical-align_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<style>
+.test p{border:1px solid #000;font-size:16px;line-height:2;}
+.test a{margin-left:5px;font-size:12px;}
+.baseline a{vertical-align:baseline;}
+.sub a{vertical-align:sub;}
+.super a{vertical-align:super;}
+.top a{vertical-align:top;}
+.text-top a{vertical-align:text-top;}
+.middle a{vertical-align:middle;}
+.bottom a{vertical-align:bottom;}
+.text-bottom a{vertical-align:text-bottom;}
+.length a{vertical-align:10px;}
+</style>
+</head>
+<body>
+<ul class="test">
+	<li class="baseline">
+		<strong>与基线对齐</strong>
+		<p>参考内容<a href="?">基线对齐</a></p>
+	</li>
+	<li class="sub">
+		<strong>与参考内容的下标对齐</strong>
+		<p>参考内容<a href="?">下标对齐</a></p>
+	</li>
+	<li class="super">
+		<strong>与参考内容的上标对齐</strong>
+		<p>参考内容<a href="?">上标对齐</a></p>
+	</li>
+	<li class="top">
+		<strong>对象的内容与对象顶端对齐</strong>
+		<p>参考内容<a href="?">要对齐的内容</a></p>
+	</li>
+	<li class="text-top">
+		<strong>对象的文本与对象顶端对齐</strong>
+		<p>参考内容<a href="?">要对齐的内容</a></p>
+	</li>
+	<li class="middle">
+		<strong>对象的内容与对象中部对齐</strong>
+		<p>参考内容<a href="?">要对齐的内容</a></p>
+	</li>
+	<li class="bottom">
+		<strong>对象的内容与对象底端对齐</strong>
+		<p>参考内容<a href="?">要对齐的内容</a></p>
+	</li>
+	<li class="text-bottom">
+		<strong>对象的文本与对象顶端对齐</strong>
+		<p>参考内容<a href="?">要对齐的内容</a></p>
+	</li>
+	<li class="length">
+		<strong>与基线算起的偏移量</strong>
+		<p>参考内容<a href="?">偏移量对齐</a></p>
+	</li>
+</ul>
+</body>
+</html>
+			</textarea>
+			<p><input type="button" value="运行" class="g-btn g-btn-sure" /></p>
+		</div>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/inner.js"></script>
+</body>
+</html>
