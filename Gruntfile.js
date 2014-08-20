@@ -1,6 +1,7 @@
 module.exports = function(grunt) {
 	"use strict";
 
+	// JSON格式文件读取
 	function readOptionalJSON(filepath) {
 		var data = {};
 		try {
@@ -8,14 +9,11 @@ module.exports = function(grunt) {
 		} catch (e) {}
 		return data;
 	}
-	var banner = "/* <%= pkg.name %> v<%= pkg.version %>\n * homepage: <%= pkg.homepage %>\n */\n";
 
-	// The concatenated file won"t pass onevar
-	// But our modules can
-
+	// grunt配置
 	grunt.initConfig({
 		pkg: readOptionalJSON("package.json"),
-		//js文档生成
+		// HTML错误检查
 		htmlhint: {
 			htmlfiles: {
 				src: ["./**/*.htm", "./**/*.html", "!./node_modules/**/*.html"]
@@ -23,11 +21,13 @@ module.exports = function(grunt) {
 		}
 	});
 
-	//文件变化监控插件
+	// HTML错误检查插件
 	grunt.loadNpmTasks("grunt-htmlhint");
 	// Default grunt
 	grunt.registerTask("default", ["htmlhint"]);
-	grunt.task.registerTask("htc", "build htc", function() {
-		//grunt.file.write("src/h5form.htc", grunt.file.read("src/banner.htc") + grunt.file.read("src/h5form.htc.js") + "\n</SCRIPT></PUBLIC:COMPONENT>");
+/*
+	grunt.task.registerTask("chm", "build chm", function() {
+		
 	});
+*/
 };
