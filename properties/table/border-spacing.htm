@@ -71,11 +71,12 @@
 		<div class="cont">
 			<strong>设置或检索当表格边框独立时，行和单元格的边框在横向和纵向上的间距</strong>
 			<ul>
-				<li>该属性作用等同于标签属性cellspacing。</li>
+				<li>该属性作用等同于<b>标签属性cellspacing</b>(单元格边距)。</li>
 				<li>只有当表格边框独立（即<a href="border-collapse.htm">border-collapse</a>属性等于separate时）此属性才起作用。</li>
 				<li>如果提供全部两个length值时，第一个作用于横向间距，第二个作用于纵向间距。</li>
 				<li>如果只提供一个length值时，这个值将作用于横向和纵向上的间距。</li>
 				<li>对应的脚本特性为<strong>borderSpacing</strong>。</li>
+                <li><strong>注意：</strong><strong class="red">IE6/7不支持此属性</strong>，可通过标签属性 cellspacing="0" 设置单元格间距。还有个属性 cellpadding="0" 设置单元格内间距(非必须项)</li>
 			</ul>
 		</div>
 	</section>
@@ -128,12 +129,12 @@
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <style>
 h1{font-size:16px;font-family:Arial;}
-.test1{border-collapse:separate;border-spacing:10px 20px;}
+.test1,.test3{border-collapse:separate;border-spacing:10px 20px;}
 .test2{border-collapse:collapse;border-spacing:10px 20px;}
 </style>
 </head>
 <body>
-<h1>边框独立时border-spacing生效</h1>
+<h1>边框独立时border-spacing生效(IE6/7 是无效的)</h1>
 <table border="1" class="test1">
 <tbody>
 	<tr>
@@ -164,6 +165,22 @@ h1{font-size:16px;font-family:Arial;}
 	</tr>
 </tbody>
 </table>
+<h1>边框独立时border-spacing生效（IE6/7 通过标签属性 cellspacing="20" 设置）</h1>
+<table border="1" class="test3" cellspacing="20">
+<tbody>
+	<tr>
+		<td>独立边框</td>
+		<td>独立边框</td>
+		<td>独立边框</td>
+	</tr>
+	<tr>
+		<td>独立边框</td>
+		<td>独立边框</td>
+		<td>独立边框</td>
+	</tr>
+</tbody>
+</table>
+<p>IE6/7下通过标签属性 cellspacing="20" 替代 border-spacing:10px 20px; 设置单元格边距，可能你也注意到了 border-spacing 可以设置两个值，但是标签属性cellspacing只能设一个值，但通常情况下，我们最常用的是设置 cellspacing="0" 清除单元格边距。</p>
 </body>
 </html>
 			</textarea>
