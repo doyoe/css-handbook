@@ -19,7 +19,7 @@
 		<span>&#187;</span>
 		<a href="../index.htm">选择符列表</a>
 		<span>&#187;</span>
-		<a href="index.htm"id="category" rel="selectors/attribute" name="att">属性选择符</a>
+		<a href="index.htm" id="category" rel="selectors/attribute" name="att">属性选择符</a>
 		<span>&#187;</span>
 	</div>
 	<div class="to">
@@ -57,6 +57,16 @@
 		<h2 class="tit">说明：</h2>
 		<div class="cont">
 			<strong>选择具有att属性的E元素。</strong>
+			<div class="gquote">
+				<p class="gquote-tit"><strong>例如：</strong></p>
+				<blockquote class="gquote-cont"><code><xmp><style>
+img[alt]{margin:10px;}
+</style>
+
+<img src="图片url" alt="" />
+<img src="图片url" /></xmp></code></blockquote>
+					<p class="gquote-info">此例，将会命中第一张图片，因为匹配到了alt属性</p>
+			</div>
 		</div>
 	</section>
 	<section class="g-mod g-attr" id="compatible">
@@ -65,13 +75,11 @@
 			<ul class="support-type">
 				<li><span class="support">浅绿</span> = 支持</li>
 				<li><span class="unsupport">红色</span> = 不支持</li>
-				<li><span class="partsupport">墨绿</span> = 部分支持</li>
-				<li><span class="experimentsupport">橙色</span> = 实验性质</li>
+				<li><span class="partsupport">粉色</span> = 部分支持</li>
 			</ul>
 			<table class="g-data">
 				<thead>
 					<tr>
-						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
 						<th><span class="browser-ie">IE</span></th>
 						<th><span class="browser-firefox">Firefox</span></th>
 						<th><span class="browser-safari">Safari</span></th>
@@ -81,16 +89,14 @@
 				</thead>
 				<tbody>
 					<tr>
-						<th>较早版本</th>
-						<td class="unsupport">6</td>
-						<td rowspan="2" class="support">4</td>
-						<td rowspan="2" class="support">5.1.7</td>
-						<td rowspan="2" class="support">13</td>
-						<td rowspan="2" class="support">11.5</td>
+						<td class="unsupport">6.0</td>
+						<td rowspan="2" class="support">4.0</td>
+						<td rowspan="2" class="support">4.0</td>
+						<td rowspan="2" class="support">4.0</td>
+						<td rowspan="2" class="support">15.0</td>
 					</tr>
 					<tr>
-						<th>较新版本</th>
-						<td class="support">7</td>
+						<td class="support">7.0</td>
 					</tr>
 				</tbody>
 			</table>
