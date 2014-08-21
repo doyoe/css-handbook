@@ -48,6 +48,7 @@
 	<section id="use-guides" class="g-mod g-about">
 		<h2>手册使用说明 The Instruction</h2>
 		<ul>
+			<li class="g-color-light"><strong>手册在接下来将只更新IE6.0+, Firefox4.0+, Chrome4.0+, Safari4.0+, Opera15.0+（Opera从15.0开始转入webkit阵营）的支持数据，低于这些版本的数据将不再更新，共同期望未来前端的环境越来越好。</strong></li>
 			<li>关于本手册一些特定阅读方式的说明</li>
 			<li>关于本手册存在的一些问题说明及解决方法</li>
 		</ul>
@@ -73,55 +74,8 @@
 			<li>
 				<h3>兼容性：</h3>
 				<ul class="gitem">
-					<li>手册在所有参考页的头部和底部都有对浏览器兼容性测试基础环境的说明。<em class="g-color-light">如无特别说明，所有文档页均不考虑IE6以下版本。</em></li>
-					<li>兼容性表格解读：
-						<div class="cont g-attr">
-							<ul class="support-type">
-								<li><span class="support">浅绿</span> = 支持</li>
-								<li><span class="unsupport">红色</span> = 不支持</li>
-								<li><span class="partsupport">墨绿</span> = 部分支持</li>
-								<li><span class="experimentsupport">橙色</span> = 实验性质</li>
-							</ul>
-							<table class="g-data">
-								<thead>
-									<tr>
-										<th><a href="#browser" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
-										<th><span class="browser-ie">IE</span></th>
-										<th><span class="browser-firefox">Firefox</span></th>
-										<th><span class="browser-safari">Safari</span></th>
-										<th><span class="browser-chrome">Chrome</span></th>
-										<th><span class="browser-opera">Opera</span></th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<th>较早版本</th>
-										<td class="unsupport">6.0-7.0</td>
-										<td rowspan="3" class="experimentsupport">4.0-6.0</td>
-										<td rowspan="3" class="support">5.1</td>
-										<td rowspan="3" class="support">13.0</td>
-										<td rowspan="3" class="support">11.50</td>
-									</tr>
-									<tr>
-										<th>较新版本</th>
-										<td class="experimentsupport">8.0</td>
-									</tr>
-									<tr>
-										<th>最近版本</th>
-										<td class="support">9.0</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-						<p>假设上述表格是对某属性x的兼容性说明：那即表示IE6和IE7不支持该属性，IE8对该属性的支持还处在实验性质阶段，IE9及后续版本已支持该属性；Firefox4.0-6.0对该属性的支持还处在实验性质阶段；Safari、Chrome、Opera支持该属性。</p>
-						<p>如果是处在“实验性质”状态，则各浏览器的私有写法为：IE加 <strong class="g-color-light">-ms-</strong>；Firefox加 <strong class="g-color-light">-moz-</strong>；Safari和Chrome加 <strong class="g-color-light">-webkit-</strong>；Opera加 <strong class="g-color-light">-o-</strong></p>
-					</li>
-				</ul>
-			</li>
-			<li>
-				<h3>兼容性：</h3>
-				<ul class="gitem">
-					<li>兼容性试图将会慢慢改成如下表：
+					<li>手册在所有参考页的头部和底部都有对浏览器兼容性测试基础环境的说明。</li>
+					<li>兼容性试图将会慢慢全部改成如下表：
 						<div class="cont g-attr">
 							<ul class="support-type">
 								<li><span class="support">浅绿</span> = 支持</li>
@@ -131,7 +85,6 @@
 							<table class="g-data">
 								<thead>
 									<tr>
-										<th><a href="#browser" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
 										<th><span class="browser-ie">IE</span></th>
 										<th><span class="browser-firefox">Firefox</span></th>
 										<th><span class="browser-safari">Safari</span></th>
@@ -141,19 +94,16 @@
 								</thead>
 								<tbody>
 									<tr>
-										<th>较早版本</th>
 										<td class="unsupport">6.0-7.0</td>
 										<td rowspan="3" class="support">4.0-6.0<sup class="fix">-moz-</sup></td>
-										<td rowspan="3" class="support">5.1</td>
-										<td rowspan="3" class="support">1.0-13.0<sup class="fix">-webkit-</sup></td>
-										<td rowspan="3" class="support">11.5</td>
+										<td rowspan="3" class="support">4.0</td>
+										<td rowspan="3" class="support">4.0-13.0<sup class="fix">-webkit-</sup></td>
+										<td rowspan="3" class="support">15.0</td>
 									</tr>
 									<tr>
-										<th>较新版本</th>
 										<td class="support">8.0<sup class="fix">-ms-</sup></td>
 									</tr>
 									<tr>
-										<th>最近版本</th>
 										<td class="support">9.0</td>
 									</tr>
 								</tbody>
