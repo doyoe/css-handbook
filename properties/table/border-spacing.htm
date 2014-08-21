@@ -42,7 +42,7 @@
 		<h1 class="tit">border-spacing</h1>
 		<ul class="info">
 			<li><strong>版本：CSS2</strong></li>
-			<li>继承性：有</li>
+			<li>媒体：视觉</li>
 		</ul>
 		<!-- 插入浏览器信息 -->
 	</section>
@@ -55,6 +55,8 @@
 			<p><strong>默认值</strong>：<mark class="defaultvalue">0</mark></p>
 			<p><strong>适用于</strong>：table系元素</p>
 		    <p><strong>继承性</strong>：有</p>
+		    <p><strong>动画性</strong>：否</p>
+		    <p><strong>计算值</strong>：两个绝对长度值</p>
 		</div>
 	</section>
 	<section id="value" class="g-mod g-attr">
@@ -71,12 +73,11 @@
 		<div class="cont">
 			<strong>设置或检索当表格边框独立时，行和单元格的边框在横向和纵向上的间距</strong>
 			<ul>
-				<li>该属性作用等同于<b>标签属性cellspacing</b>(单元格边距)。</li>
+				<li>该属性作用等同于<strong>标签属性cellspacing</strong>(单元格边距)。<code>border-spacing:0</code>等同于<code>cellspacing="0"</code></li>
 				<li>只有当表格边框独立（即<a href="border-collapse.htm">border-collapse</a>属性等于separate时）此属性才起作用。</li>
 				<li>如果提供全部两个length值时，第一个作用于横向间距，第二个作用于纵向间距。</li>
 				<li>如果只提供一个length值时，这个值将作用于横向和纵向上的间距。</li>
 				<li>对应的脚本特性为<strong>borderSpacing</strong>。</li>
-                <li><strong>注意：</strong><strong class="red">IE6/7不支持此属性</strong>，可通过标签属性 cellspacing="0" 设置单元格间距。还有个属性 cellpadding="0" 设置单元格内间距(非必须项)</li>
 			</ul>
 		</div>
 	</section>
@@ -86,13 +87,11 @@
 			<ul class="support-type">
 				<li><span class="support">浅绿</span> = 支持</li>
 				<li><span class="unsupport">红色</span> = 不支持</li>
-				<li><span class="partsupport">墨绿</span> = 部分支持</li>
-				<li><span class="experimentsupport">橙色</span> = 实验性质</li>
+				<li><span class="partsupport">粉色</span> = 部分支持</li>
 			</ul>
 			<table class="g-data">
 				<thead>
 					<tr>
-						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
 						<th><span class="browser-ie">IE</span></th>
 						<th><span class="browser-firefox">Firefox</span></th>
 						<th><span class="browser-safari">Safari</span></th>
@@ -102,16 +101,14 @@
 				</thead>
 				<tbody>
 					<tr>
-						<th>版本</th>
-						<td class="unsupport">6-7</td>
-						<td rowspan="2" class="support">4</td>
-						<td rowspan="2" class="support">5.1.7</td>
-						<td rowspan="2" class="support">13</td>
-						<td rowspan="2" class="support">11.5</td>
+						<td class="unsupport">6.0-7.0</td>
+						<td rowspan="2" class="support">4.0</td>
+						<td rowspan="2" class="support">4.0</td>
+						<td rowspan="2" class="support">4.0</td>
+						<td rowspan="2" class="support">15.0</td>
 					</tr>
 					<tr>
-						<th>版本</th>
-						<td class="support">8</td>
+						<td class="support">8.0</td>
 					</tr>
 				</tbody>
 			</table>
