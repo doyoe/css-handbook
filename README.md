@@ -16,7 +16,7 @@ CSS参考手册目前正在v4.1.5草案中。
 * 修订了<a href="http://css.doyoe.com/properties/transition/transition-timing-function.htm">animation-timing-function示例</a>；
 * 修订了<a href="http://css.doyoe.com/properties/transition/transition-delay.htm">transition-delay属性说明</a>；
 * 修订了<a href="http://css.doyoe.com/selectors/pseudo-classes/target.htm">target选择器详细解释及示例</a>；
-* 修订了<a href="http://css.doyoe.com/properties/table/border-spacing.htm">IE6/7下的标签属性 cellspacing="0" 设置单元格间距</a>；
+* 修订了<a href="http://css.doyoe.com/properties/table/index.htm">Table</a>模块下的大部分属性的参考描述，更新了浏览器支持版本；；
 * 完善 <a href="http://css.doyoe.com/values/color/rgba.htm">rgba 透明模式的全兼容解决方案，附加透明度16进制对应表</a>；
 * 新增了<a href="http://css.doyoe.com/experience/refer.htm">参考资源列表</a>；
 

@@ -42,7 +42,7 @@
 		<h1 class="tit">empty-cells</h1>
 		<ul class="info">
 			<li><strong>版本：CSS2</strong></li>
-			<li>继承性：有</li>
+			<li>媒体：视觉</li>
 		</ul>
 		<!-- 插入浏览器信息 -->
 	</section>
@@ -55,6 +55,8 @@
 			<p><strong>默认值</strong>：<mark class="defaultvalue">show</mark></p>
 			<p><strong>适用于</strong>：table系元素</p>
 		    <p><strong>继承性</strong>：有</p>
+		    <p><strong>动画性</strong>：否</p>
+		    <p><strong>计算值</strong>：指定值</p>
 		</div>
 	</section>
 	<section id="value" class="g-mod g-attr">
@@ -73,7 +75,7 @@
 		<div class="cont">
 			<strong>设置或检索当表格的单元格无内容时，是否显示该单元格的边框。</strong>
 			<ul>
-				<li><em class="glight">IE7及以下浏览器中默认隐藏无内容的单元格边框，要想使其获得与show参数值相同的效果，可以变相给该空单元格加个占位且不可见的元素，例如全角空格或&ampnbsp;等等。</em></li>
+				<li><em class="g-color-light">IE7及以下浏览器中默认隐藏无内容的单元格边框，要想使其获得与show参数值相同的效果，可以变相给该空单元格加个占位且不可见的元素，例如全角空格或&ampnbsp;等等。</em></li>
 				<li>只有当表格边框独立（即<a href="border-collapse.htm">border-collapse</a>属性等于separate时）此属性才起作用。</li>
 				<li>对应的脚本特性为<strong>emptyCells</strong>。</li>
 			</ul>
@@ -85,13 +87,11 @@
 			<ul class="support-type">
 				<li><span class="support">浅绿</span> = 支持</li>
 				<li><span class="unsupport">红色</span> = 不支持</li>
-				<li><span class="partsupport">墨绿</span> = 部分支持</li>
-				<li><span class="experimentsupport">橙色</span> = 实验性质</li>
+				<li><span class="partsupport">粉色</span> = 部分支持</li>
 			</ul>
 			<table class="g-data">
 				<thead>
 					<tr>
-						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
 						<th><span class="browser-ie">IE</span></th>
 						<th><span class="browser-firefox">Firefox</span></th>
 						<th><span class="browser-safari">Safari</span></th>
@@ -101,16 +101,14 @@
 				</thead>
 				<tbody>
 					<tr>
-						<th>版本</th>
-						<td class="unsupport">6-7</td>
-						<td rowspan="2" class="support">4</td>
-						<td rowspan="2" class="support">5.1.7</td>
-						<td rowspan="2" class="support">13</td>
-						<td rowspan="2" class="support">11.5</td>
+						<td class="unsupport">6.0-7.0</td>
+						<td rowspan="2" class="support">4.0</td>
+						<td rowspan="2" class="support">4.0</td>
+						<td rowspan="2" class="support">4.0</td>
+						<td rowspan="2" class="support">15.0</td>
 					</tr>
 					<tr>
-						<th>版本</th>
-						<td class="support">8</td>
+						<td class="support">8.0</td>
 					</tr>
 				</tbody>
 			</table>
