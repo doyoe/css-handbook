@@ -32,7 +32,7 @@
 			<div class="g-transition list">
 				<ul>
 					<!-- 插入分类快速导航 -->
-				</ul>
+				</ul>	
 			</div>
 		</div>
 	</div>
@@ -60,7 +60,7 @@
 			<ul>
 				<li>与<a href="ef.htm">包含选择符</a>不同的是，子选择符只能命中子元素，而不能命中孙辈。
 					<div class="gquote">
-						<p class="gquote-tit"><strong>E F VS. E>F：</strong></p>
+						<p class="gquote-tit"><strong>E F VS. E&gt;F：</strong></p>
 						<blockquote class="gquote-cont"><code><xmp><style>
 	/* 包含选择符(E F) */
 	ul li{color:#f00;}
@@ -78,7 +78,7 @@
 	</li>
 	<li>3</li>
 </ul></xmp></code></blockquote>
-	   					<p class="gquote-info">此例，如果使用 .demo li{color:#f00;} ，那么 1, 2, 2.1, 2.2, 2.3, 3 都将会变成红色；如果使用 .demo>li{color:#f00;}，那么只有 1, 2, 3 会变成红色，即只有子元素会被命中；</p>
+	   					<p class="gquote-info">此例，如果使用 .demo li{color:#f00;} ，那么 1, 2, 2.1, 2.2, 2.3, 3 都将会变成红色；如果使用 .demo&gt;li{color:#f00;}，那么只有 1, 2, 3 会变成红色，即只有子元素会被命中；</p>
 					</div>
 				</li>
 			</ul>

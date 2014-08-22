@@ -38,7 +38,9 @@ windows下安装`HTML Help Workshop`后，双击打开`css.hhp`，点击`编译H
 
 **grunt安装方法**
 
+1. 安装[Python v2.x.x](https://www.python.org/downloads/)
 1. 安装[Node.js](http://nodejs.org/download/),安装后可能需要重启电脑
+1. 命令行运行`npm config set python C:\Python27\python.exe --global`
 1. 将安装源设置为中国地区，否则会很慢 `npm config set registry http://registry.cnpmjs.org/ --global`
 1. 命令行运行 `npm install -g grunt-cli`
 1. 项目根目录运行`npm install`

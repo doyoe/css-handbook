@@ -60,7 +60,7 @@
 			<ul>
 				<li>与<a href="e-child-f.htm">子选择符</a>不同的是，包含选择符将会命中所有符合条件的后代，包括儿子，孙子，孙子的孙子...
 					<div class="gquote">
-						<p class="gquote-tit"><strong>E F VS. E>F：</strong></p>
+						<p class="gquote-tit"><strong>E F VS. E&gt;F：</strong></p>
 						<blockquote class="gquote-cont"><code><xmp><style>
 	/* 包含选择符(E F) */
 	ul li{color:#f00;}
@@ -78,7 +78,7 @@
 	</li>
 	<li>3</li>
 </ul></xmp></code></blockquote>
-	   					<p class="gquote-info">此例，如果使用 .demo li{color:#f00;} ，那么 1, 2, 2.1, 2.2, 2.3, 3 都将会变成红色；如果使用 .demo>li{color:#f00;}，那么只有 1, 2, 3 会变成红色，即只有子元素会被命中；</p>
+	   					<p class="gquote-info">此例，如果使用 .demo li{color:#f00;} ，那么 1, 2, 2.1, 2.2, 2.3, 3 都将会变成红色；如果使用 .demo&gt;li{color:#f00;}，那么只有 1, 2, 3 会变成红色，即只有子元素会被命中；</p>
 					</div>
 				</li>
 			</ul>
