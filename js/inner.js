@@ -989,7 +989,7 @@ Global.folding($('.g-combobox',topDocument));
 		onFolderList.addClass('unfold');
 	})();
 
-	if(!$.browser.msie && dytree.attr('loaded')){
+	if(!$.browser.msie && dytree.data('loaded')){
 		return;
 	}
 
@@ -1024,7 +1024,7 @@ Global.folding($('.g-combobox',topDocument));
 		}
 	})
 
-	dytree.attr('loaded','true');
+	dytree.data('loaded', true);
 
 })();
 
@@ -1147,7 +1147,7 @@ Global.folding($('.g-combobox',topDocument));
 	(function(){
 
 		//非火狐下第二次打开不用重新注册事件
-		if(!($.browser.msie) && $('#offer',topDocument).attr('loaded')){return false};
+		if(!($.browser.msie) && $('#offer',topDocument).data('loaded')){return false};
 		$('.offer',topDocument).on({
 			click : function(e){
 				e.preventDefault();
@@ -1157,7 +1157,7 @@ Global.folding($('.g-combobox',topDocument));
 					titleSelector : '#contribute .g-popup-hd'
 				}
 				new popUp(opts);
-				$('#offer',topDocument).attr('loaded',true);
+				$('#offer', topDocument).data('loaded', true);
 			}
 		})
 	})()
