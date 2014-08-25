@@ -23,8 +23,10 @@
   ],
   "dependencies": {},
   "devDependencies": {
-    "opener": "^1.4.0",	
+    "opener": "^1.4.0",
     "rimraf": "^2.2.8",
+    "iconv-lite": "^0.4.4",
+    "htmlparser": "^1.7.7",
     "gulp": "^3.8.7",
     "gulp-htmlhint": "0.0.9"
   },
