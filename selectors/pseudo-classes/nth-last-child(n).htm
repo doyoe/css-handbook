@@ -56,9 +56,33 @@
 	<section id="intro" class="g-mod g-attr">
 		<h2 class="tit">说明：</h2>
 		<div class="cont">
-			<strong>匹配父元素的倒数第n个子元素E。</strong>
+			<strong>匹配父元素的倒数第n个子元素E，假设该子元素不是E，则选择符无效。</strong>
 			<ul>
-				<li>要使该属性生效，E对象必须是某个对象的子元素。</li>
+				<li>要使该属性生效，E元素必须是某个元素的子元素，E的父元素最高是body，即E可以是body的子元素</li>
+				<li>该选择符允许使用一个乘法因子(n)来作为换算方式，比如我们想选中倒数第一个子元素E，那么选择符可以写成：E:nth-last-child(1)</li>
+				<li>
+					<strong>有一点需要注意的是：</strong>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>HTML示例代码：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp><div>
+	<p>第1个p</p>
+	<p>第2个p</p>
+	<span>第1个span</span>
+	<p>第3个p</p>
+	<span>第2个span</span>
+</div></xmp></code></blockquote>
+						<p class="gquote-tit"><strong>如上HTML，假设要命中倒数第一个p(即正数第3个p)，那么CSS选择符应该是：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp>p:nth-last-child(2){color:#f00;}</xmp></code></blockquote>
+						<p class="gquote-tit"><strong>而不是：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp>p:nth-last-child(1){color:#f00;}</xmp></code></blockquote>
+						<p class="gquote-info">因为倒数第1个p，其实是倒数第2个子元素。基于选择符从右到左解析，首先要找到第1个子元素，然后再去检查该子元素是否为p，如果不是p，则n递增，继续查找</p>
+						<p class="gquote-tit"><strong>假设不确定倒数第1个子元素是否为E，但是又想命中倒数第1个E，应该这样写：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp>p:last-of-type{color:#f00;}</xmp></code></blockquote>
+						<p class="gquote-tit"><strong>或者这样写：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp>p:nth-last-of-type(1){color:#f00;}</xmp></code></blockquote>
+						<p class="gquote-info">参考 <a href="last-of-type.htm">E:last-of-type</a> 和 <a href="nth-last-of-type(n).htm">E:nth-last-of-type(n)</a></p>
+					</div>
+				</li>
 			</ul>
 		</div>
 	</section>

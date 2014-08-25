@@ -57,6 +57,19 @@
 		<h2 class="tit">说明：</h2>
 		<div class="cont">
 			<strong>设置元素在其鼠标悬停时的样式。</strong>
+			<ul>
+				<li>如果需要给超链接定义：访问前，鼠标悬停，当前被点击，已访问这4种伪类效果，而又没有按照一致的书写顺序，不同的浏览器可能会有不同的表现</li>
+				<li>超链接的4种状态，需要有特定的书写顺序才能生效。
+					<div class="gquote">
+						<p class="gquote-tit"><strong>超链接状态顺序：</strong></p>
+						<blockquote class="gquote-cont"><pre><code>a:link{}
+a:visited{}
+a:hover{}
+a:active{}</code></pre></blockquote>
+	   					<p class="gquote-info">注意，a:hover 必须位于 a:link 和 a:visited 之后，a:active 必须位于 a:hover 之后<br />可靠的顺序是：l(link)ov(visited)e h(hover)a(active)te, 即用喜欢和讨厌两个词来概括</p>
+					</div>
+				</li>
+			</ul>
 		</div>
 	</section>
 	<section class="g-mod g-attr" id="compatible">

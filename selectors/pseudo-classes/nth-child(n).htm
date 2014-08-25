@@ -56,9 +56,58 @@
 	<section id="intro" class="g-mod g-attr">
 		<h2 class="tit">说明：</h2>
 		<div class="cont">
-			<strong>匹配父元素的第n个子元素E。</strong>
+			<strong>匹配父元素的第n个子元素E，假设该子元素不是E，则选择符无效。</strong>
 			<ul>
-				<li>要使该属性生效，E对象必须是某个对象的子元素。</li>
+				<li>要使该属性生效，E元素必须是某个元素的子元素，E的父元素最高是body，即E可以是body的子元素</li>
+				<li>该选择符允许使用一个乘法因子(n)来作为换算方式，比如我们想选中所有的偶数子元素E，那么选择符可以写成：E:nth-child(2n)</li>
+				<li>
+					<strong>使用E:nth-child(n)实现奇偶：</strong>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>示例代码：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp><style>
+li:nth-child(2n){color:#f00;} /* 偶数 */
+li:nth-child(2n+1){color:#000;} /* 奇数 */
+</style>
+
+<ul>
+	<li>列表项一</li>
+	<li>列表项二</li>
+	<li>列表项三</li>
+	<li>列表项四</li>
+</ul></xmp></code></blockquote>
+						<p class="gquote-info">因为(n)代表一个乘法因子，可以是0, 1, 2, 3, ..., 所以(2n)换算出来会是偶数，而(2n+1)换算出来会是奇数</p>
+					</div>
+				</li>
+				<li>
+					<strong>有一点需要注意的是：</strong>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>HTML示例代码：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp><div>
+	<p>第1个p</p>
+	<p>第2个p</p>
+	<span>第1个span</span>
+	<p>第3个p</p>
+	<span>第2个span</span>
+	<p>第4个p</p>
+	<p>第5个p</p>
+</div></xmp></code></blockquote>
+						<p class="gquote-tit"><strong>CSS Case 1：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp>p:nth-child(2){color:#f00;}</xmp></code></blockquote>
+						<p class="gquote-info">很明显第2个p会被命中然后变成红色</p>
+						<p class="gquote-tit"><strong>CSS Case 2：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp>p:nth-child(3){color:#f00;}</xmp></code></blockquote>
+						<p class="gquote-info">这是会命中第3个p么？如果你这么认为那就错了，这条选择符就不会命中任何一个元素。</p>
+						<p class="gquote-tit"><strong>CSS Case 3：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp>p:nth-child(4){color:#f00;}</xmp></code></blockquote>
+						<p class="gquote-info">这时你以为会命中第4个p，但其实命中的却是第3个p，因为它是第4个子元素</p>
+						<p class="gquote-info">E:nth-child(n)会选择父元素的第n个子元素E，如果第n个子元素不是E，则是无效选择符，但n会递增。</p>
+						<p class="gquote-tit"><strong>假设不确定第1个子元素是否为E，但是又想命中第1个E，应该这样写：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp>p:first-of-type{color:#f00;}</xmp></code></blockquote>
+						<p class="gquote-tit"><strong>或者这样写：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp>p:nth-of-type(1){color:#f00;}</xmp></code></blockquote>
+						<p class="gquote-info">参考 <a href="first-of-type.htm">E:first-of-type</a> 和 <a href="nth-of-type(n).htm">E:nth-of-type(n)</a></p>
+					</div>
+				</li>
 			</ul>
 		</div>
 	</section>

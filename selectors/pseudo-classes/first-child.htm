@@ -58,20 +58,46 @@
 		<div class="cont">
 			<strong>匹配父元素的第一个子元素E。</strong>
 			<ul>
-				<li>要使该属性生效，E对象必须是某个对象的子元素。</li>
+				<li>要使该属性生效，E元素必须是某个元素的子元素，E的父元素最高是body，即E可以是body的子元素</li>
 				<li>
 					<strong>这里可能存在误解：</strong>
 					<div class="gquote">
 						<p class="gquote-tit"><strong>示例代码：</strong></p>
-						<blockquote class="gquote-cont"><pre><code>&lt;ul&gt;
-	&lt;li&gt;列表项一&lt;/li&gt;
-	&lt;li&gt;列表项二&lt;/li&gt;
-	&lt;li&gt;列表项三&lt;/li&gt;
-	&lt;li&gt;列表项四&lt;/li&gt;
-&lt;/ul&gt;</code></pre></blockquote>
-						<p class="gquote-info">在上述代码中，如果我们要设置第一个li的样式，那么代码应该写成<code>li:first-child{sRules}</code>，而不是<code>ul:first-child{sRules}</code>。其它相关的伪类都如此。</p>
+						<blockquote class="gquote-cont"><code><xmp><ul>
+	<li>列表项一</li>
+	<li>列表项二</li>
+	<li>列表项三</li>
+	<li>列表项四</li>
+</ul></xmp></code></blockquote>
+						<p class="gquote-info">在上述代码中，如果我们要设置第一个li的样式，那么代码应该写成<code>li:first-child{sRules}</code>，而不是<code>ul:first-child{sRules}</code>。</p>
 					</div>
 				</li>
+				<li>
+					<strong>来看这样一段代码：</strong>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>示例代码：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp>p:first-child{color:#f00;}
+
+<div>
+	<p>我是一个p</p>
+</div></xmp></code></blockquote>
+						<p class="gquote-info">这段代码你能看到p元素被命中变成了红色</p>
+					</div>
+				</li>
+				<li>
+					<strong>假设将代码简单地修改一下：</strong>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>示例代码：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp>p:first-child{color:#f00;}
+
+<div>
+	<h2>我是一个标题</h2>
+	<p>我是一个p</p>
+</div></xmp></code></blockquote>
+						<p class="gquote-info">只是在p前面加了一个h2标签，你会发现选择器失效了，没有命中p，why?</p>
+					</div>
+				</li>
+				<li>E:first-child选择符，E必须是它的兄弟元素中的第一个元素，换言之，E必须是父元素的第一个子元素。与之类似的伪类还有<a href="last-child.htm">E:last-child</a>，只不过情况正好相反，需要它是最后一个子元素。</li>
 			</ul>
 		</div>
 	</section>
@@ -95,7 +121,6 @@
 				</thead>
 				<tbody>
 					<tr>
-						<th>较早版本</th>
 						<td class="unsupport">6.0</td>
 						<td rowspan="2" class="support">4.0</td>
 						<td rowspan="2" class="support">4.0</td>
@@ -103,7 +128,6 @@
 						<td rowspan="2" class="support">15.0</td>
 					</tr>
 					<tr>
-						<th>较新版本</th>
 						<td class="support">7.0</td>
 					</tr>
 				</tbody>

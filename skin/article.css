@@ -32,6 +32,8 @@ ol.gitem{list-style-type:decimal;}
 .gquote-cont li.first{border-top:0 none;}
 .gquote-cont textarea{width:100%;height:auto;border:none;}
 .gquote-info{padding:3px 10px;border-top:1px solid #C3E1FF;background:#F3F9FF;color:#c30;}
+.gquote-info a{color:#008000;}
+.gquote-info a:hover{color:#c30;}
 /* comm: g-list */
 .g-list li{float:left;width:186px;}
 /* comm: g-data */
