@@ -58,7 +58,28 @@
 		<div class="cont">
 			<strong>匹配父元素的最后一个子元素E。</strong>
 			<ul>
-				<li>要使该属性生效，E对象必须是某个对象的子元素。</li>
+				<li>要使该属性生效，E元素必须是某个元素的子元素，E的父元素最高是body，即E可以是body的子元素</li>
+				<li>E:last-child选择符，E必须是它的兄弟元素中的最后一个元素，换言之，E必须是父元素的最后一个子元素。与之类似的伪类还有<a href="first-child.htm">E:first-child</a>，只不过情况正好相反，需要它是第一个子元素。</li>
+				<li>
+					<strong>通过具体的例子来进行理解：</strong>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>有效的代码：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp>p:last-child{color:#f00;}
+
+<div>
+	<h2>我是一个标题</h2>
+	<p>我是一个p</p>
+</div></xmp></code></blockquote>
+						<p class="gquote-tit"><strong>无效的代码：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp>p:last-child{color:#f00;}
+
+<div>
+	<p>我是一个p</p>
+	<h2>我是一个标题</h2>
+</div></xmp></code></blockquote>
+						<p class="gquote-info">在上述代码中，如果我们要设置第一个li的样式，那么代码应该写成<code>li:first-child{sRules}</code>，而不是<code>ul:first-child{sRules}</code>。</p>
+					</div>
+				</li>
 			</ul>
 		</div>
 	</section>
