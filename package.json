@@ -23,9 +23,10 @@
   ],
   "dependencies": {},
   "devDependencies": {
-    "grunt": "^0.4.5",
-    "htmlparser": "^1.7.7",
-    "grunt-htmlhint": "^0.4.1"
+    "opener": "^1.4.0",	
+    "rimraf": "^2.2.8",
+    "gulp": "^3.8.7",
+    "gulp-htmlhint": "0.0.9"
   },
   "scripts": {
     "build": "npm install && gulp"

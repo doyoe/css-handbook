@@ -8,17 +8,17 @@
 
 CSS参考手册目前正在v4.1.5草案中。
 
-* 手册已在<a href="https://github.com/doyoe/css-handbook" target="_blank" rel="external" class="external">GitHub</a>开源，欢迎大家提交<a href="https://github.com/doyoe/css-handbook/issues" target="_blank" rel="external" class="external">Issues</a>和<a href="https://github.com/doyoe/css-handbook/pulls" target="_blank" rel="external" class="external">Pull Requests</a>
+* 手册已在[GitHub](https://github.com/doyoe/css-handbook)开源，欢迎大家提交[Issues](https://github.com/doyoe/css-handbook/issues)和[Pull Requests](https://github.com/doyoe/css-handbook/pulls)
 * 更新了手册对浏览器版本的支持策略，较低版本的数据将不再更新。</li>
-* 修订了<a href="http://css.doyoe.com/selectors/pseudo-element/index.htm">伪对象选择符</a>模块下的大部分属性的参考描述，更新了浏览器支持版本；
-* 新增了相对长度单位 <a href="http://css.doyoe.com/units/length/vmax.htm">vmax</a> 与 <a href="http://css.doyoe.com/units/length/vmin.htm">vmin</a>；
-* 更新了相对长度单位 <a href="http://css.doyoe.com/units/length/vw.htm">vw</a>、<a href="http://css.doyoe.com/units/length/vh.htm">vh</a> 的浏览器兼容性数据；
-* 修订了<a href="http://css.doyoe.com/properties/transition/transition-timing-function.htm">animation-timing-function示例</a>；
-* 修订了<a href="http://css.doyoe.com/properties/transition/transition-delay.htm">transition-delay属性说明</a>；
-* 修订了<a href="http://css.doyoe.com/selectors/pseudo-classes/target.htm">target选择器详细解释及示例</a>；
-* 修订了<a href="http://css.doyoe.com/properties/table/index.htm">Table</a>模块下的大部分属性的参考描述，更新了浏览器支持版本；；
-* 完善 <a href="http://css.doyoe.com/values/color/rgba.htm">rgba 透明模式的全兼容解决方案，附加透明度16进制对应表</a>；
-* 新增了<a href="http://css.doyoe.com/experience/refer.htm">参考资源列表</a>；
+* 修订了[伪对象选择符](http://css.doyoe.com/selectors/pseudo-element/index.htm)模块下的大部分属性的参考描述，更新了浏览器支持版本；
+* 新增了相对长度单位 [vmax](http://css.doyoe.com/units/length/vmax.htm) 与 [vmin](http://css.doyoe.com/units/length/vmin.htm)；
+* 更新了相对长度单位 [vw](http://css.doyoe.com/units/length/vw.htm)、[vh](http://css.doyoe.com/units/length/vh.htm) 的浏览器兼容性数据；
+* 修订了[animation-timing-function示例](http://css.doyoe.com/properties/transition/transition-timing-function.htm)；
+* 修订了[transition-delay属性说明](http://css.doyoe.com/properties/transition/transition-delay.htm)；
+* 修订了[target选择器详细解释及示例](http://css.doyoe.com/selectors/pseudo-classes/target.htm)；
+* 修订了[Table](http://css.doyoe.com/properties/table/index.htm)模块下的大部分属性的参考描述，更新了浏览器支持版本；；
+* 完善 [rgba 透明模式的全兼容解决方案，附加透明度16进制对应表](http://css.doyoe.com/values/color/rgba.htm)；
+* 新增了[参考资源列表](http://css.doyoe.com/experience/refer.htm)；
 
 ## GitHub计划
 
@@ -26,21 +26,20 @@ CSS参考手册从v4.1.4开始，代码都托管到GitHub上。大家可以给�
 
 会阶段性的合并，谢谢。
 
-## 编译chm
+## 构建工具安装与使用
 
-windows下安装`HTML Help Workshop`后，双击打开`css.hhp`，点击`编译HTML文件`按钮，即可完成编译
-
-修改chm目录：`contents.hhc`，修改chm索引：`index.hhk`
-
-## 代码错误检查
-
-为确保大家提交的代码的质量，提交代码之前请在项目根目录运行`grunt`命令检查你修改的HTML是否有语法错误
-
-**grunt安装方法**
-
-1. 安装[Python v2.x.x](https://www.python.org/downloads/)
-1. 安装[Node.js](http://nodejs.org/download/),安装后可能需要重启电脑
-1. 命令行运行`npm config set python C:\Python27\python.exe --global`
+1. 安装[Node.js](http://nodejs.org/download/)，安装后可能需要重启电脑
+1. 命令行运行`npm install -g gulp `
 1. 将安装源设置为中国地区，否则会很慢 `npm config set registry http://registry.cnpmjs.org/ --global`
-1. 命令行运行 `npm install -g grunt-cli`
 1. 项目根目录运行`npm install`
+
+### 编译chm
+
+1. windows下安装[HTML Help Workshop](http://download.microsoft.com/download/0/A/9/0A939EF6-E31C-430F-A3DF-DFAE7960D564/htmlhelp.exe)
+1. 在项目根目录运行`gulp chm`命令
+
+如果编译失败，请尝试拷贝`hhc.exe`到项目目录下
+
+### 代码错误检查
+
+在项目根目录运行`gulp htm`命令，将会检查所有html文件的代码合法性
