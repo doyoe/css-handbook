@@ -2,9 +2,9 @@
 <html lang="zh-cn">
 <head>
 <meta charset="utf-8" />
-<title>vm</title>
-<meta name="description" content="CSS3参考手册之: vm" />
-<meta name="keywords" content="vm, css3单位, css3, css3参考手册" />
+<title>dppx</title>
+<meta name="description" content="CSS3参考手册之: dppx" />
+<meta name="keywords" content="dppx, css3单位, css3, css3参考手册" />
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <meta name="robots" content="all" />
 <!--[if lte IE 8]>
@@ -19,14 +19,14 @@
 		<span>&#187;</span>
 		<a href="../index.htm">单位列表</a>
 		<span>&#187;</span>
-		<a href="index.htm" id="category" rel="units/length" name="vm">长度单位</a>
+		<a href="index.htm" id="category" rel="units/resolution" name="dppx">分辨率单位</a>
 		<span>&#187;</span>
 	</div>
 	<div class="to">
 		<span class="label">相关内容：</span>
 		<div class="g-combobox g-transition">
 			<a href="?" class="g-transition target">
-				<strong>其它长度单位参考</strong>
+				<strong>其它分辨率单位参考</strong>
 				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
 			</a>
 			<div class="g-transition list">
@@ -39,7 +39,7 @@
 </nav>
 <header id="hd">
 	<section id="title" class="g-mod">
-		<h1 class="tit">vm</h1>
+		<h1 class="tit">dppx</h1>
 		<ul class="info">
 			<li><strong>版本：CSS3</strong></li>
 		</ul>
@@ -50,17 +50,19 @@
 	<section id="syntax" class="g-mod g-attr">
 		<h2 class="tit">说明：</h2>
 		<div class="cont">
-			<strong>相对于视口的宽度或高度中较小的那个。其中最小的那个被均分为100单位的vm</strong>
+			<strong>每像素包含点的数量（dots per pixel）</strong>
 			<ul>
-				<li>CSS3中已经定义了<a href="vmin.htm">vmin</a>，所以vm最终是否会纳入W3C标准还不确定。</li>
-				<li>
-					<div class="gquote">
-						<p class="gquote-tit"><strong>示例代码：</strong></p>
-						<blockquote class="gquote-cont"><pre><code>h1{font-size:8vm;}</code></pre></blockquote>
-						<p class="gquote-info">如果视口的宽度是300mm，高度是200mm，那么上述代码中h1元素的字号将为16mm，即(8x200)/100，因为高度比宽度要小，所以计算的时候相对于高度。</p>
-					</div>
-				</li>
+				<li>普通屏幕通常包含96dpi，一般将2倍于此的屏幕称之为高分屏，即大于等于192dpi的屏幕，比如Mac视网膜屏就达到了192dpi（即2dppx），打印时一般会需要更大的dpi；</li>
+				<li>1dppx = 96dpi</li>
+				<li>1dpi ≈ 0.39dpcm</li>
+				<li>1dpcm ≈ 2.54dpi</li>
+				<li>1in = 2.54cm = 25.4 mm = 101.6q = 72pt = 6pc = 96px</li>
 			</ul>
+			<div class="gquote">
+				<p class="gquote-tit"><strong>示例代码：</strong></p>
+				<blockquote class="gquote-cont"><pre><code>@media screen and (min-resolution: 2dppx) { ... }
+@media screen and (min-resolution: 1dppx) and (max-resolution: 1.9dppx) { ... }</code></pre></blockquote>
+			</div>
 		</div>
 	</section>
 	<section id="compatible" class="g-mod g-attr">
@@ -84,22 +86,20 @@
 				<tbody>
 					<tr>
 						<td class="unsupport">6.0-8.0</td>
-						<td class="unsupport">4.0-18.0</td>
-						<td class="unsupport">4.0-6.0</td>
-						<td class="unsupport">4.0-19.0</td>
+						<td rowspan="2" class="support">4.0</td>
+						<td rowspan="2" class="unsupport">4.0-8.0</td>
+						<td class="unsupport">4.0-28.0</td>
 						<td rowspan="2" class="support">15.0</td>
 					</tr>
 					<tr>
 						<td class="support">9.0</td>
-						<td class="support">19.0</td>
-						<td class="support">6.1</td>
-						<td class="support">26.0</td>
+						<td class="support">29.0</td>
 					</tr>
 				</tbody>
 			</table>
 		</div>
 	</section>
-	<section id="example" class="g-mod g-attr">
+	<section class="g-mod g-attr" id="example">
 		<h2 class="tit">示例：</h2>
 		<div class="cont">
 			<textarea cols="90" rows="10">
@@ -107,14 +107,20 @@
 <html lang="zh-cn">
 <head>
 <meta charset="utf-8" />
-<title>vm_CSS参考手册_web前端开发参考手册系列</title>
+<title>dppx_CSS参考手册_web前端开发参考手册系列</title>
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <style>
-p{font-size:5vm;}
+@media screen and (min-resolution: 2dppx) {
+	.normal{display:none;}
+}
+@media screen and (min-resolution: 1dppx) and (max-resolution: 1.9dppx) {
+	.retina{display:none;}
+}
 </style>
 </head>
 <body>
-<p>相对于viewport的宽度或高度中较小的那个然后计算文字大小。</p>
+<p class="retina">视网膜屏</p>
+<p class="normal">普通屏</p>
 </body>
 </html>
 			</textarea>
