@@ -437,6 +437,7 @@ References:
 			xhr.open("GET", url, false);
 		} catch (ex) {
 			return RE_ORIGIN.test(url) ? loadStyleSheet(url.replace(RE_ORIGIN, "")) : EMPTY_STRING;
+			return RE_ORIGIN.test(url) ? loadStyleSheet(url.replace(RE_ORIGIN, EMPTY_STRING)) : EMPTY_STRING;
 		}
 		xhr.send();
 		if(xhr.status === 200){
