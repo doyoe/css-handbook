@@ -109,7 +109,11 @@ a:hover{color:#C30;text-decoration:underline;}
 .g-combobox .target span:after{position:absolute;top:9px;left:8px;content:'';overflow:hidden;width:0;height:0;border-color:#efefef transparent transparent;_border-color:#efefef;border-style:solid dashed dashed;border-width:5px;}
 .g-combobox .target span ins{position:absolute;top:9px;left:8px;overflow:hidden;width:0;height:0;border-color:#efefef transparent transparent;_border-color:#efefef;border-style:solid dashed dashed;border-width:5px;}
 .g-combobox .list{position:absolute;top:-999999px;left:0;_left:-1px;}
-.g-combobox .list ul{
+.g-combobox,
+.g-combobox .target {
+	display: inline-block;
+}
+.g-combobox .list ul {
 	overflow:auto;max-height:245px;_height:245px;width:158px;border:1px solid #999;border-radius:3px;box-shadow:0 0 5px rgba(0,0,0,.3);
 	padding:1px;
 	border-radius:3px;

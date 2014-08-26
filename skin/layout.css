@@ -15,7 +15,7 @@ body{height:100%;}
 #ft #about{height:28px;margin:0 10px 10px;text-shadow:0 0 5px rgba(0,0,0,.2);line-height:2.2;}
 /* module: mashead */
 #mashead{margin-top:0;}
-#mashead .sitename{display:inline;float:left;margin:15px 20px 0 40px;}
+#mashead .sitename{display:inline;float:left;margin:15px 20px 0 40px;_width: 50%}
 #mashead .sitename h1{color:#fff;font-size:32px;line-height:1;text-shadow:1px 1px 0 rgba(0,0,0,1),1px 1px 5px rgba(255,255,255,.8);}
 #mashead .sitename h2{color:#333;font-weight:normal;text-shadow:1px 1px 0 rgba(255,255,255,.3),1px 1px 5px rgba(0,0,0,.1);}
 #mashead .related{float:right;padding:46px 10px 0 0;}
