@@ -599,9 +599,9 @@ if (!Global.isLocal && Global.name) {
 					'vh' : [],
 					'vmax' : [],
 					'vmin' : [],
-					'vm' : [],
 					'cm' : [],
 					'mm' : [],
+					'q' : [],
 					'in' : [],
 					'pt' : [],
 					'pc' : [],
@@ -628,6 +628,12 @@ if (!Global.isLocal && Global.name) {
 					'index' : ['布局(Layout-specific)','其它布局单位参考'],
 					'fr' : [],
 					'gr' : []
+				},
+				'resolution' : {
+					'index' : ['分辨率(Resolution)','其它分辨率单位参考'],
+					'dpi' : [],
+					'dpcm' : [],
+					'dppx' : []
 				}
 			},
 

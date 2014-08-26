@@ -2,9 +2,9 @@
 <html lang="zh-cn">
 <head>
 <meta charset="utf-8" />
-<title>ms</title>
-<meta name="description" content="CSS3参考手册之: ms" />
-<meta name="keywords" content="ms, css3单位, css3, css3参考手册" />
+<title>dpi</title>
+<meta name="description" content="CSS3参考手册之: dpi" />
+<meta name="keywords" content="dpi, css3单位, css3, css3参考手册" />
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <meta name="robots" content="all" />
 <!--[if lte IE 8]>
@@ -19,14 +19,14 @@
 		<span>&#187;</span>
 		<a href="../index.htm">单位列表</a>
 		<span>&#187;</span>
-		<a href="index.htm" id="category" rel="units/time" name="ms">时间单位</a>
+		<a href="index.htm" id="category" rel="units/resolution" name="dpi">分辨率单位</a>
 		<span>&#187;</span>
 	</div>
 	<div class="to">
 		<span class="label">相关内容：</span>
 		<div class="g-combobox g-transition">
 			<a href="?" class="g-transition target">
-				<strong>其它时间单位参考</strong>
+				<strong>其它分辨率单位参考</strong>
 				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
 			</a>
 			<div class="g-transition list">
@@ -39,7 +39,7 @@
 </nav>
 <header id="hd">
 	<section id="title" class="g-mod">
-		<h1 class="tit">ms</h1>
+		<h1 class="tit">dpi</h1>
 		<ul class="info">
 			<li><strong>版本：CSS3</strong></li>
 		</ul>
@@ -50,10 +50,19 @@
 	<section id="syntax" class="g-mod g-attr">
 		<h2 class="tit">说明：</h2>
 		<div class="cont">
-			<strong>毫秒</strong>
+			<strong>每英寸包含点的数量（dots per inch）</strong>
 			<ul>
-				<li>1s = 1000ms</li>
+				<li>普通屏幕通常包含96dpi，一般将2倍于此的屏幕称之为高分屏，即大于等于192dpi的屏幕，比如Mac视网膜屏就达到了192dpi（即2dppx），打印时一般会需要更大的dpi；</li>
+				<li>1dppx = 96dpi</li>
+				<li>1dpi ≈ 0.39dpcm</li>
+				<li>1dpcm ≈ 2.54dpi</li>
+				<li>1in = 2.54cm = 25.4 mm = 101.6q = 72pt = 6pc = 96px</li>
 			</ul>
+			<div class="gquote">
+				<p class="gquote-tit"><strong>示例代码：</strong></p>
+				<blockquote class="gquote-cont"><pre><code>@media screen and (min-resolution: 96dpi) { ... }
+@media print and (min-resolution: 300dpi) { ... }</code></pre></blockquote>
+			</div>
 		</div>
 	</section>
 	<section id="compatible" class="g-mod g-attr">
@@ -78,18 +87,19 @@
 					<tr>
 						<td class="unsupport">6.0-8.0</td>
 						<td rowspan="2" class="support">4.0</td>
-						<td rowspan="2" class="support">4.0</td>
-						<td rowspan="2" class="support">4.0</td>
+						<td rowspan="2" class="unsupport">4.0-8.0</td>
+						<td class="unsupport">4.0-28.0</td>
 						<td rowspan="2" class="support">15.0</td>
 					</tr>
 					<tr>
 						<td class="support">9.0</td>
+						<td class="support">29.0</td>
 					</tr>
 				</tbody>
 			</table>
 		</div>
 	</section>
-	<section id="example" class="g-mod g-attr">
+	<section class="g-mod g-attr" id="example">
 		<h2 class="tit">示例：</h2>
 		<div class="cont">
 			<textarea cols="90" rows="10">
@@ -97,30 +107,20 @@
 <html lang="zh-cn">
 <head>
 <meta charset="utf-8" />
-<title>ms_CSS参考手册_web前端开发参考手册系列</title>
+<title>dpi_CSS参考手册_web前端开发参考手册系列</title>
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <style>
-h1{font-size:16px;}
-.test{position:absolute;left:8px;width:200px;height:100px;margin:0 5px;padding:10px;border:1px solid #ddd;background-color:#eee;color:#000;
-	-moz-transition-property:left;
-	-moz-transition-duration:300ms;
-	-moz-transition-timing-function:ease-in;
-	-webkit-transition-property:left;
-	-webkit-transition-duration:300ms;
-	-webkit-transition-timing-function:ease-in;
-	-o-transition-property:left;
-	-o-transition-duration:300ms;
-	-o-transition-timing-function:ease-in;
-	transition-property:left;
-	transition-duration:300ms;
-	transition-timing-function:ease-in;
+@media screen and (min-resolution: 192dpi) {
+	.normal{display:none;}
 }
-.test:hover{left:100px;}
+@media screen and (min-resolution: 72dpi) and (max-resolution: 191dpi) {
+	.retina{display:none;}
+}
 </style>
 </head>
 <body>
-<h1>请将鼠标移动到下面的矩形上：</h1>
-<div class="test">矩形在300ms内慢慢向右移动<br />transition-duration:300ms;</div>
+<p class="retina">视网膜屏</p>
+<p class="normal">普通屏</p>
 </body>
 </html>
 			</textarea>
