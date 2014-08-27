@@ -537,7 +537,60 @@ if (!Global.isLocal && Global.name) {
 			},
 
 			values : {
-				'index' : ['取值 Values','其它取值参考'],
+				'index' : ['取值 Values','其它取值与单位参考'],
+				'length' : {
+					'index' : ['长度(Length)','长度值与单位参考'],
+					'length' : ['&lt;length&gt;'],
+					'em' : [],
+					'ex' : [],
+					'ch' : [],
+					'rem' : [],
+					'vw' : [],
+					'vh' : [],
+					'vmax' : [],
+					'vmin' : [],
+					'cm' : [],
+					'mm' : [],
+					'q' : [],
+					'in' : [],
+					'pt' : [],
+					'pc' : [],
+					'px' : []
+				},
+				'angle' : {
+					'index' : ['角度(Angle)','角度值与单位参考'],
+					'angle' : ['&lt;angle&gt;'],
+					'deg' : [],
+					'grad' : [],
+					'rad' : [],
+					'turn' : []
+				},
+				'time' : {
+					'index' : ['时间(Time)','时间值与单位参考'],
+					'time' : ['&lt;time&gt;'],
+					's' : [],
+					'ms' : []
+				},
+				'frequency' : {
+					'index' : ['频率(Frequency)','频率值与单位参考'],
+					'frequency' : ['&lt;frequency&gt;'],
+					'Hz' : [],
+					'kHz' : []
+				},
+				'layout-specific' : {
+					'index' : ['布局(Layout-specific)','布局值与单位参考'],
+					'fraction' : ['&lt;fraction&gt;'],
+					'grid' : ['&lt;grid&gt;'],
+					'fr' : [],
+					'gr' : []
+				},
+				'resolution' : {
+					'index' : ['分辨率(Resolution)','其它分辨率单位参考'],
+					'resolution' : ['&lt;resolution&gt;'],
+					'dpi' : [],
+					'dpcm' : [],
+					'dppx' : []
+				},
 				'color' : {
 					'index' : ['颜色(Color)','其它颜色值参考'],
 					'color-name' : ['Color Name'],
@@ -561,7 +614,7 @@ if (!Global.isLocal && Global.name) {
 					'calc()' : [],
 					'min()' : [],
 					'max()' : [],
-					'cycle()' : []
+					'toggle()' : []
 				},
 				'image' : {
 					'index' : ['图像(Image)','其它图像值参考'],
@@ -573,67 +626,8 @@ if (!Global.isLocal && Global.name) {
 				'numeric' : {
 					'index' : ['数字(Numeric)','其它数字值参考'],
 					'number' : ['&lt;number&gt;'],
-					'integer' : ['&lt;integer&gt;']
-				},
-				'other' : {
-					'index' : ['其它(Other)','其它取值参考'],
-					'length' : ['&lt;length&gt;'],
-					'percentage' : ['&lt;percentage&gt;'],
-					'angle' : ['&lt;angle&gt;'],
-					'time' : ['&lt;time&gt;'],
-					'frequency' : ['&lt;frequency&gt;'],
-					'fraction' : ['&lt;fraction&gt;'],
-					'grid' : ['&lt;grid&gt;']
-				}
-			},
-
-			units : {
-				'index' : ['单位 Units','其它单位参考'],
-				'length' : {
-					'index' : ['长度(Length)','其它长度单位参考'],
-					'em' : [],
-					'ex' : [],
-					'ch' : [],
-					'rem' : [],
-					'vw' : [],
-					'vh' : [],
-					'vmax' : [],
-					'vmin' : [],
-					'cm' : [],
-					'mm' : [],
-					'q' : [],
-					'in' : [],
-					'pt' : [],
-					'pc' : [],
-					'px' : []
-				},
-				'angle' : {
-					'index' : ['角度(Angle)','其它角度单位参考'],
-					'deg' : [],
-					'grad' : [],
-					'rad' : [],
-					'turn' : []
-				},
-				'time' : {
-					'index' : ['时间(Time)','其它时间单位参考'],
-					's' : [],
-					'ms' : []
-				},
-				'frequency' : {
-					'index' : ['频率(Frequency)','其它频率单位参考'],
-					's' : [],
-					'ms' : []
-				},
-				'layout-specific' : {
-					'index' : ['布局(Layout-specific)','其它布局单位参考'],
-					'fr' : [],
-					'gr' : []
-				},
-				'resolution' : {
-					'index' : ['分辨率(Resolution)','其它分辨率单位参考'],
-					'dpi' : [],
-					'dpcm' : [],
-					'dppx' : []
+					'integer' : ['&lt;integer&gt;'],
+					'percentage' : ['&lt;percentage&gt;']
 				}
 			},
 
