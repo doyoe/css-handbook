@@ -5,7 +5,7 @@
 *Author Joy Du
 *Reset
 */
-body{background:#FFF;color:#3D464B;font:13px/1.7 verdana,'\5b8b\4f53',arial,georgia,helvetica,sans-serif;}
+body{background:#FFF;color:#3D464B;font:13px/1.5 verdana,'\5b8b\4f53',arial,georgia,helvetica,sans-serif;}
 html,body,ul,ol,dl,dd,h1,h2,h3,h4,h5,h6,pre,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0;padding:0;}
 table{border-collapse:collapse;border-spacing:0;table-layout:fixed;}
 ul,ol{list-style:none;}
@@ -89,7 +89,12 @@ a:hover{color:#C30;text-decoration:underline;}
 .g-tree li .open{background-position:0 4px;}
 .g-tree li .css3-new,.level-type .css3-new{background-position:0 -54px;}
 .g-tree li .css3-change,.level-type .css3-change{background-position:0 -76px;}
-.g-tree dfn,.g-tree a{padding:0 2px;border-radius:3px;color:#000;cursor:pointer;}
+.g-tree dfn,.g-tree a{color:#000;cursor:pointer;}
+.g-tree a {
+	display: inline-block;;
+	border-radius: 3px;
+	padding: 0 2px;
+}
 .g-tree a:hover{color:#000;text-decoration:none;}
 .g-tree .css3-new a,.g-tree .css3-new a:hover{color:#f60;}
 .g-tree .css3-change a,.g-tree .css3-change a:hover{color:#6a5acd;}
@@ -109,7 +114,11 @@ a:hover{color:#C30;text-decoration:underline;}
 .g-combobox .target span:after{position:absolute;top:9px;left:8px;content:'';overflow:hidden;width:0;height:0;border-color:#efefef transparent transparent;_border-color:#efefef;border-style:solid dashed dashed;border-width:5px;}
 .g-combobox .target span ins{position:absolute;top:9px;left:8px;overflow:hidden;width:0;height:0;border-color:#efefef transparent transparent;_border-color:#efefef;border-style:solid dashed dashed;border-width:5px;}
 .g-combobox .list{position:absolute;top:-999999px;left:0;_left:-1px;}
-.g-combobox .list ul{
+.g-combobox,
+.g-combobox .target {
+	display: inline-block;
+}
+.g-combobox .list ul {
 	overflow:auto;max-height:245px;_height:245px;width:158px;border:1px solid #999;border-radius:3px;box-shadow:0 0 5px rgba(0,0,0,.3);
 	padding:1px;
 	border-radius:3px;
