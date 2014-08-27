@@ -100,32 +100,27 @@
 <title>counter()函数_CSS参考手册_web前端开发参考手册系列</title>
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <style>
-ol{margin:0;padding:0;list-style:none;}
-ol ol{margin-left:2em;}
-ol li{counter-increment:item;}
-ol li:before{content:counter(item)". ";color:#f00;}
-ol li li{counter-increment:item2;}
-ol li li:before{content:counter(item)"."counter(item2)". ";}
-ol li li li{counter-increment:item3;}
-ol li li li:before{content:counter(item)"."counter(item2)"."counter(item3)". ";}
+ol{margin:0;padding:0;list-style:none;counter-reset:item;}
+li{padding-left:2em;}
+li:before{counter-increment:item;content:counter(item)".";color:#f00;}
 </style>
 </head>
 <body>
 <ol class="test">
-	<li>Node1
+	<li>Node
 		<ol>
-			<li>Node1.1
+			<li>Node
 				<ol>
-					<li>Node1.1.1</li>
-					<li>Node1.1.2</li>
-					<li>Node1.1.3</li>
+					<li>Node</li>
+					<li>Node</li>
+					<li>Node</li>
 				</ol>
 			</li>
-			<li>Node1.2</li>
+			<li>Node</li>
 		</ol>
 	</li>
-	<li>Node2</li>
-	<li>Node3</li>
+	<li>Node</li>
+	<li>Node</li>
 </ol>
 </body>
 </html>
