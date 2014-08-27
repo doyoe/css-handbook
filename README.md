@@ -12,8 +12,7 @@ CSS参考手册目前正在v4.1.5草案中。
 * 更新了手册对浏览器版本的支持策略，较低版本的数据将不再更新。</li>
 * 修订了[选择符](http://css.doyoe.com/selectors/index.htm)模块的参考描述，并更新了浏览器支持情况；
 * 修订了[语法与规则](http://css.doyoe.com/rules/index.htm)模块的参考描述，并更新了浏览器支持情况；
-* 新增了相对长度单位 [vmax](http://css.doyoe.com/units/length/vmax.htm) 与 [vmin](http://css.doyoe.com/units/length/vmin.htm)；
-* 更新了相对长度单位 [vw](http://css.doyoe.com/units/length/vw.htm)、[vh](http://css.doyoe.com/units/length/vh.htm) 的浏览器兼容性数据；
+* 合并并修订了取值和单位两大模块；
 * 修订了[animation-timing-function示例](http://css.doyoe.com/properties/transition/transition-timing-function.htm)；
 * 修订了[transition-delay属性说明](http://css.doyoe.com/properties/transition/transition-delay.htm)；
 * 修订了[target选择器详细解释及示例](http://css.doyoe.com/selectors/pseudo-classes/target.htm)；
