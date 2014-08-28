@@ -47,7 +47,7 @@ ol.gitem{list-style-type:decimal;}
 .g-data .browser-chrome{background-position:0 -66px;}
 .g-data .browser-safari{background-position:0 -99px;}
 .g-data .browser-opera{background-position:0 -132px;}
-.g-data .fix{margin-left:5px;padding:0 3px;border-radius:3px;background-color:#f90;color:#000;}
+.g-data .fix{margin-left:5px;padding:0 3px;border-radius:3px;background-color:#f90;color:#000;white-space:nowrap;}
 /* comm: g-attr */
 .g-attr .tit{padding:0 10px;background:#F3F3F3;font-size:14px;line-height:2;}
 .g-attr .cont{padding:10px;color:#666;}
@@ -87,10 +87,10 @@ ol.gitem{list-style-type:decimal;}
 #title .copylink{display:inline;float:left;overflow:hidden;height:19px;margin-top:10px;padding-left:15px;background:url(ico.png) no-repeat 0 -40px;}
 #copylink.hover{color:#C30;text-decoration:underline;}
 #title .share{display:inline;float:left;position:relative;margin:8px 15px 0 15px;}
-#title .share .target{padding-right:16px;border:1px solid #0382AD;box-shadow:none;background-color:#45B5DA;background:-webkit-linear-gradient(#45B5DA,#0382AD);background:linear-gradient(#45B5DA,#0382AD);color:#fff;white-space:nowrap;}
-#title .share:hover .target{box-shadow:1px 1px 2px rgba(0,0,0,.1) inset;}
+#title .share .target{padding-right:16px;border:1px solid #0382AD;box-shadow:none;background-color:#45B5DA;background:linear-gradient(#45B5DA,#0382AD);color:#fff;white-space:nowrap;}
 #title .share .target span{background:none;}
-#title .share .list{width:100px;_height:122px;border-color:#0382AD;}
+#title .share .list ul{width:100px;_height:auto;border-color:#0382AD;}
+#title .share:hover .list,#title .share.on .list{height:124px;}
 #title .share li a{padding-left:30px;background:#fff url(ico.png) no-repeat;}
 #title .share li a:hover{background-color:#45B5DA;}
 #title .share li .weibo{background-position:8px -63px;}
@@ -107,10 +107,9 @@ ol.gitem{list-style-type:decimal;}
 #syntax *:target{background-color:#FFF8DD;text-shadow:1px 1px 1px rgba(255,255,255,.5);}
 #syntax strong{font-weight:bold;}
 #syntax .defaultvalue{padding:1px 5px;border-radius:3px;box-shadow:0 1px 2px rgba(0,0,0,.3);background-color:#999;color:#fff;}
-#syntax .css3-value,#syntax .ie-value{position:relative;}
-#syntax .css3-value:after,#syntax .ie-value:after{position:relative;top:-6px;margin-left:3px;padding:0 3px;border-radius:3px;box-shadow:0 1px 2px rgba(0,0,0,.3);font-size:10px;text-transform:lowercase;}
-#syntax .css3-value:after{background-color:#f60;color:#fff;content:'CSS3';}
-#syntax .ie-value:after{background-color:#999;color:#fff;content:'IE';}
+#syntax ins:after,#syntax del:after{position:relative;top:-6px;margin-left:3px;padding:0 3px;border-radius:3px;box-shadow:0 1px 2px rgba(0,0,0,.3);color:#fff;content:attr(title);font-size:10px;text-transform:lowercase;}
+#syntax ins[title^="css"]:after{background-color:#f60;}
+#syntax del[title^="ie"]:after{background-color:#999;}
 /* module: value */
 #value dl{zoom:1;overflow:hidden;}
 #value dt{clear:left;float:left;font-weight:bold;}

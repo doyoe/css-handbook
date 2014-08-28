@@ -32,7 +32,7 @@ a:hover{color:#C30;text-decoration:underline;}
 /* comm: g-color */
 .g-color-css3-change{color:#6a5acd;}
 .g-color-css3-new{color:#f60;}
-.g-color-ie{color:#999;}
+.g-color-old{color:#999;}
 .g-color-light{color:#C30;}
 /* comm: g-ico,g-btn */
 .g-ico{display:inline-block;background:url(ico.png) no-repeat;line-height:1.231;}
@@ -111,10 +111,10 @@ a:hover{color:#C30;text-decoration:underline;}
 .g-combobox .target:hover{text-decoration:none;}
 .g-combobox .target strong{display:block;padding:1px 8px 0;font-weight:normal;}
 .g-combobox .target span{position:absolute;top:0;_top:1px;right:0;_right:1px;overflow:hidden;width:25px;height:23px;background:#aaa;color:rgba(0,0,0,0);font:0/0 arial;}
-.g-combobox .target span:after{content:"";-webkit-transition:all .3s ease-in;transition:all .3s ease-in;}
+.g-combobox .target span:after{content:"";-webkit-transition:.3s ease-in;transition:.3s ease-in;}
 .g-combobox .target span:after,
 .g-combobox .target span ins{position:absolute;top:9px;left:8px;overflow:hidden;width:0;height:0;border-color:#efefef transparent transparent;border-style:solid dashed dashed;border-width:5px;}
-.g-combobox .list{position:absolute;left:0;opacity:0;overflow:hidden;height:0;}
+.g-combobox .list{position:absolute;left:0;_left:-1px;opacity:0;overflow:hidden;height:0;margin-top:-1px;}
 .g-combobox .list ul{overflow:auto;max-height:245px;_height:245px;width:156px;border:1px solid #999;border-radius:3px;box-shadow:0 0 5px rgba(0,0,0,.3);padding:1px;background:#fff;}
 .g-combobox .list li{zoom:1;}
 .g-combobox .list a{display:block;zoom:1;padding:1px 8px;background-color:#fefefe;}
@@ -123,4 +123,4 @@ a:hover{color:#C30;text-decoration:underline;}
 .g-combobox .on span ins,.g-combobox:hover .target span:after{top:4px;border-color:transparent transparent #efefef;border-style:dashed dashed solid;}
 .g-combobox:hover .list,.g-combobox.on .list{height:249px;opacity:1;}
 /* comm: g-transition */
-.g-transition{-webkit-transition:all .5s ease-in;transition:all .5s ease-in;}
+.g-transition{-webkit-transition:.5s ease-in;transition:.5s ease-in;}
