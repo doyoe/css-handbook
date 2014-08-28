@@ -15,7 +15,7 @@ body{height:100%;}
 #ft #about{height:28px;margin:0 10px 10px;text-shadow:0 0 5px rgba(0,0,0,.2);line-height:2.2;}
 /* module: mashead */
 #mashead{margin-top:0;}
-#mashead .sitename{display:inline;float:left;margin:15px 20px 0 40px;_width: 50%}
+#mashead .sitename{display:inline;float:left;margin:15px 20px 0 40px;}
 #mashead .sitename h1{color:#fff;font-size:32px;line-height:1;text-shadow:1px 1px 0 rgba(0,0,0,1),1px 1px 5px rgba(255,255,255,.8);}
 #mashead .sitename h2{color:#333;font-weight:normal;text-shadow:1px 1px 0 rgba(255,255,255,.3),1px 1px 5px rgba(0,0,0,.1);}
 #mashead .related{float:right;padding:46px 10px 0 0;}
@@ -29,10 +29,11 @@ body{height:100%;}
 #mashead .related .g-combobox .target strong{padding:0 0 0 5px;}
 #mashead .related .g-combobox .target span{background:none;}
 #mashead .related .g-combobox:hover .target,#mashead .related .on .target{_padding:0 25px 0 0;_border:1px solid #026E93;border-color:#026E93;box-shadow:0 0 5px rgba(0,0,0,.3);background:#45B5DA;}
-#mashead .related .g-combobox .list{right:0;left:auto;overflow:hidden;width:125px;height:auto;border-color:#0382AD;}
-#mashead .related .g-combobox .list ul{background:#45B5DA;}
+#mashead .related .g-combobox .list{right:0;left:auto;width:125px;}
+#mashead .related .g-combobox .list ul{_height:auto;border-color:#0382AD;background:#45B5DA;}
 #mashead .related .g-combobox .list a{background-color:#45B5DA;}
 #mashead .related .g-combobox .list a:hover{background:#0382AD;}
+#mashead .related .g-combobox:hover .list,#mashead .related .g-combobox.on .list{height:76px;}
 #mashead .related a{color:#fff;}
 /* module: navigation */
 #navigation{margin-top:0;padding:8px;}
