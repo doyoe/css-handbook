@@ -67,6 +67,7 @@ ol.gitem{list-style-type:decimal;}
 .g-attr .unsupport{background:#FF9090;}
 .g-attr .partsupport{background:#fdd;}
 .g-attr .experimentsupport{background:#f90;}
+.g-attr xmp{white-space:pre-wrap;}
 /* comm: g-browser(test browser) */
 .g-browser p{zoom:1;overflow:hidden;color:#333;}
 .g-browser ul{float:right;}
