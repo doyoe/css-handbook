@@ -50,8 +50,10 @@ window.topDocument = window.top.document;
 var Global = {
 	//在线手册根目录，默认值
 	rootPath: "http://css.doyoe.com",
-	//是否本地浏览或者chm浏览方式
-	isLocal: /^mk:$/i.test(location.protocol)
+	//是否chm浏览方式
+	isLocal: /^mk:$/i.test(location.protocol),
+	//是否非IE下浏览
+	notIE: document.querySelector && !(document.documentMode < 10)
 };
 
 // 下拉菜单的展开收起的构造函数,参数s为下拉菜单最外层的容器;
@@ -991,7 +993,7 @@ Global.folding($('.g-combobox',topDocument));
 		onFolderList.addClass('unfold');
 	})();
 
-	if(!$.browser.msie && dytree.prop('loaded')){
+	if(Global.notIE && dytree.prop('loaded')){
 		return;
 	}
 
@@ -1009,22 +1011,20 @@ Global.folding($('.g-combobox',topDocument));
 	})
 
 	//点击链接时更改右侧iframe的地址,显示当前选择,阻止默认行为
-	allLinks.live({
-		click : function(e){
-			//阻止默认行为
-			e.preventDefault();
-			var _this = $(this),
-				iframeSrc = _this.attr('href');
+	dytree.on("click", "a", function(e){
+		//阻止默认行为
+		e.preventDefault();
+		var _this = $(this),
+			iframeSrc = _this.attr('href');
 
-			//更改右侧iframe地址
-			iframe.attr('src',iframeSrc);
+		//更改右侧iframe地址
+		iframe.attr('src',iframeSrc);
 
-			//显示当前选择
-			allLinks.removeClass('on');
-			_this.addClass('on');
+		//显示当前选择
+		allLinks.removeClass('on');
+		_this.addClass('on');
 
-		}
-	})
+	});
 
 	dytree.prop('loaded', true);
 
@@ -1148,9 +1148,9 @@ Global.folding($('.g-combobox',topDocument));
 	//弹出层的调用
 	(function(){
 
-		//非火狐下第二次打开不用重新注册事件
-		if(!($.browser.msie) && $('#offer',topDocument).prop('loaded')){return false};
-		$('.offer',topDocument).on({
+		//非IE下第二次打开不用重新注册事件
+		if( Global.notIE && $('#offer',topDocument).prop('loaded')){return false};
+		$('.offer', topDocument).on({
 			click : function(e){
 				e.preventDefault();
 				var opts = {
