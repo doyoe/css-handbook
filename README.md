@@ -4,21 +4,22 @@
 
 ##版本更新
 
-###最新版本：v4.1.5(WD)
+###草案版本：v4.1.6(WD)
 
-CSS参考手册目前正在v4.1.5草案中。
+CSS参考手册目前正在v4.1.6草案中。广泛接受[Issues](https://github.com/doyoe/css-handbook/issues)和[Pull Requests](https://github.com/doyoe/css-handbook/pulls)
+
+###最新版本：v4.1.5
+
+更新时间：2014.08.28
 
 * 手册已在[GitHub](https://github.com/doyoe/css-handbook)开源，欢迎大家提交[Issues](https://github.com/doyoe/css-handbook/issues)和[Pull Requests](https://github.com/doyoe/css-handbook/pulls)
 * 更新了手册对浏览器版本的支持策略，较低版本的数据将不再更新。</li>
 * 修订了[选择符](http://css.doyoe.com/selectors/index.htm)模块的参考描述，并更新了浏览器支持情况；
 * 修订了[语法与规则](http://css.doyoe.com/rules/index.htm)模块的参考描述，并更新了浏览器支持情况；
-* 合并并修订了取值和单位两大模块；
-* 修订了[animation-timing-function示例](http://css.doyoe.com/properties/transition/transition-timing-function.htm)；
-* 修订了[transition-delay属性说明](http://css.doyoe.com/properties/transition/transition-delay.htm)；
-* 修订了[target选择器详细解释及示例](http://css.doyoe.com/selectors/pseudo-classes/target.htm)；
+* 合并并修订了[取值与单位](http://css.doyoe.com/values/index.htm)两大模块；
 * 修订了[Table](http://css.doyoe.com/properties/table/index.htm)模块下的大部分属性的参考描述，更新了浏览器支持版本；；
-* 完善 [rgba 透明模式的全兼容解决方案，附加透明度16进制对应表](http://css.doyoe.com/values/color/rgba.htm)；
 * 新增了[参考资源列表](http://css.doyoe.com/experience/refer.htm)；
+* 一些其它修改，包括：语法错误，连接错误，UI微调等；
 
 ## GitHub计划
 

@@ -57,8 +57,16 @@
 		<h2 class="tit">说明：</h2>
 		<div class="cont">
 			<strong>匹配相关URL指向的E元素。</strong>
-            <p><strong class="note">解释：</strong>URL 后面跟有锚名称 #，指向文档内某个具体的元素。这个被链接的元素就是目标元素(target element)。</p>
-            <p><code>:target</code> 选择器即用于选取当前活动的目标元素。详细参看示例，IE8不支持此属性。</p>
+            <p><strong class="note">解释：</strong>URL后面跟锚点#，指向文档内某个具体的元素。这个被链接的元素就是目标元素(target element)，:target选择器用于选取当前活动的目标元素。</p>
+            <div class="gquote">
+				<p class="gquote-tit"><strong>示例代码：</strong></p>
+				<blockquote class="gquote-cont"><code><xmp>#demo:target{color:#f00;}
+
+<div id="demo">
+	<p>E:target伪类使用方法</p>
+</div></xmp></code></blockquote>
+					<p class="gquote-info">假设上述代码在页面 a.html 中，那么当访问 a.html#demo 时，这个div元素将会被:target命中</p>
+			</div>
 		</div>
 	</section>
 	<section class="g-mod g-attr" id="compatible">
