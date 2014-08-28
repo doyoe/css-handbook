@@ -173,6 +173,7 @@ gulp.task("chm", function() {
 		hhk += "</UL></BODY></HTML>";
 
 		hhc += "</BODY></HTML>";
+
 		for (var i in files) {
 			hhp += i + "\n";
 		}
