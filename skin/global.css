@@ -5,7 +5,7 @@
 *Author Joy Du
 *Reset
 */
-body{background:#FFF;color:#3D464B;font:13px/1.5 verdana,'\5b8b\4f53',arial,georgia,helvetica,sans-serif;}
+body{background:#FFF;color:#3D464B;font:13px/1.7 verdana,'\5b8b\4f53',arial,georgia,helvetica,sans-serif;}
 html,body,ul,ol,dl,dd,h1,h2,h3,h4,h5,h6,pre,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0;padding:0;}
 table{border-collapse:collapse;border-spacing:0;table-layout:fixed;}
 ul,ol{list-style:none;}
@@ -111,25 +111,16 @@ a:hover{color:#C30;text-decoration:underline;}
 .g-combobox .target:hover{text-decoration:none;}
 .g-combobox .target strong{display:block;padding:1px 8px 0;font-weight:normal;}
 .g-combobox .target span{position:absolute;top:0;_top:1px;right:0;_right:1px;overflow:hidden;width:25px;height:23px;background:#aaa;color:rgba(0,0,0,0);font:0/0 arial;}
-.g-combobox .target span:after{position:absolute;top:9px;left:8px;content:'';overflow:hidden;width:0;height:0;border-color:#efefef transparent transparent;_border-color:#efefef;border-style:solid dashed dashed;border-width:5px;}
-.g-combobox .target span ins{position:absolute;top:9px;left:8px;overflow:hidden;width:0;height:0;border-color:#efefef transparent transparent;_border-color:#efefef;border-style:solid dashed dashed;border-width:5px;}
-.g-combobox .list{position:absolute;top:-999999px;left:0;_left:-1px;}
-.g-combobox,
-.g-combobox .target {
-	display: inline-block;
-}
-.g-combobox .list ul {
-	overflow:auto;max-height:245px;_height:245px;width:158px;border:1px solid #999;border-radius:3px;box-shadow:0 0 5px rgba(0,0,0,.3);
-	padding:1px;
-	border-radius:3px;
-	background:#fff;
-}
+.g-combobox .target span:after{content:"";-webkit-transition:all .3s ease-in;transition:all .3s ease-in;}
+.g-combobox .target span:after,
+.g-combobox .target span ins{position:absolute;top:9px;left:8px;overflow:hidden;width:0;height:0;border-color:#efefef transparent transparent;border-style:solid dashed dashed;border-width:5px;}
+.g-combobox .list{position:absolute;left:0;opacity:0;overflow:hidden;height:0;}
+.g-combobox .list ul{overflow:auto;max-height:245px;_height:245px;width:156px;border:1px solid #999;border-radius:3px;box-shadow:0 0 5px rgba(0,0,0,.3);padding:1px;background:#fff;}
 .g-combobox .list li{zoom:1;}
-.g-combobox .list a{display:block;zoom:1;padding:1px 8px;background-color:#fff;}
+.g-combobox .list a{display:block;zoom:1;padding:1px 8px;background-color:#fefefe;}
 .g-combobox .list a:hover{background-color:#aaa;color:#fff;text-decoration:none;}
 .g-combobox:hover .target{box-shadow:0 0 5px rgba(0,0,0,.3);}
-.g-combobox:hover .target span:after{top:4px;border-color:transparent transparent #efefef;border-style:dashed dashed solid;}
-.g-combobox:hover .target span ins,.g-combobox .on span ins{top:4px;border-color:transparent transparent #efefef;border-style:dashed dashed solid;}
-.g-combobox:hover .list,.g-combobox.on .list{top:100%;_top:24px;}
+.g-combobox .on span ins,.g-combobox:hover .target span:after{top:4px;border-color:transparent transparent #efefef;border-style:dashed dashed solid;}
+.g-combobox:hover .list,.g-combobox.on .list{height:249px;opacity:1;}
 /* comm: g-transition */
-.g-transition{border-color:#f60 transparent transparent;}
+.g-transition{-webkit-transition:all .5s ease-in;transition:all .5s ease-in;}

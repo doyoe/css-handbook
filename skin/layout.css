@@ -29,8 +29,8 @@ body{height:100%;}
 #mashead .related .g-combobox .target strong{padding:0 0 0 5px;}
 #mashead .related .g-combobox .target span{background:none;}
 #mashead .related .g-combobox:hover .target,#mashead .related .on .target{_padding:0 25px 0 0;_border:1px solid #026E93;border-color:#026E93;box-shadow:0 0 5px rgba(0,0,0,.3);background:#45B5DA;}
-#mashead .related .g-combobox .list{right:0;left:auto;overflow:hidden;width:125px;height:auto;border-color:#0382AD;}
-#mashead .related .g-combobox .list ul{background:#45B5DA;}
+#mashead .related .g-combobox .list{right:0;left:auto;overflow:hidden;}
+#mashead .related .g-combobox .list ul{width:125px;border-color:#0382AD;background:#45B5DA;}
 #mashead .related .g-combobox .list a{background-color:#45B5DA;}
 #mashead .related .g-combobox .list a:hover{background:#0382AD;}
 #mashead .related a{color:#fff;}
