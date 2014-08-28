@@ -89,7 +89,8 @@ ol.gitem{list-style-type:decimal;}
 #title .share{display:inline;float:left;position:relative;margin:8px 15px 0 15px;}
 #title .share .target{padding-right:16px;border:1px solid #0382AD;box-shadow:none;background-color:#45B5DA;background:linear-gradient(#45B5DA,#0382AD);color:#fff;white-space:nowrap;}
 #title .share .target span{background:none;}
-#title .share .list ul{width:100px;_height:auto;border-color:#0382AD;}
+#title .share .list{width:100px;}
+#title .share .list ul{_height:auto;border-color:#0382AD;}
 #title .share:hover .list,#title .share.on .list{height:124px;}
 #title .share li a{padding-left:30px;background:#fff url(ico.png) no-repeat;}
 #title .share li a:hover{background-color:#45B5DA;}
