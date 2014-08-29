@@ -71,6 +71,7 @@ ol.gitem{list-style-type:decimal;}
 /* comm: g-browser(test browser) */
 .g-browser p{zoom:1;overflow:hidden;color:#333;}
 .g-browser ul{float:right;}
+.g-browser li{float:left;padding-left:5px;}
 /* comm: g-about */
 .g-about{padding:0 10px;}
 .g-about h2{font-size:14px;line-height:2;}
