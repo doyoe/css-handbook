@@ -152,7 +152,7 @@ gulp.task("chm", function() {
 			files = {};
 
 		recurse(".", function(abspath, rootdir, subdir, filename) {
-			if (!/^(ZeroClipboard\.swf|.\.psd)$/.test(filename) && subdir) {
+			if (!/^(ZeroClipboard\.swf|\w+\.psd|selectivizr.js)$/.test(filename) && subdir) {
 				files[path.normalize(subdir + "/" + filename)] = true;
 			}
 		});
@@ -173,6 +173,7 @@ gulp.task("chm", function() {
 		hhk += "</UL></BODY></HTML>";
 
 		hhc += "</BODY></HTML>";
+
 		for (var i in files) {
 			hhp += i + "\n";
 		}
@@ -201,6 +202,7 @@ gulp.task("chm", function() {
 				exec(hhcPath + " css.hhp", function(error, stdout, stderr) {
 					if (stderr) {
 						console.log(stderr);
+						console.log("chm编译发生错误");
 					} else {
 						opener("css.chm");
 						var rimraf = require("rimraf");
