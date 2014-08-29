@@ -1,7 +1,7 @@
 CSS参考手册
 ==========
 
-by: 飘零雾雨
+持续小步更新中...
 
 ##浏览器支持策略
 
@@ -17,7 +17,6 @@ CSS参考手册目前正在v4.1.6草案中。广泛接受[Issues](https://github
 
 更新时间：2014.08.28
 
-* 手册已在[GitHub](https://github.com/doyoe/css-handbook)开源，欢迎大家提交[Issues](https://github.com/doyoe/css-handbook/issues)和[Pull Requests](https://github.com/doyoe/css-handbook/pulls)
 * 更新了手册对浏览器版本的支持策略，较低版本的数据将不再更新。</li>
 * 修订了[选择符](http://css.doyoe.com/selectors/index.htm)模块的参考描述，并更新了浏览器支持情况；
 * 修订了[语法与规则](http://css.doyoe.com/rules/index.htm)模块的参考描述，并更新了浏览器支持情况；
@@ -28,7 +27,7 @@ CSS参考手册目前正在v4.1.6草案中。广泛接受[Issues](https://github
 
 ## GitHub计划
 
-CSS参考手册从v4.1.4开始，代码都托管到GitHub上。大家可以给手册提Pull Requests。
+CSS参考手册从v4.1.4开始，代码都托管到[GitHub](https://github.com/doyoe/css-handbook)上。大家可以给手册提[Issues](https://github.com/doyoe/css-handbook/issues)和[Pull Requests](https://github.com/doyoe/css-handbook/pulls)。
 
 会阶段性的合并，谢谢。
 
