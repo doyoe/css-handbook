@@ -152,7 +152,7 @@ gulp.task("chm", function() {
 			files = {};
 
 		recurse(".", function(abspath, rootdir, subdir, filename) {
-			if (!/^(ZeroClipboard\.swf|\w+\.psd|selectivizr.js)$/.test(filename) && subdir) {
+			if (!/^(ZeroClipboard\.swf|\w+\.psd|selectivizr.js)$/.test(filename) && subdir && !/^images$/.test(subdir)) {
 				files[path.normalize(subdir + "/" + filename)] = true;
 			}
 		});
