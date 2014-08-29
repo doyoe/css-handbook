@@ -812,9 +812,10 @@ if (!Global.isLocal && Global.name) {
 		var testBrowser =
 		'<div class="g-browser g-clear">'+
 			'<ul>'+
-				'<li><a href="https://github.com/doyoe/css-handbook/issues" target="_blank" rel="external" class="external">提交问题</a></li>'+
+				'<li><a href="https://github.com/doyoe/css-handbook/issues" target="_blank" rel="external" class="external">Issues</a></li>'+
+				'<li><a href="https://github.com/doyoe/css-handbook/pulls" target="_blank" rel="external" class="external">Pull Requests</a></li>'+
 			'</ul>'+
-			'<p>说明：本文档兼容性测试基础环境为：windows系统；IE6.0+, Firefox4.0+, Chrome4.0+, Safari4.0+, Opera15.0+</p>'+
+			'<p>Base Browsers: IE6.0+, Firefox4.0+, Chrome4.0+, Safari4.0+, Opera15.0+</p>'+
 		'</div>';
 
 		$('#title').append(testBrowser);
