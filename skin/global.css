@@ -120,7 +120,7 @@ a:hover{color:#C30;text-decoration:underline;}
 .g-combobox .list a{display:block;zoom:1;padding:1px 8px;background-color:#fefefe;}
 .g-combobox .list a:hover{background-color:#aaa;color:#fff;text-decoration:none;}
 .g-combobox:hover .target{box-shadow:0 0 5px rgba(0,0,0,.3);}
-.g-combobox .on span ins,.g-combobox:hover .target span:after{top:4px;border-color:transparent transparent #efefef;border-style:dashed dashed solid;}
+.g-combobox .on span ins,.g-combobox:hover .target span:after{-webkit-transform:translateY(-5px) rotate(180deg);-moz-transform:translateY(-5px) rotate(180deg);transform:translateY(-5px) rotate(180deg);}
 .g-combobox:hover .list,.g-combobox.on .list{height:249px;opacity:1;}
 /* comm: g-transition */
 .g-transition{-webkit-transition:.5s ease-in;transition:.5s ease-in;}

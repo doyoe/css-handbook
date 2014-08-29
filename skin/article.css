@@ -93,7 +93,7 @@ ol.gitem{list-style-type:decimal;}
 #title .share .target span{background:none;}
 #title .share .list{width:100px;}
 #title .share .list ul{_height:auto;border-color:#0382AD;}
-#title .share:hover .list,#title .share.on .list{height:124px;}
+#title .share:hover .list,#title .share.on .list{height:125px;}
 #title .share li a{padding-left:30px;background:#fff url(ico.png) no-repeat;}
 #title .share li a:hover{background-color:#45B5DA;}
 #title .share li .weibo{background-position:8px -63px;}
