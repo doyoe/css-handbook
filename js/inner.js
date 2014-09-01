@@ -855,7 +855,7 @@ if (!Global.isLocal && Global.name) {
 		var container = $('#share'),
 			title = Global.title ? encodeURIComponent('CSS参考手册　' + Global.title + '　精彩呈现：') : encodeURIComponent('CSS参考手册'),
 			url =  Global.url,
-			pic = 'http://css.doyoe.com/images/share.png';
+			pic = Global.rootPath + "/images/share.png";
 
 		if(!container.length) return;
 
