@@ -40,6 +40,7 @@ References:
 
 	// an XMLHttpRequest object then we should get out now.
 	xhr = ieVersion < 7 ? new ActiveXObject("Microsoft.XMLHTTP") : new win[xhr];
+	var ajaxCache = {};
 	
 	// ========================= Common Objects ============================
 
@@ -94,7 +95,9 @@ References:
 	var PLACEHOLDER_STRING					= "$1";
 
 	//PIE
-	var js_path								= doc.scripts[doc.scripts.length - 1].getAttribute("src").replace(/[^\/]+$/, "");
+	var js_path								= doc.scripts[doc.scripts.length - 1];
+	var rawHTML								= unescape(js_path.innerHTML.replace(/(^\s+|\s+$)/g, ""));
+	js_path									= js_path.getAttribute("src").replace(/[^\/]+$/, "");
 	var pie_path							= win.PIE && "behavior" in PIE ? PIE.behavior : js_path.replace(RE_ORIGIN, "") + "PIE.htc";
 
 	function setLengthUnits(){
@@ -134,7 +137,7 @@ References:
 		if(ieVersion < 10){
 			cssText = cssText.replace(/{(([^{}]*)background(-\w+)?\s*:\s*(linear-gradient\s*\([^;]+))/g, function(str, props, propsPre, backSubVal, gradient){
 				return /background(-image)?\s*:[^;]*url\(/g.test(propsPre) ? str : "{" + pie_path + "-pie-background:" + gradient + ";" + props;
-			});
+			}).replace(/{(?=[^{}]*\bborder-image\s*:[^{}]+})/g, "{" + pie_path);
 			if(ieVersion < 9) {
 				cssText = cssText.replace(/{(?=[^{}]*\b(border-radius|\w+-shadow|pie-background)\s*:[^{}]+})/g, "{" + pie_path);
 				if(ieVersion < 8){
@@ -149,7 +152,6 @@ References:
 				}
 			}
 		}
-
 
 		return ieVersion > 8 ? cssText : cssText.replace(RE_PSEUDO_ELEMENTS, PLACEHOLDER_STRING).
 			replace(RE_SELECTOR_GROUP, function(m, prefix, selectorText) {	
@@ -432,7 +434,7 @@ References:
 
 	// --[ loadStyleSheet() ]-----------------------------------------------
 	function loadStyleSheet( url ) {
-		var cssText;
+		var cssText = ajaxCache[url];
 
 		if (window.jQuery) {
 			cssText = jQuery.ajax(url, {
@@ -454,6 +456,7 @@ References:
 					cssText = loadStyleSheet(url.replace(RE_ORIGIN, EMPTY_STRING));
 				}
 			}
+			ajaxCache[url] = cssText;
 		}
 		return cssText || EMPTY_STRING;
 	};
@@ -530,19 +533,26 @@ References:
 				});
 			}
 		}
-		var url, stylesheet, cssText;
-		for (var c = 0; c < doc.styleSheets.length; c++) {
+		var url, stylesheet, cssText, c;
+		for (c = 0; c < doc.styleSheets.length; c++) {
 			stylesheet = doc.styleSheets[c];
 			url = stylesheet.href;
-			if (url && !("rawCssText" in stylesheet) ) {
-				url = resolveUrl(url) || url;
-				cssText = stylesheet["rawCssText"] = patchStyleSheet( parseStyleSheet( url ) );
-				if(cssText && ieVersion > 8){
+			if ((ieVersion > 8 || url) && !("rawCssText" in stylesheet)) {
+				cssText = stylesheet["rawCssText"] = patchStyleSheet(url ? parseStyleSheet(resolveUrl(url) || url) : stylesheet.owningElement.innerHTML);
+				if (cssText && ieVersion > 8) {
 					stylesheet.cssText = cssText;
 				}
 			}
 		}
 		if(ieVersion < 9){
+			stylesheet = doc.getElementsByTagName("style");
+			if(stylesheet.length){
+				c = 0;
+				(rawHTML || (rawHTML = loadStyleSheet(location.href))).replace(/<style\b[^>]*>([\s\S]*?)(?=<\/style>)/ig, function(html, css){
+					stylesheet[c].styleSheet["rawCssText"] = patchStyleSheet(css);
+					c++;
+				});
+			}
 			setLengthUnits();
 		}
 	};

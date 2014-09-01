@@ -934,6 +934,14 @@ if (!Global.isLocal && Global.name) {
 			//复制代码
 			Global.copy(example.find(".g-btn-copy"), content);
 		}
+
+		if(!Global.notIE){
+			var selectivizr = (Global.isLocal ? "" : Global.rootPath) + "/js/selectivizr.js";
+			document.writeln("<script src=\"" + selectivizr + "\">false</script>");
+			if(content){
+				content = content.replace(/\s*$/, "\n<script src=\"" + selectivizr + "\">" + escape(content) + "</script>");
+			}
+		}
 	})();
 
 	//为自己和外层添加展开收起的折叠效果
@@ -952,16 +960,6 @@ if (!Global.isLocal && Global.name) {
 
 //如果是chm版本，没有父层就返回函数
 if(window == window.top){return false;}
-
-//selectivizr.js方式支持css3
-var selectivizr = topDocument.getElementById("selectivizr");
-if (selectivizr) {
-	selectivizr = selectivizr.src;
-	if (!/\w+:\/\//.test(selectivizr)) {
-		selectivizr = Global.rootPath + "/" + selectivizr;
-	}
-	document.writeln("<script src=\"" + selectivizr + "\"></script>");
-}
 
 //给父层添加下拉列表的展开收起的折叠效果
 
