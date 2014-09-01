@@ -84,6 +84,14 @@ a:hover{color:#C30;text-decoration:underline;}
 /* comm: g-tree */
 .g-tree ul{position:relative;display:none;margin-left:17px;}
 .g-tree li{padding:1px 0;}
+.g-tree a,
+.g-tree li,
+.g-tree div,
+.g-combobox {
+
+	white-space: nowrap;
+	position: relative;
+}
 .g-tree li div,.level-type li{height:20px;padding-left:32px;background:url(treeico.png) no-repeat 0 -34px;white-space:nowrap;}
 .g-tree li .haschild{background-position:0 -15px;}
 .g-tree li .open{background-position:0 4px;}
@@ -106,7 +114,6 @@ a:hover{color:#C30;text-decoration:underline;}
 .g-tree .open div.change em,.g-tree .close div.change em,.level-type .change{background-position:0 -96px;}
 .g-tree .new{color:#999;}
 /* comm: g-combobox */
-.g-combobox{position:relative;}
 .g-combobox .target{display:block;position:relative;z-index:2;padding-right:25px;border:1px solid #999;border-radius:3px;box-shadow:inset 1px 1px 2px rgba(0,0,0,.2);background:#fff;color:#333;cursor:pointer;}
 .g-combobox .target:hover{text-decoration:none;}
 .g-combobox .target strong{display:block;padding:1px 8px 0;font-weight:normal;}
@@ -114,13 +121,32 @@ a:hover{color:#C30;text-decoration:underline;}
 .g-combobox .target span:after{content:"";-webkit-transition:.3s ease-in;transition:.3s ease-in;}
 .g-combobox .target span:after,
 .g-combobox .target span ins{position:absolute;top:9px;left:8px;overflow:hidden;width:0;height:0;border-color:#efefef transparent transparent;border-style:solid dashed dashed;border-width:5px;}
-.g-combobox .list{position:absolute;left:0;_left:-1px;opacity:0;overflow:hidden;width:160px;height:0;margin-top:-1px;}
-.g-combobox .list ul{overflow:auto;max-height:245px;_height:245px;border:1px solid #999;border-radius:3px;box-shadow:0 0 5px rgba(0,0,0,.3);padding:1px;background:#fff;}
+.g-combobox .list {
+	box-shadow: 0 0 5px rgba(0,0,0,.3);
+	border: 1px solid #999;
+	margin-top: -9999em;
+	border-radius: 3px;
+	position: absolute;
+	max-height: 245px;
+	overflow: hidden;
+	background: #fff;
+	width: 160px;
+	padding: 1px;
+	opacity: 0;
+	height: 0;
+	left: 0;
+	_left:-1px;
+}
+.g-combobox:hover .list,
+.g-combobox.on .list {
+	margin-top:-1px;
+	height:auto;
+	opacity:1;
+}
 .g-combobox .list li{zoom:1;}
 .g-combobox .list a{display:block;zoom:1;padding:1px 8px;background-color:#fefefe;}
 .g-combobox .list a:hover{background-color:#aaa;color:#fff;text-decoration:none;}
 .g-combobox:hover .target{box-shadow:0 0 5px rgba(0,0,0,.3);}
 .g-combobox .on span ins,.g-combobox:hover .target span:after{-webkit-transform:translateY(-5px) rotate(180deg);-moz-transform:translateY(-5px) rotate(180deg);transform:translateY(-5px) rotate(180deg);}
-.g-combobox:hover .list,.g-combobox.on .list{height:249px;opacity:1;}
 /* comm: g-transition */
-.g-transition{-webkit-transition:.5s ease-in;transition:.5s ease-in;}
+.g-transition{-webkit-transition:opacity .3s ease-in;transition:opacity .3s ease-in;}

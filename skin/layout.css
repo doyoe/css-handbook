@@ -19,6 +19,13 @@ body{height:100%;}
 #mashead .sitename h1{color:#fff;font-size:32px;line-height:1;text-shadow:1px 1px 0 rgba(0,0,0,1),1px 1px 5px rgba(255,255,255,.8);}
 #mashead .sitename h2{color:#333;font-weight:normal;text-shadow:1px 1px 0 rgba(255,255,255,.3),1px 1px 5px rgba(0,0,0,.1);}
 #mashead .related{float:right;padding:46px 10px 0 0;}
+#mashead {
+    white-space: nowrap;
+}
+#mashead li,
+#mashead hgroup {
+    _width: 1px;
+}
 #mashead .related .nav{float:left;}
 #mashead .related .nav li{float:left;position:relative;text-shadow:0 1px 0 rgba(0,0,0,.3);}
 #mashead .related .nav .version{padding:0 6px;color:#9ED55E;}
@@ -29,8 +36,13 @@ body{height:100%;}
 #mashead .related .g-combobox .target strong{padding:0 0 0 5px;}
 #mashead .related .g-combobox .target span{background:none;}
 #mashead .related .g-combobox:hover .target,#mashead .related .on .target{_padding:0 25px 0 0;_border:1px solid #026E93;border-color:#026E93;box-shadow:0 0 5px rgba(0,0,0,.3);background:#45B5DA;}
-#mashead .related .g-combobox .list{right:0;left:auto;width:125px;}
-#mashead .related .g-combobox .list ul{_height:auto;border-color:#0382AD;background:#45B5DA;}
+#mashead .related .g-combobox .list{
+    border-color: #0382AD;
+    background: #45B5DA;
+    width: 125px;
+    left: auto;
+    right: 0;
+}
 #mashead .related .g-combobox .list a{background-color:#45B5DA;}
 #mashead .related .g-combobox .list a:hover{background:#0382AD;}
 #mashead .related .g-combobox:hover .list,#mashead .related .g-combobox.on .list{height:78px;}
