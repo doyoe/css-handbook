@@ -88,7 +88,6 @@ a:hover{color:#C30;text-decoration:underline;}
 .g-tree li,
 .g-tree div,
 .g-combobox {
-
 	white-space: nowrap;
 	position: relative;
 }
