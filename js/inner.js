@@ -937,7 +937,7 @@ if (!Global.isLocal && Global.name) {
 
 		if(!Global.notIE){
 			var selectivizr = (Global.isLocal ? "" : Global.rootPath) + "/js/selectivizr.js";
-			document.writeln("<script src=\"" + selectivizr + "\">false</script>");
+			document.writeln("<script src=\"" + selectivizr + "\"></script>");
 			if(content){
 				content = content.replace(/\s*$/, "\n<script src=\"" + selectivizr + "\">" + escape(content) + "</script>");
 			}
