@@ -47,7 +47,7 @@ ol.gitem{list-style-type:decimal;}
 .g-data .browser-chrome{background-position:0 -66px;}
 .g-data .browser-safari{background-position:0 -99px;}
 .g-data .browser-opera{background-position:0 -132px;}
-.g-data .fix{margin-left:5px;padding:0 3px;border-radius:3px;background-color:#f90;color:#000;white-space:nowrap;}
+.g-data .fix{display:inline-block;margin-left:5px;padding:0 3px;border-radius:3px;background-color:#f90;color:#000;white-space:nowrap;}
 /* comm: g-attr */
 .g-attr .tit{padding:0 10px;background:#F3F3F3;font-size:14px;line-height:2;}
 .g-attr .cont{padding:10px;color:#666;}
