@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>appearance</title>
+<meta name="description" content="CSS3参考手册之: appearance" />
+<meta name="keywords" content="appearance, css3, css3参考手册" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../../skin/article.css" />
+</head>
+<body>
+<nav id="guide" class="g-mod">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="../index.htm">属性列表</a>
+		<span>&#187;</span>
+		<a href="index.htm" id="category" rel="properties/user-interface" name="appearance">用户界面属性</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它用户界面属性</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入快速分类导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">appearance</h1>
+		<ul class="info">
+			<li><strong>版本：CSS3</strong></li>
+			<li>继承性：无</li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="syntax" class="g-mod g-attr">
+		<h2 class="tit">语法：</h2>
+		<div class="cont">
+			<p><strong>appearance</strong>：none | button | button-bevel ...</p>
+			<p><strong>默认值</strong>：<mark class="defaultvalue">none</mark></p>
+			<p><strong>适用于</strong>：所有接受<a href="../dimension/width.htm">width</a>和<a href="../dimension/height.htm">height</a>的元素</p>
+		    <p><strong>继承性</strong>：无</p>
+		</div>
+	</section>
+	<section id="value" class="g-mod g-attr">
+		<h2 class="tit">取值：</h2>
+		<div class="cont">
+			<dl>
+				<dt>content-box：</dt>
+				<dd>padding和border不被包含在定义的width和height之内。对象的实际宽度等于设置的width值和border、padding之和，即 ( Element width = width + border + padding )</dd>
+				<dd>此属性表现为标准模式下的盒模型。</dd>
+				<dt>border-box：</dt>
+				<dd>padding和border被包含在定义的width和height之内。对象的实际宽度就等于设置的width值，即使定义有border和padding也不会改变对象的实际宽度，即 ( Element width = width )</dd>
+				<dd>此属性表现为怪异模式下的盒模型。</dd>
+			</dl>
+			<div class="info">
+				<h3>示例：</h3>
+				<ul>
+					<li>
+						<h4>content-box:</h4>
+						<code>.test1{ appearance:content-box; width:200px; padding:10px; border:15px solid #eee; }</code>
+						<p><img src="images/content-box.png" alt="content-box" /></p>
+					</li>
+					<li>
+						<h4>border-box:</h4>
+						<code>.test2{ appearance:border-box; width:200px; padding:10px; border:15px solid #eee; }</code>
+						<p><img src="images/border-box.png" alt="border-box" /></p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
+		<h2 class="tit">说明：</h2>
+		<div class="cont">
+			<strong>设置或检索对象的盒模型组成模式。</strong>
+			<ul>
+				<li>对应的脚本特性为<strong>boxSizing</strong>。</li>
+			</ul>
+		</div>
+	</section>
+	<section id="compatible" class="g-mod g-attr">
+		<h2 class="tit">兼容性：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">墨绿</span> = 部分支持</li>
+				<li><span class="experimentsupport">橙色</span> = 实验性质</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th><span class="browser-ie">IE</span></th>
+						<th><span class="browser-firefox">Firefox</span></th>
+						<th><span class="browser-safari">Safari</span></th>
+						<th><span class="browser-chrome">Chrome</span></th>
+						<th><span class="browser-opera">Opera</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td rowspan="2" class="unsupport">6.0-8.0</td>
+						<td rowspan="2" class="partsupport">4.0-18.0</td>
+						<td rowspan="2" class="partsupport">3.1-8.0</td>
+						<td rowspan="2" class="partsupport">4.0-40.0</td>
+						<td class="unsupport">9.6-12.1</td>
+					</tr>
+					<tr>
+						<td class="partsupport">15.0</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+	<section id="example" class="g-mod g-attr">
+		<h2 class="tit">示例：</h2>
+		<div class="cont">
+			<textarea cols="90" rows="10">
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>appearance_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<style>
+.test{width:200px;height:70px;padding:10px;border:15px solid #999;-moz-appearance:content-box;-ms-appearance:content-box;appearance:content-box;background:#eee;}
+.test2{width:200px;height:70px;padding:10px;border:15px solid #999;-moz-appearance:border-box;-ms-appearance:border-box;appearance:border-box;background:#eee;margin-top:20px;}
+</style>
+</head>
+<body>
+<div class="test">content-box</div>
+<div class="test2">border-box</div>
+</body>
+</html>
+			</textarea>
+			<p><input type="button" value="运行" class="g-btn g-btn-sure" /></p>
+		</div>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/inner.js"></script>
+</body>
+</html>

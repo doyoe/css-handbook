@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>pointer-events</title>
+<meta name="description" content="CSS3参考手册之: pointer-events" />
+<meta name="keywords" content="pointer-events, css3, css3参考手册" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../../skin/article.css" />
+</head>
+<body>
+<nav id="guide" class="g-mod">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="../index.htm">属性列表</a>
+		<span>&#187;</span>
+		<a href="index.htm" id="category" rel="properties/user-interface" name="pointer-events">用户界面属性</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它用户界面属性</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入快速分类导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">pointer-events</h1>
+		<ul class="info">
+			<li><strong>版本：CSS3</strong></li>
+			<li>继承性：无</li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="syntax" class="g-mod g-attr">
+		<h2 class="tit">语法：</h2>
+		<div class="cont">
+			<p><strong>pointer-events</strong>：<mark class="defaultvalue">auto</mark> | none | visiblePainted | visibleFill | visibleStroke | visible | painted | fill | stroke | all | inherit</p>
+			<p><strong>默认值</strong>：<mark class="defaultvalue">auto</mark></p>
+			<p><strong>适用于</strong>：所有元素</p>
+		    <p><strong>继承性</strong>：有</p>
+		</div>
+	</section>
+	<section id="value" class="g-mod g-attr">
+		<h2 class="tit">取值：</h2>
+		<div class="cont">
+			<dl>
+				<dt>auto：</dt>
+				<dd>与pointer-events属性未指定时的表现效果相同</dd>
+				<dt>none：</dt>
+				<dd>元素永远不会成为鼠标事件的target。但是，当其后代元素的pointer-events属性指定其他值时，鼠标事件可以指向后代元素，在这种情况下，鼠标事件将在捕获或冒泡阶触发父元素的事件侦听器。</dd>
+			</dl>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
+		<h2 class="tit">说明：</h2>
+		<div class="cont">
+			<strong>设置或检索是否允许用户选中文本。</strong>
+			<ul>
+				<li>使用<code>pointer-events</code>来阻止元素成为鼠标事件目标不一定意味着元素上的事件侦听器永不会触发。如果元素后代明确指定了<code>pointer-events</code>属性并允许其成为鼠标事件的目标，那么指向该元素的任何事件在事件传播过程中都将通过父元素，并以适当的方式触发其上的事件侦听器。当然位于屏幕上在父元素上但不在后代元素上的鼠标活动都不会被父元素和后代元素捕获（将会穿过父元素而指向位于其下面的元素）。</li>
+				<li>对应的脚本特性为<strong>pointerEvents</strong>。</li>
+			</ul>
+		</div>
+	</section>
+	<!-- compatible:start --><section id="compatible" class="g-mod g-attr"><h2 class="tit">兼容性：</h2><div class="cont"><ul class="support-type"><li><span class="support">浅绿</span> = 支持</li><li><span class="unsupport">红色</span> = 不支持</li><li><span class="partsupport">墨绿</span> = 部分支持</li><li><span class="experimentsupport">橙色</span> = 实验性质</li></ul><div class="g-data"></div></div></section><!-- compatible:end -->
+	<section id="example" class="g-mod g-attr">
+		<h2 class="tit">示例：</h2>
+		<div class="cont">
+			<textarea cols="90" rows="10">
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>pointer-events_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<style>
+a[href="http://example.com"] {
+	pointer-events: none;
+}
+</style>
+</head>
+<body>
+<ul>
+	<li><a href="https://developer.mozilla.org/">MDN</a></li>
+	<li><a href="http://example.com">一个不能点击的链接</a></li>
+</ul>
+</body>
+</html>
+			</textarea>
+			<p><input type="button" value="运行" class="g-btn g-btn-sure" /></p>
+		</div>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/inner.js"></script>
+</body>
+</html>
