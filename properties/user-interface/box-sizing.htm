@@ -42,7 +42,7 @@
 		<h1 class="tit">box-sizing</h1>
 		<ul class="info">
 			<li><strong>版本：CSS3</strong></li>
-			<li>继承性：无</li>
+			<li>媒体：视觉</li>
 		</ul>
 		<!-- 插入浏览器信息 -->
 	</section>
@@ -55,6 +55,8 @@
 			<p><strong>默认值</strong>：<mark class="defaultvalue">content-box</mark></p>
 			<p><strong>适用于</strong>：所有接受<a href="../dimension/width.htm">width</a>和<a href="../dimension/height.htm">height</a>的元素</p>
 		    <p><strong>继承性</strong>：无</p>
+		    <p><strong>动画性</strong>：否</p>
+		    <p><strong>计算值</strong>：指定值</p>
 		</div>
 	</section>
 	<section id="value" class="g-mod g-attr">
@@ -68,21 +70,6 @@
 				<dd>padding和border被包含在定义的width和height之内。对象的实际宽度就等于设置的width值，即使定义有border和padding也不会改变对象的实际宽度，即 ( Element width = width )</dd>
 				<dd>此属性表现为怪异模式下的盒模型。</dd>
 			</dl>
-			<div class="info">
-				<h3>示例：</h3>
-				<ul>
-					<li>
-						<h4>content-box:</h4>
-						<code>.test1{ box-sizing:content-box; width:200px; padding:10px; border:15px solid #eee; }</code>
-						<p><img src="images/content-box.png" alt="content-box" /></p>
-					</li>
-					<li>
-						<h4>border-box:</h4>
-						<code>.test2{ box-sizing:border-box; width:200px; padding:10px; border:15px solid #eee; }</code>
-						<p><img src="images/border-box.png" alt="border-box" /></p>
-					</li>
-				</ul>
-			</div>
 		</div>
 	</section>
 	<section id="intro" class="g-mod g-attr">
@@ -90,6 +77,32 @@
 		<div class="cont">
 			<strong>设置或检索对象的盒模型组成模式。</strong>
 			<ul>
+				<li>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>标准盒模型代码与图示例:</strong></p>
+						<blockquote class="gquote-cont"><pre><code>.test1{
+	box-sizing:content-box;
+	width:200px;
+	padding:10px;
+	border:15px solid #eee;
+}</code></pre>
+							<p><img src="images/content-box.png" alt="content-box" /></p>
+						</blockquote>
+					</div>
+				</li>
+				<li>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>怪异盒模型代码与图示例:</strong></p>
+						<blockquote class="gquote-cont"><pre><code>.test1{
+	box-sizing:border-box;
+	width:200px;
+	padding:10px;
+	border:15px solid #eee;
+}</code></pre>
+							<p><img src="images/border-box.png" alt="border-box" /></p>
+						</blockquote>
+					</div>
+				</li>
 				<li>对应的脚本特性为<strong>boxSizing</strong>。</li>
 			</ul>
 		</div>
@@ -100,13 +113,11 @@
 			<ul class="support-type">
 				<li><span class="support">浅绿</span> = 支持</li>
 				<li><span class="unsupport">红色</span> = 不支持</li>
-				<li><span class="partsupport">墨绿</span> = 部分支持</li>
-				<li><span class="experimentsupport">橙色</span> = 实验性质</li>
+				<li><span class="partsupport">粉色</span> = 部分支持</li>
 			</ul>
 			<table class="g-data">
 				<thead>
 					<tr>
-						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
 						<th><span class="browser-ie">IE</span></th>
 						<th><span class="browser-firefox">Firefox</span></th>
 						<th><span class="browser-safari">Safari</span></th>
@@ -116,20 +127,20 @@
 				</thead>
 				<tbody>
 					<tr>
-						<th>版本</th>
-						<td class="unsupport">6-7</td>
-						<td rowspan="3" class="experimentsupport">4-18</td>
-						<td rowspan="3" class="support">5.1.7</td>
-						<td rowspan="3" class="support">9</td>
-						<td rowspan="3" class="support">7-12.5</td>
+						<td class="unsupport">6.0-7.0</td>
+						<td rowspan="2" class="support">4.0-28.0 <sup class="fix">-moz-</sup></td>
+						<td rowspan="2" class="support">4.0-5.0 <sup class="fix">-webkit-</sup></td>
+						<td rowspan="2" class="support">4.0-9.0 <sup class="fix">-webkit-</sup></td>
+						<td rowspan="3" class="support">15.0</td>
 					</tr>
 					<tr>
-						<th>版本</th>
-						<td class="experimentsupport">8</td>
+						<td class="support">8.0 <sup class="fix">-ms-</sup></td>
 					</tr>
 					<tr>
-						<th>版本</th>
-						<td class="support">9</td>
+						<td class="support">9.0</td>
+						<td class="support">29.0</td>
+						<td class="support">5.1</td>
+						<td class="support">10.0</td>
 					</tr>
 				</tbody>
 			</table>
