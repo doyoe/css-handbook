@@ -108,6 +108,7 @@ function recurse(rootdir, callback, subdir) {
 	});
 };
 
+// 使用caniuse.com数据自动生成兼容性图表
 function caniuseData(str, index, html) {
 	var category = queryHTML(parseHtml(html), function(obj) {
 			return obj.type == "tag" && obj.attribs && obj.attribs.id == "category";
@@ -135,21 +136,24 @@ function caniuseData(str, index, html) {
 	if (category) {
 		propName = category.attribs.name;
 		caniuse = require('caniuse-db/data');
-		data = caniuse.data[propFix[propFix] || propName];
+		data = caniuse.data["css-" + propName] || caniuse.data[propFix[propName] || propName];
 		if (data) {
+			console.log("自动生成兼容性数据：\t" + category.attribs.rel + "/" + propName);
 			status = data.stats;
-			str = '<!-- compatible:start --><section id="compatible" class="g-mod g-attr"><h2 class="tit">兼容性：</h2><div class="cont"><ul class="support-type"><li><span class="support">浅绿</span> = 支持</li><li><span class="unsupport">红色</span> = 不支持</li><li><span class="partsupport">墨绿</span> = 部分支持</li><li><span class="experimentsupport">橙色</span> = 实验性质</li></ul><table class="g-data"><thead><tr>';
+			str = '<!-- compatible:start --><section id="compatible" class="g-mod g-attr"><h2 class="tit">兼容性：</h2><div class="cont"><ul class="support-type"><li><span class="support">浅绿</span> = 支持</li><li><span class="unsupport">红色</span> = 不支持</li><li><span class="partsupport">粉色</span> = 部分支持</li></ul><table class="g-data"><thead><tr>';
 			thead = "";
 			tbody = "";
 
 			for (i in status) {
-				thead += '<th><span class="browser-' + i + '">' + caniuse.agents[i].browser + '</span></th>';
+				thead += '<th><span class="browser-' + i + '">' + caniuse.agents[i].browser + '</span></th>\n';
 				tabData[i] = {};
 				for (j in status[i]) {
-					if (tabData[i][status[i][j]]) {
-						tabData[i][status[i][j]].push(j)
-					} else {
-						tabData[i][status[i][j]] = [j];
+					if (!/^u/i.test(status[i][j])) {
+						if (tabData[i][status[i][j]]) {
+							tabData[i][status[i][j]].push(j)
+						} else {
+							tabData[i][status[i][j]] = [j];
+						}
 					}
 				}
 				for (j in tabData[i]) {
@@ -160,7 +164,7 @@ function caniuseData(str, index, html) {
 							return val;
 						}
 					}).sort(function(a, b) {
-						return a > b;
+						return a - b;
 					});
 					if (tbody.length === 1) {
 						tabData[i][j] = tbody;
@@ -172,12 +176,13 @@ function caniuseData(str, index, html) {
 				for (j in tabData[i]) {
 					tbody.push({
 						className: classFix[j.substr(0, 1)],
+						prefix: /\bx\b/.test(j),
 						value: tabData[i][j],
 						type: j
 					});
 				}
 				tabData[i] = tbody.sort(function(a, b) {
-					return a.value[0] > b.value[0];
+					return a.value[0] - b.value[0];
 				});
 				rowNum = Math.max(rowNum, tbody.length);
 			}
@@ -189,12 +194,15 @@ function caniuseData(str, index, html) {
 				tbody += "<tr>";
 				for (j in status) {
 					if (tabData[j][i]) {
-						tbody += "<td" + (tabData[j][i].rowspan > 1 ? ' rowspan="' + tabData[j][i].rowspan + '"' : "") + (tabData[j][i].className ? ' class="' + tabData[j][i].className + '"': "") + ">" + tabData[j][i].value.join("-") + "</td>";
+						tbody += "<td" + (tabData[j][i].rowspan > 1 ? ' rowspan="' + tabData[j][i].rowspan + '"' : "") + (tabData[j][i].className ? ' class="' + tabData[j][i].className + '"' : "") + ">" + tabData[j][i].value.join("-") + (tabData[j][i].prefix ? ' <sup class="fix">-' + caniuse.agents[j].prefix + '-</sup>' : "") + "</td>\n";
 					}
 				}
 				tbody += "</tr>";
 			}
 			str += thead + "</tr></thead><tbody>" + tbody + "</tbody></table></div></section><!-- compatible:end -->";
+			str = str.replace(/(\s*<\/?(ul|div|section|tr|t\w{2,})(\s[^>]+)*>\s*)/ig, "\n$1\n").replace(/(<\/(li|h\d)>\s*)/ig, "$1\n").replace(/\n+/g, "\n");
+		} else {
+			console.log("不能生成兼容性数据(caniuse数据中无此项)：\t" + category.attribs.rel + "/" + propName);
 		}
 	}
 	return str;
@@ -257,12 +265,10 @@ gulp.task("chm", function() {
 		forEachTree(tree, function(o) {
 			hhk += '<LI><OBJECT type="text/sitemap"><param name="Name" value="' + o.title + '"><param name="Local" value="' + o.href + '"></OBJECT>';
 			var filepath = path.normalize(o.href);
-			if (!files[filepath]) {
-				if (fs.existsSync(filepath)) {
-					files[filepath] = true;
-				} else {
-					console.log("发现死链接:\t" + o.href);
-				}
+			if (files[filepath] || fs.existsSync(filepath)) {
+				files[filepath] = "ok";
+			} else {
+				console.log("发现死链接(文件不存在):\t" + o.href);
 			}
 			hhc += '<LI><OBJECT type="text/sitemap"><param name="Name" value="' + o.title + '"><param name="Local" value="' + o.href + '"><param name="ImageNumber" value="' + (o.children ? 1 : (/\//.test(o.href) ? 11 : 15)) + '"></OBJECT>'
 		});
@@ -273,6 +279,9 @@ gulp.task("chm", function() {
 
 		for (var i in files) {
 			hhp += i + "\n";
+			if (/\.html?$/.test(i) && files[i] !== "ok") {
+				console.log("发现死文件(没有链接指向此文件):\t" + i);
+			}
 		}
 
 		var iconv = require('iconv-lite');
