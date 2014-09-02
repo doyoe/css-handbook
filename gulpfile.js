@@ -257,12 +257,10 @@ gulp.task("chm", function() {
 		forEachTree(tree, function(o) {
 			hhk += '<LI><OBJECT type="text/sitemap"><param name="Name" value="' + o.title + '"><param name="Local" value="' + o.href + '"></OBJECT>';
 			var filepath = path.normalize(o.href);
-			if (!files[filepath]) {
-				if (fs.existsSync(filepath)) {
-					files[filepath] = true;
-				} else {
-					console.log("发现死链接:\t" + o.href);
-				}
+			if (files[filepath] || fs.existsSync(filepath)) {
+				files[filepath] = "ok";
+			} else {
+				console.log("发现死链接(文件不存在):\t" + o.href);
 			}
 			hhc += '<LI><OBJECT type="text/sitemap"><param name="Name" value="' + o.title + '"><param name="Local" value="' + o.href + '"><param name="ImageNumber" value="' + (o.children ? 1 : (/\//.test(o.href) ? 11 : 15)) + '"></OBJECT>'
 		});
@@ -273,6 +271,9 @@ gulp.task("chm", function() {
 
 		for (var i in files) {
 			hhp += i + "\n";
+			if (/\.html?$/.test(i) && files[i] !== "ok") {
+				console.log("发现死文件(没有链接指向此文件):\t" + i);
+			}
 		}
 
 		var iconv = require('iconv-lite');
