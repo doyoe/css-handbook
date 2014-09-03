@@ -108,6 +108,35 @@ function recurse(rootdir, callback, subdir) {
 	});
 };
 
+// 生成连续空格
+function space(num) {
+	var str = "";
+	for (var i = 0; i < num; i++) {
+		str += "    ";
+	}
+	return str;
+}
+
+// 缩进所用的数据
+var indentData = {
+	section: space(1),
+	div: space(2),
+	h2: space(2),
+	ul: space(3),
+	li: space(4),
+	table: space(3),
+	thead: space(4),
+	tbody: space(4),
+	tr: space(5),
+	th: space(6),
+	td: space(6)
+}
+
+// 生成缩进
+function indent(s, tag, tagName) {
+	return "\n" + (indentData[tagName] || space(1)) + tag;
+}
+
 // 使用caniuse.com数据自动生成兼容性图表
 function caniuseData(str, index, html) {
 	var category = queryHTML(parseHtml(html), function(obj) {
@@ -145,7 +174,7 @@ function caniuseData(str, index, html) {
 			tbody = "";
 
 			for (i in status) {
-				thead += '<th><span class="browser-' + i + '">' + caniuse.agents[i].browser + '</span></th>\n';
+				thead += '<th><span class="browser-' + i + '">' + caniuse.agents[i].browser + '</span></th>';
 				tabData[i] = {};
 				for (j in status[i]) {
 					if (!/^u/i.test(status[i][j])) {
@@ -194,13 +223,13 @@ function caniuseData(str, index, html) {
 				tbody += "<tr>";
 				for (j in status) {
 					if (tabData[j][i]) {
-						tbody += "<td" + (tabData[j][i].rowspan > 1 ? ' rowspan="' + tabData[j][i].rowspan + '"' : "") + (tabData[j][i].className ? ' class="' + tabData[j][i].className + '"' : "") + ">" + tabData[j][i].value.join("-") + (tabData[j][i].prefix ? ' <sup class="fix">-' + caniuse.agents[j].prefix + '-</sup>' : "") + "</td>\n";
+						tbody += "<td" + (tabData[j][i].rowspan > 1 ? ' rowspan="' + tabData[j][i].rowspan + '"' : "") + (tabData[j][i].className ? ' class="' + tabData[j][i].className + '"' : "") + ">" + tabData[j][i].value.join("-") + (tabData[j][i].prefix ? ' <sup class="fix">-' + caniuse.agents[j].prefix + '-</sup>' : "") + "</td>";
 					}
 				}
 				tbody += "</tr>";
 			}
 			str += thead + "</tr></thead><tbody>" + tbody + "</tbody></table></div></section><!-- compatible:end -->";
-			str = str.replace(/(\s*<\/?(ul|div|section|tr|t\w{2,})(\s[^>]+)*>\s*)/ig, "\n$1\n").replace(/(<\/(li|h\d)>\s*)/ig, "$1\n").replace(/\n+/g, "\n");
+			str = str.replace(/(\s*<\/?(ul|div|section|tr|t\w{2,})(\s[^>]+)*>\s*)/ig, "\n$1\n").replace(/(<\/(li|h\d|th|td)>\s*)/ig, "$1\n").replace(/\n+(<[\/\!]?(\w+)?)/g, indent);
 		} else {
 			console.log("不能生成兼容性数据(caniuse数据中无此项)：\t" + category.attribs.rel + "/" + propName);
 		}
