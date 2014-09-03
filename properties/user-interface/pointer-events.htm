@@ -41,8 +41,8 @@
 	<section id="title" class="g-mod">
 		<h1 class="tit">pointer-events</h1>
 		<ul class="info">
-			<li><strong>版本：CSS2</strong></li>
-			<li>媒体：视觉，互动</li>
+			<li><strong>版本：CSS3</strong></li>
+			<li>继承性：有</li>
 		</ul>
 		<!-- 插入浏览器信息 -->
 	</section>
@@ -51,33 +51,27 @@
 	<section id="syntax" class="g-mod g-attr">
 		<h2 class="tit">语法：</h2>
 		<div class="cont">
-			<p><strong>pointer-events</strong>：<a href="../../values/other/length.htm">&lt;length&gt;</a> | thin | medium | thick</p>
-			<p><strong>默认值</strong>：<mark class="defaultvalue">medium</mark></p>
+			<p><strong>pointer-events</strong>：none | <mark class="defaultvalue">auto</mark> | none</p>
+			<p><strong>默认值</strong>：<mark class="defaultvalue">auto</mark></p>
 			<p><strong>适用于</strong>：所有元素</p>
-			<p><strong>继承性</strong>：无</p>
-			<p><strong>动画性</strong>：当取值为<a href="../../values/other/length.htm">&lt;length&gt;</a>时</p>
-			<p><strong>计算值</strong>：绝对长度；如果<a href="outline-style.htm">outline-style</a>的值为none时，则计算值为0</p>
+			<p><strong>继承性</strong>：有</p>
 		</div>
 	</section>
 	<section id="value" class="g-mod g-attr">
 		<h2 class="tit">取值：</h2>
 		<div class="cont">
 			<dl>
-				<dt><a href="../../values/other/length.htm">&lt;length&gt;</a>：</dt>
-				<dd>用长度值来定义轮廓的厚度。不允许负值</dd>
-				<dt>medium：</dt>
-				<dd>定义默认宽度的轮廓。</dd>
-				<dt>thin：</dt>
-				<dd>定义比默认宽度细的轮廓。</dd>
-				<dt>thick：</dt>
-				<dd>定义比默认宽度粗的轮廓。</dd>
+				<dt>auto：</dt>
+				<dd>与pointer-events属性未指定时的表现效果相同。</dd>
+				<dt>none：</dt>
+				<dd>元素永远不会成为鼠标事件的target。但是，当其后代元素的pointer-events属性指定其他值时，鼠标事件可以指向后代元素，在这种情况下，鼠标事件将在捕获或冒泡阶触发父元素的事件侦听器。</dd>
 			</dl>
 		</div>
 	</section>
 	<section id="intro" class="g-mod g-attr">
 		<h2 class="tit">说明：</h2>
 		<div class="cont">
-			<strong>设置或检索是否允许用户选中文本。</strong>
+			<strong>设置或检索在何时成为属性事件的target。</strong>
 			<ul>
 				<li>使用<code>pointer-events</code>来阻止元素成为鼠标事件目标不一定意味着元素上的事件侦听器永不会触发。如果元素后代明确指定了<code>pointer-events</code>属性并允许其成为鼠标事件的目标，那么指向该元素的任何事件在事件传播过程中都将通过父元素，并以适当的方式触发其上的事件侦听器。当然位于屏幕上在父元素上但不在后代元素上的鼠标活动都不会被父元素和后代元素捕获（将会穿过父元素而指向位于其下面的元素）。</li>
 				<li>对应的脚本特性为<strong>pointerEvents</strong>。</li>

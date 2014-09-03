@@ -134,7 +134,7 @@ var indentData = {
 
 // 生成缩进
 function indent(s, tag, tagName) {
-	return "\n" + (indentData[tagName] || tab(1)) + tag;
+	return "\r\n" + (indentData[tagName] || tab(1)) + tag;
 }
 
 // 使用caniuse.com数据自动生成兼容性图表
@@ -308,9 +308,12 @@ gulp.task("chm", function() {
 		hhc += "</BODY></HTML>";
 
 		for (var i in files) {
-			hhp += i + "\n";
-			if (/\.html?$/.test(i) && files[i] !== "ok") {
-				console.log("发现死文件(没有链接指向此文件):\t" + i);
+			if (/\.html?$/.test(i)) {
+				if (files[i] !== "ok") {
+					console.log("发现死文件(没有链接指向此文件):\t" + i);
+				}
+			} else {
+				hhp += i + "\n";
 			}
 		}
 
