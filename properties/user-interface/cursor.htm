@@ -54,7 +54,7 @@
 			<p><strong>cursor</strong>：[<a href="../../../values/textual/url.htm">&lt;url&gt;</a> [&lt;x&gt; &lt;y&gt;]?,]*[ auto | default | none | context-menu | help | pointer | progress | wait | cell | crosshair | text | vertical-text | alias | copy | move | no-drop | not-allowed | e-resize | n-resize | ne-resize | nw-resize | s-resize | se-resize | sw-resize | w-resize | ew-resize | ns-resize | nesw-resize | nwse-resize | col-resize | row-resize | all-scroll]</p>
 			<p><strong>默认值</strong>：<mark class="defaultvalue">auto</mark></p>
 			<p><strong>适用于</strong>：所有元素</p>
-		    <p><strong>继承性</strong>：有</p>
+			<p><strong>继承性</strong>：有</p>
 		</div>
 	</section>
 	<section id="intro" class="g-mod g-attr">
@@ -68,10 +68,10 @@
 				<div class="gquote">
 						<p class="gquote-tit"><strong>示例代码：</strong></p>
 						<blockquote class="gquote-cont"><pre><code>:link,:visited{
-    cursor:url(example.svg#linkcursor),
-            url(hyper.cur),
-            url(hyper.png) 2 3,
-            pointer;
+	cursor:url(example.svg#linkcursor),
+			url(hyper.cur),
+			url(hyper.png) 2 3,
+			pointer;
 }</code></pre></blockquote>
 						<p class="gquote-info">本例用来给所有的超链接定义光标类型，客户端如果不支持SVG类型的光标，则使用下个"hyper.cur"；如果cur类型也不支持，则使用下个"hyper.png"；依次类推。</p>
 					</div>
@@ -160,9 +160,9 @@
 .row-resize{cursor:row-resize;}
 .all-scroll{cursor:all-scroll;}
 .url{cursor:url(skin/cursor.gif),
-            url(skin/cursor.png),
+			url(skin/cursor.png),
 			url(skin/cursor.jpg),
-            pointer;}
+			pointer;}
 </style>
 </head>
 <body>
