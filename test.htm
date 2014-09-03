@@ -2,19 +2,13 @@
 <html lang="zh-cn">
 <head>
 <meta charset="utf-8" />
-<title>test page</title>
-<meta name="description" content="这是CSS参考手册用来做测试的页面" />
-<meta name="keywords" content="css,css3,css手册,css3手册,css3参考手册,web前端开发,测试" />
+<title>user-select_CSS参考手册_web前端开发参考手册系列</title>
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
-<meta name="robots" content="all" />
 <style>
-.demo{width:200px;white-space:nowrap;}
-.demo p{overflow:hidden;text-overflow:ellipsis;}
+.test{padding:10px;-webkit-user-select:none;-moz-user-select:none;-o-user-select:none;user-select:none;background:#eee;}
 </style>
 </head>
 <body>
-<div class="demo">
-	<p>这是一句非常非常长的话，被用来做text-overflow属性测试。</p>
-</div>
+<div class="test" onselectstart="return false;" unselectable="on">选择我试试，你会发现怎么也选择不到我，哈哈哈哈</div>
 </body>
 </html>
