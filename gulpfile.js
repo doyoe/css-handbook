@@ -109,32 +109,32 @@ function recurse(rootdir, callback, subdir) {
 };
 
 // 生成连续空格
-function space(num) {
+function tab(num) {
 	var str = "";
 	for (var i = 0; i < num; i++) {
-		str += "    ";
+		str += "\t";
 	}
 	return str;
 }
 
 // 缩进所用的数据
 var indentData = {
-	section: space(1),
-	div: space(2),
-	h2: space(2),
-	ul: space(3),
-	li: space(4),
-	table: space(3),
-	thead: space(4),
-	tbody: space(4),
-	tr: space(5),
-	th: space(6),
-	td: space(6)
+	section: tab(1),
+	div: tab(2),
+	h2: tab(2),
+	ul: tab(3),
+	li: tab(4),
+	table: tab(3),
+	thead: tab(4),
+	tbody: tab(4),
+	tr: tab(5),
+	th: tab(6),
+	td: tab(6)
 }
 
 // 生成缩进
 function indent(s, tag, tagName) {
-	return "\n" + (indentData[tagName] || space(1)) + tag;
+	return "\n" + (indentData[tagName] || tab(1)) + tag;
 }
 
 // 使用caniuse.com数据自动生成兼容性图表
@@ -247,6 +247,7 @@ gulp.task("htm", function() {
 		if (/\.html?$/.test(filename)) {
 			gulp.src(filepath)
 				.pipe(replace(/<\!--\s*compatible\s*:\s*start\s*-->[\s\S]*<!--\s*compatible\s*:\s*end\s*-->/g, caniuseData))
+				//.pipe(replace("    ", "\t"))
 				.pipe(htmlhint())
 				.pipe(htmlhint.reporter())
 				.pipe(gulp.dest(subdir || "."));
