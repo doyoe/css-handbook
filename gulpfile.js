@@ -247,7 +247,7 @@ gulp.task("htm", function() {
 		if (/\.html?$/.test(filename)) {
 			gulp.src(filepath)
 				.pipe(replace(/<\!--\s*compatible\s*:\s*start\s*-->[\s\S]*<!--\s*compatible\s*:\s*end\s*-->/g, caniuseData))
-				//.pipe(replace("    ", "\t"))
+				.pipe(replace("    ", "\t"))
 				.pipe(htmlhint())
 				.pipe(htmlhint.reporter())
 				.pipe(gulp.dest(subdir || "."));
