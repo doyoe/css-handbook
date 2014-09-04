@@ -253,8 +253,8 @@ gulp.task("htm", function() {
 		if (/\.html?$/.test(filename)) {
 			gulp.src(filepath)
 				.pipe(replace(/([\t ]*)<\!--\s*compatible\s*:\s*(\w+(-\w+)?)\s*-->[\s\S]*?<!--\s*compatible\s*:\s*end\s*-->/g, caniuseData))
-				.pipe(replace(/(\t|\n) {4}/g, function(str, char, strIndent){
-					return char + "\t";
+				.pipe(replace(/(\t|\n) +/g, function(str, char) {
+					return char + tab(str.length / 4);
 				}))
 				.pipe(htmlhint())
 				.pipe(htmlhint.reporter())
