@@ -120,7 +120,7 @@ function tab(num) {
 // 使用caniuse.com数据自动生成兼容性图表
 function caniuseData(str, strIndent, strPropName, subName, index, html) {
 	strIndent = strIndent.match(/\t| {4}/g);
-	strIndent = strIndent ? tab(strIndent.length) : ""
+	strIndent = strIndent ? tab(strIndent.length) : "";
 	// 缩进所用的数据
 	var indentData = {
 		thead: strIndent + tab(1),
@@ -253,7 +253,9 @@ gulp.task("htm", function() {
 		if (/\.html?$/.test(filename)) {
 			gulp.src(filepath)
 				.pipe(replace(/([\t ]*)<\!--\s*compatible\s*:\s*(\w+(-\w+)?)\s*-->[\s\S]*?<!--\s*compatible\s*:\s*end\s*-->/g, caniuseData))
-				.pipe(replace("    ", "\t"))
+				.pipe(replace(/(\t|\n) +/g, function(str, char) {
+					return char + tab(str.length / 4);
+				}))
 				.pipe(htmlhint())
 				.pipe(htmlhint.reporter())
 				.pipe(gulp.dest(subdir || "."));

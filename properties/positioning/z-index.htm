@@ -94,13 +94,13 @@ p{position:absolute;}
 <div class="test2">
 	<p class="b">asdas</p>
 </div></xmp></code></blockquote>
-	   					<p class="gquote-info">细心的你会发现上述代码在IE6,7下的呈现与高级浏览器下不同。.test1和.test2未设置z-index，在高级浏览器下不会产生新的局部层叠上下文，也就是说它们的子元素没有被新的局部层叠上下文包裹，那么它们的子元素就处在同一个层叠上下文中，可以直接通过自身的层叠级别来决定显示顺序，所以结果是.a 覆盖了.b，因为.a的层叠级别比.b高；而在IE6,7下，.test1和.test2会产生新的局部层叠上下文，即它们的子元素被新的局部层叠上下文包裹，于是子元素显示顺序只能依赖.test1和.test2层叠级别来确定。所以结果是.b 覆盖了.a，因为.b的父元素.test2在HTML文档流中排在.test1之后，后来者居上覆盖前者。参见demo: <a href="http://demo.doyoe.com/css/z-index/create-stacking-context.htm" rel="external" class="external" target="_blank">z-index创建局部层叠上下文在IE6,7下与高级浏览器下的区别</a></p>
+						<p class="gquote-info">细心的你会发现上述代码在IE6,7下的呈现与高级浏览器下不同。.test1和.test2未设置z-index，在高级浏览器下不会产生新的局部层叠上下文，也就是说它们的子元素没有被新的局部层叠上下文包裹，那么它们的子元素就处在同一个层叠上下文中，可以直接通过自身的层叠级别来决定显示顺序，所以结果是.a 覆盖了.b，因为.a的层叠级别比.b高；而在IE6,7下，.test1和.test2会产生新的局部层叠上下文，即它们的子元素被新的局部层叠上下文包裹，于是子元素显示顺序只能依赖.test1和.test2层叠级别来确定。所以结果是.b 覆盖了.a，因为.b的父元素.test2在HTML文档流中排在.test1之后，后来者居上覆盖前者。参见demo: <a href="http://demo.doyoe.com/css/z-index/create-stacking-context.htm" rel="external" class="external" target="_blank">z-index创建局部层叠上下文在IE6,7下与高级浏览器下的区别</a></p>
 					</div>
 				</li>
 				<li>必须定义<a href="position.htm">position</a>属性值为 relative | absolute | fixed | <ins class="g-color-css3-new">center</ins> | <ins class="g-color-css3-new">page</ins> | <ins class="g-color-css3-new">sticky</ins>，此取值方可生效。</li>
 				<li>对应的脚本特性为<strong>zIndex</strong>。</li>
 			</ul>
-	  </div>
+		</div>
 	</section>
 	<section id="compatible" class="g-mod g-attr">
 		<h2 class="tit">兼容性：</h2>
