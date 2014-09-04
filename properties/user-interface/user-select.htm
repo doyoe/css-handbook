@@ -42,7 +42,7 @@
 		<h1 class="tit">user-select</h1>
 		<ul class="info">
 			<li><strong>版本：CSS3</strong></li>
-			<li>继承性：无</li>
+			<li>媒体：互动</li>
 		</ul>
 		<!-- 插入浏览器信息 -->
 	</section>
@@ -55,6 +55,8 @@
 			<p><strong>默认值</strong>：<mark class="defaultvalue">text</mark></p>
 			<p><strong>适用于</strong>：除替换元素外的所有元素</p>
 			<p><strong>继承性</strong>：无</p>
+			<p><strong>动画性</strong>：否</p>
+			<p><strong>计算值</strong>：指定值</p>
 		</div>
 	</section>
 	<section id="value" class="g-mod g-attr">
@@ -84,7 +86,6 @@
 			</ul>
 		</div>
 	</section>
-	<!-- compatible:start -->
 	<section id="compatible" class="g-mod g-attr">
 		<h2 class="tit">兼容性：</h2>
 		<div class="cont">
@@ -98,45 +99,29 @@
 					<tr>
 						<th><span class="browser-ie">IE</span></th>
 						<th><span class="browser-firefox">Firefox</span></th>
-						<th><span class="browser-chrome">Chrome</span></th>
 						<th><span class="browser-safari">Safari</span></th>
+						<th><span class="browser-chrome">Chrome</span></th>
 						<th><span class="browser-opera">Opera</span></th>
-						<th><span class="browser-ios_saf">iOS Safari</span></th>
-						<th><span class="browser-op_mini">Opera Mini</span></th>
-						<th><span class="browser-android">Android Browser</span></th>
-						<th><span class="browser-bb">Blackberry Browser</span></th>
-						<th><span class="browser-op_mob">Opera Mobile</span></th>
-						<th><span class="browser-and_chr">Chrome for Android</span></th>
-						<th><span class="browser-and_ff">Firefox for Android</span></th>
-						<th><span class="browser-ie_mob">IE Mobile</span></th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td class="unsupport">5.5-9</td>
-						<td rowspan="2" class="support">2-34 <sup class="fix">-moz-</sup></td>
-						<td rowspan="2" class="support">6-40 <sup class="fix">-webkit-</sup></td>
-						<td rowspan="2" class="support">3.1-8 <sup class="fix">-webkit-</sup></td>
-						<td class="unsupport">9-12.1</td>
-						<td rowspan="2" class="support">3.2-8 <sup class="fix">-webkit-</sup></td>
-						<td rowspan="2" class="unsupport">5-7</td>
-						<td rowspan="2" class="support">2.1-4.4 <sup class="fix">-webkit-</sup></td>
-						<td rowspan="2" class="support">7-10 <sup class="fix">-webkit-</sup></td>
-						<td class="unsupport">10-12.1</td>
-						<td rowspan="2" class="support">36 <sup class="fix">-webkit-</sup></td>
-						<td rowspan="2" class="support">31 <sup class="fix">-moz-</sup></td>
-						<td rowspan="2" class="support">10 <sup class="fix">-ms-</sup></td>
+						<td class="unsupport">6.0-9.0</td>
+						<td rowspan="2" class="support">4.0-34.0 <sup class="fix">-moz-</sup></td>
+						<td rowspan="2" class="partsupport">4.0-8.0 <sup class="fix">-webkit-</sup> <sup><a href="#support1">#1</a></sup></td>
+						<td rowspan="2" class="partsupport">6.0-40.0 <sup class="fix">-webkit-</sup> <sup><a href="#support1">#1</a></sup></td>
+						<td rowspan="2" class="partsupport">15.0-25.0 <sup class="fix">-webkit-</sup> <sup><a href="#support1">#1</a></sup></td>
 					</tr>
 					<tr>
-						<td class="support">10-11 <sup class="fix">-ms-</sup></td>
-						<td class="support">15-25 <sup class="fix">-webkit-</sup></td>
-						<td class="support">22 <sup class="fix">-webkit-</sup></td>
+						<td class="support">10.0 <sup class="fix">-ms-</sup></td>
 					</tr>
 				</tbody>
 			</table>
+			<ol class="support-info">
+				<li id="support1">不支持：element</li>
+			</ol>
 		</div>
 	</section>
-	<!-- compatible:end -->
 	<section id="example" class="g-mod g-attr">
 		<h2 class="tit">示例：</h2>
 		<div class="cont">
