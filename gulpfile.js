@@ -118,7 +118,7 @@ function tab(num) {
 }
 
 // 使用caniuse.com数据自动生成兼容性图表
-function caniuseData(str, strIndent, propName, subName, index, html) {
+function caniuseData(str, strIndent, strPropName, subName, index, html) {
 	strIndent = strIndent.match(/\t| {4}/g);
 	strIndent = strIndent ? tab(strIndent.length) : ""
 	// 缩进所用的数据
@@ -137,12 +137,14 @@ function caniuseData(str, strIndent, propName, subName, index, html) {
 
 	var caniuse = require('caniuse-db/data'),
 		classFix = {
-			p: "partsupport",
+			p: "experimentsupport",
+			a: "partsupport",
 			n: "unsupport",
 			y: "support"
 		},
 		tabData = {},
 		rowNum = 0,
+		propName,
 		status,
 		thead,
 		tbody,
@@ -151,7 +153,7 @@ function caniuseData(str, strIndent, propName, subName, index, html) {
 		j,
 		k;
 
-	data = caniuse.data[propName] || caniuse.data["css-" + propName];
+	data = caniuse.data[strPropName] || caniuse.data["css-" + strPropName];
 
 	if (!data) {
 		propName = queryHTML(parseHtml(html), function(obj) {
@@ -171,7 +173,7 @@ function caniuseData(str, strIndent, propName, subName, index, html) {
 		}
 	} else {
 		status = data.stats;
-		str = "<!-- compatible:" + propName + ' --><table class="g-data"><thead><tr>';
+		str = "<!-- compatible:" + strPropName + ' --><table class="g-data"><thead><tr>';
 		thead = "";
 		tbody = "";
 
@@ -250,7 +252,7 @@ gulp.task("htm", function() {
 	recurse(".", function(filepath, rootdir, subdir, filename) {
 		if (/\.html?$/.test(filename)) {
 			gulp.src(filepath)
-				.pipe(replace(/([\t ]*)<\!--\s*compatible\s*:\s*(\w+(-\w+)?)\s*-->[\s\S]*<!--\s*compatible\s*:\s*end\s*-->/g, caniuseData))
+				.pipe(replace(/([\t ]*)<\!--\s*compatible\s*:\s*(\w+(-\w+)?)\s*-->[\s\S]*?<!--\s*compatible\s*:\s*end\s*-->/g, caniuseData))
 				.pipe(replace("    ", "\t"))
 				.pipe(htmlhint())
 				.pipe(htmlhint.reporter())
