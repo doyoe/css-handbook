@@ -42,7 +42,7 @@
 		<h1 class="tit">cursor</h1>
 		<ul class="info">
 			<li><strong>版本：CSS2</strong></li>
-			<li>继承性：有</li>
+			<li>媒体：视觉，互动</li>
 		</ul>
 		<!-- 插入浏览器信息 -->
 	</section>
@@ -51,10 +51,30 @@
 	<section id="syntax" class="g-mod g-attr">
 		<h2 class="tit">语法：</h2>
 		<div class="cont">
-			<p><strong>cursor</strong>：[<a href="../../../values/textual/url.htm">&lt;url&gt;</a> [&lt;x&gt; &lt;y&gt;]?,]*[ auto | default | none | context-menu | help | pointer | progress | wait | cell | crosshair | text | vertical-text | alias | copy | move | no-drop | not-allowed | e-resize | n-resize | ne-resize | nw-resize | s-resize | se-resize | sw-resize | w-resize | ew-resize | ns-resize | nesw-resize | nwse-resize | col-resize | row-resize | all-scroll]</p>
+			<p><strong>cursor</strong>：[<a href="../../../values/textual/url.htm">&lt;url&gt;</a> [&lt;x&gt; &lt;y&gt;]?,]*[ auto | default | none | context-menu | help | pointer | progress | wait | cell | crosshair | text | vertical-text | alias | copy | move | no-drop | not-allowed | e-resize | n-resize | ne-resize | nw-resize | s-resize | se-resize | sw-resize | w-resize | ew-resize | ns-resize | nesw-resize | nwse-resize | col-resize | row-resize | all-scroll | zoom-in | zoom-out | grab | grabbing]</p>
 			<p><strong>默认值</strong>：<mark class="defaultvalue">auto</mark></p>
 			<p><strong>适用于</strong>：所有元素</p>
 			<p><strong>继承性</strong>：有</p>
+			<p><strong>动画性</strong>：否</p>
+			<p><strong>计算值</strong>：指定值</p>
+		</div>
+	</section>
+	<section id="value" class="g-mod g-attr">
+		<h2 class="tit">取值：</h2>
+		<div class="cont">
+			<dl>
+				<dt><a href="../../../values/textual/url.htm">&lt;url&gt;</a>：</dt>
+				<dd>使用绝对或者相对地址引入外部图像作为光标形状</dd>
+				<dt><a href="../../../values/textual/url.htm">&lt;url&gt;</a> &lt;x&gt; &lt;y&gt;：</dt>
+				<dd>通过&lt;x&gt; &lt;y&gt;两个值指定具体需要显示的图像位置。类似<a href="../background/background-position.htm">background-position</a></dd>
+				<dt>auto：</dt>
+				<dd>用户代理基于当前上下文决定光标形状</dd>
+				<dt>default：</dt>
+				<dd>相关平台的默认光标形状，通常为箭头。</dd>
+				<dt>none：</dt>
+				<dd>没有光标形状</dd>
+			</dl>
+			<p>其他待完成...</p>
 		</div>
 	</section>
 	<section id="intro" class="g-mod g-attr">
@@ -86,13 +106,11 @@
 			<ul class="support-type">
 				<li><span class="support">浅绿</span> = 支持</li>
 				<li><span class="unsupport">红色</span> = 不支持</li>
-				<li><span class="partsupport">墨绿</span> = 部分支持</li>
-				<li><span class="experimentsupport">橙色</span> = 实验性质</li>
+				<li><span class="partsupport">粉色</span> = 部分支持</li>
 			</ul>
 			<table class="g-data">
 				<thead>
 					<tr>
-						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
 						<th><span class="browser-ie">IE</span></th>
 						<th><span class="browser-firefox">Firefox</span></th>
 						<th><span class="browser-safari">Safari</span></th>
@@ -102,15 +120,33 @@
 				</thead>
 				<tbody>
 					<tr>
-						<th>版本</th>
-						<td class="support">6</td>
-						<td class="support">4</td>
-						<td class="support">5.1.7</td>
-						<td class="support">13</td>
-						<td class="support">11.5</td>
+						<td class="partsupport">6.0-8.0 <sup><a href="#support1">#1</a> <a href="#support2">#2</a> <a href="#support3">#3</a> <a href="#support4">#4</a> <a href="#support5">#5</a></sup></td>
+						<td class="support">4.0-23.0 <sup><a href="#support6">#6</a> <a href="#support7">#7</a></sup></td>
+						<td rowspan="2" class="support">4.0-22.0 <sup><a href="#support7">#7</a></sup></td>
+						<td rowspan="2" class="support">4.0 <sup><a href="#support7">#7</a></sup></td>
+						<td rowspan="3" class="support">15.0</td>
+					</tr>
+					<tr>
+						<td class="partsupport">9.0 <sup><a href="#support2">#2</a> <a href="#support3">#3</a> <a href="#support4">#4</a> <a href="#support5">#5</a></sup></td>
+						<td class="support">24.0-27.0 <sup><a href="#support7">#7</a></sup></td>
+					</tr>
+					<tr>
+						<td class="partsupport">10.0-11.0 <sup><a href="#support3">#3</a> <a href="#support4">#4</a> <a href="#support5">#5</a></sup></td>
+						<td class="support">28.0</td>
+						<td class="support">23.0</td>
+						<td class="support">5.0</td>
 					</tr>
 				</tbody>
 			</table>
+			<ol class="support-info">
+				<li id="support1">不支持：none</li>
+				<li id="support2">不支持：alias, cell, copy, ew-resize, ns-resize, nesw-resize, nwse-resize, context-menu</li>
+				<li id="support3">不支持：url()的position位置，不支持除.cur之外的图像格式。</li>
+				<li id="support4">不支持：zoom-in, zoom-out</li>
+				<li id="support5">不支持：grab, grabbing</li>
+				<li id="support6">厂商前缀：zoom-in, zoom-out</li>
+				<li id="support7">厂商前缀：grab, grabbing</li>
+			</ol>
 		</div>
 	</section>
 	<section id="example" class="g-mod g-attr">
@@ -159,6 +195,8 @@
 .col-resize{cursor:col-resize;}
 .row-resize{cursor:row-resize;}
 .all-scroll{cursor:all-scroll;}
+.zoom-in{cursor:zoom-in;}
+.zoom-out{cursor:zoom-out;}
 .url{cursor:url(skin/cursor.gif),
 			url(skin/cursor.png),
 			url(skin/cursor.jpg),
@@ -211,6 +249,8 @@
 			<td class="row-resize">row-resize</td>
 			<td class="all-scroll">all-scroll</td>
 			<td class="url">url</td>
+			<td class="zoom-in">zoom-in</td>
+			<td class="zoom-out">zoom-out</td>
 		</tr>
 	</tbody>
 </table>
