@@ -46,6 +46,26 @@ CSS参考手册从v4.1.4开始，代码都托管到[GitHub](https://github.com/d
 
 如果编译失败，请尝试拷贝`hhc.exe`到项目目录下
 
+### 自动获取[caniuse](http://caniuse.com/)数据
+
+在htm中添加如下注释
+
+```HTML
+<!-- compatible:start -->
+<!-- compatible:end -->
+```
+
+在项目根目录运行`gulp htm`命令,会自动根据caniuse开源数据为当前页面生成兼容性表格
+
+一个页面需要多个兼容性表格：
+```HTML
+<!-- compatible:user-select-none -->
+<!-- compatible:end -->
+
+<!-- compatible:placeholder -->
+<!-- compatible:end -->
+```
+
 ### 代码错误检查
 
 在项目根目录运行`gulp htm`命令，将会检查所有html文件的代码合法性
