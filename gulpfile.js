@@ -177,11 +177,15 @@ function caniuseData(str, index, html) {
 				thead += '<th><span class="browser-' + i + '">' + caniuse.agents[i].browser + '</span></th>';
 				tabData[i] = {};
 				for (j in status[i]) {
-					if (!/^u/i.test(status[i][j])) {
-						if (tabData[i][status[i][j]]) {
-							tabData[i][status[i][j]].push(j)
+					tbody = status[i][j];
+					if (!/\bu\b/i.test(tbody)) {
+						tbody = tbody.replace(/\bx\b/, function() {
+							return "-" + ((caniuse.agents[i].prefix_exceptions || {})[j] || caniuse.agents[i].prefix) + "-";
+						});
+						if (tabData[i][tbody]) {
+							tabData[i][tbody].push(j)
 						} else {
-							tabData[i][status[i][j]] = [j];
+							tabData[i][tbody] = [j];
 						}
 					}
 				}
@@ -204,8 +208,8 @@ function caniuseData(str, index, html) {
 				tbody = [];
 				for (j in tabData[i]) {
 					tbody.push({
-						className: classFix[j.substr(0, 1)],
-						prefix: /\bx\b/.test(j),
+						className: ' class="' + classFix[j.substr(0, 1)] + '"',
+						prefix: /(-\w+-)/.test(j) ? (' <sup class="fix">' + RegExp.$1 + "</sup>") : "",
 						value: tabData[i][j],
 						type: j
 					});
@@ -216,14 +220,15 @@ function caniuseData(str, index, html) {
 				rowNum = Math.max(rowNum, tbody.length);
 			}
 			for (i in tabData) {
-				tabData[i][tabData[i].length - 1].rowspan = rowNum - tabData[i].length + 1;
+				tbody = rowNum - tabData[i].length + 1;
+				tabData[i][tabData[i].length - 1].rowspan = tbody > 1 ? ' rowspan="' + tbody + '"' : "";
 			}
 			tbody = "";
 			for (i = 0; i < rowNum; i++) {
 				tbody += "<tr>";
 				for (j in status) {
 					if (tabData[j][i]) {
-						tbody += "<td" + (tabData[j][i].rowspan > 1 ? ' rowspan="' + tabData[j][i].rowspan + '"' : "") + (tabData[j][i].className ? ' class="' + tabData[j][i].className + '"' : "") + ">" + tabData[j][i].value.join("-") + (tabData[j][i].prefix ? ' <sup class="fix">-' + caniuse.agents[j].prefix + '-</sup>' : "") + "</td>";
+						tbody += "<td" + (tabData[j][i].rowspan || "") + tabData[j][i].className + ">" + tabData[j][i].value.join("-") + tabData[j][i].prefix + "</td>";
 					}
 				}
 				tbody += "</tr>";
