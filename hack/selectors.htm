@@ -61,10 +61,11 @@
 				<li>一些CSS Hack由于浏览器存在交叉认识，所以需要通过层层覆盖的方式来实现对不同浏览器进行Hack的。</li>
 				<li class="gquote">
 					<p class="gquote-tit"><strong>简单列举几个：</strong></p>
-					<blockquote class="gquote-cont"><pre><code>* html .test{color:#090;}	   /* For IE6 and earlier */
-* + html .test{color:#ff0;}	 /* For IE7 */
-.test:lang(zh-cn){color:#f00;}  /* For IE8+ and not IE */
-.test:nth-child(1){color:#0ff;} /* For IE9+ and not IE */</code></pre></blockquote>
+					<blockquote class="gquote-cont"><pre><code>* html .test{color:#090;}                          /* For IE6 and earlier */
+* + html .test{color:#ff0;}                        /* For IE7 */
+.test:lang(zh-cn){color:#f00;}                     /* For IE8+ and not IE */
+.test:nth-child(1){color:#0ff;}                    /* For IE9+ and not IE */
+@media all and (min-width:0px){.test{color:#00f;}} /* For IE9+ and not IE 不改变选择器权重 */</code></pre></blockquote>
 					<p class="gquote-info">* 上述代码中的3,4两行就是典型的利用能力来进行选择的CSS Hack。</p>
 				</li>
 			</ul>
@@ -85,6 +86,7 @@
 * + html .test{color:#ff0;}
 .test:lang(zh-cn){color:#f00;}
 .test:nth-child(1){color:#0ff;}
+@media all and (min-width:0px){.test{color:#00f;}}
 </style>
 </head>
 <body>
