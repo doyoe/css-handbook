@@ -64,7 +64,7 @@
 		<div class="cont">
 			<dl>
 				<dt><a href="../../values/other/length.htm">&lt;length&gt;</a>：</dt>
-				<dd>用长度值来定义轮廓偏移。允许负值。<span class="g-color-light">0是以border边界作为参考点的，正值从border边界往外延，负值从border边界往里缩。</span></dd>
+				<dd>用长度值来定义轮廓偏移。允许负值。</dd>
 			</dl>
 		</div>
 	</section>
@@ -73,6 +73,9 @@
 		<div class="cont">
 			<strong>设置或检索对象外的线条轮廓偏移容器的值。</strong>参阅<a href="outline.htm">outline</a>属性。
 			<ul>
+				<li>outlines相关属性不占据布局空间，不会影响元素的尺寸；</li>
+				<li>outlines可能是非矩形；</li>
+				<li>outline-offset是以border边界作为参考点的，从0开始，正值从border边界往外延，负值从border边界往里缩。</li>
 				<li>对应的脚本特性为<strong>outlineOffset</strong>。</li>
 			</ul>
 		</div>
