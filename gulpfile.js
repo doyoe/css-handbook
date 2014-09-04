@@ -117,34 +117,25 @@ function tab(num) {
 	return str;
 }
 
-// 缩进所用的数据
-var indentData = {
-	section: tab(1),
-	div: tab(2),
-	h2: tab(2),
-	ul: tab(3),
-	li: tab(4),
-	table: tab(3),
-	thead: tab(4),
-	tbody: tab(4),
-	tr: tab(5),
-	th: tab(6),
-	td: tab(6)
-}
-
-// 生成缩进
-function indent(s, tag, tagName) {
-	return "\r\n" + (indentData[tagName] || tab(1)) + tag;
-}
-
 // 使用caniuse.com数据自动生成兼容性图表
-function caniuseData(str, index, html) {
-	var category = queryHTML(parseHtml(html), function(obj) {
-			return obj.type == "tag" && obj.attribs && obj.attribs.id == "category";
-		}),
-		propFix = {
-			"user-select": "user-select-none"
-		},
+function caniuseData(str, strIndent, propName, subName, index, html) {
+	strIndent = strIndent.match(/\t| {4}/g);
+	strIndent = strIndent ? tab(strIndent.length) : ""
+	// 缩进所用的数据
+	var indentData = {
+		thead: strIndent + tab(1),
+		tbody: strIndent + tab(1),
+		tr: strIndent + tab(2),
+		th: strIndent + tab(3),
+		td: strIndent + tab(3)
+	}
+
+	// 生成缩进
+	function indent(s, tag, tagName) {
+		return "\r\n" + (indentData[tagName] || strIndent) + tag;
+	}
+
+	var caniuse = require('caniuse-db/data'),
 		classFix = {
 			p: "partsupport",
 			n: "unsupport",
@@ -152,8 +143,6 @@ function caniuseData(str, index, html) {
 		},
 		tabData = {},
 		rowNum = 0,
-		propName,
-		caniuse,
 		status,
 		thead,
 		tbody,
@@ -162,82 +151,92 @@ function caniuseData(str, index, html) {
 		j,
 		k;
 
-	if (category) {
-		propName = category.attribs.name;
-		caniuse = require('caniuse-db/data');
-		data = caniuse.data["css-" + propName] || caniuse.data[propFix[propName] || propName];
-		if (data) {
-			console.log("自动生成兼容性数据：\t" + category.attribs.rel + "/" + propName);
-			status = data.stats;
-			str = '<!-- compatible:start --><section id="compatible" class="g-mod g-attr"><h2 class="tit">兼容性：</h2><div class="cont"><ul class="support-type"><li><span class="support">浅绿</span> = 支持</li><li><span class="unsupport">红色</span> = 不支持</li><li><span class="partsupport">粉色</span> = 部分支持</li></ul><table class="g-data"><thead><tr>';
-			thead = "";
-			tbody = "";
+	data = caniuse.data[propName] || caniuse.data["css-" + propName];
 
-			for (i in status) {
-				thead += '<th><span class="browser-' + i + '">' + caniuse.agents[i].browser + '</span></th>';
-				tabData[i] = {};
-				for (j in status[i]) {
-					tbody = status[i][j];
-					if (!/\bu\b/i.test(tbody)) {
-						tbody = tbody.replace(/\bx\b/, function() {
-							return "-" + ((caniuse.agents[i].prefix_exceptions || {})[j] || caniuse.agents[i].prefix) + "-";
-						});
-						if (tabData[i][tbody]) {
-							tabData[i][tbody].push(j)
-						} else {
-							tabData[i][tbody] = [j];
-						}
-					}
-				}
-				for (j in tabData[i]) {
-					tbody = tabData[i][j].join().split(/\s*[,-]\s*/g).map(function(val) {
-						try {
-							return parseFloat(val);
-						} catch (ex) {
-							return val;
-						}
-					}).sort(function(a, b) {
-						return a - b;
-					});
-					if (tbody.length === 1) {
-						tabData[i][j] = tbody;
-					} else {
-						tabData[i][j] = [tbody[0], tbody[tbody.length - 1]];
-					}
-				}
-				tbody = [];
-				for (j in tabData[i]) {
-					tbody.push({
-						className: ' class="' + classFix[j.substr(0, 1)] + '"',
-						prefix: /(-\w+-)/.test(j) ? (' <sup class="fix">' + RegExp.$1 + "</sup>") : "",
-						value: tabData[i][j],
-						type: j
-					});
-				}
-				tabData[i] = tbody.sort(function(a, b) {
-					return a.value[0] - b.value[0];
-				});
-				rowNum = Math.max(rowNum, tbody.length);
-			}
-			for (i in tabData) {
-				tbody = rowNum - tabData[i].length + 1;
-				tabData[i][tabData[i].length - 1].rowspan = tbody > 1 ? ' rowspan="' + tbody + '"' : "";
-			}
-			tbody = "";
-			for (i = 0; i < rowNum; i++) {
-				tbody += "<tr>";
-				for (j in status) {
-					if (tabData[j][i]) {
-						tbody += "<td" + (tabData[j][i].rowspan || "") + tabData[j][i].className + ">" + tabData[j][i].value.join("-") + tabData[j][i].prefix + "</td>";
-					}
-				}
-				tbody += "</tr>";
-			}
-			str += thead + "</tr></thead><tbody>" + tbody + "</tbody></table></div></section><!-- compatible:end -->";
-			str = str.replace(/(\s*<\/?(ul|div|section|tr|t\w{2,})(\s[^>]+)*>\s*)/ig, "\n$1\n").replace(/(<\/(li|h\d|th|td)>\s*)/ig, "$1\n").replace(/\n+(<[\/\!]?(\w+)?)/g, indent);
-		} else {
-			console.log("不能生成兼容性数据(caniuse数据中无此项)：\t" + category.attribs.rel + "/" + propName);
+	if (!data) {
+		propName = queryHTML(parseHtml(html), function(obj) {
+			return obj.type == "tag" && obj.attribs && obj.attribs.id == "category";
+		});
+		if (propName) {
+			propName = propName.attribs.name;
+			data = caniuse.data[propName] || caniuse.data["css-" + propName];
 		}
+	}
+
+	if (!data) {
+		if (propName) {
+			console.log("caniuse数据中无此项：\t" + propName);
+		} else {
+			console.log("未指定caniuse查询项目。");
+		}
+	} else {
+		status = data.stats;
+		str = "<!-- compatible:" + propName + ' --><table class="g-data"><thead><tr>';
+		thead = "";
+		tbody = "";
+
+		for (i in status) {
+			thead += '<th><span class="browser-' + i + '">' + caniuse.agents[i].browser + '</span></th>';
+			tabData[i] = {};
+			for (j in status[i]) {
+				tbody = status[i][j];
+				if (!/\bu\b/i.test(tbody)) {
+					tbody = tbody.replace(/\bx\b/, function() {
+						return "-" + ((caniuse.agents[i].prefix_exceptions || {})[j] || caniuse.agents[i].prefix) + "-";
+					});
+					if (tabData[i][tbody]) {
+						tabData[i][tbody].push(j)
+					} else {
+						tabData[i][tbody] = [j];
+					}
+				}
+			}
+			for (j in tabData[i]) {
+				tbody = tabData[i][j].join().split(/\s*[,-]\s*/g).map(function(val) {
+					try {
+						return parseFloat(val);
+					} catch (ex) {
+						return val;
+					}
+				}).sort(function(a, b) {
+					return a - b;
+				});
+				if (tbody.length === 1) {
+					tabData[i][j] = tbody;
+				} else {
+					tabData[i][j] = [tbody[0], tbody[tbody.length - 1]];
+				}
+			}
+			tbody = [];
+			for (j in tabData[i]) {
+				tbody.push({
+					className: ' class="' + classFix[j.substr(0, 1)] + '"',
+					prefix: /(-\w+-)/.test(j) ? (' <sup class="fix">' + RegExp.$1 + "</sup>") : "",
+					value: tabData[i][j],
+					type: j
+				});
+			}
+			tabData[i] = tbody.sort(function(a, b) {
+				return a.value[0] - b.value[0];
+			});
+			rowNum = Math.max(rowNum, tbody.length);
+		}
+		for (i in tabData) {
+			tbody = rowNum - tabData[i].length + 1;
+			tabData[i][tabData[i].length - 1].rowspan = tbody > 1 ? ' rowspan="' + tbody + '"' : "";
+		}
+		tbody = "";
+		for (i = 0; i < rowNum; i++) {
+			tbody += "<tr>";
+			for (j in status) {
+				if (tabData[j][i]) {
+					tbody += "<td" + (tabData[j][i].rowspan || "") + tabData[j][i].className + ">" + tabData[j][i].value.join("-") + tabData[j][i].prefix + "</td>";
+				}
+			}
+			tbody += "</tr>";
+		}
+		str += thead + "</tr></thead><tbody>" + tbody + "</tbody></table><!-- compatible:end -->";
+		str = strIndent + str.replace(/(\s*<\/?(ul|div|section|tr|t\w{2,})(\s[^>]+)*>\s*)/ig, "\n$1\n").replace(/(<\/(li|h\d|th|td)>\s*)/ig, "$1\n").replace(/\n+(<[\/\!]?(\w+)?)/g, indent);
 	}
 	return str;
 }
@@ -251,7 +250,7 @@ gulp.task("htm", function() {
 	recurse(".", function(filepath, rootdir, subdir, filename) {
 		if (/\.html?$/.test(filename)) {
 			gulp.src(filepath)
-				.pipe(replace(/<\!--\s*compatible\s*:\s*start\s*-->[\s\S]*<!--\s*compatible\s*:\s*end\s*-->/g, caniuseData))
+				.pipe(replace(/([\t ]*)<\!--\s*compatible\s*:\s*(\w+(-\w+)?)\s*-->[\s\S]*<!--\s*compatible\s*:\s*end\s*-->/g, caniuseData))
 				.pipe(replace("    ", "\t"))
 				.pipe(htmlhint())
 				.pipe(htmlhint.reporter())
