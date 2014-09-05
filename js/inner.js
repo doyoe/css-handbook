@@ -81,7 +81,7 @@ Global.folding = function(s){
 })('#category');
 
 //url地址的页面跳转
-if (!Global.isLocal && Global.name && !window.chrome) {
+if (!Global.isLocal && Global.name && !/^chm:$/i.test(location.protocol) ) {
 	(function(){
 		if(window === window.top){
 			$.cookie('pos', Global.url, {path: '/'});
