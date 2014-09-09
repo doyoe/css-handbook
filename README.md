@@ -25,13 +25,6 @@ CSS参考手册目前正在v4.1.6草案中。广泛接受[Issues](https://github
 * 新增了[参考资源列表](http://css.doyoe.com/experience/refer.htm)；
 * 一些其它修改，包括：语法错误，连接错误，UI微调等；
 
-## GitHub计划
-
-CSS参考手册从v4.1.4开始，代码都托管到[GitHub](https://github.com/doyoe/css-handbook)上。大家可以给手册提[Issues](https://github.com/doyoe/css-handbook/issues)和[Pull Requests](https://github.com/doyoe/css-handbook/pulls)。
-
-会阶段性的合并，谢谢。
-
-<!--
 ## 构建工具安装与使用
 
 1. 安装[Node.js](http://nodejs.org/download/)，安装后可能需要重启电脑
@@ -69,4 +62,3 @@ CSS参考手册从v4.1.4开始，代码都托管到[GitHub](https://github.com/d
 ### 代码错误检查
 
 在项目根目录运行`gulp htm`命令，将会检查所有html文件的代码合法性
--->
