@@ -254,7 +254,7 @@ gulp.task("htm", function() {
 			gulp.src(filepath)
 				.pipe(replace(/([\t ]*)<\!--\s*compatible\s*:\s*(\w+(-\w+)?)\s*-->[\s\S]*?<!--\s*compatible\s*:\s*end\s*-->/g, caniuseData))
 				.pipe(replace(/(\t|\n) {4,}/g, function(str, char) {
-					return char + tab(str.length / 4);
+					return char + tab(parseInt(str.length / 4));
 				}))
 				.pipe(htmlhint())
 				.pipe(htmlhint.reporter())
