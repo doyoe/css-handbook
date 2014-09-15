@@ -142,6 +142,7 @@ function caniuseData(str, strIndent, strPropName, subName, index, html) {
 			n: "unsupport",
 			y: "support"
 		},
+		regProp = /(-\w+)+$/,
 		tabData = {},
 		rowNum = 0,
 		propName,
@@ -153,7 +154,19 @@ function caniuseData(str, strIndent, strPropName, subName, index, html) {
 		j,
 		k;
 
-	data = caniuse.data[strPropName] || caniuse.data["css-" + strPropName];
+	function getDate(prop) {
+		data = caniuse.data[prop] || caniuse.data["css-" + prop];
+		if (!data && regProp.test(prop)) {
+			getDate(prop.replace(regProp, ""));
+		}
+	}
+
+	function getPrefix(bro, ver) {
+		bro = caniuse.agents[bro];
+		return (bro.prefix_exceptions || {})[ver] || bro.prefix;
+	}
+
+	getDate(strPropName);
 
 	if (!data) {
 		propName = queryHTML(parseHtml(html), function(obj) {
@@ -161,7 +174,7 @@ function caniuseData(str, strIndent, strPropName, subName, index, html) {
 		});
 		if (propName) {
 			propName = propName.attribs.name;
-			data = caniuse.data[propName] || caniuse.data["css-" + propName];
+			getDate(propName);
 		}
 	}
 
@@ -184,7 +197,7 @@ function caniuseData(str, strIndent, strPropName, subName, index, html) {
 				tbody = status[i][j];
 				if (!/\bu\b/i.test(tbody)) {
 					tbody = tbody.replace(/\bx\b/, function() {
-						return "-" + ((caniuse.agents[i].prefix_exceptions || {})[j] || caniuse.agents[i].prefix) + "-";
+						return "-" + getPrefix(i, j) + "-";
 					});
 					if (tabData[i][tbody]) {
 						tabData[i][tbody].push(j)
