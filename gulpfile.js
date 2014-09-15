@@ -142,7 +142,11 @@ function caniuseData(str, strIndent, strPropName, subName, index, html) {
 			n: "unsupport",
 			y: "support"
 		},
-		regProp = /(-\w+)+$/,
+		propFix = {
+			transform: "transforms2d"
+		},
+		regPropSub = /(-\w+)+$/,
+		regPropS = /s$/,
 		tabData = {},
 		rowNum = 0,
 		propName,
@@ -155,9 +159,16 @@ function caniuseData(str, strIndent, strPropName, subName, index, html) {
 		k;
 
 	function getDate(prop) {
+		prop = propFix[prop] || prop;
 		data = caniuse.data[prop] || caniuse.data["css-" + prop];
-		if (!data && regProp.test(prop)) {
-			getDate(prop.replace(regProp, ""));
+		if (!data && regPropSub.test(prop)) {
+			getDate(prop.replace(regPropSub, ""));
+		}
+		if (!data && !regPropS.test(prop)) {
+			getDate(prop + "s");
+		}
+		if (data) {
+			propName = prop;
 		}
 	}
 
@@ -199,6 +210,9 @@ function caniuseData(str, strIndent, strPropName, subName, index, html) {
 					tbody = tbody.replace(/\bx\b/, function() {
 						return "-" + getPrefix(i, j) + "-";
 					});
+					if (propName === "transforms2d" && tbody === "y") {
+						tbody += getPrefix(i, j);
+					}
 					if (tabData[i][tbody]) {
 						tabData[i][tbody].push(j)
 					} else {
