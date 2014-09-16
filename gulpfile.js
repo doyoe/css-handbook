@@ -322,7 +322,7 @@ gulp.task("chm", function() {
 			files = {};
 
 		recurse(".", function(abspath, rootdir, subdir, filename) {
-			if (!/^(ZeroClipboard\.swf|\w+\.psd)$/.test(filename) && subdir && !/^images$/.test(subdir)) {
+			if (!/^(ZeroClipboard\.swf|prefixfree\.min\.js|\w+\.psd)$/.test(filename) && subdir && !/^images$/.test(subdir)) {
 				files[path.normalize(subdir + "/" + filename)] = true;
 			}
 		});
