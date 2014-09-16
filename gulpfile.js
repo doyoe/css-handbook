@@ -165,7 +165,11 @@ function caniuseData(str, strIndent, strPropName, subName, index, html) {
 		propFix = {
 			"text-shadow": "textshadow",
 			"box-shadow": "boxshadow",
-			transform: "transforms2d"
+			transform: "transforms2d",
+			"@media": "mediaqueries",
+			"rgba": "css3-colors",
+			"hsla": "css3-colors",
+			"hsl": "css3-colors"
 		},
 		regPropSub = /(-\w+)+$/,
 		regPropS = /s$/,
