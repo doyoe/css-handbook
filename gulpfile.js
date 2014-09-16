@@ -117,6 +117,26 @@ function tab(num) {
 	return str;
 }
 
+// 比较两个版本号，v1>v2则返回值大于零 v1<v2则返回值大于0，若v1==v2则返回值等于0
+function compare(v1, v2) {
+	v1 = convert(v1);
+	v2 = convert(v2);
+	for (var diff = 0, i = 0; (i < v1.length || i < v2.length) && diff === 0; i++) {
+		diff = parseNum(v1[i]) - parseNum(v2[i]);
+	}
+	return diff;
+}
+
+// 将版本号按小数点分割为数组
+function convert(ver){
+	return ver.toString().split(".");
+}
+
+// 将字符串转为数字
+function parseNum(num){
+	return parseInt(num) || 0;
+}
+
 // 使用caniuse.com数据自动生成兼容性图表
 function caniuseData(str, strIndent, strPropName, subName, index, html) {
 	strIndent = strIndent.match(/\t| {4}/g);
@@ -143,6 +163,8 @@ function caniuseData(str, strIndent, strPropName, subName, index, html) {
 			y: "support"
 		},
 		propFix = {
+			"text-shadow": "textshadow",
+			"box-shadow": "boxshadow",
 			transform: "transforms2d"
 		},
 		regPropSub = /(-\w+)+$/,
@@ -221,15 +243,7 @@ function caniuseData(str, strIndent, strPropName, subName, index, html) {
 				}
 			}
 			for (j in tabData[i]) {
-				tbody = tabData[i][j].join().split(/\s*[,-]\s*/g).map(function(val) {
-					try {
-						return parseFloat(val);
-					} catch (ex) {
-						return val;
-					}
-				}).sort(function(a, b) {
-					return a - b;
-				});
+				tbody = tabData[i][j].join(",").split(/\s*[,-]\s*/g).sort(compare);
 				if (tbody.length === 1) {
 					tabData[i][j] = tbody;
 				} else {
@@ -246,7 +260,7 @@ function caniuseData(str, strIndent, strPropName, subName, index, html) {
 				});
 			}
 			tabData[i] = tbody.sort(function(a, b) {
-				return a.value[0] - b.value[0];
+				return compare(a.value[0], b.value[0]);
 			});
 			rowNum = Math.max(rowNum, tbody.length);
 		}
