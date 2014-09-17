@@ -159,11 +159,20 @@
 <title>RGBA_CSS参考手册_web前端开发参考手册系列</title>
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <style>
-.test{background-color:rgba(0,0,0,0.5);}
+.test {
+	filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr=#80000000,endColorStr=#80000000); /* IE5.5 - IE8 */
+	background: rgba(0,0,0,0.5); /* 其他浏览器 */
+	zoom: 1; /* 滤镜需要激活haslayout才能生效 */
+}
+@media all and (min-width:0px){
+	.test {
+		filter: none; /* IE9下需要关闭滤镜，否则会与背景色同时生效 */
+	}
+}
 </style>
 </head>
 <body>
-<div class="test">能看到此行背景说明你的浏览器支持RGBA色彩值记法</div>
+<div class="test">此行的背景色为50%透明度的黑色</div>
 </body>
 </html>
 			</textarea>
@@ -190,7 +199,7 @@ $("input[type='range']").on("input change propertychange", function(e) {
 	if (aa.length < 2) {
 		aa = "0" + aa;
 	}
-	$(this).closest("p").next().html("rgba(0, 0, 0, " + val + ");<br>progid:DXImageTransform.Microsoft.Gradient(startColorstr=#" + aa + "000000, endColorstr=#" + aa + "000000);")
+	$(this).closest("p").next().html("filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr=#" + aa + "000000,endColorStr=#" + aa + "000000);<br>background: rgba(0, 0, 0, " + val + ");")
 }).change();
 </script>
 <script src="../../js/inner.js"></script>
