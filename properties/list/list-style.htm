@@ -51,7 +51,7 @@
 	<section id="syntax" class="g-mod g-attr">
 		<h2 class="tit">语法：</h2>
 		<div class="cont">
-			<p><strong>list-style</strong>：[ <a href="list-style-image.htm">list-style-image</a> ] || [ <a href="list-style-position.htm">list-style-position</a> ] || [ <a href="list-style-type.htm">list-style-type</a> ]</p>
+			<p><strong>list-style</strong>：[ <a href="list-style-type.htm">list-style-type</a> ] || [ <a href="list-style-position.htm">list-style-position</a> ] || [ <a href="list-style-image.htm">list-style-image</a> ]</p>
 			<p><strong>默认值</strong>：<mark class="defaultvalue">看独立属性自身</mark></p>
 			<p><strong>适用于</strong>：所有 display:list-item 的元素</p>
 		    <p><strong>继承性</strong>：有</p>
@@ -77,6 +77,7 @@
 		<div class="cont">
 			<strong>复合属性。设置列表项目相关内容</strong>
 			<ul>
+				<li>需要注意的是，如果使用 list-style 复合属性，[ <a href="list-style-image.htm">list-style-image</a> ] 属性必须放在最后，否则部分浏览器（包括所有的webkit/blink内核浏览器）将会解析出错。</li>
 				<li>对应的脚本特性为<strong>listStyle</strong>。</li>
 			</ul>
 		</div>
@@ -87,12 +88,11 @@
 			<ul class="support-type">
 				<li><span class="support">浅绿</span> = 支持</li>
 				<li><span class="unsupport">红色</span> = 不支持</li>
-				<li><span class="partsupport">墨绿</span> = 部分支持</li>
+				<li><span class="partsupport">粉色</span> = 部分支持</li>
 			</ul>
 			<table class="g-data">
 				<thead>
 					<tr>
-						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
 						<th><span class="browser-ie">IE</span></th>
 						<th><span class="browser-firefox">Firefox</span></th>
 						<th><span class="browser-safari">Safari</span></th>
@@ -102,7 +102,6 @@
 				</thead>
 				<tbody>
 					<tr>
-						<th>版本</th>
 						<td class="support">6.0</td>
 						<td class="support">1.0</td>
 						<td class="support">1.0</td>

@@ -2,13 +2,19 @@
 <html lang="zh-cn">
 <head>
 <meta charset="utf-8" />
-<title>user-select_CSS参考手册_web前端开发参考手册系列</title>
+<title>list-style_CSS参考手册_web前端开发参考手册系列</title>
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <style>
-.test{padding:10px;-webkit-user-select:none;-moz-user-select:none;-o-user-select:none;user-select:none;background:#eee;}
+.test{list-style: outside upper-alpha none;}
 </style>
 </head>
 <body>
-<div class="test" onselectstart="return false;" unselectable="on">选择我试试，你会发现怎么也选择不到我，哈哈哈哈</div>
+<ul class="test">
+    <li class="colorname">列表项一</li>
+    <li class="colorname">列表项一</li>
+    <li class="colorname">列表项一</li>
+    <li class="colorname">列表项一</li>
+</ul>
 </body>
 </html>
+            
