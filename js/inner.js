@@ -941,7 +941,7 @@ if (!Global.isLocal && Global.name && !/^chm:$/i.test(location.protocol) ) {
 				document.writeln("<script src=\"" + selectivizr + "\"></script>");
 			}
 			if(content){
-				content = content.replace(/\s*$/, "\n<script src=\"" + selectivizr + "\">" + escape(content) + "</script>");
+				content = content.replace(/\s*$/, "\n<script src=\"" + selectivizr + "\"></script>");
 			}
 		}
 	})();
