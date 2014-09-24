@@ -2,9 +2,9 @@
 <html lang="zh-cn">
 <head>
 <meta charset="utf-8" />
-<title>E::selection</title>
-<meta name="description" content="CSS3参考手册之: E::selection" />
-<meta name="keywords" content="E::selection, css3选择符, css3, css3参考手册" />
+<title>E::placeholder</title>
+<meta name="description" content="CSS3参考手册之: E::placeholder" />
+<meta name="keywords" content="E::placeholder, css3选择符, css3, css3参考手册" />
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <meta name="robots" content="all" />
 <!--[if lte IE 8]>
@@ -19,7 +19,7 @@
 		<span>&#187;</span>
 		<a href="../index.htm">选择符列表</a>
 		<span>&#187;</span>
-		<a href="index.htm" id="category" rel="selectors/pseudo-element" name="selection">伪对象选择符</a>
+		<a href="index.htm" id="category" rel="selectors/pseudo-element" name="placeholder">伪对象选择符</a>
 		<span>&#187;</span>
 	</div>
 	<div class="to">
@@ -39,7 +39,7 @@
 </nav>
 <header id="hd">
 	<section id="title" class="g-mod">
-		<h1 class="tit">E::selection</h1>
+		<h1 class="tit">E::placeholder</h1>
 		<ul class="info">
 			<li><strong>版本：CSS3</strong></li>
 		</ul>
@@ -50,15 +50,15 @@
 	<section id="syntax" class="g-mod g-attr">
 		<h2 class="tit">语法：</h2>
 		<div class="cont">
-			<p><strong>E::selection</strong>{ sRules }</p>
+			<p><strong>E::placeholder</strong>{ sRules }</p>
 		</div>
 	</section>
 	<section id="intro" class="g-mod g-attr">
 		<h2 class="tit">说明：</h2>
 		<div class="cont">
-			<strong>设置对象被选择时的样式。</strong>
+			<strong>设置对象文字占位符的样式。</strong>
 			<ul>
-				<li>需要注意的是，::selection只能定义被选择时的<a href="../../properties/background/background-color.htm">background-color</a>及<a href="../../properties/color/color.htm">color</a>。</li>
+				<li>::placeholder 伪元素控制元素所显示的文字占位符.它允许开发者/设计师改变文字占位符的样式.默认的文字占位符为浅灰色,当你的表单背景色为类似的颜色时它可能效果并不是很明显,那么你就可以使用这个伪类来改变文字占位符的颜色.</li>
 			</ul>
 		</div>
 	</section>
@@ -91,48 +91,64 @@
 				</thead>
 				<tbody>
 					<tr>
-						<td class="unsupport">5.5-8</td>
-						<td rowspan="2" class="support">2-35 <sup class="fix">-moz-</sup></td>
-						<td rowspan="2" class="support">4-40</td>
-						<td rowspan="2" class="support">3.1-8</td>
-						<td class="unsupport">9</td>
-						<td rowspan="2" class="unsupport">3.2-8</td>
+						<td class="unsupport">5.5-9</td>
+						<td class="unsupport">2-3.6</td>
+						<td rowspan="2" class="partsupport">4-40 <sup class="fix">-webkit-</sup></td>
+						<td class="unsupport">3.1-4</td>
+						<td class="unsupport">9-12.1</td>
+						<td class="unsupport">3.2-4.1</td>
 						<td rowspan="2" class="unsupport">5.0-7.0</td>
-						<td class="unsupport">2.1-4.3</td>
-						<td rowspan="2" class="unsupport">7-10</td>
-						<td rowspan="2" class="support">11.5-22</td>
-						<td rowspan="2" class="support">37</td>
-						<td rowspan="2" class="unsupport">32</td>
-						<td rowspan="2" class="support">10</td>
+						<td rowspan="2" class="partsupport">2.1-4.4.3 <sup class="fix">-webkit-</sup></td>
+						<td rowspan="2" class="partsupport">10 <sup class="fix">-webkit-</sup></td>
+						<td class="unsupport">10-12.1</td>
+						<td rowspan="2" class="partsupport">37 <sup class="fix">-webkit-</sup></td>
+						<td rowspan="2" class="partsupport">32 <sup class="fix">-moz-</sup></td>
+						<td rowspan="2" class="partsupport">10 <sup class="fix">-ms-</sup></td>
 					</tr>
 					<tr>
-						<td class="support">9-11</td>
-						<td class="support">9.5-26</td>
-						<td class="support">4.4-4.4.3</td>
+						<td class="partsupport">10-11 <sup class="fix">-ms-</sup></td>
+						<td class="partsupport">4-35 <sup class="fix">-moz-</sup></td>
+						<td class="partsupport">5-8 <sup class="fix">-webkit-</sup></td>
+						<td class="partsupport">15-26 <sup class="fix">-webkit-</sup></td>
+						<td class="partsupport">4.2-8 <sup class="fix">-webkit-</sup></td>
+						<td class="partsupport">22 <sup class="fix">-webkit-</sup></td>
 					</tr>
 				</tbody>
 			</table>
 			<!-- compatible:end -->
+			<ol class="support-info">
+				<li>::-moz-placeholder 伪元素在Firefox 19+替代了之前的 :-moz-placeholder 伪类.</li>
+			</ol>
 		</div>
 	</section>
 	<section id="example" class="g-mod g-attr">
-		<h2 class="tit">示例(Firefox需将以下的代码复制到本地测试)：</h2>
+		<h2 class="tit">示例：</h2>
 		<div class="cont">
 			<textarea cols="90" rows="10">
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
 <meta charset="utf-8" />
-<title>E::selection_CSS参考手册_web前端开发参考手册系列</title>
+<title>E::placeholder_CSS参考手册_web前端开发参考手册系列</title>
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <style>
-p::-moz-selection{background:#000;color:#f00;}
-p::selection{background:#000;color:#f00;}
+input::-webkit-input-placeholder {
+	color: green;
+}
+input:-ms-input-placeholder {
+	color: green;
+}
+input::-moz-placeholder {
+	color: green;
+	opacity: 1;
+}
 </style>
 </head>
 <body>
-<h1>选中下面的文字，看看它的颜色</h1>
-<p>你选中这段文字后，看看它们的文本颜色和背景色，就能明白::selection的作用。</p>
+
+  <input id="test" placeholder="Placeholder text!">
+
 </body>
 </html>
 			</textarea>
