@@ -143,6 +143,9 @@
 				</tbody>
 			</table>
 			<!-- compatible:end -->
+			<ol class="support-info">
+				<li>通过<a href="http://leaverou.github.io/prefixfree/" class="external" target="_blank">prefixfree</a>，可以免去css3前缀。本页下方的示例已使用此方案。</li>
+			</ol>
 		</div>
 	</section>
 	<section id="example" class="g-mod g-attr">
@@ -156,34 +159,14 @@
 <title>animation-direction_CSS参考手册_web前端开发参考手册系列</title>
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<script src="../../js/prefixfree.min.js"></script>
 <style>
 h1{font-size:16px;}
-div{width:100px;height:100px;padding:10px;border-radius:61px;box-shadow:0 0 10px rgba(204,102,0,.8);background:#F6D66E;background:-moz-linear-gradient(top,#fff,#F6D66E);background:-webkit-linear-gradient(top,#fff,#F6D66E);background:-o-linear-gradient(top,#fff,#F6D66E);background:-ms-linear-gradient(top,#fff,#F6D66E);background:linear-gradient(top,#fff,#F6D66E);
-	-moz-animation:animations 1.5s ease infinite alternate;
-	-webkit-animation:animations 1.5s ease infinite alternate;
-	-o-animation:animations 1.5s ease infinite alternate;
-	-ms-animation:animations 1.5s ease infinite alternate;
+div{width:100px;height:100px;padding:10px;border-radius:61px;box-shadow:0 0 10px rgba(204,102,0,.8);background:#F6D66E;
+	background:-webkit-linear-gradient(top,#fff,#F6D66E);
+	background:-o-linear-gradient(top,#fff,#F6D66E);
+	background:linear-gradient(#fff,#F6D66E);
 	animation:animations 1.5s ease infinite alternate;
-}
-@-webkit-keyframes animations{
-	0%{-webkit-transform:translate(0,0);}
-	50%{-webkit-transform:translate(100px,100px);}
-	100%{-webkit-transform:translate(100px,0);}
-}
-@-moz-keyframes animations{
-	0%{-moz-transform:translate(0,0);}
-	50%{-moz-transform:translate(100px,100px);}
-	100%{-moz-transform:translate(100px,0);}
-}
-@-o-keyframes animations{
-	0%{-o-transform:translate(0,0);}
-	50%{-o-transform:translate(100px,100px);}
-	100%{-o-transform:translate(100px,0);}
-}
-@-ms-keyframes animations{
-	0%{-ms-transform:translate(0,0);}
-	50%{-ms-transform:translate(100px,100px);}
-	100%{-ms-transform:translate(100px,0);}
 }
 @keyframes animations{
 	0%{transform:translate(0,0);}
