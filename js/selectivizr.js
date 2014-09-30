@@ -45,7 +45,18 @@ References:
 	var js_path								= (doc.scripts ? doc.scripts[doc.scripts.length - 1] : doc.querySelector("script:last-child")).getAttribute("src").replace(/[^\/]+$/, "");
 	if (!(ieVersion > 5 && ieVersion < 10)) {
 		if(!win.StyleFix) {
-			loadScript(js_path + "prefixfree.min.js");
+			loadScript(js_path + "prefixfree.min.js").onload = function(){
+				var addEvent = win.addEventListener,
+					tester = doc.createElement("div"),
+					process = StyleFix.process;
+				tester.style.cssText = "font-size:1vmax";
+				if(!/vmax/.test(tester.style.fontSize)){
+					StyleFix.register(vunits);
+					addEvent("resize", process);
+					addEvent("orientationchange", process);
+					process();
+				}
+			};
 		}
 		return;
 	}
@@ -110,43 +121,66 @@ References:
 		var script = doc.createElement("script");
 		script.src = src;
 		root.children[0].appendChild(script);
+		return script;
+	}
+
+	function vunits(css, raw, ele) {
+		if (ele) {
+			css = ele[strRawCssText] || (ele[strRawCssText] = css);
+		}
+		var vh = (win.innerHeight || root.clientHeight) / 100,
+			vw = (win.innerWidth || root.clientWidth) / 100,
+			viewport = {
+				vmax: Math.max(vh, vw),
+				vmin: Math.min(vh, vw),
+				vh: vh,
+				vw: vw
+			};
+
+		return css.replace(/\b(\d+(\.\d+)?)(vw|vh|vmax|vmin)\b/g, function(s, num, subNum, strUnit) {
+			return (num * viewport[strUnit]).toFixed(2) + "px";
+		});
 	}
 
 	// IE media queries, vm, vw, vh, vmax, vmin, rem 
 	function setLengthUnits() {
-		var sizeTester = doc.createElement("fontSizeVal"),
-			vh = root.clientHeight / 100,
-			vw = root.clientWidth / 100,
-			viewport = {
-				vmax: Math.max(vh, vh),
-				vmin: Math.min(vh, vh),
-				vh: vh,
-				vw: vw
+		var rem = root.currentStyle.fontSize.match(/([\d\.]+)([^\d\.]+)/),
+			units = {
+				"%": 0.12,
+				em: 12,
+				ex: 6
 			},
 			stylesheet,
 			cssText;
-		sizeTester.style.top = "1em";
-		root.appendChild(sizeTester);
-		viewport.rem = sizeTester.style.pixelTop;
-		root.removeChild(sizeTester);
+
+		if(units[rem[2]]){
+			rem[1] = rem[1] * units[rem[2]];
+			rem[2] = "pt";
+		} else {
+			rem[1] = parseFloat(rem[1]);
+		}
+		var sizeTester = doc.createElement("fontSizeVal")
 
 		for (var c = 0; c < doc.styleSheets.length; c++) {
 			stylesheet = doc.styleSheets[c];
 			cssText = stylesheet[strRawCssText];
 			if (cssText) {
-				cssText = cssText.replace(/\b(\d+(\.\d+)?)(vw|vh|vmax|vmin|rem)\b/g, function(s, num, subNum, strUnit) {
-					return (parseFloat(num) * viewport[strUnit]) + "px";
-				});
-				// call media.match.js see https://github.com/reubenmoes/media-match */
-				if (ieVersion < 9 && win.styleMedia) {
-					cssText = cssText.replace(RE_MEDIA, function(str, strRules) {
-						try {
-							if (styleMedia.matchMedium(strRules)) {
-								str = "@media all ";
-							}
-						} catch (ex) {}
-						return str;
+				cssText = vunits(cssText);
+				if (ieVersion < 9) {
+					cssText = cssText.replace(/\b(\d+(\.\d+)?)rem\b/g, function(s, num) {
+						return (num * rem[1]) + rem[2];
 					});
+					// call media.match.js see https://github.com/reubenmoes/media-match */
+					if (win.styleMedia) {
+						cssText = cssText.replace(RE_MEDIA, function(str, strRules) {
+							try {
+								if (styleMedia.matchMedium(strRules)) {
+									str = "@media all ";
+								}
+							} catch (ex) {}
+							return str;
+						});
+					}
 				}
 				stylesheet.cssText = cssText;
 			}
@@ -505,7 +539,7 @@ References:
 	function loadStyleSheet( url ) {
 		var cssText = ajaxCache[url];
 
-		if (window.jQuery) {
+		if (win.jQuery) {
 			cssText = jQuery.ajax(url, {
 				dataType: "text",
 				async: false
@@ -682,7 +716,7 @@ References:
 	var baseUrl = (baseTags.length > 0) ? baseTags[0].href : doc.location.href;
 	getStyleSheets();
 
-	win.attachEvent("onresize", setLengthUnits);
+	addEvent(win, "resize", setLengthUnits);
 
 	// Bind selectivizr to the ContentLoaded event. 
 	ContentLoaded(function() {

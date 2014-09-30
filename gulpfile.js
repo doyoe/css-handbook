@@ -121,19 +121,20 @@ function tab(num) {
 function compare(v1, v2) {
 	v1 = convert(v1);
 	v2 = convert(v2);
-	for (var diff = 0, i = 0; (i < v1.length || i < v2.length) && diff === 0; i++) {
+	for (var diff = 0, i = 0;
+		(i < v1.length || i < v2.length) && diff === 0; i++) {
 		diff = parseNum(v1[i]) - parseNum(v2[i]);
 	}
 	return diff;
 }
 
 // 将版本号按小数点分割为数组
-function convert(ver){
+function convert(ver) {
 	return ver.toString().split(".");
 }
 
 // 将字符串转为数字
-function parseNum(num){
+function parseNum(num) {
 	return parseInt(num) || 0;
 }
 
@@ -211,7 +212,13 @@ function caniuseData(str, strIndent, strPropName, subName, index, html) {
 		});
 		if (propName) {
 			propName = propName.attribs.name;
-			getDate(propName);
+			if (/^(vw|vh|vmin)$/.test(propName)) {
+				data = JSON.parse(JSON.stringify(caniuse.data["viewport-units"]).replace(/"a\b/g, "\"y"));
+			}else if (/^vmax$/.test(propName)) {
+				data = JSON.parse(JSON.stringify(caniuse.data["viewport-units"]).replace(/"a\b/g, "\"n"));
+			} else {
+				getDate(propName);
+			}
 		}
 	}
 

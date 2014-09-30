@@ -948,16 +948,6 @@ if (!Global.isLocal && Global.name && !/^chm:$/i.test(location.protocol) ) {
 				return txtExp.val();
 			});
 		}
-
-		if(!Global.notIE){
-			var selectivizr = (Global.isLocal ? "" : Global.rootPath) + "/js/selectivizr.js";
-			if(document.documentMode){
-				document.writeln("<script src=\"" + selectivizr + "\"></script>");
-			}
-			if(content){
-				content = content.replace(/\s*$/, "\n<script src=\"" + selectivizr + "\"></script>");
-			}
-		}
 	})();
 
 	//为自己和外层添加展开收起的折叠效果
