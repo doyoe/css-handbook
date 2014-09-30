@@ -105,9 +105,10 @@ if (!Global.isLocal && Global.name && !/^chm:$/i.test(location.protocol) ) {
 	}
 	Global.copy = function(btn, content, isAlertContent) {
 		if (btn && btn.length) {
-			content = content.replace(/\s+$/, "");
 			btn.click(function(e) {
 				e.preventDefault();
+				content = content.call ? content() : content;
+				content = content.replace(/\s+$/, "");
 				try {
 					clipboardData.setData("text", content);
 				} catch (ex) {
@@ -900,8 +901,14 @@ if (!Global.isLocal && Global.name && !/^chm:$/i.test(location.protocol) ) {
 	//运行示例代码以及相关操作
 	(function(){
 		var example = $('#example'),
-			content = example.find('textarea').val(),
-			btnRun = example.find('.g-btn-sure');
+			txtExp = example.find('textarea'),
+			content = txtExp.val(),
+			btnRun = example.find('.g-btn-sure'),
+			selectivizr = (Global.isLocal ? "" : Global.rootPath) + "/js/selectivizr.js";
+
+		if (document.documentMode < 10) {
+			document.writeln("<script src=\"" + selectivizr + "\"></script>");
+		}
 
 		if (example.length) {
 			//添加复制代码的按钮
@@ -930,9 +937,16 @@ if (!Global.isLocal && Global.name && !/^chm:$/i.test(location.protocol) ) {
 					}
 				});
 			}
-
+			if (content) {
+				content = content.replace(/(\n<\/\w+>)?\s*$/, "\n<script src=\"" + selectivizr + "\"></script>$1");
+				if (/selectivizr/i.test($(".support-info").text())) {
+					txtExp.val(content);
+				}
+			}
 			//复制代码
-			Global.copy(example.find(".g-btn-copy"), content);
+			Global.copy(example.find(".g-btn-copy"), function(){
+				return txtExp.val();
+			});
 		}
 	})();
 
