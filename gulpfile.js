@@ -228,7 +228,7 @@ function caniuseData(str, strIndent, strPropName, subName, index, html) {
 		tbody = "";
 
 		for (i in status) {
-			thead += '<th><span class="browser-' + i + '">' + caniuse.agents[i].browser.replace(/\s+/, "<br>") + '</span></th>';
+			thead += '<th><span class="browser-' + i + '">' + caniuse.agents[i].browser.replace(/\s+/g, "<br>") + '</span></th>';
 			tabData[i] = {};
 			for (j in status[i]) {
 				tbody = status[i][j];

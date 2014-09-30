@@ -2,9 +2,9 @@
 <html lang="zh-cn">
 <head>
 <meta charset="utf-8" />
-<title>E::selection</title>
-<meta name="description" content="CSS3参考手册之: E::selection" />
-<meta name="keywords" content="E::selection, css3选择符, css3, css3参考手册" />
+<title>vmax</title>
+<meta name="description" content="CSS3参考手册之: vmax" />
+<meta name="keywords" content="vmax, css3单位, css3, css3参考手册" />
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <meta name="robots" content="all" />
 <!--[if lte IE 8]>
@@ -17,16 +17,16 @@
 	<div class="from">
 		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
 		<span>&#187;</span>
-		<a href="../index.htm">选择符列表</a>
+		<a href="../index.htm">取值与单位列表</a>
 		<span>&#187;</span>
-		<a href="index.htm" id="category" rel="selectors/pseudo-element" name="selection">伪对象选择符</a>
+		<a href="index.htm" id="category" rel="values/length" name="vmax">长度值与单位</a>
 		<span>&#187;</span>
 	</div>
 	<div class="to">
 		<span class="label">相关内容：</span>
 		<div class="g-combobox g-transition">
 			<a href="?" class="g-transition target">
-				<strong>其它伪对象选择符</strong>
+				<strong>长度值与单位参考</strong>
 				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
 			</a>
 			<div class="g-transition list">
@@ -39,7 +39,7 @@
 </nav>
 <header id="hd">
 	<section id="title" class="g-mod">
-		<h1 class="tit">E::selection</h1>
+		<h1 class="tit">vmax</h1>
 		<ul class="info">
 			<li><strong>版本：CSS3</strong></li>
 		</ul>
@@ -48,18 +48,14 @@
 </header>
 <section id="bd">
 	<section id="syntax" class="g-mod g-attr">
-		<h2 class="tit">语法：</h2>
-		<div class="cont">
-			<p><strong>E::selection</strong>{ sRules }</p>
-		</div>
-	</section>
-	<section id="intro" class="g-mod g-attr">
 		<h2 class="tit">说明：</h2>
 		<div class="cont">
-			<strong>设置对象被选择时的样式。</strong>
-			<ul>
-				<li>需要注意的是，::selection只能定义被选择时的<a href="../../properties/background/background-color.htm">background-color</a>及<a href="../../properties/color/color.htm">color</a>。</li>
-			</ul>
+			<strong>相对于视口的宽度或高度中较大的那个。其中最大的那个被均分为100单位的vmax</strong>
+			<div class="gquote">
+				<p class="gquote-tit"><strong>示例代码：</strong></p>
+				<blockquote class="gquote-cont"><pre><code>h1{font-size:8vmax;}</code></pre></blockquote>
+				<p class="gquote-info">如果视口的宽度是300mm，高度是200mm，那么上述代码中h1元素的字号将为16mm，即(8x200)/100，因为宽度比高度要大，所以计算的时候相对于宽度。</p>
+			</div>
 		</div>
 	</section>
 	<section id="compatible" class="g-mod g-attr">
@@ -70,7 +66,7 @@
 				<li><span class="unsupport">红色</span> = 不支持</li>
 				<li><span class="partsupport">粉色</span> = 部分支持</li>
 			</ul>
-			<!-- compatible:start -->
+			<!-- compatible:viewport-units -->
 			<table class="g-data">
 				<thead>
 					<tr>
@@ -79,62 +75,76 @@
 						<th><span class="browser-chrome">Chrome</span></th>
 						<th><span class="browser-safari">Safari</span></th>
 						<th><span class="browser-opera">Opera</span></th>
-						<th><span class="browser-ios_saf">iOS<br>Safari</span></th>
-						<th><span class="browser-op_mini">Opera<br>Mini</span></th>
-						<th><span class="browser-android">Android<br>Browser</span></th>
-						<th><span class="browser-bb">Blackberry<br>Browser</span></th>
-						<th><span class="browser-op_mob">Opera<br>Mobile</span></th>
-						<th><span class="browser-and_chr">Chrome<br>for<br>Android</span></th>
-						<th><span class="browser-and_ff">Firefox<br>for<br>Android</span></th>
-						<th><span class="browser-ie_mob">IE<br>Mobile</span></th>
-						<th><span class="browser-and_uc">UC<br>Browser<br>for<br>Android</span></th>
+						<th><span class="browser-ios_saf">iOS Safari</span></th>
+						<th><span class="browser-op_mini">Opera Mini</span></th>
+						<th><span class="browser-android">Android Browser</span></th>
+						<th><span class="browser-bb">Blackberry Browser</span></th>
+						<th><span class="browser-op_mob">Opera Mobile</span></th>
+						<th><span class="browser-and_chr">Chrome for Android</span></th>
+						<th><span class="browser-and_ff">Firefox for Android</span></th>
+						<th><span class="browser-ie_mob">IE Mobile</span></th>
+						<th><span class="browser-and_uc">UC Browser for Android</span></th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td class="unsupport">5.5-8</td>
-						<td rowspan="2" class="support">2-35 <sup class="fix">-moz-</sup></td>
-						<td rowspan="2" class="support">4-40</td>
-						<td rowspan="2" class="support">3.1-8</td>
-						<td class="unsupport">9</td>
+<<<<<<< Updated upstream
+						<td rowspan="2" class="unsupport">6.0-11.0</td>
+						<td class="unsupport">4.0-18.0</td>
+						<td rowspan="2" class="unsupport">4.0-8.0</td>
+						<td class="unsupport">4.0-25.0</td>
+						<td rowspan="2" class="support">15.0</td>
+=======
+						<td rowspan="2" class="unsupport">5.5-11</td>
+						<td class="unsupport">2-18</td>
+						<td class="unsupport">4-25</td>
+						<td class="unsupport">3.1-6</td>
+						<td class="unsupport">9-12.1</td>
 						<td rowspan="2" class="unsupport">3.2-8</td>
 						<td rowspan="2" class="unsupport">5.0-7.0</td>
 						<td class="unsupport">2.1-4.3</td>
 						<td rowspan="2" class="unsupport">7-10</td>
-						<td rowspan="2" class="support">11.5-22</td>
+						<td class="unsupport">10-12.1</td>
 						<td rowspan="2" class="support">37</td>
-						<td rowspan="2" class="unsupport">32</td>
-						<td rowspan="2" class="support">10</td>
+						<td rowspan="2" class="support">32</td>
+						<td rowspan="2" class="unsupport">10</td>
 						<td rowspan="2" class="unsupport">9.9</td>
+>>>>>>> Stashed changes
 					</tr>
 					<tr>
-						<td class="support">9-11</td>
-						<td class="support">9.5-26</td>
-						<td class="support">4.4-4.4.3</td>
+						<td class="support">19</td>
+						<td class="support">26</td>
+						<td class="support">6.1</td>
+						<td class="support">15</td>
+						<td class="support">4.4</td>
+						<td class="support">22</td>
 					</tr>
 				</tbody>
 			</table>
-			<!-- compatible:end -->
+<<<<<<< Updated upstream
+=======
+			<ol class="support-info">
+				<li id="support1">通过<a href="http://gucong3000.github.io/selectivizr/" class="external" target="_blank">selectivizr</a>，除Opera Mini外，上表中的浏览器均可支持。本页下方的示例已使用此方案。</li>
+			</ol>
+>>>>>>> Stashed changes
 		</div>
 	</section>
 	<section id="example" class="g-mod g-attr">
-		<h2 class="tit">示例(Firefox需将以下的代码复制到本地测试)：</h2>
+		<h2 class="tit">示例：</h2>
 		<div class="cont">
 			<textarea cols="90" rows="10">
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
 <meta charset="utf-8" />
-<title>E::selection_CSS参考手册_web前端开发参考手册系列</title>
+<title>vmax_CSS参考手册_web前端开发参考手册系列</title>
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <style>
-p::-moz-selection{background:#000;color:#f00;}
-p::selection{background:#000;color:#f00;}
+p{font-size:5vmax;}
 </style>
 </head>
 <body>
-<h1>选中下面的文字，看看它的颜色</h1>
-<p>你选中这段文字后，看看它们的文本颜色和背景色，就能明白::selection的作用。</p>
+<p>相对于viewport的宽度或高度中较大的那个然后计算文字大小。</p>
 </body>
 </html>
 			</textarea>
