@@ -179,7 +179,8 @@ function caniuseData(str, strIndent, strPropName, subName, index, html) {
 			vh: "viewport-units",
 			"rgba": "css3-colors",
 			"hsla": "css3-colors",
-			"hsl": "css3-colors"
+			"hsl": "css3-colors",
+			"calc()": "calc",
 		},
 		regPropSub = /(-\w+)+$/,
 		regPropS = /s$/,
