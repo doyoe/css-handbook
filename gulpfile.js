@@ -261,6 +261,9 @@ function caniuseData(str, strIndent, strPropName, subName, index, html) {
 					tabData[i][j] = [tbody[0], tbody[tbody.length - 1]];
 				}
 			}
+			if(tabData[i].y){
+				tabData[i].y = [tabData[i].y[0]];
+			}
 			tbody = [];
 			for (j in tabData[i]) {
 				tbody.push({
