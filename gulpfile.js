@@ -164,10 +164,19 @@ function caniuseData(str, strIndent, strPropName, subName, index, html) {
 			y: "support"
 		},
 		propFix = {
+			"repeating-linear-gradient()": "css-repeating-gradients",
+			"repeating-radial-gradient()": "css-repeating-gradients",
+			"linear-gradient()": "css-gradients",
+			"radial-gradient()": "css-gradients",
 			"text-shadow": "textshadow",
+			"tab-size": "css3-tabsize",
 			"box-shadow": "boxshadow",
 			transform: "transforms2d",
 			"@media": "mediaqueries",
+			vmax: "viewport-units",
+			vmin: "viewport-units",
+			vw: "viewport-units",
+			vh: "viewport-units",
 			"rgba": "css3-colors",
 			"hsla": "css3-colors",
 			"hsl": "css3-colors"
@@ -195,6 +204,11 @@ function caniuseData(str, strIndent, strPropName, subName, index, html) {
 			getDate(prop + "s");
 		}
 		if (data) {
+			if (/^(vw|vh|vmin|linear-gradient\(\))$/.test(propName)) {
+				data = JSON.parse(JSON.stringify(data).replace(/"a\b/g, "\"y"));
+			} else if (/^(vmax|radial-gradient\(\))$/.test(propName)) {
+				data = JSON.parse(JSON.stringify(data).replace(/"a\b[^"]*/g, "\"n"));
+			}
 			propName = prop;
 		}
 	}
@@ -212,13 +226,7 @@ function caniuseData(str, strIndent, strPropName, subName, index, html) {
 		});
 		if (propName) {
 			propName = propName.attribs.name;
-			if (/^(vw|vh|vmin)$/.test(propName)) {
-				data = JSON.parse(JSON.stringify(caniuse.data["viewport-units"]).replace(/"a\b/g, "\"y"));
-			}else if (/^vmax$/.test(propName)) {
-				data = JSON.parse(JSON.stringify(caniuse.data["viewport-units"]).replace(/"a\b/g, "\"n"));
-			} else {
-				getDate(propName);
-			}
+			getDate(propName);
 		}
 	}
 
@@ -261,7 +269,7 @@ function caniuseData(str, strIndent, strPropName, subName, index, html) {
 					tabData[i][j] = [tbody[0], tbody[tbody.length - 1]];
 				}
 			}
-			if(tabData[i].y){
+			if (tabData[i].y) {
 				tabData[i].y = [tabData[i].y[0]];
 			}
 			tbody = [];

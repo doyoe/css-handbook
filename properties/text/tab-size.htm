@@ -51,11 +51,11 @@
 	<section id="syntax" class="g-mod g-attr">
 		<h2 class="tit">语法：</h2>
 		<div class="cont">
-			<p><strong>tab-size</strong>：<a href="../../values/numeric/integer.htm">&lt;integer&gt;</a> | <a href="../../values/other/length.htm">&lt;length&gt;</a></p>
+			<p><strong>tab-size</strong>：<a href="../../values/numeric/integer.htm">&lt;integer&gt;</a></p>
 			<p><strong>默认值</strong>：<mark class="defaultvalue">8</mark></p>
 			<p><strong>适用于</strong>：块级元素</p>
 			<p><strong>继承性</strong>：有</p>
-			<p><strong>动画性</strong>：当值为 <a href="../../values/other/length.htm">&lt;length&gt;</a> 时</p>
+			<p><strong>动画性</strong>：否</p>
 			<p><strong>计算值</strong>：指定值</p>
 		</div>
 	</section>
@@ -65,8 +65,6 @@
 			<dl>
 				<dt><a href="../../values/numeric/integer.htm">&lt;integer&gt;</a>：</dt>
 				<dd>用整数值指定制表符的长度。不允许负值。</dd>
-				<dt><a href="../../values/other/length.htm">&lt;length&gt;</a>：</dt>
-				<dd>用长度值指定制表符的长度。不允许负值。</dd>
 			</dl>
 		</div>
 	</section>
@@ -88,36 +86,59 @@
 				<li><span class="unsupport">红色</span> = 不支持</li>
 				<li><span class="partsupport">粉色</span> = 部分支持</li>
 			</ul>
+			<!-- compatible:start -->
 			<table class="g-data">
 				<thead>
 					<tr>
-						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
 						<th><span class="browser-ie">IE</span></th>
 						<th><span class="browser-firefox">Firefox</span></th>
-						<th><span class="browser-safari">Safari</span></th>
 						<th><span class="browser-chrome">Chrome</span></th>
+						<th><span class="browser-safari">Safari</span></th>
 						<th><span class="browser-opera">Opera</span></th>
+						<th><span class="browser-ios_saf">iOS<br>Safari</span></th>
+						<th><span class="browser-op_mini">Opera<br>Mini</span></th>
+						<th><span class="browser-android">Android<br>Browser</span></th>
+						<th><span class="browser-bb">Blackberry<br>Browser</span></th>
+						<th><span class="browser-op_mob">Opera<br>Mobile</span></th>
+						<th><span class="browser-and_chr">Chrome<br>for<br>Android</span></th>
+						<th><span class="browser-and_ff">Firefox<br>for<br>Android</span></th>
+						<th><span class="browser-ie_mob">IE<br>Mobile</span></th>
+						<th><span class="browser-and_uc">UC<br>Browser<br>for<br>Android</span></th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<th>版本</th>
-						<td class="unsupport" rowspan="2">6.0-10.0</td>
-						<td class="partsupport" rowspan="2">4.0-18.0 <sup><a href="#support1">#1</a></sup></td>
-						<td class="unsupport" rowspan="2">5.1.7</td>
-						<td class="unsupport">1.0-20.0</td>
-						<td class="partsupport">10.6-14.0 <sup><a href="#support1">#1</a></sup><sup class="fix">-o-</sup></td>
+						<td rowspan="3" class="unsupport">5.5-11</td>
+						<td class="unsupport">2-3.6</td>
+						<td class="unsupport">4-20</td>
+						<td class="unsupport">3.1-6</td>
+						<td class="unsupport">9-10.5</td>
+						<td class="unsupport">3.2-6.1</td>
+						<td rowspan="3" class="unsupport">5.0-7.0</td>
+						<td class="unsupport">2.1-4.3</td>
+						<td rowspan="3" class="support">7</td>
+						<td class="unsupport">10</td>
+						<td rowspan="3" class="support">37</td>
+						<td rowspan="3" class="support">32 <sup class="fix">-moz-</sup></td>
+						<td rowspan="3" class="unsupport">10</td>
+						<td rowspan="3" class="unsupport">9.9</td>
 					</tr>
 					<tr>
-						<th>版本</th>
-						<td class="partsupport">21.0-31.0 <sup><a href="#support1">#1</a></sup></td>
-						<td class="partsupport">15.0-18.0 <sup><a href="#support1">#1</a></sup></td>
+						<td rowspan="2" class="support">4-35 <sup class="fix">-moz-</sup></td>
+						<td rowspan="2" class="support">21</td>
+						<td rowspan="2" class="support">6.1</td>
+						<td class="support">10.6-12.1 <sup class="fix">-o-</sup></td>
+						<td rowspan="2" class="support">7.0</td>
+						<td rowspan="2" class="support">4.4</td>
+						<td class="support">11-12.1 <sup class="fix">-o-</sup></td>
+					</tr>
+					<tr>
+						<td class="support">15</td>
+						<td class="support">22</td>
 					</tr>
 				</tbody>
 			</table>
-			<ol class="support-info">
-				<li id="support1">不支持：<a href="../../values/other/length.htm">&lt;length&gt;</a>作为参数值。</li>
-			</ol>
+			<!-- compatible:end -->
 		</div>
 	</section>
 	<section id="example" class="g-mod g-attr">
@@ -131,7 +152,12 @@
 <title>tab-size_CSS参考手册_web前端开发参考手册系列</title>
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <style>
-pre{background:#eee;-moz-tab-size:4;-o-tab-size:4;tab-size:4;}
+pre{
+	background:#eee;
+	-moz-tab-size:4;
+	-o-tab-size:4;
+	tab-size:4;
+}
 </style>
 </head>
 <body>
