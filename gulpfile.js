@@ -205,9 +205,9 @@ function caniuseData(str, strIndent, strPropName, subName, index, html) {
 			getDate(prop + "s");
 		}
 		if (data) {
-			if (/^(vw|vh|vmin|linear-gradient\(\))$/.test(propName)) {
+			if (/^(vw|vh|vmin|(repeating-)?linear-gradient\(\))$/.test(propName)) {
 				data = JSON.parse(JSON.stringify(data).replace(/"a\b/g, "\"y"));
-			} else if (/^(vmax|radial-gradient\(\))$/.test(propName)) {
+			} else if (/^(vmax|(repeating-)?radial-gradient\(\))$/.test(propName)) {
 				data = JSON.parse(JSON.stringify(data).replace(/"a\b[^"]*/g, "\"n"));
 			}
 			propName = prop;
