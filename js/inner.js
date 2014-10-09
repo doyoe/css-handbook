@@ -83,7 +83,7 @@ Global.folding = function(s){
 //url地址的页面跳转
 if (!Global.isLocal && Global.name && !/^chm:$/i.test(location.protocol) ) {
 	(function(){
-		if(window === window.top){
+		if(window == window.top){
 			$.cookie('pos', Global.url, {path: '/'});
 			location = Global.rootPath + (/^file:$/i.test(location.protocol) ? "/index.htm" : "");
 		} else {
