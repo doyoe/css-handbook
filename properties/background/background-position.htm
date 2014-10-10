@@ -52,13 +52,13 @@
 		<h2 class="tit">语法：</h2>
 		<div class="cont">
 			<p><strong>background-position</strong>：<a href="#dfn-syntax">&lt;position&gt;</a> <ins class="g-color-css3-new" title="css3">[ , <a href="#dfn-syntax">&lt;position&gt;</a> ]*</ins></p>
-			<p id="dfn-syntax"><strong>&lt;position&gt;</strong> = [ left | center | right | top | bottom | <a href="../../values/other/percentage.htm">&lt;percentage&gt;</a> | <a href="../../values/other/length.htm">&lt;length&gt;</a> ]
+			<p id="dfn-syntax"><strong>&lt;position&gt;</strong> = [ left | center | right | top | bottom | <a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a> | <a href="../../values/length/index.htm">&lt;length&gt;</a> ]
 |
-  [ left | center | right | <a href="../../values/other/percentage.htm">&lt;percentage&gt;</a> | <a href="../../values/other/length.htm">&lt;length&gt;</a> ]
-  [ top | center | bottom | <a href="../../values/other/percentage.htm">&lt;percentage&gt;</a> | <a href="../../values/other/length.htm">&lt;length&gt;</a> ]
+  [ left | center | right | <a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a> | <a href="../../values/length/index.htm">&lt;length&gt;</a> ]
+  [ top | center | bottom | <a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a> | <a href="../../values/length/index.htm">&lt;length&gt;</a> ]
 |
-  [ center | [ left | right ] [ <a href="../../values/other/percentage.htm">&lt;percentage&gt;</a> | <a href="../../values/other/length.htm">&lt;length&gt;</a> ]? ] &amp;&amp;
-  [ center | [ top | bottom ] [ <a href="../../values/other/percentage.htm">&lt;percentage&gt;</a> | <a href="../../values/other/length.htm">&lt;length&gt;</a> ]? ]</p>
+  [ center | [ left | right ] [ <a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a> | <a href="../../values/length/index.htm">&lt;length&gt;</a> ]? ] &amp;&amp;
+  [ center | [ top | bottom ] [ <a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a> | <a href="../../values/length/index.htm">&lt;length&gt;</a> ]? ]</p>
 			<p><strong>默认值</strong>：<mark class="defaultvalue">0% 0%</mark>，效果等同于left top</p>
 			<p><strong>适用于</strong>：所有元素</p>
 			<p><strong>继承性</strong>：无</p>
@@ -70,9 +70,9 @@
 		<h2 class="tit">取值：</h2>
 		<div class="cont">
 			<dl>
-				<dt><a href="../../values/other/percentage.htm">&lt;percentage&gt;</a>：</dt>
+				<dt><a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a>：</dt>
 				<dd>用百分比指定背景图像填充的位置。可以为负值。</dd>
-				<dt><a href="../../values/other/length.htm">&lt;length&gt;</a>：</dt>
+				<dt><a href="../../values/length/index.htm">&lt;length&gt;</a>：</dt>
 				<dd>用长度值指定背景图像填充的位置。可以为负值。</dd>
 				<dt>center：</dt>
 				<dd>背景图像横向和纵向居中。</dd>
@@ -93,7 +93,7 @@
 			<strong>设置或检索对象的背景图像位置。必须先指定<a href="background-image.htm">background-image</a>属性。</strong>
 			<ul>
 				<li>该属性提供2个参数值<span class="g-color-light">（CSS3中已允许提供4个值）</span>。</li>
-				<li class="g-color-light">如果提供四个，每个<a href="../../values/other/percentage.htm">&lt;percentage&gt;</a>或<a href="../../values/other/length.htm">&lt;length&gt;</a>偏移前都必须跟着一个关键字（即left | center | right | top | bottom），偏移量相对关键字位置进行偏移。</li>
+				<li class="g-color-light">如果提供四个，每个<a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a>或<a href="../../values/length/index.htm">&lt;length&gt;</a>偏移前都必须跟着一个关键字（即left | center | right | top | bottom），偏移量相对关键字位置进行偏移。</li>
 				<li>
 					<strong>示例：假设要定义背景图像在容器中右下方，并且距离右边和底部各有20px</strong>
 					<div class="gquote">
