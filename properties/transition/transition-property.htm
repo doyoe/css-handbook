@@ -208,6 +208,9 @@
 				</tbody>
 			</table>
 			<!-- compatible:end -->
+			<ol class="support-info">
+				<li>通过<a href="http://gucong3000.github.io/selectivizr/" class="external" target="_blank">selectivizr</a>，可以免去css3前缀。本页下方的示例已使用此方案。</li>
+			</ol>
 		</div>
 	</section>
 	<section id="example" class="g-mod g-attr">
@@ -224,20 +227,8 @@
 h1{font-size:16px;}
 .test{overflow:hidden;width:100%;margin:0;padding:0;list-style:none;}
 .test li{float:left;width:170px;height:100px;margin:0 5px;padding:10px;border:1px solid #ddd;background-color:#eee;color:#000;
-
-	-webkit-transition-property:border-color,background-color,color;
-	-moz-transition-property:border-color,background-color,color;
-	-o-transition-property:border-color,background-color,color;
 	transition-property:border-color,background-color,color;
-
-	-webkit-transition-duration:.5s;
-	-moz-transition-duration:.5s;
-	-o-transition-duration:.5s;
 	transition-duration:.5s;
-
-	-webkit-transition-timing-function:ease-in;
-	-moz-transition-timing-function:ease-in;
-	-o-transition-timing-function:ease-in;
 	transition-timing-function:ease-in;
 }
 .test li:hover{border-color:#999;background-color:#bbb;color:#999;}
