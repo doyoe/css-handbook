@@ -170,22 +170,47 @@
 h1{font-size:16px;}
 .test{overflow:hidden;width:100%;margin:0;padding:0;list-style:none;}
 .test li{position:relative;left:8px;width:220px;height:100px;margin:1px 5px;padding:10px;border:1px solid #ddd;background-color:#eee;color:#000;
-	-moz-transition-property:left;
-	-moz-transition-duration:.5s;
-	-webkit-transition-property:left;
+
 	-webkit-transition-duration:.5s;
-	-o-transition-property:left;
+	-moz-transition-duration:.5s;
 	-o-transition-duration:.5s;
-	-ms-transition-property:left;
-	-ms-transition-duration:.5s;
-	transition-property:left;
 	transition-duration:.5s;
+
+	-webkit-transition-property:left;
+	-moz-transition-property:left;
+	-o-transition-property:left;
+	transition-property:left;
 }
-.test li:nth-child(1){-moz-transition-timing-function:linear;-webkit-transition-timing-function:linear;-o-transition-timing-function:linear;-ms-transition-timing-function:linear;transition-timing-function:linear;}
-.test li:nth-child(2){-moz-transition-timing-function:ease;-webkit-transition-timing-function:ease;-o-transition-timing-function:ease;-ms-transition-timing-function:ease;transition-timing-function:ease;}
-.test li:nth-child(3){-moz-transition-timing-function:ease-in;-webkit-transition-timing-function:ease-in;-o-transition-timing-function:ease-in;-ms-transition-timing-function:ease-in;transition-timing-function:ease-in;}
-.test li:nth-child(4){-moz-transition-timing-function:ease-out;-webkit-transition-timing-function:ease-out;-o-transition-timing-function:ease-out;-ms-transition-timing-function:ease-out;transition-timing-function:ease-out;}
-.test li:nth-child(5){-moz-transition-timing-function:ease-in-out;-webkit-transition-timing-function:ease-in-out;-o-transition-timing-function:ease-in-out;-ms-transition-timing-function:ease-in-out;transition-timing-function:ease-in-out;}
+.test li:nth-child(1){
+	-webkit-transition-timing-function:linear;
+	-moz-transition-timing-function:linear;
+	-o-transition-timing-function:linear;
+	transition-timing-function:linear;
+}
+.test li:nth-child(2){
+	-webkit-transition-timing-function:ease;
+	-moz-transition-timing-function:ease;
+	-o-transition-timing-function:ease;
+	transition-timing-function:ease;
+}
+.test li:nth-child(3){
+	-webkit-transition-timing-function:ease-in;
+	-moz-transition-timing-function:ease-in;
+	-o-transition-timing-function:ease-in;
+	transition-timing-function:ease-in;
+}
+.test li:nth-child(4){
+	-webkit-transition-timing-function:ease-out;
+	-moz-transition-timing-function:ease-out;
+	-o-transition-timing-function:ease-out;
+	transition-timing-function:ease-out;
+}
+.test li:nth-child(5){
+	-webkit-transition-timing-function:ease-in-out;
+	-moz-transition-timing-function:ease-in-out;
+	-o-transition-timing-function:ease-in-out;
+	transition-timing-function:ease-in-out;
+}
 .test li:hover{left:100px;}
 </style>
 </head>
@@ -201,7 +226,7 @@ h1{font-size:16px;}
 </body>
 </html>
 			</textarea>
-			<p><input type="button" value="运行" class="g-btn btn-sure" /></p>
+			<p><input type="button" value="运行" class="g-btn g-btn-sure" /></p>
 		</div>
 	</section>
 </section>

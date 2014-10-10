@@ -154,27 +154,52 @@
 h1{font-size:16px;}
 .test{overflow:hidden;width:100%;margin:0;padding:0;list-style:none;}
 .test li{width:220px;height:100px;margin:1px 5px;padding:10px;border:1px solid #ddd;background-color:#eee;color:#000;
-	-moz-transition-property:all;
-	-moz-transition-duration:.5s;
-	-moz-transition-timing-function:ease;
-	-webkit-transition-property:all;
-	-webkit-transition-duration:.5s;
+	
 	-webkit-transition-timing-function:ease;
-	-o-transition-property:all;
-	-o-transition-duration:.5s;
+	-moz-transition-timing-function:ease;
 	-o-transition-timing-function:ease;
-	-ms-transition-property:all;
-	-ms-transition-duration:.5s;
-	-ms-transition-timing-function:ease;
-	transition-property:all;
-	transition-duration:.5s;
 	transition-timing-function:ease;
+
+	-webkit-transition-property:all;
+	-moz-transition-property:all;
+	-o-transition-property:all;
+	transition-property:all;
+
+	-webkit-transition-duration:.5s;
+	-moz-transition-duration:.5s;
+	-o-transition-duration:.5s;
+	transition-duration:.5s;
 }
-.test li:nth-child(1){-moz-transition-delay:.1s;-webkit-transition-delay:.1s;-o-transition-delay:.1s;-ms-transition-delay:.1s;transition-delay:.1s;}
-.test li:nth-child(2){-moz-transition-delay:.3s;-webkit-transition-delay:.3s;-o-transition-delay:.3s;-ms-transition-delay:.3s;transition-delay:.3s;}
-.test li:nth-child(3){-moz-transition-delay:.5s;-webkit-transition-delay:.5s;-o-transition-delay:.5s;-ms-transition-delay:.5s;transition-delay:.5s;}
-.test li:nth-child(4){-moz-transition-delay:.7s;-webkit-transition-delay:.7s;-o-transition-delay:.4s;-ms-transition-delay:.4s;transition-delay:.7s;}
-.test li:nth-child(5){-moz-transition-delay:.9s;-webkit-transition-delay:.9s;-o-transition-delay:.9s;-ms-transition-delay:.9s;transition-delay:.9s;}
+.test li:nth-child(1){
+	-webkit-transition-delay:.1s;
+	-moz-transition-delay:.1s;
+	-o-transition-delay:.1s;
+	transition-delay:.1s;
+}
+.test li:nth-child(2){
+	-webkit-transition-delay:.3s;
+	-moz-transition-delay:.3s;
+	-o-transition-delay:.3s;
+	transition-delay:.3s;
+}
+.test li:nth-child(3){
+	-webkit-transition-delay:.5s;
+	-moz-transition-delay:.5s;
+	-o-transition-delay:.5s;
+	transition-delay:.5s;
+}
+.test li:nth-child(4){
+	-webkit-transition-delay:.7s;
+	-moz-transition-delay:.7s;
+	-o-transition-delay:.4s;
+	transition-delay:.7s;
+}
+.test li:nth-child(5){
+	-webkit-transition-delay:.9s;
+	-moz-transition-delay:.9s;
+	-o-transition-delay:.9s;
+	transition-delay:.9s;
+}
 .test li:hover{border-color:#999;background-color:#bbb;color:#999;}
 </style>
 </head>
@@ -190,7 +215,7 @@ h1{font-size:16px;}
 </body>
 </html>
 			</textarea>
-			<p><input type="button" value="运行" class="g-btn btn-sure" /></p>
+			<p><input type="button" value="运行" class="g-btn g-btn-sure" /></p>
 		</div>
 	</section>
 </section>

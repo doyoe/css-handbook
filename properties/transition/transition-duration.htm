@@ -153,20 +153,20 @@
 <style>
 h1{font-size:16px;}
 .test{position:absolute;left:8px;width:200px;height:100px;margin:0 5px;padding:10px;border:1px solid #ddd;background-color:#eee;color:#000;
-	-moz-transition-property:left;
-	-moz-transition-duration:.5s;
-	-moz-transition-timing-function:ease-in;
 	-webkit-transition-property:left;
-	-webkit-transition-duration:.5s;
-	-webkit-transition-timing-function:ease-in;
+	-moz-transition-property:left;
 	-o-transition-property:left;
-	-o-transition-duration:.5s;
-	-o-transition-timing-function:ease-in;
-	-ms-transition-property:left;
-	-ms-transition-duration:.5s;
-	-ms-transition-timing-function:ease-in;
 	transition-property:left;
+
+	-webkit-transition-duration:.5s;
+	-moz-transition-duration:.5s;
+	-o-transition-duration:.5s;
 	transition-duration:.5s;
+
+
+	-webkit-transition-timing-function:ease-in;
+	-moz-transition-timing-function:ease-in;
+	-o-transition-timing-function:ease-in;
 	transition-timing-function:ease-in;
 }
 .test:hover{left:100px;}
