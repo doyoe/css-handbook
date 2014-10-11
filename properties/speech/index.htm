@@ -3,10 +3,9 @@
 <head>
 <meta charset="utf-8" />
 <title>Speech index</title>
-<meta name="Description" content="CSS语音属性" />
-<meta name="Keywords" content="CSS Speech Properties,voice-volume,voice-balance,speakability,speak,pause,pause-before,pause-after,rest,rest-before,rest-after,cue,cue-before,cue-after,voice-family,voice-rate,voice-pitch,voice-pitch-range,voice-stress,voice-duration,phonemes,mark,mark-before,mark-after" />
-<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com" />
-<meta name="copyright" content="www.doyoe.com" />
+<meta name="description" content="CSS语音属性" />
+<meta name="keywords" content="CSS Speech Properties,voice-volume,voice-balance,speakability,speak,pause,pause-before,pause-after,rest,rest-before,rest-after,cue,cue-before,cue-after,voice-family,voice-rate,voice-pitch,voice-pitch-range,voice-stress,voice-duration,phonemes,mark,mark-before,mark-after" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <meta name="robots" content="all" />
 <!--[if lte IE 8]>
 <script src="../../js/html5.js"></script>
@@ -14,18 +13,43 @@
 <link rel="stylesheet" href="../../skin/article.css" />
 </head>
 <body>
+<nav id="guide" class="g-mod">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="../index.htm">属性列表</a>
+		<span>&#187;</span>
+		<span id="category" rel="properties/speech" name="index">语音属性</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它语音属性</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入分类快速导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
 <header id="hd">
-	<h1 class="tit">CSS Speech Properties</h1>
-	<ul class="info">
-		<li>语音属性</li>
-	</ul>
-	<div id="browser" class="browser"><iframe id="top-browser" frameborder="0" allowtransparency="true" src="../../global-browser.htm"></iframe></div>
+	<section id="title" class="g-mod">
+		<h1 class="tit">CSS Speech Properties</h1>
+		<ul class="info">
+			<li>语音属性</li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
 </header>
 <section id="bd">
 	<section id="speech-listing" class="gmodule gattr">
 		<h2 class="tit">语音 Speech</h2>
 		<div class="cont">
-			<table class="gdataform">
+			<table class="g-data">
 				<thead>
 					<tr>
 						<th>Properties<br />属性</th>
@@ -158,13 +182,17 @@
 				</tbody>
 			</table>
 		</div>
+		<div class="related">
+			<p class="g-color-light"><strong class="g-color-css3-change">紫色</strong> 链接表示该属性在CSS3有修改或者增加了新的属性值；<strong class="g-color-css3-new">橙色</strong> 链接表示该属性是CSS3新增属性</p>
+		</div>
 	</section>
 </section>
-<aside id="ft">
-	<div class="browser"><iframe id="bot-browser" frameborder="0" allowtransparency="true" src="../../global-browser.htm"></iframe></div>
-	<p class="copyright">Copyright © 2006-2010 <a href="http://www.doyoe.com/" rel="external" target="_blank">Doyoe</a>. All Rights Reserved</p>
-</aside>
-<script src="../../js/doyoe.js"></script>
-<script src="../../js/samples.js"></script>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/inner.js"></script>
 </body>
 </html>
