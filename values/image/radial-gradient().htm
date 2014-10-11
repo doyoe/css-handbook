@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-cn">
 <head>
 <meta charset="utf-8" />
@@ -51,11 +51,11 @@
 		<h2 class="tit">语法：</h2>
 		<div class="cont">
 			<p><strong>&lt;radial-gradient&gt;</strong>：radial-gradient([ <a href="#dfn-syntax">&lt;position&gt;</a>,]? [ [ <a href="#dfn-syntax2">&lt;shape&gt;</a> || <a href="#dfn-syntax3">&lt;size&gt;</a> ] | <a href="#dfn-syntax4">&lt;shape-size&gt;</a>{2},]? <a href="#dfn-syntax5">&lt;color-stop&gt;</a>[, <a href="#dfn-syntax5">&lt;color-stop&gt;</a>]+);</p>
-			<p id="dfn-syntax"><strong>&lt;position&gt;</strong>：[ <a href="../other/length.htm">&lt;length&gt;</a>① | <a href="../other/percentage.htm">&lt;percentage&gt;</a>① | left | center① | right ]? [ <a href="../other/length.htm">&lt;length&gt;</a>② | <a href="../other/percentage.htm">&lt;percentage&gt;</a>② | top | center② | bottom ]?</p>
+			<p id="dfn-syntax"><strong>&lt;position&gt;</strong>：[ <a href="../length/index.htm">&lt;length&gt;</a>① | <a href="../numeric/percentage.htm">&lt;percentage&gt;</a>① | left | center① | right ]? [ <a href="../length/index.htm">&lt;length&gt;</a>② | <a href="../numeric/percentage.htm">&lt;percentage&gt;</a>② | top | center② | bottom ]?</p>
 			<p id="dfn-syntax2"><strong>&lt;shape&gt;</strong>：circle | ellipse</p>
 			<p id="dfn-syntax3"><strong>&lt;size&gt;</strong>：closest-side | closest-corner | farthest-side | farthest-corner | contain | cover</p>
-			<p id="dfn-syntax4"><strong>&lt;shape-size&gt;</strong>：<a href="../other/length.htm">&lt;length&gt;</a> | <a href="../other/percentage.htm">&lt;percentage&gt;</a></p>
-			<p id="dfn-syntax5"><strong>&lt;color-stop&gt;</strong>：<a href="../../properties/color/color.htm">&lt;color&gt;</a> [ <a href="../other/length.htm">&lt;length&gt;</a> | <a href="../other/percentage.htm">&lt;percentage&gt;</a> ]?</p>
+			<p id="dfn-syntax4"><strong>&lt;shape-size&gt;</strong>：<a href="../length/index.htm">&lt;length&gt;</a> | <a href="../numeric/percentage.htm">&lt;percentage&gt;</a></p>
+			<p id="dfn-syntax5"><strong>&lt;color-stop&gt;</strong>：<a href="../../properties/color/color.htm">&lt;color&gt;</a> [ <a href="../length/index.htm">&lt;length&gt;</a> | <a href="../numeric/percentage.htm">&lt;percentage&gt;</a> ]?</p>
 		</div>
 	</section>
 	<section class="g-mod g-attr" id="value">
@@ -63,9 +63,9 @@
 		<div class="cont">
 			<h3 class="g-color-light">&lt;position&gt;</h3>
 			<dl>
-				<dt><a href="../other/percentage.htm">&lt;percentage&gt;</a>①：</dt>
+				<dt><a href="../numeric/percentage.htm">&lt;percentage&gt;</a>①：</dt>
 				<dd>用百分比指定径向渐变圆心的横坐标值。可以为负值。</dd>
-				<dt><a href="../other/length.htm">&lt;length&gt;</a>①：</dt>
+				<dt><a href="../length/index.htm">&lt;length&gt;</a>①：</dt>
 				<dd>用长度值指定径向渐变圆心的横坐标值。可以为负值。</dd>
 				<dt>left：</dt>
 				<dd>设置左边为径向渐变圆心的横坐标值。</dd>
@@ -73,9 +73,9 @@
 				<dd>设置中间为径向渐变圆心的横坐标值。</dd>
 				<dt>right：</dt>
 				<dd>设置右边为径向渐变圆心的横坐标值。</dd>
-				<dt><a href="../other/percentage.htm">&lt;percentage&gt;</a>②：</dt>
+				<dt><a href="../numeric/percentage.htm">&lt;percentage&gt;</a>②：</dt>
 				<dd>用百分比指定径向渐变圆心的纵坐标值。可以为负值。</dd>
-				<dt><a href="../other/length.htm">&lt;length&gt;</a>②：</dt>
+				<dt><a href="../length/index.htm">&lt;length&gt;</a>②：</dt>
 				<dd>用长度值指定径向渐变圆心的纵坐标值。可以为负值。</dd>
 				<dt>top：</dt>
 				<dd>设置顶部为径向渐变圆心的纵坐标值。</dd>
@@ -111,18 +111,18 @@
 			<h3 class="g-color-light">&lt;shape-size&gt;</h3>
 			<em class="g-color-light">写本文档时Firefox尚不支持&lt;shape-size&gt;</em>
 			<dl>
-				<dt><a href="../other/percentage.htm">&lt;percentage&gt;</a>：</dt>
+				<dt><a href="../numeric/percentage.htm">&lt;percentage&gt;</a>：</dt>
 				<dd>用百分比指定径向渐变的横向或纵向直径长度，并根据横向和纵向的直径来确定是圆或椭圆。不允许负值。</dd>
-				<dt><a href="../other/length.htm">&lt;length&gt;</a>：</dt>
+				<dt><a href="../length/index.htm">&lt;length&gt;</a>：</dt>
 				<dd>用长度值指定径向渐变的横向或纵向直径长度，并根据横向和纵向的直径来确定是圆或椭圆。不允许负值。</dd>
 			</dl>
 			<h3 class="g-color-light">&lt;color-stop&gt;</h3>
 			<dl>
 				<dt><a href="../../properties/color/color.htm">&lt;color&gt;</a>：</dt>
 				<dd>指定颜色。请参阅<a href="../color/index.htm">颜色值</a></dd>
-				<dt><a href="../other/length.htm">&lt;length&gt;</a>：</dt>
+				<dt><a href="../length/index.htm">&lt;length&gt;</a>：</dt>
 				<dd>用长度值指定起止色位置。不允许负值</dd>
-				<dt><a href="../other/percentage.htm">&lt;percentage&gt;</a>：</dt>
+				<dt><a href="../numeric/percentage.htm">&lt;percentage&gt;</a>：</dt>
 				<dd>用百分比指定起止色位置。</dd>
 			</dl>
 		</div>
