@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>E::placeholder</title>
+<meta name="description" content="CSS3参考手册之: E::placeholder" />
+<meta name="keywords" content="E::placeholder, css3选择符, css3, css3参考手册" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../../skin/article.css" />
+</head>
+<body>
+<nav id="guide" class="g-mod">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="../index.htm">选择符列表</a>
+		<span>&#187;</span>
+		<a href="index.htm" id="category" rel="selectors/pseudo-element" name="placeholder">伪对象选择符</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它伪对象选择符</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入分类快速导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">E::placeholder</h1>
+		<ul class="info">
+			<li><strong>版本：CSS3</strong></li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="syntax" class="g-mod g-attr">
+		<h2 class="tit">语法：</h2>
+		<div class="cont">
+			<p><strong>E::placeholder</strong>{ sRules }</p>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
+		<h2 class="tit">说明：</h2>
+		<div class="cont">
+			<strong>设置对象文字占位符的样式。</strong>
+			<ul>
+				<li>::placeholder 伪元素控制元素所显示的文字占位符.它允许开发者/设计师改变文字占位符的样式.默认的文字占位符为浅灰色,当你的表单背景色为类似的颜色时它可能效果并不是很明显,那么你就可以使用这个伪类来改变文字占位符的颜色.</li>
+			</ul>
+		</div>
+	</section>
+	<section id="compatible" class="g-mod g-attr">
+		<h2 class="tit">兼容性：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">粉色</span> = 部分支持</li>
+			</ul>
+			<!-- compatible:start -->
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th><span class="browser-ie">IE</span></th>
+						<th><span class="browser-firefox">Firefox</span></th>
+						<th><span class="browser-chrome">Chrome</span></th>
+						<th><span class="browser-safari">Safari</span></th>
+						<th><span class="browser-opera">Opera</span></th>
+						<th><span class="browser-ios_saf">iOS<br>Safari</span></th>
+						<th><span class="browser-op_mini">Opera<br>Mini</span></th>
+						<th><span class="browser-android">Android<br>Browser</span></th>
+						<th><span class="browser-bb">Blackberry<br>Browser</span></th>
+						<th><span class="browser-op_mob">Opera<br>Mobile</span></th>
+						<th><span class="browser-and_chr">Chrome<br>for<br>Android</span></th>
+						<th><span class="browser-and_ff">Firefox<br>for<br>Android</span></th>
+						<th><span class="browser-ie_mob">IE<br>Mobile</span></th>
+						<th><span class="browser-and_uc">UC<br>Browser<br>for<br>Android</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="unsupport">5.5-9</td>
+						<td class="unsupport">2-3.6</td>
+						<td rowspan="2" class="partsupport">4-41 <sup class="fix">-webkit-</sup></td>
+						<td class="unsupport">3.1-4</td>
+						<td class="unsupport">9-12.1</td>
+						<td class="unsupport">3.2-4.1</td>
+						<td rowspan="2" class="unsupport">5.0-7.0</td>
+						<td rowspan="2" class="partsupport">2.1-4.4.3 <sup class="fix">-webkit-</sup></td>
+						<td rowspan="2" class="partsupport">10 <sup class="fix">-webkit-</sup></td>
+						<td class="unsupport">10-12.1</td>
+						<td rowspan="2" class="partsupport">37 <sup class="fix">-webkit-</sup></td>
+						<td rowspan="2" class="partsupport">32 <sup class="fix">-moz-</sup></td>
+						<td rowspan="2" class="partsupport">10 <sup class="fix">-ms-</sup></td>
+						<td rowspan="2" class="partsupport">9.9 <sup class="fix">-webkit-</sup></td>
+					</tr>
+					<tr>
+						<td class="partsupport">10-11 <sup class="fix">-ms-</sup></td>
+						<td class="partsupport">4-35 <sup class="fix">-moz-</sup></td>
+						<td class="partsupport">5-8 <sup class="fix">-webkit-</sup></td>
+						<td class="partsupport">15-26 <sup class="fix">-webkit-</sup></td>
+						<td class="partsupport">4.2-8 <sup class="fix">-webkit-</sup></td>
+						<td class="partsupport">22 <sup class="fix">-webkit-</sup></td>
+					</tr>
+				</tbody>
+			</table>
+			<!-- compatible:end -->
+			<ol class="support-info">
+				<li>::-moz-placeholder 伪元素在Firefox 19+替代了之前的 :-moz-placeholder 伪类.</li>
+			</ol>
+		</div>
+	</section>
+	<section id="example" class="g-mod g-attr">
+		<h2 class="tit">示例：</h2>
+		<div class="cont">
+			<textarea cols="90" rows="10">
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>E::placeholder_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<style>
+input::-webkit-input-placeholder {
+	color: green;
+}
+input:-ms-input-placeholder {
+	color: green;
+}
+input::-moz-placeholder {
+	color: green;
+	opacity: 1;
+}
+</style>
+</head>
+<body>
+
+  <input id="test" placeholder="Placeholder text!">
+
+</body>
+</html>
+			</textarea>
+			<p><input type="button" value="运行" class="g-btn g-btn-sure" /></p>
+		</div>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/inner.js"></script>
+</body>
+</html>
