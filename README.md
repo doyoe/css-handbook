@@ -13,6 +13,9 @@ CSS参考手册
 
 CSS参考手册目前正在v4.1.6草案中。广泛接受[Issues](https://github.com/doyoe/css-handbook/issues)和[Pull Requests](https://github.com/doyoe/css-handbook/pulls)
 
+<!-- * 排查了手册中的死链；
+* 修改了[list-style](http://css.doyoe.com/properties/list/list-style.htm)的语法描述； -->
+
 ###最新版本：v4.1.5
 
 更新时间：2014.08.28
