@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-cn">
 <head>
 <meta charset="utf-8" />
@@ -51,10 +51,10 @@
 	<section id="syntax" class="g-mod g-attr">
 		<h2 class="tit">语法：</h2>
 		<div class="cont">
-      <p><strong>animation-timing-function</strong>：linear | ease | ease-in | ease-out | ease-in-out | step-start | step-end | steps(&lt;integer&gt;[, [ start | end ] ]?) | cubic-bezier(&lt;number&gt;, &lt;number&gt;, &lt;number&gt;, &lt;number&gt;)[, linear | ease | ease-in | ease-out | ease-in-out | step-start | step-end | steps(&lt;integer&gt;[, [ start | end ] ]?) | cubic-bezier(&lt;number&gt;, &lt;number&gt;, &lt;number&gt;, &lt;number&gt;) ]*</p>
+	<p><strong>animation-timing-function</strong>：linear | ease | ease-in | ease-out | ease-in-out | step-start | step-end | steps(&lt;integer&gt;[, [ start | end ] ]?) | cubic-bezier(&lt;number&gt;, &lt;number&gt;, &lt;number&gt;, &lt;number&gt;)[, linear | ease | ease-in | ease-out | ease-in-out | step-start | step-end | steps(&lt;integer&gt;[, [ start | end ] ]?) | cubic-bezier(&lt;number&gt;, &lt;number&gt;, &lt;number&gt;, &lt;number&gt;) ]*</p>
 			<p><strong>默认值</strong>：<mark class="defaultvalue">ease</mark></p>
 			<p><strong>适用于</strong>：所有元素，包含伪对象:after和:before</p>
-      <p><strong>继承性</strong>：无</p>
+	<p><strong>继承性</strong>：无</p>
 		</div>
 	</section>
 	<section id="value" class="g-mod g-attr">
@@ -71,12 +71,12 @@
 				<dd>由快到慢。等同于贝塞尔曲线(0, 0, 0.58, 1.0)</dd>
 				<dt>ease-in-out：</dt>
 				<dd>由慢到快再到慢。等同于贝塞尔曲线(0.42, 0, 0.58, 1.0)</dd>
-        <dt>step-start：</dt>
-        <dd>等同于 steps(1, start)</dd>
-        <dt>step-end：</dt>
-        <dd>等同于 steps(1, end)</dd>
-        <dt>steps(&lt;integer&gt;[, [ start | end ] ]?)：</dt>
-        <dd>接受两个参数的步进函数。第一个参数必须为正整数，指定函数的步数。第二个参数取值可以是start或end，指定每一步的值发生变化的时间点。第二个参数是可选的，默认值为end。</dd>
+		<dt>step-start：</dt>
+		<dd>等同于 steps(1, start)</dd>
+		<dt>step-end：</dt>
+		<dd>等同于 steps(1, end)</dd>
+		<dt>steps(&lt;integer&gt;[, [ start | end ] ]?)：</dt>
+		<dd>接受两个参数的步进函数。第一个参数必须为正整数，指定函数的步数。第二个参数取值可以是start或end，指定每一步的值发生变化的时间点。第二个参数是可选的，默认值为end。</dd>
 				<dt>cubic-bezier(&lt;number&gt;, &lt;number&gt;, &lt;number&gt;, &lt;number&gt;)：</dt>
 				<dd>特定的贝塞尔曲线类型，4个数值需在[0, 1]区间内</dd>
 			</dl>
