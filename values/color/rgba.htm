@@ -81,16 +81,13 @@
 						<p class="gquote-info">#88000000 的前两位数字控制透明度，取值16进制从00 -&gt; FF（越小越透明），00表示完全透明，FF就是全不透明，后面六位是色值。</p>
 					</div>
 					<h4>扩展知识：</h4>
-					<p>DXImageTransform.Microsoft.gradient 滤镜里的 startColorstr 参数值是 #AARRGGBB 形式的， 其中的AA是代表不透明度的十六进制，00表示完全透明，FF就是全不透明，化成十进制的范围就是0~255，剩下的 RRGGBB 就是颜色的十六进制代码。
+					<p><a target="_blank" class="external" rel="external" href="http://msdn.microsoft.com/en-us/library/ms532997%28v=vs.85%29.aspx">progid:DXImageTransform.Microsoft.Gradient()</a>滤镜里的 startColorstr 参数值是 #AARRGGBB 形式的， 其中的AA是代表不透明度的十六进制，00表示完全透明，FF就是全不透明，化成十进制的范围就是0~255，剩下的 RRGGBB 就是颜色的十六进制代码。
 					</p>
 					<p>举例如：background: rgba(125, 0, 0, .3); 表示的是30%不透明度的红色背景。把30%的不透明度转换成十六制呢的方法如下：先计算#AA的的十进制x，x/255 = 3/10，解得x=3*255/10，然后再把x换算成十六进制，约等于4C。</p>
 					
-					<h4>常用透明度对应16进制关系：</h4>
-					<pre><code>.0（00） .1（19） .05（0C） .15（26）
-.2（33） .3（4C） .25（3F） .35（59）
-.4（66） .5（7F） .45（72） .55（8C）
-.6（99） .7（B2） .65（A5） .75（BF）
-.8（CC） .9（E5） .85（D8） .95（F2）</code></pre>
+					<h4>自动转换：</h4>
+					<p>请输入请输入0-1之间的任意数字：<input type="range" id="range" max="1" min="0" step="0.01" value="0.5"></p>
+					<p>&nbsp;</p>
 				</li>
 			</ul>
 		</div>
@@ -103,29 +100,54 @@
 				<li><span class="unsupport">红色</span> = 不支持</li>
 				<li><span class="partsupport">粉色</span> = 部分支持</li>
 			</ul>
+			<!-- compatible:start -->
 			<table class="g-data">
 				<thead>
 					<tr>
 						<th><span class="browser-ie">IE</span></th>
 						<th><span class="browser-firefox">Firefox</span></th>
-						<th><span class="browser-safari">Safari</span></th>
 						<th><span class="browser-chrome">Chrome</span></th>
+						<th><span class="browser-safari">Safari</span></th>
 						<th><span class="browser-opera">Opera</span></th>
+						<th><span class="browser-ios_saf">iOS<br>Safari</span></th>
+						<th><span class="browser-op_mini">Opera<br>Mini</span></th>
+						<th><span class="browser-android">Android<br>Browser</span></th>
+						<th><span class="browser-bb">Blackberry<br>Browser</span></th>
+						<th><span class="browser-op_mob">Opera<br>Mobile</span></th>
+						<th><span class="browser-and_chr">Chrome<br>for<br>Android</span></th>
+						<th><span class="browser-and_ff">Firefox<br>for<br>Android</span></th>
+						<th><span class="browser-ie_mob">IE<br>Mobile</span></th>
+						<th><span class="browser-and_uc">UC<br>Browser<br>for<br>Android</span></th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td class="unsupport">6.0-8.0</td>
-						<td rowspan="2" class="support">4.0</td>
-						<td rowspan="2" class="support">4.0</td>
-						<td rowspan="2" class="support">4.0</td>
-						<td rowspan="2" class="support">15.0</td>
+						<td class="unsupport">5.5-8</td>
+						<td class="partsupport">2</td>
+						<td rowspan="3" class="support">4</td>
+						<td rowspan="3" class="support">3.1</td>
+						<td class="unsupport">9</td>
+						<td rowspan="3" class="support">3.2</td>
+						<td rowspan="3" class="support">5.0</td>
+						<td rowspan="3" class="support">2.1</td>
+						<td rowspan="3" class="support">7</td>
+						<td rowspan="3" class="support">10</td>
+						<td rowspan="3" class="support">37</td>
+						<td rowspan="3" class="support">32</td>
+						<td rowspan="3" class="support">10</td>
+						<td rowspan="3" class="support">9.9</td>
 					</tr>
 					<tr>
-						<td class="support">9.0</td>
+						<td rowspan="2" class="support">9</td>
+						<td rowspan="2" class="support">3</td>
+						<td class="partsupport">9.5-9.6</td>
+					</tr>
+					<tr>
+						<td class="support">10.0</td>
 					</tr>
 				</tbody>
 			</table>
+			<!-- compatible:end -->
 		</div>
 	</section>
 	<section id="example" class="g-mod g-attr">
@@ -139,11 +161,20 @@
 <title>RGBA_CSS参考手册_web前端开发参考手册系列</title>
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <style>
-.test{background-color:rgba(0,0,0,0.5);}
+.test {
+	filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr=#80000000,endColorStr=#80000000); /* IE5.5 - IE8 */
+	background: rgba(0,0,0,0.5); /* 其他浏览器 */
+	zoom: 1; /* 滤镜需要激活haslayout才能生效 */
+}
+@media all and (min-width:0px){
+	.test {
+		filter: none; /* IE9下需要关闭滤镜，否则会与背景色同时生效 */
+	}
+}
 </style>
 </head>
 <body>
-<div class="test">能看到此行背景说明你的浏览器支持RGBA色彩值记法</div>
+<div class="test">此行的背景色为50%透明度的黑色</div>
 </body>
 </html>
 			</textarea>
@@ -157,6 +188,22 @@
 	</aside>
 </footer>
 <script src="../../js/jquery.js"></script>
+<script>
+$("input[type='range']").on("input change propertychange", function(e) {
+	var reg = /[^\d\.]+/g;
+	if (reg.test(this.value)) {
+		this.value = this.value.replace(/[^\d\.]+/g, "");
+	}
+	var val = parseFloat(this.value) || 0;
+	val = Math.max(Math.min(val, 1), 0);
+	var aa = Math.round(val * 0xFF);
+	aa = aa.toString(16);
+	if (aa.length < 2) {
+		aa = "0" + aa;
+	}
+	$(this).closest("p").next().html("filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr=#" + aa + "000000,endColorStr=#" + aa + "000000);<br>background: rgba(0, 0, 0, " + val + ");")
+}).change();
+</script>
 <script src="../../js/inner.js"></script>
 </body>
 </html>

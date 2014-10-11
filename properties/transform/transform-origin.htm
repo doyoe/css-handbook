@@ -103,26 +103,55 @@
 			<table class="g-data">
 				<thead>
 					<tr>
-						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
 						<th><span class="browser-ie">IE</span></th>
 						<th><span class="browser-firefox">Firefox</span></th>
-						<th><span class="browser-safari">Safari</span></th>
 						<th><span class="browser-chrome">Chrome</span></th>
+						<th><span class="browser-safari">Safari</span></th>
 						<th><span class="browser-opera">Opera</span></th>
+						<th><span class="browser-ios_saf">iOS Safari</span></th>
+						<th><span class="browser-op_mini">Opera Mini</span></th>
+						<th><span class="browser-android">Android Browser</span></th>
+						<th><span class="browser-bb">Blackberry Browser</span></th>
+						<th><span class="browser-op_mob">Opera Mobile</span></th>
+						<th><span class="browser-and_chr">Chrome for Android</span></th>
+						<th><span class="browser-and_ff">Firefox for Android</span></th>
+						<th><span class="browser-ie_mob">IE Mobile</span></th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<th>版本</th>
-						<td class="unsupport">6-8</td>
-						<td rowspan="2" class="experimentsupport">4-18</td>
-						<td rowspan="2" class="experimentsupport">5.1.7</td>
-						<td rowspan="2" class="experimentsupport">13-23</td>
-						<td rowspan="2" class="experimentsupport">11.5-12.5</td>
+						<td class="unsupport">5.5-8</td>
+						<td class="unsupport">2-3</td>
+						<td class="support">4-35 <sup class="fix">-webkit-</sup></td>
+						<td rowspan="5" class="support">3.1-8 <sup class="fix">-webkit-</sup></td>
+						<td class="unsupport">9-10.1</td>
+						<td rowspan="5" class="support">3.2-8 <sup class="fix">-webkit-</sup></td>
+						<td rowspan="5" class="unsupport">5-7</td>
+						<td rowspan="5" class="support">2.1-4.4 <sup class="fix">-webkit-</sup></td>
+						<td rowspan="5" class="support">7-10 <sup class="fix">-webkit-</sup></td>
+						<td class="unsupport">10</td>
+						<td rowspan="5" class="support">37</td>
+						<td rowspan="5" class="support">32</td>
+						<td rowspan="5" class="support">10</td>
 					</tr>
 					<tr>
-						<th>版本</th>
-						<td class="experimentsupport">9-10</td>
+						<td class="support">9 <sup class="fix">-ms-</sup></td>
+						<td class="support">3.5-15 <sup class="fix">-moz-</sup></td>
+						<td rowspan="4" class="support">36-40</td>
+						<td class="support">10.5-12 <sup class="fix">-o-</sup></td>
+						<td class="support">11-12.1</td>
+					</tr>
+					<tr>
+						<td rowspan="3" class="support">9-11</td>
+						<td rowspan="3" class="support">16-35</td>
+						<td class="support">12.1</td>
+						<td rowspan="3" class="support">22 <sup class="fix">-webkit-</sup></td>
+					</tr>
+					<tr>
+						<td class="support">15-22 <sup class="fix">-webkit-</sup></td>
+					</tr>
+					<tr>
+						<td class="support">23-26</td>
 					</tr>
 				</tbody>
 			</table>
@@ -138,14 +167,20 @@
 <meta charset="utf-8" />
 <title>transform-origin_CSS参考手册_web前端开发参考手册系列</title>
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <style>
 .test{margin:0;padding:0;list-style:none;border:1px solid #000;}
 .test li{width:50px;height:50px;border:1px solid #000;background:#ddd;
-	-moz-transform-origin:0 0;-moz-transform:rotate(45deg);
-	-webkit-transform-origin:0 0;-webkit-transform:rotate(45deg);
-	-o-transform-origin:0 0;-o-transform:rotate(45deg);
-	-ms-transform-origin:0 0;-ms-transform:rotate(45deg);
-	transform-origin:0 0;transform:rotate(45deg);
+	-webkit-transform:rotate(45deg);
+	-moz-transform:rotate(45deg);
+	-ms-transform:rotate(45deg);
+	-o-transform:rotate(45deg);
+	transform:rotate(45deg);
+	-webkit-transform-origin:0 0;
+	-moz-transform-origin:0 0;
+	-ms-transform-origin:0 0;
+	-o-transform-origin:0 0;
+	transform-origin:0 0;
 }
 </style>
 </head>

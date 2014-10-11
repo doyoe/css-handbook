@@ -100,32 +100,63 @@
 				<li><span class="unsupport">红色</span> = 不支持</li>
 				<li><span class="partsupport">粉色</span> = 部分支持</li>
 			</ul>
+			<!-- compatible:start -->
 			<table class="g-data">
 				<thead>
 					<tr>
-						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
 						<th><span class="browser-ie">IE</span></th>
 						<th><span class="browser-firefox">Firefox</span></th>
-						<th><span class="browser-safari">Safari</span></th>
 						<th><span class="browser-chrome">Chrome</span></th>
+						<th><span class="browser-safari">Safari</span></th>
 						<th><span class="browser-opera">Opera</span></th>
+						<th><span class="browser-ios_saf">iOS<br>Safari</span></th>
+						<th><span class="browser-op_mini">Opera<br>Mini</span></th>
+						<th><span class="browser-android">Android<br>Browser</span></th>
+						<th><span class="browser-bb">Blackberry<br>Browser</span></th>
+						<th><span class="browser-op_mob">Opera<br>Mobile</span></th>
+						<th><span class="browser-and_chr">Chrome<br>for<br>Android</span></th>
+						<th><span class="browser-and_ff">Firefox<br>for<br>Android</span></th>
+						<th><span class="browser-ie_mob">IE<br>Mobile</span></th>
+						<th><span class="browser-and_uc">UC<br>Browser<br>for<br>Android</span></th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<th>版本</th>
-						<td class="unsupport">6-9</td>
-						<td rowspan="2" class="experimentsupport">4-18</td>
-						<td rowspan="2" class="experimentsupport">5.1.7</td>
-						<td rowspan="2" class="experimentsupport">13-23</td>
-						<td rowspan="2" class="experimentsupport">11.5-12.5</td>
+						<td class="unsupport">5.5-9</td>
+						<td class="unsupport">2-3.6</td>
+						<td class="support">4-25 <sup class="fix">-webkit-</sup></td>
+						<td class="support">3.1-6 <sup class="fix">-webkit-</sup></td>
+						<td class="unsupport">9-10.1</td>
+						<td class="support">3.2-6.1 <sup class="fix">-webkit-</sup></td>
+						<td rowspan="3" class="unsupport">5.0-7.0</td>
+						<td class="support">2.1-4.3 <sup class="fix">-webkit-</sup></td>
+						<td rowspan="3" class="support">7-10 <sup class="fix">-webkit-</sup></td>
+						<td class="support">10-12 <sup class="fix">-o-</sup></td>
+						<td rowspan="3" class="support">37</td>
+						<td rowspan="3" class="support">32</td>
+						<td rowspan="3" class="support">10</td>
+						<td rowspan="3" class="support">9.9 <sup class="fix">-webkit-</sup></td>
 					</tr>
 					<tr>
-						<th>版本</th>
-						<td class="experimentsupport">10</td>
+						<td rowspan="2" class="support">10</td>
+						<td class="support">4-15 <sup class="fix">-moz-</sup></td>
+						<td rowspan="2" class="support">26</td>
+						<td rowspan="2" class="support">6.1</td>
+						<td class="support">10.5-12 <sup class="fix">-o-</sup></td>
+						<td rowspan="2" class="support">7.0</td>
+						<td rowspan="2" class="support">4.4</td>
+						<td rowspan="2" class="support">12.1</td>
+					</tr>
+					<tr>
+						<td class="support">16</td>
+						<td class="support">12.1</td>
 					</tr>
 				</tbody>
 			</table>
+			<!-- compatible:end -->
+			<ol class="support-info">
+				<li>通过<a href="http://gucong3000.github.io/selectivizr/" class="external" target="_blank">selectivizr</a>，可以免去css3前缀。本页下方的示例已使用此方案。</li>
+			</ol>
 		</div>
 	</section>
 	<section id="example" class="g-mod g-attr">
@@ -142,22 +173,24 @@
 h1{font-size:16px;}
 .test{overflow:hidden;width:100%;margin:0;padding:0;list-style:none;}
 .test li{position:relative;left:8px;width:220px;height:100px;margin:1px 5px;padding:10px;border:1px solid #ddd;background-color:#eee;color:#000;
-	-moz-transition-property:left;
-	-moz-transition-duration:.5s;
-	-webkit-transition-property:left;
-	-webkit-transition-duration:.5s;
-	-o-transition-property:left;
-	-o-transition-duration:.5s;
-	-ms-transition-property:left;
-	-ms-transition-duration:.5s;
-	transition-property:left;
 	transition-duration:.5s;
+	transition-property:left;
 }
-.test li:nth-child(1){-moz-transition-timing-function:linear;-webkit-transition-timing-function:linear;-o-transition-timing-function:linear;-ms-transition-timing-function:linear;transition-timing-function:linear;}
-.test li:nth-child(2){-moz-transition-timing-function:ease;-webkit-transition-timing-function:ease;-o-transition-timing-function:ease;-ms-transition-timing-function:ease;transition-timing-function:ease;}
-.test li:nth-child(3){-moz-transition-timing-function:ease-in;-webkit-transition-timing-function:ease-in;-o-transition-timing-function:ease-in;-ms-transition-timing-function:ease-in;transition-timing-function:ease-in;}
-.test li:nth-child(4){-moz-transition-timing-function:ease-out;-webkit-transition-timing-function:ease-out;-o-transition-timing-function:ease-out;-ms-transition-timing-function:ease-out;transition-timing-function:ease-out;}
-.test li:nth-child(5){-moz-transition-timing-function:ease-in-out;-webkit-transition-timing-function:ease-in-out;-o-transition-timing-function:ease-in-out;-ms-transition-timing-function:ease-in-out;transition-timing-function:ease-in-out;}
+.test li:nth-child(1){
+	transition-timing-function:linear;
+}
+.test li:nth-child(2){
+	transition-timing-function:ease;
+}
+.test li:nth-child(3){
+	transition-timing-function:ease-in;
+}
+.test li:nth-child(4){
+	transition-timing-function:ease-out;
+}
+.test li:nth-child(5){
+	transition-timing-function:ease-in-out;
+}
 .test li:hover{left:100px;}
 </style>
 </head>
@@ -173,7 +206,7 @@ h1{font-size:16px;}
 </body>
 </html>
 			</textarea>
-			<p><input type="button" value="运行" class="g-btn btn-sure" /></p>
+			<p><input type="button" value="运行" class="g-btn g-btn-sure" /></p>
 		</div>
 	</section>
 </section>

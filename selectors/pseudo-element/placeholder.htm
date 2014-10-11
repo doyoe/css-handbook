@@ -2,9 +2,9 @@
 <html lang="zh-cn">
 <head>
 <meta charset="utf-8" />
-<title>color-index of media queries</title>
-<meta name="description" content="CSS3参考手册之: color-index of media queries" />
-<meta name="keywords" content="color-index of media queries, css3, css3参考手册" />
+<title>E::placeholder</title>
+<meta name="description" content="CSS3参考手册之: E::placeholder" />
+<meta name="keywords" content="E::placeholder, css3选择符, css3, css3参考手册" />
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <meta name="robots" content="all" />
 <!--[if lte IE 8]>
@@ -17,21 +17,21 @@
 	<div class="from">
 		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
 		<span>&#187;</span>
-		<a href="../index.htm">属性列表</a>
+		<a href="../index.htm">选择符列表</a>
 		<span>&#187;</span>
-		<a href="index.htm" id="category" rel="properties/media-queries" name="color-index">媒体查询属性</a>
+		<a href="index.htm" id="category" rel="selectors/pseudo-element" name="placeholder">伪对象选择符</a>
 		<span>&#187;</span>
 	</div>
 	<div class="to">
 		<span class="label">相关内容：</span>
 		<div class="g-combobox g-transition">
 			<a href="?" class="g-transition target">
-				<strong>其它媒体查询属性</strong>
+				<strong>其它伪对象选择符</strong>
 				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
 			</a>
 			<div class="g-transition list">
 				<ul>
-					<!-- 插入快速分类导航 -->
+					<!-- 插入分类快速导航 -->
 				</ul>
 			</div>
 		</div>
@@ -39,10 +39,9 @@
 </nav>
 <header id="hd">
 	<section id="title" class="g-mod">
-		<h1 class="tit">Media Queries: color-index</h1>
+		<h1 class="tit">E::placeholder</h1>
 		<ul class="info">
 			<li><strong>版本：CSS3</strong></li>
-			<li>是否接受min/max：是</li>
 		</ul>
 		<!-- 插入浏览器信息 -->
 	</section>
@@ -51,30 +50,15 @@
 	<section id="syntax" class="g-mod g-attr">
 		<h2 class="tit">语法：</h2>
 		<div class="cont">
-			<p><strong>color-index</strong>：<a href="../../values/numeric/integer.htm">&lt;integer&gt;</a></p>
-		</div>
-	</section>
-	<section id="value" class="g-mod g-attr">
-		<h2 class="tit">取值：</h2>
-		<div class="cont">
-			<dl>
-				<dt><a href="../../values/numeric/integer.htm">&lt;integer&gt;</a>：</dt>
-				<dd>用用整数值来定义彩色查询表中的条目数。不允许负值</dd>
-			</dl>
+			<p><strong>E::placeholder</strong>{ sRules }</p>
 		</div>
 	</section>
 	<section id="intro" class="g-mod g-attr">
 		<h2 class="tit">说明：</h2>
 		<div class="cont">
-			<strong>定义在输出设备的彩色查询表中的条目数。如果没有使用彩色查询表，则值等于0</strong>
+			<strong>设置对象文字占位符的样式。</strong>
 			<ul>
-				<li>本特性接受min和max前缀，因此可以派生出<em class="g-color-light">min-color-index</em>和<em class="g-color-light">max-color-index</em>两个媒体特性。</li>
-				<li class="gquote">
-					<p class="gquote-tit"><strong>简单列举几个应用示例：</strong></p>
-					<blockquote class="gquote-cont"><pre><code>@media screen and (color-index){ … }
-@import url(example.css) screen and (min-color-index:1);
-&lt;link media="screen and (color-index:0)" rel="stylesheet" href="example.css" /&gt;</code></pre></blockquote>
-				</li>
+				<li>::placeholder 伪元素控制元素所显示的文字占位符.它允许开发者/设计师改变文字占位符的样式.默认的文字占位符为浅灰色,当你的表单背景色为类似的颜色时它可能效果并不是很明显,那么你就可以使用这个伪类来改变文字占位符的颜色.</li>
 			</ul>
 		</div>
 	</section>
@@ -85,9 +69,8 @@
 				<li><span class="support">浅绿</span> = 支持</li>
 				<li><span class="unsupport">红色</span> = 不支持</li>
 				<li><span class="partsupport">粉色</span> = 部分支持</li>
-				<li><span class="experimentsupport">橙色</span> = 通过第三方工具支持</li>
 			</ul>
-			<!-- compatible:mediaqueries -->
+			<!-- compatible:start -->
 			<table class="g-data">
 				<thead>
 					<tr>
@@ -109,32 +92,34 @@
 				</thead>
 				<tbody>
 					<tr>
-						<td class="experimentsupport">5.5-8</td>
-						<td class="unsupport">2-3</td>
-						<td rowspan="2" class="support">4</td>
-						<td class="partsupport">3.1-3.2</td>
-						<td class="unsupport">9</td>
-						<td rowspan="2" class="support">3.2</td>
-						<td rowspan="2" class="support">5.0</td>
-						<td rowspan="2" class="support">2.1</td>
-						<td rowspan="2" class="support">7</td>
-						<td rowspan="2" class="support">10</td>
-						<td rowspan="2" class="support">37</td>
-						<td rowspan="2" class="support">32</td>
-						<td rowspan="2" class="support">10</td>
-						<td rowspan="2" class="support">9.9</td>
+						<td class="unsupport">5.5-9</td>
+						<td class="unsupport">2-3.6</td>
+						<td rowspan="2" class="partsupport">4-41 <sup class="fix">-webkit-</sup></td>
+						<td class="unsupport">3.1-4</td>
+						<td class="unsupport">9-12.1</td>
+						<td class="unsupport">3.2-4.1</td>
+						<td rowspan="2" class="unsupport">5.0-7.0</td>
+						<td rowspan="2" class="partsupport">2.1-4.4.3 <sup class="fix">-webkit-</sup></td>
+						<td rowspan="2" class="partsupport">10 <sup class="fix">-webkit-</sup></td>
+						<td class="unsupport">10-12.1</td>
+						<td rowspan="2" class="partsupport">37 <sup class="fix">-webkit-</sup></td>
+						<td rowspan="2" class="partsupport">32 <sup class="fix">-moz-</sup></td>
+						<td rowspan="2" class="partsupport">10 <sup class="fix">-ms-</sup></td>
+						<td rowspan="2" class="partsupport">9.9 <sup class="fix">-webkit-</sup></td>
 					</tr>
 					<tr>
-						<td class="support">9</td>
-						<td class="support">3.5</td>
-						<td class="support">4</td>
-						<td class="support">9.5</td>
+						<td class="partsupport">10-11 <sup class="fix">-ms-</sup></td>
+						<td class="partsupport">4-35 <sup class="fix">-moz-</sup></td>
+						<td class="partsupport">5-8 <sup class="fix">-webkit-</sup></td>
+						<td class="partsupport">15-26 <sup class="fix">-webkit-</sup></td>
+						<td class="partsupport">4.2-8 <sup class="fix">-webkit-</sup></td>
+						<td class="partsupport">22 <sup class="fix">-webkit-</sup></td>
 					</tr>
 				</tbody>
 			</table>
 			<!-- compatible:end -->
 			<ol class="support-info">
-				<li>通过<a href="http://gucong3000.github.io/selectivizr/" class="external" target="_blank">selectivizr</a>，IE6+也可支持。本页下方的示例已使用此方案。</li>
+				<li>::-moz-placeholder 伪元素在Firefox 19+替代了之前的 :-moz-placeholder 伪类.</li>
 			</ol>
 		</div>
 	</section>
@@ -146,23 +131,30 @@
 <html lang="zh-cn">
 <head>
 <meta charset="utf-8" />
-<title>color-index of media features_CSS参考手册_web前端开发参考手册系列</title>
-<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com" />
-<meta name="copyright" content="www.doyoe.com" />
+<title>E::placeholder_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <style>
-@media screen and (color-index){
-	body{color:#f00;}
+input::-webkit-input-placeholder {
+	color: green;
+}
+input:-ms-input-placeholder {
+	color: green;
+}
+input::-moz-placeholder {
+	color: green;
+	opacity: 1;
 }
 </style>
 </head>
 <body>
-<div class="test">当你的输出设备使用了彩色查询表时，本行文字显示为红色</div>
-<script>
-</script>
+
+  <input id="test" placeholder="Placeholder text!">
+
 </body>
 </html>
 			</textarea>
-			<p><input type="button" class="g-btn g-btn-sure" value="运行"></p>
+			<p><input type="button" value="运行" class="g-btn g-btn-sure" /></p>
 		</div>
 	</section>
 </section>

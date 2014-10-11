@@ -27,7 +27,9 @@
     "rimraf": "^2.2.8",
     "iconv-lite": "^0.4.4",
     "htmlparser": "^1.7.7",
+    "caniuse-db": "^1.0.20141008",
     "gulp": "^3.8.7",
+    "gulp-replace": "^0.4.0",
     "gulp-htmlhint": "0.0.9"
   },
   "scripts": {

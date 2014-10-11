@@ -11,6 +11,9 @@
 <!--[if lte IE 8]>
 <script src="js/html5.js"></script>
 <![endif]-->
+<!--[if lte IE 9]>
+<script src="js/selectivizr.js" id="selectivizr"></script>
+<![endif]-->
 <link rel="stylesheet" href="skin/layout.css" />
 <link rel="shortcut icon" type="image/x-icon" href="doyoe.ico" />
 <base target="archives">
@@ -329,6 +332,7 @@
 								<li>
 									<div class="haschild"><a href="properties/user-interface/index.htm">用户界面(User Interface)</a></div>
 									<ul>
+										<li><div class="css3-new"><a href="properties/user-interface/appearance.htm">appearance</a></div></li>
 										<li><div class="css3-new"><a href="properties/user-interface/text-overflow.htm">text-overflow</a></div></li>
 										<li><div><a href="properties/user-interface/outline.htm">outline</a></div></li>
 										<li><div><a href="properties/user-interface/outline-width.htm">outline-width</a></div></li>
@@ -346,6 +350,7 @@
 										<li><div class="css3-new"><a href="properties/user-interface/resize.htm">resize</a></div></li>
 										<li><div class="css3-new"><a href="properties/user-interface/ime-mode.htm">ime-mode</a></div></li>
 										<li><div class="css3-new"><a href="properties/user-interface/user-select.htm">user-select</a></div></li>
+										<li><div class="css3-new"><a href="properties/user-interface/pointer-events.htm">pointer-events</a></div></li>
 									</ul>
 								</li>
 								<li>
@@ -605,6 +610,7 @@
 										<li><div class="css3-change"><a href="selectors/pseudo-element/first-line.htm">E:first-line/E::first-line</a></div></li>
 										<li><div class="css3-change"><a href="selectors/pseudo-element/before.htm">E:before/E::before</a></div></li>
 										<li><div class="css3-change"><a href="selectors/pseudo-element/after.htm">E:after/E::after</a></div></li>
+										<li><div class="css3-new"><a href="selectors/pseudo-element/placeholder.htm">E::placeholder</a></div></li>
 										<li><div class="css3-new"><a href="selectors/pseudo-element/selection.htm">E::selection</a></div></li>
 									</ul>
 								</li>
@@ -754,7 +760,7 @@
 						<li>
 							<div class="haschild"><a href="hack/index.htm">CSS Hack</a></div>
 							<ul>
-								<li><div><a href="hack/conditions.htm">条件Hack</a></div></li>
+								<li><div><a href="hack/conditions.htm">IE条件注释</a></div></li>
 								<li><div><a href="hack/properties.htm">属性级Hack</a></div></li>
 								<li><div><a href="hack/selectors.htm">选择符级Hack</a></div></li>
 							</ul>

@@ -47,7 +47,7 @@ ol.gitem{list-style-type:decimal;}
 .g-data .browser-chrome{background-position:0 -66px;}
 .g-data .browser-safari{background-position:0 -99px;}
 .g-data .browser-opera{background-position:0 -132px;}
-.g-data .fix{margin-left:5px;padding:0 3px;border-radius:3px;background-color:#f90;color:#000;white-space:nowrap;}
+.g-data .fix{display:inline-block;margin-left:5px;padding:0 3px;border-radius:3px;background-color:#f90;color:#000;white-space:nowrap;}
 /* comm: g-attr */
 .g-attr .tit{padding:0 10px;background:#F3F3F3;font-size:14px;line-height:2;}
 .g-attr .cont{padding:10px;color:#666;}
@@ -84,7 +84,7 @@ ol.gitem{list-style-type:decimal;}
 #guide .to{float:right;width:160px;}
 #guide .to .label{display:none;}
 /* module: title */
-#title{min-height:69px;_height:69px;margin-top:0;}
+#title{position: relative; min-height:69px;_height:69px;margin-top:0;}
 #title .tit{float:left;padding-left:10px;font-size:25px;font-family:arial;text-shadow:1px 1px 0 rgba(255,255,255,1),1px 1px 2px rgba(0,0,0,.3);}
 #title .copylink{display:inline;float:left;overflow:hidden;height:19px;margin-top:10px;padding-left:15px;background:url(ico.png) no-repeat 0 -40px;}
 #copylink.hover{color:#C30;text-decoration:underline;}

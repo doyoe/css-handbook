@@ -99,37 +99,65 @@
 				<li><span class="unsupport">红色</span> = 不支持</li>
 				<li><span class="partsupport">粉色</span> = 部分支持</li>
 			</ul>
+			<!-- compatible:start -->
 			<table class="g-data">
 				<thead>
 					<tr>
-						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
 						<th><span class="browser-ie">IE</span></th>
 						<th><span class="browser-firefox">Firefox</span></th>
-						<th><span class="browser-safari">Safari</span></th>
 						<th><span class="browser-chrome">Chrome</span></th>
+						<th><span class="browser-safari">Safari</span></th>
 						<th><span class="browser-opera">Opera</span></th>
+						<th><span class="browser-ios_saf">iOS<br>Safari</span></th>
+						<th><span class="browser-op_mini">Opera<br>Mini</span></th>
+						<th><span class="browser-android">Android<br>Browser</span></th>
+						<th><span class="browser-bb">Blackberry<br>Browser</span></th>
+						<th><span class="browser-op_mob">Opera<br>Mobile</span></th>
+						<th><span class="browser-and_chr">Chrome<br>for<br>Android</span></th>
+						<th><span class="browser-and_ff">Firefox<br>for<br>Android</span></th>
+						<th><span class="browser-ie_mob">IE<br>Mobile</span></th>
+						<th><span class="browser-and_uc">UC<br>Browser<br>for<br>Android</span></th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<th>较早版本</th>
-						<td class="unsupport">6.0-8.0</td>
-						<td class="support">3.5 <sup class="fix">-moz-</sup></td>
-						<td class="support">3.0-5.1 <sup class="fix">-webkit-</sup></td>
-						<td class="support">1.0-9.0 <sup class="fix">-webkit-</sup></td>
-						<td class="unsupport">1.0-10.4</td>
+						<td class="unsupport">5.5-8</td>
+						<td class="unsupport">2-3</td>
+						<td class="support">4-9 <sup class="fix">-webkit-</sup></td>
+						<td class="partsupport">3.1-4 <sup class="fix">-webkit-</sup></td>
+						<td class="unsupport">9-10.1</td>
+						<td class="partsupport">3.2 <sup class="fix">-webkit-</sup></td>
+						<td rowspan="3" class="unsupport">5.0-7.0</td>
+						<td class="partsupport">2.1-3 <sup class="fix">-webkit-</sup></td>
+						<td class="support">7 <sup class="fix">-webkit-</sup></td>
+						<td class="unsupport">10</td>
+						<td rowspan="3" class="support">37</td>
+						<td rowspan="3" class="support">32</td>
+						<td rowspan="3" class="support">10</td>
+						<td rowspan="3" class="support">9.9</td>
 					</tr>
 					<tr>
-						<th>较新版本</th>
-						<td class="support">9.0</td>
-						<td class="support">4.0</td>
-						<td class="support">5.1.7</td>
-						<td class="support">10.0</td>
-						<td class="support">10.5</td>
+						<td rowspan="2" class="support">9</td>
+						<td class="support">3.5-3.6 <sup class="fix">-moz-</sup></td>
+						<td rowspan="2" class="support">10</td>
+						<td class="support">5 <sup class="fix">-webkit-</sup></td>
+						<td rowspan="2" class="support">10.5</td>
+						<td class="support">4.0-4.3 <sup class="fix">-webkit-</sup></td>
+						<td rowspan="2" class="support">4</td>
+						<td rowspan="2" class="support">10</td>
+						<td rowspan="2" class="support">11</td>
+					</tr>
+					<tr>
+						<td class="support">4</td>
+						<td class="support">5.1</td>
+						<td class="support">5.0</td>
 					</tr>
 				</tbody>
 			</table>
+			<!-- compatible:end -->
 			<ol class="support-info">
+				<li>通过<a href="http://gucong3000.github.io/selectivizr/" class="external" target="_blank">selectivizr</a>，IE6+也可支持。本页下方的示例已使用此方案。但请注意，内阴影暂未得到支持。</li>
+				<li>表格中的“部分支持”，指的是不支持第四个<a href="../../values/length/index.htm">&lt;length&gt;</a>参数，阴影外延值。</li>
 				<li>需要注意的是从Firefox13开始移除了对-moz-box-shadow的支持，仅支持box-shadow，在4.0-12.0区间，两种方式都支持。</li>
 			</ol>
 		</div>
