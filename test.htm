@@ -2,19 +2,33 @@
 <html lang="zh-cn">
 <head>
 <meta charset="utf-8" />
-<title>list-style_CSS参考手册_web前端开发参考手册系列</title>
+<title>E::placeholder_CSS参考手册_web前端开发参考手册系列</title>
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <style>
-.test{list-style: none outside upper-alpha;}
+input::-webkit-placeholder {
+	color: green;
+	text-overflow: ellipsis;
+	display:block;
+	width:100px;
+	overflow:hidden;
+	font-size:30px;
+}
+input:-ms-input-placeholder { // IE10+
+	color: green;
+}
+input:-moz-placeholder { // Firefox4-18
+	color: green;
+}
+input::-moz-placeholder { // Firefox19+
+	color: green;
+	text-overflow: ellipsis;
+}
 </style>
 </head>
 <body>
-<ul class="test">
-	<li class="colorname">列表项一</li>
-	<li class="colorname">列表项一</li>
-	<li class="colorname">列表项一</li>
-	<li class="colorname">列表项一</li>
-</ul>
+
+  <input id="test" placeholder="Placeholder text!Placeholder text!">
+
 </body>
 </html>
 			

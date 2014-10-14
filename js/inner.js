@@ -326,6 +326,7 @@ if (!Global.isLocal && Global.name) {
 				},
 				'user-interface' : {
 					'index' : ['用户界面(User Interface)','其它用户界面属性'],
+					'appearance' : [],
 					'text-overflow' : [],
 					'outline' : [],
 					'outline-width' : [],
@@ -341,7 +342,9 @@ if (!Global.isLocal && Global.name) {
 					'zoom' : [],
 					'box-sizing' : [],
 					'resize' : [],
-					'ime-mode' : []
+					'ime-mode' : [],
+					'user-select' : [],
+					'pointer-events' : []
 				},
 				'multi-column' : {
 					'index' : ['多栏(Multi-column)','其它多栏属性参考'],
@@ -532,10 +535,11 @@ if (!Global.isLocal && Global.name) {
 				},
 				'pseudo-element' : {
 					'index' : ['伪对象选择符','其它伪对象选择符'],
-					'first-letter' : ['E:first-letter'],
-					'first-line' : ['E:first-line'],
-					'before' : ['E:before'],
-					'after' : ['E:after'],
+					'first-letter' : ['E::first-letter'],
+					'first-line' : ['E::first-line'],
+					'before' : ['E::before'],
+					'after' : ['E::after'],
+					'placeholder' : ['E::placeholder'],
 					'selection' : ['E::selection']
 				}
 			},
