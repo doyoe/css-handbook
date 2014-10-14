@@ -215,19 +215,20 @@
 <style>
 h1{font-size:16px;}
 .test{overflow:hidden;width:100%;margin:0;padding:0;list-style:none;}
-.test li{float:left;width:170px;height:100px;margin:0 5px;padding:10px;border:1px solid #ddd;background-color:#eee;color:#000;
-	-moz-transition-property:border-color,background-color,color;
-	-moz-transition-duration:.5s;
-	-moz-transition-timing-function:ease-in;
+.test li {
+	float:left;width:170px;height:100px;margin:0 5px;padding:10px;border:1px solid #ddd;background-color:#eee;color:#000;
 	-webkit-transition-property:border-color,background-color,color;
-	-webkit-transition-duration:.5s;
-	-webkit-transition-timing-function:ease-in;
+	-moz-transition-property:border-color,background-color,color;
 	-o-transition-property:border-color,background-color,color;
-	-o-transition-duration:.5s;
-	-o-transition-timing-function:ease-in;
 	transition-property:border-color,background-color,color;
-	transition-duration:.5s;
+	-webkit-transition-timing-function:ease-in;
+	-moz-transition-timing-function:ease-in;
+	-o-transition-timing-function:ease-in;
 	transition-timing-function:ease-in;
+	-webkit-transition-duration:.5s;
+	-moz-transition-duration:.5s;
+	-o-transition-duration:.5s;
+	transition-duration:.5s;
 }
 .test li:hover{border-color:#999;background-color:#bbb;color:#999;}
 </style>
