@@ -5,7 +5,10 @@ html,body{overflow:hidden;}
 html{_padding:90px 0 10px;}
 body{height:100%;}
 #main,#side,#about{border:1px solid #ccc;background:#f9f9f9;-webkit-box-shadow:0 0 5px rgba(0,0,0,.3);box-shadow:0 0 5px rgba(0,0,0,.3);}
-#hd{position:absolute;z-index:3;top:0;right:0;left:0;width:100%;height:80px;background:#0382AD url(r_x.png) repeat-x;background:-moz-linear-gradient(center top,#45B5DA,#0382AD);background:-webkit-gradient(linear,center top,center bottom,from(#45B5DA),to(#0382AD));}
+#hd{position:absolute;z-index:3;top:0;right:0;left:0;width:100%;height:80px;background:#0382AD url(r_x.png) repeat-x;
+	background: -webkit-gradient(linear,center top,center bottom,from(#45B5DA),to(#0382AD));
+	background: linear-gradient(to bottom,#45B5DA,#0382ad);
+}
 #bd{position:absolute;_position:relative;z-index:1;top:90px;_top:auto;right:0;bottom:10px;_bottom:auto;left:0;_height:100%;margin:0 10px;}
 #side{position:absolute;top:0;bottom:0;left:0;overflow:auto;float:left;width:270px;_height:100%;-webkit-overflow-scrolling:touch;}
 #main{position:absolute;_position:static;top:0;right:0;bottom:0;left:280px;overflow:auto;_height:100%;_margin-left:280px;background:#fff;}

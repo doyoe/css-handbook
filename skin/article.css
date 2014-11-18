@@ -47,7 +47,7 @@ ol.gitem{list-style-type:decimal;}
 .g-data .browser-chrome{background-position:0 -66px;}
 .g-data .browser-safari{background-position:0 -99px;}
 .g-data .browser-opera{background-position:0 -132px;}
-.g-data .fix{margin-left:5px;padding:0 3px;border-radius:3px;background-color:#f90;color:#000;white-space:nowrap;}
+.g-data .fix{display:inline-block;margin-left:5px;padding:0 3px;border-radius:3px;background-color:#f90;color:#000;white-space:nowrap;}
 /* comm: g-attr */
 .g-attr .tit{padding:0 10px;background:#F3F3F3;font-size:14px;line-height:2;}
 .g-attr .cont{padding:10px;color:#666;}
@@ -118,7 +118,17 @@ ol.gitem{list-style-type:decimal;}
 #value dt{clear:left;float:left;font-weight:bold;}
 #value dt.css3-value{color:#f60;}
 /* module: example */
-#example textarea{overflow:auto;margin-bottom:10px;border:1px solid #ddd;width:95vw;height:60vh;max-width:100%;}
+#example textarea {
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    max-width: 100%;
+    overflow: auto;
+    height: 60vh;
+    width: 95vw;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+}
 /* module: about-vita */
 #about-vita li{zoom:1;overflow:hidden;}
 #about-vita li strong{float:left;width:155px;}
