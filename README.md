@@ -11,7 +11,7 @@ CSS参考手册
 
 ###草案版本：v4.1.7(WD)
 
-CSS参考手册目前正在v4.1.6草案中。广泛接受[Issues](https://github.com/doyoe/css-handbook/issues)和[Pull Requests](https://github.com/doyoe/css-handbook/pulls)
+CSS参考手册目前正在v4.1.7草案中。广泛接受[Issues](https://github.com/doyoe/css-handbook/issues)和[Pull Requests](https://github.com/doyoe/css-handbook/pulls)
 
 
 ###最新版本：v4.1.6
