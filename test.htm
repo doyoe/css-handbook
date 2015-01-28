@@ -2,17 +2,21 @@
 <html lang="zh-cn">
 <head>
 <meta charset="utf-8" />
-<title>E::placeholder_CSS参考手册_web前端开发参考手册系列</title>
+<title>属性选择符 E[att|="val"]_CSS参考手册_web前端开发参考手册系列</title>
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <style>
-
-.a{background:#aaa;position:absolute;top:10px;right:10px;bottom:10px;left:10px;/*width:100px;*/height:100px;}
+li[class|="test3"]{color:#f00;}
 </style>
 </head>
 <body>
-<div class="a">
-
-</div>
+<ul>
+	<li class="test1-abc">列表项目</li>
+	<li class="test2-abc">列表项目</li>
+	<li class="test3 asd">列表项目</li>
+	<li class="test4-abc">列表项目</li>
+	<li class="test5-abc">列表项目</li>
+	<li class="test6-abc">列表项目</li>
+</ul>
 </body>
 </html>
 			
