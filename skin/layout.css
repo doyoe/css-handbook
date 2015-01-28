@@ -43,7 +43,8 @@ body{height:100%;}
 #about .origin,#about .related{float:right;padding:0 10px;}
 #about a{color:#16387C;font-weight:bold;}
 /* module: contribute(popup) */
-#contribute{width:400px;}
+#contribute{width:410px;}
 #contribute .g-popup-bd ul{position:absolute;z-index:3;width:350px;height:130px;padding:10px 15px;}
 #contribute .g-popup-bd p{position:absolute;z-index:3;top:130px;left:25px;}
+#contribute .g-popup-bd img{position:absolute;z-index:4;top:20px;right:20px;}
 #contribute .becauseofyou{position:absolute;z-index:1;top:35px;left:0;overflow:hidden;width:400px;color:#f8f8f8;font-weight:bold;font-style:italic;font-size:60px;white-space:nowrap;}

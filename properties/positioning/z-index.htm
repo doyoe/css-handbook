@@ -80,7 +80,7 @@
 				<li>同一个层叠上下文中，层叠级别（即z-index属性值）大的显示在上面，反之显示在下面。</li>
 				<li>同一个层叠上下文中，层叠级别相同的两个元素，依据它们在HTML文档流中的顺序，写在后面的将会覆盖前面的。</li>
 				<li>不同层叠上下文中，元素的显示顺序依据祖先的层叠级别来决定，与自身的层叠级别无关。</li>
-				<li>当z-index未定义时，在IE6,7下会创建新的局部层叠上下文，而在高级浏览器中，按照规范不产生新的局部层叠上下文，如下例：
+				<li>当z-index未定义或者值为auto时，在IE6,7下会创建新的局部层叠上下文，而在高级浏览器中，按照规范不产生新的局部层叠上下文，如下例：
 					<div class="gquote">
 						<p class="gquote-tit"><strong>demo：</strong></p>
 						<blockquote class="gquote-cont"><code><xmp>div{position:relative;}
@@ -113,31 +113,47 @@ p{position:absolute;}
 			<table class="g-data">
 				<thead>
 					<tr>
-						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
-						<th><span class="browser-ie">IE</span></th>
-						<th><span class="browser-firefox">Firefox</span></th>
-						<th><span class="browser-safari">Safari</span></th>
-						<th><span class="browser-chrome">Chrome</span></th>
-						<th><span class="browser-opera">Opera</span></th>
+						<th>Values</th>
+						<th>IE</th>
+						<th>Firefox</th>
+						<th>Chrome</th>
+						<th>Safari</th>
+						<th>Opera</th>
+						<th>iOS Safari</th>
+						<th>Android Browser</th>
+						<th>Android Chrome</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<th>版本</th>
-						<td class="support" rowspan="2">6.0</td>
-						<td class="partsupport">1.0-2.0 <sup><a href="#support1">#1</a></sup></td>
+						<td><strong>Basic Support</strong></td>
+						<td class="support">6.0+</td>
+						<td class="support">1.0+</td>
+						<td class="support">1.0+</td>
+						<td class="support">3.1+</td>
+						<td class="support">4.0+</td>
+						<td class="support">3.2+</td>
+						<td class="support">2.1+</td>
+						<td class="support">4.0+</td>
+					</tr>
+					<tr>
+						<td rowspan="2">负值 <sup><a href="#support1">#1</a></sup></td>
+						<td class="support" rowspan="2">4.0</td>
+						<td class="unsupport">1.0-2.0</td>
 						<td class="support" rowspan="2">1.0</td>
 						<td class="support" rowspan="2">1.0</td>
 						<td class="support" rowspan="2">4.0</td>
+						<td class="support" rowspan="2">3.2+</td>
+						<td class="support" rowspan="2">2.1+</td>
+						<td class="support" rowspan="2">4.0+</td>
 					</tr>
 					<tr>
-						<th>版本</th>
 						<td class="support">3.0</td>
 					</tr>
 				</tbody>
 			</table>
 			<ol class="support-info">
-				<li id="support1">不支持z-index属性的负值。</li>
+				<li id="support1">z-index负值是CSS2.1中定义的，在CSS2中是不被支持的；</li>
 			</ol>
 		</div>
 	</section>

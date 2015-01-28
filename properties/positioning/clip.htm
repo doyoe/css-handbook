@@ -88,7 +88,8 @@
 		<div class="cont">
 			<strong>检索或设置对象的可视区域。区域外的部分是透明的。</strong>
 			<ul>
-				<li>必须将<a href="../positioning/position.htm">position</a>的值设为absolute，此属性方可使用。</li>
+				<p class="g-color-light">这个属性将被废弃，推荐使用 <a href="http://dev.w3.org/fxtf/css-masking-1/#propdef-clip-path" rel="external" class="external" target="_blank">clip-path</a> 代替，在过渡阶段，仍然会存在一段时间。</p>
+				<li>必须将<a href="../positioning/position.htm">position</a>的值设为absolute或者fixed，此属性方可使用。</li>
 				<li>对应的脚本特性为<strong>clip</strong>。</li>
 			</ul>
 		</div>
@@ -104,33 +105,56 @@
 			<table class="g-data">
 				<thead>
 					<tr>
-						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
-						<th><span class="browser-ie">IE</span></th>
-						<th><span class="browser-firefox">Firefox</span></th>
-						<th><span class="browser-safari">Safari</span></th>
-						<th><span class="browser-chrome">Chrome</span></th>
-						<th><span class="browser-opera">Opera</span></th>
+						<th>Values</th>
+						<th>IE</th>
+						<th>Firefox</th>
+						<th>Chrome</th>
+						<th>Safari</th>
+						<th>Opera</th>
+						<th>iOS Safari</th>
+						<th>Android Browser</th>
+						<th>Android Chrome</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<th>版本</th>
-						<td class="partsupport">6.0-7.0 <sup><a href="#support1">#1</a> <a href="#support2">#2</a></sup></td>
-						<td rowspan="2" class="partsupport">1.0-25.0 <sup><a href="#support2">#2</a></sup></td>
-						<td rowspan="2" class="partsupport">1.0-5.1.7 <sup><a href="#support2">#2</a></sup></td>
-						<td rowspan="2" class="partsupport">1.0-31.0 <sup><a href="#support2">#2</a></sup></td>
-						<td rowspan="2" class="partsupport">7.0-18.0 <sup><a href="#support2">#2</a></sup></td>
+						<td><strong>Basic Support</strong></td>
+						<td class="support">6.0+</td>
+						<td class="support">1.0+</td>
+						<td class="support">1.0+</td>
+						<td class="support">3.1+</td>
+						<td class="support">7.0+</td>
+						<td class="support">3.2+</td>
+						<td class="support">2.1+</td>
+						<td class="support">4.0+</td>
 					</tr>
 					<tr>
-						<th>版本</th>
-						<td class="partsupport">8.0-11.0 <a href="#support2">#2</a></td>
+						<td rowspan="2">rect(逗号分隔)</td>
+						<td class="unsupport">7.0</td>
+						<td class="support" rowspan="2">1.0+</td>
+						<td class="support" rowspan="2">1.0+</td>
+						<td class="support" rowspan="2">1.0+</td>
+						<td class="support" rowspan="2">7.0+</td>
+						<td class="support" rowspan="2">3.2+</td>
+						<td class="support" rowspan="2">2.1+</td>
+						<td class="support" rowspan="2">4.0+</td>
+					</tr>
+					<tr>
+						<td class="support">8.0+</td>
+					</tr>
+					<tr>
+						<td>inset()</td>
+						<td class="unsupport">11.0</td>
+						<td class="unsupport">38.0</td>
+						<td class="unsupport">43.0</td>
+						<td class="unsupport">8.1</td>
+						<td class="unsupport">28.0</td>
+						<td class="unsupport">8.1</td>
+						<td class="unsupport">4.4.4</td>
+						<td class="unsupport">40.0</td>
 					</tr>
 				</tbody>
 			</table>
-			<ol class="support-info">
-				<li id="support1">IE7及更早浏览器只支持rect()内部的数值以空格分隔的方式，不支持以逗号分隔。</li>
-				<li id="support2">不支持clip属性的CSS3新增属性值: <ins class="g-color-css3-new">inset()</ins>。</li>
-			</ol>
 		</div>
 	</section>
 	<section id="example" class="g-mod g-attr">
