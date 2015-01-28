@@ -19,6 +19,7 @@ CSS参考手册目前正在v4.1.7草案中。广泛接受[Issues](https://github
 更新时间：2015.01.28
 
 * 修订了 [Positioning](http://css.doyoe.com/properties/positioning/index.htm) 模块的参考描述，使用新的浏览器兼容视图，增加部分移动浏览器支持；
+* 修订了 [Layout](http://css.doyoe.com/properties/layout/index.htm) 模块的参考描述，使用新的浏览器兼容视图，增加部分移动浏览器支持；
 * 排查了手册中的死链；
 * 修改了 [list-style](http://css.doyoe.com/properties/list/list-style.htm)的语法描述；
 * 新增了 [appearance](http://css.doyoe.com/properties/user-interface/appearance.htm)、 [pointer-events](http://css.doyoe.com/properties/user-interface/pointer-events.htm) 和 [E::placeholder](http://css.doyoe.com/selectors/pseudo-element/placeholder.htm) 参考；

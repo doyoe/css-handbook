@@ -819,7 +819,7 @@ if (!Global.isLocal && Global.name) {
 				'<li><a href="https://github.com/doyoe/css-handbook/issues" target="_blank" rel="external" class="external">Issues</a></li>'+
 				'<li><a href="https://github.com/doyoe/css-handbook/pulls" target="_blank" rel="external" class="external">Pull Requests</a></li>'+
 			'</ul>'+
-			'<p>Base Browsers: IE6.0+, Firefox4.0+, Chrome4.0+, Safari4.0+, Opera15.0+</p>'+
+			'<p>Base Browsers: IE6.0+, Firefox2.0+, Chrome4.0+, Safari4.0+, Opera15.0+</p>'+
 		'</div>';
 
 		$('#title').append(testBrowser);

@@ -160,150 +160,131 @@
 			<table class="g-data">
 				<thead>
 					<tr>
-						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
-						<th><span class="browser-ie">IE</span></th>
-						<th><span class="browser-firefox">Firefox</span></th>
-						<th><span class="browser-safari">Safari</span></th>
-						<th><span class="browser-chrome">Chrome</span></th>
-						<th><span class="browser-opera">Opera</span></th>
+						<th>Values</th>
+						<th>IE</th>
+						<th>Firefox</th>
+						<th>Chrome</th>
+						<th>Safari</th>
+						<th>Opera</th>
+						<th>iOS Safari</th>
+						<th>Android Browser</th>
+						<th>Android Chrome</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<th>版本</th>
-						<td class="partsupport">6.0-7.0 <sup><a href="#support1">#1</a> <a href="#support2">#2</a></sup></td>
-						<td class="partsupport" rowspan="2">1.0-25.0 <sup><a href="#support2">#2</a></sup></td>
-						<td class="support" rowspan="2">1.0</td>
-						<td class="support" rowspan="2">1.0</td>
-						<td class="support" rowspan="2">7.0</td>
+						<td><strong>Basic Support</strong> <sup><a href="#support1">#1</a></sup></td>
+						<td class="support">6.0+</td>
+						<td class="support">2.0+</td>
+						<td class="support">4.0+</td>
+						<td class="support">3.1+</td>
+						<td class="support">7.0+</td>
+						<td class="support">3.2+</td>
+						<td class="support">2.1+</td>
+						<td class="support">4.0+</td>
 					</tr>
 					<tr>
-						<th>版本</th>
-						<td class="support">8.0-11.0</td>
+						<td rowspan="2">inline-block</td>
+						<td class="partsupport">6.0-7.0 <sup><a href="#support3">#3</a></sup></td>
+						<td class="support" rowspan="2">2.0+</td>
+						<td class="support" rowspan="2">4.0+</td>
+						<td class="support" rowspan="2">3.1+</td>
+						<td class="support" rowspan="2">7.0+</td>
+						<td class="support" rowspan="2">3.2+</td>
+						<td class="support" rowspan="2">2.1+</td>
+						<td class="support" rowspan="2">4.0+</td>
+					</tr>
+					<tr>
+						<td class="support">8.0+</td>
+					</tr>
+					<tr>
+						<td rowspan="2">table系 <sup><a href="#support2">#2</a></sup></td>
+						<td class="unsupport">6.0-7.0</td>
+						<td class="support" rowspan="2">2.0+</td>
+						<td class="support" rowspan="2">4.0+</td>
+						<td class="support" rowspan="2">3.1+</td>
+						<td class="support" rowspan="2">7.0+</td>
+						<td class="support" rowspan="2">3.2+</td>
+						<td class="support" rowspan="2">2.1+</td>
+						<td class="support" rowspan="2">4.0+</td>
+					</tr>
+					<tr>
+						<td class="support">8.0+</td>
+					</tr>
+					<tr>
+						<td rowspan="2">run-in</td>
+						<td class="unsupport">6.0-7.0</td>
+						<td class="unsupport">2.0-25.0</td>
+						<td class="support" rowspan="2">4.0+</td>
+						<td class="support" rowspan="2">3.1+</td>
+						<td class="support" rowspan="2">7.0+</td>
+						<td class="support" rowspan="2">3.2+</td>
+						<td class="support" rowspan="2">2.1+</td>
+						<td class="support" rowspan="2">4.0+</td>
+					</tr>
+					<tr>
+						<td class="support">8.0+</td>
+						<td class="support">26.0+</td>
+					</tr>
+					<tr>
+						<td>box | inline-box</td>
+						<td class="unsupport">6.0-11.0</td>
+						<td class="support">2.0-38.0<br /><sup class="fix">-moz-</sup></td>
+						<td class="support">4.0-43.0<br /><sup class="fix">-webkit-</sup></td>
+						<td class="support">3.1-8.1<br /><sup class="fix">-webkit-</sup></td>
+						<td class="support">15.0-28.0<br /><sup class="fix">-webkit-</sup></td>
+						<td class="support">3.2-8.1<br /><sup class="fix">-webkit-</sup></td>
+						<td class="support">2.1-4.4.4<br /><sup class="fix">-webkit-</sup></td>
+						<td class="support">4.0-40.0<br /><sup class="fix">-webkit-</sup></td>
+					</tr>
+					<tr>
+						<td rowspan="2">flexbox | inline-flexbox</td>
+						<td class="unsupport">6.0-9.0</td>
+						<td class="unsupport" rowspan="2">2.0-38.0</td>
+						<td class="unsupport" rowspan="2">4.0-43.0</td>
+						<td class="unsupport" rowspan="2">3.1-8.1</td>
+						<td class="unsupport" rowspan="2">15.0-28.0</td>
+						<td class="unsupport" rowspan="2">3.2-8.1</td>
+						<td class="unsupport" rowspan="2">2.1-4.4.4</td>
+						<td class="unsupport" rowspan="2">4.0-40.0</td>
+					</tr>
+					<tr>
+						<td class="support">10.0-11.0<br /><sup class="fix">-ms-</sup></td>
+					</tr>
+					<tr>
+						<td rowspan="3">flex | inline-flex</td>
+						<td class="unsupport">6.0-10.0</td>
+						<td class="unsupport">2.0-27.0</td>
+						<td class="unsupport">4.0-20.0</td>
+						<td class="unsupport">3.1-6.0</td>
+						<td class="support">15.0-28.0<br /><sup class="fix">-webkit-</sup></td>
+						<td class="unsupport">3.2-6.1</td>
+						<td class="unsupport">2.1-4.3</td>
+						<td class="unsupport">4.0-20.0</td>
+					</tr>
+					<tr>
+						<td class="support" rowspan="2">11.0+</td>
+						<td class="support" rowspan="2">28.0+</td>
+						<td class="support">21.0-43.0<br /><sup class="fix">-webkit-</sup></td>
+						<td class="support" rowspan="2">6.1-8.1<br /><sup class="fix">-webkit-</sup></td>
+						<td class="support" rowspan="2">17.0+</td>
+						<td class="support" rowspan="2">7.0-8.1<br /><sup class="fix">-webkit-</sup></td>
+						<td class="support" rowspan="2">4.4+</td>
+						<td class="support">21.0-43.0<br /><sup class="fix">-webkit-</sup></td>
+					</tr>
+					<tr>
+						<td class="support">29.0+</td>
+						<td class="support">29.0+</td>
 					</tr>
 				</tbody>
 			</table>
 			<ol class="support-info">
-				<li id="support1">不支持：table | inline-table | table-caption | table-cell | table-row | table-row-group | table-column | table-column-group | table-footer-group | table-header-group 属性值。</li>
-				<li id="support2">不支持：<ins class="g-color-css3-new" title="css3">run-in</ins> 属性值。</li>
+				<li id="support1">Basic Support包含值：none | inline | block | list-item | inline-block</li>
+				<li id="support2">table系包含值：table | inline-table | table-caption | table-cell | table-row | table-row-group | table-column | table-column-group | table-footer-group | table-header-group</li>
+				<li id="support3">IE6,7只支持inline元素设置为inline-block，其它类型元素均不可以</li>
 				<!-- <li id="support3">不支持：<ins class="g-color-css3-new" title="css3">ruby</ins> | <ins class="g-color-css3-new" title="css3">ruby-base</ins> | <ins class="g-color-css3-new" title="css3">ruby-text</ins> | <ins class="g-color-css3-new" title="css3">ruby-base-group</ins> | <ins class="g-color-css3-new" title="css3">ruby-text-group</ins> 属性值。</li>
 				<li id="support4">不支持：<ins class="g-color-css3-new" title="css3">compact</ins> 属性值。</li> -->
 			</ol>
-		</div>
-	</section>
-	<section class="g-mod g-attr">
-		<h2 class="tit">兼容性（老版本伸缩盒: box | inline-box）：</h2>
-		<div class="cont">
-			<ul class="support-type">
-				<li><span class="support">浅绿</span> = 支持</li>
-				<li><span class="unsupport">红色</span> = 不支持</li>
-				<li><span class="partsupport">粉色</span> = 部分支持</li>
-			</ul>
-			<table class="g-data">
-				<thead>
-					<tr>
-						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
-						<th><span class="browser-ie">IE</span></th>
-						<th><span class="browser-firefox">Firefox</span></th>
-						<th><span class="browser-safari">Safari</span></th>
-						<th><span class="browser-chrome">Chrome</span></th>
-						<th><span class="browser-opera">Opera</span></th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<th>版本</th>
-						<td class="unsupport" rowspan="2">6.0-11.0</td>
-						<td class="support" rowspan="2">4.0-25 <sup class="fix">-moz-</sup></td>
-						<td class="support" rowspan="2">5.1.7 <sup class="fix">-webkit-</sup></td>
-						<td class="support" rowspan="2">4.0-31.0 <sup class="fix">-webkit-</sup></td>
-						<td class="unsupport">9.5-14.0</td>
-					</tr>
-					<tr>
-						<th>版本</th>
-						<td class="support">15.0-18.0 <sup class="fix">-webkit-</sup></td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-	</section>
-	<section class="g-mod g-attr">
-		<h2 class="tit">兼容性（过渡版本伸缩盒: flexbox | inline-flexbox）：</h2>
-		<div class="cont">
-			<ul class="support-type">
-				<li><span class="support">浅绿</span> = 支持</li>
-				<li><span class="unsupport">红色</span> = 不支持</li>
-				<li><span class="partsupport">粉色</span> = 部分支持</li>
-			</ul>
-			<table class="g-data">
-				<thead>
-					<tr>
-						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
-						<th><span class="browser-ie">IE</span></th>
-						<th><span class="browser-firefox">Firefox</span></th>
-						<th><span class="browser-safari">Safari</span></th>
-						<th><span class="browser-chrome">Chrome</span></th>
-						<th><span class="browser-opera">Opera</span></th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<th>版本</th>
-						<td class="unsupport">6.0-9.0</td>
-						<td class="unsupport" rowspan="2">4.0-25.0</td>
-						<td class="unsupport" rowspan="2">5.1.7</td>
-						<td class="unsupport" rowspan="2">4.0-31.0</td>
-						<td class="unsupport" rowspan="2">9.5-18.0</td>
-					</tr>
-					<tr>
-						<th>版本</th>
-						<td class="support">10.0 <sup class="fix">-ms-</sup></td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-	</section>
-	<section class="g-mod g-attr">
-		<h2 class="tit">兼容性（最新版本伸缩盒: flex | inline-flex）：</h2>
-		<div class="cont">
-			<ul class="support-type">
-				<li><span class="support">浅绿</span> = 支持</li>
-				<li><span class="unsupport">红色</span> = 不支持</li>
-				<li><span class="partsupport">粉色</span> = 部分支持</li>
-			</ul>
-			<table class="g-data">
-				<thead>
-					<tr>
-						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
-						<th><span class="browser-ie">IE</span></th>
-						<th><span class="browser-firefox">Firefox</span></th>
-						<th><span class="browser-safari">Safari</span></th>
-						<th><span class="browser-chrome">Chrome</span></th>
-						<th><span class="browser-opera">Opera</span></th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<th>版本</th>
-						<td class="unsupport" rowspan="2">6.0-10.0</td>
-						<td class="unsupport" rowspan="2">4.0-19.0</td>
-						<td class="unsupport" rowspan="3">5.1.7</td>
-						<td class="unsupport">4.0-20.0</td>
-						<td class="unsupport" rowspan="2">9.5-12.0</td>
-					</tr>
-					<tr>
-						<th>版本</th>
-						<td class="support">21.0-28.0 <sup class="fix">-webkit-</sup></td>
-					</tr>
-					<tr>
-						<th>版本</th>
-						<td class="support">11.0</td>
-						<td class="support">20.0</td>
-						<td class="support">29.0</td>
-						<td class="support">12.1</td>
-					</tr>
-				</tbody>
-			</table>
 		</div>
 	</section>
 	<section id="example" class="g-mod g-attr">
