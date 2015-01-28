@@ -18,19 +18,15 @@ CSS参考手册目前正在v4.1.6草案中。广泛接受[Issues](https://github
 
 ###最新版本：v4.1.5
 
-更新时间：2014.08.28
+更新时间：2015.01.28
 
-* 更新了手册对浏览器版本的支持策略，较低版本的数据将不再更新。</li>
-* 修订了[选择符](http://css.doyoe.com/selectors/index.htm)模块的参考描述，并更新了浏览器支持情况；
-* 修订了[语法与规则](http://css.doyoe.com/rules/index.htm)模块的参考描述，并更新了浏览器支持情况；
-* 合并并修订了[取值与单位](http://css.doyoe.com/values/index.htm)两大模块；
-* 修订了[Table](http://css.doyoe.com/properties/table/index.htm)模块下的大部分属性的参考描述，更新了浏览器支持版本；；
-* 新增了[参考资源列表](http://css.doyoe.com/experience/refer.htm)；
-* 一些其它修改，包括：语法错误，连接错误，UI微调等；
+* 修订了 [Positioning](http://css.doyoe.com/properties/positioning/index.htm) 模块的参考描述，使用新的浏览器兼容视图，增加部分移动浏览器支持；
+* 排查了手册中的死链；
+* 修改了 [list-style](http://css.doyoe.com/properties/list/list-style.htm)的语法描述；
+* 新增了 [appearance](http://css.doyoe.com/properties/user-interface/appearance.htm)、 [pointer-events](http://css.doyoe.com/properties/user-interface/pointer-events.htm) 和 [E::placeholder](http://css.doyoe.com/selectors/pseudo-element/placeholder.htm) 参考；
 
-###历史版本
 
-###v4.1.5
+###上个版本：v4.1.5
 
 更新时间：2014.08.28
 
