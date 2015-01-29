@@ -51,7 +51,7 @@
 	<section id="syntax" class="g-mod g-attr">
 		<h2 class="tit">语法：</h2>
 		<div class="cont">
-			<p><strong>border-image-source</strong>：none | <a href="../../values/textual/url.htm">&lt;url&gt;</a></p>
+			<p><strong>border-image-source</strong>：none | <a href="../../values/image/image.htm">&lt;image&gt;</a></p>
 			<p><strong>默认值</strong>：<mark class="defaultvalue">none</mark></p>
 			<p><strong>适用于</strong>：所有元素，除table元素设置了<a href="../table/border-collapse.htm">border-collapse</a>为collapse之外</p>
 			<p><strong>继承性</strong>：无</p>
@@ -65,8 +65,8 @@
 			<dl>
 				<dt>none：</dt>
 				<dd>无背景图片。</dd>
-				<dt><a href="../../values/textual/url.htm">&lt;url&gt;</a>：</dt>
-				<dd>使用绝对或相对地址指定图像。</dd>
+				<dt><a href="../../values/image/image.htm">&lt;image&gt;</a>：</dt>
+				<dd>使用绝对或相对地址指或者创建渐变色来确定图像。</dd>
 			</dl>
 		</div>
 	</section>
@@ -91,27 +91,40 @@
 			<table class="g-data">
 				<thead>
 					<tr>
-						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
-						<th><span class="browser-ie">IE</span></th>
-						<th><span class="browser-firefox">Firefox</span></th>
-						<th><span class="browser-safari">Safari</span></th>
-						<th><span class="browser-chrome">Chrome</span></th>
-						<th><span class="browser-opera">Opera</span></th>
+						<th>Values</th>
+						<th>IE</th>
+						<th>Firefox</th>
+						<th>Chrome</th>
+						<th>Safari</th>
+						<th>Opera</th>
+						<th>iOS Safari</th>
+						<th>Android Browser</th>
+						<th>Android Chrome</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<th>版本</th>
+						<td rowspan="3"><strong>Basic Support</strong></td>
 						<td class="unsupport">6.0-10.0</td>
-						<td rowspan="2" class="support">15.0</td>
-						<td rowspan="2" class="support">5.1.7</td>
-						<td rowspan="2" class="support">15.0</td>
-						<td class="unsupport">10.5-14.0</td>
+						<td class="unsupport">2.0-3.0</td>
+						<td class="partsupport">4.0-14.0<br /><sup class="fix">-webkit-</sup></td>
+						<td class="partsupport">3.1-5.1<br /><sup class="fix">-webkit-</sup></td>
+						<td class="support" rowspan="3">15.0+</td>
+						<td class="partsupport">3.2-5.1<br /><sup class="fix">-webkit-</sup></td>
+						<td class="partsupport">2.1-4.3<br /><sup class="fix">-webkit-</sup></td>
+						<td class="support" rowspan="3">18.0+</td>
 					</tr>
 					<tr>
-						<th>版本</th>
-						<td class="support">11.0</td>
-						<td class="support">15.0</td>
+						<td class="support" rowspan="2">11.0+</td>
+						<td class="partsupport">3.5-14.0<br /><sup class="fix">-moz-</sup></td>
+						<td class="support">15.0<br /><sup class="fix">-webkit-</sup></td>
+						<td class="support" rowspan="2">6.0+</td>
+						<td class="support" rowspan="2">6.1+</td>
+						<td class="support" rowspan="2">4.4-4.4.4</td>
+					</tr>
+					<tr>
+						<td class="support">15.0+</td>
+						<td class="support">16.0+</td>
 					</tr>
 				</tbody>
 			</table>
@@ -122,22 +135,22 @@
 		<div class="cont">
 			<textarea cols="90" rows="10">
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-cmn-Hans">
 <head>
 <meta charset="utf-8" />
 <title>border-image-source_CSS参考手册_web前端开发参考手册系列</title>
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <style>
-.test{
-	padding:10px;
-	border-image-source:url(skin/border.png);
-	border-image-slice:27;
-	border-image-width:27px;
+.test {
+	padding: 10px;
+	border-image-source: url(skin/border.png);
+	border-image-slice: 27;
+	border-image-width: 27px;
 }
 </style>
 </head>
 <body>
-<div class="test">用图片来做边框<br />border-image-source:url(skin/border.png);</div>
+<div class="test">用图片来做边框</div>
 </body>
 </html>
 			</textarea>

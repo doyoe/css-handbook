@@ -5,13 +5,21 @@
 <title>border-image_CSS参考手册_web前端开发参考手册系列</title>
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <style>
-.test {
-	border:5px solid orange;
-	border-image:url(properties/border/skin/button.png) 2 9 fill/2px 9px repeat;
+.test1 {
+	margin-top: 10px;
+	padding: 5px;
+	border-width: 27px;
+	border-style: solid;
+	border-color: orange;
+	border-image-source: url(properties/border/skin/border.png);
+	border-image-repeat: space stretch;
+}
+.test1 {
+	border-image-slice: 27;
 }
 </style>
 </head>
 <body>
-<div class="test">用图片来做边框</div>
+<div class="test1">不保留裁减后的中间区域</div>
 </body>
 </html>
