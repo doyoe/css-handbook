@@ -91,35 +91,44 @@
 			<table class="g-data">
 				<thead>
 					<tr>
-						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
-						<th><span class="browser-ie">IE</span></th>
-						<th><span class="browser-firefox">Firefox</span></th>
-						<th><span class="browser-safari">Safari</span></th>
-						<th><span class="browser-chrome">Chrome</span></th>
-						<th><span class="browser-opera">Opera</span></th>
+						<th>Values</th>
+						<th>IE</th>
+						<th>Firefox</th>
+						<th>Chrome</th>
+						<th>Safari</th>
+						<th>Opera</th>
+						<th>iOS Safari</th>
+						<th>Android Browser</th>
+						<th>Android Chrome</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<th>较早版本</th>
+						<td rowspan="2"><strong>Basic Support</strong></td>
 						<td class="unsupport">6.0-8.0</td>
-						<td class="support">3.5 <sup class="fix">-moz-</sup></td>
-						<td class="support">3.0-5.1 <sup class="fix">-webkit-</sup></td>
-						<td class="support">1.0-4.0 <sup class="fix">-webkit-</sup></td>
-						<td class="unsupport">1.0-10.4</td>
+						<td class="partsupport">2.0-12.0<br /><sup class="fix">-moz-</sup> <sup><a href="#support1">#1</a> <a href="#support2">#2</a></sup></td>
+						<td class="support">4.0-43.0<br /><sup class="fix">-webkit-</sup></td>
+						<td class="support">3.1-8.1<br /><sup class="fix">-webkit-</sup></td>
+						<td class="support">10.5-28.0<br /><sup class="fix">-webkit-</sup></td>
+						<td class="support">3.2-8.1<br /><sup class="fix">-webkit-</sup></td>
+						<td class="support">2.1-8.1<br /><sup class="fix">-webkit-</sup></td>
+						<td class="support">4.0-40.0<br /><sup class="fix">-webkit-</sup></td>
 					</tr>
 					<tr>
-						<th>较新版本</th>
-						<td class="support">9.0</td>
-						<td class="support">4.0</td>
-						<td class="support">5.1.7</td>
-						<td class="support">5.0</td>
-						<td class="support">10.5</td>
+						<td class="support">9.0+</td>
+						<td class="support">4.0+</td>
+						<td class="support">5.0+</td>
+						<td class="support">5.0+</td>
+						<td class="support">10.5+</td>
+						<td class="support">4.0+</td>
+						<td class="support">2.2+</td>
+						<td class="support">5.0+</td>
 					</tr>
 				</tbody>
 			</table>
 			<ol class="support-info">
-				<li>需要注意的是从Firefox13开始移除了对-moz-border-top-left-radius的支持，仅支持border-top-left-radius，在4.0-12.0区间，两种方式都支持。</li>
+				<li id="support1">Firefox从13.0开始移除对<code class="incode">-moz-</code>的支持，仅支持标准的<code class="incode">border-radius</code>写法，在4.0-12.0区间，两种方式都支持。</li>
+				<li id="support2">Firefox支持的厂商前缀写法是非标准的<code class="incode">-moz-border-radius-topleft</code>，而不是<code class="incode">-moz-border-top-left-radius</code>。</li>
 			</ol>
 		</div>
 	</section>
