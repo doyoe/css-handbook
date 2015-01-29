@@ -1,22 +1,17 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-cmn-Hans">
 <head>
 <meta charset="utf-8" />
-<title>属性选择符 E[att|="val"]_CSS参考手册_web前端开发参考手册系列</title>
+<title>border-image_CSS参考手册_web前端开发参考手册系列</title>
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <style>
-li[class|="test3"]{color:#f00;}
+.test {
+	border:5px solid orange;
+	border-image:url(properties/border/skin/button.png) 2 9 fill/2px 9px repeat;
+}
 </style>
 </head>
 <body>
-<ul>
-	<li class="test1-abc">列表项目</li>
-	<li class="test2-abc">列表项目</li>
-	<li class="test3 asd">列表项目</li>
-	<li class="test4-abc">列表项目</li>
-	<li class="test5-abc">列表项目</li>
-	<li class="test6-abc">列表项目</li>
-</ul>
+<div class="test">用图片来做边框</div>
 </body>
 </html>
-			
