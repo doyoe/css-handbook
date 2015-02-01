@@ -601,13 +601,15 @@ if (!Global.isLocal && Global.name) {
 				},
 				'color' : {
 					'index' : ['颜色(Color)','其它颜色值参考'],
+					'color' : ['&lt;color&gt;'],
 					'color-name' : ['Color Name'],
 					'hex' : ['HEX'],
 					'rgb' : ['RGB'],
 					'rgba' : ['RGBA'],
 					'hsl' : ['HSL'],
 					'hsla' : ['HSLA'],
-					'transparent' : []
+					'transparent' : [],
+					'currentColor' : []
 				},
 				'textual' : {
 					'index' : ['文本(Textual)','其它文本值参考'],
@@ -626,6 +628,10 @@ if (!Global.isLocal && Global.name) {
 				},
 				'image' : {
 					'index' : ['图像(Image)','其它图像值参考'],
+					'image' : [],
+					'image()' : [],
+					'image-set()' : [],
+					'gradient' : [],
 					'linear-gradient()' : [],
 					'radial-gradient()' : [],
 					'repeating-linear-gradient()' : [],

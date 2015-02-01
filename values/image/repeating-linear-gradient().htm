@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-cmn-Hans">
 <head>
 <meta charset="utf-8" />
 <title>repeating-linear-gradient()</title>
@@ -50,34 +50,32 @@
 	<section class="g-mod g-attr" id="syntax">
 		<h2 class="tit">语法：</h2>
 		<div class="cont">
-			<p><strong>&lt;repeating-linear-gradient&gt;</strong>：repeating-linear-gradient([ <a href="#dfn-syntax">&lt;point&gt;</a>,]? <a href="#dfn-syntax2">&lt;color-stop&gt;</a>[, <a href="#dfn-syntax2">&lt;color-stop&gt;</a>]+);</p>
-			<p id="dfn-syntax"><strong>&lt;point&gt;</strong>：[ left | right ]? [ top | bottom ]? || <a href="../angle/index.htm">&lt;angle&gt;</a>?</p>
-			<p id="dfn-syntax2"><strong>&lt;color-stop&gt;</strong>：<a href="../../properties/color/color.htm">&lt;color&gt;</a> [ <a href="../length/index.htm">&lt;length&gt;</a> | <a href="../numeric/percentage.htm">&lt;percentage&gt;</a> ]?</p>
+			<p><strong>&lt;repeating-linear-gradient&gt;</strong> = linear-gradient([ [ <a href="../angle/angle.htm">&lt;angle&gt;</a> | to <a href="#side-or-corner">&lt;side-or-corner&gt;</a> ] ,]? <a href="#color-stop">&lt;color-stop&gt;</a>[, <a href="#color-stop">&lt;color-stop&gt;</a>]+)</p>
+			<p id="side-or-corner"><strong>&lt;side-or-corner&gt;</strong> = [left | right] || [top | bottom]</p>
+			<p id="color-stop"><strong>&lt;color-stop&gt;</strong> = <a href="../color/color.htm">&lt;color&gt;</a> [ <a href="../length/length.htm">&lt;length&gt;</a> | <a href="../numeric/percentage.htm">&lt;percentage&gt;</a> ]?</p>
 		</div>
 	</section>
 	<section class="g-mod g-attr" id="value">
 		<h2 class="tit">取值：</h2>
 		<div class="cont">
-			<h3 class="g-color-light">&lt;point&gt;</h3>
+			<h3 class="g-color-light">下述值用来表示渐变的方向，可以使用角度或者关键字来设置：</h3>
 			<dl>
-				<dt>left：</dt>
-				<dd>设置左边为渐变起点的横坐标值。</dd>
-				<dt>right：</dt>
-				<dd>设置右边为渐变起点的横坐标值。</dd>
-				<dt>top：</dt>
-				<dd>设置顶部为渐变起点的纵坐标值。</dd>
-				<dt>bottom：</dt>
-				<dd>设置底部为渐变起点的纵坐标值。</dd>
 				<dt><a href="../angle/index.htm">&lt;angle&gt;</a>：</dt>
 				<dd>用角度值指定渐变的方向（或角度）。</dd>
-				<dt>&lt;color-stop&gt;：</dt>
-				<dd>指定渐变的起止颜色。</dd>
+				<dt>to left：</dt>
+				<dd>设置渐变为从右到左。相当于: 270deg</dd>
+				<dt>to right：</dt>
+				<dd>设置渐变从左到右。相当于: 90deg</dd>
+				<dt>to top：</dt>
+				<dd>设置渐变从下到上。相当于: 0deg</dd>
+				<dt>to bottom：</dt>
+				<dd>设置渐变从上到下。相当于: 180deg。<span class="g-color-light">这是默认值，等同于留空不写。</span></dd>
 			</dl>
-			<h3 class="g-color-light">&lt;color-stop&gt;</h3>
+			<h3 class="g-color-light">&lt;color-stop&gt; 用于指定渐变的起止颜色：</h3>
 			<dl>
-				<dt><a href="../../properties/color/color.htm">&lt;color&gt;</a>：</dt>
-				<dd>指定颜色。请参阅<a href="../color/index.htm">颜色值</a></dd>
-				<dt><a href="../length/index.htm">&lt;length&gt;</a>：</dt>
+				<dt><a href="../color/color.htm">&lt;color&gt;</a>：</dt>
+				<dd>指定颜色。</dd>
+				<dt><a href="../length/length.htm">&lt;length&gt;</a>：</dt>
 				<dd>用长度值指定起止色位置。不允许负值</dd>
 				<dt><a href="../numeric/percentage.htm">&lt;percentage&gt;</a>：</dt>
 				<dd>用百分比指定起止色位置。</dd>
@@ -90,20 +88,35 @@
 			<strong>用重复的线性渐变创建图像。</strong>
 			<ul>
 				<li>repeating-linear-gradient()的语法与<a href="linear-gradient().htm">linear-gradient()</a>相同。</li>
-				<li>写本文档时Firefox,Chrome,Opera已经在实验性质阶段支持了该属性，Safari对该属性的支持仍停留在以私有方式实现的阶段。</li>
-				<li>Firefox还支持使用<a href="../numeric/percentage.htm">&lt;percentage&gt;</a>、<a href="../length/index.htm">&lt;length&gt;</a>和center特殊值定义渐变起点，并支持起点与角度一起使用。</li>
 				<li>
 					<div class="gquote">
 						<p class="gquote-tit"><strong>示例代码：</strong></p>
 						<div class="gquote-cont">
 							<p class="img"><image src="images/repeating-linear-gradient.png" /><br />（图一）</p>
-							<blockquote class="code"><pre><code>repeating-linear-gradient(#f00,#ff0 10%,#f00 15%);
-repeating-linear-gradient(top,#f00,#ff0 10%,#f00 15%);
-repeating-linear-gradient(-90deg,#f00,#ff0 10%,#f00 15%);
-repeating-linear-gradient(270deg,#f00,#ff0 10%,#f00 15%);
-</code></pre></blockquote>
+							<blockquote class="code"><code><xmp>repeating-linear-gradient(#f00, #ff0 10%, #f00 15%);
+repeating-linear-gradient(to bottom, #f00, #ff0 10%, #f00 15%);
+repeating-linear-gradient(180deg, #f00, #ff0 10%, #f00 15%);
+repeating-linear-gradient(to top, #f00, #ff0 10%, #f00 15%);</xmp></code></blockquote>
 						</div>
 						<p class="gquote-info">以上几句代码都可以实现如（图一）的渐变效果</p>
+					</div>
+				</li>
+				<li>
+					<p>其实可以使用 <a href="linear-gradient().htm">linear-gradient()</a> 做出 <code class="incode">repeating-linear-gradient()</code> 的效果</p>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>暴力实现上述（图一）的效果：</strong></p>
+						<div class="gquote-cont">
+							<blockquote class="code"><code><xmp>repeating-linear-linear-gradient(#f00, #ff0 10%, #f00 15%, #ff0 25%, #f00 30%, #ff0 40%, #f00 45%, #ff0 55%, #f00 60%, #ff0 70%, #f00 75%, #ff0 85%, #f00 90%, #ff0);</xmp></code></blockquote>
+						</div>
+						<p class="gquote-info">以上几句代码都可以实现如（图一）的渐变效果</p>
+					</div>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>利用 <a href="../../properties/background/background-size.htm">background-size</a> 实现上述（图一）的效果：</strong></p>
+						<div class="gquote-cont">
+							<blockquote class="code"><code><xmp>background: linear-gradient(#f00, #ff0 67%, #f00);
+background-size: 100% 15%;</xmp></code></blockquote>
+						</div>
+						<p class="gquote-info">使用 <a href="../../properties/background/background-size.htm">background-size</a> 约束渐变图像的大小，然后通过 <a href="../../properties/background/background-repeat.htm">background-repeat</a> 来纵向平铺</p>
 					</div>
 				</li>
 			</ul>
@@ -120,32 +133,53 @@ repeating-linear-gradient(270deg,#f00,#ff0 10%,#f00 15%);
 			<table class="g-data">
 				<thead>
 					<tr>
-						<th><span class="browser-ie">IE</span></th>
-						<th><span class="browser-firefox">Firefox</span></th>
-						<th><span class="browser-safari">Safari</span></th>
-						<th><span class="browser-chrome">Chrome</span></th>
-						<th><span class="browser-opera">Opera</span></th>
+						<th>Values</th>
+						<th>IE</th>
+						<th>Firefox</th>
+						<th>Chrome</th>
+						<th>Safari</th>
+						<th>Opera</th>
+						<th>iOS Safari</th>
+						<th>Android Browser</th>
+						<th>Android Chrome</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td class="unsupport">6-9 <sup><a href="#support1">#1</a></sup></td>
-						<td class="partsupport">4.0-15.0 <sup class="fix">-moz-</sup></td>
-						<td class="partsupport">4.0-6.0 <sup class="fix">-webkit-</sup></td>
-						<td class="partsupport">4.0-25.0 <sup class="fix">-webkit-</sup> <sup><a href="#support2">#2</a></sup></td>
-						<td rowspan="2" class="support">15.0</td>
+						<td rowspan="4"><strong>Basic Support</strong></td>
+						<td class="unsupport">6.0-9.0 <sup><a href="#support2">#2</a></sup></td>
+						<td class="unsupport">2.0-3.5</td>
+						<td class="partsupport">4.0-9.0<br /><sup class="fix">-webkit-</sup> <sup><a href="#support1">#1</a></sup></td>
+						<td class="unsupport">3.1-3.2</td>
+						<td class="support" rowspan="4">15.0+</td>
+						<td class="partsupport">3.2-4.3<br /><sup class="fix">-webkit-</sup> <sup><a href="#support1">#1</a></sup></td>
+						<td class="partsupport">2.1-3.0<br /><sup class="fix">-webkit-</sup> <sup><a href="#support1">#1</a></sup></td>
+						<td class="support">10.0-25.0<br /><sup class="fix">-webkit-</sup> <sup><a href="#support1">#1</a></sup></td>
 					</tr>
 					<tr>
-						<td class="support">10.0</td>
-						<td class="support">16.0</td>
-						<td class="support">6.1</td>
-						<td class="support">26.0</td>
+						<td class="support" rowspan="3">10.0+</td>
+						<td class="support">3.6-15.0<br /><sup class="fix">-moz-</sup></td>
+						<td class="support">10.0-25.0<br /><sup class="fix">-webkit-</sup></td>
+						<td class="partsupport">4.0-5.0<br /><sup class="fix">-webkit-</sup> <sup><a href="#support1">#1</a></sup></td>
+						<td class="support">5.0-6.1</td>
+						<td class="support">4.0-4.3<br /><sup class="fix">-webkit-</sup></td>
+						<td class="support" rowspan="3">26.0+</td>
+					</tr>
+					<tr>
+						<td class="support" rowspan="2">16.0+</td>
+						<td class="support" rowspan="2">26.0+</td>
+						<td class="support">5.1-6.0<br /><sup class="fix">-webkit-</sup></td>
+						<td class="support" rowspan="2">7.0+</td>
+						<td class="support" rowspan="2">4.4+</td>
+					</tr>
+					<tr>
+						<td class="support">6.1+</td>
 					</tr>
 				</tbody>
 			</table>
 			<ol class="support-info">
-				<li id="support1">IE5.5-9.0使用私有滤镜来实现该效果: <a href="http://msdn.microsoft.com/en-us/library/ms532997(VS.85,loband).aspx" rel="external" class="external" target="_blank">progid:DXImageTransform.Microsoft.Gradient()</a></li>
-				<li id="support2">chrome4.0-9.0使用更老的语法：-webkit-gradient(linear,…)</li>
+				<li id="support1">使用过时的语法：-webkit-gradient(linear,…)</li>
+				<li id="support2">IE6.0-9.0使用私有滤镜来实现该效果: <a href="http://msdn.microsoft.com/en-us/library/ms532997(VS.85,loband).aspx" rel="external" class="external" target="_blank">progid:DXImageTransform.Microsoft.Gradient()</a></li>
 			</ol>
 		</div>
 	</section>
@@ -154,17 +188,30 @@ repeating-linear-gradient(270deg,#f00,#ff0 10%,#f00 15%);
 		<div class="cont">
 			<textarea cols="90" rows="10">
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-cmn-Hans">
 <head>
 <meta charset="utf-8" />
 <title>repeating-linear-gradient()_CSS参考手册_web前端开发参考手册系列</title>
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <style>
-div{width:200px;height:100px;margin-top:10px;border:1px solid #ddd;}
-.test{background:-moz-repeating-linear-gradient(#f00,#ff0 10%,#f00 15%);background:-webkit-repeating-linear-gradient(#f00,#ff0 10%,#f00 15%);background:-o-repeating-linear-gradient(#f00,#ff0 10%,#f00 15%);background:-ms-repeating-linear-gradient(#f00,#ff0 10%,#f00 15%);background:repeating-linear-gradient(#f00,#ff0 10%,#f00 15%);}
-.test2{background:-moz-repeating-linear-gradient(left top,#f00,#ff0 10%,#f00 15%);background:-webkit-repeating-linear-gradient(left top,#f00,#ff0 10%,#f00 15%);background:-o-repeating-linear-gradient(left top,#f00,#ff0 10%,#f00 15%);background:-ms-repeating-linear-gradient(left top,#f00,#ff0 10%,#f00 15%);background:repeating-linear-gradient(left top,#f00,#ff0 10%,#f00 15%);}
-.test3{background:-moz-repeating-linear-gradient(0deg,#f00,#ff0 10%,#f00 15%);background:-webkit-repeating-linear-gradient(0deg,#f00,#ff0 10%,#f00 15%);background:-o-repeating-linear-gradient(0deg,#f00,#ff0 10%,#f00 15%);background:-ms-repeating-linear-gradient(0deg,#f00,#ff0 10%,#f00 15%);background:repeating-linear-gradient(0deg,#f00,#ff0 10%,#f00 15%);}
-.test4{background:-moz-repeating-linear-gradient(45deg,#f00,#ff0 10%,#f00 15%);background:-webkit-repeating-linear-gradient(45deg,#f00,#ff0 10%,#f00 15%);background:-o-repeating-linear-gradient(45deg,#f00,#ff0 10%,#f00 15%);background:-ms-repeating-linear-gradient(45deg,#f00,#ff0 10%,#f00 15%);background:repeating-linear-gradient(45deg,#f00,#ff0 10%,#f00 15%);}
+div {
+	width: 200px;
+	height: 100px;
+	margin-top: 10px;
+	border: 1px solid #ddd;
+}
+.test {
+	background: repeating-linear-gradient(#f00, #ff0 10%, #f00 15%);
+}
+.test2 {
+	background: repeating-linear-gradient(to right, #f00, #ff0 10%, #f00 15%);
+}
+.test3 {
+	background: repeating-linear-gradient(45deg, #f00, #ff0 10%, #f00 15%);
+}
+.test4 {
+	background: repeating-linear-gradient(to bottom left, #f00, #ff0 10%, #f00 15%);
+}
 </style>
 </head>
 <body>

@@ -47,30 +47,37 @@
 	</section>
 </header>
 <section id="bd">
-	<section id="syntax" class="g-mod g-attr">
+	<section class="g-mod g-attr" id="syntax">
+		<h2 class="tit">语法：</h2>
+		<div class="cont">
+			<p>URL 是对一个资源的指针，它使用函数符号 &lt;url&gt; 来表示，语法如下：</p>
+			<p><strong>&lt;url&gt;</strong> = url( <a href="string.htm">&lt;string&gt;</a> &lt;url-modifier&gt;* )</p>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
 		<h2 class="tit">说明：</h2>
 		<div class="cont">
 			<strong>在网页上提供一个资源地址。（图像，声频，视频或浏览器支持的其他任何资源）</strong>
 			<ul>
 				<li>
-					&lt;url&gt;中的资源地址可以由单引号或双引号包起来，也可以不用任何引号。
+					<p>由于历史原因，
+						&lt;url&gt; 可以不加引号，所以对于 &lt;url&gt; 的处理，有引号和无引号都是正确的，示例代码如下：</p>
 					<div class="gquote">
 						<p class="gquote-tit"><strong>示例代码：</strong></p>
-						<blockquote class="gquote-cont"><pre><code>div{background:url("1.gif");}
-div{background:url(1.gif);}
+						<blockquote class="gquote-cont"><pre><code>div { background-image: url("1.gif"); }
+div { background-image: url(1.gif); }
 </code></pre></blockquote>
 						<p class="gquote-info">以上2个定义是等价的。</p>
 					</div>
 				</li>
 				<li>
-					使用在<a href="../../rules/@import.htm">@import</a>上时，甚至url()都可以省略，而直接是一个资源地址。
+					使用在<a href="../../rules/@import.htm">@import</a>上时，可以使用 <a href="string.htm">&lt;string&gt;</a> 来表示一个 &lt;url&gt;，也就是说可以省略 url() 符号，直接是一个资源地址，示例代码如下：
 					<div class="gquote">
 						<p class="gquote-tit"><strong>示例代码：</strong></p>
-						<blockquote class="gquote-cont"><pre><code>@import url("global.css");
-@import url(global.css);
-@import "global.css";
+						<blockquote class="gquote-cont"><pre><code>@import url(global.css);
+@import "global.css";  // 使用 &lt;string&gt; 表示 &lt;url&gt;
 </code></pre></blockquote>
-						<p class="gquote-info">以上3种方式都有效。</p>
+						<p class="gquote-info">以上2种方式都有效。</p>
 					</div>
 				</li>
 			</ul>
@@ -87,20 +94,28 @@ div{background:url(1.gif);}
 			<table class="g-data">
 				<thead>
 					<tr>
-						<th><span class="browser-ie">IE</span></th>
-						<th><span class="browser-firefox">Firefox</span></th>
-						<th><span class="browser-safari">Safari</span></th>
-						<th><span class="browser-chrome">Chrome</span></th>
-						<th><span class="browser-opera">Opera</span></th>
+						<th>Values</th>
+						<th>IE</th>
+						<th>Firefox</th>
+						<th>Chrome</th>
+						<th>Safari</th>
+						<th>Opera</th>
+						<th>iOS Safari</th>
+						<th>Android Browser</th>
+						<th>Android Chrome</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td class="support">6.0</td>
-						<td class="support">4.0</td>
-						<td class="support">4.0</td>
-						<td class="support">4.0</td>
-						<td class="support">15.0</td>
+						<td><strong>Basic Support</strong></td>
+						<td class="support">6.0+</td>
+						<td class="support">2.0+</td>
+						<td class="support">4.0+</td>
+						<td class="support">3.1+</td>
+						<td class="support">3.5+</td>
+						<td class="support">3.2+</td>
+						<td class="support">2.1+</td>
+						<td class="support">18.0+</td>
 					</tr>
 				</tbody>
 			</table>

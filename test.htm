@@ -2,24 +2,29 @@
 <html lang="zh-cmn-Hans">
 <head>
 <meta charset="utf-8" />
-<title>border-image_CSS参考手册_web前端开发参考手册系列</title>
+<title>repeating-radial-gradient()_CSS参考手册_web前端开发参考手册系列</title>
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <style>
-.test1 {
+div {
+	width: 200px;
+	height: 100px;
 	margin-top: 10px;
-	padding: 5px;
-	border-width: 27px;
-	border-style: solid;
-	border-color: orange;
-	border-image-source: url(properties/border/skin/border.png);
-	border-image-repeat: space stretch;
+	border: 1px solid #ddd;
 }
-.test1 {
-	border-image-slice: 27;
+.test {
+	background: repeating-radial-gradient(circle, #f00 0, #ff0 10%, #f00 15%);
+}
+.test2 {
+	background: repeating-radial-gradient(at top left, #f00, #ff0 10%, #080 15%, #ff0 20%, #f00 25%);
+}
+.test3 {
+	background: repeating-radial-gradient(circle closest-corner at 20px 50px, #f00, #ff0 10%, #080 20%, #ff0 30%, #f00 40%);
 }
 </style>
 </head>
 <body>
-<div class="test1">不保留裁减后的中间区域</div>
+<div class="test"></div>
+<div class="test2"></div>
+<div class="test3"></div>
 </body>
 </html>

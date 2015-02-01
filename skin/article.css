@@ -34,6 +34,11 @@ ol.gitem{list-style-type:decimal;}
 .gquote-info{padding:3px 10px;border-top:1px solid #C3E1FF;background:#F3F9FF;color:#c30;}
 .gquote-info a{color:#008000;}
 .gquote-info a:hover{color:#c30;}
+.gquote-warning,
+.gquote-warning .gquote-cont,
+.gquote-warning .gquote-info{border-color:#fa5a5a;}
+.gquote-warning .gquote-tit{background:#fcaaaa;}
+.gquote-warning .gquote-info{background:#fee2e2;}
 /* comm: g-list */
 .g-list li{float:left;width:186px;}
 /* comm: g-data */
@@ -62,7 +67,7 @@ ol.gitem{list-style-type:decimal;}
 .g-attr .support-type{zoom:1;overflow:hidden;}
 .g-attr .support-type li{float:left;padding:0 10px 10px 10px;}
 .g-attr .support-type li span{display:inline-block;overflow:hidden;width:25px;height:14px;font-size:0;line-height:0;color:rgba(0,0,0,0);vertical-align:middle;}
-.g-attr .support-info{list-style-type:decimal;padding:10px 0 0 2em;}
+.g-attr .support-info{list-style-type:decimal;padding:10px 2em 0 2em;}
 .g-attr .support-info li:target{background-color:#fff2bf;text-shadow:1px 1px 1px rgba(255,255,255,.5);}
 .g-attr .support{background:#90FF90;}
 .g-attr .unsupport{background:#FF9090;}
@@ -119,6 +124,8 @@ ol.gitem{list-style-type:decimal;}
 #value dl{zoom:1;overflow:hidden;}
 #value dt{clear:left;float:left;font-weight:bold;}
 #value dt.css3-value{color:#f60;}
+/* module: intro */
+#intro ul{list-style-type:disc;padding:0 2em;}
 /* module: example */
 #example textarea{overflow:auto;margin-bottom:10px;border:1px solid #ddd;width:95vw;height:60vh;max-width:100%;}
 /* module: about-vita */
