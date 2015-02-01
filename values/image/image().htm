@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="utf-8" />
+<title>image()</title>
+<meta name="description" content="CSS3参考手册之: image()" />
+<meta name="keywords" content="image(), css3取值, css3, css3参考手册" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../../skin/article.css" />
+</head>
+<body>
+<nav id="guide" class="g-mod">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="../index.htm">取值与单位列表</a>
+		<span>&#187;</span>
+		<a href="index.htm" id="category" rel="values/image" name="image()">图像值</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它图像值参考</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入分类快速导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">image()</h1>
+		<ul class="info">
+			<li><strong>版本：CSS3</strong></li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section class="g-mod g-attr" id="syntax">
+		<h2 class="tit">语法：</h2>
+		<div class="cont">
+			<p><strong>image()</strong> = image( [ [ <a href="image.htm">&lt;image&gt;</a> | <a href="../textual/string.htm">&lt;string&gt;</a> ]? , <a href="../color/color.htm">&lt;color&gt;</a>? ]! )</p>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
+		<h2 class="tit">说明：</h2>
+		<div class="cont">
+			<strong>image() 用于指定图像或者图像替代。</strong>允许作者这样做：
+			<ul>
+				<li>
+					<p>使用媒体片段（<a href="http://www.w3.org/TR/media-frags/" target="_blank" rel="external" class="external">media fragments</a>）裁减图像的部分区域;</p>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>我们知道假设是使用背景图的话，可以通过 <a href="../../properties/background/background-position.htm">background-position</a> 来决定从背景图的哪个位置开始显示</strong></p>
+						<blockquote class="gquote-cont"><code><xmp>div {
+	background-image: url(test.png);
+	background-position: 10px 10px;
+}</xmp></code></blockquote>
+						<p class="gquote-info">上述代码会以图像 test.png 的 (10,10) 位置作为圆点以进行显示，但如果你只想显示图像一部分，就变得有点困难。</p>
+					</div>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>所以之后可以这么做：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp>div {
+	background-image: image(test.png#xywh=10,10,20,20);
+}</xmp></code></blockquote>
+						<p class="gquote-info">上述代码会以图像 test.png 的 (10,10) 位置作为圆点，截取一个 20x20 的矩形以进行显示。</p>
+					</div>
+				</li>
+				<li>
+					<p>使用纯色作为图像；</p>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>示例：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp>div {
+	background-image: image(black), url(test.png);
+}</xmp></code></blockquote>
+						<p class="gquote-info">可以使用 image() 来指定使用纯色作为图像，但此时 <a href="../../properties/background/background-color.htm">background-color</a> 将不再生效，因为背景色总是在所有的背景图之下。</p>
+					</div>
+				</li>
+				<li>
+					<p>当指定的图像不能下载或者正确解码时，回退使用纯色图像；</p>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>之前的语法中，有一个不太恰当的场景与之类似，如下代码：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp>body { background: white; color: black; }
+div { background: url(black.png) black; color: white; }</xmp></code></blockquote>
+						<p class="gquote-info">上述代码能保证当 black.png 加载失败，文本也仍然是可读的，因为被纯黑色的背景替代了图像，所以白色的文本仍然可见。唯一的问题是，如果图像不是矩形的，或者图像是半透明的，那么这时图像下面的黑色背景会被看到。</p>
+					</div>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>所以 image() 能更好的解决这个问题，如下代码：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp>body { background: white; color: black; }
+div { background: image(black.png, black); color: white; }</xmp></code></blockquote>
+						<p class="gquote-info">本例的代码能保证当图像无法加载时，使用黑色背景替代，并且如果当图像正确加载时，黑色背景将不渲染，很好的解决了之前例子中存在的问题。</p>
+					</div>
+				</li>
+				<li>在图像元数据中自动遵循图像的定位；</li>
+			</ul>
+		</div>
+	</section>
+	<section id="compatible" class="g-mod g-attr">
+		<h2 class="tit">兼容性：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">粉色</span> = 部分支持</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th>Values</th>
+						<th>IE</th>
+						<th>Firefox</th>
+						<th>Chrome</th>
+						<th>Safari</th>
+						<th>Opera</th>
+						<th>iOS Safari</th>
+						<th>Android Browser</th>
+						<th>Android Chrome</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><strong>Basic Support</strong></td>
+						<td class="unsupport">6.0-11.0</td>
+						<td class="unsupport">2.0-38.0</td>
+						<td class="unsupport">4.0-43.0</td>
+						<td class="unsupport">3.1-8.1</td>
+						<td class="unsupport">5.0-28.0</td>
+						<td class="unsupport">3.2-8.1</td>
+						<td class="unsupport">2.1-4.4.4</td>
+						<td class="unsupport">18.0-40.0</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/inner.js"></script>
+</body>
+</html>
