@@ -75,8 +75,8 @@
 			<ul>
 				<li>transparent是全透明黑色(black)的速记法，即一个类似rgba(0,0,0,0)这样的值。</li>
 				<li>在CSS1中，transparent被用来作为<a href="../../properties/background/background-color.htm">background-color</a>的一个参数值，用于表示背景透明。</li>
-				<li>在CSS2中，<a href="../../properties/border/border-color.htm">border-color</a>也开始接受transparent作为参数值，《Open eBook(tm) Publication Structure 1.0.1》[OEB101]延伸到<a href="../../properties/color/color.htm">color</a>也接受transparent作为参数值。IE6不支持<a href="../../properties/border/border.htm">border</a>的颜色为transparent，边框色会显示为黑色。</li>
-				<li>在CSS3中，transparent被延伸到任何一个有<a href="../../properties/color/color.htm">color</a>值的属性上。IE8及以下，<a href="../../properties/color/color.htm">color</a>属性值为transparent时，文本显示为黑色。</li>
+				<li>在CSS2中，<a href="../../properties/border/border-color.htm">border-color</a>也开始接受transparent作为参数值，《Open eBook(tm) Publication Structure 1.0.1》[OEB101]延伸到<a href="../../properties/color/color.htm">color</a>也接受transparent作为参数值。</li>
+				<li>在CSS3中，transparent被延伸到任何一个有<a href="../../properties/color/color.htm">color</a>值的属性上。</li>
 			</ul>
 		</div>
 	</section>
@@ -91,7 +91,6 @@
 			<table class="g-data">
 				<thead>
 					<tr>
-						<th>Values</th>
 						<th>IE</th>
 						<th>Firefox</th>
 						<th>Chrome</th>
@@ -104,27 +103,26 @@
 				</thead>
 				<tbody>
 					<tr>
-						<td rowspan="2"><a href="../../values/color/transparent.htm">transparent</a></td>
-						<td class="unsupport">6.0 <sup><a href="#support1">#1</a></sup></td>
-						<td class="support" rowspan="2">2.0+</td>
-						<td class="support" rowspan="2">4.0+</td>
-						<td class="support" rowspan="2">3.1+</td>
-						<td class="support" rowspan="2">3.5+</td>
-						<td class="support" rowspan="2">3.2+</td>
-						<td class="support" rowspan="2">2.1+</td>
-						<td class="support" rowspan="2">18.0+</td>
+						<td class="partsupport">6.0 <sup><a href="#support1">#1</a> <a href="#support2">#2</a></sup></td>
+						<td class="support" rowspan="3">2.0+</td>
+						<td class="support" rowspan="3">4.0+</td>
+						<td class="support" rowspan="3">3.1+</td>
+						<td class="support" rowspan="3">3.5+</td>
+						<td class="support" rowspan="3">3.2+</td>
+						<td class="support" rowspan="3">2.1+</td>
+						<td class="support" rowspan="3">18.0+</td>
 					</tr>
 					<tr>
-						<td class="support">7.0+</td>
+						<td class="partsupport">7.0-8.0 <sup><a href="#support2">#2</a></sup></td>
+					</tr>
+					<tr>
+						<td class="support">9.0+</td>
 					</tr>
 				</tbody>
 			</table>
 			<ol class="support-info">
-				<li id="support1">需要注意的是，浏览器如果设置了不支持的颜色取值，则效果等同于该值被缺省，其边框色取决于当前元素的文本色。</li>
-			</ol>
-			<ol class="support-info">
-				<li id="support1">IE6及更早浏览器只有background-color接受transparent取值。</li>
-				<li id="support2">IE7及IE8除了background-color，还有border-color也开始接受transparent取值。</li>
+				<li><a href="../../properties/border/border-color.htm">border-color</a> 不接受该值，如果使用了该值，则使用 <a href="currentColor.htm">currentColor</a>；</li>
+				<li id="support1"><a href="../../properties/color/color.htm">color</a> 不接受该值，如果使用了该值，则使用 <a href="currentColor.htm">currentColor</a>；</li>
 			</ol>
 		</div>
 	</section>
@@ -139,7 +137,11 @@
 <title>transparent_CSS参考手册_web前端开发参考手册系列</title>
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <style>
-.test{color:transparent;border:1px solid transparent;background:transparent;}
+.test {
+	color: transparent;
+	border: 1px solid transparent;
+	background: transparent;
+}
 </style>
 </head>
 <body>
