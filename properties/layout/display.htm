@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-cmn-Hans">
 <head>
 <meta charset="utf-8" />
 <title>display</title>
@@ -140,9 +140,13 @@
 				<li>如果<a href="../positioning/position.htm">position</a>既不是static也不是relative或者<a href="float.htm">float</a>不是none或者元素是根元素，当display:inline-table时，display的计算值为table；当display:inline | inline-block | run-in | table-* 系时，display的计算值为block，其它情况为指定值；</li>
 				<li>
 					<p class="g-color-light">IE6,7支持inline元素转换成inline-block，但不支持block元素转换成inline-block，所以非inline元素在IE6,7下要转换成inline-block，需先转换成inline，然后触发hasLayout，以此来获得和inline-block类似的效果；你可以这样：</p>
-				<div class="gquote">
+					<div class="gquote">
 						<p class="gquote-tit"><strong>全兼容的inline-block：</strong></p>
-						<blockquote class="gquote-cont"><code><xmp>div{display:inline-block;*display:inline;*zoom:1;}</xmp></code></blockquote>
+						<blockquote class="gquote-cont"><code><xmp>div {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+}</xmp></code></blockquote>
 					</div>
 				</li>
 				<li>对应的脚本特性为<strong>display</strong>。</li>
@@ -272,7 +276,7 @@
 		<div class="cont">
 			<textarea cols="90" rows="10">
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-cmn-Hans">
 <head>
 <meta charset="utf-8" />
 <title>display_CSS参考手册_web前端开发参考手册系列</title>
