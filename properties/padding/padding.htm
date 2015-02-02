@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-cmn-Hans">
 <head>
 <meta charset="utf-8" />
 <title>padding</title>
@@ -51,7 +51,7 @@
 	<section id="syntax" class="g-mod g-attr">
 		<h2 class="tit">语法：</h2>
 		<div class="cont">
-			<p><strong>padding</strong>：[ <a href="../../values/length/index.htm">&lt;length&gt;</a> | <a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a> ]{1,4}</p>
+			<p><strong>padding</strong>：[ <a href="../../values/length/length.htm">&lt;length&gt;</a> | <a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a> ]{1,4}</p>
 			<p><strong>默认值</strong>：<mark class="defaultvalue">看每个独立属性</mark></p>
 			<p><strong>适用于</strong>：所有元素，除 table-row-group | table-header-group | table-footer-group | table-column-group | table-row 外</p>
 			<p><strong>继承性</strong>：无</p>
@@ -64,7 +64,7 @@
 		<h2 class="tit">取值：</h2>
 		<div class="cont">
 			<dl>
-				<dt><a href="../../values/length/index.htm">&lt;length&gt;</a>：</dt>
+				<dt><a href="../../values/length/length.htm">&lt;length&gt;</a>：</dt>
 				<dd>用长度值来定义内补白。不允许负值</dd>
 				<dt><a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a>：</dt>
 				<dd>用百分比来定义内补白。水平（默认）书写模式下，参照其包含块 <a href="../dimension/width.htm">width</a> 进行计算，其它情况参照 <a href="../dimension/height.htm">height</a> 。不允许负值</dd>
@@ -128,13 +128,17 @@
 		<div class="cont">
 			<textarea cols="90" rows="10">
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-cmn-Hans">
 <head>
 <meta charset="utf-8" />
 <title>padding_CSS参考手册_web前端开发参考手册系列</title>
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <style>
-.test{float:left;padding:10px;border:1px solid #000;}
+.test {
+	float: left;
+	padding: 10px;
+	border: 1px solid #000;
+}
 </style>
 </head>
 <body>
