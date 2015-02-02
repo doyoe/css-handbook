@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-cmn-Hans">
 <head>
 <meta charset="utf-8" />
 <title>z-index</title>
@@ -83,10 +83,20 @@
 				<li>当z-index未定义或者值为auto时，在IE6,7下会创建新的局部层叠上下文，而在高级浏览器中，按照规范不产生新的局部层叠上下文，如下例：
 					<div class="gquote">
 						<p class="gquote-tit"><strong>demo：</strong></p>
-						<blockquote class="gquote-cont"><code><xmp>div{position:relative;}
-p{position:absolute;}
-.a{background:#f00;z-index:10;}
-.b{background:#0ff;z-index:3;}
+						<blockquote class="gquote-cont"><code><xmp>div {
+	position: relative;
+}
+p {
+	position: absolute;
+}
+.a {
+	background: #f00;
+	z-index: 10;
+}
+.b {
+	background: #0ff;
+	z-index: 3;
+}
 
 <div class="test">
 	<p class="a">asdas</p>
@@ -155,16 +165,38 @@ p{position:absolute;}
 		<div class="cont">
 			<textarea cols="90" rows="10">
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-cmn-Hans">
 <head>
 <meta charset="utf-8" />
 <title>z-index_CSS参考手册_web前端开发参考手册系列</title>
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <style>
-.z1,.z2,.z3{position:absolute;width:200px;height:100px;padding:5px 10px;color:#fff;text-align:right;}
-.z1{z-index:1;background:#000;}
-.z2{z-index:2;top:30px;left:30px;background:#C00;}
-.z3{z-index:3;top:60px;left:60px;background:#999;}
+.z1,
+.z2,
+.z3 {
+	position: absolute;
+	width: 200px;
+	height: 100px;
+	padding: 5px 10px;
+	color: #fff;
+	text-align: right;
+}
+.z1 {
+	z-index: 1;
+	background: #000;
+}
+.z2 {
+	z-index: 2;
+	top: 30px;
+	left: 30px;
+	background: #C00;
+}
+.z3 {
+	z-index: 3;
+	top: 60px;
+	left: 60px;
+	background: #999;
+}
 </style>
 </head>
 <body>
