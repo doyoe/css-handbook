@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-cmn-Hans">
 <head>
 <meta charset="utf-8" />
 <title>box-shadow</title>
@@ -52,7 +52,7 @@
 		<h2 class="tit">语法：</h2>
 		<div class="cont">
 			<p><strong>box-shadow</strong>：none | <a href="#dfn-syntax">&lt;shadow&gt;</a> [ , <a href="#dfn-syntax">&lt;shadow&gt;</a> ]*</p>
-			<p id="dfn-syntax"><strong>&lt;shadow&gt;</strong> = inset? && [ <a href="../../values/length/index.htm">&lt;length&gt;</a>{2,4} && <a href="../../values/color/index.htm">&lt;color&gt;</a>? ]</p>
+			<p id="dfn-syntax"><strong>&lt;shadow&gt;</strong> = inset? && <a href="../../values/length/length.htm">&lt;length&gt;</a>{2,4} && <a href="../../values/color/color.htm">&lt;color&gt;</a>?</p>
 			<p><strong>默认值</strong>：<mark class="defaultvalue">none</mark></p>
 			<p><strong>适用于</strong>：所有元素</p>
 			<p><strong>继承性</strong>：无</p>
@@ -66,15 +66,15 @@
 			<dl>
 				<dt>none：</dt>
 				<dd>无阴影</dd>
-				<dt><a href="../../values/length/index.htm">&lt;length&gt;</a>①：</dt>
+				<dt><a href="../../values/length/length.htm">&lt;length&gt;</a>①：</dt>
 				<dd>第1个长度值用来设置对象的阴影水平偏移值。可以为负值</dd>
-				<dt><a href="../../values/length/index.htm">&lt;length&gt;</a>②：</dt>
+				<dt><a href="../../values/length/length.htm">&lt;length&gt;</a>②：</dt>
 				<dd>第2个长度值用来设置对象的阴影垂直偏移值。可以为负值</dd>
-				<dt><a href="../../values/length/index.htm">&lt;length&gt;</a>③：</dt>
+				<dt><a href="../../values/length/length.htm">&lt;length&gt;</a>③：</dt>
 				<dd>如果提供了第3个长度值则用来设置对象的阴影模糊值。不允许负值</dd>
-				<dt><a href="../../values/length/index.htm">&lt;length&gt;</a>④：</dt>
+				<dt><a href="../../values/length/length.htm">&lt;length&gt;</a>④：</dt>
 				<dd>如果提供了第4个长度值则用来设置对象的阴影外延值。可以为负值</dd>
-				<dt><a href="../../values/color/index.htm">&lt;color&gt;</a>：</dt>
+				<dt><a href="../../values/color/color.htm">&lt;color&gt;</a>：</dt>
 				<dd>设置对象的阴影的颜色。</dd>
 				<dt>inset：</dt>
 				<dd>设置对象的阴影类型为内阴影。该值为空时，则对象的阴影类型为外阴影</dd>
@@ -150,18 +150,37 @@
 		<div class="cont">
 			<textarea cols="90" rows="10">
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-cmn-Hans">
 <head>
 <meta charset="utf-8" />
 <title>box-shadow_CSS参考手册_web前端开发参考手册系列</title>
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <style>
-.test li{margin-top:20px;list-style:none;}
-.test .outset{width:400px;padding:10px;background:#eee;-webkit-box-shadow:5px 5px rgba(0,0,0,.6);box-shadow:5px 5px rgba(0,0,0,.6);}
-.test .outset-blur{width:400px;padding:10px;background:#eee;-webkit-box-shadow:5px 5px 5px rgba(0,0,0,.6);box-shadow:5px 5px 5px rgba(0,0,0,.6);}
-.test .outset-extension{width:400px;padding:10px;background:#eee;-webkit-box-shadow:5px 5px 5px 10px rgba(0,0,0,.6);box-shadow:5px 5px 5px 10px rgba(0,0,0,.6);}
-.test .inset{width:400px;padding:10px;background:#eee;-webkit-box-shadow:2px 2px 5px 1px rgba(0,0,0,.6) inset;box-shadow:2px 2px 5px 1px rgba(0,0,0,.6) inset;}
-.test .multiple-shadow{width:400px;padding:10px;background:#eee;-webkit-box-shadow:0 0 5px 3px rgba(255,0,0,.6),0 0 5px 6px rgba(0,182,0,.6),0 0 5px 10px rgba(255,255,0,.6);box-shadow:0 0 5px 3px rgba(255,0,0,.6),0 0 5px 6px rgba(0,182,0,.6),0 0 5px 10px rgba(255,255,0,.6);}
+.test li {
+	margin-top: 20px;
+	list-style: none;
+	width: 400px;
+	padding: 10px;
+	background: #eee;
+}
+.test .outset {
+	box-shadow: 5px 5px rgba(0, 0, 0, .6);
+}
+.test .outset-blur {
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, .6);
+}
+.test .outset-extension {
+	box-shadow: 5px 5px 5px 10px rgba(0, 0, 0, .6);
+}
+.test .inset {
+	box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, .6) inset;
+}
+.test .multiple-shadow {
+	box-shadow: 
+		0 0 5px 3px rgba(255, 0, 0, .6),
+		0 0 5px 6px rgba(0, 182, 0, .6),
+		0 0 5px 10px rgba(255, 255, 0, .6);
+}
 </style>
 </head>
 <body>

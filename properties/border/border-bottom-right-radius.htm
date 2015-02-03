@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-cmn-Hans">
 <head>
 <meta charset="utf-8" />
 <title>border-bottom-right-radius</title>
@@ -51,7 +51,7 @@
 	<section id="syntax" class="g-mod g-attr">
 		<h2 class="tit">语法：</h2>
 		<div class="cont">
-			<p><strong>border-bottom-right-radius</strong>：[ <a href="../../values/length/index.htm">&lt;length&gt;</a> | <a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a> ] [ <a href="../../values/length/index.htm">&lt;length&gt;</a> | <a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a> ]?</p>
+			<p><strong>border-bottom-right-radius</strong>：[ <a href="../../values/length/length.htm">&lt;length&gt;</a> | <a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a> ]{1,2}</p>
 			<p><strong>默认值</strong>：<mark class="defaultvalue">0</mark></p>
 			<p><strong>适用于</strong>：所有元素</p>
 			<p><strong>继承性</strong>：无</p>
@@ -63,7 +63,7 @@
 		<h2 class="tit">取值：</h2>
 		<div class="cont">
 			<dl>
-				<dt><a href="../../values/length/index.htm">&lt;length&gt;</a>：</dt>
+				<dt><a href="../../values/length/length.htm">&lt;length&gt;</a>：</dt>
 				<dd>用长度值设置对象的右下角(bottom-right)圆角半径长度。不允许负值</dd>
 				<dt><a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a>：</dt>
 				<dd>用百分比设置对象的右下角(bottom-right)圆角半径长度。不允许负值</dd>
@@ -75,7 +75,7 @@
 		<div class="cont">
 			<strong>设置或检索对象的右下角圆角边框。提供2个参数，2个参数以空格分隔，每个参数允许设置1个参数值，第1个参数表示水平半径，第2个参数表示垂直半径，如第2个参数省略，则默认等于第1个参数</strong>
 			<ul>
-				<li>如设置border-bottom-right-radius:5px 10px;表示bottom-right这个角的水平圆角半径为5px，垂直圆角半径为10px。</li>
+				<li>如设置<code class="incode">border-bottom-right-radius:5px 10px</code>表示bottom-right这个角的水平圆角半径为5px，垂直圆角半径为10px。</li>
 				<li>对应的脚本特性为<strong>borderBottomRightRadius</strong>。</li>
 			</ul>
 		</div>
@@ -137,16 +137,28 @@
 		<div class="cont">
 			<textarea cols="90" rows="10">
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-cmn-Hans">
 <head>
 <meta charset="utf-8" />
 <title>border-bottom-right-radius_CSS参考手册_web前端开发参考手册系列</title>
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <style>
-ul{margin:0;padding:0;}
-li{list-style:none;margin:10px 0 0 0;padding:10px;background:#bbb;}
-.test .one{border-bottom-right-radius:30px;}
-.test .two{border-bottom-right-radius:10px 30px;}
+ul {
+	margin: 0;
+	padding: 0;
+}
+li {
+	list-style: none;
+	margin: 10px 0 0 0;
+	padding: 10px;
+	background: #bbb;
+}
+.test .one {
+	border-bottom-right-radius: 30px;
+}
+.test .two {
+	border-bottom-right-radius: 10px 30px;
+}
 </style>
 </head>
 <body>

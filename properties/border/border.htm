@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-cmn-Hans">
 <head>
 <meta charset="utf-8" />
 <title>border</title>
@@ -51,7 +51,9 @@
 	<section id="syntax" class="g-mod g-attr">
 		<h2 class="tit">语法：</h2>
 		<div class="cont">
-			<p><strong>border</strong>：[ <a href="border-width.htm">border-width</a> ] || [ <a href="border-style.htm">border-style</a> ] || [ <a href="border-color.htm">border-color</a> ]</p>
+			<p><strong>border</strong>：<a href="#line-width">&lt;line-width&gt;</a> || <a href="#line-style">&lt;line-style&gt;</a> || <a href="../../values/color/color.htm">&lt;color&gt;</a></p>
+			<p id="line-width"><strong>&lt;line-width&gt;</strong> = <a href="../../values/length/length.htm">&lt;length&gt;</a> | thin | medium | thick</p>
+			<p id="line-style"><strong>&lt;line-style&gt;</strong> = none | hidden | dotted | dashed | solid | double | groove | ridge | inset | outset</p>
 			<p><strong>默认值</strong>：<mark class="defaultvalue">看每个独立属性</mark></p>
 			<p><strong>适用于</strong>：所有元素</p>
 			<p><strong>继承性</strong>：无</p>
@@ -64,11 +66,11 @@
 		<h2 class="tit">取值：</h2>
 		<div class="cont">
 			<dl>
-				<dt>[ <a href="border-width.htm">border-width</a> ]：</dt>
+				<dt><a href="#line-width">&lt;line-width&gt;</a>：</dt>
 				<dd>设置或检索对象边框宽度。</dd>
-				<dt>[ <a href="border-style.htm">border-style</a> ]：</dt>
+				<dt><a href="#line-style">&lt;line-style&gt;</a>：</dt>
 				<dd>设置或检索对象边框样式。</dd>
-				<dt>[ <a href="border-color.htm">border-color</a> ]：</dt>
+				<dt><a href="../../values/color/color.htm">&lt;color&gt;</a>：</dt>
 				<dd>设置或检索对象边框颜色。</dd>
 			</dl>
 		</div>
@@ -126,14 +128,20 @@
 		<div class="cont">
 			<textarea cols="90" rows="10">
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-cmn-Hans">
 <head>
 <meta charset="utf-8" />
 <title>border_CSS参考手册_web前端开发参考手册系列</title>
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <style>
-.test{border:5px solid #000;}
-.test2{margin-top:10px;border:5px solid;color:#f00;}
+.test {
+	border: 5px solid #000;
+}
+.test2 {
+	margin-top: 10px;
+	border: 5px solid;
+	color: #f00;
+}
 </style>
 </head>
 <body>

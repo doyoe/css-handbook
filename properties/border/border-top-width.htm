@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-cmn-Hans">
 <head>
 <meta charset="utf-8" />
 <title>border-top-width</title>
@@ -51,8 +51,8 @@
 	<section id="syntax" class="g-mod g-attr">
 		<h2 class="tit">语法：</h2>
 		<div class="cont">
-			<p><strong>border-top-width</strong>：<a href="#dfn-syntax">&lt;border-width&gt;</a></p>
-			<p id="dfn-syntax"><strong>&lt;border-width&gt;</strong> =  <a href="../../values/length/index.htm">&lt;length&gt;</a> | thin | medium | thick</p>
+			<p><strong>border-top-width</strong>：<a href="#line-width">&lt;line-width&gt;</a></p>
+			<p id="line-width"><strong>&lt;line-width&gt;</strong> = <a href="../../values/length/length.htm">&lt;length&gt;</a> | thin | medium | thick</p>
 			<p><strong>默认值</strong>：<mark class="defaultvalue">medium</mark></p>
 			<p><strong>适用于</strong>：所有元素</p>
 			<p><strong>继承性</strong>：无</p>
@@ -65,7 +65,7 @@
 		<h2 class="tit">取值：</h2>
 		<div class="cont">
 			<dl>
-				<dt><a href="../../values/length/index.htm">&lt;length&gt;</a>：</dt>
+				<dt><a href="../../values/length/length.htm">&lt;length&gt;</a>：</dt>
 				<dd>用长度值来定义边框的厚度。不允许负值</dd>
 				<dt>medium：</dt>
 				<dd>定义默认厚度的边框。计算值为3px</dd>
@@ -128,13 +128,18 @@
 		<div class="cont">
 			<textarea cols="90" rows="10">
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-cmn-Hans">
 <head>
 <meta charset="utf-8" />
 <title>border-top-width_CSS参考手册_web前端开发参考手册系列</title>
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <style>
-.test{padding:10px;border-top-width:5px;border-top-style:solid;border-top-color:#000;}
+.test {
+	padding: 10px;
+	border-top-width: 5px;
+	border-top-style: solid;
+	border-top-color: #000;
+}
 </style>
 </head>
 <body>
