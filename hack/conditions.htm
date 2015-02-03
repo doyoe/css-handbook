@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-cmn-Hans">
 <head>
 <meta charset="utf-8" />
 <title>IE Conditions Hack</title>
@@ -48,9 +48,9 @@
 	<section id="syntax" class="g-mod g-attr">
 		<h2 class="tit">语法：</h2>
 		<div class="cont">
-			<pre><code>&lt;!--[if &lt;keywords&gt;? IE &lt;version&gt;?]&gt;
+			<code><xmp><!--[if <keywords>? IE <version>?]>
 HTML代码块
-&lt;![endif]--&gt;</code></pre>
+<![endif]--></xmp></code>
 		</div>
 	</section>
 	<section class="g-mod g-attr" id="value">
@@ -74,6 +74,7 @@ HTML代码块
 			</dl>
 			<strong class="g-color-light">&lt;version&gt;</strong>
 			<p>目前的常用IE版本为6.0及以上，推荐酌情忽略低版本，把精力花在为使用高级浏览器的用户提供更好的体验上</p>
+			<p class="g-color-light">IE10及以上版本已将条件注释特性移除，使用时需注意。</p>
 		</div>
 	</section>
 	<section id="intro" class="g-mod g-attr">
@@ -152,7 +153,7 @@ HTML代码块
 		<div class="cont">
 			<textarea cols="90" rows="10">
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-cmn-Hans">
 <head>
 <meta charset="utf-8" />
 <title>if条件Hack_CSS参考手册_web前端开发参考手册系列</title>

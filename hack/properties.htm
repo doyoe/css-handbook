@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-cmn-Hans">
 <head>
 <meta charset="utf-8" />
 <title>Properties Level Hack</title>
@@ -62,10 +62,7 @@
 				<dt>\9：</dt>
 				<dd>选择IE6+</dd>
 				<dt>\0：</dt>
-				<dd>选择IE8+和Opera</dd>
-				<dt>[;property:value;];：</dt>
-				<dd>选择webkit核心浏览器（Chrome,Safari）。IE7及以下也能识别。<em class="g-color-light">中括号内外的3个分号必须保留，第一个分号前可以是任意规则或任意多个规则</em></dd>
-				<dd><em class="g-color-light">[;color:#f00;];</em> 与 <em class="g-color-light">[color:#f00;color:#f00;];</em> 与 <em class="g-color-light">[margin:0;padding:0;color:#f00;];</em> 是等价的。生效的始终是中括号内的最后一条规则，所以通常选用第一种写法最为简洁。</dd>
+				<dd>选择IE8+和Opera15以下的浏览器</dd>
 			</dl>
 		</div>
 	</section>
@@ -80,10 +77,10 @@
 					<p>一些CSS Hack由于浏览器存在交叉认识，所以需要通过层层覆盖的方式来实现对不同浏览器进行Hack的。如下面这个例子：</p>
 					<div class="gquote">
 						<p class="gquote-tit"><strong>如想同一段文字在IE6,7,8显示为不同颜色，可这样写：</strong></p>
-						<blockquote class="gquote-cont"><pre><code>.test{
-	color:#090\9; /* For IE8+ */
-	*color:#f00;  /* For IE7 and earlier */
-	_color:#ff0;  /* For IE6 and earlier */
+						<blockquote class="gquote-cont"><pre><code>.test {
+	color: #090\9; /* For IE8+ */
+	*color: #f00;  /* For IE7 and earlier */
+	_color: #ff0;  /* For IE6 and earlier */
 }</code></pre></blockquote>
 						<p class="gquote-info">* 上述Hack均需运行在标准模式下，若在怪异模式下运行，这些Hack将会被不同版本的IE相互识别，导致失效。</p>
 					</div>
@@ -96,20 +93,22 @@
 		<div class="cont">
 			<textarea cols="90" rows="10">
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-cmn-Hans">
 <head>
 <meta charset="utf-8" />
 <title>属性级Hack_CSS参考手册_web前端开发参考手册系列</title>
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <style>
-h1{margin:10px 0;font-size:16px;}
-.test{
-	color:#c30;          /* For Firefox */
-	[;color:#ddd;];      /* For webkit(Chrome and Safari) */
-	color:#090\0;        /* For Opera */
-	color:#00f\9;        /* For IE8+ */
-	*color:#f00;         /* For IE7 */
-	_color:#ff0;         /* For IE6 */
+h1 {
+	margin: 10px 0;
+	font-size: 16px;
+}
+.test {
+	color: #c30;          /* For latest Firefox, chrome, Safari */
+	color: #090\0;        /* For Opera15- */
+	color: #00f\9;        /* For IE8+ */
+	*color: #f00;         /* For IE7 */
+	_color: #ff0;         /* For IE6 */
 }
 </style>
 </head>
