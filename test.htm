@@ -2,29 +2,13 @@
 <html lang="zh-cmn-Hans">
 <head>
 <meta charset="utf-8" />
-<title>repeating-radial-gradient()_CSS参考手册_web前端开发参考手册系列</title>
+<title>calc()函数_CSS参考手册_web前端开发参考手册系列</title>
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <style>
-div {
-	width: 200px;
-	height: 100px;
-	margin-top: 10px;
-	border: 1px solid #ddd;
-}
-.test {
-	background: repeating-radial-gradient(circle, #f00 0, #ff0 10%, #f00 15%);
-}
-.test2 {
-	background: repeating-radial-gradient(at top left, #f00, #ff0 10%, #080 15%, #ff0 20%, #f00 25%);
-}
-.test3 {
-	background: repeating-radial-gradient(circle closest-corner at 20px 50px, #f00, #ff0 10%, #080 20%, #ff0 30%, #f00 40%);
-}
+.test{width:calc(300px-100px);background:#eee;}
 </style>
 </head>
 <body>
-<div class="test"></div>
-<div class="test2"></div>
-<div class="test3"></div>
+<div class="test">我的宽度为100% - 50px</div>
 </body>
 </html>

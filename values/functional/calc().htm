@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-cmn-Hans">
 <head>
 <meta charset="utf-8" />
 <title>calc()</title>
@@ -47,13 +47,21 @@
 	</section>
 </header>
 <section id="bd">
-	<section id="syntax" class="g-mod g-attr">
+	<section class="g-mod g-attr" id="syntax">
+		<h2 class="tit">语法：</h2>
+		<div class="cont">
+			<p><strong>calc()</strong> = calc(四则运算)</p>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
 		<h2 class="tit">说明：</h2>
 		<div class="cont">
 			<strong>用于动态计算长度值。</strong>
 			<ul>
-				<li>任何长度值都可以使用calc()函数进行计算。</li>
-				<li>calc()函数支持+, -, *, /, mod运算，以后还可能加入对min()/max()等运算。</li>
+				<li class="g-color-light">需要注意的是，运算符前后都需要保留一个空格，例如：<code class="incode">width: calc(100% - 10px)</code>；</li>
+				<li>任何长度值都可以使用calc()函数进行计算；</li>
+				<li>calc()函数支持 "+", "-", "*", "/" 运算；</li>
+				<li>calc()函数使用标准的数学运算优先级规则；</li>
 			</ul>
 		</div>
 	</section>
@@ -68,30 +76,42 @@
 			<table class="g-data">
 				<thead>
 					<tr>
-						<th><span class="browser-ie">IE</span></th>
-						<th><span class="browser-firefox">Firefox</span></th>
-						<th><span class="browser-safari">Safari</span></th>
-						<th><span class="browser-chrome">Chrome</span></th>
-						<th><span class="browser-opera">Opera</span></th>
+						<th>IE</th>
+						<th>Firefox</th>
+						<th>Chrome</th>
+						<th>Safari</th>
+						<th>Opera</th>
+						<th>iOS Safari</th>
+						<th>Android Browser</th>
+						<th>Android Chrome</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
 						<td class="unsupport">6.0-8.0</td>
-						<td class="support">4.0-15.0 <sup class="fix">-moz-</sup></td>
-						<td class="unsupport">4.0-5.1</td>
+						<td class="unsupport">2.0-3.6</td>
 						<td class="unsupport">4.0-18.0</td>
-						<td rowspan="3" class="support">15.0</td>
+						<td class="unsupport">3.1-5.1</td>
+						<td class="support" rowspan="3">15.0+</td>
+						<td class="unsupport">3.2-5.1</td>
+						<td class="unsupport">2.1-4.3</td>
+						<td class="unsupport">18.0</td>
 					</tr>
 					<tr>
-						<td rowspan="2" class="support">9.0</td>
-						<td rowspan="2" class="support">16.0</td>
-						<td class="support">6.0 <sup class="fix">-webkit-</sup></td>
-						<td class="support">19.0-25.0 <sup class="fix">-webkit-</sup></td>
+						<td class="support" rowspan="2">9.0+</td>
+						<td class="support">4.0-15.0<br /><sup class="fix">-moz-</sup></td>
+						<td class="support">19.0-25.0<br /><sup class="fix">-webkit-</sup></td>
+						<td class="support">6.0<br /><sup class="fix">-webkit-</sup></td>
+						<td class="support">6.0-6.1<br /><sup class="fix">-webkit-</sup></td>
+						<td class="partsupport" rowspan="2">4.4-4.4.4</td>
+						<td class="support">19.0-25.0<br /><sup class="fix">-webkit-</sup></td>
 					</tr>
 					<tr>
-						<td class="support">6.1</td>
-						<td class="support">26.0</td>
+						<td class="support">16.0+</td>
+						<td class="support">26.0+</td>
+						<td class="support">6.1+</td>
+						<td class="support">7.0+</td>
+						<td class="support">26.0+</td>
 					</tr>
 				</tbody>
 			</table>
@@ -102,13 +122,16 @@
 		<div class="cont">
 			<textarea rows="10" cols="90">
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-cmn-Hans">
 <head>
 <meta charset="utf-8" />
 <title>calc()函数_CSS参考手册_web前端开发参考手册系列</title>
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <style>
-.test{width:-moz-calc(100% - 50px);width:calc(100% - 50px);background:#eee;}
+.test {
+	width: calc(100% - 50px);
+	background: #eee;
+}
 </style>
 </head>
 <body>

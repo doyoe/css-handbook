@@ -617,10 +617,14 @@ if (!Global.isLocal && Global.name) {
 					'url' : ['&lt;url&gt;'],
 					'identifier' : ['&lt;identifier&gt;']
 				},
+				'content' : {
+					'index' : ['生成内容(Content)','其它生成内容值参考'],
+					'counter()' : [],
+					'counters()' : [],
+					'attr()' : []
+				},
 				'functional' : {
 					'index' : ['函数(Functional)','其它函数值参考'],
-					'counter()' : [],
-					'attr()' : [],
 					'calc()' : [],
 					'min()' : [],
 					'max()' : [],
