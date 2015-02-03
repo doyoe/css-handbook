@@ -628,10 +628,10 @@ if (!Global.isLocal && Global.name) {
 				},
 				'image' : {
 					'index' : ['图像(Image)','其它图像值参考'],
-					'image' : [],
+					'image' : ['&lt;image&gt;'],
 					'image()' : [],
 					'image-set()' : [],
-					'gradient' : [],
+					'gradient' : ['&lt;gradient&gt;'],
 					'linear-gradient()' : [],
 					'radial-gradient()' : [],
 					'repeating-linear-gradient()' : [],
