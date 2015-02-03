@@ -71,11 +71,6 @@ a:hover{color:#C30;text-decoration:underline;}
 	50%{box-shadow:0px 0px 10px rgba(50,200,250,.5);}
 	100%{box-shadow:0px 0px 10px rgba(0,0,0,.5);}
 }
-@-ms-keyframes glint{
-	0%{box-shadow:0px 0px 10px rgba(0,0,0,.5);}
-	50%{box-shadow:0px 0px 10px rgba(50,200,250,.5);}
-	100%{box-shadow:0px 0px 10px rgba(0,0,0,.5);}
-}
 @keyframes glint{
 	0%{box-shadow:0px 0px 10px rgba(0,0,0,.5);}
 	50%{box-shadow:0px 0px 10px rgba(50,200,250,.5);}
