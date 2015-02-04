@@ -13,6 +13,36 @@ CSS参考手册
 
 CSS参考手册目前正在v4.1.7草案中。广泛接受[Issues](https://github.com/doyoe/css-handbook/issues)和[Pull Requests](https://github.com/doyoe/css-handbook/pulls)
 
+* 新增了
+[&lt;image&gt;](http://css.doyoe.com/values/image/image.htm),
+[image()](http://css.doyoe.com/values/image/image().htm),
+[image-set()](http://css.doyoe.com/values/image/image-set().htm),
+[&lt;gradient&gt;](http://css.doyoe.com/values/image/gradient.htm),
+[&lt;color&gt;](http://css.doyoe.com/values/color/color.htm),
+[currentColor](http://css.doyoe.com/values/color/currentColor.htm),
+[inherit](http://css.doyoe.com/values/textual/inherit.htm),
+[initial](http://css.doyoe.com/values/textual/initial.htm),
+[counters](http://css.doyoe.com/values/content/counters.htm)
+参考；
+* 移除了 min(), max() 参考；
+* 修订了
+[&lt;url&gt;](http://css.doyoe.com/values/textual/url.htm),
+[linear-gradient()](http://css.doyoe.com/values/image/linear-gradient().htm),
+[repeating-linear-gradient()](http://css.doyoe.com/values/image/repeating-linear-gradient().htm),
+[radial-gradient()](http://css.doyoe.com/values/image/radial-gradient().htm),
+[repeating-radial-gradient()](http://css.doyoe.com/values/image/repeating-radial-gradient().htm)
+参考；
+* 修订了
+[Dimension](http://css.doyoe.com/properties/dimension/index.htm),
+[Margin](http://css.doyoe.com/properties/margin/index.htm),
+[Padding](http://css.doyoe.com/properties/padding/index.htm),
+[Border](http://css.doyoe.com/properties/border/index.htm),
+[Background](http://css.doyoe.com/properties/background/index.htm)
+等模块的浏览器兼容视图；
+* 修订了
+[border-image](http://css.doyoe.com/properties/border/border-image.htm),
+[border-radius](http://css.doyoe.com/properties/border/border-radius.htm)
+及相关属性的参考描述；
 
 ###最新版本：v4.1.6
 
