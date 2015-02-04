@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-cmn-Hans">
 <head>
 <meta charset="utf-8" />
 <title>!important</title>
@@ -48,7 +48,7 @@
 	<section id="syntax" class="g-mod g-attr">
 		<h2 class="tit">语法：</h2>
 		<div class="cont">
-			<p><strong>Selector</strong>{sRule!important;}</p>
+			<p><strong>Selector</strong> { sRule!important; }</p>
 		</div>
 	</section>
 	<section id="intro" class="g-mod g-attr">
@@ -57,19 +57,26 @@
 			<strong>提升指定样式规则的应用优先权。</strong>
 			<ul>
 				<li>
-					<em class="glight">IE6及以下浏览器有个比较显式的支持问题存在，!important并不覆盖掉在同一条样式的后面的规则。请看下述代码：</em>
+					<p class="glight">IE6及以下浏览器有个比较显式的支持问题存在，!important在同一条规则集里不生效。请看下述代码：</p>
 					<div class="gquote">
 						<p class="gquote-tit"><strong>示例代码：</strong></p>
-						<blockquote class="gquote-cont"><pre><code>div{color:#f00!important;color:#000;}</code></pre></blockquote>
+						<blockquote class="gquote-cont"><code><xmp>div {
+	color: #f00 !important;
+	color: #000;
+}</xmp></code></blockquote>
 						<p class="gquote-info">在上述代码中，IE6及以下浏览器div的文本颜色为#000，!important并没有覆盖后面的规则；其它浏览器下div的文本颜色为#f00</p>
 					</div>
 				</li>
 				<li>
-					<em class="glight">IE6及以下浏览器要使!important生效，可用以下代码：</em>
+					<p class="glight">IE6及以下浏览器要使!important生效，可用以下代码：</p>
 					<div class="gquote">
 						<p class="gquote-tit"><strong>示例代码：</strong></p>
-						<blockquote class="gquote-cont"><pre><code>div{color:#f00!important;}
-div{color:#000;}</code></pre></blockquote>
+						<blockquote class="gquote-cont"><code><xmp>div {
+	color: #f00 !important;
+}
+div {
+	color: #000;
+}</xmp></code></blockquote>
 						<p class="gquote-info">在上述代码中，IE6及以下浏览器中div的文本颜色表现与其它浏览器一致，都为#f00</p>
 					</div>
 				</li>
@@ -87,28 +94,34 @@ div{color:#000;}</code></pre></blockquote>
 			<table class="g-data">
 				<thead>
 					<tr>
-						<th><span class="browser-ie">IE</span></th>
-						<th><span class="browser-firefox">Firefox</span></th>
-						<th><span class="browser-safari">Safari</span></th>
-						<th><span class="browser-chrome">Chrome</span></th>
-						<th><span class="browser-opera">Opera</span></th>
+						<th>IE</th>
+						<th>Firefox</th>
+						<th>Chrome</th>
+						<th>Safari</th>
+						<th>Opera</th>
+						<th>iOS Safari</th>
+						<th>Android Browser</th>
+						<th>Android Chrome</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
 						<td class="partsupport">6.0 <sup><a href="#support1">#1</a></sup></td>
-						<td rowspan="2" class="support">4.0</td>
-						<td rowspan="2" class="support">4.0</td>
-						<td rowspan="2" class="support">4.0</td>
-						<td rowspan="2" class="support">15.0</td>
+						<td class="support" rowspan="2">2.0+</td>
+						<td class="support" rowspan="2">4.0+</td>
+						<td class="support" rowspan="2">3.1+</td>
+						<td class="support" rowspan="2">3.5+</td>
+						<td class="support" rowspan="2">3.2+</td>
+						<td class="support" rowspan="2">2.1+</td>
+						<td class="support" rowspan="2">18.0+</td>
 					</tr>
 					<tr>
-						<td class="support">7.0</td>
+						<td class="support">7.0+</td>
 					</tr>
 				</tbody>
 			</table>
 			<ol class="support-info">
-				<li id="support1">IE6及更早浏览器下，!important在同一条样式内不生效。</li>
+				<li id="support1">IE6及更早浏览器下，!important在同一条规则集内不生效。</li>
 			</ol>
 		</div>
 	</section>
@@ -117,15 +130,22 @@ div{color:#000;}</code></pre></blockquote>
 		<div class="cont">
 			<textarea cols="90" rows="10">
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-cmn-Hans">
 <head>
 <meta charset="utf-8" />
 <title>!important_CSS参考手册_web前端开发参考手册系列</title>
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <style>
-.test{color:#f00!important;color:#000;}
-.test2{color:#f00!important;}
-.test2{color:#000;}
+.test {
+	color: #f00 !important;
+	color: #000;
+}
+.test2 {
+	color: #f00 !important;
+}
+.test2 {
+	color: #000;
+}
 </style>
 </head>
 <body>

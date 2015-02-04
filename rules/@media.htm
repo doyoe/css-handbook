@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-cmn-Hans">
 <head>
 <meta charset="utf-8" />
 <title>@media</title>
@@ -75,15 +75,15 @@
 					<p>媒体查询可以被用在CSS中的@media和@import规则上，也可以被用在HTML和XML中。</p>
 					<div class="gquote">
 						<p class="gquote-tit"><strong>示例代码：</strong></p>
-						<blockquote class="gquote-cont"><pre><code>@media screen and (width:800px){ … }
+						<blockquote class="gquote-cont"><code><xmp>@media screen and (width:800px){ … }
 @import url(example.css) screen and (width:800px);
-&lt;link media="screen and (width:800px)" rel="stylesheet" href="example.css" /&gt;
-&lt;?xml-stylesheet media="screen and (width:800px)" rel="stylesheet" href="example.css" ?&gt;</code></pre></blockquote>
+<link media="screen and (width:800px)" rel="stylesheet" href="example.css" />
+<?xml-stylesheet media="screen and (width:800px)" rel="stylesheet" href="example.css" ?></xmp></code></blockquote>
 					</div>
 				</li>
 				<li class="gquote">
 					<p class="gquote-tit"><strong>列举几种使用方式：</strong></p>
-					<blockquote class="gquote-cont"><pre><code>@media all and (width:1024px){
+					<blockquote class="gquote-cont"><code><xmp>@media all and (width:1024px){
 	body{color:#f00;}
 }
 @media all and (device-height:800px){ … }
@@ -91,7 +91,7 @@
 @media all and (device-aspect-ratio:16/10){ … }
 @media all and (min-color:1){ … }
 @media all and (monochrome:0){ … }
-@media all and (grid:0){ … }</code></pre></blockquote>
+@media all and (grid:0){ … }</xmp></code></blockquote>
 				</li>
 			</ul>
 		</div>
@@ -107,29 +107,32 @@
 			<table class="g-data">
 				<thead>
 					<tr>
-						<th><span class="browser-ie">IE</span></th>
-						<th><span class="browser-firefox">Firefox</span></th>
-						<th><span class="browser-safari">Safari</span></th>
-						<th><span class="browser-chrome">Chrome</span></th>
-						<th><span class="browser-opera">Opera</span></th>
+						<th>IE</th>
+						<th>Firefox</th>
+						<th>Chrome</th>
+						<th>Safari</th>
+						<th>Opera</th>
+						<th>iOS Safari</th>
+						<th>Android Browser</th>
+						<th>Android Chrome</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td class="partsupport">6.0-8.0 <sup><a href="#support1">#1</a></sup></td>
-						<td rowspan="2" class="support">4.0</td>
-						<td rowspan="2" class="support">4.0</td>
-						<td rowspan="2" class="support">4.0</td>
-						<td rowspan="2" class="support">15.0</td>
+						<td class="unsupport">6.0-8.0</td>
+						<td class="support" rowspan="2">2.0+</td>
+						<td class="support" rowspan="2">4.0+</td>
+						<td class="support" rowspan="2">3.1+</td>
+						<td class="support" rowspan="2">15.0+</td>
+						<td class="support" rowspan="2">3.2+</td>
+						<td class="support" rowspan="2">2.1+</td>
+						<td class="support" rowspan="2">18.0+</td>
 					</tr>
 					<tr>
-						<td class="support">9.0</td>
+						<td class="support">9.0+</td>
 					</tr>
 				</tbody>
 			</table>
-			<ol class="support-info">
-				<li id="support1">IE8及更早浏览器不支持媒体查询。</li>
-			</ol>
 		</div>
 	</section>
 	<section id="example" class="g-mod g-attr">
@@ -137,26 +140,29 @@
 		<div class="cont">
 			<textarea cols="90" rows="10">
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-cmn-Hans">
 <head>
 <meta charset="utf-8" />
 <title>@media_CSS参考手册_web前端开发参考手册系列</title>
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <style>
-.test,.test2{display:none;}
+.test,
+.test2 {
+	display: none;
+}
 /* 本条为CSS2部分，IE8及以下只支持本条 */
-@media screen{
-	body{color:#f00;}
+@media screen {
+	body{ color: #f00; }
 }
 /* 下列为CSS3部分 */
-@media screen and (min-width:960px){
-	body{background:#999;}
+@media screen and (min-width: 960px) {
+	body{ background: #999; }
 }
-@media screen and (device-width:1024px){
-	.test{display:block;}
+@media screen and (device-width: 1024px) {
+	.test { display: block; }
 }
-@media screen and (width:1024px){
-	.test2{display:block;}
+@media screen and (width: 1024px) {
+	.test2 { display: block; }
 }
 </style>
 </head>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-cmn-Hans">
 <head>
 <meta charset="utf-8" />
 <title>@import</title>
@@ -76,10 +76,9 @@
 					<strong>使用url(url)和直接使用url需要注意的地方：</strong>
 					<div class="gquote">
 						<p class="gquote-tit"><strong>示例代码：</strong></p>
-						<blockquote class="gquote-cont"><pre><code>@import url("global.css");
+						<blockquote class="gquote-cont"><code><xmp>@import url("global.css");
 @import url(global.css);
-@import "global.css";
-</code></pre></blockquote>
+@import "global.css";</xmp></code></blockquote>
 						<p class="gquote-info">以上3种方式都有效。当使用url(url)的方式时，包住路径的引号可有可无；当直接使用url时，包住路径的引号必须保留。</p>
 					</div>
 				</li>
@@ -87,9 +86,9 @@
 					<strong>指定媒体查询：</strong>
 					<div class="gquote">
 						<p class="gquote-tit"><strong>示例代码：</strong></p>
-						<blockquote class="gquote-cont"><pre><code>@import url(example.css) screen and (min-width:800px);
+						<blockquote class="gquote-cont"><code><xmp>@import url(example.css) screen and (min-width:800px);
 @import url(example.css) screen and (width:800px),(color);
-@import url(example.css) screen and (min-device-width:500px) and (max-device-width:1024px);</code></pre></blockquote>
+@import url(example.css) screen and (min-device-width:500px) and (max-device-width:1024px);</xmp></code></blockquote>
 					</div>
 				</li>
 			</ul>
@@ -106,32 +105,47 @@
 			<table class="g-data">
 				<thead>
 					<tr>
-						<th><span class="browser-ie">IE</span></th>
-						<th><span class="browser-firefox">Firefox</span></th>
-						<th><span class="browser-safari">Safari</span></th>
-						<th><span class="browser-chrome">Chrome</span></th>
-						<th><span class="browser-opera">Opera</span></th>
+						<th>Values</th>
+						<th>IE</th>
+						<th>Firefox</th>
+						<th>Chrome</th>
+						<th>Safari</th>
+						<th>Opera</th>
+						<th>iOS Safari</th>
+						<th>Android Browser</th>
+						<th>Android Chrome</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td class="partsupport">6.0-7.0 <sup><a href="#support1">#1</a></sup></td>
-						<td rowspan="3" class="support">4.0</td>
-						<td rowspan="3" class="support">4.0</td>
-						<td rowspan="3" class="support">4.0</td>
-						<td rowspan="3" class="support">15.0</td>
+						<td><strong>Basic Support</strong></td>
+						<td class="support">6.0+</td>
+						<td class="support" rowspan="5">2.0+</td>
+						<td class="support" rowspan="5">4.0+</td>
+						<td class="support" rowspan="5">3.1+</td>
+						<td class="support" rowspan="5">15.0+</td>
+						<td class="support" rowspan="5">3.2+</td>
+						<td class="support" rowspan="5">2.1+</td>
+						<td class="support" rowspan="5">18.0+</td>
 					</tr>
 					<tr>
-						<td class="partsupport">8.0 <sup><a href="#support2">#2</a></sup></td>
+						<td rowspan="2">媒体类型</td>
+						<td class="unsupport">6.0-7.0</td>
 					</tr>
 					<tr>
-						<td class="support">9.0</td>
+						<td class="support">8.0+</td>
+					</tr>
+					<tr>
+						<td rowspan="2">媒体查询</td>
+						<td class="unsupport">6.0-8.0</td>
+					</tr>
+					<tr>
+						<td class="support">9.0+</td>
 					</tr>
 				</tbody>
 			</table>
 			<ol class="support-info">
-				<li id="support1">IE7及更早浏览器不支持@import指定媒体类型和媒体查询。</li>
-				<li id="support2">IE8不支持@import指定媒体查询。</li>
+				<li id="support1">z-index负值是CSS2.1中定义的，在CSS2中是不被支持的；</li>
 			</ol>
 		</div>
 	</section>
@@ -140,7 +154,7 @@
 		<div class="cont">
 			<textarea cols="90" rows="10">
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-cmn-Hans">
 <head>
 <meta charset="utf-8" />
 <title>@import_CSS参考手册_web前端开发参考手册系列</title>
