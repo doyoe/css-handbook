@@ -613,6 +613,8 @@ if (!Global.isLocal && Global.name) {
 				},
 				'textual' : {
 					'index' : ['文本(Textual)','其它文本值参考'],
+					'inherit' : [],
+					'initial' : [],
 					'string' : ['&lt;string&gt;'],
 					'url' : ['&lt;url&gt;'],
 					'identifier' : ['&lt;identifier&gt;']

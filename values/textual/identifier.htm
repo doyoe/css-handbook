@@ -58,26 +58,32 @@
 					<em class="g-color-light">正常工作的例子：</em>
 					<div class="gquote">
 						<p class="gquote-tit"><strong>示例代码：</strong></p>
-						<blockquote class="gquote-cont"><pre><code>li{counter-increment:<mark>testname</mark>;}
-li{counter-reset:<mark>testname2</mark>;}
-@keyframes <mark>testanimations</mark>{
-	from{opacity:1;}
-	to{opacity:0;}
+						<blockquote class="gquote-cont"><pre><code>li {
+	counter-increment: <mark>testname</mark>;
 }
-</code></pre></blockquote>
+li {
+	counter-reset: <mark>testname2</mark>;
+}
+@keyframes <mark>testanimations</mark> {
+	from { opacity:1; }
+	to { opacity:0; }
+}</code></pre></blockquote>
 					</div>
 				</li>
 				<li>
 					<em class="g-color-light">无法工作的例子：</em>
 					<div class="gquote">
 						<p class="gquote-tit"><strong>示例代码：</strong></p>
-						<blockquote class="gquote-cont"><pre><code>li{counter-increment:<mark>border</mark>;}
-li{counter-reset:<mark>background</mark>;}
-@keyframes <mark>auto</mark>{
-	from{opacity:1;}
-	to{opacity:0;}
+						<blockquote class="gquote-cont"><pre><code>li {
+	counter-increment: <mark>border</mark>;
 }
-</code></pre></blockquote>
+li {
+	counter-reset: <mark>background</mark>;
+}
+@keyframes <mark>auto</mark> {
+	from { opacity:1; }
+	to { opacity:0; }
+}</code></pre></blockquote>
 					</div>
 				</li>
 			</ul>

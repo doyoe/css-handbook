@@ -2,9 +2,9 @@
 <html lang="zh-cmn-Hans">
 <head>
 <meta charset="utf-8" />
-<title>&lt;url&gt;</title>
-<meta name="description" content="CSS3参考手册之: &lt;url&gt;" />
-<meta name="keywords" content="&lt;url&gt;, css3取值, css3, css3参考手册" />
+<title>initial</title>
+<meta name="description" content="CSS3参考手册之: initial" />
+<meta name="keywords" content="initial, css3取值, css3, css3参考手册" />
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <meta name="robots" content="all" />
 <!--[if lte IE 8]>
@@ -19,7 +19,7 @@
 		<span>&#187;</span>
 		<a href="../index.htm">取值与单位列表</a>
 		<span>&#187;</span>
-		<a href="index.htm" id="category" rel="values/textual" name="url">文本值</a>
+		<a href="index.htm" id="category" rel="values/textual" name="initial">文本值</a>
 		<span>&#187;</span>
 	</div>
 	<div class="to">
@@ -39,48 +39,32 @@
 </nav>
 <header id="hd">
 	<section id="title" class="g-mod">
-		<h1 class="tit">&lt;url&gt;</h1>
+		<h1 class="tit">initial</h1>
 		<ul class="info">
-			<li><strong>版本：CSS2</strong></li>
+			<li><strong>版本：CSS3</strong></li>
 		</ul>
 		<!-- 插入浏览器信息 -->
 	</section>
 </header>
 <section id="bd">
-	<section class="g-mod g-attr" id="syntax">
-		<h2 class="tit">语法：</h2>
-		<div class="cont">
-			<p>URL 是对一个资源的指针，它使用函数符号 &lt;url&gt; 来表示，语法如下：</p>
-			<p><strong>&lt;url&gt;</strong> = url( <a href="string.htm">&lt;string&gt;</a> &lt;url-modifier&gt;* )</p>
-		</div>
-	</section>
 	<section id="intro" class="g-mod g-attr">
 		<h2 class="tit">说明：</h2>
 		<div class="cont">
-			<strong>在网页上提供一个资源地址。（图像，声频，视频或浏览器支持的其他任何资源）</strong>
+			<strong>属性初始值。</strong>
 			<ul>
+				<li>initial属于 <dfn>CSS-wide</dfn> 关键字，这表示所有的属性都可以接受该值。</li>
+				<li>如果你想重置某个属性为 User Agent 默认设置，那么就可以使用initial</li>
 				<li>
-					<p>由于历史原因，
-						&lt;url&gt; 可以不加引号，所以对于 &lt;url&gt; 的处理，有引号和无引号都是正确的，示例代码如下：</p>
+					<em class="g-color-light">正常工作的例子：</em>
 					<div class="gquote">
 						<p class="gquote-tit"><strong>示例代码：</strong></p>
-						<blockquote class="gquote-cont"><code><xmp>div {
-	background-image: url("1.gif");
+						<blockquote class="gquote-cont"><code><xmp>ul {
+	list-style: none;
 }
-div {
-	background-image: url(1.gif);
+.news-list {
+	list-style: initial;
 }</xmp></code></blockquote>
-						<p class="gquote-info">以上2个定义是等价的。</p>
-					</div>
-				</li>
-				<li>
-					使用在<a href="../../rules/@import.htm">@import</a>上时，可以使用 <a href="string.htm">&lt;string&gt;</a> 来表示一个 &lt;url&gt;，也就是说可以省略 url() 符号，直接是一个资源地址，示例代码如下：
-					<div class="gquote">
-						<p class="gquote-tit"><strong>示例代码：</strong></p>
-						<blockquote class="gquote-cont"><code><xmp>@import url(global.css);
-@import "global.css";  // 使用 <string> 表示 <url>
-</xmp></code></blockquote>
-						<p class="gquote-info">以上2种方式都有效。</p>
+						<p class="gquote-info">如上述代码，有可能ul会被reset掉list-style，如果你想某个地方需要默认定义，那么就可以直接设置为 initial</p>
 					</div>
 				</li>
 			</ul>
@@ -109,14 +93,17 @@ div {
 				</thead>
 				<tbody>
 					<tr>
-						<td class="support">6.0+</td>
-						<td class="support">2.0+</td>
-						<td class="support">4.0+</td>
-						<td class="support">3.1+</td>
-						<td class="support">3.5+</td>
-						<td class="support">3.2+</td>
-						<td class="support">2.1+</td>
-						<td class="support">18.0+</td>
+						<td class="unsupport" rowspan="2">6.0-11.0</td>
+						<td class="unsupport">2.0-18.0</td>
+						<td class="support" rowspan="2">4.0+</td>
+						<td class="support" rowspan="2">3.1+</td>
+						<td class="support" rowspan="2">15.0+</td>
+						<td class="support" rowspan="2">3.2+</td>
+						<td class="support" rowspan="2">2.1+</td>
+						<td class="support" rowspan="2">18.0+</td>
+					</tr>
+					<tr>
+						<td class="support">19.0+</td>
 					</tr>
 				</tbody>
 			</table>
