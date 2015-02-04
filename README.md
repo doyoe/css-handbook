@@ -38,7 +38,9 @@ CSS参考手册目前正在v4.1.7草案中。广泛接受[Issues](https://github
 * 新增了[参考资源列表](http://css.doyoe.com/experience/refer.htm)；
 * 一些其它修改，包括：语法错误，连接错误，UI微调等；
 
-###查看：[历史版本](http://css.doyoe.com:8081/introduction/change-list.htm)
+###历史版本：
+
+查看 [change log](http://css.doyoe.com:8081/introduction/change-list.htm)
 
 ## GitHub计划
 
