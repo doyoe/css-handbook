@@ -40,7 +40,7 @@ CSS参考手册目前正在v4.1.7草案中。广泛接受[Issues](https://github
 
 ###历史版本：
 
-查看 [change log](http://css.doyoe.com:8081/introduction/change-list.htm)
+查看 [版本变更记录](http://css.doyoe.com/introduction/change-list.htm)
 
 ## GitHub计划
 
