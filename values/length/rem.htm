@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-cmn-Hans">
 <head>
 <meta charset="utf-8" />
 <title>rem</title>
@@ -47,7 +47,7 @@
 	</section>
 </header>
 <section id="bd">
-	<section id="syntax" class="g-mod g-attr">
+	<section id="intro" class="g-mod g-attr">
 		<h2 class="tit">说明：</h2>
 		<div class="cont">
 			<strong>相对长度单位。相对于根元素(即html元素)<a href="../../properties/font/font-size.htm">font-size</a>计算值的倍数</strong>
@@ -64,24 +64,32 @@
 			<table class="g-data">
 				<thead>
 					<tr>
-						<th><span class="browser-ie">IE</span></th>
-						<th><span class="browser-firefox">Firefox</span></th>
-						<th><span class="browser-safari">Safari</span></th>
-						<th><span class="browser-chrome">Chrome</span></th>
-						<th><span class="browser-opera">Opera</span></th>
+						<th>IE</th>
+						<th>Firefox</th>
+						<th>Chrome</th>
+						<th>Safari</th>
+						<th>Opera</th>
+						<th>iOS Safari</th>
+						<th>Android Browser</th>
+						<th>Android Chrome</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
 						<td class="unsupport">6.0-8.0</td>
-						<td rowspan="2" class="support">4.0</td>
-						<td class="unsupport">4.0</td>
-						<td rowspan="2" class="support">4.0</td>
-						<td rowspan="2" class="support">15.0</td>
+						<td class="unsupport">2.0-3.5</td>
+						<td class="support" rowspan="2">4.0+</td>
+						<td class="unsupport">3.1-4.0</td>
+						<td class="support" rowspan="2">15.0+</td>
+						<td class="unsupport">3.2</td>
+						<td class="support" rowspan="2">2.1+</td>
+						<td class="support" rowspan="2">18.0+</td>
 					</tr>
 					<tr>
-						<td class="support">9.0</td>
-						<td class="support">4.1</td>
+						<td class="support">9.0+</td>
+						<td class="support">3.6+</td>
+						<td class="support">5.0+</td>
+						<td class="support">4.1+</td>
 					</tr>
 				</tbody>
 			</table>
@@ -92,14 +100,19 @@
 		<div class="cont">
 			<textarea cols="90" rows="10">
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-cmn-Hans">
 <head>
 <meta charset="utf-8" />
 <title>rem_CSS参考手册_web前端开发参考手册系列</title>
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <style>
-html,h1{font-size:12px;}
-p{font-size:2rem;}
+html,
+h1 {
+	font-size: 12px;
+}
+p {
+	font-size: 2rem;
+}
 </style>
 </head>
 <body>

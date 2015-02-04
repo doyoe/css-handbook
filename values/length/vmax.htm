@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-cmn-Hans">
 <head>
 <meta charset="utf-8" />
 <title>vmax</title>
@@ -47,13 +47,15 @@
 	</section>
 </header>
 <section id="bd">
-	<section id="syntax" class="g-mod g-attr">
+	<section id="intro" class="g-mod g-attr">
 		<h2 class="tit">说明：</h2>
 		<div class="cont">
 			<strong>相对于视口的宽度或高度中较大的那个。其中最大的那个被均分为100单位的vmax</strong>
 			<div class="gquote">
 				<p class="gquote-tit"><strong>示例代码：</strong></p>
-				<blockquote class="gquote-cont"><pre><code>h1{font-size:8vmax;}</code></pre></blockquote>
+				<blockquote class="gquote-cont"><code><xmp>h1 {
+	font-size: 8vmax;
+}</xmp></code></blockquote>
 				<p class="gquote-info">如果视口的宽度是300mm，高度是200mm，那么上述代码中h1元素的字号将为16mm，即(8x200)/100，因为宽度比高度要大，所以计算的时候相对于宽度。</p>
 			</div>
 		</div>
@@ -69,24 +71,34 @@
 			<table class="g-data">
 				<thead>
 					<tr>
-						<th><span class="browser-ie">IE</span></th>
-						<th><span class="browser-firefox">Firefox</span></th>
-						<th><span class="browser-safari">Safari</span></th>
-						<th><span class="browser-chrome">Chrome</span></th>
-						<th><span class="browser-opera">Opera</span></th>
+						<th>IE</th>
+						<th>Firefox</th>
+						<th>Chrome</th>
+						<th>Safari</th>
+						<th>Opera</th>
+						<th>iOS Safari</th>
+						<th>Android Browser</th>
+						<th>Android Chrome</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td rowspan="2" class="unsupport">6.0-11.0</td>
-						<td class="unsupport">4.0-18.0</td>
-						<td rowspan="2" class="unsupport">4.0-8.0</td>
+						<td class="unsupport" rowspan="2">6.0-11.0</td>
+						<td class="unsupport">2.0-18.0</td>
 						<td class="unsupport">4.0-25.0</td>
-						<td rowspan="2" class="support">15.0</td>
+						<td class="unsupport">3.1-6.0</td>
+						<td class="support" rowspan="2">15.0+</td>
+						<td class="unsupport">3.2-7.1</td>
+						<td class="unsupport">2.1-4.3</td>
+						<td class="unsupport">18.0-25.0</td>
 					</tr>
 					<tr>
-						<td class="support">19.0</td>
-						<td class="support">26</td>
+						<td class="support">19.0+</td>
+						<td class="support">26.0+</td>
+						<td class="support">6.1+</td>
+						<td class="support">8.0+</td>
+						<td class="support">4.4+</td>
+						<td class="support">26.0+</td>
 					</tr>
 				</tbody>
 			</table>
@@ -97,13 +109,15 @@
 		<div class="cont">
 			<textarea cols="90" rows="10">
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-cmn-Hans">
 <head>
 <meta charset="utf-8" />
 <title>vmax_CSS参考手册_web前端开发参考手册系列</title>
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <style>
-p{font-size:5vmax;}
+p {
+	font-size: 5vmax;
+}
 </style>
 </head>
 <body>
