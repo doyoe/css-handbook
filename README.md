@@ -38,6 +38,8 @@ CSS参考手册目前正在v4.1.7草案中。广泛接受[Issues](https://github
 * 新增了[参考资源列表](http://css.doyoe.com/experience/refer.htm)；
 * 一些其它修改，包括：语法错误，连接错误，UI微调等；
 
+###查看：[历史版本](http://css.doyoe.com:8081/introduction/change-list.htm)
+
 ## GitHub计划
 
 CSS参考手册从v4.1.4开始，代码都托管到[GitHub](https://github.com/doyoe/css-handbook)上。大家可以给手册提[Issues](https://github.com/doyoe/css-handbook/issues)和[Pull Requests](https://github.com/doyoe/css-handbook/pulls)。
