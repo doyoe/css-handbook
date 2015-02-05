@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-cmn-Hans">
 <head>
 <meta charset="utf-8" />
 <title>Descendant combinator (E F)</title>
@@ -50,7 +50,7 @@
 	<section id="syntax" class="g-mod g-attr">
 		<h2 class="tit">语法：</h2>
 		<div class="cont">
-			<p><strong>E F</strong>{ sRules }</p>
+			<p><strong>E F</strong> { sRules }</p>
 		</div>
 	</section>
 	<section id="intro" class="g-mod g-attr">
@@ -63,22 +63,18 @@
 						<p class="gquote-tit"><strong>E F VS. E&gt;F：</strong></p>
 						<blockquote class="gquote-cont"><code><xmp><style>
 	/* 包含选择符(E F) */
-	ul li{color:#f00;}
+	.demo div { border:1px solid #f00; }
 	/* 子选择符(E>F) */
-	ul>li{color:#f00;}
+	.demo > div { border:1px solid #f00; }
 </style>
-<ul class="demo">
-	<li>1</li>
-	<li>2
-		<ul>
-			<li>2.1</li>
-			<li>2.2</li>
-			<li>2.3</li>
-		</ul>
-	</li>
-	<li>3</li>
-</ul></xmp></code></blockquote>
-						<p class="gquote-info">此例，如果使用 .demo li{color:#f00;} ，那么 1, 2, 2.1, 2.2, 2.3, 3 都将会变成红色；如果使用 .demo&gt;li{color:#f00;}，那么只有 1, 2, 3 会变成红色，即只有子元素会被命中；</p>
+<div class="demo">
+	<div>0
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+	</div>
+</div></xmp></code></blockquote>
+						<p class="gquote-info">此例，如果使用<code class="incode">.demo div</code>，那么 0, 1, 2, 3 都有有边框；如果使用 <code class="incode">.demo > div</code>，那么只有 0 有边框，即只有子元素会被命中；</p>
 					</div>
 				</li>
 			</ul>
@@ -95,20 +91,26 @@
 			<table class="g-data">
 				<thead>
 					<tr>
-						<th><span class="browser-ie">IE</span></th>
-						<th><span class="browser-firefox">Firefox</span></th>
-						<th><span class="browser-safari">Safari</span></th>
-						<th><span class="browser-chrome">Chrome</span></th>
-						<th><span class="browser-opera">Opera</span></th>
+						<th>IE</th>
+						<th>Firefox</th>
+						<th>Chrome</th>
+						<th>Safari</th>
+						<th>Opera</th>
+						<th>iOS Safari</th>
+						<th>Android Browser</th>
+						<th>Android Chrome</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
 						<td class="support">6.0</td>
-						<td class="support">4.0</td>
-						<td class="support">4.0</td>
-						<td class="support">4.0</td>
-						<td class="support">15.0</td>
+						<td class="support">2.0+</td>
+						<td class="support">4.0+</td>
+						<td class="support">3.1+</td>
+						<td class="support">3.5+</td>
+						<td class="support">3.2+</td>
+						<td class="support">2.1+</td>
+						<td class="support">18.0+</td>
 					</tr>
 				</tbody>
 			</table>
@@ -119,13 +121,15 @@
 		<div class="cont">
 			<textarea cols="90" rows="10">
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-cmn-Hans">
 <head>
 <meta charset="utf-8" />
 <title>包含选择符 (E F)_CSS参考手册_web前端开发参考手册系列</title>
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <style>
-ul li{color:#f00;}
+ul li {
+	color: #f00;
+}
 </style>
 </head>
 <body>

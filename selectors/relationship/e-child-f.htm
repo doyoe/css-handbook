@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-cmn-Hans">
 <head>
 <meta charset="utf-8" />
 <title>Child combinator (E&gt;F)</title>
@@ -50,7 +50,7 @@
 	<section id="syntax" class="g-mod g-attr">
 		<h2 class="tit">语法：</h2>
 		<div class="cont">
-			<p><strong>E&gt;F</strong>{ sRules }</p>
+			<p><strong>E&gt;F</strong> { sRules }</p>
 		</div>
 	</section>
 	<section id="intro" class="g-mod g-attr">
@@ -60,25 +60,17 @@
 			<ul>
 				<li>与<a href="ef.htm">包含选择符</a>不同的是，子选择符只能命中子元素，而不能命中孙辈。
 					<div class="gquote">
-						<p class="gquote-tit"><strong>E F VS. E&gt;F：</strong></p>
-						<blockquote class="gquote-cont"><code><xmp><style>
-	/* 包含选择符(E F) */
-	ul li{color:#f00;}
-	/* 子选择符(E>F) */
-	ul>li{color:#f00;}
-</style>
-<ul class="demo">
-	<li>1</li>
-	<li>2
-		<ul>
-			<li>2.1</li>
-			<li>2.2</li>
-			<li>2.3</li>
-		</ul>
-	</li>
-	<li>3</li>
-</ul></xmp></code></blockquote>
-						<p class="gquote-info">此例，如果使用 .demo li{color:#f00;} ，那么 1, 2, 2.1, 2.2, 2.3, 3 都将会变成红色；如果使用 .demo&gt;li{color:#f00;}，那么只有 1, 2, 3 会变成红色，即只有子元素会被命中；</p>
+						<p class="gquote-tit"><strong>示例：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp>.demo > div {
+	position: relative;
+}
+
+<div class="demo">
+	<div class="a">
+		<div class="b">子选择符</div>
+	</div>
+</div></xmp></code></blockquote>
+						<p class="gquote-info">此例只有 .a 会被命中，因为它是 .demo 的子元素；</p>
 					</div>
 				</li>
 			</ul>
@@ -95,23 +87,29 @@
 			<table class="g-data">
 				<thead>
 					<tr>
-						<th><span class="browser-ie">IE</span></th>
-						<th><span class="browser-firefox">Firefox</span></th>
-						<th><span class="browser-safari">Safari</span></th>
-						<th><span class="browser-chrome">Chrome</span></th>
-						<th><span class="browser-opera">Opera</span></th>
+						<th>IE</th>
+						<th>Firefox</th>
+						<th>Chrome</th>
+						<th>Safari</th>
+						<th>Opera</th>
+						<th>iOS Safari</th>
+						<th>Android Browser</th>
+						<th>Android Chrome</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
 						<td class="unsupport">6.0</td>
-						<td rowspan="2" class="support">4.0</td>
-						<td rowspan="2" class="support">4.0</td>
-						<td rowspan="2" class="support">4.0</td>
-						<td rowspan="2" class="support">15.0</td>
+						<td class="support" rowspan="2">2.0+</td>
+						<td class="support" rowspan="2">4.0+</td>
+						<td class="support" rowspan="2">3.1+</td>
+						<td class="support" rowspan="2">3.5+</td>
+						<td class="support" rowspan="2">3.2+</td>
+						<td class="support" rowspan="2">2.1+</td>
+						<td class="support" rowspan="2">18.0+</td>
 					</tr>
 					<tr>
-						<td class="support">7.0</td>
+						<td class="support">7.0+</td>
 					</tr>
 				</tbody>
 			</table>
@@ -122,13 +120,15 @@
 		<div class="cont">
 			<textarea cols="90" rows="10">
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-cmn-Hans">
 <head>
 <meta charset="utf-8" />
 <title>子选择符 (E&gt;F)_CSS参考手册_web前端开发参考手册系列</title>
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <style>
-.test>li>a{color:#f00;}
+.test > li > a {
+	color: #f00;
+}
 </style>
 </head>
 <body>
