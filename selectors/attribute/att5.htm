@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-cmn-Hans">
 <head>
 <meta charset="utf-8" />
 <title>E[att$=&quot;val&quot;]</title>
@@ -50,7 +50,7 @@
 	<section id="syntax" class="g-mod g-attr">
 		<h2 class="tit">语法：</h2>
 		<div class="cont">
-			<p><strong>E[att$=&quot;val&quot;]</strong>{ sRules }</p>
+			<p><strong>E[att$=&quot;val&quot;]</strong> { sRules }</p>
 		</div>
 	</section>
 	<section id="intro" class="g-mod g-attr">
@@ -60,7 +60,9 @@
 			<div class="gquote">
 				<p class="gquote-tit"><strong>例如：</strong></p>
 				<blockquote class="gquote-cont"><code><xmp><style>
-div[class$="c"]{border:2px solid #000;}
+div[class$="c"] {
+	border: 2px solid #000;
+}
 </style>
 
 <div class="abc">1</div>
@@ -81,23 +83,29 @@ div[class$="c"]{border:2px solid #000;}
 			<table class="g-data">
 				<thead>
 					<tr>
-						<th><span class="browser-ie">IE</span></th>
-						<th><span class="browser-firefox">Firefox</span></th>
-						<th><span class="browser-safari">Safari</span></th>
-						<th><span class="browser-chrome">Chrome</span></th>
-						<th><span class="browser-opera">Opera</span></th>
+						<th>IE</th>
+						<th>Firefox</th>
+						<th>Chrome</th>
+						<th>Safari</th>
+						<th>Opera</th>
+						<th>iOS Safari</th>
+						<th>Android Browser</th>
+						<th>Android Chrome</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
 						<td class="unsupport">6.0</td>
-						<td rowspan="2" class="support">4.0</td>
-						<td rowspan="2" class="support">4.0</td>
-						<td rowspan="2" class="support">4.0</td>
-						<td rowspan="2" class="support">15.0</td>
+						<td class="support" rowspan="2">2.0+</td>
+						<td class="support" rowspan="2">4.0+</td>
+						<td class="support" rowspan="2">3.1+</td>
+						<td class="support" rowspan="2">3.5+</td>
+						<td class="support" rowspan="2">3.2+</td>
+						<td class="support" rowspan="2">2.1+</td>
+						<td class="support" rowspan="2">18.0+</td>
 					</tr>
 					<tr>
-						<td class="support">7.0</td>
+						<td class="support">7.0+</td>
 					</tr>
 				</tbody>
 			</table>
@@ -108,13 +116,15 @@ div[class$="c"]{border:2px solid #000;}
 		<div class="cont">
 			<textarea cols="90" rows="10">
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-cmn-Hans">
 <head>
 <meta charset="utf-8" />
 <title>属性选择符 E[att$=&quot;val&quot;]_CSS参考手册_web前端开发参考手册系列</title>
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <style>
-li[class$="a"]{color:#f00;}
+li[class$="a"] {
+	color: #f00;
+}
 </style>
 </head>
 <body>
