@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-cmn-Hans">
 <head>
 <meta charset="utf-8" />
 <title>E::placeholder</title>
@@ -50,7 +50,7 @@
 	<section id="syntax" class="g-mod g-attr">
 		<h2 class="tit">语法：</h2>
 		<div class="cont">
-			<p><strong>E::placeholder</strong>{ sRules }</p>
+			<p><strong>E::placeholder</strong> { sRules }</p>
 		</div>
 	</section>
 	<section id="intro" class="g-mod g-attr">
@@ -58,7 +58,7 @@
 		<div class="cont">
 			<strong>设置对象文字占位符的样式。</strong>
 			<ul>
-				<li>::placeholder 伪元素用于控制表单元素文字占位符的外观，它允许开发者/设计师改变文字占位符的样式，默认的文字占位符为浅灰色。</li>
+				<li>::placeholder 伪元素用于控制表单输入框占位符的外观，它允许开发者/设计师改变文字占位符的样式，默认的文字占位符为浅灰色。</li>
 				<li>当表单背景色为类似的颜色时它可能效果并不是很明显，那么就可以使用这个伪元素来改变文字占位符的颜色。</li>
 				<li class="g-color-light">需要注意的是，除了Firefox是 ::[prefix]placeholder，其他浏览器都是使用 ::[prefix]input-placeholder</li>
 				<li>Firefox支持该伪元素使用<a href="../../properties/user-interface/text-overflow.htm">text-overflow</a>属性来处理溢出问题。</li>
@@ -92,36 +92,44 @@ input::-moz-placeholder { // Firefox19+
 				<li><span class="support">浅绿</span> = 支持</li>
 				<li><span class="unsupport">红色</span> = 不支持</li>
 				<li><span class="partsupport">粉色</span> = 部分支持</li>
-				<li><span class="unknown">灰色</span> = 未知</li>
 			</ul>
-			<!-- compatible:start -->
 			<table class="g-data">
 				<thead>
 					<tr>
-						<th><span class="browser-ie">IE</span></th>
-						<th><span class="browser-firefox">Firefox</span></th>
-						<th><span class="browser-chrome">Chrome</span></th>
-						<th><span class="browser-safari">Safari</span></th>
-						<th><span class="browser-opera">Opera</span></th>
+						<th>IE</th>
+						<th>Firefox</th>
+						<th>Chrome</th>
+						<th>Safari</th>
+						<th>Opera</th>
+						<th>iOS Safari</th>
+						<th>Android Browser</th>
+						<th>Android Chrome</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
 						<td class="unsupport">6.0-9.0</td>
-						<td rowspan="2" class="partsupport">4.0-35.0 <sup class="fix">-moz-</sup></td>
-						<td rowspan="2" class="partsupport">4.0-41.0 <sup class="fix">-webkit-</sup></td>
-						<td class="unsupport">4.0</td>
-						<td rowspan="2" class="partsupport">15.0-26.0 <sup class="fix">-webkit-</sup></td>
+						<td class="unsupport">2.0-3.6</td>
+						<td class="partsupport" rowspan="3">4.0-43.0<br /><sup class="fix">-webkit-</sup></td>
+						<td class="unsupport">3.1-4.0</td>
+						<td class="partsupport" rowspan="3">15.0-28.0<br /><sup class="fix">-webkit-</sup></td>
+						<td class="unsupport">3.2-4.1</td>
+						<td class="partsupport" rowspan="3">2.1-4.4.4<br /><sup class="fix">-webkit-</sup></td>
+						<td class="partsupport" rowspan="3">18.0-40.0<br /><sup class="fix">-webkit-</sup></td>
 					</tr>
 					<tr>
-						<td class="partsupport">10.0-11.0 <sup class="fix">-ms-</sup></td>
-						<td class="partsupport">5.0-8.0 <sup class="fix">-webkit-</sup></td>
+						<td class="partsupport" rowspan="2">10.0-11.0<br /><sup class="fix">-ms-</sup></td>
+						<td class="partsupport">4.0-18.0<br /><sup class="fix">-moz-</sup> <sup><a href="#support1">#1</a></sup></td>
+						<td class="partsupport" rowspan="2">5.0-8.1<br /><sup class="fix">-webkit-</sup></td>
+						<td class="partsupport" rowspan="2">4.3-8.1<br /><sup class="fix">-webkit-</sup></td>
+					</tr>
+					<tr>
+						<td class="partsupport">19.0-38.0<br /><sup class="fix">-moz-</sup></td>
 					</tr>
 				</tbody>
 			</table>
-			<!-- compatible:end -->
 			<ol class="support-info">
-				<li>::-moz-placeholder 伪元素在Firefox 19+替代了之前的 :-moz-placeholder 伪类</li>
+				<li id="support1">::-moz-placeholder 伪元素在Firefox 19+替代了之前的 :-moz-placeholder 伪类</li>
 			</ol>
 		</div>
 	</section>
@@ -130,7 +138,7 @@ input::-moz-placeholder { // Firefox19+
 		<div class="cont">
 			<textarea cols="90" rows="10">
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-cmn-Hans">
 <head>
 <meta charset="utf-8" />
 <title>E::placeholder_CSS参考手册_web前端开发参考手册系列</title>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-cmn-Hans">
 <head>
 <meta charset="utf-8" />
 <title>E:first-letter/E::first-letter</title>
@@ -50,7 +50,7 @@
 	<section id="syntax" class="g-mod g-attr">
 		<h2 class="tit">语法：</h2>
 		<div class="cont">
-			<p><strong>E:first-letter/E::first-letter</strong>{ sRules }</p>
+			<p><strong>E:first-letter/E::first-letter</strong> { sRules }</p>
 		</div>
 	</section>
 	<section id="intro" class="g-mod g-attr">
@@ -79,34 +79,47 @@
 			<table class="g-data">
 				<thead>
 					<tr>
-						<th><span class="browser-ie">IE</span></th>
-						<th><span class="browser-firefox">Firefox</span></th>
-						<th><span class="browser-safari">Safari</span></th>
-						<th><span class="browser-chrome">Chrome</span></th>
-						<th><span class="browser-opera">Opera</span></th>
+						<th>Selector</th>
+						<th>IE</th>
+						<th>Firefox</th>
+						<th>Chrome</th>
+						<th>Safari</th>
+						<th>Opera</th>
+						<th>iOS Safari</th>
+						<th>Android Browser</th>
+						<th>Android Chrome</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td class="partsupport">5.5-6.0 <sup><a href="#support1">#1</a> <a href="#support2">#2</a></sup></td>
-						<td rowspan="3" class="support">1.0</td>
-						<td rowspan="3" class="support">1.0</td>
-						<td rowspan="3" class="support">1.0</td>
-						<td class="partsupport">3.5 <sup><a href="#support3">#3</a></sup></td>
+						<td rowspan="2"><strong>Basic Support</strong></td>
+						<td class="partsupport">6.0 <sup><a href="#support1">#1</a></sup></td>
+						<td class="support" rowspan="5">2.0+</td>
+						<td class="support" rowspan="5">4.0+</td>
+						<td class="support" rowspan="5">3.1+</td>
+						<td class="support" rowspan="5">3.5+</td>
+						<td class="support" rowspan="5">3.2+</td>
+						<td class="support" rowspan="5">2.1+</td>
+						<td class="support" rowspan="5">18.0+</td>
 					</tr>
 					<tr>
-						<td class="partsupport">7.0-8.0 <sup><a href="#support3">#3</a></sup></td>
-						<td rowspan="2" class="support">7.0</td>
+						<td class="support">7.0+</td>
 					</tr>
 					<tr>
-						<td class="support">9.0</td>
+						<td rowspan="4">::first-letter</td>
+						<td class="unsupport">6.0</td>
+					</tr>
+					<tr>
+						<td class="partsupport">7.0-8.0 <sup><a href="#support2">#2</a></sup></td>
+					</tr>
+					<tr>
+						<td class="support">9.0+</td>
 					</tr>
 				</tbody>
 			</table>
 			<ol class="support-info">
 				<li id="support1">E:first-letter选择符不能紧挨着规则集大括号，需留有空格或换行。</li>
 				<li id="support2">本质上并不支持伪元素的双冒号(::)写法，而是忽略掉了其中的一个冒号，仍以单冒号来解析，所以等同变相支持了E::first-letter。</li>
-				<li id="support3">不支持伪元素的双冒号(::)写法</li>
 			</ol>
 		</div>
 	</section>
@@ -115,7 +128,7 @@
 		<div class="cont">
 			<textarea cols="90" rows="10">
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-cmn-Hans">
 <head>
 <meta charset="utf-8" />
 <title>E::first-letter_CSS参考手册_web前端开发参考手册系列</title>

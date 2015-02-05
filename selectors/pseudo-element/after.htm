@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-cmn-Hans">
 <head>
 <meta charset="utf-8" />
 <title>E:after/E::after</title>
@@ -50,7 +50,7 @@
 	<section id="syntax" class="g-mod g-attr">
 		<h2 class="tit">语法：</h2>
 		<div class="cont">
-			<p><strong>E:after/E::after</strong>{ sRules }</p>
+			<p><strong>E:after/E::after</strong> { sRules }</p>
 		</div>
 	</section>
 	<section id="intro" class="g-mod g-attr">
@@ -76,42 +76,79 @@
 			<table class="g-data">
 				<thead>
 					<tr>
-						<th><span class="browser-ie">IE</span></th>
-						<th><span class="browser-firefox">Firefox</span></th>
-						<th><span class="browser-safari">Safari</span></th>
-						<th><span class="browser-chrome">Chrome</span></th>
-						<th><span class="browser-opera">Opera</span></th>
+						<th>Selector</th>
+						<th>IE</th>
+						<th>Firefox</th>
+						<th>Chrome</th>
+						<th>Safari</th>
+						<th>Opera</th>
+						<th>iOS Safari</th>
+						<th>Android Browser</th>
+						<th>Android Chrome</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
+						<td rowspan="2"><strong>Basic Support</strong></td>
 						<td class="unsupport">6.0-7.0</td>
-						<td class="partsupport">1.0 <sup><a href="#support1">#1</a> <a href="#support2">#2</a> <a href="#support3">#3</a></sup></td>
-						<td rowspan="3" class="partsupport">4.0-6.0 <sup><a href="#support3">#3</a></sup></td>
-						<td rowspan="2" class="partsupport">1.0-25.0 <sup><a href="#support3">#3</a></sup></td>
-						<td class="partsupport">4.0 <sup><a href="#support2">#2</a> <a href="#support3">#3</a></sup></td>
+						<td class="support">2.0-3.0 <sup><a href="#support2">#2</a></sup></td>
+						<td class="support" rowspan="5">4.0+</td>
+						<td class="support" rowspan="5">3.1+</td>
+						<td class="support" rowspan="5">15.0+</td>
+						<td class="support" rowspan="5">3.2+</td>
+						<td class="support" rowspan="5">2.1+</td>
+						<td class="support" rowspan="5">18.0+</td>
 					</tr>
 					<tr>
-						<td class="partsupport">8.0 <sup><a href="#support2">#2</a> <a href="#support3">#3</a></sup></td>
-						<td class="partsupport">1.5 <sup><a href="#support1">#1</a> <a href="#support3">#3</a></sup></td>
-						<td class="partsupport">7.0 <sup><a href="#support3">#3</a></sup></td>
+						<td class="support">8.0+</td>
+						<td class="support">3.5+</td>
 					</tr>
 					<tr>
-						<td rowspan="2" class="partsupport">9.0-11.0 <sup><a href="#support3">#3</a></sup></td>
-						<td class="partsupport">3.5 <sup><a href="#support3">#3</a></sup></td>
-						<td rowspan="2" class="support">26.0</td>
-						<td rowspan="2" class="support">15.0</td>
+						<td rowspan="3">::after</td>
+						<td class="unsupport">6.0-7.0</td>
+						<td class="support">2.0-3.0 <sup><a href="#support2">#2</a></sup></td>
 					</tr>
 					<tr>
-						<td class="support">4.0</td>
-						<td class="support">6.1</td>
+						<td class="partsupport">8.0 <sup><a href="#support1">#1</a></sup></td>
+						<td class="support" rowspan="2">3.5+</td>
+					</tr>
+					<tr>
+						<td class="support">9.0+</td>
+					</tr>
+					<tr>
+						<td rowspan="2">应用动画</td>
+						<td class="unsupport">6.0-9.0</td>
+						<td class="unsupport">2.0-3.5</td>
+						<td class="unsupport">4.0-25.0</td>
+						<td class="unsupport">3.1-6.0</td>
+						<td class="support" rowspan="2">15.0+</td>
+						<td class="unsupport">3.2-6.1</td>
+						<td class="unsupport">2.1-3.0</td>
+						<td class="unsupport">18.0-25.0</td>
+					</tr>
+					<tr>
+						<td class="support">10.0+ <sup><a href="#support3">#3</a></sup></td>
+						<td class="support">4.0+</td>
+						<td class="support">26.0+</td>
+						<td class="support">6.1+</td>
+						<td class="support">7.0+</td>
+						<td class="support">4.0+</td>
+						<td class="support">26.0+</td>
 					</tr>
 				</tbody>
 			</table>
 			<ol class="support-info">
-				<li id="support1">不支持设置属性position, float, list-style-*和一些display值，Firefox3.5开始取消这些限制。</li>
-				<li id="support2">不支持伪元素的双冒号(::)写法</li>
-				<li id="support3">不支持动画<a href="../../properties/animation/index.htm">animation</a>和过渡<a href="../../properties/transition/index.htm">transition</a>效果</li>
+				<li id="support1">本质上并不支持伪元素的双冒号(::)写法，而是忽略掉了其中的一个冒号，仍以单冒号来解析，所以等同变相支持了E::after。</li>
+				<li id="support2">不支持设置属性position, float, list-style-*和一些display值，Firefox3.5开始取消这些限制。</li>
+				<li id="support3">
+					<p>IE10在使用伪元素动画有一个问题：</p>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>例如：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp>.test:hover {}
+.test:hover::after { /* 这时animation和transition才生效 */ }</xmp></code></blockquote>
+							<p class="gquote-info">需要使用一个空的:hover来激活</p>
+					</div>
+				</li>
 			</ol>
 		</div>
 	</section>
@@ -120,7 +157,7 @@
 		<div class="cont">
 			<textarea cols="90" rows="10">
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-cmn-Hans">
 <head>
 <meta charset="utf-8" />
 <title>E::after_CSS参考手册_web前端开发参考手册系列</title>
