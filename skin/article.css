@@ -72,7 +72,7 @@ ol.gitem{list-style-type:decimal;}
 .g-attr .support{background:#90FF90;}
 .g-attr .unsupport{background:#FF9090;}
 .g-attr .partsupport{background:#fdd;}
-.g-attr .unknown{background:#999;}
+.g-attr .unknown{background:#ccc;}
 .g-attr xmp{white-space:pre-wrap;}
 .g-attr .incode{margin:0 3px;padding:1px 3px;border-radius:3px;background-color:#eee;}
 /* comm: g-browser(test browser) */

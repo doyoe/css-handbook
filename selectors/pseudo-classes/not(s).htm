@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-cmn-Hans">
 <head>
 <meta charset="utf-8" />
 <title>E:not(s)</title>
@@ -50,13 +50,25 @@
 	<section id="syntax" class="g-mod g-attr">
 		<h2 class="tit">语法：</h2>
 		<div class="cont">
-			<p><strong>E:not(s)</strong>{ sRules }</p>
+			<p><strong>E:not(s)</strong> { sRules }</p>
 		</div>
 	</section>
 	<section id="intro" class="g-mod g-attr">
 		<h2 class="tit">说明：</h2>
 		<div class="cont">
 			<strong>匹配不含有s选择符的元素E。</strong>
+			<ul>
+				<li>
+					<p>有了这个选择符，那么你将可以很好的处理类似这样的场景：假定有个列表，每个列表项都有一条底边线，但是最后一项不需要底边线</p>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>示例：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp>.demo li:not(:last-child) {
+	border-bottom: 1px solid #ddd;
+}</xmp></code></blockquote>
+						<p class="gquote-info">上述代码的意思是：给该列表中除最后一项外的所有列表项加一条底边线</p>
+					</div>
+				</li>
+			</ul>
 		</div>
 	</section>
 	<section class="g-mod g-attr" id="compatible">
@@ -70,23 +82,29 @@
 			<table class="g-data">
 				<thead>
 					<tr>
-						<th><span class="browser-ie">IE</span></th>
-						<th><span class="browser-firefox">Firefox</span></th>
-						<th><span class="browser-safari">Safari</span></th>
-						<th><span class="browser-chrome">Chrome</span></th>
-						<th><span class="browser-opera">Opera</span></th>
+						<th>IE</th>
+						<th>Firefox</th>
+						<th>Chrome</th>
+						<th>Safari</th>
+						<th>Opera</th>
+						<th>iOS Safari</th>
+						<th>Android Browser</th>
+						<th>Android Chrome</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
 						<td class="unsupport">6.0-8.0</td>
-						<td rowspan="2" class="support">4.0</td>
-						<td rowspan="2" class="support">4.0</td>
-						<td rowspan="2" class="support">14.0</td>
-						<td rowspan="2" class="support">15.0</td>
+						<td class="support" rowspan="2">2.0+</td>
+						<td class="support" rowspan="2">4.0+</td>
+						<td class="support" rowspan="2">3.1+</td>
+						<td class="support" rowspan="2">3.5+</td>
+						<td class="support" rowspan="2">3.2+</td>
+						<td class="support" rowspan="2">2.1+</td>
+						<td class="support" rowspan="2">18.0+</td>
 					</tr>
 					<tr>
-						<td class="support">9.0</td>
+						<td class="support">IE9.0+</td>
 					</tr>
 				</tbody>
 			</table>
@@ -97,13 +115,15 @@
 		<div class="cont">
 			<textarea cols="90" rows="10">
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-cmn-Hans">
 <head>
 <meta charset="utf-8" />
 <title>否定伪类选择符 E:not(s)_CSS参考手册_web前端开发参考手册系列</title>
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <style>
-p:not(.abc){color:#f00;}
+p:not(.abc) {
+	color: #f00;
+}
 </style>
 </head>
 <body>

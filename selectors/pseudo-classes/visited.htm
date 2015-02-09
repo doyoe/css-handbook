@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-cmn-Hans">
 <head>
 <meta charset="utf-8" />
 <title>E:visited</title>
@@ -50,7 +50,7 @@
 	<section id="syntax" class="g-mod g-attr">
 		<h2 class="tit">语法：</h2>
 		<div class="cont">
-			<p><strong>E:visited</strong>{ sRules }</p>
+			<p><strong>E:visited</strong> { sRules }</p>
 		</div>
 	</section>
 	<section id="intro" class="g-mod g-attr">
@@ -62,11 +62,11 @@
 				<li>超链接的4种状态，需要有特定的书写顺序才能生效。
 					<div class="gquote">
 						<p class="gquote-tit"><strong>超链接状态顺序：</strong></p>
-						<blockquote class="gquote-cont"><pre><code>a:link{}
-a:visited{}
-a:hover{}
-a:active{}</code></pre></blockquote>
-						<p class="gquote-info">注意，a:hover 必须位于 a:link 和 a:visited 之后，a:active 必须位于 a:hover 之后<br />可靠的顺序是：l(link)ov(visited)e h(hover)a(active)te, 即用喜欢和讨厌两个词来概括</p>
+						<blockquote class="gquote-cont"><code><xmp>a:link {}
+a:visited {}
+a:hover {}
+a:active {}</xmp></code></blockquote>
+						<p class="gquote-info">注意，a:hover 必须位于 a:link 和 a:visited 之后，a:active 必须位于 a:hover 之后<br />可靠的顺序是：l(link)ov(visited)e h(hover)a(active)te, 即用喜欢(love)和讨厌(hate)两个词来概括</p>
 					</div>
 				</li>
 			</ul>
@@ -83,20 +83,26 @@ a:active{}</code></pre></blockquote>
 			<table class="g-data">
 				<thead>
 					<tr>
-						<th><span class="browser-ie">IE</span></th>
-						<th><span class="browser-firefox">Firefox</span></th>
-						<th><span class="browser-safari">Safari</span></th>
-						<th><span class="browser-chrome">Chrome</span></th>
-						<th><span class="browser-opera">Opera</span></th>
+						<th>IE</th>
+						<th>Firefox</th>
+						<th>Chrome</th>
+						<th>Safari</th>
+						<th>Opera</th>
+						<th>iOS Safari</th>
+						<th>Android Browser</th>
+						<th>Android Chrome</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td class="support">6.0</td>
-						<td class="support">4.0</td>
-						<td class="support">4.0</td>
-						<td class="support">4.0</td>
-						<td class="support">15.0</td>
+						<td class="support">6.0+</td>
+						<td class="support">2.0+</td>
+						<td class="support">4.0+</td>
+						<td class="support">3.1+</td>
+						<td class="support">3.5+</td>
+						<td class="support">3.2+</td>
+						<td class="support">2.1+</td>
+						<td class="support">18.0+</td>
 					</tr>
 				</tbody>
 			</table>
@@ -107,14 +113,18 @@ a:active{}</code></pre></blockquote>
 		<div class="cont">
 			<textarea cols="90" rows="10">
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-cmn-Hans">
 <head>
 <meta charset="utf-8" />
 <title>链接伪类选择符 E:visited_CSS参考手册_web前端开发参考手册系列</title>
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <style>
-:link{color:#03c;}
-:visited{color:#f00;}
+:link {
+	color: #03c;
+}
+:visited {
+	color: #f00;
+}
 </style>
 </head>
 <body>
