@@ -51,7 +51,7 @@
 	<section id="syntax" class="g-mod g-attr">
 		<h2 class="tit">语法：</h2>
 		<div class="cont">
-			<p><strong>font-family</strong>：[ <a href="#dfn-syntax">&lt;family-name&gt;</a> | <a href="#dfn-syntax2">&lt;generic-family&gt;</a> ] [, <a href="#dfn-syntax">&lt;family-name&gt;</a> | <a href="#dfn-syntax2">&lt;generic-family&gt;</a>]*</p>
+			<p><strong>font-family</strong>：[ <a href="#dfn-syntax">&lt;family-name&gt;</a> | <a href="#dfn-syntax2">&lt;generic-family&gt;</a> ] #</p>
 			<p id="dfn-syntax"><strong>&lt;family-name&gt;</strong> = arial | georgia | verdana | helvetica | simsun and etc.</p>
 			<p id="dfn-syntax2"><strong>&lt;generic-family&gt;</strong> = cursive | fantasy | monospace | serif | sans-serif</p>
 			<p><strong>默认值</strong>：<mark class="defaultvalue">由user agent决定</mark></p>
@@ -84,7 +84,7 @@
 					<strong>指定字体序列：</strong>
 					<div class="gquote">
 						<p class="gquote-tit"><strong>写法：</strong></p>
-						<blockquote class="gquote-cont"><pre><code>body{font-family:helvetica,verdana,sans-serif;}</code></pre></blockquote>
+						<blockquote class="gquote-cont"><pre><code>body { font-family: helvetica, verdana, sans-serif; }</code></pre></blockquote>
 						<p class="gquote-info">如上字体定义，假设你机器上没有helvetica字体，但有verdana，这时将会以verdana显示你的文字。</p>
 					</div>
 				</li>
@@ -103,22 +103,28 @@
 			<table class="g-data">
 				<thead>
 					<tr>
-						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
-						<th><span class="browser-ie">IE</span></th>
-						<th><span class="browser-firefox">Firefox</span></th>
-						<th><span class="browser-safari">Safari</span></th>
-						<th><span class="browser-chrome">Chrome</span></th>
-						<th><span class="browser-opera">Opera</span></th>
+						<th>Values</th>
+						<th>IE</th>
+						<th>Firefox</th>
+						<th>Chrome</th>
+						<th>Safari</th>
+						<th>Opera</th>
+						<th>iOS Safari</th>
+						<th>Android Browser</th>
+						<th>Android Chrome</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<th>版本</th>
-						<td class="support">6.0</td>
-						<td class="support">1.0</td>
-						<td class="support">1.0</td>
-						<td class="support">1.0</td>
-						<td class="support">3.5</td>
+						<td><strong>Basic Support</strong></td>
+						<td class="support">6.0+</td>
+						<td class="support">2.0+</td>
+						<td class="support">4.0+</td>
+						<td class="support">3.1+</td>
+						<td class="support">3.5+</td>
+						<td class="support">3.2+</td>
+						<td class="support">2.1+</td>
+						<td class="support">18.0+</td>
 					</tr>
 				</tbody>
 			</table>
@@ -135,7 +141,9 @@
 <title>font-family_CSS参考手册_web前端开发参考手册系列</title>
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <style>
-.test{font-family:'宋体',arial,georgia,verdana,helvetica,sans-serif;}
+.test {
+	font-family: arial, georgia, verdana, simsun, helvetica, sans-serif;
+}
 </style>
 </head>
 <body>

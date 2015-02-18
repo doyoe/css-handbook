@@ -51,7 +51,9 @@
 	<section id="syntax" class="g-mod g-attr">
 		<h2 class="tit">语法：</h2>
 		<div class="cont">
-			<p><strong>font-size</strong>：&lt;absolute-size&gt; | &lt;relative-size&gt; | <a href="../../values/length/index.htm">&lt;length&gt;</a> | <a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a></p>
+			<p><strong>font-size</strong>：<a href="#absolute-size">&lt;absolute-size&gt;</a> | <a href="#relative-size">&lt;relative-size&gt;</a> | <a href="../../values/length/length.htm">&lt;length&gt;</a> | <a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a></p>
+			<p id="absolute-size"><strong>&lt;absolute-size&gt;</strong> = xx-small | x-small | small | medium | large | x-large | xx-large</p>
+			<p id="relative-size"><strong>&lt;relative-size&gt;</strong> = smaller | larger</p>
 			<p><strong>默认值</strong>：<mark class="defaultvalue">medium</mark></p>
 			<p><strong>适用于</strong>：所有元素</p>
 			<p><strong>继承性</strong>：有</p>
@@ -63,12 +65,11 @@
 		<h2 class="tit">取值：</h2>
 		<div class="cont">
 			<dl>
-				<dt>&lt;absolute-size&gt;：</dt>
-				<dd>根据对象字体进行调节。可选参数值：xx-small | x-small | small | medium | large | x-large | xx-large</dd>
-				<dd>以 medium 作为基础参照，xx-small相当于medium 3/5 (h6)，x-small: 3/4，small: 8/9 (h5)，medium: 1 (h4)，large: 6/5 (h3)，x-large: 3/2 (h2)，xx-large: 2/1 (h1)，</dd>
-				<dt>&lt;relative-size&gt;：</dt>
-				<dd>相对于父对像中字体尺寸进行相对调节。使用成比例的em单位计算。可选参数值：smaller | larger</dd>
-				<dt><a href="../../values/length/index.htm">&lt;length&gt;</a>：</dt>
+				<dt><a href="#absolute-size">&lt;absolute-size&gt;</a>：</dt>
+				<dd>根据对象字号进行调节。以 medium 作为基础参照，xx-small相当于medium 3/5 (h6)，x-small: 3/4，small: 8/9 (h5)，medium: 1 (h4)，large: 6/5 (h3)，x-large: 3/2 (h2)，xx-large: 2/1 (h1)，</dd>
+				<dt><a href="#relative-size">&lt;relative-size&gt;</a>：</dt>
+				<dd>相对于父对像中字号进行相对调节。使用成比例的em单位计算。</dd>
+				<dt><a href="../../values/length/length.htm">&lt;length&gt;</a>：</dt>
 				<dd>用长度值指定文字大小。不允许负值。</dd>
 				<dt><a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a>：</dt>
 				<dd>用百分比指定文字大小。其百分比取值是基于父对象中字体的尺寸。不允许负值。</dd>
@@ -95,22 +96,28 @@
 			<table class="g-data">
 				<thead>
 					<tr>
-						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
-						<th><span class="browser-ie">IE</span></th>
-						<th><span class="browser-firefox">Firefox</span></th>
-						<th><span class="browser-safari">Safari</span></th>
-						<th><span class="browser-chrome">Chrome</span></th>
-						<th><span class="browser-opera">Opera</span></th>
+						<th>Values</th>
+						<th>IE</th>
+						<th>Firefox</th>
+						<th>Chrome</th>
+						<th>Safari</th>
+						<th>Opera</th>
+						<th>iOS Safari</th>
+						<th>Android Browser</th>
+						<th>Android Chrome</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<th>版本</th>
-						<td class="support">6.0</td>
-						<td class="support">1.0</td>
-						<td class="support">1.0</td>
-						<td class="support">1.0</td>
-						<td class="support">7.0</td>
+						<td><strong>Basic Support</strong></td>
+						<td class="support">6.0+</td>
+						<td class="support">2.0+</td>
+						<td class="support">4.0+</td>
+						<td class="support">3.1+</td>
+						<td class="support">3.5+</td>
+						<td class="support">3.2+</td>
+						<td class="support">2.1+</td>
+						<td class="support">18.0+</td>
 					</tr>
 				</tbody>
 			</table>
