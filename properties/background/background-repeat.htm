@@ -75,7 +75,7 @@
 				<dt class="g-color-css3-new">round：</dt>
 				<dd>背景图像自动缩放直到适应且填充满整个容器。（CSS3）</dd>
 				<dt class="g-color-css3-new">space：</dt>
-				<dd>背景图像以相同的间距平铺且填充满整个容器或某个方向。<em class="g-color-light">目前为止所有浏览器均不支持</em>（CSS3）</dd>
+				<dd>背景图像以相同的间距平铺且填充满整个容器或某个方向。（CSS3）</dd>
 			</dl>
 		</div>
 	</section>
@@ -85,7 +85,7 @@
 			<strong>设置或检索对象的背景图像如何铺排填充。必须先指定<a href="background-image.htm">background-image</a>属性。</strong>
 			<ul>
 				<li>允许提供2个参数，如果提供全部2个参数，第1个用于横向，第二个用于纵向。</li>
-				<li>如果只提供1个参数，则用于横向和纵向。<em class="glight">特殊值repeat-x和repeat-y除外，因为repeat-x相当于repeat no-repeat，repeat-y相当于no-repeat repeat，即其实repeat-x和repeat-y等价于提供了2个参数值</em></li>
+				<li>如果只提供1个参数，则用于横向和纵向。<em class="g-color-light">特殊值repeat-x和repeat-y除外，因为repeat-x相当于repeat no-repeat，repeat-y相当于no-repeat repeat，即其实repeat-x和repeat-y等价于提供了2个参数值</em></li>
 				<li>对应的脚本特性为<strong>backgroundRepeat</strong>。</li>
 			</ul>
 		</div>
@@ -101,34 +101,48 @@
 			<table class="g-data">
 				<thead>
 					<tr>
-						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
-						<th><span class="browser-ie">IE</span></th>
-						<th><span class="browser-firefox">Firefox</span></th>
-						<th><span class="browser-safari">Safari</span></th>
-						<th><span class="browser-chrome">Chrome</span></th>
-						<th><span class="browser-opera">Opera</span></th>
+						<th>Values</th>
+						<th>IE</th>
+						<th>Firefox</th>
+						<th>Chrome</th>
+						<th>Safari</th>
+						<th>Opera</th>
+						<th>iOS Safari</th>
+						<th>Android Browser</th>
+						<th>Android Chrome</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<th>版本</th>
-						<td class="partsupport">6.0-8.0 <sup><a href="#support1">#1</a> <a href="#support2">#2</a> <a href="#support3">#3</a></sup></td>
-						<td rowspan="2" class="partsupport">4.0-25.0 <sup><a href="#support2">#2</a> <a href="#support3">#3</a></sup></td>
-						<td rowspan="2" class="support">5.1.7</td>
-						<td rowspan="2" class="support">13</td>
-						<td rowspan="2" class="support">10.5</td>
+						<td><strong>Basic Support</strong></td>
+						<td class="support">6.0+</td>
+						<td class="support">2.0+</td>
+						<td class="support" rowspan="5">4.0+</td>
+						<td class="support" rowspan="5">3.1+</td>
+						<td class="support" rowspan="5">15.0+</td>
+						<td class="support" rowspan="5">3.2+</td>
+						<td class="support" rowspan="5">2.1+</td>
+						<td class="support" rowspan="5">18.0+</td>
 					</tr>
 					<tr>
-						<th>版本</th>
-						<td class="support">9.0</td>
+						<td rowspan="2">2个参数值</td>
+						<td class="unsupport">6.0-8.0</td>
+						<td class="unsupport">2.0-12.0</td>
+					</tr>
+					<tr>
+						<td class="support">9.0+</td>
+						<td class="support">13.0+</td>
+					</tr>
+					<tr>
+						<td rowspan="2"><ins class="g-color-css3-new">space</ins> | <ins class="g-color-css3-new">round</ins></td>
+						<td class="unsupport">6.0-8.0</td>
+						<td class="unsupport" rowspan="2">2.0-38.0</td>
+					</tr>
+					<tr>
+						<td class="support">9.0+</td>
 					</tr>
 				</tbody>
 			</table>
-			<ol class="support-info">
-				<li id="support1">不支持：设置多组平铺方式。</li>
-				<li id="support2">不支持：background-repeat使用2个参数值。</li>
-				<li id="support3">不支持：CSS3新增参数值<ins class="g-color-css3-new" title="css3">space</ins> | <ins class="g-color-css3-new" title="css3">round</ins>。</li>
-			</ol>
 		</div>
 	</section>
 	<section id="example" class="g-mod g-attr">
@@ -142,7 +156,11 @@
 <title>background-repeat_CSS参考手册_web前端开发参考手册系列</title>
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <style>
-.test{padding-top:200px;background-image:url(skin/p_103x196_1.jpg);background-repeat:repeat-x;}
+.test {
+	padding-top: 200px;
+	background-image: url(skin/p_103x196_1.jpg);
+	background-repeat: repeat-x;
+}
 </style>
 </head>
 <body>

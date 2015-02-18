@@ -77,6 +77,7 @@
 			<strong>设置或检索对象的背景图像。</strong>
 			<ul>
 				<li>如果设置了background-image，同时也建议设置<a href="background-color.htm">background-color</a>用于当背景图像不可见时保持与文本颜色有一定的对比度。</li>
+				<li>如果定义了多组背景图，且背景图之间有重叠，写在前面的将会盖在写在后面的图像之上。</li>
 				<li>对应的脚本特性为<strong>backgroundImage</strong>。</li>
 			</ul>
 		</div>
@@ -107,78 +108,23 @@
 					<tr>
 						<td><strong>Basic Support</strong></td>
 						<td class="support">6.0+</td>
-						<td class="support" rowspan="4">2.0+</td>
-						<td class="support" rowspan="4">4.0+</td>
-						<td class="support" rowspan="4">3.1+</td>
-						<td class="support" rowspan="4">3.5+</td>
-						<td class="support" rowspan="4">3.2+</td>
-						<td class="support" rowspan="4">2.1+</td>
-						<td class="support" rowspan="4">18.0+</td>
+						<td class="support" rowspan="3">2.0+</td>
+						<td class="support" rowspan="3">4.0+</td>
+						<td class="support" rowspan="3">3.1+</td>
+						<td class="support" rowspan="3">3.5+</td>
+						<td class="support" rowspan="3">3.2+</td>
+						<td class="support" rowspan="3">2.1+</td>
+						<td class="support" rowspan="3">18.0+</td>
 					</tr>
 					<tr>
-						<td rowspan="2"><a href="../../values/image/gradient.htm">&lt;gradient&gt;</a><br />渐变图像</td>
+						<td rowspan="2">Multiple image<br />多组图像</td>
 						<td class="unsupport">6.0-8.0</td>
 					</tr>
 					<tr>
 						<td class="support">9.0+</td>
 					</tr>
-					<tr>
-						<td rowspan="2">Multiple image<br />多组图像</td>
-						<td class="unsupport">6.0-9.0</td>
-					</tr>
-					<tr>
-						<td class="support">10.0+</td>
-					</tr>
-					<tr>
-						<td>image()</td>
-					</tr>
-					<tr>
-						<td>image-set()</td>
-					</tr>
-					<tr>
-						<td>element()</td>
-					</tr>
-					<tr>
-						<td>cross-fade()</td>
-					</tr>
 				</tbody>
 			</table>
-			<table class="g-data">
-				<thead>
-					<tr>
-						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
-						<th><span class="browser-ie">IE</span></th>
-						<th><span class="browser-firefox">Firefox</span></th>
-						<th><span class="browser-safari">Safari</span></th>
-						<th><span class="browser-chrome">Chrome</span></th>
-						<th><span class="browser-opera">Opera</span></th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<th>版本</th>
-						<td class="partsupport">6.0-8.0 <sup><a href="#support1">#1</a> <a href="#support2">#2</a> <a href="#support3">#3</a></sup></td>
-						<td rowspan="3" class="support">4.0</td>
-						<td rowspan="3" class="support">5.1.7</td>
-						<td rowspan="3" class="support">4.0</td>
-						<td rowspan="2" class="partsupport">11.5-11.51 <sup><a href="#support3">#3</a></sup></td>
-					</tr>
-					<tr>
-						<th>版本</th>
-						<td class="partsupport">9.0 <sup><a href="#support2">#2</a> <a href="#support3">#3</a></sup></td>
-					</tr>
-					<tr>
-						<th>版本</th>
-						<td class="support">10.0</td>
-						<td class="support">11.6</td>
-					</tr>
-				</tbody>
-			</table>
-			<ol class="support-info">
-				<li id="support1">不支持：CSS3 background-image多组背景图。</li>
-				<li id="support2">不支持：CSS3新增参数值：<a href="../../values/image/linear-gradient().htm">&lt;linear-gradient&gt;</a> | <a href="../../values/image/repeating-linear-gradient().htm">&lt;repeating-linear-gradient&gt;</a>作为背景图像。</li>
-				<li id="support3">不支持：CSS3新增参数值：<a href="../../values/image/radial-gradient().htm">&lt;radial-gradient&gt;</a> | <a href="../../values/image/repeating-radial-gradient().htm">&lt;repeating-radial-gradient&gt;</a>作为背景图像。</li>
-			</ol>
 		</div>
 	</section>
 	<section id="example" class="g-mod g-attr">
@@ -192,10 +138,28 @@
 <title>background-image_CSS参考手册_web前端开发参考手册系列</title>
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <style>
-.test strong{font-size:16px;}
-.test .url p{padding-top:200px;background-image:url(skin/p_103x196_1.jpg);background-repeat:no-repeat;}
-.test .gradient p{height:100px;background-image:-moz-linear-gradient(top , #45B5DA, #0382AD);background-image:-webkit-gradient(linear, 50% 0%, 50% 100%, from(#45B5DA), to(#0382AD));background-image:-o-linear-gradient(top , #45B5DA, #0382AD);}
-.test .multiple p{padding-top:200px;background-image:url(skin/p_103x196_1.jpg),url(skin/p_103x196_2.jpg),url(skin/p_103x196_3.jpg);background-repeat:no-repeat;background-position:0 0,100px 0,200px 0;}
+.test strong {
+	font-size: 16px;
+}
+.test .url p {
+	padding-top: 200px;
+	background-image: url(skin/p_103x196_1.jpg);
+	background-repeat: no-repeat;
+}
+.test .gradient p {
+	height: 100px;
+	background-image: linear-gradient(to top, #45B5DA, #0382AD);
+}
+.test .multiple p {
+	padding-top: 200px;
+	background-image: url(skin/p_103x196_1.jpg),
+					  url(skin/p_103x196_2.jpg),
+					  url(skin/p_103x196_3.jpg);
+	background-repeat: no-repeat;
+	background-position: 0 0,
+						 100px 0,
+						 200px 0;
+}
 </style>
 </head>
 <body>

@@ -65,22 +65,22 @@
 		<h2 class="tit">取值：</h2>
 		<div class="cont">
 			<dl>
-				<dt>[ <a href="background-color.htm">background-color</a> ]：</dt>
-				<dd>指定对象的背景颜色。</dd>
-				<dt>[ <a href="background-image.htm">background-image</a> ]：</dt>
+				<dt>&lt;' <a href="background-image.htm">background-image</a> '&gt;：</dt>
 				<dd>指定对象的背景图像。可以是真实图片路径或使用渐变创建的“背景图像”</dd>
-				<dt>[ <a href="background-repeat.htm">background-repeat</a> ]：</dt>
-				<dd>指定对象的背景图像如何铺排填充。</dd>
-				<dt>[ <a href="background-attachment.htm">background-attachment</a> ]：</dt>
-				<dd>指定对象的背景图像是随对象内容滚动还是固定的。</dd>
-				<dt>[ <a href="background-position.htm">background-position</a> ]：</dt>
+				<dt>&lt;' <a href="background-position.htm">background-position</a> '&gt;：</dt>
 				<dd>指定对象的背景图像位置。</dd>
-				<dt>[ <a href="background-origin.htm">background-origin</a> ]：</dt>
-				<dd>指定对象的背景图像显示的原点。</dd>
-				<dt>[ <a href="background-clip.htm">background-clip</a> ]：</dt>
-				<dd>指定对象的背景图像向外裁剪的区域。</dd>
-				<dt>[ <a href="background-size.htm">background-size</a> ]：</dt>
+				<dt>&lt;' <a href="background-size.htm">background-size</a> '&gt;：</dt>
 				<dd>指定对象的背景图像的尺寸大小。</dd>
+				<dt>&lt;' <a href="background-repeat.htm">background-repeat</a> '&gt;：</dt>
+				<dd>指定对象的背景图像如何铺排填充。</dd>
+				<dt>&lt;' <a href="background-attachment.htm">background-attachment</a> '&gt;：</dt>
+				<dd>指定对象的背景图像是随对象内容滚动还是固定的。</dd>
+				<dt>&lt;' <a href="background-origin.htm">background-origin</a> '&gt;：</dt>
+				<dd>指定对象的背景图像显示的原点。</dd>
+				<dt>&lt;' <a href="background-clip.htm">background-clip</a> '&gt;：</dt>
+				<dd>指定对象的背景图像向外裁剪的区域。</dd>
+				<dt>&lt;' <a href="background-color.htm">background-color</a> '&gt;：</dt>
+				<dd>指定对象的背景颜色。</dd>
 			</dl>
 		</div>
 	</section>
@@ -132,7 +132,7 @@ background-color:#aaa;</code></pre></blockquote>
 						<blockquote class="gquote-cont"><pre><code>background:url(test1.jpg) no-repeat scroll 10px 20px/50px 60px padding-box,
 	   url(test1.jpg) no-repeat scroll 10px 20px/70px 90px padding-box,
 	   url(test1.jpg) no-repeat scroll 10px 20px/110px 130px padding-box #aaa;</code></pre></blockquote>
-						<p class="gquote-info">这表示[ <a href="background-origin.htm">background-origin</a> ]和[ <a href="background-clip.htm">background-clip</a> ]都使用了padding-box参数值。</p>
+						<p class="gquote-info">这表示 &lt;' <a href="background-origin.htm">background-origin</a> '&gt; 和 &lt;' <a href="background-clip.htm">background-clip</a> '&gt; 都使用了padding-box参数值。</p>
 					</div>
 
 				</li>
@@ -150,39 +150,89 @@ background-color:#aaa;</code></pre></blockquote>
 			<table class="g-data">
 				<thead>
 					<tr>
-						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
-						<th><span class="browser-ie">IE</span></th>
-						<th><span class="browser-firefox">Firefox</span></th>
-						<th><span class="browser-safari">Safari</span></th>
-						<th><span class="browser-chrome">Chrome</span></th>
-						<th><span class="browser-opera">Opera</span></th>
+						<th>Values</th>
+						<th>IE</th>
+						<th>Firefox</th>
+						<th>Chrome</th>
+						<th>Safari</th>
+						<th>Opera</th>
+						<th>iOS Safari</th>
+						<th>Android Browser</th>
+						<th>Android Chrome</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<th>版本</th>
-						<td class="partsupport">6.0-8.0 <sup><a href="#support1">#1</a> <a href="#support2">#2</a> <a href="#support2">#3</a></sup></td>
-						<td class="partsupport">4.0-17.0 <sup><a href="#support2">#2</a> <a href="#support3">#3</a></sup></td>
-						<td rowspan="3" class="partsupport">5.1.7 <sup><a href="#support2">#2</a> <a href="#support3">#3</a></sup></td>
-						<td rowspan="3" class="support">22</td>
-						<td rowspan="3" class="support">11.5</td>
+						<td><strong>Basic Support</strong></td>
+						<td class="support">6.0+</td>
+						<td class="support">2.0+</td>
+						<td class="support">4.0+</td>
+						<td class="support">3.1+</td>
+						<td class="support">3.5+</td>
+						<td class="support">3.2+</td>
+						<td class="support">2.1+</td>
+						<td class="support">18.0+</td>
 					</tr>
 					<tr>
-						<th>版本</th>
-						<td class="partsupport">9 <sup><a href="#support2">#3</a></sup></td>
-						<td class="partsupport">18.0-21.0 <sup><a href="#support3">#3</a></sup></td>
+						<td rowspan="2">Multiple backgrounds</td>
+						<td class="unsupport">6.0-8.0</td>
+						<td class="unsupport">2.0-3.5</td>
+						<td class="support" rowspan="2">4.0+</td>
+						<td class="support" rowspan="2">3.1+</td>
+						<td class="support" rowspan="2">3.5+</td>
+						<td class="support" rowspan="2">3.2+</td>
+						<td class="support" rowspan="2">2.1+</td>
+						<td class="support" rowspan="2">18.0+</td>
 					</tr>
 					<tr>
-						<th>版本</th>
-						<td class="support">10.0</td>
-						<td class="support">22.0</td>
+						<td class="support">9.0+</td>
+						<td class="support">3.6+</td>
+					</tr>
+					<tr>
+						<td rowspan="2">background-size <sup><a href="#support1">#1</a></sup></td>
+						<td class="unsupport">6.0-8.0</td>
+						<td class="unsupport">2.0-17.0</td>
+						<td class="unsupport">4.0-20.0</td>
+						<td class="unsupport">3.1-5.0</td>
+						<td class="support" rowspan="2">15.0+</td>
+						<td class="unsupport">3.2</td>
+						<td class="unsupport">2.1-2.3</td>
+						<td class="unsupport">18.0-20.0</td>
+					</tr>
+					<tr>
+						<td class="support">9.0+</td>
+						<td class="support">18.0+</td>
+						<td class="support">21.0+</td>
+						<td class="support">5.1+</td>
+						<td class="support">4.0+</td>
+						<td class="support">3.0+</td>
+						<td class="support">21.0+</td>
+					</tr>
+					<tr>
+						<td rowspan="2">background-origin<br />background-clip <sup><a href="#support2">#2</a></sup></td>
+						<td class="unsupport">6.0-8.0</td>
+						<td class="unsupport">2.0-21.0</td>
+						<td class="unsupport">4.0-30.0</td>
+						<td class="unsupport">3.1-5.0</td>
+						<td class="support" rowspan="2">15.0+</td>
+						<td class="unsupport">3.2</td>
+						<td class="unsupport">2.1-2.3</td>
+						<td class="unsupport">18.0-30.0</td>
+					</tr>
+					<tr>
+						<td class="support">9.0+</td>
+						<td class="support">22.0+</td>
+						<td class="support">31.0+</td>
+						<td class="support">5.1+</td>
+						<td class="support">4.0+</td>
+						<td class="support">3.0+</td>
+						<td class="support">31.0+</td>
 					</tr>
 				</tbody>
 			</table>
 			<ol class="support-info">
-				<li id="support1">不支持：多组背景图像。</li>
-				<li id="support2">不支持：[ <a href="background-size.htm">background-size</a> ] 写入缩写方式。</li>
-				<li id="support3">不支持：[ <a href="background-origin.htm">background-origin</a> ] || [ <a href="background-clip.htm">background-clip</a> ] 写入缩写方式。</li>
+				<li id="support1">&lt;' <a href="background-size.htm">background-size</a> '&gt; 写入缩写方式。</li>
+				<li id="support2">&lt;' <a href="background-origin.htm">background-origin</a> '&gt; || &lt;' <a href="background-clip.htm">background-clip</a> '&gt; 写入缩写方式。</li>
 			</ol>
 		</div>
 	</section>
@@ -200,9 +250,9 @@ background-color:#aaa;</code></pre></blockquote>
 .test{
 width:300px;
 height:300px;
-background:url(http://css.doyoe.com/properties/background/skin/p_103x196_1.jpg) no-repeat 10px 20px/60px 60px padding-box,
-		   url(http://css.doyoe.com/properties/background/skin/p_103x196_1.jpg) no-repeat 50px 60px/60px 80px padding-box,
-		   url(http://css.doyoe.com/properties/background/skin/p_103x196_1.jpg) no-repeat 90px 100px/60px padding-box #aaa;
+background:url(skin/p_103x196_1.jpg) no-repeat 10px 20px/60px 60px padding-box,
+		   url(skin/p_103x196_1.jpg) no-repeat 50px 60px/60px 80px padding-box,
+		   url(skin/p_103x196_1.jpg) no-repeat 90px 100px/60px padding-box #aaa;
 }
 </style>
 </head>
