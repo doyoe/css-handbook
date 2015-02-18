@@ -51,7 +51,7 @@
 	<section id="syntax" class="g-mod g-attr">
 		<h2 class="tit">语法：</h2>
 		<div class="cont">
-			<p><strong>color</strong>：<a href="../../values/color/index.htm">&lt;color&gt;</a></p>
+			<p><strong>color</strong>：<a href="../../values/color/color.htm">&lt;color&gt;</a></p>
 			<p><strong>默认值</strong>：<mark class="defaultvalue">由user agent决定</mark></p>
 			<p><strong>适用于</strong>：所有元素</p>
 			<p><strong>继承性</strong>：有</p>
@@ -63,7 +63,7 @@
 		<h2 class="tit">取值：</h2>
 		<div class="cont">
 			<dl>
-				<dt><a href="../../values/color/index.htm">&lt;color&gt;</a>：</dt>
+				<dt><a href="../../values/color/color.htm">&lt;color&gt;</a>：</dt>
 				<dd>指定颜色。</dd>
 			</dl>
 		</div>
@@ -75,6 +75,17 @@
 			<ul>
 				<li>可以使用<a href="../../values/color/color-name.htm">Color Name(颜色名称)</a>, <a href="../../values/color/hex.htm">HEX</a>, <a href="../../values/color/rgb.htm">RGB</a>, <a href="../../values/color/rgba.htm">RGBA</a>, <a href="../../values/color/hsl.htm">HSL</a>, <a href="../../values/color/hsla.htm">HSLA</a>, <a href="../../values/color/transparent.htm">transparent</a>来指定color。</li>
 				<li>注意，用颜色名称指定color可能不被一些浏览器接受。</li>
+				<li>
+					<p>color属性值被间接用来提供一个中间值 <a href="../../values/color/currentColor.htm">currentColor</a> 以供其他接受颜色值的属性使用。</p>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>示例：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp>div {
+	border: 10px solid;
+	color: red;
+}</xmp></code></blockquote>
+						<p class="gquote-info">如上代码，没有定义边框的颜色，但定义了color的颜色为red，那么这时red将会作为一个间接值 <a href="../../values/color/currentColor.htm">currentColor</a> 提供给边框颜色属性，所以最终边框色也为red。</p>
+					</div>
+				</li>
 				<li>对应的脚本特性为<strong>color</strong>。</li>
 			</ul>
 		</div>
@@ -90,29 +101,38 @@
 			<table class="g-data">
 				<thead>
 					<tr>
-						<th><span class="browser-ie">IE</span></th>
-						<th><span class="browser-firefox">Firefox</span></th>
-						<th><span class="browser-safari">Safari</span></th>
-						<th><span class="browser-chrome">Chrome</span></th>
-						<th><span class="browser-opera">Opera</span></th>
+						<th>Values</th>
+						<th>IE</th>
+						<th>Firefox</th>
+						<th>Chrome</th>
+						<th>Safari</th>
+						<th>Opera</th>
+						<th>iOS Safari</th>
+						<th>Android Browser</th>
+						<th>Android Chrome</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td class="partsupport">6.0-8.0 <sup><a href="#support1">#1</a></sup></td>
-						<td rowspan="2" class="support">1.0</td>
-						<td rowspan="2" class="support">1.0</td>
-						<td rowspan="2" class="support">1.0</td>
-						<td rowspan="2" class="support">3.5</td>
+						<td><strong>Basic Support</strong></td>
+						<td class="support">6.0+</td>
+						<td class="support" rowspan="3">2.0+</td>
+						<td class="support" rowspan="3">4.0+</td>
+						<td class="support" rowspan="3">3.1+</td>
+						<td class="support" rowspan="3">15.0+</td>
+						<td class="support" rowspan="3">3.2+</td>
+						<td class="support" rowspan="3">2.1+</td>
+						<td class="support" rowspan="3">18.0+</td>
 					</tr>
 					<tr>
-						<td class="support">9.0</td>
+						<td rowspan="2">RGBA, HSL, HSLA,<br />transparent</td>
+						<td class="unsupport">6.0-8.0</td>
+					</tr>
+					<tr>
+						<td class="support">9.0+</td>
 					</tr>
 				</tbody>
 			</table>
-			<ol class="support-info">
-				<li id="support1">不支持：RGBA, HSL, HSLA及transparent参数值来定义颜色。</li>
-			</ol>
 		</div>
 	</section>
 	<section id="example" class="g-mod g-attr">
