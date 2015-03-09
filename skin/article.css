@@ -73,6 +73,7 @@ ol.gitem{list-style-type:decimal;}
 .g-attr .unsupport{background:#FF9090;}
 .g-attr .partsupport{background:#fdd;}
 .g-attr .unknown{background:#ccc;}
+.g-attr .experimentsupport{background:#f90;}
 .g-attr xmp{white-space:pre-wrap;}
 .g-attr .incode{margin:0 3px;padding:1px 3px;border-radius:3px;background-color:#eee;}
 /* comm: g-browser(test browser) */
