@@ -79,6 +79,14 @@ CSS参考手册从v4.1.4开始，代码都托管到[GitHub](https://github.com/d
 
 会阶段性的合并，谢谢。
 
+## 作者
+
+My name is Du Yao, working in Beijing [Qunar.com](http://www.qunar.com) now, is active in [Github](https://github.com/doyoe) and [Weibo](http://weibo.com/doyoe). Thus, you can find some information about me on my [Website](http://www.doyoe.com). Of course, you can visit my [blog](http://blog.doyoe.com) and use my tool sites, including [CSS-handbook](http://css.doyoe.com) and [Web front-end laboratories](http://demo.doyoe.com).
+
+## 版权和许可
+
+Code and documentation copyright 2014-2015 [doyoe.com](http://www.doyoe.com). Code released under [the MIT license](http://opensource.org/licenses/MIT). Docs released under [Creative Commons](http://creativecommons.org/licenses/by/4.0/).
+
 <!--
 ## 构建工具安装与使用
 
