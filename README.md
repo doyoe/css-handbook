@@ -1,19 +1,18 @@
-CSS参考手册
-==========
+# CSS参考手册
 
 持续小步更新中...
 
-##浏览器支持策略
+## 浏览器支持策略
 
 手册在接下来将只更新IE6.0+, Firefox4.0+, Chrome4.0+, Safari3.1+, Opera15.0+（Opera从15.0开始转入webkit阵营）, iOS Safari3.2+, Android Browser2.1+, Android Chrome18.0+ 的支持数据，低于这些版本的数据将不再更新，让我们共同期望未来前端的生态环境越来越好。
 
-##版本更新
+## 版本更新
 
-###草案版本：v4.1.8(WD)
+### 草案版本：v4.1.8(WD)
 
 CSS参考手册目前正在v4.1.8草案中。广泛接受[Issues](https://github.com/doyoe/css-handbook/issues)和[Pull Requests](https://github.com/doyoe/css-handbook/pulls)
 
-###最新版本：v4.1.7
+### 最新版本：v4.1.7
 
 更新时间：2015.03.09
 
@@ -58,7 +57,7 @@ CSS参考手册目前正在v4.1.8草案中。广泛接受[Issues](https://github
 [border-radius](http://css.doyoe.com/properties/border/border-radius.htm)
 及相关属性的参考描述；
 
-###上个版本：v4.1.6
+### 上个版本：v4.1.6
 
 更新时间：2015.01.28
 
@@ -69,7 +68,7 @@ CSS参考手册目前正在v4.1.8草案中。广泛接受[Issues](https://github
 * 修订了 [list-style](http://css.doyoe.com/properties/list/list-style.htm)的语法描述；
 * 新增了 [appearance](http://css.doyoe.com/properties/user-interface/appearance.htm)、 [pointer-events](http://css.doyoe.com/properties/user-interface/pointer-events.htm) 和 [E::placeholder](http://css.doyoe.com/selectors/pseudo-element/placeholder.htm) 参考；
 
-###历史版本：
+### 历史版本：
 
 查看 [版本变更记录](http://css.doyoe.com/introduction/change-list.htm)
 
