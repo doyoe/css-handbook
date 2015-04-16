@@ -113,23 +113,34 @@
 				</thead>
 				<tbody>
 					<tr>
-						<td rowspan="2"><strong>Basic Support</strong></td>
+						<td rowspan="3"><strong>Basic Support</strong></td>
 						<td class="unsupport">6.0-8.0</td>
-						<td class="unsupport">2.0-3.6</td>
-						<td class="support" rowspan="2">4.0+</td>
-						<td class="unsupport">3.1-4.0</td>
-						<td class="support" rowspan="2">15.0+</td>
-						<td class="support" rowspan="2">3.2+</td>
-						<td class="support" rowspan="2">2.1+</td>
-						<td class="support" rowspan="2">18.0+</td>
+						<td class="unsupport">2.0-3.5</td>
+						<td class="support">4.0-14.0 <sup><a href="#support1">#1</a></sup></td>
+						<td class="support">6.0-6.1 <sup><a href="#support1">#1</a></sup></td>
+						<td class="support" rowspan="3">15.0+</td>
+						<td class="support">6.0-6.1 <sup><a href="#support2">#2</a></sup></td>
+						<td class="support">2.1-2.3 <sup><a href="#support1">#1</a></sup> <sup class="fix">-webkit-</sup></td>
+						<td class="support" rowspan="3">18.0+</td>
 					</tr>
 					<tr>
-						<td class="support">9.0+</td>
+						<td class="support" rowspan="2">9.0+</td>
+						<td class="support">3.6 <sup class="fix">-moz-</sup></td>
+						<td class="support" rowspan="2">15.0+</td>
+						<td class="support" rowspan="2">7.0+</td>
+						<td class="support" rowspan="2">7.0+</td>
+						<td class="support">3.0-4.3 <sup><a href="#support1">#1</a></sup></td>
+					</tr>
+					<tr>
 						<td class="support">4.0+</td>
-						<td class="support">4.1+</td>
+						<td class="support">4.4+</td>
 					</tr>
 				</tbody>
 			</table>
+			<ol class="support-info">
+				<li id="support1">不支持写入 &lt;' <a href="background.htm">background</a> '&gt; 缩写方式。</li>
+				<li id="support2">iOS6.1及更早<code class="incode">cover</code>值在body上有bug；同时<code class="incode">background-size: cover; background-attachment: fixed;</code>配合时也有bug。</li>
+			</ol>
 		</div>
 	</section>
 	<section id="example" class="g-mod g-attr">
