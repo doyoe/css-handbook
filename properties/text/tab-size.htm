@@ -51,11 +51,11 @@
 	<section id="syntax" class="g-mod g-attr">
 		<h2 class="tit">语法：</h2>
 		<div class="cont">
-			<p><strong>tab-size</strong>：<a href="../../values/numeric/integer.htm">&lt;integer&gt;</a> | <a href="../../values/length/index.htm">&lt;length&gt;</a></p>
+			<p><strong>tab-size</strong>：<a href="../../values/numeric/integer.htm">&lt;integer&gt;</a> | <a href="../../values/length/length.htm">&lt;length&gt;</a></p>
 			<p><strong>默认值</strong>：<mark class="defaultvalue">8</mark></p>
-			<p><strong>适用于</strong>：块级元素</p>
+			<p><strong>适用于</strong>：块容器</p>
 			<p><strong>继承性</strong>：有</p>
-			<p><strong>动画性</strong>：当值为 <a href="../../values/length/index.htm">&lt;length&gt;</a> 时</p>
+			<p><strong>动画性</strong>：当值为 <a href="../../values/length/length.htm">&lt;length&gt;</a> 时</p>
 			<p><strong>计算值</strong>：指定值</p>
 		</div>
 	</section>
@@ -65,7 +65,7 @@
 			<dl>
 				<dt><a href="../../values/numeric/integer.htm">&lt;integer&gt;</a>：</dt>
 				<dd>用整数值指定制表符的长度。不允许负值。</dd>
-				<dt><a href="../../values/length/index.htm">&lt;length&gt;</a>：</dt>
+				<dt><a href="../../values/length/length.htm">&lt;length&gt;</a>：</dt>
 				<dd>用长度值指定制表符的长度。不允许负值。</dd>
 			</dl>
 		</div>
@@ -75,7 +75,8 @@
 		<div class="cont">
 			<strong>检索或设置对象中的制表符的长度。</strong>
 			<ul>
-				<li>该属性决定了制表符(U+0009)的宽度，整数代表空格(U+0020)的倍数(如：tab-size:4; 表示制表符宽度是4个空格的宽度)，不允许负数</li>
+				<li>该属性决定了制表符(U+0009)的宽度，整数代表空格(U+0020)的倍数(如：tab-size:4; 表示制表符宽度是4个空格的宽度)</li>
+				<li>只有当<a href="white-space.htm">white-space</a>的值为：<code class="incode">pre | pre-wrap</code>时，该属性的定义才有效</li>
 				<li>对应的脚本特性为<strong>tabSize</strong>。</li>
 			</ul>
 		</div>
@@ -91,33 +92,54 @@
 			<table class="g-data">
 				<thead>
 					<tr>
-						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
-						<th><span class="browser-ie">IE</span></th>
-						<th><span class="browser-firefox">Firefox</span></th>
-						<th><span class="browser-safari">Safari</span></th>
-						<th><span class="browser-chrome">Chrome</span></th>
-						<th><span class="browser-opera">Opera</span></th>
+						<th>Values</th>
+						<th>IE</th>
+						<th>Firefox</th>
+						<th>Chrome</th>
+						<th>Safari</th>
+						<th>Opera</th>
+						<th>iOS Safari</th>
+						<th>Android Browser</th>
+						<th>Android Chrome</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<th>版本</th>
-						<td class="unsupport" rowspan="2">6.0-10.0</td>
-						<td class="partsupport" rowspan="2">4.0-18.0 <sup><a href="#support1">#1</a></sup></td>
-						<td class="unsupport" rowspan="2">5.1.7</td>
-						<td class="unsupport">1.0-20.0</td>
-						<td class="partsupport">10.6-14.0 <sup><a href="#support1">#1</a></sup><sup class="fix">-o-</sup></td>
+						<td rowspan="2"><a href="../../values/numeric/integer.htm">&lt;integer&gt;</a></td>
+						<td class="unsupport" rowspan="2">6.0-11.0</td>
+						<td class="unsupport">2.0-3.6</td>
+						<td class="unsupport">4.0-20.0</td>
+						<td class="unsupport">6.0</td>
+						<td class="support" rowspan="2">15.0+</td>
+						<td class="unsupport">6.0-6.1</td>
+						<td class="unsupport">2.1-4.3</td>
+						<td class="support" rowspan="2">18.0+</td>
 					</tr>
 					<tr>
-						<th>版本</th>
-						<td class="partsupport">21.0-31.0 <sup><a href="#support1">#1</a></sup></td>
-						<td class="partsupport">15.0-18.0 <sup><a href="#support1">#1</a></sup></td>
+						<td class="support">4.0-40.0 <sup class="fix">-moz-</sup></td>
+						<td class="support">21.0+</td>
+						<td class="support">6.1+</td>
+						<td class="support">7.0+</td>
+						<td class="support">4.4.0+</td>
+					</tr>
+					<tr>
+						<td rowspan="2"><a href="../../values/length/length.htm">&lt;length&gt;</a></td>
+						<td class="unsupport" rowspan="2">6.0-11.0</td>
+						<td class="unsupport" rowspan="2">2.0-40.0</td>
+						<td class="unsupport">4.0-41.0</td>
+						<td class="unsupport" rowspan="2">6.0-8.0</td>
+						<td class="unsupport">15.0-28.0</td>
+						<td class="unsupport" rowspan="2">6.0-8.3</td>
+						<td class="unsupport" rowspan="2">2.1-4.4.4</td>
+						<td class="unsupport">18.0-41.0</td>
+					</tr>
+					<tr>
+						<td class="support">42.0+</td>
+						<td class="support">29.0+</td>
+						<td class="support">42.0+</td>
 					</tr>
 				</tbody>
 			</table>
-			<ol class="support-info">
-				<li id="support1">不支持：<a href="../../values/length/index.htm">&lt;length&gt;</a>作为参数值。</li>
-			</ol>
 		</div>
 	</section>
 	<section id="example" class="g-mod g-attr">
