@@ -51,7 +51,7 @@
 	<section id="syntax" class="g-mod g-attr">
 		<h2 class="tit">语法：</h2>
 		<div class="cont">
-			<p><strong>text-decoration-color</strong>：<a href="../../values/color/index.htm">&lt;color&gt;</a></p>
+			<p><strong>text-decoration-color</strong>：<a href="../../values/color/color.htm">&lt;color&gt;</a></p>
 			<p><strong>默认值</strong>：<mark class="defaultvalue">采用文本颜色</mark></p>
 			<p><strong>适用于</strong>：所有元素</p>
 			<p><strong>继承性</strong>：无</p>
@@ -63,7 +63,7 @@
 		<h2 class="tit">取值：</h2>
 		<div class="cont">
 			<dl>
-				<dt><a href="../../values/color/index.htm">&lt;color&gt;</a>：</dt>
+				<dt><a href="../../values/color/color.htm">&lt;color&gt;</a>：</dt>
 				<dd>指定颜色。</dd>
 			</dl>
 		</div>
@@ -88,22 +88,36 @@
 			<table class="g-data">
 				<thead>
 					<tr>
-						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
-						<th><span class="browser-ie">IE</span></th>
-						<th><span class="browser-firefox">Firefox</span></th>
-						<th><span class="browser-safari">Safari</span></th>
-						<th><span class="browser-chrome">Chrome</span></th>
-						<th><span class="browser-opera">Opera</span></th>
+						<th>Values</th>
+						<th>IE</th>
+						<th>Firefox</th>
+						<th>Chrome</th>
+						<th>Safari</th>
+						<th>Opera</th>
+						<th>iOS Safari</th>
+						<th>Android Browser</th>
+						<th>Android Chrome</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<th>版本</th>
-						<td class="unsupport">6.0-11.0</td>
-						<td class="support">6.0-29.0 <sup class="fix">-moz-</sup></td>
-						<td class="unsupport">5.1.7</td>
-						<td class="unsupport">1.0-31.0</td>
-						<td class="unsupport">3.5-21.0</td>
+						<td rowspan="3"><strong>Basic Support</strong></td>
+						<td class="unsupport" rowspan="3">6.0-11.0</td>
+						<td class="unsupport">2.0-5.0</td>
+						<td class="unsupport" rowspan="3">4.0-45.0</td>
+						<td class="unsupport">6.0-7.0</td>
+						<td class="unsupport" rowspan="3">15.0-29.0</td>
+						<td class="unsupport">6.0-7.1</td>
+						<td class="unsupport" rowspan="3">2.1-4.4.4</td>
+						<td class="unsupport" rowspan="3">18.0-42.0</td>
+					</tr>
+					<tr>
+						<td class="support">6.0-35.0<sup class="fix">-moz-</sup></td>
+						<td class="support" rowspan="2">7.1-8.0<sup class="fix">-webkit-</sup><sup><a href="#support1">#1</a></sup></td>
+						<td class="support" rowspan="2">8.0-8.3<sup class="fix">-webkit-</sup><sup><a href="#support1">#1</a></sup></td>
+					</tr>
+					<tr>
+						<td class="support">36.0+</td>
 					</tr>
 				</tbody>
 			</table>
@@ -120,41 +134,34 @@
 <title>text-decoration-color_CSS参考手册_web前端开发参考手册系列</title>
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <style>
-.test li{margin-top:10px;}
+.test li{
+    margin-top:10px;
+    -webkit-text-decoration-line:underline;
+    -moz-text-decoration-line:underline;
+    text-decoration-line:underline;
+}
 .test li:nth-child(1){
-	-moz-text-decoration-style:solid;
-	-moz-text-decoration-color:#f00;
-	-moz-text-decoration-line:underline;
+    -webkit-text-decoration-color:red;
+    -moz-text-decoration-color:red;
+    text-decoration-color:red;
 }
 .test li:nth-child(2){
-	-moz-text-decoration-style:dotted;
-	-moz-text-decoration-color:#090;
-	-moz-text-decoration-line:underline;
+    -webkit-text-decoration-color:blue;
+    -moz-text-decoration-color:blue;
+    text-decoration-color:blue;
 }
 .test li:nth-child(3){
-	-moz-text-decoration-style:dashed;
-	-moz-text-decoration-color:#999;
-	-moz-text-decoration-line:underline;
-}
-.test li:nth-child(4){
-	-moz-text-decoration-style:double;
-	-moz-text-decoration-color:#000;
-	-moz-text-decoration-line:underline;
-}
-.test li:nth-child(5){
-	-moz-text-decoration-style:wavy;
-	-moz-text-decoration-color:#00f;
-	-moz-text-decoration-line:underline;
+    -webkit-text-decoration-color:yellow;
+    -moz-text-decoration-color:yellow;
+    text-decoration-color:yellow;
 }
 </style>
 </head>
 <body>
 <ul class="test">
-	<li>不同颜色的文字装饰线条</li>
-	<li>不同颜色的文字装饰线条</li>
-	<li>不同颜色的文字装饰线条</li>
-	<li>不同颜色的文字装饰线条</li>
-	<li>不同颜色的文字装饰线条</li>
+    <li>红色的文本装饰线</li>
+    <li>蓝色的文本装饰线</li>
+    <li>黄色的文本装饰线</li>
 </ul>
 </body>
 </html>
