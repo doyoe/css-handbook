@@ -139,7 +139,7 @@
 				</tbody>
 			</table>
 			<ol class="support-info">
-				<li id="support1">支持 &lt;' <a href="text-decoration-style.htm">text-decoration-style</a> '&gt; 写入 &lt;' <a href="text-decoration.htm">text-decoration</a> '&gt; 缩写方式，但无效果。</li>
+				<li id="support1">支持 &lt;' <a href="text-decoration-style.htm">text-decoration-style</a> '&gt; 写入 &lt;' <a href="text-decoration.htm">text-decoration</a> '&gt; 缩写方式，但其<code class="incode">dotted | dashed</code>属性值会表现为实线。</li>
 			</ol>
 		</div>
 	</section>
@@ -161,7 +161,7 @@
 .test .line-through{text-decoration:line-through;}
 .test .blink{text-decoration:blink;}
 .test .text-decoration-css3{
-	-webkit-text-decoration:#f00 solid underline;
+	-webkit-text-decoration:#f00 wavy underline;
 	-moz-text-decoration:#f00 solid underline;
 	text-decoration:#f00 solid underline;
 }
