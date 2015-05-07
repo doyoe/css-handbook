@@ -464,7 +464,8 @@ if (!Global.isLocal && Global.name) {
 					'text-fill-color' : [],
 					'text-stroke' : [],
 					'text-stroke-width' : [],
-					'text-stroke-color' : []
+					'text-stroke-color' : [],
+					'tap-highlight-color' : []
 				}
 			},
 
