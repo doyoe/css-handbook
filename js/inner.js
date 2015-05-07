@@ -286,7 +286,8 @@ if (!Global.isLocal && Global.name) {
 					'letter-spacing' : [],
 					'text-indent' : [],
 					'vertical-align' : [],
-					'line-height' : []
+					'line-height' : [],
+					'text-size-adjust' : []
 				},
 				'text-decoration' : {
 					'index' : ['文本装饰(Text Decoration)','其它文本装饰属性'],
