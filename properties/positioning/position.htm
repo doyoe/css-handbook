@@ -53,7 +53,7 @@
 		<div class="cont">
 			<p><strong>position</strong>：<mark class="defaultvalue">static</mark> | relative | absolute | fixed | <ins class="g-color-css3-new" title="css3">center</ins> | <ins class="g-color-css3-new" title="css3">page</ins> | <ins class="g-color-css3-new" title="css3">sticky</ins></p>
 			<p><strong>默认值</strong>：<mark class="defaultvalue">static</mark></p>
-			<p><strong>适用于</strong>：除<a href="../layout/display.htm">display</a>属性定义为 table-column-group 和 table-column之外的所有元素</p>
+			<p><strong>适用于</strong>：除 &lt;' <a href="../layout/display.htm">display</a> '&gt; 属性定义为<code class="incode">table-column-group</code>和<code class="incode">table-column</code>之外的所有元素</p>
 			<p><strong>继承性</strong>：无</p>
 			<p><strong>动画性</strong>：否</p>
 			<p><strong>计算值</strong>：指定的值</p>
@@ -64,19 +64,19 @@
 		<div class="cont">
 			<dl>
 				<dt>static：</dt>
-				<dd>对象遵循常规流。<a href="top.htm">top</a>，<a href="right.htm">right</a>，<a href="bottom.htm">bottom</a>，<a href="left.htm">left</a>等属性不会被应用。</dd>
+				<dd>对象遵循常规流。 &lt;' <a href="top.htm">top</a> '&gt;，&lt;' <a href="right.htm">right</a> '&gt;，&lt;' <a href="bottom.htm">bottom</a> '&gt;，&lt;' <a href="left.htm">left</a> '&gt;等属性不会被应用。</dd>
 				<dt>relative：</dt>
-				<dd>对象遵循常规流，并且参照自身在常规流中的位置通过<a href="top.htm">top</a>，<a href="right.htm">right</a>，<a href="bottom.htm">bottom</a>，<a href="left.htm">left</a>属性进行偏移时不影响常规流中的任何元素。</dd>
+				<dd>对象遵循常规流，并且参照自身在常规流中的位置通过 &lt;' <a href="top.htm">top</a> '&gt;，&lt;' <a href="right.htm">right</a> '&gt;，&lt;' <a href="bottom.htm">bottom</a> '&gt;，&lt;' <a href="left.htm">left</a> '&gt;属性进行偏移时不影响常规流中的任何元素。</dd>
 				<dt>absolute：</dt>
-				<dd>对象脱离常规流，使用<a href="top.htm">top</a>，<a href="right.htm">right</a>，<a href="bottom.htm">bottom</a>，<a href="left.htm">left</a>等属性进行绝对定位，盒子的偏移位置不影响常规流中的任何元素，其margin不与其他任何margin折叠。</dd>
+				<dd>对象脱离常规流，使用 &lt;' <a href="top.htm">top</a> '&gt;，&lt;' <a href="right.htm">right</a> '&gt;，&lt;' <a href="bottom.htm">bottom</a> '&gt;，&lt;' <a href="left.htm">left</a> '&gt;等属性进行绝对定位，盒子的偏移位置不影响常规流中的任何元素，其margin不与其他任何margin折叠。</dd>
 				<dt>fixed：</dt>
-				<dd>对象脱离常规流，使用<a href="top.htm">top</a>，<a href="right.htm">right</a>，<a href="bottom.htm">bottom</a>，<a href="left.htm">left</a>等属性以窗口为参考点进行定位，当出现滚动条时，对象不会随着滚动。</dd>
+				<dd>对象脱离常规流，使用 &lt;' <a href="top.htm">top</a> '&gt;，&lt;' <a href="right.htm">right</a> '&gt;，&lt;' <a href="bottom.htm">bottom</a> '&gt;，&lt;' <a href="left.htm">left</a> '&gt;等属性以窗口为参考点进行定位，当出现滚动条时，对象不会随着滚动。</dd>
 				<dt class="g-color-css3-new">center：</dt>
-				<dd>对象脱离常规流，使用<a href="top.htm">top</a>，<a href="right.htm">right</a>，<a href="bottom.htm">bottom</a>，<a href="left.htm">left</a>等属性指定盒子的位置或尺寸大小。盒子在其包含容器垂直水平居中。盒子的偏移位置不影响常规流中的任何元素，其margin不与其他任何margin折叠。（CSS3）</dd>
+				<dd>对象脱离常规流，使用 &lt;' <a href="top.htm">top</a> '&gt;，&lt;' <a href="right.htm">right</a> '&gt;，&lt;' <a href="bottom.htm">bottom</a> '&gt;，&lt;' <a href="left.htm">left</a> '&gt;等属性指定盒子的位置或尺寸大小。盒子在其包含容器垂直水平居中。盒子的偏移位置不影响常规流中的任何元素，其margin不与其他任何margin折叠。（CSS3）</dd>
 				<dt class="g-color-css3-new">page：</dt>
-				<dd>盒子的位置计算参照absolute。盒子在分页媒体或者区域块内，盒子的包含块始终是初始包含块，否则取决于每个absolute模式。（CSS3）</dd>
+				<dd>盒子的位置计算参照<code class="incode">absolute</code>。盒子在分页媒体或者区域块内，盒子的包含块始终是初始包含块，否则取决于每个<code class="incode">absolute</code>模式。（CSS3）</dd>
 				<dt class="g-color-css3-new">sticky：</dt>
-				<dd>对象在常态时遵循常规流。它就像是 relative 和 fixed 的合体，当在屏幕中时按常规流排版，当卷动到屏幕外时则表现如fixed。该属性的表现是现实中你见到的吸附效果。（CSS3）</dd>
+				<dd>对象在常态时遵循常规流。它就像是<code class="incode">relative</code>和<code class="incode">fixed</code>的合体，当在屏幕中时按常规流排版，当卷动到屏幕外时则表现如<code class="incode">fixed</code>。该属性的表现是现实中你见到的吸附效果。（CSS3）</dd>
 			</dl>
 		</div>
 		<div class="related">
@@ -88,8 +88,8 @@
 		<div class="cont">
 			<strong>检索对象的定位方式。</strong>
 			<ul>
-				<li>当position的值为 relative | absolute | fixed | <ins class="g-color-css3-new">center</ins> | <ins class="g-color-css3-new">page</ins> | <ins class="g-color-css3-new">sticky</ins> 时，其层叠级别通过<a href="z-index.htm">z-index</a>属性定义。</li>
-				<li>绝对定位的元素，在<a href="top.htm">top</a>，<a href="right.htm">right</a>，<a href="bottom.htm">bottom</a>，<a href="left.htm">left</a>属性未设置时，会紧随在其前面的兄弟元素之后，但在位置上不影响常规流中的任何元素。用这个特性你或许会干这样的事：<a href="http://demo.doyoe.com/css/auto-list/absolute-flow.htm" target="_blank" class="external" rel="external">demo</a></li>
+				<li>当position的值为非<code class="incode">static</code>时，其层叠级别通过 &lt;' <a href="z-index.htm">z-index</a> '&gt; 属性定义。</li>
+				<li>绝对定位的元素，在 &lt;' <a href="top.htm">top</a> '&gt;，&lt;' <a href="right.htm">right</a> '&gt;，&lt;' <a href="bottom.htm">bottom</a> '&gt;，&lt;' <a href="left.htm">left</a> '&gt;属性未设置时，会紧随在其前面的兄弟元素之后，但在位置上不影响常规流中的任何元素。用这个特性你或许会干这样的事：<a href="http://demo.doyoe.com/css/auto-list/absolute-flow.htm" target="_blank" class="external" rel="external">demo</a></li>
 				<li>对应的脚本特性为<strong>position</strong>。</li>
 			</ul>
 		</div>
