@@ -145,41 +145,46 @@
 <title>text-decoration-style_CSS参考手册_web前端开发参考手册系列</title>
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <style>
-.test li{margin-top:10px;}
+.test li{
+    margin-top:10px;
+    -webkit-text-decoration-line:underline;
+    -moz-text-decoration-line:underline;
+    text-decoration-line:underline;
+}
 .test li:nth-child(1){
-	-moz-text-decoration-style:solid;
-	-moz-text-decoration-color:#f00;
-	-moz-text-decoration-line:underline;
+    -webkit-text-decoration-style:solid;
+    -moz-text-decoration-style:solid;
+    text-decoration-style:solid;
 }
 .test li:nth-child(2){
-	-moz-text-decoration-style:dotted;
-	-moz-text-decoration-color:#f00;
-	-moz-text-decoration-line:underline;
+    -webkit-text-decoration-style:double;
+    -moz-text-decoration-style:double;
+    text-decoration-style:double;
 }
 .test li:nth-child(3){
-	-moz-text-decoration-style:dashed;
-	-moz-text-decoration-color:#f00;
-	-moz-text-decoration-line:underline;
+    -webkit-text-decoration-style:dotted;
+    -moz-text-decoration-style:dotted;
+    text-decoration-style:dotted;
 }
 .test li:nth-child(4){
-	-moz-text-decoration-style:double;
-	-moz-text-decoration-color:#f00;
-	-moz-text-decoration-line:underline;
+    -webkit-text-decoration-style:dashed;
+    -moz-text-decoration-style:dashed;
+    text-decoration-style:dashed;
 }
 .test li:nth-child(5){
-	-moz-text-decoration-style:wavy;
-	-moz-text-decoration-color:#f00;
-	-moz-text-decoration-line:underline;
+    -webkit-text-decoration-style:wavy;
+    -moz-text-decoration-style:wavy;
+    text-decoration-style:wavy;
 }
 </style>
 </head>
 <body>
 <ul class="test">
-	<li>下划实线文字</li>
-	<li>下划点线文字</li>
-	<li>下划虚线文字</li>
-	<li>下划双线文字</li>
-	<li>下划波浪线文字</li>
+	<li>文本装饰实线</li>
+    <li>文本装饰双线</li>
+    <li>文本装饰密虚线</li>
+    <li>文本装饰疏虚线</li>
+    <li>文本装饰波浪线</li>
 </ul>
 </body>
 </html>
