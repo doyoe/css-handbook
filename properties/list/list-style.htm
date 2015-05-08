@@ -51,9 +51,9 @@
 	<section id="syntax" class="g-mod g-attr">
 		<h2 class="tit">语法：</h2>
 		<div class="cont">
-			<p><strong>list-style</strong>：[ <a href="list-style-type.htm">list-style-type</a> ] || [ <a href="list-style-position.htm">list-style-position</a> ] || [ <a href="list-style-image.htm">list-style-image</a> ]</p>
+			<p><strong>list-style</strong>：&lt;' <a href="list-style-type.htm">list-style-type</a> '&gt; || &lt;' <a href="list-style-position.htm">list-style-position</a> '&gt; || &lt;' <a href="list-style-image.htm">list-style-image</a> '&gt;</p>
 			<p><strong>默认值</strong>：<mark class="defaultvalue">看独立属性自身</mark></p>
-			<p><strong>适用于</strong>：所有 display:list-item 的元素</p>
+			<p><strong>适用于</strong>：所有 &lt;' <a href="../layout/display.htm">display</a> '&gt; 设置为<code class="incode">list-item</code>的元素</p>
 			<p><strong>继承性</strong>：有</p>
 			<p><strong>动画性</strong>：否</p>
 			<p><strong>计算值</strong>：看独立属性自身</p>
@@ -63,11 +63,11 @@
 		<h2 class="tit">取值：</h2>
 		<div class="cont">
 			<dl>
-				<dt>[ <a href="list-style-type.htm">list-style-type</a> ]：</dt>
+				<dt>&lt;' <a href="list-style-type.htm">list-style-type</a> '&gt;：</dt>
 				<dd>设置或检索对象的列表项所使用的预设标记</dd>
-				<dt>[ <a href="list-style-position.htm">list-style-position</a> ]：</dt>
+				<dt>&lt;' <a href="list-style-position.htm">list-style-position</a> '&gt;：</dt>
 				<dd>设置或检索作为对象的列表项标记如何根据文本排列</dd>
-				<dt>[ <a href="list-style-image.htm">list-style-image</a> ]：</dt>
+				<dt>&lt;' <a href="list-style-image.htm">list-style-image</a> '&gt;：</dt>
 				<dd>设置或检索作为对象的列表项标记的图像</dd>
 			</dl>
 		</div>
@@ -77,7 +77,7 @@
 		<div class="cont">
 			<strong>复合属性。设置列表项目相关内容</strong>
 			<ul>
-				<li>需要注意的是，如果使用 list-style 复合属性，[ <a href="list-style-image.htm">list-style-image</a> ] 属性必须放在最后，否则部分浏览器（包括所有的webkit/blink内核浏览器）将会解析出错。</li>
+				<li>需要注意的是，如果使用 &lt;' list-style '&gt; 复合属性，&lt;' <a href="list-style-image.htm">list-style-image</a> '&gt; 属性必须放在最后，否则部分浏览器（包括所有的webkit/blink内核浏览器）将会解析出错。</li>
 				<li>对应的脚本特性为<strong>listStyle</strong>。</li>
 			</ul>
 		</div>
@@ -93,20 +93,28 @@
 			<table class="g-data">
 				<thead>
 					<tr>
-						<th><span class="browser-ie">IE</span></th>
-						<th><span class="browser-firefox">Firefox</span></th>
-						<th><span class="browser-safari">Safari</span></th>
-						<th><span class="browser-chrome">Chrome</span></th>
-						<th><span class="browser-opera">Opera</span></th>
+						<th>Values</th>
+						<th>IE</th>
+						<th>Firefox</th>
+						<th>Chrome</th>
+						<th>Safari</th>
+						<th>Opera</th>
+						<th>iOS Safari</th>
+						<th>Android Browser</th>
+						<th>Android Chrome</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td class="support">6.0</td>
-						<td class="support">1.0</td>
-						<td class="support">1.0</td>
-						<td class="support">1.0</td>
-						<td class="support">7.0</td>
+						<td><strong>Basic Support</strong></td>
+						<td class="support">6.0+</td>
+						<td class="support">2.0+</td>
+						<td class="support">4.0+</td>
+						<td class="support">6.0+</td>
+						<td class="support">15.0+</td>
+						<td class="support">6.0+</td>
+						<td class="support">2.1+</td>
+						<td class="support">18.0+</td>
 					</tr>
 				</tbody>
 			</table>
