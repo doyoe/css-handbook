@@ -51,11 +51,11 @@
 	<section id="syntax" class="g-mod g-attr">
 		<h2 class="tit">语法：</h2>
 		<div class="cont">
-			<p><strong>outline-color</strong>：<a href="../../values/color/index.htm">&lt;color&gt;</a> | invert</p>
+			<p><strong>outline-color</strong>：<a href="../../values/color/color.htm">&lt;color&gt;</a> | invert</p>
 			<p><strong>默认值</strong>：<mark class="defaultvalue">invert</mark></p>
 			<p><strong>适用于</strong>：所有元素</p>
 			<p><strong>继承性</strong>：无</p>
-			<p><strong>动画性</strong>：当取值为<a href="../../values/color/index.htm">&lt;color&gt;</a>时</p>
+			<p><strong>动画性</strong>：当取值为<a href="../../values/color/color.htm">&lt;color&gt;</a>时</p>
 			<p><strong>计算值</strong>：invert; 当指定为半透明时则对应一个rgba()计算值；如果非半透明值则对应一个rgb()计算值，transparent对应rgb(0,0,0,0)
 			</p>
 		</div>
@@ -64,7 +64,7 @@
 		<h2 class="tit">取值：</h2>
 		<div class="cont">
 			<dl>
-				<dt><a href="../../values/color/index.htm">&lt;color&gt;</a>：</dt>
+				<dt><a href="../../values/color/color.htm">&lt;color&gt;</a>：</dt>
 				<dd>指定颜色。</dd>
 				<dt>invert：</dt>
 				<dd>使用背景色的反色。<em class="glight">该参数值目前仅在IE及Opera下有效</em></dd>
@@ -74,11 +74,11 @@
 	<section id="intro" class="g-mod g-attr">
 		<h2 class="tit">说明：</h2>
 		<div class="cont">
-			<strong>设置或检索对象外的线条轮廓的颜色。</strong>参阅<a href="outline.htm">outline</a>属性。
+			<strong>设置或检索对象外的线条轮廓的颜色。</strong>参阅 &lt;' <a href="outline.htm">outline</a> '&gt; 属性。
 			<ul>
 				<li>outlines相关属性不占据布局空间，不会影响元素的尺寸；</li>
 				<li>outlines可能是非矩形；</li>
-				<li>不允许类似<a href="../border/border-color.htm">border-color</a>属性那样能将自身拆分为<a href="../border/border-top-color.htm">border-top-color</a>,<a href="../border/border-right-color.htm">border-right-color</a>,<a href="../border/border-bottom-color.htm">border-bottom-color</a>,<a href="../border/border-left-color.htm">border-left-color</a></li>
+				<li>不允许类似 &lt;' <a href="../border/border-color.htm">border-color</a>'&gt; 属性那样能将自身拆分为 &lt;' <a href="../border/border-top-color.htm">border-top-color</a>'&gt;, &lt;' <a href="../border/border-right-color.htm">border-right-color</a>'&gt;, &lt;' <a href="../border/border-bottom-color.htm">border-bottom-color</a>'&gt;, &lt;' <a href="../border/border-left-color.htm">border-left-color</a> '&gt;</li>
 				<li>对应的脚本特性为<strong>outlineColor</strong>。</li>
 			</ul>
 		</div>
@@ -94,23 +94,31 @@
 			<table class="g-data">
 				<thead>
 					<tr>
-						<th><span class="browser-ie">IE</span></th>
-						<th><span class="browser-firefox">Firefox</span></th>
-						<th><span class="browser-safari">Safari</span></th>
-						<th><span class="browser-chrome">Chrome</span></th>
-						<th><span class="browser-opera">Opera</span></th>
+						<th>Values</th>
+						<th>IE</th>
+						<th>Firefox</th>
+						<th>Chrome</th>
+						<th>Safari</th>
+						<th>Opera</th>
+						<th>iOS Safari</th>
+						<th>Android Browser</th>
+						<th>Android Chrome</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
+						<td rowspan="2"><strong>Basic Support</strong></td>
 						<td class="unsupport">6.0-7.0</td>
-						<td rowspan="2" class="support">4.0</td>
-						<td rowspan="2" class="support">4.0</td>
-						<td rowspan="2" class="support">4.0</td>
-						<td rowspan="2" class="support">15.0</td>
+						<td class="support" rowspan="2">2.0+</td>
+						<td class="support" rowspan="2">4.0+</td>
+						<td class="support" rowspan="2">6.0+</td>
+						<td class="support" rowspan="2">15.0+</td>
+						<td class="support" rowspan="2">6.0+</td>
+						<td class="support" rowspan="2">2.1+</td>
+						<td class="support" rowspan="2">18.0+</td>
 					</tr>
 					<tr>
-						<td class="support">8.0</td>
+						<td class="support">8.0+</td>
 					</tr>
 				</tbody>
 			</table>
