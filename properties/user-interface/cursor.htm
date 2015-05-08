@@ -66,7 +66,7 @@
 				<dt><a href="../../values/textual/url.htm">&lt;url&gt;</a>：</dt>
 				<dd>使用绝对或者相对地址引入外部图像作为光标形状</dd>
 				<dt><a href="../../values/textual/url.htm">&lt;url&gt;</a> &lt;x&gt; &lt;y&gt;：</dt>
-				<dd>通过&lt;x&gt; &lt;y&gt;两个值指定具体需要显示的图像位置。类似<a href="../background/background-position.htm">background-position</a></dd>
+				<dd>通过&lt;x&gt; &lt;y&gt;两个值指定具体需要显示的图像位置。类似 &lt;' <a href="../background/background-position.htm">background-position</a> '&gt;</dd>
 				<dt>auto：</dt>
 				<dd>用户代理基于当前上下文决定光标形状</dd>
 				<dt>default：</dt>
@@ -111,41 +111,91 @@
 			<table class="g-data">
 				<thead>
 					<tr>
-						<th><span class="browser-ie">IE</span></th>
-						<th><span class="browser-firefox">Firefox</span></th>
-						<th><span class="browser-safari">Safari</span></th>
-						<th><span class="browser-chrome">Chrome</span></th>
-						<th><span class="browser-opera">Opera</span></th>
+						<th>Values</th>
+						<th>IE</th>
+						<th>Firefox</th>
+						<th>Chrome</th>
+						<th>Safari</th>
+						<th>Opera</th>
+						<th>iOS Safari</th>
+						<th>Android Browser</th>
+						<th>Android Chrome</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td class="partsupport">6.0-8.0 <sup><a href="#support1">#1</a> <a href="#support2">#2</a> <a href="#support3">#3</a> <a href="#support4">#4</a> <a href="#support5">#5</a></sup></td>
-						<td class="support">4.0-23.0 <sup><a href="#support6">#6</a> <a href="#support7">#7</a></sup></td>
-						<td rowspan="2" class="support">4.0-22.0 <sup><a href="#support7">#7</a></sup></td>
-						<td rowspan="2" class="support">4.0 <sup><a href="#support7">#7</a></sup></td>
-						<td rowspan="3" class="support">15.0</td>
+						<td><strong>Basic Support</strong></td>
+						<td class="support">6.0-11.0<sup><a href="#support1">#1</a></sup></td>
+						<td class="support">2.0+</td>
+						<td class="support">4.0+</td>
+						<td class="support">6.0+</td>
+						<td class="support">15.0+</td>
+						<td class="support">6.0+</td>
+						<td class="support">2.1+</td>
+						<td class="support">18.0+</td>
 					</tr>
 					<tr>
-						<td class="partsupport">9.0 <sup><a href="#support2">#2</a> <a href="#support3">#3</a> <a href="#support4">#4</a> <a href="#support5">#5</a></sup></td>
-						<td class="support">24.0-27.0 <sup><a href="#support7">#7</a></sup></td>
+						<td rowspan="2">none</td>
+						<td class="unsupport">6.0-8.0</td>
+						<td class="support" rowspan="2">2.0+</td>
+						<td class="support" rowspan="2">4.0+</td>
+						<td class="support" rowspan="2">6.0+</td>
+						<td class="support" rowspan="2">15.0+</td>
+						<td class="support" rowspan="2">6.0+</td>
+						<td class="support" rowspan="2">2.1+</td>
+						<td class="support" rowspan="2">18.0+</td>
 					</tr>
 					<tr>
-						<td class="partsupport">10.0-11.0 <sup><a href="#support3">#3</a> <a href="#support4">#4</a> <a href="#support5">#5</a></sup></td>
-						<td class="support">28.0</td>
-						<td class="support">23.0</td>
-						<td class="support">5.0</td>
+						<td class="support">9.0+</td>
+					</tr>
+					<tr>
+						<td rowspan="2">alias | cell | copy |<br />ew-resize | ns-resize |<br/>nesw-resize |<br/>nwse-resize |<br/>context-menu</td>
+						<td class="unsupport">6.0-9.0</td>
+						<td class="support" rowspan="2">2.0+</td>
+						<td class="support" rowspan="2">4.0+</td>
+						<td class="support" rowspan="2">6.0+</td>
+						<td class="support" rowspan="2">15.0+</td>
+						<td class="support" rowspan="2">6.0+</td>
+						<td class="support" rowspan="2">2.1+</td>
+						<td class="support" rowspan="2">18.0+</td>
+					</tr>
+					<tr>
+						<td class="support">10.0+</td>
+					</tr>
+					<tr>
+						<td rowspan="2">zoom-in | zoom-out</td>
+						<td class="unsupport" rowspan="2">6.0-11.0</td>
+						<td class="support">2.0-27.0<sup class="fix">-moz-</sup></td>
+						<td class="support" rowspan="2">4.0+</td>
+						<td class="support" rowspan="2">6.0+</td>
+						<td class="support" rowspan="2">15.0+</td>
+						<td class="support" rowspan="2">6.0+</td>
+						<td class="support" rowspan="2">2.1+</td>
+						<td class="support" rowspan="2">18.0+</td>
+					</tr>
+					<tr>
+						<td class="support">28.0+</td>
+					</tr>
+					<tr>
+						<td rowspan="2">grab | grabbing</td>
+						<td class="unsupport" rowspan="2">6.0-11.0</td>
+						<td class="support">2.0-23.0<sup class="fix">-moz-</sup></td>
+						<td class="support">4.0-22.0<sup class="fix">-webkit-</sup></td>
+						<td class="support" rowspan="2">6.0+</td>
+						<td class="support" rowspan="2">15.0+</td>
+						<td class="support" rowspan="2">6.0+</td>
+						<td class="support" rowspan="2">2.1+</td>
+						<td class="support">18.0-21.0<sup class="fix">-webkit-</sup></td>
+					</tr>
+					<tr>
+						<td class="support">24.0+</td>
+						<td class="support">23.0+</td>
+						<td class="support">22.0+</td>
 					</tr>
 				</tbody>
 			</table>
 			<ol class="support-info">
-				<li id="support1">不支持：none</li>
-				<li id="support2">不支持：alias, cell, copy, ew-resize, ns-resize, nesw-resize, nwse-resize, context-menu</li>
-				<li id="support3">不支持：url()的position位置，不支持除.cur之外的图像格式。</li>
-				<li id="support4">不支持：zoom-in, zoom-out</li>
-				<li id="support5">不支持：grab, grabbing</li>
-				<li id="support6">厂商前缀：zoom-in, zoom-out</li>
-				<li id="support7">厂商前缀：grab, grabbing</li>
+				<li id="support1">6.0-8.0不支持：url()的position位置，不支持除.cur之外的图像格式。</li>
 			</ol>
 		</div>
 	</section>
