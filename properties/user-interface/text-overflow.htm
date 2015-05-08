@@ -73,10 +73,10 @@
 	<section id="intro" class="g-mod g-attr">
 		<h2 class="tit">说明：</h2>
 		<div class="cont">
-			<strong>当块容器<a href="../layout/overflow.htm">overflow</a>为非visible时，定义内联内容溢出其块容器是否截断或者添加(...)及自定义字符</strong>
+			<strong>当块容器 &lt;' <a href="../layout/overflow.htm">overflow</a> '&gt; 为<code class="incode">非visible</code>时，定义内联内容溢出其块容器是否截断或者添加(...)及自定义字符</strong>
 			<ul>
 				<li>
-					要使得text-overflow属性生效，块容器必须显式定义<a href="../layout/overflow.htm">overflow</a>为非visible值，同时显式或者隐式的定义<a href="../dimension/width.htm">width</a>为非auto值，<a href="../text/white-space.htm">white-space</a>为nowrap值。
+					要使得 &lt;' text-overflow '&gt; 属性生效，块容器必须显式定义 &lt;' <a href="../layout/overflow.htm">overflow</a> '&gt; 为<code class="incode">非visible</code>值，同时显式或者隐式的定义 &lt;' <a href="../dimension/width.htm">width</a> '&gt; 为<code class="incode">非auto</code>值， &lt;' <a href="../text/white-space.htm">white-space</a> '&gt; 为<code class="incode">nowrap</code>值。
 					<p>用代码来解释这段话：</p>
 					<div class="gquote">
 						<p class="gquote-tit"><strong>case 1：</strong></p>
@@ -86,7 +86,7 @@
 <div class="demo">
 	<p>这是一句非常非常长的话，被用来做text-overflow属性测试。</p>
 </div></xmp></code></blockquote>
-						<p class="gquote-info">case 1，我们将text-overflow生效必备的3个属性：<a href="../layout/overflow.htm">overflow</a>, <a href="../dimension/width.htm">width</a>和<a href="../text/white-space.htm">white-space</a>都直接定义在了内联内容的父级块容器上</p>
+						<p class="gquote-info">case 1，我们将text-overflow生效必备的3个属性： &lt;' <a href="../layout/overflow.htm">overflow</a> '&gt; , &lt;' <a href="../dimension/width.htm">width</a> '&gt; 和 &lt;' <a href="../text/white-space.htm">white-space</a> '&gt; 都直接定义在了内联内容的父级块容器上</p>
 					</div>
 					<div class="gquote">
 						<p class="gquote-tit"><strong>case 2：</strong></p>
@@ -97,7 +97,7 @@
 <div class="demo">
 	<p>这是一句非常非常长的话，被用来做text-overflow属性测试。</p>
 </div></xmp></code></blockquote>
-						<p class="gquote-info">case 2，我们将<a href="../dimension/width.htm">width</a>和<a href="../text/white-space.htm">white-space</a>定义在了更外层的块容器上，但case 1和case 2的效果是一样的。因为这2个属性可以被继承</p>
+						<p class="gquote-info">case 2，我们将 &lt;' <a href="../dimension/width.htm">width</a> '&gt; 和 &lt;' <a href="../text/white-space.htm">white-space</a> '&gt; 定义在了更外层的块容器上，但case 1和case 2的效果是一样的。因为这2个属性可以被继承</p>
 					</div>
 				</li>
 				<li>对应的脚本特性为<strong>textOverflow</strong>。</li>
@@ -115,23 +115,31 @@
 			<table class="g-data">
 				<thead>
 					<tr>
-						<th><span class="browser-ie">IE</span></th>
-						<th><span class="browser-firefox">Firefox</span></th>
-						<th><span class="browser-safari">Safari</span></th>
-						<th><span class="browser-chrome">Chrome</span></th>
-						<th><span class="browser-opera">Opera</span></th>
+						<th>Values</th>
+						<th>IE</th>
+						<th>Firefox</th>
+						<th>Chrome</th>
+						<th>Safari</th>
+						<th>Opera</th>
+						<th>iOS Safari</th>
+						<th>Android Browser</th>
+						<th>Android Chrome</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td class="support" rowspan="2">6.0</td>
-						<td class="unsupport">4.0-6.0</td>
-						<td class="support" rowspan="2">4.0</td>
-						<td class="support" rowspan="2">4.0</td>
-						<td class="support" rowspan="2">15.0</td>
+						<td rowspan="2"><strong>Basic Support</strong></td>
+						<td class="support" rowspan="2">6.0+</td>
+						<td class="unsupport">2.0-6.0</td>
+						<td class="support" rowspan="2">4.0+</td>
+						<td class="support" rowspan="2">6.0+</td>
+						<td class="support" rowspan="2">15.0+</td>
+						<td class="support" rowspan="2">6.0+</td>
+						<td class="support" rowspan="2">2.1+</td>
+						<td class="support" rowspan="2">18.0+</td>
 					</tr>
 					<tr>
-						<td class="support">7.0</td>
+						<td class="support">7.0+</td>
 					</tr>
 				</tbody>
 			</table>
