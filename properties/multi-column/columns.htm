@@ -42,7 +42,7 @@
 		<h1 class="tit">columns</h1>
 		<ul class="info">
 			<li><strong>版本：CSS3</strong></li>
-			<li>继承性：无</li>
+			<li>媒体：视觉</li>
 		</ul>
 		<!-- 插入浏览器信息 -->
 	</section>
@@ -51,19 +51,21 @@
 	<section id="syntax" class="g-mod g-attr">
 		<h2 class="tit">语法：</h2>
 		<div class="cont">
-			<p><strong>columns</strong>：[ <a href="column-width.htm">column-width</a> ] || [ <a href="column-count.htm">column-count</a> ]</p>
+			<p><strong>columns</strong>：&lt;' <a href="column-width.htm">column-width</a> '&gt; || &lt;' <a href="column-count.htm">column-count</a> '&gt;</p>
 			<p><strong>默认值</strong>：<mark class="defaultvalue">看每个独立属性</mark></p>
-			<p><strong>适用于</strong>：除table外的非替换块级元素，display:table-cell 元素, 内联块元素</p>
+			<p><strong>适用于</strong>：除table外的非替换块级元素, table cells, inline-block元素</p>
 			<p><strong>继承性</strong>：无</p>
+			<p><strong>动画性</strong>：否</p>
+			<p><strong>计算值</strong>：看每个独立属性</p>
 		</div>
 	</section>
 	<section id="value" class="g-mod g-attr">
 		<h2 class="tit">取值：</h2>
 		<div class="cont">
 			<dl>
-				<dt>[ <a href="column-width.htm">column-width</a> ]：</dt>
+				<dt>&lt;' <a href="column-width.htm">column-width</a> '&gt;：</dt>
 				<dd>设置或检索对象每列的宽度</dd>
-				<dt>[ <a href="column-count.htm">column-count</a> ]：</dt>
+				<dt>&lt;' <a href="column-count.htm">column-count</a> '&gt;：</dt>
 				<dd>设置或检索对象的列数</dd>
 			</dl>
 		</div>
@@ -88,27 +90,32 @@
 			<table class="g-data">
 				<thead>
 					<tr>
-						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
-						<th><span class="browser-ie">IE</span></th>
-						<th><span class="browser-firefox">Firefox</span></th>
-						<th><span class="browser-safari">Safari</span></th>
-						<th><span class="browser-chrome">Chrome</span></th>
-						<th><span class="browser-opera">Opera</span></th>
+						<th>Values</th>
+						<th>IE</th>
+						<th>Firefox</th>
+						<th>Chrome</th>
+						<th>Safari</th>
+						<th>Opera</th>
+						<th>iOS Safari</th>
+						<th>Android Browser</th>
+						<th>Android Chrome</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<th>版本</th>
-						<td class="unsupport">6-9</td>
-						<td class="unsupport">4-8</td>
-						<td rowspan="2" class="experimentsupport">5.1.7</td>
-						<td rowspan="2" class="experimentsupport">13-23</td>
-						<td rowspan="2" class="support">11.1</td>
+						<td rowspan="2"><strong>Basic Support</strong></td>
+						<td class="unsupport">6.0-9.0</td>
+						<td class="unsupport">2.0-8.0</td>
+						<td rowspan="2" class="support">4.0-45.0<sup class="fix">-webkit-</sup></td>
+						<td rowspan="2" class="support">6.0-8.0<sup class="fix">-webkit-</sup></td>
+						<td rowspan="2" class="support">15.0-29.0<sup class="fix">-webkit-</sup></td>
+						<td rowspan="2" class="support">6.0-8.3<sup class="fix">-webkit-</sup></td>
+						<td rowspan="2" class="support">2.1-4.4.4<sup class="fix">-webkit-</sup></td>
+						<td rowspan="2" class="support">18.0-42.0<sup class="fix">-webkit-</sup></td>
 					</tr>
 					<tr>
-						<th>版本</th>
-						<td class="support">10</td>
-						<td class="experimentsupport">9-18</td>
+						<td class="support">10.0+</td>
+						<td class="support">9.0-40.0<sup class="fix">-moz-</sup></td>
 					</tr>
 				</tbody>
 			</table>
