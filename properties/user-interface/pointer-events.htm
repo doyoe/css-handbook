@@ -42,7 +42,7 @@
 		<h1 class="tit">pointer-events</h1>
 		<ul class="info">
 			<li><strong>版本：CSS3</strong></li>
-			<li>继承性：有</li>
+			<li>媒体：视觉</li>
 		</ul>
 		<!-- 插入浏览器信息 -->
 	</section>
@@ -51,10 +51,12 @@
 	<section id="syntax" class="g-mod g-attr">
 		<h2 class="tit">语法：</h2>
 		<div class="cont">
-			<p><strong>pointer-events</strong>：<mark class="defaultvalue">auto</mark> | none | visiblePainted | visibleFill | visibleStroke | visible | painted | fill | stroke | all</p>
+			<p><strong>pointer-events</strong>：<mark class="defaultvalue">auto</mark> | none | visiblepainted | visiblefill | visiblestroke | visible | painted | fill | stroke | all</p>
 			<p><strong>默认值</strong>：<mark class="defaultvalue">auto</mark></p>
 			<p><strong>适用于</strong>：所有元素</p>
 			<p><strong>继承性</strong>：有</p>
+			<p><strong>动画性</strong>：否</p>
+			<p><strong>计算值</strong>：指定值</p>
 		</div>
 	</section>
 	<section id="value" class="g-mod g-attr">
@@ -62,10 +64,10 @@
 		<div class="cont">
 			<dl>
 				<dt>auto：</dt>
-				<dd>与pointer-events属性未指定时的表现效果相同。</dd>
+				<dd>与pointer-events属性未指定时的表现效果相同。在svg内容上与<code class="incode">visiblepainted</code>值相同</dd>
 				<dt>none：</dt>
 				<dd>元素永远不会成为鼠标事件的target。但是，当其后代元素的pointer-events属性指定其他值时，鼠标事件可以指向后代元素，在这种情况下，鼠标事件将在捕获或冒泡阶触发父元素的事件侦听器。</dd>
-				<dd>其他值只能应用在SVG上。</dd>
+				<dt>其他值只能应用在SVG上。</dt>
 			</dl>
 		</div>
 	</section>
@@ -87,31 +89,38 @@
 				<li><span class="unsupport">红色</span> = 不支持</li>
 				<li><span class="partsupport">粉色</span> = 部分支持</li>
 			</ul>
-			<!-- compatible:start -->
 			<table class="g-data">
 				<thead>
 					<tr>
-						<th><span class="browser-ie">IE</span></th>
-						<th><span class="browser-firefox">Firefox</span></th>
-						<th><span class="browser-chrome">Chrome</span></th>
-						<th><span class="browser-safari">Safari</span></th>
-						<th><span class="browser-opera">Opera</span></th>
+						<th>Values</th>
+						<th>IE</th>
+						<th>Firefox</th>
+						<th>Chrome</th>
+						<th>Safari</th>
+						<th>Opera</th>
+						<th>iOS Safari</th>
+						<th>Android Browser</th>
+						<th>Android Chrome</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
+						<td rowspan="2"><strong>Basic Support</strong></td>
 						<td class="unsupport">6.0-10.0</td>
-						<td rowspan="2" class="support">4.0</td>
-						<td rowspan="2" class="support">4.0</td>
-						<td rowspan="2" class="support">4.0</td>
+						<td class="unsupport">2.0-3.5</td>
+						<td rowspan="2" class="support">4.0+</td>
+						<td rowspan="2" class="support">6.0</td>
 						<td rowspan="2" class="support">15.0</td>
+						<td rowspan="2" class="support">6.0</td>
+						<td rowspan="2" class="support">2.1+</td>
+						<td rowspan="2" class="support">18.0+</td>
 					</tr>
 					<tr>
-						<td class="support">11.0</td>
+						<td class="support">11.0+</td>
+						<td class="support">3.6+</td>
 					</tr>
 				</tbody>
 			</table>
-			<!-- compatible:end -->
 		</div>
 	</section>
 	<section id="example" class="g-mod g-attr">
