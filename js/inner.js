@@ -919,7 +919,7 @@ if (!Global.isLocal && Global.name) {
 	//运行示例代码以及相关操作
 	(function(){
 		var example = $('#example'),
-			content = example.find('textarea').val(),
+			content = example.find('textarea'),
 			btnRun = example.find('.g-btn-sure');
 
 		if (example.length) {
@@ -944,14 +944,14 @@ if (!Global.isLocal && Global.name) {
 					click: function(e) {
 						e.preventDefault();
 						var codeWin = window.open();
-						codeWin.document.write(content);
+						codeWin.document.write(content.val());
 						codeWin.document.close();
 					}
 				});
 			}
 
 			//复制代码
-			Global.copy(example.find(".g-btn-copy"), content);
+			Global.copy(example.find(".g-btn-copy"), content.val());
 		}
 	})();
 

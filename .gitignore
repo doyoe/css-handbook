@@ -1,3 +1,12 @@
+# Logs
+logs
+*.log
+
+# Dependency directory
+# Deployed apps should consider commenting this line out:
+# see https://npmjs.org/doc/faq.html#Should-I-check-my-node_modules-folder-into-git
+node_modules
+
 # test
 test.htm
 
@@ -16,3 +25,4 @@ package.json
 *.hhk
 *.hhp
 *.chm
+*.orig
