@@ -42,7 +42,7 @@
 		<h1 class="tit">Media Queries: monochrome</h1>
 		<ul class="info">
 			<li><strong>版本：CSS3</strong></li>
-			<li>接受min/max：是</li>
+			<li>媒体：视觉</li>
 		</ul>
 		<!-- 插入浏览器信息 -->
 	</section>
@@ -52,6 +52,7 @@
 		<h2 class="tit">语法：</h2>
 		<div class="cont">
 			<p><strong>monochrome</strong>：<a href="../../values/numeric/integer.htm">&lt;integer&gt;</a></p>
+			<p><strong>接受min/max前缀</strong>：是</p>
 		</div>
 	</section>
 	<section id="value" class="g-mod g-attr">
@@ -141,13 +142,20 @@
 <title>monochrome of media features_CSS参考手册_web前端开发参考手册系列</title>
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <style>
-@media screen and (monochrome){
-	body{color:#f00;}
+@media screen and (max-monochrome: 0){
+	.test::after {
+		content: "彩色";
+	}
+}
+@media screen and (min-monochrome: 1){
+	.test::after {
+		content: "单色的（黑白色）";
+	}
 }
 </style>
 </head>
 <body>
-<div class="test">当你的输出设备是单色的（黑白色），本行文字显示为红色</div>
+<div class="test">你的输出设备是：</div>
 <script>
 </script>
 </body>
