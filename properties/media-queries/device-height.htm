@@ -71,10 +71,9 @@
 				<li>本特性接受min和max前缀，因此可以派生出<em class="g-color-light">min-device-height</em>和<em class="g-color-light">max-device-height</em>两个媒体特性。
 					<div class="gquote">
 						<p class="gquote-tit"><strong>简单列举几个应用示例：</strong></p>
-						<blockquote class="gquote-cont"><pre><code>@media screen and (device-height:800px){ … }
-	@import url(example.css) screen and (min-device-height:800px);
-	&lt;link media="screen and (min-device-height:300px) and (max-device-height:900px)" rel="stylesheet" href="example.css" /&gt;
-	</code></pre></blockquote>
+						<blockquote class="gquote-cont"><code><xmp>@media screen and (device-height:800px){ … }
+@import url(example.css) screen and (min-device-height:800px);
+<link media="screen and (min-device-height:300px) and (max-device-height:900px)" rel="stylesheet" href="example.css" /></xmp></code></blockquote>
 					</div>
 				</li>
 			</ul>
