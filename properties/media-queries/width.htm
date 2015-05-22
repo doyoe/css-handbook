@@ -71,12 +71,11 @@
 				<li>与<a href="../dimension/width.htm">盒模型width</a>不同，<a href="width.htm">媒体特性width</a>的取值只能是<a href="../../values/length/length.htm">&lt;length&gt;</a>。</li>
 				<li>本特性接受min和max前缀，因此可以派生出<em class="g-color-light">min-width</em>和<em class="g-color-light">max-width</em>两个媒体特性。
 					<div class="gquote">
-
 						<p class="gquote-tit"><strong>简单列举几个应用示例：</strong></p>
-						<blockquote class="gquote-cont"><pre><code>@media screen and (width){ … }
-	@import url(example.css) screen and (width:800px);
-	&lt;link media="screen and (min-width:400px) and (max-width:900px)" rel="stylesheet" href="example.css" /&gt;
-	&lt;?xml-stylesheet media="not screen and (width:800px)" rel="stylesheet" href="example.css" ?&gt;</code></pre></blockquote>
+						<blockquote class="gquote-cont"><code><xmp>@media screen and (width){ … }
+@import url(example.css) screen and (width:800px);
+<link media="screen and (min-width:400px) and (max-width:900px)" rel="stylesheet" href="example.css" />
+<?xml-stylesheet media="not screen and (width:800px)" rel="stylesheet" href="example.css" ?></xmp></code></blockquote>
 					</div>
 				</li>
 			</ul>
