@@ -28,6 +28,7 @@ ol.gitem{list-style-type:decimal;}
 .gquote-cont{zoom:1;overflow:hidden;padding:10px;border-top:1px solid #C3E1FF;}
 .gquote-cont .img{float:left;margin-right:15px;text-align:center;}
 .gquote-cont .code{zoom:1;overflow:hidden;}
+.gquote-cont xmp{margin:0;}
 .gquote-cont li{padding:5px;border-top:1px solid #DDEEFF;}
 .gquote-cont li.first{border-top:0 none;}
 .gquote-cont textarea{width:100%;height:auto;border:none;}
