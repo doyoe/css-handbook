@@ -842,7 +842,7 @@ if (!Global.isLocal && Global.name) {
 		$('#rights').append(testBrowser);
 
 		//在页面的的最后增加copyright模块
-		var copyright = '<p class="copyright">Copyright © 2006-2014 <a href="http://www.doyoe.com/" rel="external" target="_blank">Doyoe</a>. All Rights Reserved</p>'
+		var copyright = '<p class="copyright">Copyright © 2006-'+ new Date().getFullYear() +' <a href="http://www.doyoe.com/" rel="external" target="_blank">Doyoe</a>. All Rights Reserved</p>'
 		$('#rights').append(copyright);
 
 		//在页面的标题后面添加分享功能模块,复制链接等
