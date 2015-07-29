@@ -85,35 +85,52 @@
 							<table class="g-data">
 								<thead>
 									<tr>
-										<th><span class="browser-ie">IE</span></th>
-										<th><span class="browser-firefox">Firefox</span></th>
-										<th><span class="browser-safari">Safari</span></th>
-										<th><span class="browser-chrome">Chrome</span></th>
-										<th><span class="browser-opera">Opera</span></th>
+										<th>Values</th>
+										<th>IE</th>
+										<th>Firefox</th>
+										<th>Chrome</th>
+										<th>Safari</th>
+										<th>Opera</th>
+										<th>iOS Safari</th>
+										<th>Android Browser</th>
+										<th>Android Chrome</th>
 									</tr>
 								</thead>
 								<tbody>
 									<tr>
-										<td class="unsupport">6.0-7.0</td>
-										<td rowspan="3" class="support">4.0-6.0<sup class="fix">-moz-</sup></td>
-										<td rowspan="3" class="support">5.1</td>
-										<td rowspan="3" class="support">4.0-13.0<sup class="fix">-webkit-</sup></td>
-										<td rowspan="3" class="support">15.0</td>
+										<td rowspan="3"><strong>Basic Support</strong></td>
+										<td class="unsupport">6.0-10.0</td>
+										<td class="unsupport">2.0-21.0</td>
+										<td class="unsupport">4.0-20.0</td>
+										<td class="unsupport">6.0</td>
+										<td class="support">15.0+<sup class="fix">-webkit-</sup></td>
+										<td class="unsupport">6.0-6.1</td>
+										<td class="unsupport">2.1-4.3</td>
+										<td class="unsupport">18.0-19.0</td>
 									</tr>
 									<tr>
-										<td class="support">8.0<sup class="fix">-ms-</sup></td>
+										<td class="support" rowspan="2">11.0+</td>
+										<td class="support" rowspan="2">22.0+</td>
+										<td class="support">21.0+<sup class="fix">-webkit-</sup></td>
+										<td class="support">6.1+<sup class="fix">-webkit-</sup></td>
+										<td class="support" rowspan="2">17.0+</td>
+										<td class="support">7.0+<sup class="fix">-webkit-</sup></td>
+										<td class="support" rowspan="2">4.4+</td>
+										<td class="support">20.0+<sup class="fix">-webkit-</sup></td>
 									</tr>
 									<tr>
-										<td class="support">9.0</td>
+										<td class="support">29.0+</td>
+										<td class="support">9.0+</td>
+										<td class="support">9.0+</td>
+										<td class="support">28.0+</td>
 									</tr>
 								</tbody>
 							</table>
 						</div>
-						<strong>假设上述表格是对某属性x的兼容性说明，那表示：</strong>
-						<p>IE6和IE7不支持该属性；</p>
-						<p>IE8、Firefox4.0-6.0、Chrome1.0-13.0对该属性的支持还处在实验性质阶段；</p>
-						<p>IE9、Safari5.1、Opera15及后续版本已支持该属性；</p>
-						<p>如果是处在“实验性质”状态，则各浏览器的私有写法为：IE加 <strong class="g-color-light">-ms-</strong>；Firefox加 <strong class="g-color-light">-moz-</strong>；Safari和Chrome加 <strong class="g-color-light">-webkit-</strong>；Opera15以前加 <strong class="g-color-light">-o-</strong>，Opera15及以后加 <strong class="g-color-light">-webkit-</strong></p>
+						<strong>假设上述表格是对属性 &lt;' <a href="../properties/flex/order.htm">order</a> '&gt; 的兼容性说明，那表示：</strong>
+						<p>IE6.0-10.0不支持该属性，11.0及以后支持该属性；</p>
+						<p>Firefox2.0-21.0不支持该属性，22.0及以后支持该属性；</p>
+						<p>Chrome4.0-20.0不支持该属性，22.0及以后支持该属性但需加厂商前缀 <strong class="g-color-light">-webkit-</strong>，29.0开始支持不带厂商前缀的标准写法；</p>
 					</li>
 				</ul>
 			</li>
