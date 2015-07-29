@@ -51,7 +51,7 @@
 	<section id="syntax" class="g-mod g-attr">
 		<h2 class="tit">语法：</h2>
 		<div class="cont">
-			<p><strong>flex</strong>：none | auto | &lt;' <a href="flex-grow.htm">flex-grow</a> '&gt; &lt;' <a href="flex-shrink.htm">flex-shrink</a> &gt;'? || &lt;' <a href="flex-basis.htm">flex-basis</a> '&gt;</p>
+			<p><strong>flex</strong>：none | &lt;' <a href="flex-grow.htm">flex-grow</a> '&gt; &lt;' <a href="flex-shrink.htm">flex-shrink</a> &gt;'? || &lt;' <a href="flex-basis.htm">flex-basis</a> '&gt;</p>
 			<p><strong>默认值</strong>：<mark class="defaultvalue">看各分拆属性</mark></p>
 			<p><strong>适用于</strong>：弹性盒模型子元素</p>
 			<p><strong>继承性</strong>：无</p>
@@ -79,7 +79,8 @@
 		<div class="cont">
 			<strong>复合属性。设置或检索弹性盒模型对象的子元素如何分配空间。</strong>
 			<ul>
-				<li>如果缩写flex:1, 则其计算值为：1 1 0</li>
+				<li>如果缩写<code class="incode">flex: 1</code>, 则其计算值为：1 1 0%</li>
+				<li>如果缩写<code class="incode">flex: auto</code>, 则其计算值为：1 1 auto</li>
 				<li>
 					<strong>示例：如下情况每个元素的计算宽是多少</strong>
 					<div class="gquote">
