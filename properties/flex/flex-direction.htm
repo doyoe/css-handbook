@@ -64,21 +64,22 @@
 		<div class="cont">
 			<dl>
 				<dt>row：</dt>
-				<dd>横向从左到右排列（左对齐），默认的排列方式。</dd>
+				<dd>主轴与行内轴方向作为默认的书写模式。即横向从左到右排列（左对齐）。</dd>
 				<dt>row-reverse：</dt>
-				<dd>反转横向排列（右对齐），从右往左排，第一项排在最右边。</dd>
+				<dd>对齐方式与row相反。</dd>
 				<dt>column：</dt>
-				<dd>纵向从上往下排列（顶对齐）。</dd>
+				<dd>主轴与块轴方向作为默认的书写模式。即纵向从上往下排列（顶对齐）。</dd>
 				<dt>column-reverse：</dt>
-				<dd>反转纵向排列（底对齐），从下往上排，第一项排在最底边。</dd>
+				<dd>对齐方式与column相反。</dd>
 			</dl>
 		</div>
 	</section>
 	<section id="intro" class="g-mod g-attr">
 		<h2 class="tit">说明：</h2>
 		<div class="cont">
-			<strong>设置或检索伸缩盒对象的子元素在父容器中的位置。</strong>
+			<strong>该属性通过定义flex容器的主轴方向来决定felx子项在flex容器中的位置。这将决定flex需要如何进行排列</strong>
 			<ul>
+				<li>该属性的反转取值不影响元素的绘制，语音和导航顺序，只改变流动方向。这与 &lt;' <a href="../writing-modes/writing-mode.htm">writing-mode</a> '&gt; 和 &lt;' <a href="../writing-modes/direction.htm">direction</a> '&gt; 相同。</li>
 				<li>
 					<strong>示例：将一个容器内的子元素反转横向排列</strong>
 					<div class="gquote">
