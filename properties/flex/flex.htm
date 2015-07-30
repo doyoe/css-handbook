@@ -66,11 +66,16 @@
 				<dt>none：</dt>
 				<dd>none关键字的计算值为: 0 0 auto</dd>
 				<dt>&lt;' <a href="flex-grow.htm">flex-grow</a> '&gt;：</dt>
-				<dd>定义弹性盒子元素的扩展比率。在flex属性中该值如果被省略则默认为<code class="incode">1</code></dd>
+				<dd>用来指定扩展比率，即剩余空间是正值时此「flex子项」相对于「flex容器」里其他「flex子项」能分配到空间比例。<br />
+					在「flex」属性中该值如果被省略则默认为「1」</dd>
 				<dt>&lt;' <a href="flex-shrink.htm">flex-shrink</a> '&gt;：</dt>
-				<dd>定义弹性盒子元素的收缩比率。在flex属性中该值如果被省略则默认为<code class="incode">1</code></dd>
+				<dd>用来指定收缩比率，即剩余空间是负值时此「flex子项」相对于「flex容器」里其他「flex子项」能收缩的空间比例。<br />
+					在「flex」属性中该值如果被省略则默认为「1」</dd>
 				<dt>&lt;' <a href="flex-basis.htm">flex-basis</a> '&gt;：</dt>
-				<dd>定义弹性盒子元素的默认基准值。在flex属性中该值如果被省略则默认为<code class="incode">0%</code></dd>
+				<dd>用来指定伸缩基准值，即在根据伸缩比率计算出剩余空间的分布之前，「flex子项」长度的起始数值。<br />
+					在「flex」属性中该值如果被省略则默认为「0%」<br />
+					在「flex」属性中该值如果被指定为「auto」，则伸缩基准值的计算值是主轴宽度。
+				</dd>
 			</dl>
 		</div>
 	</section>
@@ -79,8 +84,8 @@
 		<div class="cont">
 			<strong>复合属性。设置或检索弹性盒模型对象的子元素如何分配空间。</strong>
 			<ul>
-				<li>如果缩写<code class="incode">flex: 1</code>, 则其计算值为：1 1 0%</li>
-				<li>如果缩写<code class="incode">flex: auto</code>, 则其计算值为：1 1 auto</li>
+				<li>如果缩写「flex: 1」, 则其计算值为「1 1 0%」</li>
+				<li>如果缩写「flex: auto」, 则其计算值为「1 1 auto」</li>
 				<li>
 					<strong>示例：如下情况每个元素的计算宽是多少</strong>
 					<div class="gquote">
