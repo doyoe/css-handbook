@@ -42,7 +42,7 @@
 		<h1 class="tit">flex-direction</h1>
 		<ul class="info">
 			<li><strong>版本：CSS3</strong></li>
-			<li>继承性：无</li>
+			<li>媒体：视觉</li>
 		</ul>
 		<!-- 插入浏览器信息 -->
 	</section>
@@ -53,8 +53,10 @@
 		<div class="cont">
 			<p><strong>flex-direction</strong>：row | row-reverse | column | column-reverse</p>
 			<p><strong>默认值</strong>：<mark class="defaultvalue">row</mark></p>
-			<p><strong>适用于</strong>：伸缩盒容器</p>
+			<p><strong>适用于</strong>：flex容器</p>
 			<p><strong>继承性</strong>：无</p>
+			<p><strong>动画性</strong>：否</p>
+			<p><strong>计算值</strong>：指定值</p>
 		</div>
 	</section>
 	<section id="value" class="g-mod g-attr">
@@ -62,35 +64,38 @@
 		<div class="cont">
 			<dl>
 				<dt>row：</dt>
-				<dd>横向从左到右排列（左对齐），默认的排列方式。</dd>
+				<dd>主轴与行内轴方向作为默认的书写模式。即横向从左到右排列（左对齐）。</dd>
 				<dt>row-reverse：</dt>
-				<dd>反转横向排列（右对齐，从后往前排，最后一项排在最前面。</dd>
+				<dd>对齐方式与row相反。</dd>
 				<dt>column：</dt>
-				<dd>纵向排列。</dd>
+				<dd>主轴与块轴方向作为默认的书写模式。即纵向从上往下排列（顶对齐）。</dd>
 				<dt>column-reverse：</dt>
-				<dd>反转纵向排列，从后往前排，最后一项排在最上面。</dd>
+				<dd>对齐方式与column相反。</dd>
 			</dl>
 		</div>
 	</section>
 	<section id="intro" class="g-mod g-attr">
 		<h2 class="tit">说明：</h2>
 		<div class="cont">
-			<strong>设置或检索伸缩盒对象的子元素在父容器中的位置。</strong>
+			<strong>该属性通过定义flex容器的主轴方向来决定felx子项在flex容器中的位置。这将决定flex需要如何进行排列</strong>
 			<ul>
+				<li>该属性的反转取值不影响元素的绘制，语音和导航顺序，只改变流动方向。这与 &lt;' <a href="../writing-modes/writing-mode.htm">writing-mode</a> '&gt; 和 &lt;' <a href="../writing-modes/direction.htm">direction</a> '&gt; 相同。</li>
 				<li>
-					<strong>示例：将一个容器内的子元素横向排列</strong>
+					<strong>示例：将一个容器内的子元素反转横向排列</strong>
 					<div class="gquote">
-						<p class="gquote-tit"><strong>HTML Code：</strong></p>
-						<blockquote class="gquote-cont"><pre><code>&lt;ul id="flex"&gt;
-	&lt;li&gt;a&lt;/li&gt;
-	&lt;li&gt;b&lt;/li&gt;
-	&lt;li&gt;c&lt;/li&gt;
-&lt;/ul&gt;</code></pre></blockquote>
-					</div>
-					<div class="gquote">
-						<p class="gquote-tit"><strong>CSS Code：</strong></p>
-						<blockquote class="gquote-cont"><pre><code>#box{display:flex;flex-direction:row;list-style:none;}</code></pre></blockquote>
-						<p class="gquote-info">上面代码请自行加上-moz-,-webkit-之类的。flex生效需定义其父元素<a href="../layout/display.htm">display</a>为flex或inline-flex(box或inline-box，这是旧的方式)</p>
+						<p class="gquote-tit"><strong>Code：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp><ul id="flex">
+	<li>a</li>
+	<li>b</li>
+	<li>c</li>
+</ul>
+
+#box {
+	display: flex;
+	flex-direction: row-reverse;
+	list-style: none;
+}</xmp></code></blockquote>
+						<p class="gquote-info">请自行根据需要补全厂商前缀。flex生效需定义 &lt;' <a href="../layout/display.htm">display</a> '&gt; 为flex或inline-flex(box或inline-box，这是旧的方式)</p>
 					</div>
 				</li>
 				<li>对应的脚本特性为<strong>flexDirection</strong>。</li>
@@ -108,30 +113,44 @@
 			<table class="g-data">
 				<thead>
 					<tr>
-						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
-						<th><span class="browser-ie">IE</span></th>
-						<th><span class="browser-firefox">Firefox</span></th>
-						<th><span class="browser-safari">Safari</span></th>
-						<th><span class="browser-chrome">Chrome</span></th>
-						<th><span class="browser-opera">Opera</span></th>
+						<th>Values</th>
+						<th>IE</th>
+						<th>Firefox</th>
+						<th>Chrome</th>
+						<th>Safari</th>
+						<th>Opera</th>
+						<th>iOS Safari</th>
+						<th>Android Browser</th>
+						<th>Android Chrome</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<th>较早版本</th>
+						<td rowspan="3"><strong>Basic Support</strong></td>
 						<td class="unsupport">6.0-10.0</td>
-						<td class="unsupport">4.0-19.0</td>
-						<td class="unsupport">5.1.7-6.0</td>
-						<td class="support">21.0-28.0<sup class="fix">-webkit-</sup></td>
-						<td class="unsupport">9.5-12.0</td>
+						<td class="unsupport">2.0-21.0</td>
+						<td class="unsupport">4.0-20.0</td>
+						<td class="unsupport">6.0</td>
+						<td class="support">15.0+<sup class="fix">-webkit-</sup></td>
+						<td class="unsupport">6.0-6.1</td>
+						<td class="unsupport">2.1-4.3</td>
+						<td class="unsupport">18.0-19.0</td>
 					</tr>
 					<tr>
-						<th>较新版本</th>
-						<td class="support">11.0</td>
-						<td class="support">20.0</td>
-						<td class="support">7.0<sup class="fix">-webkit-</sup></td>
-						<td class="support">29.0</td>
-						<td class="support">12.1</td>
+						<td class="support" rowspan="2">11.0+</td>
+						<td class="support" rowspan="2">22.0+</td>
+						<td class="support">21.0+<sup class="fix">-webkit-</sup></td>
+						<td class="support">6.1+<sup class="fix">-webkit-</sup></td>
+						<td class="support" rowspan="2">17.0+</td>
+						<td class="support">7.0+<sup class="fix">-webkit-</sup></td>
+						<td class="support" rowspan="2">4.4+</td>
+						<td class="support">20.0+<sup class="fix">-webkit-</sup></td>
+					</tr>
+					<tr>
+						<td class="support">29.0+</td>
+						<td class="support">9.0+</td>
+						<td class="support">9.0+</td>
+						<td class="support">28.0+</td>
 					</tr>
 				</tbody>
 			</table>
@@ -204,6 +223,12 @@ h1{font:bold 20px/1.5 georgia,simsun,sans-serif;}
 </html>
 			</textarea>
 			<p><input type="button" class="g-btn g-btn-sure" value="运行"></p>
+		</div>
+	</section>
+	<section id="editime" class="g-mod g-attr">
+		<h2 class="tit">本页最后更新时间：</h2>
+		<div class="cont">
+			2015.7.29
 		</div>
 	</section>
 </section>

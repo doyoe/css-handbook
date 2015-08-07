@@ -53,7 +53,7 @@
 		<div class="cont">
 			<p><strong>flex-wrap</strong>：nowrap | wrap | wrap-reverse</p>
 			<p><strong>默认值</strong>：<mark class="defaultvalue">nowrap</mark></p>
-			<p><strong>适用于</strong>：弹性盒模型容器</p>
+			<p><strong>适用于</strong>：flex容器</p>
 			<p><strong>继承性</strong>：无</p>
 			<p><strong>动画性</strong>：否</p>
 			<p><strong>计算值</strong>：指定值</p>
@@ -64,9 +64,9 @@
 		<div class="cont">
 			<dl>
 				<dt>nowrap：</dt>
-				<dd>当子元素溢出父容器时不换行。</dd>
+				<dd>flex容器为单行。该情况下flex子项可能会溢出容器</dd>
 				<dt>wrap：</dt>
-				<dd>当子元素溢出父容器时自动换行。</dd>
+				<dd>flex容器为多行。该情况下flex子项溢出的部分会被放置到新行，子项内部会发生断行</dd>
 				<dt>wrap-reverse：</dt>
 				<dd>反转 wrap 排列。</dd>
 			</dl>
@@ -75,7 +75,7 @@
 	<section id="intro" class="g-mod g-attr">
 		<h2 class="tit">说明：</h2>
 		<div class="cont">
-			<strong>设置或检索弹性盒模型对象的子元素超出父容器时是否换行。</strong>
+			<strong>该属性控制flex容器是单行或者多行，同时横轴的方向决定了新行堆叠的方向。</strong>
 			<ul>
 				<li>对应的脚本特性为<strong>flexWrap</strong>。</li>
 			</ul>
@@ -110,22 +110,26 @@
 						<td class="unsupport">2.0-27.0</td>
 						<td class="unsupport">4.0-20.0</td>
 						<td class="unsupport">6.0</td>
-						<td class="support">15.0-16.0 <sup class="fix">-webkit-</sup></td>
+						<td class="support">15.0+<sup class="fix">-webkit-</sup></td>
 						<td class="unsupport">6.0-6.1</td>
 						<td class="unsupport">2.1-4.3</td>
-						<td class="support" rowspan="3">18.0+</td>
+						<td class="unsupport">18.0-19.0</td>
 					</tr>
 					<tr>
 						<td class="support" rowspan="2">11.0</td>
 						<td class="support" rowspan="2">28.0+</td>
-						<td class="support">21.0-28.0 <sup class="fix">-webkit-</sup></td>
-						<td class="support" rowspan="2">6.1+ <sup class="fix">-webkit-</sup></td>
+						<td class="support">21.0+<sup class="fix">-webkit-</sup></td>
+						<td class="support">6.1+<sup class="fix">-webkit-</sup></td>
 						<td class="support" rowspan="2">17.0+</td>
-						<td class="support" rowspan="2">7.0+</td>
+						<td class="support">7.0+<sup class="fix">-webkit-</sup></td>
 						<td class="support" rowspan="2">4.4+</td>
+						<td class="support">20.0+<sup class="fix">-webkit-</sup></td>
 					</tr>
 					<tr>
 						<td class="support">29.0+</td>
+						<td class="support">9.0+</td>
+						<td class="support">9.0+</td>
+						<td class="support">28.0+</td>
 					</tr>
 				</tbody>
 			</table>
@@ -186,6 +190,12 @@ h1{font:bold 20px/1.5 georgia,simsun,sans-serif;}
 </html>
 			</textarea>
 			<p><input type="button" class="g-btn g-btn-sure" value="运行"></p>
+		</div>
+	</section>
+	<section id="editime" class="g-mod g-attr">
+		<h2 class="tit">本页最后更新时间：</h2>
+		<div class="cont">
+			2015.7.29
 		</div>
 	</section>
 </section>
