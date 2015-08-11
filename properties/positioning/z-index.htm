@@ -42,7 +42,7 @@
 		<h1 class="tit">z-index</h1>
 		<ul class="info">
 			<li><strong>版本：CSS2</strong></li>
-			<li>媒体：视觉</li>
+			<li>2015.8.11</li>
 		</ul>
 		<!-- 插入浏览器信息 -->
 	</section>
@@ -53,10 +53,11 @@
 		<div class="cont">
 			<p><strong>z-index</strong>: <mark class="defaultvalue">auto</mark> | <a href="../../values/numeric/integer.htm">&lt;integer&gt;</a></p>
 			<p><strong>默认值</strong>：<mark class="defaultvalue">auto</mark></p>
-			<p><strong>适用于</strong>：定位元素。即定义了 &lt;' <a href="position.htm">position</a> '&gt; 为非<code class="incode">static</code>的元素</p>
+			<p><strong>适用于</strong>：定位元素。即定义了 &lt;' <a href="position.htm">position</a> '&gt; 为非「static」的元素</p>
 			<p><strong>继承性</strong>：无</p>
 			<p><strong>动画性</strong>：当值为<a href="../../values/numeric/integer.htm">&lt;integer&gt;</a>时</p>
 			<p><strong>计算值</strong>：指定的值</p>
+			<p><strong>媒体</strong>：视觉</p>
 		</div>
 	</section>
 	<section id="value" class="g-mod g-attr">
@@ -75,9 +76,9 @@
 		<div class="cont">
 			<strong>检索或设置对象的层叠顺序。</strong>
 			<ul>
-				<li>z-index用于确定元素在当前层叠上下文中的层叠级别，并确定该元素是否创建新的局部层叠上下文。</li>
+				<li>「z-index」用于确定元素在当前层叠上下文中的层叠级别，并确定该元素是否创建新的局部层叠上下文。</li>
 				<li>每个元素层叠顺序由所属的层叠上下文和元素本身的层叠级别决定（每个元素仅属于一个层叠上下文）。</li>
-				<li>同一个层叠上下文中，层叠级别（即z-index属性值）大的显示在上面，反之显示在下面。</li>
+				<li>同一个层叠上下文中，层叠级别「z-index」大的显示在上面，反之显示在下面。</li>
 				<li>同一个层叠上下文中，层叠级别相同的两个元素，依据它们在HTML文档流中的顺序，写在后面的将会覆盖前面的。</li>
 				<li>不同层叠上下文中，元素的显示顺序依据祖先的层叠级别来决定，与自身的层叠级别无关。</li>
 				<li>当z-index未定义或者值为auto时，在IE6,7下会创建新的局部层叠上下文，而在高级浏览器中，按照规范不产生新的局部层叠上下文，如下例：
@@ -137,18 +138,25 @@ p {
 				<tbody>
 					<tr>
 						<td><strong>Basic Support</strong></td>
-						<td class="support" rowspan="3">6.0+</td>
+						<td class="support">6.0+</td>
 						<td class="support">2.0+</td>
-						<td class="support" rowspan="3">4.0+</td>
-						<td class="support" rowspan="3">3.1+</td>
-						<td class="support" rowspan="3">4.0+</td>
-						<td class="support" rowspan="3">3.2+</td>
-						<td class="support" rowspan="3">2.1+</td>
-						<td class="support" rowspan="3">18.0+</td>
+						<td class="support">4.0+</td>
+						<td class="support">6.0+</td>
+						<td class="support">15.0+</td>
+						<td class="support">6.0+</td>
+						<td class="support">2.1+</td>
+						<td class="support">18.0+</td>
 					</tr>
 					<tr>
 						<td rowspan="2">负值 <sup><a href="#support1">#1</a></sup></td>
+						<td class="support" rowspan="2">6.0+</td>
 						<td class="unsupport">1.0-2.0</td>
+						<td class="support" rowspan="2">4.0+</td>
+						<td class="support" rowspan="2">6.0+</td>
+						<td class="support" rowspan="2">15.0+</td>
+						<td class="support" rowspan="2">6.0+</td>
+						<td class="support" rowspan="2">2.1+</td>
+						<td class="support" rowspan="2">18.0+</td>
 					</tr>
 					<tr>
 						<td class="support">3.0+</td>
