@@ -393,7 +393,11 @@ if (!Global.isLocal && Global.name) {
 				'transform' : {
 					'index' : ['变换(Transform)','其它变换属性参考'],
 					'transform' : [],
-					'transform-origin' : []
+					'transform-origin' : [],
+					'transform-style' : [],
+					'perspective' : [],
+					'perspective-origin' : [],
+					'backface-visibility' : []
 				},
 				'transition' : {
 					'index' : ['过渡(Transition)','其它过渡属性参考'],
