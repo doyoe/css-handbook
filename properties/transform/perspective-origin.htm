@@ -2,9 +2,9 @@
 <html lang="zh-cmn-Hans">
 <head>
 <meta charset="utf-8" />
-<title>transform-style</title>
-<meta name="description" content="CSS3参考手册之: transform-style" />
-<meta name="keywords" content="transform-style, css3, css3参考手册" />
+<title>perspective-origin</title>
+<meta name="description" content="CSS3参考手册之: perspective-origin" />
+<meta name="keywords" content="perspective-origin, css3, css3参考手册" />
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <meta name="robots" content="all" />
 <!--[if lte IE 8]>
@@ -19,7 +19,7 @@
 		<span>&#187;</span>
 		<a href="../index.htm">属性列表</a>
 		<span>&#187;</span>
-		<a href="index.htm" id="category" rel="properties/transform" name="transform-style">变换属性</a>
+		<a href="index.htm" id="category" rel="properties/transform" name="perspective-origin">变换属性</a>
 		<span>&#187;</span>
 	</div>
 	<div class="to">
@@ -39,7 +39,7 @@
 </nav>
 <header id="hd">
 	<section id="title" class="g-mod">
-		<h1 class="tit">transform-style</h1>
+		<h1 class="tit">perspective-origin</h1>
 		<ul class="info">
 			<li><strong>版本：CSS3</strong></li>
 			<li>2015.8.11</li>
@@ -51,12 +51,12 @@
 	<section id="syntax" class="g-mod g-attr">
 		<h2 class="tit">语法：</h2>
 		<div class="cont">
-			<p><strong>transform-style</strong>：flat | preserve-3d</p>
-			<p><strong>默认值</strong>：<mark class="defaultvalue">flat</mark></p>
+			<p><strong>perspective-origin</strong>：[ <a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a> | <a href="../../values/length/index.htm">&lt;length&gt;</a> | left | center① | right ] [ <a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a> | <a href="../../values/length/index.htm">&lt;length&gt;</a> | top | center② | bottom ]?</p>
+			<p><strong>默认值</strong>：<mark class="defaultvalue">50% 50%</mark>，效果等同于center center</p>
 			<p><strong>适用于</strong>：变换元素</p>
 			<p><strong>继承性</strong>：无</p>
-			<p><strong>动画性</strong>：否</p>
-			<p><strong>计算值</strong>：指定值</p>
+			<p><strong>动画性</strong>：当值为数值时</p>
+			<p><strong>计算值</strong>：除了指定绝对值，否则都为百分比</p>
 			<p><strong>媒体</strong>：视觉</p>
 		</div>
 	</section>
@@ -64,20 +64,34 @@
 		<h2 class="tit">取值：</h2>
 		<div class="cont">
 			<dl>
-				<dt>flat：</dt>
-				<dd>指定子元素位于此元素所在平面内</dd>
-				<dt>preserve-3d：</dt>
-				<dd>指定子元素定位在三维空间内</dd>
+				<dt><a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a>：</dt>
+				<dd>用百分比指定透视点坐标值，相对于元素宽度。可以为负值。</dd>
+				<dt><a href="../../values/length/index.htm">&lt;length&gt;</a>：</dt>
+				<dd>用长度值指定透视点坐标值。可以为负值。</dd>
+				<dt>left：</dt>
+				<dd>指定透视点的横坐标为left</dd>
+				<dt>center①：</dt>
+				<dd>指定透视点的横坐标为center</dd>
+				<dt>right：</dt>
+				<dd>指定透视点的横坐标为right</dd>
+				<dt>top：</dt>
+				<dd>指定透视点的纵坐标为top</dd>
+				<dt>center②：</dt>
+				<dd>指定透视点的纵坐标为center</dd>
+				<dt>bottom：</dt>
+				<dd>指定透视点的纵坐标为bottom</dd>
 			</dl>
 		</div>
 	</section>
 	<section id="intro" class="g-mod g-attr">
 		<h2 class="tit">说明：</h2>
 		<div class="cont">
-			<strong>指定某元素的子元素是（看起来）位于三维空间内，还是在该元素所在的平面内被扁平化。</strong>
+			<strong>指定透视点的位置。</strong>
 			<ul>
-				<li>当该属性值为「preserve-3d」时，元素将会创建局部堆叠上下文。</li>
-				<li>对应的脚本特性为<strong>transformStyle</strong>。</li>
+				<li>该属性提供2个参数值。</li>
+				<li>如果提供两个，第一个用于横坐标，第二个用于纵坐标。</li>
+				<li>如果只提供一个，该值将用于横坐标；纵坐标将默认为center。</li>
+				<li>对应的脚本特性为<strong>perspactiveOrigin</strong>。</li>
 			</ul>
 		</div>
 	</section>
@@ -141,70 +155,45 @@
 <html lang="zh-cmn-Hans">
 <head>
 <meta charset="utf-8" />
-<title>transform-style_CSS参考手册_web前端开发参考手册系列</title>
+<title>perspective-origin_CSS参考手册_web前端开发参考手册系列</title>
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com" />
 <meta name="copyright" content="www.doyoe.com" />
 <style>
 .wrapper {
-    -webkit-perspective: 1000px;
-    perspective: 1000px;
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    border: 1px solid #000;
+    -webkit-perspective: 150px;
+    perspective: 150px;
 }
-.cube {
-    position: relative;
-    font-size: 80px;
-    width: 2em;
-    margin: 1.5em auto;
+.w1 {
+    -webkit-perspective-origin: top;
+    perspective-origin: top;
+}
+.w2 {
+    -webkit-perspective-origin: bottom;
+    perspective-origin: bottom;
+}
+.wrapper > div {
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
-    -webkit-transform: rotateX(-30deg) rotateY(30deg);
-    transform: rotateX(-30deg) rotateY(30deg);
-}
-.cube > div {
-    position: absolute;
-    width: 2em;
-    height: 2em;
-    background: rgba(0, 0, 0, .1);
-    border: 1px solid #999;
-    color: white;
-    text-align: center;
-    line-height: 2em;
-}
-.front {
-    -webkit-transform: translateZ(1em);
-    transform: translateZ(1em);
-}
-.top {
-    -webkit-transform: rotateX(90deg) translateZ(1em);
-    transform: rotateX(90deg) translateZ(1em);
-}
-.right {
-    -webkit-transform: rotateY(90deg) translateZ(1em);
-    transform: rotateY(90deg) translateZ(1em);
-}
-.left {
-    -webkit-transform: rotateY(-90deg) translateZ(1em);
-    transform: rotateY(-90deg) translateZ(1em);
-}
-.bottom {
-    -webkit-transform: rotateX(-90deg) translateZ(1em);
-    transform: rotateX(-90deg) translateZ(1em);
-}
-.back {
-    -webkit-transform: rotateY(-180deg) translateZ(1em);
-    transform: rotateY(-180deg) translateZ(1em);
+    width: 180px;
+    height: 120px;
+    margin: 40px 10px;
+    background-color: #ccc;
+    -webkit-transform: rotatex(90deg);
+    transform: rotatex(90deg);
 }
 </style>
 </head>
 <body>
-<div class="wrapper">
-    <div class="cube">
-        <div class="front">1</div>
-        <div class="back">2</div>
-        <div class="right">3</div>
-        <div class="left">4</div>
-        <div class="top">5</div>
-        <div class="bottom">6</div>
-    </div>
+<div class="wrapper w1">
+    <div>1</div>
+</div>
+<div class="wrapper w2">
+    <div>2</div>
 </div>
 </body>
 </html>
