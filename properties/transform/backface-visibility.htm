@@ -2,9 +2,9 @@
 <html lang="zh-cmn-Hans">
 <head>
 <meta charset="utf-8" />
-<title>transform-style</title>
-<meta name="description" content="CSS3参考手册之: transform-style" />
-<meta name="keywords" content="transform-style, css3, css3参考手册" />
+<title>backface-visibility</title>
+<meta name="description" content="CSS3参考手册之: backface-visibility" />
+<meta name="keywords" content="backface-visibility, css3, css3参考手册" />
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <meta name="robots" content="all" />
 <!--[if lte IE 8]>
@@ -19,7 +19,7 @@
 		<span>&#187;</span>
 		<a href="../index.htm">属性列表</a>
 		<span>&#187;</span>
-		<a href="index.htm" id="category" rel="properties/transform" name="transform-style">变换属性</a>
+		<a href="index.htm" id="category" rel="properties/transform" name="backface-visibility">变换属性</a>
 		<span>&#187;</span>
 	</div>
 	<div class="to">
@@ -39,7 +39,7 @@
 </nav>
 <header id="hd">
 	<section id="title" class="g-mod">
-		<h1 class="tit">transform-style</h1>
+		<h1 class="tit">backface-visibility</h1>
 		<ul class="info">
 			<li><strong>版本：CSS3</strong></li>
 			<li>2015.8.11</li>
@@ -51,8 +51,8 @@
 	<section id="syntax" class="g-mod g-attr">
 		<h2 class="tit">语法：</h2>
 		<div class="cont">
-			<p><strong>transform-style</strong>：flat | preserve-3d</p>
-			<p><strong>默认值</strong>：<mark class="defaultvalue">flat</mark></p>
+			<p><strong>backface-visibility</strong>：visible | hidden</p>
+			<p><strong>默认值</strong>：<mark class="defaultvalue">visible</mark></p>
 			<p><strong>适用于</strong>：变换元素</p>
 			<p><strong>继承性</strong>：无</p>
 			<p><strong>动画性</strong>：否</p>
@@ -64,20 +64,19 @@
 		<h2 class="tit">取值：</h2>
 		<div class="cont">
 			<dl>
-				<dt>flat：</dt>
-				<dd>指定子元素位于此元素所在平面内</dd>
-				<dt>preserve-3d：</dt>
-				<dd>指定子元素定位在三维空间内</dd>
+				<dt>visible：</dt>
+				<dd>指定元素背面可见，允许显示正面的镜像。</dd>
+				<dt>hidden：</dt>
+				<dd>指定元素背面不可见</dd>
 			</dl>
 		</div>
 	</section>
 	<section id="intro" class="g-mod g-attr">
 		<h2 class="tit">说明：</h2>
 		<div class="cont">
-			<strong>指定某元素的子元素是（看起来）位于三维空间内，还是在该元素所在的平面内被扁平化。</strong>
+			<strong>指定元素背面面向用户时是否可见。</strong>
 			<ul>
-				<li>当该属性值为「preserve-3d」时，元素将会创建局部堆叠上下文。</li>
-				<li>对应的脚本特性为<strong>transformStyle</strong>。</li>
+				<li>对应的脚本特性为<strong>backfaceVisibility</strong>。</li>
 			</ul>
 		</div>
 	</section>
@@ -90,52 +89,49 @@
 				<li><span class="partsupport">粉色</span> = 部分支持</li>
 			</ul>
 			<table class="g-data">
-                <thead>
-                    <tr>
-                        <th>Values</th>
-                        <th>IE</th>
-                        <th>Firefox</th>
-                        <th>Chrome</th>
-                        <th>Safari</th>
-                        <th>Opera</th>
-                        <th>iOS Safari</th>
-                        <th>Android Browser</th>
-                        <th>Android Chrome</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td rowspan="3"><strong>Basic Support</strong></td>
-                        <td class="unsupport">6.0-9.0</td>
-                        <td class="unsupport">2.0-9.0</td>
-                        <td class="unsupport">4.0-11.0</td>
-                        <td class="support">6.0-8.0<sup class="fix">-webkit-</sup></td>
-                        <td class="support">15.0-22.0<sup class="fix">-webkit-</sup></td>
-                        <td class="support">6.0-8.4<sup class="fix">-webkit-</sup></td>
-                        <td class="unsupport">2.1-2.3</td>
-                        <td class="support">18.0-34.0<sup class="fix">-webkit-</sup></td>
-                    </tr>
-                    <tr>
-                    <td class="partsupport">10.0-11.0<sup class="fix">-ms-</sup><sup><a href="#support1">#1</a></sup></td>
-                        <td class="support">10.0-15.0<sup class="fix">-moz-</sup></td>
-                        <td class="support">12.0-35.0<sup class="fix">-webkit-</sup></td>
-                        <td class="support" rowspan="2">9.0+</td>
-                        <td class="support" rowspan="2">23.0+</td>
-                        <td class="support" rowspan="2">9.0+</td>
-                        <td class="support">3.0-4.4.4<sup class="fix">-webkit-</sup></td>
-                        <td class="support" rowspan="2">35.0+</td>
-                    </tr>
-                    <tr>
-                        <td class="support">Edge</td>
-                        <td class="support">16.0+</td>
+				<thead>
+					<tr>
+						<th>Values</th>
+						<th>IE</th>
+						<th>Firefox</th>
+						<th>Chrome</th>
+						<th>Safari</th>
+						<th>Opera</th>
+						<th>iOS Safari</th>
+						<th>Android Browser</th>
+						<th>Android Chrome</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td rowspan="3"><strong>Basic Support</strong></td>
+						<td class="unsupport">6.0-9.0</td>
+						<td class="unsupport">2.0-9.0</td>
+						<td class="unsupport">4.0-11.0</td>
+						<td class="support">6.0-8.0<sup class="fix">-webkit-</sup></td>
+						<td class="support">15.0-22.0<sup class="fix">-webkit-</sup></td>
+						<td class="support">6.0-8.4<sup class="fix">-webkit-</sup></td>
+						<td class="unsupport">2.1-2.3</td>
+						<td class="support">18.0-34.0<sup class="fix">-webkit-</sup></td>
+					</tr>
+					<tr>
+						<td class="support">10.0-11.0<sup class="fix">-ms-</sup></td>
+						<td class="support">10.0-15.0<sup class="fix">-moz-</sup></td>
+						<td class="support">12.0-35.0<sup class="fix">-webkit-</sup></td>
+						<td class="support" rowspan="2">9.0+</td>
+						<td class="support" rowspan="2">23.0+</td>
+						<td class="support" rowspan="2">9.0+</td>
+						<td class="support">3.0-4.4.4<sup class="fix">-webkit-</sup></td>
+						<td class="support" rowspan="2">35.0+</td>
+					</tr>
+					<tr>
+						<td class="support">Edge</td>
+						<td class="support">16.0+</td>
                         <td class="support">36.0+</td>
                         <td class="support">40.0+</td>
-                    </tr>
-                </tbody>
-            </table>
-            <ol class="support-info">
-                <li id="support1">不支持「preserve-3d」属性值</li>
-            </ol>
+					</tr>
+				</tbody>
+			</table>
 		</div>
 	</section>
 	<section id="example" class="g-mod g-attr">
@@ -146,7 +142,7 @@
 <html lang="zh-cmn-Hans">
 <head>
 <meta charset="utf-8" />
-<title>transform-style_CSS参考手册_web前端开发参考手册系列</title>
+<title>backface-visibility_CSS参考手册_web前端开发参考手册系列</title>
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com" />
 <meta name="copyright" content="www.doyoe.com" />
 <style>
@@ -159,8 +155,8 @@
     font-size: 80px;
     width: 2em;
     margin: 1.5em auto;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
+    -webkit-backface-visibility: preserve-3d;
+    backface-visibility: preserve-3d;
     -webkit-transform: rotateX(-30deg) rotateY(30deg);
     transform: rotateX(-30deg) rotateY(30deg);
 }
