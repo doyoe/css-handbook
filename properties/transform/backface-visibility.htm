@@ -76,6 +76,7 @@
 		<div class="cont">
 			<strong>指定元素背面面向用户时是否可见。</strong>
 			<ul>
+                <li>决定一个元素背面面向用户时是否可见，需要直接在该元素上定义 &lt;' backface-visibility '&gt; 属性，而不能在其父元素上，因为该属性默认为不可继承。</li>
 				<li>对应的脚本特性为<strong>backfaceVisibility</strong>。</li>
 			</ul>
 		</div>
@@ -146,66 +147,100 @@
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com" />
 <meta name="copyright" content="www.doyoe.com" />
 <style>
-.wrapper {
-    -webkit-perspective: 1000px;
-    perspective: 1000px;
+body {
+    -webkit-perspective: 800px;
+    perspective: 800px;
+    -webkit-perspective-origin: 50%;
+    perspective-origin: 50%;
 }
 .cube {
-    position: relative;
-    font-size: 80px;
-    width: 2em;
-    margin: 1.5em auto;
-    -webkit-backface-visibility: preserve-3d;
-    backface-visibility: preserve-3d;
-    -webkit-transform: rotateX(-30deg) rotateY(30deg);
-    transform: rotateX(-30deg) rotateY(30deg);
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    margin: 50px;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-animation: rotate 5s infinite;
+    animation: rotate 5s infinite;
 }
 .cube > div {
     position: absolute;
-    width: 2em;
-    height: 2em;
-    background: rgba(0, 0, 0, .1);
-    border: 1px solid #999;
-    color: white;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, .2);
+    background-color: rgba(255, 255, 255, .1);
+    color: gray;
+    font-size: 20px;
+    line-height: 100px;
     text-align: center;
-    line-height: 2em;
 }
 .front {
-    -webkit-transform: translateZ(1em);
-    transform: translateZ(1em);
-}
-.top {
-    -webkit-transform: rotateX(90deg) translateZ(1em);
-    transform: rotateX(90deg) translateZ(1em);
-}
-.right {
-    -webkit-transform: rotateY(90deg) translateZ(1em);
-    transform: rotateY(90deg) translateZ(1em);
-}
-.left {
-    -webkit-transform: rotateY(-90deg) translateZ(1em);
-    transform: rotateY(-90deg) translateZ(1em);
-}
-.bottom {
-    -webkit-transform: rotateX(-90deg) translateZ(1em);
-    transform: rotateX(-90deg) translateZ(1em);
+    -webkit-transform: translatez(50px);
+    transform: translatez(50px);
 }
 .back {
-    -webkit-transform: rotateY(-180deg) translateZ(1em);
-    transform: rotateY(-180deg) translateZ(1em);
+    -webkit-transform: rotatey(180deg) translatez(50px);
+    transform: rotatey(180deg) translatez(50px);
+}
+.right {
+    -webkit-transform: rotatey(90deg) translatez(50px);
+    transform: rotatey(90deg) translatez(50px);
+}
+.left {
+    -webkit-transform: rotatey(-90deg) translatez(50px);
+    transform: rotatey(-90deg) translatez(50px);
+}
+.top {
+    -webkit-transform: rotatex(90deg) translatez(50px);
+    transform: rotatex(90deg) translatez(50px);
+}
+.bottom {
+    -webkit-transform: rotatex(-90deg) translatez(50px);
+    transform: rotatex(-90deg) translatez(50px);
+}
+@-webkit-keyframes rotate {
+    from {
+        -webkit-transform: rotatey(0);
+    }
+    to {
+        -webkit-transform: rotatey(360deg);
+    }
+}
+@keyframes rotate {
+    from {
+        transform: rotatey(0);
+    }
+    to {
+        transform: rotatey(360deg);
+    }
+}
+.c1 > div {
+    -webkit-backface-visibility: visible;
+    backface-visibility: visible;
+}
+.c2 > div {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 </style>
 </head>
 <body>
-<div class="wrapper">
-    <div class="cube">
-        <div class="front">1</div>
-        <div class="back">2</div>
-        <div class="right">3</div>
-        <div class="left">4</div>
-        <div class="top">5</div>
-        <div class="bottom">6</div>
-    </div>
+<div class="cube c1">
+    <div class="front">1</div>
+    <div class="back">2</div>
+    <div class="right">3</div>
+    <div class="left">4</div>
+    <div class="top">5</div>
+    <div class="bottom">6</div>
+</div>
+
+<div class="cube c2">
+    <div class="front">1</div>
+    <div class="back">2</div>
+    <div class="right">3</div>
+    <div class="left">4</div>
+    <div class="top">5</div>
+    <div class="bottom">6</div>
 </div>
 </body>
 </html>

@@ -77,6 +77,7 @@
 			<strong>指定某元素的子元素是（看起来）位于三维空间内，还是在该元素所在的平面内被扁平化。</strong>
 			<ul>
 				<li>当该属性值为「preserve-3d」时，元素将会创建局部堆叠上下文。</li>
+                <li>决定一个变换元素看起来是处在三维空间还是平面内，需要该元素的父元素上定义 &lt;' transform-style '&gt; 属性。</li>
 				<li>对应的脚本特性为<strong>transformStyle</strong>。</li>
 			</ul>
 		</div>
@@ -150,7 +151,7 @@
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com" />
 <meta name="copyright" content="www.doyoe.com" />
 <style>
-.wrapper {
+body {
     -webkit-perspective: 1000px;
     perspective: 1000px;
 }
@@ -201,15 +202,13 @@
 </style>
 </head>
 <body>
-<div class="wrapper">
-    <div class="cube">
-        <div class="front">1</div>
-        <div class="back">2</div>
-        <div class="right">3</div>
-        <div class="left">4</div>
-        <div class="top">5</div>
-        <div class="bottom">6</div>
-    </div>
+<div class="cube">
+    <div class="front">1</div>
+    <div class="back">2</div>
+    <div class="right">3</div>
+    <div class="left">4</div>
+    <div class="top">5</div>
+    <div class="bottom">6</div>
 </div>
 </body>
 </html>
