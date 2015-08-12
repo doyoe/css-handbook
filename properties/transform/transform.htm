@@ -51,18 +51,29 @@
 	<section id="syntax" class="g-mod g-attr">
 		<h2 class="tit">语法：</h2>
 		<div class="cont">
-			<p><strong>transform</strong>：none | <a href="#matrix">matrix()</a>? <a href="#translate">translate()</a>? <a href="#translatex">translatex()</a>? <a href="#translatey">translatey()</a>? <a href="#rotate">rotate()</a>? <a href="#scale">scale()</a>? <a href="#scalex">scalex()</a>? <a href="#scaley">scaley()</a>? <a href="#skew">skew()</a>? <a href="#skewx">skewx()</a>? <a href="#skewy">skewy()</a>?</p>
-			<p id="matrix"><strong>matrix()</strong> = matrix(&lt;number&gt;[,&lt;number&gt;]{5,5})</p>
+			<p><strong>transform</strong>：none | <a href="#transform-function">&lt;transform-function&gt;</a>+</p>
+			<h3 id="transform-function">transform-function list:</h3>
+			<p id="matrix"><strong>matrix()</strong> = matrix(<a href="../../values/numeric/number.htm">&lt;number&gt;</a>[,<a href="../../values/numeric/number.htm">&lt;number&gt;</a>]{5,5})</p>
+			<p id="matrix3d"><strong>matrix3d()</strong> = matrix3d(<a href="../../values/numeric/number.htm">&lt;number&gt;</a>[,<a href="../../values/numeric/number.htm">&lt;number&gt;</a>]{15,15})</p>
 			<p id="translate"><strong>translate()</strong> = translate(<a href="#translation-value">&lt;translation-value&gt;</a>[,<a href="#translation-value">&lt;translation-value&gt;</a>]?)</p>
+			<p id="translate3d"><strong>translate3d()</strong> = translate3d(<a href="#translation-value">&lt;translation-value&gt;</a>,<a href="#translation-value">&lt;translation-value&gt;</a>,<a href="../../values/length/index.htm">&lt;length&gt;</a>)</p>
 			<p id="translatex"><strong>translatex()</strong> = translatex(<a href="#translation-value">&lt;translation-value&gt;</a>)</p>
 			<p id="translatey"><strong>translatey()</strong> = translatey(<a href="#translation-value">&lt;translation-value&gt;</a>)</p>
-			<p id="rotate"><strong>rotate()</strong> = rotate(&lt;angle&gt;)</p>
-			<p id="scale"><strong>scale()</strong> = scale(&lt;number&gt;[,&lt;number&gt;]?)</p>
-			<p id="scalex"><strong>scalex()</strong> = scalex(&lt;number&gt;)</p>
-			<p id="scaley"><strong>scaley()</strong> = scaley(&lt;number&gt;)</p>
-			<p id="skew"><strong>skew()</strong> = skew(&lt;angle&gt;[,&lt;angle&gt;]?)</p>
-			<p id="skewx"><strong>skewx()</strong> = skewx(&lt;angle&gt;)</p>
-			<p id="skewy"><strong>skewy()</strong> = skewy(&lt;angle&gt;)</p>
+			<p id="translatez"><strong>translatez()</strong> = translatez(<a href="../../values/length/index.htm">&lt;length&gt;</a>)</p>
+			<p id="rotate"><strong>rotate()</strong> = rotate(<a href="../../values/angle/index.htm">&lt;angle&gt;</a>)</p>
+			<p id="rotate3d"><strong>rotate3d()</strong> = rotate3d(<a href="../../values/numeric/number.htm">&lt;number&gt;</a>,<a href="../../values/numeric/number.htm">&lt;number&gt;</a>,<a href="../../values/numeric/number.htm">&lt;number&gt;</a>,<a href="../../values/angle/index.htm">&lt;angle&gt;</a>)</p>
+			<p id="rotatex"><strong>rotatex()</strong> = rotatex(<a href="../../values/angle/index.htm">&lt;angle&gt;</a>)</p>
+			<p id="rotatey"><strong>rotatey()</strong> = rotatey(<a href="../../values/angle/index.htm">&lt;angle&gt;</a>)</p>
+			<p id="rotatez"><strong>rotatez()</strong> = rotatez(<a href="../../values/angle/index.htm">&lt;angle&gt;</a>)</p>
+			<p id="scale"><strong>scale()</strong> = scale(<a href="../../values/numeric/number.htm">&lt;number&gt;</a>[,<a href="../../values/numeric/number.htm">&lt;number&gt;</a>]?)</p>
+			<p id="scale3d"><strong>scale3d()</strong> = scale3d(<a href="../../values/numeric/number.htm">&lt;number&gt;</a>,<a href="../../values/numeric/number.htm">&lt;number&gt;</a>,<a href="../../values/numeric/number.htm">&lt;number&gt;</a>)</p>
+			<p id="scalex"><strong>scalex()</strong> = scalex(<a href="../../values/numeric/number.htm">&lt;number&gt;</a>)</p>
+			<p id="scaley"><strong>scaley()</strong> = scaley(<a href="../../values/numeric/number.htm">&lt;number&gt;</a>)</p>
+			<p id="scalez"><strong>scalez()</strong> = scalez(<a href="../../values/numeric/number.htm">&lt;number&gt;</a>)</p>
+			<p id="skew"><strong>skew()</strong> = skew(<a href="../../values/angle/index.htm">&lt;angle&gt;</a>[,<a href="../../values/angle/index.htm">&lt;angle&gt;</a>]?)</p>
+			<p id="skewx"><strong>skewx()</strong> = skewx(<a href="../../values/angle/index.htm">&lt;angle&gt;</a>)</p>
+			<p id="skewy"><strong>skewy()</strong> = skewy(<a href="../../values/angle/index.htm">&lt;angle&gt;</a>)</p>
+			<p id="perspective"><strong>perspective()</strong> = perspective(<a href="../../values/length/index.htm">&lt;length&gt;</a>)</p>
 			<p id="translation-value"><strong>&lt;translation-value&gt;</strong> = <a href="../../values/length/index.htm">&lt;length&gt;</a> | <a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a></p>
 			<p><strong>默认值</strong>：<mark class="defaultvalue">none</mark></p>
 			<p><strong>适用于</strong>：所有块级元素及某些内联元素</p>
@@ -78,6 +89,9 @@
 			<dl>
 				<dt>none：</dt>
 				<dd>无转换</dd>
+			</dl>
+			<h3 class="g-color-light">2D Transform Functions：</h3>
+			<dl>
 				<dt><a href="#matrix">matrix()</a>：</dt>
 				<dd>以一个含六值的(a,b,c,d,e,f)变换矩阵的形式指定一个2D变换，相当于直接应用一个[a,b,c,d,e,f]变换矩阵</dd>
 				<dt><a href="#translate">translate()</a>：</dt>
@@ -100,6 +114,29 @@
 				<dd>指定对象X轴的（水平方向）扭曲</dd>
 				<dt><a href="#skewy">skewy()</a>：</dt>
 				<dd>指定对象Y轴的（垂直方向）扭曲</dd>
+			</dl>
+			<h3 class="g-color-light">3D Transform Functions：</h3>
+			<dl>
+				<dt><a href="#matrix3d">matrix3d()</a>：</dt>
+				<dd>以一个4x4矩阵的形式指定一个3D变换</dd>
+				<dt><a href="#translate3d">translate3d()</a>：</dt>
+				<dd>指定对象的3D位移。第1个参数对应X轴，第2个参数对应Y轴，第3个参数对应Z轴，参数不允许省略</dd>
+				<dt><a href="#translatez">translatez()</a>：</dt>
+				<dd>指定对象Z轴的平移</dd>
+				<dt><a href="#rotate3d">rotate3d()</a>：</dt>
+				<dd>指定对象的3D旋转角度，其中前3个参数分别表示旋转的方向x,y,z，第4个参数表示旋转的角度，参数不允许省略</dd>
+				<dt><a href="#rotatex">rotatex()</a>：</dt>
+				<dd>指定对象在x轴上的旋转角度</dd>
+				<dt><a href="#rotatey">rotatey()</a>：</dt>
+				<dd>指定对象在y轴上的旋转角度</dd>
+				<dt><a href="#rotatey">rotatez()</a>：</dt>
+				<dd>指定对象在z轴上的旋转角度</dd>
+				<dt><a href="#scale3d">scale3d()</a>：</dt>
+				<dd>指定对象的3D缩放。第1个参数对应X轴，第2个参数对应Y轴，第3个参数对应Z轴，参数不允许省略</dd>
+				<dt><a href="#scalez">scalez()</a>：</dt>
+				<dd>指定对象的z轴缩放</dd>
+				<dt><a href="#perspective">perspective()</a>：</dt>
+				<dd>指定透视距离</dd>
 			</dl>
 		</div>
 	</section>

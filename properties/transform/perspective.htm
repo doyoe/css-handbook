@@ -148,23 +148,18 @@
 <meta name="copyright" content="www.doyoe.com" />
 <style>
 .wrapper {
-    display: inline-block;
     width: 200px;
     height: 200px;
-    margin: 10px;
+    margin: 50px auto;
     border: 1px solid #000;
-}
-.w2 {
-    -webkit-perspective: 300px;
-    perspective: 300px;
-}
-.w3 {
-    -webkit-perspective: 100px;
-    perspective: 100px;
-}
-.wrapper > div {
+    -webkit-perspective: 50px;
+    perspective: 50px;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
+    -webkit-animation: test 10s infinite;
+    animation: test 10s infinite;
+}
+.wrapper > div {
     width: 180px;
     height: 120px;
     margin: 40px 10px;
@@ -172,17 +167,27 @@
     -webkit-transform: rotatex(45deg);
     transform: rotatex(45deg);
 }
+@-webkit-keyframes test {
+    from {
+        -webkit-perspective: 50px;
+    }
+    to {
+        -webkit-perspective: 300px;
+    }
+}
+@keyframes test {
+    from {
+        perspective: 50px;
+    }
+    to {
+        perspective: 300px;
+    }
+}
 </style>
 </head>
 <body>
-<div class="wrapper w1">
+<div class="wrapper">
     <div>1</div>
-</div>
-<div class="wrapper w2">
-    <div>2</div>
-</div>
-<div class="wrapper w3">
-    <div>3</div>
 </div>
 </body>
 </html>
