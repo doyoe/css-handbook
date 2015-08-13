@@ -52,8 +52,8 @@
 		<div class="cont">
 			<strong>属性初始值。</strong>
 			<ul>
-				<li>initial属于 <dfn>CSS-wide</dfn> 关键字，这表示所有的属性都可以接受该值。</li>
-				<li>如果你想重置某个属性为 User Agent 默认设置，那么就可以使用initial</li>
+				<li><code class="value">initial</code>属于<dfn>CSS-wide</dfn>关键字，这表示所有的属性都可以接受该值，本手册为了与规范保持一致，未将该值放置到各属性的取值中。</li>
+				<li>如果你想重置某个属性为UA默认设置，那么就可以使用该值</li>
 				<li>
 					<em class="g-color-light">正常工作的例子：</em>
 					<div class="gquote">
@@ -64,7 +64,7 @@
 .news-list {
 	list-style: initial;
 }</xmp></code></blockquote>
-						<p class="gquote-info">如上述代码，有可能ul会被reset掉list-style，如果你想某个地方需要默认定义，那么就可以直接设置为 initial</p>
+						<p class="gquote-info">如上述代码，ul会被reset掉<a href="../../properties/list/list-style.htm" class="property">list-style</a>，如果你想某个地方需要UA初始定义，那么就可以直接设置为<code class="value">initial</code></p>
 					</div>
 				</li>
 			</ul>

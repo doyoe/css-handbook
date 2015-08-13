@@ -33,8 +33,6 @@ ol.gitem{list-style-type:decimal;}
 .gquote-cont li.first{border-top:0 none;}
 .gquote-cont textarea{width:100%;height:auto;border:none;}
 .gquote-info{padding:3px 10px;border-top:1px solid #C3E1FF;background:#F3F9FF;color:#c30;}
-.gquote-info a{color:#008000;}
-.gquote-info a:hover{color:#c30;}
 .gquote-warning,
 .gquote-warning .gquote-cont,
 .gquote-warning .gquote-info{border-color:#fa5a5a;}
@@ -78,6 +76,25 @@ ol.gitem{list-style-type:decimal;}
 .g-attr .experimentsupport{background:#f90;}
 .g-attr xmp{white-space:pre-wrap;}
 .g-attr .incode{display:inline;margin:0 3px;padding:1px 3px;border-radius:3px;background-color:#eee;}
+/* 定义属性及属性值装饰（使用单引号包裹与w3c保持一致） */
+.g-attr .property,
+.g-attr .value {
+    margin: 0 5px;
+    color: #666;
+    font-family: arial, sans-serif;
+}
+.g-attr a.property,
+.g-attr a.value {
+    color: #008000;
+}
+.g-attr .property:before,
+.g-attr .value:before {
+    content: "‘";
+}
+.g-attr .property:after,
+.g-attr .value:after {
+    content: "’";
+}
 /* comm: g-browser(test browser) */
 .g-browser p{zoom:1;overflow:hidden;color:#333;}
 .g-browser ul{float:right;}
