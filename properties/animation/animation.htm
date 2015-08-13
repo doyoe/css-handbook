@@ -52,7 +52,7 @@
 		<h2 class="tit">语法：</h2>
 		<div class="cont">
 			<p><strong>animation</strong>：<a href="#single-animation">&lt;single-animation&gt;</a>[,<a href="#single-animation">&lt;single-animation&gt;</a>]*</p>
-			<p id="single-animation"><strong>&lt;single-animation&gt;</strong> = [ none | <a href="animation-name.htm#single-animation-name">&lt;single-animation-name&gt;</a> '&gt; || <a href="../../values/time/time.htm">&lt;time&gt;</a> || <a href="animation-timing-function.htm#single-animation-timing-function">&lt;single-animation-timing-function&gt;</a> || <a href="../../values/time/time.htm">&lt;time&gt;</a> || <a href="animation-iteration-count.htm#single-animation-iteration-count">&lt;single-animation-iteration-count&gt;</a> || <a href="animation-direction.htm#single-animation-direction">&lt;single-animation-direction&gt;</a> || <a href="animation-fill-mode.htm#single-animation-fill-mode">&lt;single-animation-fill-mode&gt;</a> || <a href="animation-play-state.htm#single-animation-play-state">&lt;single-animation-play-state&gt;</a></p>
+			<p id="single-animation"><strong>&lt;single-animation&gt;</strong> = <a href="animation-name.htm#single-animation-name">&lt;single-animation-name&gt;</a> || <a href="../../values/time/time.htm">&lt;time&gt;</a> || <a href="animation-timing-function.htm#single-animation-timing-function">&lt;single-animation-timing-function&gt;</a> || <a href="../../values/time/time.htm">&lt;time&gt;</a> || <a href="animation-iteration-count.htm#single-animation-iteration-count">&lt;single-animation-iteration-count&gt;</a> || <a href="animation-direction.htm#single-animation-direction">&lt;single-animation-direction&gt;</a> || <a href="animation-fill-mode.htm#single-animation-fill-mode">&lt;single-animation-fill-mode&gt;</a> || <a href="animation-play-state.htm#single-animation-play-state">&lt;single-animation-play-state&gt;</a></p>
 			<p><strong>默认值</strong>：<mark class="defaultvalue">看每个独立属性</mark></p>
 			<p><strong>适用于</strong>：所有元素，包含伪对象:after和:before</p>
 			<p><strong>继承性</strong>：无</p>
@@ -77,6 +77,8 @@
 				<dd>检索或设置对象动画的循环次数</dd>
 				<dt>&lt;' <a href="animation-direction.htm">animation-direction</a> '&gt;：</dt>
 				<dd>检索或设置对象动画在循环中是否反向运动</dd>
+				<dt>&lt;' <a href="animation-fill-mode.htm">animation-fill-mode</a> '&gt;：</dt>
+				<dd>检索或设置对象动画时间之外的状态</dd>
 				<dt>&lt;' <a href="animation-play-state.htm">animation-play-state</a> '&gt;：</dt>
 				<dd>检索或设置对象动画的状态。<em class="glight">w3c正考虑是否将该属性移除，因为动画的状态可以通过其它的方式实现，比如重设样式</em></dd>
 			</dl>
