@@ -26,6 +26,7 @@ CSS参考手册目前正在v4.2.1开发中。广泛接受[Issues](https://github
 [perspective](http://css.doyoe.com/properties/transform/perspective.htm),
 [perspective-origin](http://css.doyoe.com/properties/transform/perspective-origin.htm),
 [backface-visibility](http://css.doyoe.com/properties/transform/backface-visibility.htm)；
+* 阅读指引中新增了 [语法指引](http://css.doyoe.com/introduction/guide.htm#syntax-guide) 用于帮助读者轻松看懂语法；
 * 修订了大部分模块的浏览器兼容性列表；
 
 ### 上个版本：v4.1.6
