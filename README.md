@@ -4,13 +4,13 @@
 
 ## 浏览器支持策略
 
-手册在接下来将只更新IE6.0+, Firefox4.0+, Chrome4.0+, Safari3.1+, Opera15.0+（Opera从15.0开始转入webkit阵营）, iOS Safari3.2+, Android Browser2.1+, Android Chrome18.0+ 的支持数据，低于这些版本的数据将不再更新，让我们共同期望未来前端的生态环境越来越好。
+手册在接下来将只更新IE6.0+, Firefox2.0+, Chrome4.0+, Safari6.0+, Opera15.0+（Opera从15.0开始转入webkit阵营）, iOS Safari6.0+, Android Browser2.1+, Android Chrome18.0+ 的支持数据，低于这些版本的数据将不再更新，让我们共同期望未来前端的生态环境越来越好。
 
 ## 版本更新
 
 ### 草案版本：v4.2.1
 
-CSS参考手册目前正在v4.1.8草案中。广泛接受[Issues](https://github.com/doyoe/css-handbook/issues)和[Pull Requests](https://github.com/doyoe/css-handbook/pulls)
+CSS参考手册目前正在v4.2.1开发中。广泛接受[Issues](https://github.com/doyoe/css-handbook/issues)和[Pull Requests](https://github.com/doyoe/css-handbook/pulls)
 
 ### 最新版本：v4.2.0
 
