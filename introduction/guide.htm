@@ -61,13 +61,50 @@
 				<ul class="gitem">
 					<li>
 						<p>左侧导航区域，橙色为CSS3新增，紫色为在CSS3中有变更（比如增加了新的属性值），黑色为CSS2.1及更早前，如下所示：</p>
-						<div>
-							<ul class="level-type">
-								<li class="css3-new"><span class="g-color-css3-new">橙色</span> = CSS3新增</li>
-								<li class="css3-change"><span class="g-color-css3-change">紫色</span> = 在CSS3中有变更</li>
-								<li><span>黑色</span> = CSS2.1及更早</li>
-							</ul>
-						</div>
+						<ul class="level-type">
+							<li class="css3-new"><span class="g-color-css3-new">橙色</span> = CSS3新增</li>
+							<li class="css3-change"><span class="g-color-css3-change">紫色</span> = 在CSS3中有变更</li>
+							<li><span>黑色</span> = CSS2.1及更早</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<h3>语法指引：</h3>
+				<p>任何一种形态、关键字、群组后面都可以接下列修饰符中的其中一个：</p>
+				<ul class="gitem">
+					<li>* 代表出现0次或以上。</li>
+					<li>+ 代表出现1次或以上。</li>
+					<li>? 代表是可选的，即出现0次或1次。</li>
+					<li>{A} 代表出现A次。</li>
+					<li>{A,B} 代表出现 A 次以上 B 次以下，其中B可以省略为 {A,}，代表至少出现A次，无上限。</li>
+					<li># 代表出现1次以上，以逗号隔开，可以选择后面跟大括号的形式，精确表示重复多少次，如<code class="css">&lt;length&gt;#{1,4}</code>。</li>
+					<li>! 代表出现产生一个值，即使组内的值都可以省略，但至少有一个值不能呗省略，如<code class="css">[ A? B? C? ]!</code>。</li>
+					<li>
+						<table class="g-data">
+							<tbody>
+								<tr>
+									<td>0个或更多</td>
+									<td>A? B? C?</td>
+									<td>A? || B? || C?</td>
+								</tr>
+								<tr>
+									<td>1个或更多</td>
+									<td>[ A? B? C? ]!</td>
+									<td>A || B || C</td>
+								</tr>
+								<tr>
+									<td>1个</td>
+									<td>A | B | C</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>所有</td>
+									<td>A B C</td>
+									<td>A && B && C</td>
+								</tr>
+							</tbody>
+						</table>
 					</li>
 				</ul>
 			</li>
@@ -127,10 +164,10 @@
 								</tbody>
 							</table>
 						</div>
-						<strong>假设上述表格是对属性 &lt;' <a href="../properties/flex/order.htm">order</a> '&gt; 的兼容性说明，那表示：</strong>
+						<strong>假设上述表格是对属性<a href="../properties/flex/order.htm" class="property">order</a>的兼容性说明，那表示：</strong>
 						<p>IE6.0-10.0不支持该属性，11.0及以后支持该属性；</p>
 						<p>Firefox2.0-21.0不支持该属性，22.0及以后支持该属性；</p>
-						<p>Chrome4.0-20.0不支持该属性，22.0及以后支持该属性但需加厂商前缀 <strong class="g-color-light">-webkit-</strong>，29.0开始支持不带厂商前缀的标准写法；</p>
+						<p>Chrome4.0-20.0不支持该属性，21.0及以后支持该属性但需加厂商前缀 <strong class="g-color-light">-webkit-</strong>，29.0开始支持不带厂商前缀的标准写法；</p>
 					</li>
 				</ul>
 			</li>

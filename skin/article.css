@@ -78,21 +78,25 @@ ol.gitem{list-style-type:decimal;}
 .g-attr .incode{display:inline;margin:0 3px;padding:1px 3px;border-radius:3px;background-color:#eee;}
 /* 定义属性及属性值装饰（使用单引号包裹与w3c保持一致） */
 .g-attr .property,
-.g-attr .value {
+.g-attr .value,
+.g-attr .css {
     margin: 0 5px;
     color: #666;
     font-family: arial, sans-serif;
 }
 .g-attr a.property,
-.g-attr a.value {
+.g-attr a.value,
+.g-attr a.css {
     color: #008000;
 }
 .g-attr .property:before,
-.g-attr .value:before {
+.g-attr .value:before,
+.g-attr .css:before {
     content: "‘";
 }
 .g-attr .property:after,
-.g-attr .value:after {
+.g-attr .value:after,
+.g-attr .css:after {
     content: "’";
 }
 /* comm: g-browser(test browser) */
