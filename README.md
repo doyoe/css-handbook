@@ -8,11 +8,27 @@
 
 ## 版本更新
 
-### 草案版本：v4.1.8(WD)
+### 草案版本：v4.2.1
 
 CSS参考手册目前正在v4.1.8草案中。广泛接受[Issues](https://github.com/doyoe/css-handbook/issues)和[Pull Requests](https://github.com/doyoe/css-handbook/pulls)
 
-### 最新版本：v4.1.7
+### 最新版本：v4.2.0
+
+更新时间：2015.08.14
+
+* 新增了
+[text-size-adjust](http://css.doyoe.com/properties/text/text-size-adjust.htm),
+[tap-highlight-color](http://css.doyoe.com/properties/only-webkit/tap-highlight-color.htm),
+[user-drag](http://css.doyoe.com/properties/only-webkit/user-drag.htm)
+参考；
+* 修订了 [Transform](http://css.doyoe.com/properties/transform/index.htm) 模块，并新增了3D相关参考：
+[transform-style](http://css.doyoe.com/properties/transform/transform-style.htm),
+[perspective](http://css.doyoe.com/properties/transform/perspective.htm),
+[perspective-origin](http://css.doyoe.com/properties/transform/perspective-origin.htm),
+[backface-visibility](http://css.doyoe.com/properties/transform/backface-visibility.htm)；
+* 修订了大部分模块的浏览器兼容性列表；
+
+### 上个版本：v4.1.6
 
 更新时间：2015.03.09
 
@@ -56,17 +72,6 @@ CSS参考手册目前正在v4.1.8草案中。广泛接受[Issues](https://github
 [border-image](http://css.doyoe.com/properties/border/border-image.htm),
 [border-radius](http://css.doyoe.com/properties/border/border-radius.htm)
 及相关属性的参考描述；
-
-### 上个版本：v4.1.6
-
-更新时间：2015.01.28
-
-* 修订了 [Positioning](http://css.doyoe.com/properties/positioning/index.htm) 模块的参考描述，使用新的浏览器兼容视图，增加部分移动浏览器支持；
-* 修订了 [Layout](http://css.doyoe.com/properties/layout/index.htm) 模块的参考描述，使用新的浏览器兼容视图，增加部分移动浏览器支持；
-* 排查了手册中的死链；
-* 修订了属性选择符 [E[att|="val"]](http://css.doyoe.com/selectors/attribute/att7.htm) 的参考描述和示例；
-* 修订了 [list-style](http://css.doyoe.com/properties/list/list-style.htm)的语法描述；
-* 新增了 [appearance](http://css.doyoe.com/properties/user-interface/appearance.htm)、 [pointer-events](http://css.doyoe.com/properties/user-interface/pointer-events.htm) 和 [E::placeholder](http://css.doyoe.com/selectors/pseudo-element/placeholder.htm) 参考；
 
 ### 历史版本：
 
