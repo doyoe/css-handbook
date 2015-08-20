@@ -1,5 +1,14 @@
 @charset "utf-8";
 @import "global.css";
+/* comm: kinds of tag */
+.g-property:before,
+.g-property:after,
+.g-value:before,
+.g-value:after {padding: 0 2px; font-family: Helvetica, arial, sans-serif;}
+.g-property:before {content: "\2018";}
+.g-property:after {content: "\2019";}
+.g-value:before {content: "「";}
+.g-value:after {content: "」";}
 /* layout */
 #guide{position:relative;z-index:2;padding:5px 20px;border-bottom:1px solid #ddd;background:#eee;text-align:left;}
 #hd{position:relative;z-index:1;margin:5px 10px;color:#0382AD;text-align:left;}
@@ -204,6 +213,8 @@ ol.gitem{list-style-type:decimal;}
 /* module:change-list */
 #change-list li{margin-top:10px;border:1px solid #ddd;}
 #change-list li li{margin-top:0;padding-bottom:0;border:0 none;}
+#change-list .version h3{display:inline;padding-right:20px;}
+#change-list .version time{color:#666;font-size:12px;}
 #change-list .version{padding:3px 10px;background:#DDEEFF;}
 #change-list .detail{zoom:1;overflow:hidden;padding:10px;border-top:1px solid #C3E1FF;background:#fff;}
 #change-list .new{border-color:#FBACAC;box-shadow:0 0 5px rgba(255,0,0,.5);}
