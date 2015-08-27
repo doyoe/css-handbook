@@ -1,14 +1,28 @@
 @charset "utf-8";
 @import "global.css";
 /* comm: kinds of tag */
+.g-property,
+.g-value {
+    margin: 0 5px;
+}
 .g-property:before,
 .g-property:after,
 .g-value:before,
-.g-value:after {padding: 0 2px; font-family: Helvetica, arial, sans-serif;}
+.g-value:after {font-family: Helvetica, arial, sans-serif;}
+.g-property:before,
+.g-value:before {
+    padding-right: 2px;
+}
+.g-property:after,
+.g-value:after {
+    padding-left: 2px;
+}
 .g-property:before {content: "\2018";}
 .g-property:after {content: "\2019";}
 .g-value:before {content: "「";}
 .g-value:after {content: "」";}
+.g-value,
+.g-code {display:inline;border-radius:3px;background-color:#eee;}
 /* layout */
 #guide{position:relative;z-index:2;padding:5px 20px;border-bottom:1px solid #ddd;background:#eee;text-align:left;}
 #hd{position:relative;z-index:1;margin:5px 10px;color:#0382AD;text-align:left;}
@@ -84,30 +98,6 @@ ol.gitem{list-style-type:decimal;}
 .g-attr .unknown{background:#ccc;}
 .g-attr .experimentsupport{background:#f90;}
 .g-attr xmp{white-space:pre-wrap;}
-.g-attr .incode{display:inline;margin:0 3px;padding:1px 3px;border-radius:3px;background-color:#eee;}
-/* 定义属性及属性值装饰（使用单引号包裹与w3c保持一致） */
-.g-attr .property,
-.g-attr .value,
-.g-attr .css {
-    margin: 0 5px;
-    color: #666;
-    font-family: arial, sans-serif;
-}
-.g-attr a.property,
-.g-attr a.value,
-.g-attr a.css {
-    color: #008000;
-}
-.g-attr .property:before,
-.g-attr .value:before,
-.g-attr .css:before {
-    content: "‘";
-}
-.g-attr .property:after,
-.g-attr .value:after,
-.g-attr .css:after {
-    content: "’";
-}
 /* comm: g-browser(test browser) */
 .g-browser p{zoom:1;overflow:hidden;color:#333;}
 .g-browser ul{float:right;}

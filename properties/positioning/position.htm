@@ -53,7 +53,7 @@
 		<div class="cont">
 			<p><strong>position</strong>：<mark class="defaultvalue">static</mark> | relative | absolute | fixed | <ins class="g-color-css3-new" title="css3">center</ins> | <ins class="g-color-css3-new" title="css3">page</ins> | <ins class="g-color-css3-new" title="css3">sticky</ins></p>
 			<p><strong>默认值</strong>：<mark class="defaultvalue">static</mark></p>
-			<p><strong>适用于</strong>：除 &lt;' <a href="../layout/display.htm">display</a> '&gt; 属性定义为「table-column-group | table-column」之外的所有元素</p>
+			<p><strong>适用于</strong>：除<a href="../layout/display.htm" class="g-property">display</a>属性定义为<code class="g-value">table-column-group | table-column</code>之外的所有元素</p>
 			<p><strong>继承性</strong>：无</p>
 			<p><strong>动画性</strong>：否</p>
 			<p><strong>计算值</strong>：指定值</p>
@@ -65,19 +65,19 @@
 		<div class="cont">
 			<dl>
 				<dt>static：</dt>
-				<dd>对象遵循常规流。 &lt;' <a href="top.htm">top</a> '&gt;，&lt;' <a href="right.htm">right</a> '&gt;，&lt;' <a href="bottom.htm">bottom</a> '&gt;，&lt;' <a href="left.htm">left</a> '&gt;等属性不会被应用。</dd>
+				<dd>对象遵循常规流。此时4个定位偏移属性不会被应用。</dd>
 				<dt>relative：</dt>
-				<dd>对象遵循常规流，并且参照自身在常规流中的位置通过 &lt;' <a href="top.htm">top</a> '&gt;，&lt;' <a href="right.htm">right</a> '&gt;，&lt;' <a href="bottom.htm">bottom</a> '&gt;，&lt;' <a href="left.htm">left</a> '&gt;属性进行偏移时不影响常规流中的任何元素。</dd>
+				<dd>对象遵循常规流，并且参照自身在常规流中的位置通过<a href="top.htm" class="g-property">top</a>，<a href="right.htm" class="g-property">right</a>，<a href="bottom.htm" class="g-property">bottom</a>，<a href="left.htm" class="g-property">left</a>这4个定位偏移属性进行偏移时不会影响常规流中的任何元素。</dd>
 				<dt>absolute：</dt>
-				<dd>对象脱离常规流，使用 &lt;' <a href="top.htm">top</a> '&gt;，&lt;' <a href="right.htm">right</a> '&gt;，&lt;' <a href="bottom.htm">bottom</a> '&gt;，&lt;' <a href="left.htm">left</a> '&gt;等属性进行绝对定位，盒子的偏移位置不影响常规流中的任何元素，其margin不与其他任何margin折叠。</dd>
+				<dd>对象脱离常规流，此时偏移属性参照的是离自身最近的定位祖先元素，如果没有定位的祖先元素，则一直回溯到body元素。盒子的偏移位置不影响常规流中的任何元素，其margin不与其他任何margin折叠。</dd>
 				<dt>fixed：</dt>
-				<dd>对象脱离常规流，使用 &lt;' <a href="top.htm">top</a> '&gt;，&lt;' <a href="right.htm">right</a> '&gt;，&lt;' <a href="bottom.htm">bottom</a> '&gt;，&lt;' <a href="left.htm">left</a> '&gt;等属性以窗口为参考点进行定位，当出现滚动条时，对象不会随着滚动。</dd>
+				<dd>与<code class="g-value">absolute</code>一致，但偏移定位是以窗口为参考。当出现滚动条时，对象不会随着滚动。</dd>
 				<dt class="g-color-css3-new">center：</dt>
-				<dd>对象脱离常规流，使用 &lt;' <a href="top.htm">top</a> '&gt;，&lt;' <a href="right.htm">right</a> '&gt;，&lt;' <a href="bottom.htm">bottom</a> '&gt;，&lt;' <a href="left.htm">left</a> '&gt;等属性指定盒子的位置或尺寸大小。盒子在其包含容器垂直水平居中。盒子的偏移位置不影响常规流中的任何元素，其margin不与其他任何margin折叠。（CSS3）</dd>
+				<dd>与<code class="g-value">absolute</code>一致，但偏移定位是以定位祖先元素的中心点为参考。盒子在其包含容器垂直水平居中。（CSS3）</dd>
 				<dt class="g-color-css3-new">page：</dt>
-				<dd>盒子的位置计算参照「absolute」。盒子在分页媒体或者区域块内，盒子的包含块始终是初始包含块，否则取决于每个「absolute」模式。（CSS3）</dd>
+				<dd>与<code class="g-value">absolute</code>一致。元素在分页媒体或者区域块内，元素的包含块始终是初始包含块，否则取决于每个<code class="g-value">absolute</code>模式。（CSS3）</dd>
 				<dt class="g-color-css3-new">sticky：</dt>
-				<dd>对象在常态时遵循常规流。它就像是「relative」和「fixed」的合体，当在屏幕中时按常规流排版，当卷动到屏幕外时则表现如「fixed」。该属性的表现是现实中你见到的吸附效果。（CSS3）</dd>
+				<dd>对象在常态时遵循常规流。它就像是<code class="g-value">relative</code>和<code class="g-value">fixed</code>的合体，当在屏幕中时按常规流排版，当卷动到屏幕外时则表现如<code class="g-value">fixed</code>。该属性的表现是现实中你见到的吸附效果。（CSS3）</dd>
 			</dl>
 		</div>
 		<div class="related">
@@ -89,8 +89,8 @@
 		<div class="cont">
 			<strong>检索对象的定位方式。</strong>
 			<ul>
-				<li>当 &lt;' position '&gt; 的值为非「static」时，其层叠级别通过 &lt;' <a href="z-index.htm">z-index</a> '&gt; 属性定义。</li>
-				<li>绝对定位的元素，在 &lt;' <a href="top.htm">top</a> '&gt;，&lt;' <a href="right.htm">right</a> '&gt;，&lt;' <a href="bottom.htm">bottom</a> '&gt;，&lt;' <a href="left.htm">left</a> '&gt;属性未设置时，会紧随在其前面的兄弟元素之后，但在位置上不影响常规流中的任何元素。用这个特性你或许会干这样的事：<a href="http://demo.doyoe.com/css/auto-list/absolute-flow.htm" target="_blank" class="external" rel="external">demo</a></li>
+				<li>当<code class="g-property">position</code>的值为<code class="g-value">非static</code>时，其层叠级别通过<a href="z-index.htm" class="g-property">z-index</a>属性定义。</li>
+				<li>绝对定位的元素，在<a href="top.htm" class="g-property">top</a>，<a href="right.htm" class="g-property">right</a>，<a href="bottom.htm" class="g-property">bottom</a>，<a href="left.htm" class="g-property">left</a>属性未设置时，会紧随在其前面的兄弟元素之后，但在位置上不影响常规流中的任何元素。用这个特性你或许会干这样的事：<a href="http://demo.doyoe.com/css/auto-list/absolute-flow.htm" target="_blank" class="external" rel="external">demo</a></li>
 				<li>对应的脚本特性为<strong>position</strong>。</li>
 			</ul>
 		</div>
@@ -175,7 +175,7 @@
 			<ol class="support-info">
 				<li id="support1">IE如果在 <a href="http://msdn.microsoft.com/en-us/library/ie/ms531140(v=vs.85).aspx" rel="external" class="external" target="_blank">quirks mode</a>下将不支持；</li>
 				<li id="support2">Firefox30.0开始支持 <code>tr</code>, <code>thead</code>, <code>tfoot</code>, <code>tbody</code> 定义 <code>relative</code>，Firefox30.0之前的版本及其它浏览器都只能给 <code>table</code> 定义 <code>relative</code> 用以约束内部元素的定位；</li>
-				<li id="support3">需要定义了<xmp class="incode"><meta name="viewport" content="width=device-width, user-scalable=no"></xmp>才生效</li>
+				<li id="support3">需要定义了<xmp class="g-code"><meta name="viewport" content="width=device-width, user-scalable=no"></xmp>才生效</li>
 			</ol>
 		</div>
 	</section>
