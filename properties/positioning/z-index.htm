@@ -42,7 +42,7 @@
 		<h1 class="tit">z-index</h1>
 		<ul class="info">
 			<li><strong>版本：CSS2</strong></li>
-			<li>2015.8.11</li>
+			<li>2015.8.27</li>
 		</ul>
 		<!-- 插入浏览器信息 -->
 	</section>
@@ -53,7 +53,7 @@
 		<div class="cont">
 			<p><strong>z-index</strong>: <mark class="defaultvalue">auto</mark> | <a href="../../values/numeric/integer.htm">&lt;integer&gt;</a></p>
 			<p><strong>默认值</strong>：<mark class="defaultvalue">auto</mark></p>
-			<p><strong>适用于</strong>：定位元素。即定义了 &lt;' <a href="position.htm">position</a> '&gt; 为「非static」的元素</p>
+			<p><strong>适用于</strong>：定位元素。即定义了<a href="position.htm" class="g-property">position</a>为<code class="g-value">非static</code>的元素</p>
 			<p><strong>继承性</strong>：无</p>
 			<p><strong>动画性</strong>：当值为<a href="../../values/numeric/integer.htm">&lt;integer&gt;</a>时</p>
 			<p><strong>计算值</strong>：指定的值</p>
@@ -65,7 +65,7 @@
 		<div class="cont">
 			<dl>
 				<dt>auto：</dt>
-				<dd>元素在当前层叠上下文中的层叠级别是0。元素不会创建新的局部层叠上下文，除非它是根元素的层叠上下文。</dd>
+				<dd>元素在当前层叠上下文中的层叠级别是0。元素不会创建新的局部层叠上下文，除非它是根元素。</dd>
 				<dt><a href="../../values/numeric/integer.htm">&lt;integer&gt;</a>：</dt>
 				<dd>用整数值来定义堆叠级别。可以为负值。</dd>
 			</dl>
@@ -76,12 +76,12 @@
 		<div class="cont">
 			<strong>检索或设置对象的层叠顺序。</strong>
 			<ul>
-				<li>「z-index」用于确定元素在当前层叠上下文中的层叠级别，并确定该元素是否创建新的局部层叠上下文。</li>
+				<li><code class="g-property">z-index</code>用于确定元素在当前层叠上下文中的层叠级别，并确定该元素是否创建新的局部层叠上下文。</li>
 				<li>每个元素层叠顺序由所属的层叠上下文和元素本身的层叠级别决定（每个元素仅属于一个层叠上下文）。</li>
-				<li>同一个层叠上下文中，层叠级别「z-index」大的显示在上面，反之显示在下面。</li>
+				<li>同一个层叠上下文中，层叠级别大的显示在上面，反之显示在下面。</li>
 				<li>同一个层叠上下文中，层叠级别相同的两个元素，依据它们在HTML文档流中的顺序，写在后面的将会覆盖前面的。</li>
 				<li>不同层叠上下文中，元素的显示顺序依据祖先的层叠级别来决定，与自身的层叠级别无关。</li>
-				<li>当z-index未定义或者值为auto时，在IE6,7下会创建新的局部层叠上下文，而在高级浏览器中，按照规范不产生新的局部层叠上下文，如下例：
+				<li>当<code class="g-property">z-index</code>未定义或者值为<code class="g-value">auto</code>时，在IE6,7下会创建新的局部层叠上下文，而在高级浏览器中，按照规范不产生新的局部层叠上下文，如下例：
 					<div class="gquote">
 						<p class="gquote-tit"><strong>demo：</strong></p>
 						<blockquote class="gquote-cont"><code><xmp>div {
@@ -108,7 +108,6 @@ p {
 						<p class="gquote-info">细心的你会发现上述代码在IE6,7下的呈现与高级浏览器下不同。.test1和.test2未设置z-index，在高级浏览器下不会产生新的局部层叠上下文，也就是说它们的子元素没有被新的局部层叠上下文包裹，那么它们的子元素就处在同一个层叠上下文中，可以直接通过自身的层叠级别来决定显示顺序，所以结果是.a 覆盖了.b，因为.a的层叠级别比.b高；而在IE6,7下，.test1和.test2会产生新的局部层叠上下文，即它们的子元素被新的局部层叠上下文包裹，于是子元素显示顺序只能依赖.test1和.test2层叠级别来确定。所以结果是.b 覆盖了.a，因为.b的父元素.test2在HTML文档流中排在.test1之后，后来者居上覆盖前者。参见demo: <a href="http://demo.doyoe.com/css/z-index/create-stacking-context.htm" rel="external" class="external" target="_blank">z-index创建局部层叠上下文在IE6,7下与高级浏览器下的区别</a></p>
 					</div>
 				</li>
-				<li>元素必须定义了 &lt;' <a href="position.htm">position</a> '&gt; 为「非static」，此取值方可生效。</li>
 				<li>对应的脚本特性为<strong>zIndex</strong>。</li>
 			</ul>
 		</div>
