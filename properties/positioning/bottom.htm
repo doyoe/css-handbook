@@ -42,7 +42,7 @@
 		<h1 class="tit">bottom</h1>
 		<ul class="info">
 			<li><strong>版本：CSS2</strong></li>
-			<li>2015.8.11</li>
+			<li>2015.9.2</li>
 		</ul>
 		<!-- 插入浏览器信息 -->
 	</section>
@@ -56,7 +56,9 @@
 			<p><strong>适用于</strong>：定位元素。即定义了 &lt;' <a href="position.htm">position</a> '&gt; 为「非static」的元素</p>
 			<p><strong>继承性</strong>：无</p>
 			<p><strong>动画性</strong>：当值为<a href="../../values/length/length.htm">&lt;length&gt;</a> | <a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a>时</p>
-			<p><strong>计算值</strong>：当 &lt;' <a href="position.htm">position</a> '&gt; 为「static」时，计算值是auto。为「relative」时，如果top和bottom都是auto，则它们的计算值是0；如果top和bottom其中一个为auto，则auto相当于另一个的负值，即top = -bottom；如果top和bottom的值都不为auto，则忽略bottom（前提是未显式的定义 &lt;' <a href="../dimension/height.htm">height</a> '&gt; 或 &lt;' <a href="../dimension/max-height.htm">max-height</a>'&gt;）。否则在其它情况下，当指定值为<a href="../../values/length/length.htm">&lt;length&gt;</a>时，计算值为指定值，当指定值为<a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a>时，计算值为计算后的绝对值。除去这些情况，都为auto</p>
+			<p><strong>计算值</strong>：当<a href="position.htm" class="g-property">position</a>为<code class="g-value">static</code>时，计算值是<code class="g-value">auto</code>。<br />
+				为<code class="g-value">relative</code>时，如果<code class="g-property">top</code>和<code class="g-property">bottom</code>都是<code class="g-value">auto</code>，则它们的计算值是<code class="g-value">0</code>；如果<code class="g-property">top</code>和<code class="g-property">bottom</code>其中一个为<code class="g-value">auto</code>，则<code class="g-value">auto</code>相当于另一个的负值，即top = -bottom；如果<code class="g-property">top</code>和<code class="g-property">bottom</code>的值都不为<code class="g-value">auto</code>，则忽略<code class="g-property">bottom</code>。<br />
+				否则在其它情况下，当指定值为<a href="../../values/length/length.htm">&lt;length&gt;</a>时，计算值为指定值，当指定值为<a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a>时，计算值为计算后的绝对值。除去这些情况，都为auto</p>
 			<p><strong>媒体</strong>：视觉</p>
 		</div>
 	</section>
@@ -79,7 +81,6 @@
 			<strong>检索或设置对象参照相对物底边界向上偏移位置。</strong>
 			<ul>
 				<li>该属性用来指定盒子参照相对物底边界向上偏移。相对定位元素的相对物是自身，绝对定位和居中定位元素是从包含块的padding边界开始计算偏移值</li>
-				<li>元素必须定义了 &lt;' <a href="position.htm">position</a> '&gt; 为「非static」，此取值方可生效。</li>
 				<li>对应的脚本特性为<strong>bottom</strong>。</li>
 			</ul>
 		</div>
@@ -121,7 +122,7 @@
 				</tbody>
 			</table>
 			<ol class="support-info">
-				<li>在IE6及以前的版本下，如果 top 和 bottom 都定义了非 auto 的值，那么 bottom 的计算值将会被设置为 -top （无论是否显式的定义了 <a href="../dimension/height.htm">height</a> 或 <a href="../dimension/max-height.htm">max-height</a>），它的指定值将被忽略，说白了，你将无法在不指定某个元素高度的情况，通过给元素指定 top 和 bottom 的方式来进行高度拉伸；</li>
+				<li>在IE6及以前的版本下，如果<code class="g-property">top</code>和<code class="g-property">bottom</code>都定义了<code class="g-value">非auto</code>的值，那么 bottom 的计算值将会被设置为 -top （无论是否显式的定义了 <a href="../dimension/height.htm" class="g-property">height</a> 或 <a href="../dimension/max-height.htm" class="g-property">max-height</a>），它的指定值将被忽略，说白了，你将无法在不指定某个元素高度的情况，通过给元素指定<code class="g-property">top</code>和<code class="g-property">bottom</code>的方式来进行高度拉伸；</li>
 			</ol>
 		</div>
 	</section>
