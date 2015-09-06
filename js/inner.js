@@ -483,7 +483,8 @@ if (!Global.isLocal && Global.name) {
 				'@media' : [],
 				'@font-face' : [],
 				'@page' : [],
-				'@keyframes' : []
+				'@keyframes' : [],
+				'@supports' : []
 			},
 
 			selectors : {

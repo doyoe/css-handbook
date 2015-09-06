@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="utf-8" />
+<title>@supports</title>
+<meta name="Description" content="CSS3参考手册之: @supports" />
+<meta name="Keywords" content="@supports, 条件规则" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../skin/article.css" />
+</head>
+<body>
+<nav id="guide" class="g-mod">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="../index.htm" id="category" rel="rules" name="@supports">语法与规则列表</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它语法与规则参考</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入快速分类导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">@supports</h1>
+		<ul class="info">
+			<li><strong>版本：CSS3</strong></li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="syntax" class="g-mod g-attr">
+		<h2 class="tit">语法：</h2>
+		<div class="cont">
+			<p><strong>@supports</strong> (rule)[<a href="#operator">operator</a> (rule)]* { sRules }</p>
+			<p id="operator"><strong>operator</strong>：or | and | not</p>
+		</div>
+	</section>
+	<section id="value" class="g-mod g-attr">
+		<h2 class="tit">取值：</h2>
+		<div class="cont">
+			<dl>
+				<dt>rule：</dt>
+				<dd>指定一条具体的CSS规则，必须使用括号包裹</dd>
+				<dt><a href="#operator">operator</a>：</dt>
+				<dd>使用<code class="g-code">or | and | not</code>等操作符指定多条规则。</dd>
+			</dl>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
+		<h2 class="tit">说明：</h2>
+		<div class="cont">
+			<strong>检测是否支持某CSS特性</strong>
+			<ul>
+				<li>
+					<strong>定义支持和不支持flex标准写法的浏览器分别使用不同的规则：</strong>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>示例代码：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp>@supports ( display: flex ) {
+	body {
+		display: flex;
+	}
+	#aside {
+		width: 210px;
+	}
+	#main {
+		flex: auto;
+	}
+}
+
+@supports not ( display: flex ) {
+	#aside {
+		float: left;
+		width: 210px;
+	}
+	#main {
+		overflow: hidden;
+		*zoom: 1;
+	}
+}</xmp></code></blockquote>
+						<p class="gquote-info">我们可以通过类似这样的写法来给不同的终端使用差异化的方案。</p>
+					</div>
+				</li>
+				<li>
+					<strong>你也可以写多重规则来进行过滤：</strong>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>示例代码：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp>@supports ( box-shadow: 2px 2px ) or
+          ( -moz-box-shadow: 2px 2px ) or
+          ( -webkit-box-shadow: 2px 2px ) {
+	.demo {
+		-moz-box-shadow: 2px 2px 0 rgba(0, 0, 0, .3);
+		-webkit-box-shadow: 2px 2px 0 rgba(0, 0, 0, .3);
+		box-shadow: 2px 2px 0 rgba(0, 0, 0, .3);
+	}
+}</xmp></code></blockquote>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<section id="compatible" class="g-mod g-attr">
+		<h2 class="tit">兼容性：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">粉色</span> = 部分支持</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th>IE</th>
+						<th>Firefox</th>
+						<th>Chrome</th>
+						<th>Safari</th>
+						<th>Opera</th>
+						<th>iOS Safari</th>
+						<th>Android Browser</th>
+						<th>Android Chrome</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="unsupport">6.0-11.0</td>
+						<td class="unsupport">2.0-21.0</td>
+						<td class="unsupport">4.0-27.0</td>
+						<td class="unsupport">6.0-8.0</td>
+						<td class="support" rowspan="2">15.0+</td>
+						<td class="unsupport">6.0-8.4</td>
+						<td class="unsupport">2.1-4.3</td>
+						<td class="unsupport">18.0-26.0</td>
+					</tr>
+					<tr>
+						<td class="support">12.0+</td>
+						<td class="support">22.0+</td>
+						<td class="support">28.0+</td>
+						<td class="support">9.0+</td>
+						<td class="support">9.0+</td>
+						<td class="support">4.4+</td>
+						<td class="support">27.0+</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+	<section id="example" class="g-mod g-attr">
+		<h2 class="tit">示例：</h2>
+		<div class="cont">
+			<textarea cols="90" rows="10">
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="utf-8" />
+<title>@supports_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<style>
+@supports ( display: flex ) {
+    body {
+        display: flex;
+    }
+    #aside {
+        width: 210px;
+    }
+    #main {
+        flex: auto;
+    }
+}
+
+@supports not ( display: flex ) {
+    #aside {
+        float: left;
+        width: 210px;
+    }
+    #main {
+        overflow: hidden;
+        *zoom: 1;
+    }
+}
+</style>
+</head>
+<body>
+<div id="aside">aside</div>
+<div id="main">main</div>
+</body>
+</html>
+			</textarea>
+			<p><input type="button" value="运行" class="g-btn g-btn-sure" /></p>
+		</div>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../js/jquery.js"></script>
+<script src="../js/inner.js"></script>
+</body>
+</html>
