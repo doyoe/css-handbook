@@ -76,7 +76,6 @@
 			<strong>设置或检索伸缩盒对象的子元素是否可以换行显示。</strong>
 			<ul>
 				<li>效果类似于过渡版本和新版本的flex-wrap属性；</li>
-				<li>Safari和Chrome已经支持box-lines，但没有实现该属性的效果</li>
 				<li>对应的脚本特性为<strong>boxLines</strong>。</li>
 			</ul>
 		</div>
@@ -108,15 +107,18 @@
 						<td><strong>Basic Support</strong></td>
 						<td class="unsupport">6.0-11.0</td>
 						<td class="unsupport">2.0-40.0</td>
-						<td class="support">4.0-45.0<sup class="fix">-webkit-</sup></td>
-						<td class="support">6.0-8.0<sup class="fix">-webkit-</sup></td>
-						<td class="support">15.0-29.0<sup class="fix">-webkit-</sup></td>
+						<td class="unsupport">4.0-45.0<sup class="fix">-webkit-</sup><sup><a href="#support1">#1</a></sup></td>
+						<td class="unsupport">6.0-8.0<sup class="fix">-webkit-</sup><sup><a href="#support1">#1</a></sup></td>
+						<td class="unsupport">15.0-29.0<sup class="fix">-webkit-</sup><sup><a href="#support1">#1</a></sup></td>
 						<td class="unsupport">6.0-8.3</td>
 						<td class="unsupport">2.1-4.4.4</td>
 						<td class="unsupport">18.0-42.0</td>
 					</tr>
 				</tbody>
 			</table>
+			<ol class="support-info">
+				<li id="support1">实验性质支持<span class="g-property">box-lines</span>，但没有实现该属性的效果（相当于不支持），请勿使用该属性</li>
+			</ol>
 		</div>
 	</section>
 	<section id="example" class="g-mod g-attr">
