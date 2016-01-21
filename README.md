@@ -19,6 +19,9 @@ CSS参考手册目前正在v4.2.3开发中。广泛接受[Issues](https://github
 
 如想查看更多版本变更历史，请查看 [版本变更记录](http://css.doyoe.com/introduction/change-list.htm)
 
+## 微信交流群：
+
+![CSS参考手册微信交流群](images/wechat.png)
 
 ## 作者
 
