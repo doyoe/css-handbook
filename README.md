@@ -8,11 +8,11 @@
 
 ## 版本更新
 
-### 最新版本：v4.2.0
+### 最新版本：v4.2.2
 
-### 开发版本：v4.2.2
+### 开发版本：v4.2.3
 
-CSS参考手册目前正在v4.2.2开发中。广泛接受[Issues](https://github.com/doyoe/css-handbook/issues)和[Pull Requests](https://github.com/doyoe/css-handbook/pulls)
+CSS参考手册目前正在v4.2.3开发中。广泛接受[Issues](https://github.com/doyoe/css-handbook/issues)和[Pull Requests](https://github.com/doyoe/css-handbook/pulls)
 
 
 ### 历史版本：
