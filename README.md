@@ -8,31 +8,16 @@
 
 ## 版本更新
 
-### 草案版本：v4.2.1
-
-CSS参考手册目前正在v4.2.1开发中。广泛接受[Issues](https://github.com/doyoe/css-handbook/issues)和[Pull Requests](https://github.com/doyoe/css-handbook/pulls)
-
 ### 最新版本：v4.2.0
 
-更新时间：2015.08.14
+### 开发版本：v4.2.2
 
-* 新增了
-[text-size-adjust](http://css.doyoe.com/properties/text/text-size-adjust.htm),
-[tap-highlight-color](http://css.doyoe.com/properties/only-webkit/tap-highlight-color.htm),
-[user-drag](http://css.doyoe.com/properties/only-webkit/user-drag.htm)
-参考；
-* 修订了 [Transform](http://css.doyoe.com/properties/transform/index.htm) 模块，并新增了3D相关参考：
-[transform-style](http://css.doyoe.com/properties/transform/transform-style.htm),
-[perspective](http://css.doyoe.com/properties/transform/perspective.htm),
-[perspective-origin](http://css.doyoe.com/properties/transform/perspective-origin.htm),
-[backface-visibility](http://css.doyoe.com/properties/transform/backface-visibility.htm)；
-* 阅读指引中新增了 [语法指引](http://css.doyoe.com/introduction/guide.htm) 用于帮助读者轻松看懂语法；
-* 修订了大部分模块的浏览器兼容性列表；
+CSS参考手册目前正在v4.2.2开发中。广泛接受[Issues](https://github.com/doyoe/css-handbook/issues)和[Pull Requests](https://github.com/doyoe/css-handbook/pulls)
 
 
 ### 历史版本：
 
-查看 [版本变更记录](http://css.doyoe.com/introduction/change-list.htm)
+如想查看更多版本变更历史，请查看 [版本变更记录](http://css.doyoe.com/introduction/change-list.htm)
 
 
 ## 作者
