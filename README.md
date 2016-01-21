@@ -34,11 +34,6 @@ CSS参考手册目前正在v4.2.1开发中。广泛接受[Issues](https://github
 
 查看 [版本变更记录](http://css.doyoe.com/introduction/change-list.htm)
 
-## GitHub计划
-
-CSS参考手册从v4.1.4开始，代码都托管到[GitHub](https://github.com/doyoe/css-handbook)上。大家可以给手册提[Issues](https://github.com/doyoe/css-handbook/issues)和[Pull Requests](https://github.com/doyoe/css-handbook/pulls)。
-
-会阶段性的合并，谢谢。
 
 ## Author
 
