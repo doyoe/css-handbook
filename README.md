@@ -1,6 +1,6 @@
 # CSS参考手册
 
-持续小步更新中...
+国内最好的CSS参考手册，持续小步更新。。。
 
 ## 浏览器支持策略
 
@@ -29,50 +29,6 @@ CSS参考手册目前正在v4.2.1开发中。广泛接受[Issues](https://github
 * 阅读指引中新增了 [语法指引](http://css.doyoe.com/introduction/guide.htm) 用于帮助读者轻松看懂语法；
 * 修订了大部分模块的浏览器兼容性列表；
 
-### 上个版本：v4.1.6
-
-更新时间：2015.03.09
-
-* 新增了
-[&lt;image&gt;](http://css.doyoe.com/values/image/image.htm),
-[image()](http://css.doyoe.com/values/image/image().htm),
-[image-set()](http://css.doyoe.com/values/image/image-set().htm),
-[&lt;gradient&gt;](http://css.doyoe.com/values/image/gradient.htm),
-[&lt;color&gt;](http://css.doyoe.com/values/color/color.htm),
-[currentColor](http://css.doyoe.com/values/color/currentColor.htm),
-[inherit](http://css.doyoe.com/values/textual/inherit.htm),
-[initial](http://css.doyoe.com/values/textual/initial.htm),
-[counters](http://css.doyoe.com/values/content/counters.htm),
-[font-size-adjust](http://css.doyoe.com/properties/font/font-size-adjust.htm)
-参考；
-* 移除了 min(), max() 参考；
-* 修订了
-[&lt;url&gt;](http://css.doyoe.com/values/textual/url.htm),
-[linear-gradient()](http://css.doyoe.com/values/image/linear-gradient().htm),
-[repeating-linear-gradient()](http://css.doyoe.com/values/image/repeating-linear-gradient().htm),
-[radial-gradient()](http://css.doyoe.com/values/image/radial-gradient().htm),
-[repeating-radial-gradient()](http://css.doyoe.com/values/image/repeating-radial-gradient().htm)
-参考；
-* 修订了
-[Dimension](http://css.doyoe.com/properties/dimension/index.htm),
-[Margin](http://css.doyoe.com/properties/margin/index.htm),
-[Padding](http://css.doyoe.com/properties/padding/index.htm),
-[Border](http://css.doyoe.com/properties/border/index.htm),
-[Background](http://css.doyoe.com/properties/background/index.htm),
-[Color](http://css.doyoe.com/properties/color/index.htm),
-[Font](http://css.doyoe.com/properties/font/index.htm)
-等模块的浏览器兼容视图；
-* 修订了
-[Selectors](http://css.doyoe.com/selectors/index.htm),
-[Rules](http://css.doyoe.com/rules/index.htm),
-[Values and Units](http://css.doyoe.com/values/index.htm),
-[Appendix](http://css.doyoe.com/appendix/index.htm),
-[CSS Hack](http://css.doyoe.com/hack/index.htm)
-等模块的浏览器兼容视图；
-* 修订了
-[border-image](http://css.doyoe.com/properties/border/border-image.htm),
-[border-radius](http://css.doyoe.com/properties/border/border-radius.htm)
-及相关属性的参考描述；
 
 ### 历史版本：
 
