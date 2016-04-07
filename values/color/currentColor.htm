@@ -50,12 +50,12 @@
 	<section id="intro" class="g-mod g-attr">
 		<h2 class="tit">说明：</h2>
 		<div class="cont">
-			<p>在CSS1和CSS2中定义了 <a href="../../properties/border/border-color.htm">border-color</a> 属性的默认值是 <a href="../../properties/color/color.htm">color</a> 属性的值，但却没有为此定义一个相应的关键字。</p>
-			<p>这个问题在 SVG 中被意识到了，于是在 SVG 1.0 中引入了 currentColor 关键字。</p>
-			<p>在CSS3中扩展了颜色值包含 currentColor 关键字，并用于所有接受颜色的属性上。</p>
-			<strong>currentColor是 <a href="../../properties/color/color.htm">color</a> 属性的值，具体意思是指：currentColor关键字的使用值是 <a href="../../properties/color/color.htm">color</a> 属性值的计算值。</strong>
+			<p>在CSS1和CSS2中定义了<a href="../../properties/border/border-color.htm" class="g-property">border-color</a>属性的默认值是<a href="../../properties/color/color.htm" class="g-property">color</a>属性的值，但却没有为此定义一个相应的关键字。</p>
+			<p>这个问题在 SVG 中被意识到了，于是在 SVG 1.0 中引入了<span class="g-value">currentColor</span>关键字。</p>
+			<p>在CSS3中扩展了颜色值包含<span class="g-value">currentColor</span>关键字，并用于所有接受颜色的属性上。</p>
+			<strong><span class="g-value">currentColor</span>是 <a href="../../properties/color/color.htm" class="g-property">color</a> 属性的值，具体意思是指：<span class="g-value">currentColor</span>关键字的使用值是<a href="../../properties/color/color.htm" class="g-property">color</a>属性值的计算值。</strong>
 			<ul>
-				<li>如果currentColor关键字被应用在 <a href="../../properties/color/color.htm">color</a> 属性自身，则相当于是 <code class="incode">color: inherit</code>。</li>
+				<li>如果<span class="g-value">currentColor</span>关键字被应用在<a href="../../properties/color/color.htm" class="g-property">color</a>属性自身，则相当于是<code class="g-code">color: inherit</code>。</li>
 				<li>
 					<p>上述这些话都是什么意思呢？先看个例子</p>
 					<div class="gquote">
@@ -99,17 +99,23 @@
 				</thead>
 				<tbody>
 					<tr>
-						<td class="support">6.0+</td>
-						<td class="support">2.0+</td>
-						<td class="support">4.0+</td>
-						<td class="support">3.1+</td>
-						<td class="support">3.5+</td>
-						<td class="support">3.2+</td>
-						<td class="support">2.1+</td>
-						<td class="support">18.0+</td>
+						<td class="unsupport">6.0-8.0 <sup><a href="#support1">#1</a></sup></td>
+						<td class="support" rowspan="2">2.0+</td>
+						<td class="support" rowspan="2">4.0+</td>
+						<td class="support" rowspan="2">4.0+</td>
+						<td class="support" rowspan="2">3.5+</td>
+						<td class="support" rowspan="2">3.2+</td>
+						<td class="support" rowspan="2">2.1+</td>
+						<td class="support" rowspan="2">18.0+</td>
+					</tr>
+					<tr>
+						<td class="support">9.0+</td>
 					</tr>
 				</tbody>
 			</table>
+			<ol class="support-info">
+				<li id="support1">不支持<span class="g-value">currentColor</span>关键字，但支持以不定义该值的方式达到相同的效果；</li>
+			</ol>
 		</div>
 	</section>
 </section>
