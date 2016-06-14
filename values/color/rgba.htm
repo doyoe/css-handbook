@@ -64,7 +64,7 @@
 				<dt>B：</dt>
 				<dd>蓝色值。正整数 | 百分数</dd>
 				<dt>A：</dt>
-				<dd>Alpha透明度。取值0~1之间。</dd>
+				<dd>Alpha透明度。取值0 - 1之间。</dd>
 			</dl>
 		</div>
 	</section>
@@ -84,7 +84,7 @@
 					<p><a target="_blank" class="external" rel="external" href="http://msdn.microsoft.com/en-us/library/ms532997%28v=vs.85%29.aspx">progid:DXImageTransform.Microsoft.Gradient()</a>滤镜里的 startColorstr 参数值是 #AARRGGBB 形式的， 其中的AA是代表不透明度的十六进制，00表示完全透明，FF就是全不透明，化成十进制的范围就是0~255，剩下的 RRGGBB 就是颜色的十六进制代码。
 					</p>
 					<p>举例如：background: rgba(125, 0, 0, .3); 表示的是30%不透明度的红色背景。把30%的不透明度转换成十六制呢的方法如下：先计算#AA的的十进制x，x/255 = 3/10，解得x=3*255/10，然后再把x换算成十六进制，约等于4C。</p>
-					
+
 					<h4>常用透明度对应16进制关系：</h4>
 					<pre><code>.0（00） .1（19） .05（0C） .15（26）
 .2（33） .3（4C） .25（3F） .35（59）
