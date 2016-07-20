@@ -50,7 +50,7 @@
 		<h2 class="tit">语法：</h2>
 		<div class="cont">
 			<p><strong>@keyframes</strong> <a href="../../values/textual/identifier.htm">&lt;identifier&gt;</a> { <a href="#dfn-syntax">&lt;keyframes-blocks&gt;</a> }</p>
-			<p id="dfn-syntax"><strong>&lt;keyframes-blocks&gt;</strong>：[ [ from | to | <a href="../values/numeric/percentage.htm">&lt;percentage&gt;</a> ]{ sRules } ] [ [ , from | to | <a href="../values/numeric/percentage.htm">&lt;percentage&gt;</a> ]{ sRules } ]*</p>
+			<p id="dfn-syntax"><strong>&lt;keyframes-blocks&gt;</strong>：[ [ from | to | <a href="../values/numeric/percentage.htm">&lt;percentage&gt;</a> ] [ , from | to | <a href="../values/numeric/percentage.htm">&lt;percentage&gt;</a> ]*{ sRules } ]*</p>
 		</div>
 	</section>
 	<section id="value" class="g-mod g-attr">
@@ -211,8 +211,7 @@
 @keyframes staff{
 	0%{transform:translate(0,0);}
 	6%{transform:translate(260px,0);}
-	20%{transform:translate(300px,0);}
-	30%{transform:translate(300px,0);}
+	20%,30%{transform:translate(300px,0);}
 	40%{transform:translate(200px,0);}
 	65%{transform:translate(40px,0);}
 	79%{transform:translate(0,0);}
