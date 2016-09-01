@@ -9,16 +9,3 @@ node_modules
 
 # test
 test.htm
-
-# gulp
-gulpfile.js
-package.json
-
-
-# chm相关
-*.chw
-*.hhc
-*.hhk
-*.hhp
-*.chm
-*.orig
