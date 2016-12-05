@@ -12,16 +12,21 @@
 
 ### 开发版本：v4.2.4
 
-CSS参考手册目前正在v4.2.4开发中。广泛接受[Issues](https://github.com/doyoe/css-handbook/issues)和[Pull Requests](https://github.com/doyoe/css-handbook/pulls)
-
 
 ### 历史版本：
 
 如想查看更多版本变更历史，请查看 [版本变更记录](http://css.doyoe.com/introduction/change-list.htm)
 
+
+## 问题及反馈
+
+如果您在使用CSS参考手册时发现了任何问题，或者有任何帮助手册更完善的想法和建议，请直接给我们提 [Issues](https://github.com/doyoe/css-handbook/issues/new) 和 [Pull Requests](https://github.com/doyoe/css-handbook/pulls)。
+
+
 ## 微信交流群：
 
 ![CSS参考手册微信交流群](images/wechat.png)
+
 
 ## 作者
 
