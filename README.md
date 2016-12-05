@@ -1,6 +1,6 @@
 # CSS参考手册
 
-[![AppVeyor](https://img.shields.io/appveyor/ci/doyoe/css-handbook.svg)](https://ci.appveyor.com/project/handbook/css-book)
+[![AppVeyor](https://img.shields.io/appveyor/ci/doyoe/css-handbook.svg)](https://ci.appveyor.com/project/doyoe/css-handbook)
 
 国内最好的CSS参考手册，持续小步更新。。。
 
