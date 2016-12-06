@@ -58,23 +58,49 @@
 		<div class="cont">
 			<strong>选择E元素后面的所有兄弟元素F。</strong>
 			<ul>
-				<li>与<a href="e-adjacent-f.htm">相邻选择符</a>不同的是，兄弟选择符会命中所有符合条件的兄弟元素，而不强制是紧邻的元素。
+				<li>需要注意的是，选择的只是同级的元素F，后代中的元素F不会被选择。
+					<div class="gquote">
+						<h3 class="gquote-tit">只作用于同级元素</h3>
+						<blockquote class="gquote-cont"><code><xmp><style>
+	h3 ~ p { color: #f00; }
+</style>
+<h3>这是一个标题</h3>
+<p>p1</p>
+<div>
+	<p>p2</p>
+	<p>p3</p>
+</div></xmp></code></blockquote>
+						<p class="gquote-info">这个例子中，只有 p1 会被选中；p2/p3 由于与 h3 并不是同级，所以不会被选中；</p>
+					</div>
+				</li>
+				<li>只选择E元素之后的元素F，出现在E元素之前的元素F，不会被选择到。
+					<div class="gquote">
+						<h3 class="gquote-tit">只作用于同级元素</h3>
+						<blockquote class="gquote-cont"><code><xmp><style>
+	h3 ~ p { color: #f00; }
+</style>
+<p>p0</p>
+<h3>这是一个标题</h3>
+<p>p1</p>
+<p>p2</p>
+<p>p3</p></xmp></code></blockquote>
+						<p class="gquote-info">这个例子中，p1/p2/p3 都会被选中；而 p0 因为在 h3 之前，所以不会被选中；</p>
+					</div>
+				</li>
+				<li>与 <a href="e-adjacent-f.htm">相邻选择符(E+F)</a> 不同的是，兄弟选择符会命中所有符合条件的兄弟元素，而不强制是紧邻的元素。
 					<div class="gquote">
 						<p class="gquote-tit"><strong>E~F VS. E+F：</strong></p>
 						<blockquote class="gquote-cont"><code><xmp><style>
 	/* 相邻选择符(E+F) */
-	p+p{color:#f00;}
+	h3 + p { color: #f00; }
 	/* 兄弟选择符(E~F) */
-	p~p{color:#f00;}
+	h3 ~ p { color: #f00; }
 </style>
+<h3>这是一个标题</h3>
 <p>p1</p>
 <p>p2</p>
-<h3>这是一个标题</h3>
-<p>p3</p>
-<h3>这是一个标题</h3>
-<p>p4</p>
-<p>p5</p></xmp></code></blockquote>
-						<p class="gquote-info">此例，如果使用<code class="incode">p + p{color:#f00;}</code>，那么p2, p5将会变成红色；如果使用<code class="incode">p ~ p{color:#f00;}</code>，那么p2,p3,p4,p5将会变成红色；</p>
+<p>p3</p></xmp></code></blockquote>
+						<p class="gquote-info">这个例子中，如果是相邻选择符，那么只有 p1 会变成红色；如果是兄弟选择符，那么 p1/p2/p3 都会变成红色；</p>
 					</div>
 				</li>
 			</ul>
