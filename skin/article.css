@@ -20,8 +20,8 @@
 }
 .g-property:before {content: "\2018";}
 .g-property:after {content: "\2019";}
-.g-value:before {content: "「";}
-.g-value:after {content: "」";}
+.g-value:before {content: "\300c";}
+.g-value:after {content: "\300d";}
 .g-value,
 .g-code {display:inline;border-radius:3px;background-color:#eee;}
 .g-code {padding:0 3px;}

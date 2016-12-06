@@ -56,7 +56,7 @@
 	<section id="intro" class="g-mod g-attr">
 		<h2 class="tit">说明：</h2>
 		<div class="cont">
-			<strong>选择具有att属性且属性值为以val开头并用连接符"-"分隔的字符串的E元素，如果属性值仅为val，也将被选择。</strong>
+			<strong>选择具有<code class="g-code">att</code>属性，其值是以<code class="g-value">val</code>开头并用连接符"-"分隔的字符串的E元素；如果值仅为<code class="g-value">val</code>，也将被选择。</strong>
 			<div class="gquote">
 				<p class="gquote-tit"><strong>例如：</strong></p>
 				<blockquote class="gquote-cont"><code><xmp><style>
@@ -65,10 +65,15 @@ div[class|="a"] {
 }
 </style>
 
+<div class="a">0</div>
 <div class="a-test">1</div>
 <div class="b-test">2</div>
 <div class="c-test">3</div></xmp></code></blockquote>
-					<p class="gquote-info">此例，将会命中第一个div，因为匹配到了class属性，且属性值以紧跟着"-"的a开头</p>
+					<div class="gquote-info">
+						<p>在这个例子中，前2个div将会被命中：</p>
+						<p>第1个div，拥有class属性，并且值为a，所以被命中；</p>
+						<p>第2个div，拥有class属性，值是a开头并紧跟着连接符“-”，所以被命中；</p>
+					</div>
 			</div>
 		</div>
 	</section>
