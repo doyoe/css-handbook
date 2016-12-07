@@ -464,12 +464,12 @@ if (!Global.isLocal && Global.name) {
 				},
 				'only-webkit' : {
 					'index' : ['Only Webkit','Only Webkit属性'],
-					'box-reflect' : [],
-					'text-fill-color' : [],
-					'text-stroke' : [],
-					'text-stroke-width' : [],
-					'text-stroke-color' : [],
-					'tap-highlight-color' : [],
+					'-webkit-box-reflect' : [],
+					'-webkit-text-fill-color' : [],
+					'-webkit-text-stroke' : [],
+					'-webkit-text-stroke-width' : [],
+					'-webkit-text-stroke-color' : [],
+					'-webkit-tap-highlight-color' : [],
 					'-webkit-user-drag' : [],
 					'-webkit-overflow-scrolling' : []
 				}
