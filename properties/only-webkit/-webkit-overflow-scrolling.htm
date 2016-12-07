@@ -64,9 +64,9 @@
 		<div class="cont">
 			<dl>
 				<dt>auto：</dt>
-				<dd>使用普通滚动, 当手指从触摸屏上移开，滚动会立即停止。</dd>
+				<dd>默认值。当手指从触摸屏上移开，滚动会立即停止，相当于普通的滚动效果。</dd>
 				<dt>touch：</dt>
-				<dd>使用具有回弹效果的滚动, 当手指从触摸屏上移开，内容会继续保持一段时间的滚动效果。继续滚动的速度和持续的时间和滚动手势的强烈程度成正比。同时也会创建一个新的堆叠上下文。</dd>
+				<dd>使用具有回弹效果的滚动，当手指从触摸屏上移开，内容会继续保持一段时间的滚动效果。继续滚动的速度和持续的时间和滚动手势的强烈程度成正比。同时也会创建一个新的堆叠上下文。</dd>
 			</dl>
 		</div>
 	</section>
@@ -128,7 +128,7 @@
 				</tbody>
 			</table>
 			<ol class="support-info">
-				<li id="support1">Android 4.0前期增加了快速回弹滚动效果，不过随后这个特性又被移除，目前为止 Android 支持该属性但未实现回弹效果。</li>
+				<li id="support1">Android 4.0前期增加了快速回弹滚动效果，不过随后这个特性又被移除，目前为止 Android 上所有浏览器支持该属性但未实现回弹效果。</li>
 			</ol>
 		</div>
 	</section>
@@ -140,28 +140,33 @@
 <html lang="zh-cmn-Hans">
 <head>
 <meta charset="utf-8" />
-<title>tap-highlight-color_CSS参考手册_web前端开发参考手册系列</title>
+<title>-webkit-overflow-scrolling_CSS参考手册_web前端开发参考手册系列</title>
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <style>
-.test {
-    display: block;
-    margin: 5px;
-    padding: 10px;
-    border: 1px solid #aaa;
-    -webkit-user-select: none;
+html,
+body {
+    overflow: hidden;
 }
-.demo1 {
-    -webkit-tap-highlight-color: red;
-}
-.demo2 {
-    -webkit-tap-highlight-color: red;
+.demo {
+    height: 200px;
+    background-color: red;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
 </style>
 </head>
 <body>
-    <a href="#" class="test demo1">请在移动设备上查看本例</a>
-    <label class="test demo2"><input type="checkbox" />请在移动设备上查看本例</label>
+<div class="demo">
+    <h2>请在移动设备上查看本例</h2>
+    <p>文字</p>
+    <p>文字</p>
+    <p>文字</p>
+    <p>文字</p>
+    <p>文字</p>
+    <p>文字</p>
+    <p>文字</p>
+</div>
 </body>
 </html>
 			</textarea>
