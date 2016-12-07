@@ -2,9 +2,9 @@
 <html lang="zh-cmn-Hans">
 <head>
 <meta charset="utf-8" />
-<title>user-drag</title>
-<meta name="description" content="CSS3参考手册之: user-drag" />
-<meta name="keywords" content="user-drag, css3, css3参考手册" />
+<title>-webkit-user-drag</title>
+<meta name="description" content="CSS3参考手册之: -webkit-user-drag" />
+<meta name="keywords" content="-webkit-user-drag, css3, css3参考手册" />
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <meta name="robots" content="all" />
 <!--[if lte IE 8]>
@@ -19,7 +19,7 @@
 		<span>&#187;</span>
 		<a href="../index.htm">属性列表</a>
 		<span>&#187;</span>
-		<a href="index.htm" id="category" rel="properties/only-webkit" name="user-drag">Only Webkit属性</a>
+		<a href="index.htm" id="category" rel="properties/only-webkit" name="-webkit-user-drag">Only Webkit属性</a>
 		<span>&#187;</span>
 	</div>
 	<div class="to">
@@ -39,7 +39,7 @@
 </nav>
 <header id="hd">
 	<section id="title" class="g-mod">
-		<h1 class="tit">user-drag</h1>
+		<h1 class="tit">-webkit-user-drag</h1>
 		<ul class="info">
 			<li><strong>版本：CSS3</strong></li>
 			<li>媒体：互动</li>
@@ -51,7 +51,7 @@
 	<section id="syntax" class="g-mod g-attr">
 		<h2 class="tit">语法：</h2>
 		<div class="cont">
-			<p><strong>user-drag</strong>：auto | element | none</p>
+			<p><strong>-webkit-user-drag</strong>：auto | element | none</p>
 			<p><strong>默认值</strong>：<mark class="defaultvalue">auto</mark></p>
 			<p><strong>适用于</strong>：所有元素</p>
 			<p><strong>继承性</strong>：有</p>
@@ -66,7 +66,7 @@
 				<dt>auto：</dt>
 				<dd>使用默认的拖拽行为，这种情况只有图片和链接可以被拖拽。</dd>
 				<dt>element：</dt>
-				<dd>整个元素而非它的内容可拖拽。</dd>
+				<dd>整个元素（不仅仅只是它的内容）可拖拽。</dd>
 				<dt>none：</dt>
 				<dd>元素不能被拖动。在通过选中后可拖拽。</dd>
 			</dl>
@@ -75,9 +75,9 @@
 	<section id="intro" class="g-mod g-attr">
 		<h2 class="tit">说明：</h2>
 		<div class="cont">
-			<strong>设置或检索一个元素可以被拖拽，而不它的内容。</strong>
+			<strong>用以设置一个元素和它的内容是否可以被拖拽</strong>
 			<ul>
-				<li>对应的脚本特性为<strong>userDrag</strong>。</li>
+				<li>对应的脚本特性为<strong>webkitUserDrag</strong>。</li>
 			</ul>
 		</div>
 	</section>
@@ -127,9 +127,12 @@
 <html lang="zh-cmn-Hans">
 <head>
 <meta charset="utf-8" />
-<title>user-drag_CSS参考手册_web前端开发参考手册系列</title>
+<title>-webkit-user-drag_CSS参考手册_web前端开发参考手册系列</title>
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <style>
+dd {
+	padding: 5px 0;
+}
 img {
     width: 100px;
     height: 100px;
@@ -146,17 +149,17 @@ img {
 </head>
 <body>
 <dl>
-    <dt>auto</dt>
+    <dt>-webkit-user-drag: auto</dt>
     <dd><a href="#">我是一个链接</a></dd>
-    <dd><img src="../../../images/alipay.png" alt="支付宝二维码" /></dd>
+    <dd><img src="../../images/alipay.png" alt="支付宝二维码" /></dd>
     <dd>我是一些纯文字</dd>
-    <dt>element</dt>
+    <dt>-webkit-user-drag: element</dt>
     <dd class="element"><a href="#">我是一个链接</a></dd>
-    <dd class="element"><img src="../../../images/alipay.png" alt="支付宝二维码" /></dd>
+    <dd class="element"><img src="../../images/alipay.png" alt="支付宝二维码" /></dd>
     <dd class="element">我是一些纯文字</dd>
-    <dt>none</dt>
+    <dt>-webkit-user-drag: none</dt>
     <dd><a class="none" href="#">我是一个链接</a></dd>
-    <dd><img class="none" src="../../../images/alipay.png" alt="支付宝二维码" /></dd>
+    <dd><img class="none" src="../../images/alipay.png" alt="支付宝二维码" /></dd>
     <dd class="none">我是一些纯文字</dd>
 </dl>
 </body>

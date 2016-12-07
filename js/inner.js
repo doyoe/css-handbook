@@ -470,7 +470,7 @@ if (!Global.isLocal && Global.name) {
 					'text-stroke-width' : [],
 					'text-stroke-color' : [],
 					'tap-highlight-color' : [],
-					'user-drag' : [],
+					'-webkit-user-drag' : [],
 					'-webkit-overflow-scrolling' : []
 				}
 			},
