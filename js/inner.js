@@ -454,14 +454,6 @@ if (!Global.isLocal && Global.name) {
 					'filter' : [],
 					'behavior' : []
 				},
-				'only-firefox' : {
-					'index' : ['Only Firefox','Only Firefox属性'],
-					'border-colors' : [],
-					'border-top-colors' : [],
-					'border-right-colors' : [],
-					'border-bottom-colors' : [],
-					'border-left-colors' : []
-				},
 				'only-webkit' : {
 					'index' : ['Only Webkit','Only Webkit属性'],
 					'-webkit-box-reflect' : [],
