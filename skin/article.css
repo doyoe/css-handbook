@@ -10,18 +10,10 @@
 .g-property:after,
 .g-value:before,
 .g-value:after {font-family: Helvetica, arial, sans-serif;}
-.g-property:before,
-.g-value:before {
-    padding-right: 2px;
-}
-.g-property:after,
-.g-value:after {
-    padding-left: 2px;
-}
-.g-property:before {content: "\2018";}
-.g-property:after {content: "\2019";}
-.g-value:before {content: "\300c";}
-.g-value:after {content: "\300d";}
+.g-property:before {content: "\2018"" ";}
+.g-property:after {content: " ""\2019";}
+.g-value:before {content: "\300c"" ";}
+.g-value:after {content: " ""\300d";}
 .g-value,
 .g-code {display:inline;border-radius:3px;background-color:#eee;}
 .g-code {padding:0 3px;}
