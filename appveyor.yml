@@ -27,7 +27,7 @@ after_build:
 
 artifacts:
   - path: css.chm
-    name: CSS 手册
+    name: CSS参考手册
 
   - path: css.zip
-    name: CSS 手册 压缩包
+    name: CSS参考手册 压缩包
