@@ -28,7 +28,6 @@ node_modules
 test.htm
 
 # build
-*.chm
 *.hhc
 *.hhk
 *.hhp
