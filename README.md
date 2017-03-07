@@ -25,11 +25,6 @@
 如果您在使用CSS参考手册时发现了任何问题，或者有任何帮助手册更完善的想法和建议，请直接给我们提 [Issues](https://github.com/doyoe/css-handbook/issues/new) 和 [Pull Requests](https://github.com/doyoe/css-handbook/pulls)。
 
 
-## 微信交流群：
-
-![CSS参考手册微信交流群](images/wechat.png)
-
-
 ## 作者
 
 杜瑶，我目前居住在北京，就职于 [Qunar](http://www.qunar.com)，您可以在 [Github](https://github.com/doyoe) 或者 [Weibo](http://weibo.com/doyoe) 看到我的最近动态。当然，也可以通过我的[个人站点](http://www.doyoe.com)，博客：[CSS探索之旅](http://blog.doyoe.com)，[CSS参考手册](http://css.doyoe.com) 和 [Web前端实验室](http://demo.doyoe.com) 等信息了解更多。
