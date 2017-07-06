@@ -56,10 +56,13 @@
 	<section id="intro" class="g-mod g-attr">
 		<h2 class="tit">说明：</h2>
 		<div class="cont">
-			<strong>匹配同类型中的第n个同级兄弟元素E。</strong>
+			<strong>匹配相同层级下的第n个同类型元素E。</strong>
+			<p>需要注意4个要点：</p>
 			<ul>
-				<li>要使该属性生效，E元素必须是某个元素的子元素，E的父元素最高是html，即E可以是html的子元素，也就是说E可以是body</li>
-				<li>该选择符总是能命中父元素的第n个为E的子元素，不论第n个子元素是否为E</li>
+				<li>首先，只能匹配相同层级的元素，即：只能匹配元素E的兄弟元素</li>
+				<li>其次，只能匹配与元素E类型相同的元素，即：如果元素E是div，那么只能从同是div的那些元素里进行匹配</li>
+				<li>再次，E元素必须是某个元素的子元素，E的父元素最高是html，即E可以是html的子元素，也就是说E可以是body</li>
+				<li>最后，该选择符匹配的是父元素的第n个为E的子元素，而不是第n个子元素</li>
 				<li>
 					<strong>有一点需要注意的是：</strong>
 					<div class="gquote">
