@@ -72,9 +72,9 @@
 	<p>p3</p>
 	<span>span2</span>
 </div></xmp></code></blockquote>
-						<p class="gquote-tit"><strong>如上HTML，假设要命中第3个p元素，代码如下：</strong></p>
-						<blockquote class="gquote-cont"><code><xmp>.demo p:nth-of-type(3) { color: #f00; }</xmp></code></blockquote>
-						<p class="gquote-info">可以看到此时 .demo 的第4个子元素会被命中，因为 .demo 的第4个子元素才是它的第3个p子元素</p>
+						<p class="gquote-tit"><strong>如上HTML，要命中倒数第1个p元素，代码如下：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp>.demo p:nth-last-of-type(1) { color: #f00; }</xmp></code></blockquote>
+						<p class="gquote-info">此时p3会被命中，虽然p3是 .demo 的倒数第2个子元素，但却是倒数第1个为p的子元素</p>
 					</div>
 				</li>
 				<li>
@@ -89,9 +89,9 @@
 	</p>
 	<span>span3</span>
 </div></xmp></code></blockquote>
-						<p class="gquote-tit"><strong>如上HTML，你将不能通过下面的代码命中第2个span：</strong></p>
-						<blockquote class="gquote-cont"><code><xmp>.demo span:nth-of-type(2) { color: #f00; }</xmp></code></blockquote>
-						<p class="gquote-info">此时第3个span会被命中，因为span3才是 .demo 的第2个span子元素，而span2是 .demo 的孙辈元素</p>
+						<p class="gquote-tit"><strong>如上HTML，你将不能通过下面的代码命中倒数第2个span：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp>.demo span:nth-last-of-type(2) { color: #f00; }</xmp></code></blockquote>
+						<p class="gquote-info">此时span1会被命中，因为span1才是 .demo 的倒数第2个span子元素，而span2是 .demo 的孙辈元素</p>
 					</div>
 				</li>
 			</ul>
@@ -147,13 +147,13 @@
 <title>结构性伪类选择符 E:nth-last-of-type(n)_CSS参考手册_web前端开发参考手册系列</title>
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <style>
-p:nth-last-of-type(1) {
+.demo p:nth-last-of-type(1) {
 	color: #f00;
 }
 </style>
 </head>
 <body>
-<div class="test">
+<div class="demo">
 	<p>我是一个p元素</p>
 	<div>我是一个div元素</div>
 	<p>我是一个p元素</p>
