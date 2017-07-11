@@ -90,9 +90,9 @@
 	</p>
 	<span>span4</span>
 </div></xmp></code></blockquote>
-						<p class="gquote-tit"><strong>如上HTML，你将不能通过下面的代码命中倒数第2个span：</strong></p>
+						<p class="gquote-tit"><strong>如上HTML，你将不能通过下面的代码命中span3：</strong></p>
 						<blockquote class="gquote-cont"><code><xmp>.demo span:nth-last-of-type(2) { color: #f00; }</xmp></code></blockquote>
-						<p class="gquote-info">此时span1会被命中，因为span1才是 .demo 的倒数第2个span子元素，而span2是 .demo 的孙辈元素</p>
+						<p class="gquote-info">因为span3并不是.demo的倒数第二个span子元素，而是p的倒数第一个span子元素，上述选择符最终命中的会是span1和span2</p>
 					</div>
 				</li>
 			</ul>

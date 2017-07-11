@@ -90,9 +90,9 @@
 	</p>
 	<span>span4</span>
 </div></xmp></code></blockquote>
-						<p class="gquote-tit"><strong>如上HTML，你将不能通过下面的代码命中第2个span：</strong></p>
+						<p class="gquote-tit"><strong>如上HTML，如果我想匹配其中的第2个span，代码如下：</strong></p>
 						<blockquote class="gquote-cont"><code><xmp>.demo span:nth-of-type(2) { color: #f00; }</xmp></code></blockquote>
-						<p class="gquote-info">此时第3个span会被命中，因为span3才是 .demo 的第2个span子元素，而span2是 .demo 的孙辈元素</p>
+						<p class="gquote-info">会发现span3和span4都被命中了。从代码中能看到span1和span4是同级，span2和span3同级，因为span3和span4分别是这2组层级中的第2个span，所以最终都被命中了。</p>
 					</div>
 				</li>
 			</ul>
