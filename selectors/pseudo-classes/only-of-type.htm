@@ -61,20 +61,18 @@
 			<ul>
 				<li>首先，因为匹配的是父元素的子元素，这意味着E元素必须作为某个元素的子元素存在（E元素的父元素最高是html，也就是说E元素最高是body，这表示任何非html的元素都符合这个约束，因为html元素是根元素。）</li>
 				<li>
-					<p>其次，匹配的是父元素的第n个为E的子元素（被命中的不一定是第n个子元素，因为匹配的不是第n个子元素，而是第n个为E的子元素）</p>
+					<p>其次，匹配的是父元素唯一那个为E的子元素（父元素可以有多个子元素，但E必须有且只有1个）</p>
 					<strong>来看下面这个例子：</strong>
 					<div class="gquote">
 						<p class="gquote-tit"><strong>HTML示例代码：</strong></p>
 						<blockquote class="gquote-cont"><code><xmp><div class="demo">
 	<p>p1</p>
-	<p>p2</p>
 	<span>span1</span>
-	<p>p3</p>
-	<span>span2</span>
+	<p>p2</p>
 </div></xmp></code></blockquote>
-						<p class="gquote-tit"><strong>如上HTML，假设要命中第3个p元素，代码如下：</strong></p>
-						<blockquote class="gquote-cont"><code><xmp>.demo p:nth-of-type(3) { color: #f00; }</xmp></code></blockquote>
-						<p class="gquote-info">可以看到此时 .demo 的第4个子元素会被命中，因为 .demo 的第4个子元素才是它的第3个p子元素</p>
+						<p class="gquote-tit"><strong>如上HTML，假设要命中其中的span，代码如下：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp>.demo span:only-of-type { color: #f00; }</xmp></code></blockquote>
+						<p class="gquote-info">可以看到此时span1会被命中，因为span1是 .demo 的唯一的span子元素</p>
 					</div>
 				</li>
 				<li>
