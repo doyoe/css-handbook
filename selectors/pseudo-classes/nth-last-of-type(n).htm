@@ -78,16 +78,17 @@
 					</div>
 				</li>
 				<li>
-					<p>再次，只能匹配E元素的同级元素，即：E元素的兄弟元素</p>
+					<p>再次，只能匹配与E元素同级的元素，即：E元素的兄弟元素</p>
 					<strong>来看下面这个例子：</strong>
 					<div class="gquote">
 						<p class="gquote-tit"><strong>HTML示例代码：</strong></p>
 						<blockquote class="gquote-cont"><code><xmp><div class="demo">
 	<span>span1</span>
 	<p>
-		<span>span2（我不是另外2个span元素的兄弟元素）</span>
+		<span>span2</span>
+		<span>span3</span>
 	</p>
-	<span>span3</span>
+	<span>span4</span>
 </div></xmp></code></blockquote>
 						<p class="gquote-tit"><strong>如上HTML，你将不能通过下面的代码命中倒数第2个span：</strong></p>
 						<blockquote class="gquote-cont"><code><xmp>.demo span:nth-last-of-type(2) { color: #f00; }</xmp></code></blockquote>
