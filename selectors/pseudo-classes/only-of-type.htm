@@ -57,7 +57,7 @@
 		<h2 class="tit">说明：</h2>
 		<div class="cont">
 			<strong>匹配父元素的所有子元素中唯一的那个子元素E。</strong>
-			<p>需要注意3个要点：</p>
+			<p>需要注意2个要点：</p>
 			<ul>
 				<li>首先，因为匹配的是父元素的子元素，这意味着E元素必须作为某个元素的子元素存在（E元素的父元素最高是html，也就是说E元素最高是body，这表示任何非html的元素都符合这个约束，因为html元素是根元素。）</li>
 				<li>
@@ -73,23 +73,6 @@
 						<p class="gquote-tit"><strong>如上HTML，假设要命中其中的span，代码如下：</strong></p>
 						<blockquote class="gquote-cont"><code><xmp>.demo span:only-of-type { color: #f00; }</xmp></code></blockquote>
 						<p class="gquote-info">可以看到此时span1会被命中，因为span1是 .demo 的唯一的span子元素</p>
-					</div>
-				</li>
-				<li>
-					<p>再次，只能匹配与E元素同级的元素，即：E元素的兄弟元素</p>
-					<strong>来看下面这个例子：</strong>
-					<div class="gquote">
-						<p class="gquote-tit"><strong>HTML示例代码：</strong></p>
-						<blockquote class="gquote-cont"><code><xmp><div class="demo">
-	<span>span1</span>
-	<p>
-		<span>span2（我不是另外2个span元素的兄弟元素）</span>
-	</p>
-	<span>span3</span>
-</div></xmp></code></blockquote>
-						<p class="gquote-tit"><strong>如上HTML，你将不能通过下面的代码命中第2个span：</strong></p>
-						<blockquote class="gquote-cont"><code><xmp>.demo span:nth-of-type(2) { color: #f00; }</xmp></code></blockquote>
-						<p class="gquote-info">此时第3个span会被命中，因为span3才是 .demo 的第2个span子元素，而span2是 .demo 的孙辈元素</p>
 					</div>
 				</li>
 			</ul>
