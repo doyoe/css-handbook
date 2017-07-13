@@ -80,11 +80,17 @@
 						<blockquote class="gquote-cont"><code><xmp><div class="demo">
 	<p>p1</p>
 	<span>span1</span>
-	<p>p2</p>
 </div></xmp></code></blockquote>
-						<p class="gquote-info">可以看到span1也会被命中，虽然此例中.demo有3个子元素，但span1是.demo唯一的span子元素</p>
+						<p class="gquote-info">可以看到span1也会被命中，虽然此例中.demo有2个子元素，但span1是.demo唯一的span子元素</p>
 					</div>
-
+					<div class="gquote">
+						<p class="gquote-tit"><strong>示例三，假设有如下HTML：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp><div class="demo">
+	<p>p1</p>
+	<span>span1</span>
+	<span>span2</span>
+</div></xmp></code></blockquote>
+						<p class="gquote-info">此时span将不会被命中，因为.demo有2个span子元素</p>
 					</div>
 				</li>
 			</ul>
