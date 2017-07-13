@@ -62,17 +62,29 @@
 				<li>首先，因为匹配的是父元素的子元素，这意味着E元素必须作为某个元素的子元素存在（E元素的父元素最高是html，也就是说E元素最高是body，这表示任何非html的元素都符合这个约束，因为html元素是根元素）。</li>
 				<li>
 					<p>其次，父元素可以有多个子元素，但其中的子元素E必须是唯一的，不能出现多个。</p>
-					<strong>来看下面这个例子：</strong>
+					<strong>来看下面的例子：</strong>
 					<div class="gquote">
-						<p class="gquote-tit"><strong>HTML示例代码：</strong></p>
+						<p class="gquote-tit"><strong>有如下一段CSS：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp>.demo span:only-of-type { color: #f00; }</xmp></code></blockquote>
+						<p class="gquote-info">该选择器表示要匹配 .demo 下唯一的span元素</p>
+					</div>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>示例一，假设有如下HTML：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp><div class="demo">
+	<span>span1</span>
+</div></xmp></code></blockquote>
+						<p class="gquote-info">毫无疑问，因为span1是 .demo 唯一的子元素，所以span1会被命中</p>
+					</div>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>示例二，假设有如下HTML：</strong></p>
 						<blockquote class="gquote-cont"><code><xmp><div class="demo">
 	<p>p1</p>
 	<span>span1</span>
 	<p>p2</p>
 </div></xmp></code></blockquote>
-						<p class="gquote-tit"><strong>如上HTML，假设要命中其中的span，代码如下：</strong></p>
-						<blockquote class="gquote-cont"><code><xmp>.demo span:only-of-type { color: #f00; }</xmp></code></blockquote>
-						<p class="gquote-info">可以看到此时span1会被命中，因为span1是 .demo 唯一的span子元素</p>
+						<p class="gquote-info">可以看到span1也会被命中，虽然此例中.demo有3个子元素，但span1是.demo唯一的span子元素</p>
+					</div>
+
 					</div>
 				</li>
 			</ul>
