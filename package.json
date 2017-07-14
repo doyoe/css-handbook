@@ -1,44 +1,44 @@
 {
-  "name": "css-handbook",
-  "title": "CSS参考手册",
-  "description": "CSS参考手册V4.2.4_Web前端开发参考手册系列",
-  "version": "4.2.4",
-  "homepage": "http://css.doyoe.com/",
-  "author": {
-    "name": "doyoe",
-    "url": "https://github.com/doyoe"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/doyoe/css-handbook.git"
-  },
-  "bugs": {
-    "url": "https://github.com/doyoe/css-handbook/issues"
-  },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/lojjic/PIE/blob/master/LICENSE"
+    "name": "css-handbook",
+    "title": "CSS参考手册",
+    "description": "CSS参考手册V4.2.4_Web前端开发参考手册系列",
+    "version": "4.2.4",
+    "homepage": "http://css.doyoe.com/",
+    "author": {
+        "name": "doyoe",
+        "url": "https://github.com/doyoe"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/doyoe/css-handbook.git"
+    },
+    "bugs": {
+        "url": "https://github.com/doyoe/css-handbook/issues"
+    },
+    "licenses": [
+        {
+        "type": "MIT",
+        "url": "https://github.com/lojjic/PIE/blob/master/LICENSE"
+        }
+    ],
+    "dependencies": {},
+    "devDependencies": {
+        "caniuse-db": "^1.0.30000591",
+        "fs-extra-async": "^1.0.0",
+        "gulp": "github:gulpjs/gulp#4.0",
+        "gulp-convert-encoding": "^1.0.0",
+        "gulp-htmlhint": "^0.3.1",
+        "gulp-replace": "^0.5.4",
+        "gulp-util": "^3.0.7",
+        "iconv-lite": "^0.4.15",
+        "jsdom": "^9.5.0",
+        "opener": "^1.4.2",
+        "through2": "^2.0.3",
+        "which": "^1.2.12"
+    },
+    "scripts": {
+        "update": "npm i --save-dev caniuse-db && npm run build",
+        "test": "gulp lint",
+        "build": "gulp"
     }
-  ],
-  "dependencies": {},
-  "devDependencies": {
-    "caniuse-db": "^1.0.30000591",
-    "fs-extra-async": "^1.0.0",
-    "gulp": "github:gulpjs/gulp#4.0",
-    "gulp-convert-encoding": "^1.0.0",
-    "gulp-htmlhint": "^0.3.1",
-    "gulp-replace": "^0.5.4",
-    "gulp-util": "^3.0.7",
-    "iconv-lite": "^0.4.15",
-    "jsdom": "^9.5.0",
-    "opener": "^1.4.2",
-    "through2": "^2.0.3",
-    "which": "^1.2.12"
-  },
-  "scripts": {
-    "update": "npm i --save-dev caniuse-db && npm run build",
-    "test": "gulp lint",
-    "build": "gulp"
-  }
 }
