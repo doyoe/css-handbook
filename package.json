@@ -34,7 +34,8 @@
         "jsdom": "^9.5.0",
         "opener": "^1.4.2",
         "through2": "^2.0.3",
-        "which": "^1.2.12"
+        "which": "^1.2.12",
+        "ghooks": "^1.3.2"
     },
     "scripts": {
         "update": "npm i --save-dev caniuse-db && npm run build",
