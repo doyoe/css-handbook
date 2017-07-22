@@ -251,8 +251,10 @@ li:after{display:inline-block;overflow:hidden;width:100%;height:0;content:'';}</
 .center p{text-align:center;}
 .right p{text-align:right;}
 .justify p{width:200px;text-align:justify;}
-.start p{text-align:start;}
-.end p{text-align:end;}
+.start p{width: 50%; text-align:start;}
+.end p{width: 50%; text-align:end;}
+.ltr {direction: ltr;}
+.rtl {direction: rtl;}
 </style>
 </head>
 <body>
@@ -273,13 +275,21 @@ li:after{display:inline-block;overflow:hidden;width:100%;height:0;content:'';}</
 		<strong>justify</strong>
 		<p>我 是一段可以两端对齐的文字， 你 仔细看看， 我 的对齐方式都贴着 容器左右的边缘。</p>
 	</li>
-	<li class="start">
-		<strong>start</strong>
-		<p>start效果</p>
+	<li class="start ltr">
+		<strong>start [direction: ltr]</strong>
+		<p>start效果，本段文字的书写方向是<b>从左到右</b>。When errors occur in CSS, the parser attempts to recover gracefully, throwing away only the minimum amount of content before returning to parsing as normal. This is because errors aren’t always mistakes—new syntax looks like an error to an old parser, and it’s useful to be able to add new syntax to the language without worrying about stylesheets that include it being completely broken in older UAs.</p>
 	</li>
-	<li class="end">
-		<strong>end</strong>
-		<p>end效果</p>
+	<li class="start rtl">
+		<strong>start [direction: rtl]</strong>
+		<p>start效果，本段文字的书写方向是<b>从右到左</b>。When errors occur in CSS, the parser attempts to recover gracefully, throwing away only the minimum amount of content before returning to parsing as normal. This is because errors aren’t always mistakes—new syntax looks like an error to an old parser, and it’s useful to be able to add new syntax to the language without worrying about stylesheets that include it being completely broken in older UAs.</p>
+	</li>
+	<li class="end ltr">
+		<strong>end [direction: ltr]</strong>
+		<p>end效果，本段文字的书写方向是<b>从左到右</b>。When errors occur in CSS, the parser attempts to recover gracefully, throwing away only the minimum amount of content before returning to parsing as normal. This is because errors aren’t always mistakes—new syntax looks like an error to an old parser, and it’s useful to be able to add new syntax to the language without worrying about stylesheets that include it being completely broken in older UAs.</p>
+	</li>
+	<li class="end rtl">
+		<strong>end [direction: rtl]</strong>
+		<p>end效果，本段文字的书写方向是<b>从右到左</b>。When errors occur in CSS, the parser attempts to recover gracefully, throwing away only the minimum amount of content before returning to parsing as normal. This is because errors aren’t always mistakes—new syntax looks like an error to an old parser, and it’s useful to be able to add new syntax to the language without worrying about stylesheets that include it being completely broken in older UAs.</p>
 	</li>
 </ul>
 </body>
