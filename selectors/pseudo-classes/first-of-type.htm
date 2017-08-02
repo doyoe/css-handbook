@@ -93,7 +93,7 @@
 </div></xmp></code></blockquote>
 						<p class="gquote-tit"><strong>如上HTML，如果我想匹配其中的第1个span，代码如下：</strong></p>
 						<blockquote class="gquote-cont"><code><xmp>.demo span:first-of-type { color: #f00; }</xmp></code></blockquote>
-						<p class="gquote-info">结果span2确实没有被命中，因为span2并不是.demo的第2个span子元素。从代码中能看到span1和span4是同级，span2和span3同级，因为span3和span4分别是这2组层级中的第2个span，所以最终span3和span4都被命中了。</p>
+						<p class="gquote-info">结果span1和span2都会被命中，因为span1和span2分属不同的父元素，并且都是其父元素的首个span元素，所以都会被命中</p>
 					</div>
 				</li>
 			</ul>
