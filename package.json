@@ -25,12 +25,12 @@
   "devDependencies": {
     "caniuse-db": "^1.0.30000591",
     "fs-extra-async": "^1.0.0",
-    "ghooks": "^1.3.2",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-convert-encoding": "^1.0.0",
     "gulp-htmlhint": "^0.3.1",
     "gulp-replace": "^0.5.4",
     "gulp-util": "^3.0.7",
+    "husky": "^0.14.3",
     "iconv-lite": "^0.4.15",
     "jsdom": "^9.5.0",
     "opener": "^1.4.2",
@@ -39,14 +39,12 @@
     "which": "^1.2.12"
   },
   "scripts": {
+    "commitmsg": "validate-commit-msg",
     "update": "npm i --save-dev caniuse-db && npm run build",
     "test": "gulp lint",
     "build": "gulp"
   },
   "config": {
-    "ghooks": {
-      "commit-msg": "validate-commit-msg"
-    },
     "validate-commit-msg": {
       "types": [
         "feat",
