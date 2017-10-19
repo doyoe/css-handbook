@@ -29,4 +29,4 @@
 
 ## 版本许可
 
-源码和文档版权属于 [doyoe.com](http://www.doyoe.com)。文档发布基于 [Creative Commons](http://creativecommons.org/licenses/by/4.0/) 开源协议。
+源码和文档版权属于 [doyoe.com](http://www.doyoe.com)。文档发布基于 [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0) 开源协议。
