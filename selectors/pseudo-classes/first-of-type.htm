@@ -60,12 +60,11 @@
 			<strong>匹配父元素下第一个类型为E的子元素。</strong>
 			<p>需要注意3个要点：</p>
 			<ul>
-				<li>首先，因为匹配的是父元素的子元素，这意味着E元素必须作为某个元素的子元素存在（E元素的父元素最高是html，也就是说E元素最高是body，这表示任何非html的元素都符合这个约束，因为html元素是根元素。）</li>
+				<li>首先，该选择符要匹配的是类型为E的子元素，这意味着E元素必须作为某个元素的子元素存在（E元素的父元素最高是html，也就是说E元素本身最高只能是body，这表示任何非html的元素都符合这个约束，因为html元素是根元素。）</li>
 				<li>
-					<p>其次，匹配的是父元素的第一个E子元素（要注意：被命中的不一定是父元素的第一个子元素，因为排在子元素首位的不一定是E元素，它可能在子元素列表中的任何位置）</p>
-					<strong>来看下面这个例子：</strong>
+					<p>其次，该选择符要匹配的是父元素第一个类型为E的子元素，这意味着被命中的元素不一定是父元素的第一个子元素（因为排在父元素首位的不一定是E元素，E元素可能在子元素列表中的任何位置）。<strong>来看下面这个例子：</strong></p>
 					<div class="gquote">
-						<p class="gquote-tit"><strong>HTML示例代码：</strong></p>
+						<p class="gquote-tit"><strong>HTML 代码：</strong></p>
 						<blockquote class="gquote-cont"><code><xmp><div class="demo">
 	<p>p1</p>
 	<p>p2</p>
@@ -73,9 +72,9 @@
 	<p>p3</p>
 	<span>span2</span>
 </div></xmp></code></blockquote>
-						<p class="gquote-tit"><strong>如上HTML，假设要命中第1个span元素，代码如下：</strong></p>
+						<p class="gquote-tit"><strong>如上HTML，我们要命中父元素 .demo 的第一个 span 子元素，CSS 代码如下：</strong></p>
 						<blockquote class="gquote-cont"><code><xmp>.demo span:first-of-type { color: #f00; }</xmp></code></blockquote>
-						<p class="gquote-info">此时 .demo 的第3个子元素会被命中，因为 .demo 的第3个子元素正好是第1个span元素</p>
+						<p class="gquote-info">此时 .demo 的第1个元素并没有被匹配到，而是匹配到了第3个子元素，因为第3个子元素正好是 .demo 的第1个span子元素</p>
 					</div>
 				</li>
 				<li>
