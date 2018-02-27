@@ -42,7 +42,7 @@
 		<h1 class="tit">clip</h1>
 		<ul class="info">
 			<li><strong>版本：CSS2/3</strong></li>
-			<li>2015.8.11</li>
+			<li>2018.2.27</li>
 		</ul>
 		<!-- 插入浏览器信息 -->
 	</section>
@@ -68,11 +68,11 @@
 				<dt>auto：</dt>
 				<dd>对象无剪切</dd>
 				<dt>rect(<a href="../../values/numeric/number.htm">&lt;number&gt;</a>|auto <a href="../../values/numeric/number.htm">&lt;number&gt;</a>|auto <a href="../../values/numeric/number.htm">&lt;number&gt;</a>|auto <a href="../../values/numeric/number.htm">&lt;number&gt;</a>|auto)：</dt>
-				<dd>依据上-右-下-左的顺序提供自对象左上角为(0,0)坐标计算的四个偏移数值，其中任一数值都可用auto替换，即此边不剪切。</dd>
-				<dd>上-左 方位的裁剪：从0开始剪裁直到设定值，即 上-左 方位的auto值等同于0；</dd>
-				<dd>右-下 方位的裁剪：从设定值开始剪裁直到最右边和最下边，即 右-下 方位的auto值为盒子的实际宽度和高度；</dd>
+				<dd>依据上-右-下-左的顺序提供自对象左上角为(0,0)坐标计算的四个偏移数值，其中任一数值都可用<code class="g-value">auto</code>替换，即此边不剪切。</dd>
+				<dd>上-左 方位的裁剪：从0开始剪裁直到设定值，即 上-左 方位的<code class="g-value">auto</code>值等同于0；</dd>
+				<dd>右-下 方位的裁剪：从设定值开始剪裁直到最右边和最下边，即 右-下 方位的<code class="g-value">auto</code>值为盒子的实际宽度和高度；</dd>
 				<dd>
-					<p>示例：clip:rect(auto 50px 20px auto)</p>
+					<p>示例：<code class="g-code">clip: rect(auto 50px 20px auto)</code></p>
 					<p>说明：上边不剪切，右边从左起第50个像素开始剪切直至最右边，下边从上起第20个像素开始剪切直至最底部，左边不剪切</p>
 				</dd>
 			</dl>
@@ -117,28 +117,17 @@
 				<tbody>
 					<tr>
 						<td><strong>Basic Support</strong> <sup><a href="#support1">#1</a></sup></td>
-						<td class="support">6.0+</td>
-						<td class="support">2.0+</td>
-						<td class="support">4.0+</td>
-						<td class="support">6.0+</td>
-						<td class="support">15.0+</td>
-						<td class="support">6.0+</td>
-						<td class="support">2.1+</td>
-						<td class="support">18.0+</td>
+						<td rowspan="2" class="support">8.0+</td>
+						<td rowspan="2" class="support">40.0+</td>
+						<td rowspan="2" class="support">40.0+</td>
+						<td rowspan="2" class="support">8.0+</td>
+						<td rowspan="2" class="support">40.0+</td>
+						<td rowspan="2" class="support">8.0+</td>
+						<td rowspan="2" class="support">4.4+</td>
+						<td rowspan="2" class="support">28.0+</td>
 					</tr>
 					<tr>
-						<td rowspan="2">rect(逗号分隔)</td>
-						<td class="unsupport">6.0-7.0</td>
-						<td class="support" rowspan="2">2.0+</td>
-						<td class="support" rowspan="2">4.0+</td>
-						<td class="support" rowspan="2">6.0+</td>
-						<td class="support" rowspan="2">15.0+</td>
-						<td class="support" rowspan="2">6.0+</td>
-						<td class="support" rowspan="2">2.1+</td>
-						<td class="support" rowspan="2">18.0+</td>
-					</tr>
-					<tr>
-						<td class="support">8.0+</td>
+						<td>rect(逗号分隔)</td>
 					</tr>
 				</tbody>
 			</table>
