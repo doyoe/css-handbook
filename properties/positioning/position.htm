@@ -42,7 +42,7 @@
 		<h1 class="tit">position</h1>
 		<ul class="info">
 			<li><strong>版本：CSS2/3</strong></li>
-			<li>2015.8.27</li>
+			<li>2018.2.27</li>
 		</ul>
 		<!-- 插入浏览器信息 -->
 	</section>
@@ -51,7 +51,7 @@
 	<section id="syntax" class="g-mod g-attr">
 		<h2 class="tit">语法：</h2>
 		<div class="cont">
-			<p><strong>position</strong>：<mark class="defaultvalue">static</mark> | relative | absolute | fixed | <ins class="g-color-css3-new" title="css3">center</ins> | <ins class="g-color-css3-new" title="css3">page</ins> | <ins class="g-color-css3-new" title="css3">sticky</ins></p>
+			<p><strong>position</strong>：<mark class="defaultvalue">static</mark> | relative | absolute | fixed | <ins class="g-color-css3-new" title="css3">sticky</ins></p>
 			<p><strong>默认值</strong>：<mark class="defaultvalue">static</mark></p>
 			<p><strong>适用于</strong>：除<a href="../layout/display.htm" class="g-property">display</a>属性定义为<code class="g-value">table-column-group | table-column</code>之外的所有元素</p>
 			<p><strong>继承性</strong>：无</p>
@@ -69,13 +69,9 @@
 				<dt>relative：</dt>
 				<dd>对象遵循常规流，并且参照自身在常规流中的位置通过<a href="top.htm" class="g-property">top</a>，<a href="right.htm" class="g-property">right</a>，<a href="bottom.htm" class="g-property">bottom</a>，<a href="left.htm" class="g-property">left</a>这4个定位偏移属性进行偏移时不会影响常规流中的任何元素。</dd>
 				<dt>absolute：</dt>
-				<dd>对象脱离常规流，此时偏移属性参照的是离自身最近的定位祖先元素，如果没有定位的祖先元素，则一直回溯到<code class="g-code">body</code>元素。盒子的偏移位置不影响常规流中的任何元素，其margin不与其他任何margin折叠。</dd>
+				<dd>对象脱离常规流，此时偏移属性参照的是离自身最近的定位祖先元素，如果没有定位的祖先元素，则一直回溯到<code class="g-code">body</code>元素。盒子的偏移位置不影响常规流中的任何元素，其<code class="g-property">margin</code>不与其他任何<code class="g-property">margin</code>折叠。</dd>
 				<dt>fixed：</dt>
 				<dd>与<code class="g-value">absolute</code>一致，但偏移定位是以窗口为参考。当出现滚动条时，对象不会随着滚动。</dd>
-				<dt class="g-color-css3-new">center：</dt>
-				<dd>与<code class="g-value">absolute</code>一致，但偏移定位是以定位祖先元素的中心点为参考。盒子在其包含容器垂直水平居中。（CSS3）</dd>
-				<dt class="g-color-css3-new">page：</dt>
-				<dd>与<code class="g-value">absolute</code>一致。元素在分页媒体或者区域块内，元素的包含块始终是初始包含块，否则取决于每个<code class="g-value">absolute</code>模式。（CSS3）</dd>
 				<dt class="g-color-css3-new">sticky：</dt>
 				<dd>对象在常态时遵循常规流。它就像是<code class="g-value">relative</code>和<code class="g-value">fixed</code>的合体，当在屏幕中时按常规流排版，当卷动到屏幕外时则表现如<code class="g-value">fixed</code>。该属性的表现是现实中你见到的吸附效果。（CSS3）</dd>
 			</dl>
@@ -120,62 +116,42 @@
 				<tbody>
 					<tr>
 						<td><strong>Basic Support</strong></td>
-						<td class="support">6.0+<sup><a href="#support1">#1</a></sup></td>
-						<td class="support">2.0+<sup><a href="#support2">#2</a></sup></td>
-						<td class="support">4.0+</td>
-						<td class="support">6.0+</td>
-						<td class="support">15.0+</td>
-						<td class="support">6.0+</td>
-						<td class="support">2.1+</td>
-						<td class="support">18.0+</td>
+						<td rowspan="2" class="support">8.0+<sup><a href="#support1">#1</a></sup></td>
+						<td rowspan="2" class="support">40.0+</td>
+						<td rowspan="2" class="support">40.0+</td>
+						<td rowspan="2" class="support">8.0+</td>
+						<td rowspan="2" class="support">40.0+</td>
+						<td rowspan="2" class="support">8.0+</td>
+						<td rowspan="2" class="support">4.4+</td>
+						<td rowspan="2" class="support">28.0+</td>
 					</tr>
 					<tr>
-						<td rowspan="2">fixed</td>
-						<td class="unsupport">6.0</td>
-						<td rowspan="2" class="support">2.0+</td>
-						<td class="support" rowspan="2">4.0+</td>
-						<td class="support" rowspan="2">6.0+</td>
-						<td class="support" rowspan="2">15.0+</td>
-						<td class="support" rowspan="2">6.0+</td>
-						<td class="partsupport">2.1-2.3<sup><a href="#support3">#3</a></sup></td>
-						<td class="support" rowspan="2">18.0+</td>
-					</tr>
-					<tr>
-						<td class="support">7.0+</td>
-						<td class="support">3.0+</td>
-					</tr>
-					<tr>
-						<td><ins class="g-color-css3-new">center</ins> | <ins class="g-color-css3-new">page</ins></td>
-						<td class="unsupport">6.0-11.0</td>
-						<td class="unsupport">2.0-42.0</td>
-						<td class="unsupport">4.0-47.0</td>
-						<td class="unsupport">6.0-9.0</td>
-						<td class="unsupport">15.0-32.0</td>
-						<td class="unsupport">6.0-9.0</td>
-						<td class="unsupport">2.1-4.4.4</td>
-						<td class="unsupport">18.0-42.0</td>
+						<td>fixed</td>
 					</tr>
 					<tr>
 						<td rowspan="2"><ins class="g-color-css3-new">sticky</ins></td>
-						<td rowspan="2" class="unsupport">6.0-11.0</td>
-						<td class="unsupport">2.0-31.0</td>
-						<td rowspan="2" class="unsupport">4.0-47.0</td>
-						<td class="unsupport">6.0</td>
-						<td rowspan="2" class="unsupport">15.0-32.0</td>
-						<td rowspan="2" class="support">6.0-9.0<sup class="fix">-webkit-</sup></td>
-						<td rowspan="2" class="unsupport">2.1-4.4.4</td>
-						<td rowspan="2" class="unsupport">18.0-42.0</td>
+						<td class="unsupport">8.0-15.0</td>
+						<td rowspan="2" class="partsupport">40.0-58.0 <sup><a href="#support2">#2</a></sup></td>
+						<td class="unsupport">40.0-55.0</td>
+						<td rowspan="2" class="support">8.0-11.0<sup class="fix">-webkit-</sup></td>
+						<td class="unsupport">40.0-41.0</td>
+						<td rowspan="2" class="support">8.0-11.3<sup class="fix">-webkit-</sup></td>
+						<td class="unsupport">4.4-53.0</td>
+						<td class="unsupport">28.0-55.0</td>
 					</tr>
 					<tr>
-						<td class="support">32.0+</td>
-						<td class="support">6.1-9.0<sup class="fix">-webkit-</sup></td>
+						<td class="support">16.0+</td>
+						<td class="partsupport">56.0-64.0 <sup><a href="#support3">#3</a></sup></td>
+						<td class="partsupport">42.0-50.0 <sup><a href="#support3">#3</a></sup></td>
+						<td class="partsupport">54.0-62.0 <sup><a href="#support3">#3</a></sup></td>
+						<td class="partsupport">56.0-64.0 <sup><a href="#support3">#3</a></sup></td>
 					</tr>
 				</tbody>
 			</table>
 			<ol class="support-info">
 				<li id="support1">IE如果在 <a href="http://msdn.microsoft.com/en-us/library/ie/ms531140(v=vs.85).aspx" rel="external" class="external" target="_blank">quirks mode</a>下将不支持；</li>
-				<li id="support2">Firefox30.0开始支持 <code>tr</code>, <code>thead</code>, <code>tfoot</code>, <code>tbody</code> 定义 <code>relative</code>，Firefox30.0之前的版本及其它浏览器都只能给 <code>table</code> 定义 <code>relative</code> 用以约束内部元素的定位；</li>
-				<li id="support3">需要定义了<xmp class="g-code"><meta name="viewport" content="width=device-width, user-scalable=no"></xmp>才生效</li>
+				<li id="support2">Firefox40.0-58.0 不支持将该值应用到任何<code class="g-code">table</code>相关的元素上，<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=975644" rel="external" class="external" target="_blank">详细</a>；</li>
+				<li id="support3">Chrome56.0-64.0 不支持将该值应用到<code class="g-code">thead</code>和<code class="g-code">tr</code>元素上，<a href="https://bugs.chromium.org/p/chromium/issues/detail?id=702927" rel="external" class="external" target="_blank">详细</a>；</li>
 			</ol>
 		</div>
 	</section>
