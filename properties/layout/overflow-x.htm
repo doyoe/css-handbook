@@ -42,7 +42,7 @@
 		<h1 class="tit">overflow-x</h1>
 		<ul class="info">
 			<li><strong>版本：CSS2/3</strong></li>
-			<li>媒体：视觉</li>
+			<li>2018.2.27</li>
 		</ul>
 		<!-- 插入浏览器信息 -->
 	</section>
@@ -51,13 +51,13 @@
 	<section id="syntax" class="g-mod g-attr">
 		<h2 class="tit">语法：</h2>
 		<div class="cont">
-			<p><strong>overflow-x</strong>：<a href="#overflow-style">&lt;overflow-style&gt;</a></p>
-			<p id="overflow-style"><strong>&lt;overflow-style&gt;</strong> = <mark class="defaultvalue">visible</mark> | hidden | scroll | auto | <ins class="g-color-css3-new" title="css3">paged-x</ins> | <ins class="g-color-css3-new" title="css3">paged-y</ins> | <ins class="g-color-css3-new" title="css3">paged-x-controls</ins> | <ins class="g-color-css3-new" title="css3">paged-y-controls</ins> | <ins class="g-color-css3-new" title="css3">fragments</ins></p>
+			<p><strong>overflow-x</strong>：<mark class="defaultvalue">visible</mark> | hidden | scroll | auto | <ins class="g-color-css3-new" title="css3">clip</ins></p>
 			<p><strong>默认值</strong>：<mark class="defaultvalue">visible</mark></p>
 			<p><strong>适用于</strong>：块容器，伸缩盒容器，grid容器</p>
 			<p><strong>继承性</strong>：无</p>
 			<p><strong>动画性</strong>：否</p>
 			<p><strong>计算值</strong>：指定值</p>
+			<p><strong>媒体</strong>：视觉</p>
 		</div>
 	</section>
 	<section id="value" class="g-mod g-attr">
@@ -65,23 +65,15 @@
 		<div class="cont">
 			<dl>
 				<dt>visible：</dt>
-				<dd>对溢出内容不做处理，内容可能会超出容器。</dd>
+				<dd>对水平方向上的溢出内容不做处理，内容可能会超出容器。</dd>
 				<dt>hidden：</dt>
-				<dd>隐藏溢出容器的内容且不出现滚动条。</dd>
+				<dd>隐藏水平方向上的溢出容器的内容且不出现滚动条。</dd>
 				<dt>scroll：</dt>
-				<dd>隐藏溢出容器的内容，溢出的内容将以卷动滚动条的方式呈现。</dd>
+				<dd>隐藏水平方向上的溢出容器的内容，溢出的内容可以通过滚动呈现。</dd>
 				<dt>auto：</dt>
-				<dd>当内容没有溢出容器时不出现滚动条，当内容溢出容器时出现滚动条，按需出现滚动条。此为body对象和textarea的默认值。</dd>
-				<dt class="css3-value g-color-css3-new">paged-x：</dt>
-				<dd>TODO...（CSS3）</dd>
-				<dt class="css3-value g-color-css3-new">paged-y：</dt>
-				<dd>TODO...（CSS3）</dd>
-				<dt class="css3-value g-color-css3-new">paged-x-controls：</dt>
-				<dd>TODO...（CSS3）</dd>
-				<dt class="css3-value g-color-css3-new">paged-y-controls：</dt>
-				<dd>TODO...（CSS3）</dd>
-				<dt class="css3-value g-color-css3-new">fragments：</dt>
-				<dd>TODO...（CSS3）</dd>
+				<dd>当水平方向上的内容没有溢出容器时不出现滚动条，当内容溢出容器时出现滚动条，按需出现滚动条。<code class="g-code">textarea</code>元素的<code class="g-property">overflow</code>默认值就是<code class="g-value">auto</code>。</dd>
+				<dt class="css3-value g-color-css3-new">clip：</dt>
+				<dd>与<code class="g-value">hidden</code>一样，<code class="g-value">clip</code>也被用来隐藏溢出容器的内容且不出现滚动条。不同的地方在于，<code class="g-value">clip</code>是一个完全禁止滚动的容器，而<code class="g-value">hidden</code>仍然可以通过编程机制让内容可以滚动。</dd>
 			</dl>
 		</div>
 		<div class="related">
@@ -91,7 +83,7 @@
 	<section id="intro" class="g-mod g-attr">
 		<h2 class="tit">说明：</h2>
 		<div class="cont">
-			<strong>检索或设置对象处理横向溢出内容的方式。</strong>参阅<a href="overflow.htm">overflow</a>、<a href="overflow-y.htm">overflow-y</a>属性
+			<strong>定义了元素处理横向溢出内容的方式。</strong>参阅<a href="overflow.htm" class="g-property">overflow</a>、<a href="overflow-y.htm" class="g-property">overflow-y</a>属性
 			<ul>
 				<li>对应的脚本特性为<strong>overflowX</strong>。</li>
 			</ul>
@@ -122,47 +114,25 @@
 				<tbody>
 					<tr>
 						<td><strong>Basic Support</strong></td>
-						<td class="support">6.0+</td>
-						<td class="support">2.0+</td>
-						<td class="support">4.0+</td>
-						<td class="support">3.1+</td>
-						<td class="support">7.0+</td>
-						<td class="support">3.2+</td>
-						<td class="support">2.1+</td>
-						<td class="support">18.0+</td>
+						<td class="support">8.0+</td>
+						<td class="support">40.0+</td>
+						<td class="support">40.0+</td>
+						<td class="support">8.0+</td>
+						<td class="support">40.0+</td>
+						<td class="support">8.0+</td>
+						<td class="support">4.4+</td>
+						<td class="support">28.0+</td>
 					</tr>
 					<tr>
-						<td><ins class="g-color-css3-new">page-*</ins></td>
+						<td><ins class="g-color-css3-new">clip</ins></td>
+						<td class="unsupport">16.0</td>
+						<td class="unsupport">58.0</td>
+						<td class="unsupport">64.0</td>
 						<td class="unsupport">11.0</td>
-						<td class="unsupport">38.0</td>
-						<td class="unsupport">43.0</td>
-						<td class="unsupport">8.1</td>
-						<td class="unsupport">28.0</td>
-						<td class="unsupport">8.1</td>
-						<td class="unsupport">4.4.4</td>
-						<td class="unsupport">40.0</td>
-					</tr>
-					<tr>
-						<td><ins class="g-color-css3-new">page-*-controls</ins></td>
+						<td class="unsupport">50.0</td>
 						<td class="unsupport">11.0</td>
-						<td class="unsupport">38.0</td>
-						<td class="unsupport">43.0</td>
-						<td class="unsupport">8.1</td>
-						<td class="unsupport">28.0</td>
-						<td class="unsupport">8.1</td>
-						<td class="unsupport">4.4.4</td>
-						<td class="unsupport">40.0</td>
-					</tr>
-					<tr>
-						<td><ins class="g-color-css3-new">fragments</ins></td>
-						<td class="unsupport">11.0</td>
-						<td class="unsupport">38.0</td>
-						<td class="unsupport">43.0</td>
-						<td class="unsupport">8.1</td>
-						<td class="unsupport">28.0</td>
-						<td class="unsupport">8.1</td>
-						<td class="unsupport">4.4.4</td>
-						<td class="unsupport">40.0</td>
+						<td class="unsupport">62.0</td>
+						<td class="unsupport">64.0</td>
 					</tr>
 				</tbody>
 			</table>
