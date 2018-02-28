@@ -42,7 +42,7 @@
 		<h1 class="tit">min-width</h1>
 		<ul class="info">
 			<li><strong>版本：CSS2</strong></li>
-			<li>媒体：视觉</li>
+			<li>2018.2.28</li>
 		</ul>
 		<!-- 插入浏览器信息 -->
 	</section>
@@ -53,10 +53,11 @@
 		<div class="cont">
 			<p><strong>min-width</strong>：<a href="../../values/length/length.htm">&lt;length&gt;</a> | <a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a></p>
 			<p><strong>默认值</strong>：<mark class="defaultvalue">0</mark></p>
-			<p><strong>适用于</strong>：除非置换内联元素，table-row, table-row-group之外的所有元素</p>
+			<p><strong>适用于</strong>：除<code class="g-value">非置换内联元素，table-row, table-row-group</code>之外的所有元素</p>
 			<p><strong>继承性</strong>：无</p>
-			<p><strong>动画性</strong>：当值为<a href="../../values/length/length.htm">&lt;length&gt;</a> | <a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a>时</p>
+			<p><strong>动画性</strong>：当值为 <a href="../../values/length/length.htm">&lt;length&gt;</a> | <a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a> 时</p>
 			<p><strong>计算值</strong>：指定的值</p>
+			<p><strong>媒体</strong>：视觉</p>
 		</div>
 	</section>
 	<section id="value" class="g-mod g-attr">
@@ -75,7 +76,7 @@
 		<div class="cont">
 			<strong>设置或检索对象的最小宽度。</strong>
 			<ul>
-				<li>如果min-width属性的值大于<a href="max-width.htm">max-width</a>属性的值，max-width将会自动以min-width的值作为自己的值。</li>
+				<li>当<code class="g-property">min-width</code>属性的值大于<a href="width.htm" class="g-property">width</a>或<a href="max-width.htm" class="g-property">max-width</a>时，它可以阻止<code class="g-property">width</code>或<code class="g-property">max-width</code>的应用值小于<code class="g-property">min-width</code>的值，<code class="g-property">min-width</code>的值会同时覆盖<code class="g-property">width</code>和<code class="g-property">max-width</code>，并以自己的值作为它们的使用值。</li>
 				<li>IE6尚不支持此属性</li>
 				<li>对应的脚本特性为<strong>minWidth</strong>。</li>
 			</ul>
