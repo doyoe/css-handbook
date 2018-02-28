@@ -42,7 +42,7 @@
 		<h1 class="tit">min-height</h1>
 		<ul class="info">
 			<li><strong>版本：CSS2</strong></li>
-			<li>媒体：视觉</li>
+			<li>2018.2.28</li>
 		</ul>
 		<!-- 插入浏览器信息 -->
 	</section>
@@ -53,10 +53,11 @@
 		<div class="cont">
 			<p><strong>min-height</strong>：<a href="../../values/length/length.htm">&lt;length&gt;</a> | <a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a></p>
 			<p><strong>默认值</strong>：<mark class="defaultvalue">0</mark></p>
-			<p><strong>适用于</strong>：除非置换内联元素，table-row, table-row-group之外的所有元素</p>
+			<p><strong>适用于</strong>：除<code class="g-value">非置换内联元素，table-row, table-row-group</code>之外的所有元素</p>
 			<p><strong>继承性</strong>：无</p>
-			<p><strong>动画性</strong>：当值为<a href="../../values/length/length.htm">&lt;length&gt;</a> | <a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a>时</p>
+			<p><strong>动画性</strong>：当值为 <a href="../../values/length/length.htm">&lt;length&gt;</a> | <a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a> 时</p>
 			<p><strong>计算值</strong>：指定的值</p>
+			<p><strong>媒体</strong>：视觉</p>
 		</div>
 	</section>
 	<section id="value" class="g-mod g-attr">
@@ -75,8 +76,9 @@
 		<div class="cont">
 			<strong>检索或设置对象的最小高度。</strong>
 			<ul>
-				<li>如果min-height属性的值大于<a href="max-height.htm">max-height</a>属性的值，max-height将会自动以min-height的值作为自己的值。</li>
-				<li>IE6尚不支持此属性。IE6的变通实现方法请参考 <a href="http://demo.doyoe.com/css/min-height/" rel="external" class="external" target="_blank">最小高度min-height实现详解</a>。</li>
+				<li>当<code class="g-property">min-height</code>属性的值小于<a href="height.htm" class="g-property">height</a>时，<code class="g-property">min-height</code>属性将会被忽略。</li>
+				<li>当<code class="g-property">min-height</code>属性的值大于<a href="height.htm" class="g-property">height</a>时，<code class="g-property">min-height</code>属性将会被忽略，同时<code class="g-property">height</code>会忽略自己的值定义而使用<code class="g-property">min-height</code>的值作为自己的使用值。</li>
+				<li>当<code class="g-property">min-height</code>属性的值大于<a href="max-height.htm" class="g-property">max-height</a>时，<code class="g-property">max-height</code>属性将会被忽略。</li>
 				<li>对应的脚本特性为<strong>minHeight</strong>。</li>
 			</ul>
 		</div>
