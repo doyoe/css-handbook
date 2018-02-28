@@ -42,7 +42,7 @@
 		<h1 class="tit">max-width</h1>
 		<ul class="info">
 			<li><strong>版本：CSS2</strong></li>
-			<li>媒体：视觉</li>
+			<li>2018.2.28</li>
 		</ul>
 		<!-- 插入浏览器信息 -->
 	</section>
@@ -53,10 +53,11 @@
 		<div class="cont">
 			<p><strong>max-width</strong>：<a href="../../values/length/length.htm">&lt;length&gt;</a> | <a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a> | none</p>
 			<p><strong>默认值</strong>：<mark class="defaultvalue">none</mark></p>
-			<p><strong>适用于</strong>：除非置换内联元素，table-row, table-row-group之外的所有元素</p>
+			<p><strong>适用于</strong>：除<code class="g-value">非置换内联元素，table-row, table-row-group</code>之外的所有元素</p>
 			<p><strong>继承性</strong>：无</p>
-			<p><strong>动画性</strong>：当值为<a href="../../values/length/length.htm">&lt;length&gt;</a> | <a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a>时</p>
+			<p><strong>动画性</strong>：当值为 <a href="../../values/length/length.htm">&lt;length&gt;</a> | <a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a> 时</p>
 			<p><strong>计算值</strong>：指定的值</p>
+			<p><strong>媒体</strong>：视觉</p>
 		</div>
 	</section>
 	<section id="value" class="g-mod g-attr">
@@ -77,8 +78,7 @@
 		<div class="cont">
 			<strong>设置或检索对象的最大宽度。</strong>
 			<ul>
-				<li>如果max-width属性的值小于<a href="min-width.htm">min-width</a>属性的值，max-width将会自动以min-width的值作为自己的值。</li>
-				<li>IE6尚不支持此属性</li>
+				<li>当<code class="g-property">max-width</code>属性的值小于<a href="width.htm" class="g-property">width</a>时，它会阻止<code class="g-property">width</code>的应用值大于<code class="g-property">max-width</code>的值，并以自己的值作为<code class="g-property">width</code>的使用值。</li>
 				<li>对应的脚本特性为<strong>maxWidth</strong>。</li>
 			</ul>
 		</div>
@@ -107,18 +107,15 @@
 				</thead>
 				<tbody>
 					<tr>
-						<td rowspan="2"><strong>Basic Support</strong></td>
-						<td class="unsupport">6.0</td>
-						<td class="support" rowspan="2">2.0+</td>
-						<td class="support" rowspan="2">4.0+</td>
-						<td class="support" rowspan="2">3.1+</td>
-						<td class="support" rowspan="2">4.0+</td>
-						<td class="support" rowspan="2">3.2+</td>
-						<td class="support" rowspan="2">2.1+</td>
-						<td class="support" rowspan="2">18.0+</td>
-					</tr>
-					<tr>
-						<td class="support">7.0+</td>
+						<td><strong>Basic Support</strong></td>
+						<td class="support">8.0+</td>
+						<td class="support">40.0+</td>
+						<td class="support">40.0+</td>
+						<td class="support">8.0+</td>
+						<td class="support">40.0+</td>
+						<td class="support">8.0+</td>
+						<td class="support">4.4+</td>
+						<td class="support">28.0+</td>
 					</tr>
 				</tbody>
 			</table>
