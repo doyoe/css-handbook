@@ -6,7 +6,7 @@
 
 ## 浏览器支持策略
 
-手册在接下来将只更新IE8.0+, Firefox4.0+, Chrome4.0+, iOS8.0+, Android4.4+, Android Chrome28.0+, Opera40.0+（Opera从15.0开始转入webkit阵营）的支持数据，低于这些版本的数据将不再更新，共同期望未来前端的环境越来越好。
+手册在接下来将只更新 `IE8.0+`, `Firefox4.0+`, `Chrome40.0+`, `iOS8.0+`, `Android4.4+`, `Android Chrome28.0+`, `Opera40.0+`（Opera从15.0开始转入webkit阵营）的支持数据，低于这些版本的数据将不再更新，共同期望未来前端的环境越来越好。
 
 对于 IE 和 Edge，手册是合并到一起体现的。IE11.0 及之前的版本为 IE 浏览器，IE12.0 及以后的版本为 Edge，阅读者可根据版本来确定。
 
