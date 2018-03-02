@@ -136,7 +136,7 @@ ol.gitem{list-style-type:decimal;}
 #syntax ins:after,#syntax del:after{position:relative;top:-6px;margin-left:3px;padding:0 3px;border-radius:3px;box-shadow:0 1px 2px rgba(0,0,0,.3);color:#fff;content:attr(title);font-size:10px;text-transform:lowercase;}
 #syntax ins[title^="css"]:after{background-color:#f60;}
 #syntax del[title^="ie"]:after{background-color:#999;}
-#syntax .sharing{margin-top:10px;}
+#syntax .sharing{padding:10px;}
 /* module: value */
 #value dl{zoom:1;overflow:hidden;}
 #value dt{clear:left;float:left;font-weight:bold;}
