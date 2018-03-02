@@ -59,7 +59,7 @@
 			<p><strong>计算值</strong>：看每个独立属性</p>
 			<p><strong>媒　体</strong>：视觉</p>
 		</div>
-		<h2 id="individual" class="tit">border-*-style 短属性语法：</h2>
+		<h2 id="individual" class="tit">border-*-style 分拆独立属性语法：</h2>
 		<div class="cont">
 			<p><strong>border-top-style, border-right-style, border-bottom-style, border-left-style</strong>：<a href="#line-style">&lt;line-style&gt;</a></p>
 			<p><strong>默认值</strong>：<mark class="defaultvalue">none</mark></p>
@@ -101,13 +101,10 @@
 	<section id="intro" class="g-mod g-attr">
 		<h2 class="tit">说明：</h2>
 		<div class="cont">
-			<strong>设置或检索对象的边框样式。</strong>
+			<strong>定义元素的边框样式。</strong>
 			<ul>
-				<li>如果提供全部四个参数值，将按上、右、下、左的顺序作用于四边。</li>
-				<li>如果只提供一个，将用于全部的四边。</li>
-				<li>如果提供两个，第一个用于上、下，第二个用于左、右。</li>
-				<li>如果提供三个，第一个用于上，第二个用于左、右，第三个用于下。</li>
-				<li>如果<a href="border-width.htm" class="g-property">border-width</a>等于<code class="g-value">0</code>，本属性将失效。</li>
+				<li><code class="g-property">border-style</code>如果提供全部四个参数值，将按上、右、下、左的顺序作用于四边；只提供一个，将用于全部的四边；提供两个，第一个用于上、下，第二个用于左、右；提供三个，第一个用于上，第二个用于左、右，第三个用于下。</li>
+				<li>如果<a href="border-width.htm" class="g-property">border-width</a>等于<code class="g-value">0</code>，<code class="g-property">border-style</code>及其分拆独立属性将失效。</li>
 				<li>对应的脚本特性为<strong>borderStyle</strong>。</li>
 			</ul>
 		</div>
