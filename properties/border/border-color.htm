@@ -86,6 +86,21 @@
 			<ul>
 				<li><code class="g-property">border-color</code>如果提供全部四个参数值，将按上、右、下、左的顺序作用于四边；只提供一个，将用于全部的四边；提供两个，第一个用于上、下，第二个用于左、右；提供三个，第一个用于上，第二个用于左、右，第三个用于下。</li>
 				<li>如果<a href="border-width.htm" class="g-property">border-width</a>等于<code class="g-value">0</code>或<a href="border-style.htm" class="g-property">border-style</a>设置为<code class="g-value">none | hidden</code>，<code class="g-property">border-color</code>及其分拆独立属性将失效。</li>
+				<li>
+					<p>如果 <code class="g-property">border-color</code> 未被定义，边框颜色将默认取当前最近的文本颜色，即 <a href="../../values/color/currentColor.htm">currentColor</a>。</p>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>举个例子：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp>.demo {
+	border: 5px solid;
+}
+
+<div class="demo">
+	<p class="text">边框色未被定义时，边框色与最近的文本色相同</p>
+</div>
+</xmp></code></blockquote>
+						<p class="gquote-info">这个例子中，只定义了一个 5px 的实线框而未定义颜色，此时，边框色将会取文本色来使用，所以大家将会看到一个黑色的边框</p>
+					</div>
+				</li>
 				<li>对应的脚本特性分别为：<strong>borderColor, borderTopColor, borderRightColor, borderBottomColor, borderLeftColor</strong>。</li>
 			</ul>
 		</div>
