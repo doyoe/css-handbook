@@ -49,18 +49,30 @@
 </header>
 <section id="bd">
 	<section id="syntax" class="g-mod g-attr">
-		<h2 class="tit">语法：</h2>
+		<h2 id="shorthand" class="tit">border 短属性语法：</h2>
 		<div class="cont">
 			<p><strong>border</strong>：<a href="#line-width">&lt;line-width&gt;</a> || <a href="#line-style">&lt;line-style&gt;</a> || <a href="../../values/color/color.htm">&lt;color&gt;</a></p>
-			<p id="line-width"><strong>&lt;line-width&gt;</strong> = <a href="../../values/length/length.htm">&lt;length&gt;</a> | thin | medium | thick</p>
-			<p id="line-style"><strong>&lt;line-style&gt;</strong> = none | hidden | dotted | dashed | solid | double | groove | ridge | inset | outset</p>
 			<p><strong>默认值</strong>：<mark class="defaultvalue">看每个独立属性</mark></p>
 			<p><strong>适用于</strong>：所有元素</p>
 			<p><strong>继承性</strong>：无</p>
 			<p><strong>动画性</strong>：看每个独立属性</p>
 			<p><strong>计算值</strong>：看每个独立属性</p>
 			<p><strong>媒　体</strong>：视觉</p>
-			<p><strong>相关属性</strong>：<a href="border-width.htm" class="g-property">border-width</a>||<a href="border-style.htm" class="g-property">border-style</a>||<a href="border-color.htm" class="g-property">border-color</a></p>
+		</div>
+		<h2 id="individual" class="tit">border-* 分拆独立属性语法：</h2>
+		<div class="cont">
+			<p><strong>border-top, border-right, border-bottom, border-left</strong>：<a href="#line-width">&lt;line-width&gt;</a> || <a href="#line-style">&lt;line-style&gt;</a> || <a href="../../values/color/color.htm">&lt;color&gt;</a></p>
+			<p><strong>默认值</strong>：<mark class="defaultvalue">看每个独立属性</mark></p>
+			<p><strong>适用于</strong>：所有元素</p>
+			<p><strong>继承性</strong>：无</p>
+			<p><strong>动画性</strong>：看每个独立属性</p>
+			<p><strong>计算值</strong>：看每个独立属性</p>
+			<p><strong>媒　体</strong>：视觉</p>
+			<p><strong>下属独立属性</strong>：<a href="border-width.htm#individual" class="g-property">border-*-width</a> || <a href="border-style.htm#individual" class="g-property">border-*-style</a> || <a href="border-color.htm#individual" class="g-property">border-*-color</a></p>
+		</div>
+		<div class="sharing">
+			<p id="line-width"><strong>&lt;line-width&gt;</strong> = <a href="../../values/length/length.htm">&lt;length&gt;</a> | thin | medium | thick</p>
+			<p id="line-style"><strong>&lt;line-style&gt;</strong> = none | hidden | dotted | dashed | solid | double | groove | ridge | inset | outset</p>
 		</div>
 	</section>
 	<section id="value" class="g-mod g-attr">
@@ -82,7 +94,7 @@
 			<strong>复合属性。设置对象边框的特性。</strong>参阅<a href="../user-interface/outline.htm" class="g-property">outline</a>属性。
 			<ul>
 				<li>如使用该复合属性定义其单个参数，则其他参数的默认值将无条件覆盖各自对应的单个属性设置。</li>
-				<li>对应的脚本特性为<strong>border</strong>。</li>
+				<li>对应的脚本特性分别为：<strong>border, borderTop, borderRight, borderBottom, borderLeft</strong>。</li>
 			</ul>
 		</div>
 	</section>
