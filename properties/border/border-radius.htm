@@ -74,8 +74,9 @@
 	<section id="intro" class="g-mod g-attr">
 		<h2 class="tit">说明：</h2>
 		<div class="cont">
-			<strong>设置或检索对象使用圆角边框。提供2个参数，2个参数以“/”分隔，每个参数允许设置1~4个参数值，第1个参数表示水平半径，第2个参数表示垂直半径，如第2个参数省略，则默认等于第1个参数</strong>
+			<strong>复合短属性。定义元素的圆角。</strong>
 			<ul>
+				<li><code class="g-property">border-radius</code>属性提供 2 个参数，参数间以<code class="g-code">/</code>分隔，每个参数允许设置 1~4 个参数值，第 1 个参数表示水平半径，第 2 个参数表示垂直半径，如第 2 个参数值省略未定义，则直接复制第 1 个参数值。</li>
 				<li>水平半径：如果提供全部四个参数值，将按上左(top-left)、上右(top-right)、下右(bottom-right)、下左(bottom-left)的顺序作用于四个角。</li>
 				<li>如果只提供一个，将用于全部的于四个角。</li>
 				<li>如果提供两个，第一个用于上左(top-left)、下右(bottom-right)，第二个用于上右(top-right)、下左(bottom-left)。</li>
