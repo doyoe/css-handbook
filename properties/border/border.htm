@@ -109,6 +109,32 @@
 						<p class="gquote-info">这个例子中，定了 2 次 border 属性，第 1 次为 .demo 定义了 1px 的虚线红色边框，第 2 次定义了边框样式为实线（只定义单个参数值），由于 border 是复合短属性，第 1 次定义的边框厚度和边框颜色都会被 border 的默认值给覆盖掉，所以最终会显示为 3px 的实线黑色边框</p>
 					</div>
 				</li>
+				<li>
+					<p><code class="g-property">border</code>的每条边框都是以切角的方式与相邻的边框衔接起来的。</p>
+					<style>
+					.demo {display: inline-block;overflow: hidden; margin: 5px 10px;border-width: 15px;border-style: solid;border-color: black red;}
+					.demo3 {border-top-width: 30px;}
+					.demo4 {border-right-width: 30px;}
+					.demo5 {border-color: black transparent transparent;}
+					.demo6 {border-color: transparent red transparent transparent;}
+					.demo7 {border-color: transparent transparent black;}
+					.demo8 {border-color: transparent transparent transparent red;}
+					.demo9 {border-top-width: 30px;border-color: transparent red;}
+					</style>
+					<div class="demo demo1">展示border边框间的衔接</div>
+					<p>如果将里面的文本移除掉，将会变成这样，画面开始变得有趣：</p>
+					<div class="demo demo2"></div>
+					<p>如果我们改变其中某条边框的厚度，将会变成这样：</p>
+					<div class="demo demo3"></div>
+					<div class="demo demo4"></div>
+					<p>如果我们改变其中一些边框的颜色为透明，将会变成这样：</p>
+					<div class="demo demo5"></div>
+					<div class="demo demo6"></div>
+					<div class="demo demo7"></div>
+					<div class="demo demo8"></div>
+					<div class="demo demo9"></div>
+					<p>由于边框衔接是以切角的方式进行的，这将为我们创造出非常多使用<code class="g-property">border</code>来做各种角的可能性。</p>
+				</li>
 				<li>对应的脚本特性分别为：<strong>border, borderTop, borderRight, borderBottom, borderLeft</strong>。</li>
 			</ul>
 		</div>
