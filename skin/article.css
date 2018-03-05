@@ -40,7 +40,7 @@ ol.gitem{list-style-type:decimal;}
 /* comm: gquote */
 .gquote{margin:10px;border:1px solid #C3E1FF;}
 .gquote-tit{padding:3px 10px;background:#DDEEFF;}
-.gquote-cont{zoom:1;overflow:hidden;padding:10px;border-top:1px solid #C3E1FF;}
+.gquote-cont{zoom:1;overflow:hidden;margin:0;padding:10px;border-top:1px solid #C3E1FF;}
 .gquote-cont .img{float:left;margin-right:15px;text-align:center;}
 .gquote-cont .code{zoom:1;overflow:hidden;}
 .gquote-cont code,
