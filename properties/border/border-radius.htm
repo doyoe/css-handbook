@@ -96,8 +96,17 @@
 								<img src="images/corner.png" alt="水平与垂直半轴" />
 								<figcaption>（图一）此图来源于 w3.org</figcaption>
 							</figure>
+							<blockquote class="code"><code><xmp>.demo {
+	border: 10px solid black;
+	border-radius: 55pt/25pt;
+}
+
+<div class="demo">
+	演示水平、垂直半径或半轴
+</div>
+</xmp></code></blockquote>
 						</div>
-						<p class="gquote-info">这个例子我们定义了<code class="g-code">border-radius: 55pt/25pt</code>，能看到此时 55pt 被应用于椭圆的水平半轴，25pt 被应用于垂直半轴。</p>
+						<p class="gquote-info">能看到此时 55pt 被应用于椭圆的水平半轴，25pt 被应用于垂直半轴。</p>
 					</div>
 				</li>
 				<li>水平半径或半轴：如果提供全部四个参数值，将按<code class="g-code">上左 top-left</code>、<code class="g-code">上右 top-right</code>、<code class="g-code">下右 bottom-right</code>、<code class="g-code">下左 bottom-left</code>的顺序作用于四个角；提供三个，第一个用于<code class="g-code">top-left</code>，第二个用于<code class="g-code">top-right</code>和<code class="g-code">bottom-left</code>，第三个用于<code class="g-code">bottom-right</code>；提供两个，第一个用于<code class="g-code">top-left</code>和<code class="g-code">bottom-right</code>，第二个用于<code class="g-code">top-right</code>和<code class="g-code">bottom-left</code>；只提供一个，将用于全部的四个角。</li>
