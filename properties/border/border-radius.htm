@@ -115,7 +115,20 @@
 			</ul>
 			<strong>分拆独立属性属性。定义元素的单个圆角。</strong>
 			<ul>
-				<li><code class="g-property">border-*-radius</code>属性提供 2 个参数，参数间以<code class="g-code">空格</code>分隔，每个参数允许设置 1 个参数值，第 1 个参数表示水平半径或半轴，第 2 个参数表示垂直半径或半轴，如第 2 个参数值省略未定义，则直接复制第 1 个参数值。</li>
+				<li>
+					<p><code class="g-property">border-*-radius</code>属性提供 2 个参数，参数间以<code class="g-code">空格</code>分隔，每个参数允许设置 1 个参数值，第 1 个参数表示水平半径或半轴，第 2 个参数表示垂直半径或半轴，如第 2 个参数值省略未定义，则直接复制第 1 个参数值。</p>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>以分拆独立属性来实现图一：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp>.demo {
+    border-top-left-radius: 55pt 25pt;
+    border-top-right-radius: 55pt 25pt;
+    border-bottom-right-radius: 55pt 25pt;
+    border-bottom-left-radius: 55pt 25pt;
+}
+</xmp></code></blockquote>
+						<p class="gquote-info">这段代码等同于 border-radius: 55pt/25pt</p>
+					</div>
+				</li>
 				<li>对应的脚本特性分别为：<strong>borderTopLeftRadius, borderTopRightRadius, borderBottomRightRadius, borderBottomLeftRadius</strong>。</li>
 			</ul>
 		</div>
