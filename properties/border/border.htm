@@ -92,7 +92,7 @@
 	<section id="intro" class="g-mod g-attr">
 		<h2 class="tit">说明：</h2>
 		<div class="cont">
-			<strong>复合短属性。定义元素边框的外观特性。</strong>参阅<a href="../user-interface/outline.htm" class="g-property">outline</a>属性。
+			<strong>简写属性。定义元素边框的外观特性。</strong>参阅<a href="../user-interface/outline.htm" class="g-property">outline</a>属性。
 			<ul>
 				<li>
 					<p>如使用<code class="g-property">border</code>或<code class="g-property">border-*</code>短属性只定义了单个参数值，则其他参数的默认值将无条件覆盖各自对应的单个属性值定义。</p>
@@ -104,7 +104,7 @@
 }
 
 <div class="demo">
-	<p class="text">独立属性被短属性定义覆盖示例</p>
+	<p class="text">独立属性被简写属性默认值覆盖示例</p>
 </div>
 </xmp></code></blockquote>
 						<p class="gquote-info">这个例子中，定了 2 次 border 属性，第 1 次为 .demo 定义了 1px 的虚线红色边框，第 2 次定义了边框样式为实线（只定义单个参数值），由于 border 是复合短属性，第 1 次定义的边框厚度和边框颜色都会被 border 的默认值给覆盖掉，所以最终会显示为 3px 的实线黑色边框</p>
