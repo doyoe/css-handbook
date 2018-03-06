@@ -94,9 +94,23 @@
 	<section id="intro" class="g-mod g-attr">
 		<h2 class="tit">说明：</h2>
 		<div class="cont">
-			<strong>复合属性。定义了元素处理溢出内容的方式。</strong>参阅<a href="overflow-x.htm" class="g-property">overflow-x</a>、<a href="overflow-y.htm" class="g-property">overflow-y</a>属性
+			<strong>定义了元素处理溢出内容的方式。</strong>
 			<ul>
-				<li><code class="g-property">overflow</code>的效果等同于<code class="g-property">overflow-x</code> + <code class="g-property">overflow-y</code>。</li>
+				<li>
+					<p><code class="g-property">overflow</code>的效果等同于<code class="g-property">overflow-x</code> + <code class="g-property">overflow-y</code>。</p>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>举个例子：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp>.demo {
+	overflow: hidden;
+}
+等同于：
+.demo {
+	overflow-x: hidden;
+	oveflow-y: hidden;
+}
+</xmp></code></blockquote>
+					</div>
+				</li>
 				<li>对于<code class="g-code">table</code>元素来说，假如其<a href="../table/table-layout.htm" class="g-property">table-layout</a>属性设置为<code class="g-value">fixed</code>，则<code class="g-code">td</code>、<code class="g-code">th</code>元素支持将<code class="g-property">overflow</code>设为<code class="g-value">hidden</code>、<code class="g-value">scroll</code>或<code class="g-value">auto</code>，此时超出单元格尺寸的内容将被剪切。如果设为<code class="g-value">visible</code>，将导致额外的文本溢出到右边或左边（视<a href="../writing-modes/direction.htm" class="g-property">direction</a>属性设置而定）的单元格。</li>
 				<li>对应的脚本特性为<strong>overflow</strong>。</li>
 			</ul>
