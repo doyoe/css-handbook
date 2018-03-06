@@ -84,7 +84,7 @@
 	<section id="intro" class="g-mod g-attr">
 		<h2 class="tit">说明：</h2>
 		<div class="cont">
-			<strong>复合短属性。定义元素的圆角。</strong>
+			<strong>简写属性。定义元素的圆角。</strong>
 			<ul>
 				<li>
 					<p><code class="g-property">border-radius</code>属性提供 2 个参数，参数间以<code class="g-code">/</code>分隔，每个参数允许设置 1~4 个参数值，第 1 个参数表示水平半径，第 2 个参数表示垂直半径，如第 2 个参数值省略未定义，则直接复制第 1 个参数值。</p>
@@ -100,6 +100,11 @@
 				<li>水平半径：如果提供全部四个参数值，将按<code class="g-code">上左 top-left</code>、<code class="g-code">上右 top-right</code>、<code class="g-code">下右 bottom-right</code>、<code class="g-code">下左 bottom-left</code>的顺序作用于四个角；提供三个，第一个用于<code class="g-code">top-left</code>，第二个用于<code class="g-code">top-right</code>和<code class="g-code">bottom-left</code>，第三个用于<code class="g-code">bottom-right</code>；提供两个，第一个用于<code class="g-code">top-left</code>和<code class="g-code">bottom-right</code>，第二个用于<code class="g-code">top-right</code>和<code class="g-code">bottom-left</code>；只提供一个，将用于全部的四个角。</li>
 				<li>垂直半径也遵循以上 4 点。</li>
 				<li>对应的脚本特性为<strong>borderRadius</strong>。</li>
+			</ul>
+			<strong>分拆独立属性属性。定义元素的单个圆角。</strong>
+			<ul>
+				<li><code class="g-property">border-*-radius</code>属性提供 2 个参数，参数间以<code class="g-code">空格</code>分隔，每个参数允许设置 1 个参数值，第 1 个参数表示水平半径，第 2 个参数表示垂直半径，如第 2 个参数值省略未定义，则直接复制第 1 个参数值。</li>
+				<li>对应的脚本特性分别为：<strong>borderTopLeftRadius, borderTopRightRadius, borderBottomRightRadius, borderBottomLeftRadius</strong>。</li>
 			</ul>
 		</div>
 	</section>
