@@ -85,9 +85,9 @@
 	<section id="intro" class="g-mod g-attr">
 		<h2 class="tit">说明：</h2>
 		<div class="cont">
-			<strong>设置或检索对象阴影。</strong>参阅 &lt;' <a href="../text-decoration/text-shadow.htm">text-shadow</a> '&gt; 属性
+			<strong>设置或检索对象阴影。</strong>参阅<a href="../text-decoration/text-shadow.htm" class="g-property">text-shadow</a>属性
 			<ul>
-				<li>可以设定多组效果，每组参数值以逗号分隔。</li>
+				<li><code class="g-property">box-shadow</code>可以设定多组效果，每组参数值以逗号分隔。该属性可以对几乎所有元素的生成框产生阴影。如果元素同时设置了<a href="border-radius.htm" class="g-property">border-radius</a>，阴影也会有圆角效果。多个阴影的z-ordering 和多个 text shadows 规则相同(第一个阴影在最上面)。</li>
 				<li>对应的脚本特性为<strong>boxShadow</strong>。</li>
 			</ul>
 		</div>
@@ -117,33 +117,20 @@
 				<tbody>
 					<tr>
 						<td rowspan="3"><strong>Basic Support</strong></td>
-						<td class="unsupport" rowspan="2">6.0-8.0</td>
-						<td class="unsupport">2.0-3.0</td>
-						<td class="support" rowspan="2">4.0-43.0<br /><sup class="fix">-webkit-</sup></td>
-						<td class="support" rowspan="2">3.1-8.1<br /><sup class="fix">-webkit-</sup></td>
-						<td class="support" rowspan="2">10.5-28.0<br /><sup class="fix">-webkit-</sup></td>
-						<td class="support" rowspan="2">3.2-8.1<br /><sup class="fix">-webkit-</sup></td>
-						<td class="support" rowspan="2">2.1-4.4.4<br /><sup class="fix">-webkit-</sup></td>
-						<td class="support" rowspan="2">18.0-40.0<br /><sup class="fix">-webkit-</sup></td>
-					</tr>
-					<tr>
-						<td class="partsupport">4.0-12.0<br /><sup class="fix">-moz-</sup> <sup><a href="#support1">#1</a></sup></td>
+						<td class="unsupport">8.0</td>
+						<td rowspan="2" class="support">40.0+</td>
+						<td rowspan="2" class="support">40.0+</td>
+						<td rowspan="2" class="support">8.0+</td>
+						<td rowspan="2" class="support">40.0+</td>
+						<td rowspan="2" class="support">8.0+</td>
+						<td rowspan="2" class="support">4.4+</td>
+						<td rowspan="2" class="support">28.0+</td>
 					</tr>
 					<tr>
 						<td class="support">9.0+</td>
-						<td class="support">4.0+</td>
-						<td class="support">10.0+</td>
-						<td class="support">5.1+</td>
-						<td class="support">10.5+</td>
-						<td class="support">5.0+</td>
-						<td class="support">4.0+</td>
-						<td class="support">18.0+</td>
 					</tr>
 				</tbody>
 			</table>
-			<ol class="support-info">
-				<li id="support1">Firefox从13.0开始移除对<code class="incode">-moz-</code>的支持，仅支持标准的 &lt;' box-shadow '&gt; 写法，在4.0-12.0区间，两种方式都支持。</li>
-			</ol>
 		</div>
 	</section>
 	<section id="example" class="g-mod g-attr">
