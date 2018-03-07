@@ -42,7 +42,7 @@
 		<h1 class="tit">border-image</h1>
 		<ul class="info">
 			<li><strong>版本：CSS3</strong></li>
-			<li>媒体：视觉</li>
+			<li>2018.3.7</li>
 		</ul>
 		<!-- 插入浏览器信息 -->
 	</section>
@@ -51,12 +51,13 @@
 	<section id="syntax" class="g-mod g-attr">
 		<h2 class="tit">语法：</h2>
 		<div class="cont">
-			<p><strong>border-image</strong>：&lt;' <a href="border-image-source.htm">border-image-source</a> '&gt; || &lt;' <a href="border-image-slice.htm">border-image-slice</a> '&gt; [ / &lt;' <a href="border-image-width.htm">border-image-width</a> '&gt; | / &lt;' <a href="border-image-width.htm">border-image-width</a> '&gt;? / &lt;' <a href="border-image-outset.htm">border-image-outset</a> '&gt; ]? || &lt;' <a href="border-image-repeat.htm">border-image-repeat</a> '&gt;</p>
+			<p><strong>border-image</strong>：<a href="border-image-source.htm" class="g-property">border-image-source</a> || <a href="border-image-slice.htm" class="g-property">border-image-slice</a> [ / <a href="border-image-width.htm" class="g-property">border-image-width</a> | / <a href="border-image-width.htm" class="g-property">border-image-width</a> ? / <a href="border-image-outset.htm" class="g-property">border-image-outset</a> ]? || <a href="border-image-repeat.htm" class="g-property">border-image-repeat</a></p>
 			<p><strong>默认值</strong>：<mark class="defaultvalue">看每个独立属性</mark></p>
 			<p><strong>适用于</strong>：看每个独立属性</p>
 			<p><strong>继承性</strong>：无</p>
 			<p><strong>动画性</strong>：看每个独立属性</p>
 			<p><strong>计算值</strong>：看每个独立属性</p>
+			<p><strong>媒　体</strong>：视觉</p>
 		</div>
 	</section>
 	<section id="value" class="g-mod g-attr">
@@ -79,16 +80,16 @@
 	<section id="intro" class="g-mod g-attr">
 		<h2 class="tit">说明：</h2>
 		<div class="cont">
-			<strong>复合属性。设置或检索对象的边框样式使用图像来填充。</strong>
+			<strong>简写属性。定义将图像应用到元素的边框上</strong>
 			<ul>
-				<li>使用图像替代 &lt;' <a href="border-style.htm">border-style</a> '&gt; 去定义边框样式。当 &lt;' border-image '&gt; 为<code class="incode">none</code>或图像不可见时，将会显示 &lt;' <a href="border-style.htm">border-style</a> '&gt; 所定义的边框样式效果。
+				<li>使用图像替代<a href="border-style.htm" class="g-property">border-style</a>去定义边框样式。当<code class="g-property">border-image</code>为<code class="g-value">none</code>或图像不可见时，将会显示<a href="border-style.htm" class="g-property">border-style</a>所定义的边框样式效果。
 				<div class="gquote">
 						<p class="gquote-tit"><strong>示例：</strong></p>
 						<blockquote class="gquote-cont"><code><xmp>.test {
 	border: 10px solid gray;
 	border-image: url(test.png) 10/10px;
 }</xmp></code></blockquote>
-						<p class="gquote-info">如果例子中的图片不可见，或者未被加载，则会以 &lt;' border '&gt; 的定义呈现，如果图片载入成功，则以 &lt;' border-image '&gt; 的定义呈现。</p>
+	<p class="gquote-info">如果例子中的图片不可见，或者未被加载，则会以<code class="g-property">border</code>的定义呈现，如果图片载入成功，则以<code class="g-property">border-image</code>的定义呈现。</p>
 					</div>
 				</li>
 				<li>对应的脚本特性为<strong>borderImage</strong>。</li>
