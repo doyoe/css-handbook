@@ -209,7 +209,7 @@ if (!Global.isLocal && Global.name) {
 					'padding-left' : []
 				},
 				backgrounds : {
-					'index' : ['背景与边框(Backgrounds and Borders)','其它背景边框属性参考'],
+					'index' : ['背景与边框(Backgrounds and Borders)','其它背景边框参考'],
 					'border' : [],
 					'border-width' : [],
 					'border-style' : [],
