@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="utf-8" />
+<title>border</title>
+<meta name="description" content="CSS3参考手册之：border" />
+<meta name="keywords" content="border, css3, css3参考手册" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../../skin/article.css" />
+</head>
+<body>
+<nav id="guide">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="../index.htm">属性列表</a>
+		<span>&#187;</span>
+		<a href="index.htm" id="category" rel="properties/backgrounds" name="border">背景与边框属性</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它背景边框参考</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入快速分类导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">border</h1>
+		<ul class="info">
+			<li><strong>版本：CSS1</strong></li>
+			<li>2018.3.6</li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="syntax" class="g-mod g-attr">
+		<h2 id="shorthand" class="tit">简写属性语法：</h2>
+		<div class="cont">
+			<p><strong>border</strong>：<a href="#line-width">&lt;line-width&gt;</a> || <a href="#line-style">&lt;line-style&gt;</a> || <a href="../../values/color/color.htm">&lt;color&gt;</a></p>
+			<p><strong>默认值</strong>：<mark class="defaultvalue">看每个独立属性</mark></p>
+			<p><strong>适用于</strong>：所有元素</p>
+			<p><strong>继承性</strong>：无</p>
+			<p><strong>动画性</strong>：看每个独立属性</p>
+			<p><strong>计算值</strong>：看每个独立属性</p>
+			<p><strong>媒　体</strong>：视觉</p>
+		</div>
+		<h2 id="individual" class="tit">分拆简写属性语法：</h2>
+		<div class="cont">
+			<p><strong><a href="#border-*">border-*</a></strong>：<a href="#line-width">&lt;line-width&gt;</a> || <a href="#line-style">&lt;line-style&gt;</a> || <a href="../../values/color/color.htm">&lt;color&gt;</a></p>
+			<p id="border-*"><strong>border-*</strong> = <code class="g-property">border-top</code>,<code class="g-property">border-right</code>,<code class="g-property">border-bottom</code>,<code class="g-property">border-left</code></p>
+			<p><strong>默认值</strong>：<mark class="defaultvalue">看每个独立属性</mark></p>
+			<p><strong>适用于</strong>：所有元素</p>
+			<p><strong>继承性</strong>：无</p>
+			<p><strong>动画性</strong>：看每个独立属性</p>
+			<p><strong>计算值</strong>：看每个独立属性</p>
+			<p><strong>媒　体</strong>：视觉</p>
+			<p><strong>下属独立属性</strong>：<a href="border-width.htm#individual" class="g-property">border-*-width</a> || <a href="border-style.htm#individual" class="g-property">border-*-style</a> || <a href="border-color.htm#individual" class="g-property">border-*-color</a></p>
+		</div>
+		<div class="sharing">
+			<p id="line-width"><strong>&lt;line-width&gt;</strong> = <a href="../../values/length/length.htm">&lt;length&gt;</a> | thin | medium | thick</p>
+			<p id="line-style"><strong>&lt;line-style&gt;</strong> = none | hidden | dotted | dashed | solid | double | groove | ridge | inset | outset</p>
+		</div>
+	</section>
+	<section id="value" class="g-mod g-attr">
+		<h2 class="tit">取值：</h2>
+		<div class="cont">
+			<dl>
+				<dt><a href="#line-width">&lt;line-width&gt;</a>：</dt>
+				<dd>定义元素的边框厚度。</dd>
+				<dt><a href="#line-style">&lt;line-style&gt;</a>：</dt>
+				<dd>定义元素的边框样式。</dd>
+				<dt><a href="../../values/color/color.htm">&lt;color&gt;</a>：</dt>
+				<dd>定义元素的边框颜色。</dd>
+			</dl>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
+		<h2 class="tit">说明：</h2>
+		<div class="cont">
+			<strong>简写属性。定义元素边框的外观特性。</strong>参阅<a href="../user-interface/outline.htm" class="g-property">outline</a>属性。
+			<ul>
+				<li>
+					<p>如使用<code class="g-property">border</code>或<code class="g-property">border-*</code>短属性只定义了单个参数值，则其他参数的默认值将无条件覆盖各自对应的单个属性值定义。</p>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>举个例子：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp>.demo {
+	border: 1px dashed red;
+	border: solid;
+}
+
+<div class="demo">
+	<p class="text">独立属性被简写属性默认值覆盖示例</p>
+</div>
+</xmp></code></blockquote>
+						<p class="gquote-info">这个例子中，定了 2 次 border 属性，第 1 次为 .demo 定义了 1px 的虚线红色边框，第 2 次定义了边框样式为实线（只定义单个参数值），由于 border 是复合短属性，第 1 次定义的边框厚度和边框颜色都会被 border 的默认值给覆盖掉，所以最终会显示为 3px 的实线黑色边框</p>
+					</div>
+				</li>
+				<li>
+					<p><code class="g-property">border</code>的每条边框都是以切角的方式与相邻的边框衔接起来的。</p>
+					<style>
+					.demo {display: inline-block;overflow: hidden; margin: 5px 10px;border-width: 15px;border-style: solid;border-color: black red;}
+					.demo3 {border-top-width: 30px;}
+					.demo4 {border-right-width: 30px;}
+					.demo5 {border-color: black transparent transparent;}
+					.demo6 {border-color: transparent red transparent transparent;}
+					.demo7 {border-color: transparent transparent black;}
+					.demo8 {border-color: transparent transparent transparent red;}
+					.demo9 {border-top-width: 30px;border-color: transparent red;}
+					</style>
+					<div class="demo demo1">展示border边框间的衔接</div>
+					<p>如果将里面的文本移除掉，将会变成这样，画面开始变得有趣：</p>
+					<div class="demo demo2"></div>
+					<p>如果我们改变其中某条边框的厚度，将会变成这样：</p>
+					<div class="demo demo3"></div>
+					<div class="demo demo4"></div>
+					<p>如果我们改变其中一些边框的颜色为透明，将会变成这样：</p>
+					<div class="demo demo5"></div>
+					<div class="demo demo6"></div>
+					<div class="demo demo7"></div>
+					<div class="demo demo8"></div>
+					<div class="demo demo9"></div>
+					<p>由于边框衔接是以切角的方式进行的，这将为我们创造出非常多使用<code class="g-property">border</code>来做各种角的可能性。</p>
+				</li>
+				<li>对应的脚本特性分别为：<strong>border, borderTop, borderRight, borderBottom, borderLeft</strong>。</li>
+			</ul>
+		</div>
+	</section>
+	<section id="compatible" class="g-mod g-attr">
+		<h2 class="tit">兼容性：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">粉色</span> = 部分支持</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th>Values</th>
+						<th>IE</th>
+						<th>Firefox</th>
+						<th>Chrome</th>
+						<th>Safari</th>
+						<th>Opera</th>
+						<th>iOS Safari</th>
+						<th>Android Browser</th>
+						<th>Android Chrome</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><strong>Basic Support</strong></td>
+						<td class="support">8.0+</td>
+						<td class="support">40.0+</td>
+						<td class="support">40.0+</td>
+						<td class="support">8.0+</td>
+						<td class="support">40.0+</td>
+						<td class="support">8.0+</td>
+						<td class="support">4.4+</td>
+						<td class="support">28.0+</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+	<section id="example" class="g-mod g-attr">
+		<h2 class="tit">示例：</h2>
+		<div class="cont">
+			<textarea cols="90" rows="10">
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="utf-8" />
+<title>border_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<style>
+.test {
+	border: 5px solid #000;
+}
+.test2 {
+	margin-top: 10px;
+	border: 5px solid;
+	color: #f00;
+}
+</style>
+</head>
+<body>
+<div class="test">定义边框特性</div>
+<div class="test2">边框颜色默认使用文本颜色</div>
+</body>
+</html>
+			</textarea>
+			<p><input type="button" value="运行" class="g-btn g-btn-sure" /></p>
+		</div>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/inner.js"></script>
+</body>
+</html>

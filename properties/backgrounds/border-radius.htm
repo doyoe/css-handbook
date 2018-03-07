@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="utf-8" />
+<title>border-radius</title>
+<meta name="description" content="CSS3参考手册之：border-radius" />
+<meta name="keywords" content="border-radius, css3, css3参考手册" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../../skin/article.css" />
+</head>
+<body>
+<nav id="guide">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="../index.htm">属性列表</a>
+		<span>&#187;</span>
+		<a href="index.htm" id="category" rel="properties/backgrounds" name="border-radius">背景与边框属性</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它背景边框参考</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入快速分类导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">border-radius</h1>
+		<ul class="info">
+			<li><strong>版本：CSS3</strong></li>
+			<li>2018.3.6</li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="syntax" class="g-mod g-attr">
+		<h2 class="tit">简写属性语法：</h2>
+		<div class="cont">
+			<p><strong>border-radius</strong>：[ <a href="../../values/length/length.htm">&lt;length&gt;</a> | <a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a> ]{1,4} [ / [ <a href="../../values/length/length.htm">&lt;length&gt;</a> | <a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a> ]{1,4} ]?</p>
+			<p><strong>默认值</strong>：<mark class="defaultvalue">看每个独立属性</mark></p>
+			<p><strong>适用于</strong>：所有元素</p>
+			<p><strong>继承性</strong>：无</p>
+			<p><strong>动画性</strong>：看每个独立属性</p>
+			<p><strong>计算值</strong>：看每个独立属性</p>
+			<p><strong>媒　体</strong>：视觉</p>
+		</div>
+		<h2 class="tit">分拆独立属性语法：</h2>
+		<div class="cont">
+			<p><strong><a href="#border-*-radius">border-*-radius</a></strong>：[ <a href="../../values/length/length.htm">&lt;length&gt;</a> | <a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a> ]{1,2}</p>
+			<p id="border-*-radius"><strong>border-*-radius</strong> = <code class="g-property">border-top-left-radius</code>,<code class="g-property">border-top-right-radius</code>,<code class="g-property">border-bottom-right-radius</code>,<code class="g-property">border-bottom-left-radius</code></p>
+			<p><strong>默认值</strong>：<mark class="defaultvalue">0</mark></p>
+			<p><strong>适用于</strong>：所有元素</p>
+			<p><strong>继承性</strong>：无</p>
+			<p><strong>动画性</strong>：是</p>
+			<p><strong>计算值</strong>：绝对值或百分比</p>
+			<p><strong>媒　体</strong>：视觉</p>
+		</div>
+	</section>
+	<section id="value" class="g-mod g-attr">
+		<h2 class="tit">取值：</h2>
+		<div class="cont">
+			<dl>
+				<dt><a href="../../values/length/length.htm">&lt;length&gt;</a>：</dt>
+				<dd>用长度值定义圆形半径或椭圆的半长轴，半短轴。不允许负值</dd>
+				<dt><a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a>：</dt>
+				<dd>用百分比定义圆形半径或椭圆的半长轴，半短轴。水平方向百分比参照元素宽度（非内容宽度），垂直方向参照元素高度。不允许负值</dd>
+			</dl>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
+		<h2 class="tit">说明：</h2>
+		<div class="cont">
+			<strong>简写属性。定义元素的圆角。</strong>
+			<ul>
+				<li>
+					<p><code class="g-property">border-radius</code>属性提供 2 个参数，参数间以<code class="g-code">/</code>分隔，每个参数允许设置 1~4 个参数值，第 1 个参数表示水平半径或半轴，第 2 个参数表示垂直半径或半轴，如第 2 个参数值省略未定义，则直接复制第 1 个参数值。</p>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>举个例子：</strong></p>
+						<div class="gquote-cont">
+							<figure class="img">
+								<img src="images/corner.png" alt="水平与垂直半轴" />
+								<figcaption>（图一）此图来源于 w3.org</figcaption>
+							</figure>
+							<blockquote class="code"><code><xmp>.demo {
+	border: 10px solid black;
+	border-radius: 55pt/25pt;
+}
+
+<div class="demo">
+	演示水平、垂直半径或半轴
+</div>
+</xmp></code></blockquote>
+						</div>
+						<p class="gquote-info">能看到此时 55pt 被应用于椭圆的水平半轴，25pt 被应用于垂直半轴。</p>
+					</div>
+				</li>
+				<li>水平半径或半轴：如果提供全部四个参数值，将按<code class="g-code">上左 top-left</code>、<code class="g-code">上右 top-right</code>、<code class="g-code">下右 bottom-right</code>、<code class="g-code">下左 bottom-left</code>的顺序作用于四个角；提供三个，第一个用于<code class="g-code">top-left</code>，第二个用于<code class="g-code">top-right</code>和<code class="g-code">bottom-left</code>，第三个用于<code class="g-code">bottom-right</code>；提供两个，第一个用于<code class="g-code">top-left</code>和<code class="g-code">bottom-right</code>，第二个用于<code class="g-code">top-right</code>和<code class="g-code">bottom-left</code>；只提供一个，将用于全部的四个角。</li>
+				<li>垂直半径或半轴也遵循以上 4 点。</li>
+				<li>对应的脚本特性为<strong>borderRadius</strong>。</li>
+			</ul>
+			<strong>分拆独立属性属性。定义元素的单个圆角。</strong>
+			<ul>
+				<li>
+					<p><code class="g-property">border-*-radius</code>属性提供 2 个参数，参数间以<code class="g-code">空格</code>分隔，每个参数允许设置 1 个参数值，第 1 个参数表示水平半径或半轴，第 2 个参数表示垂直半径或半轴，如第 2 个参数值省略未定义，则直接复制第 1 个参数值。</p>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>以分拆独立属性来实现图一：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp>.demo {
+    border-top-left-radius: 55pt 25pt;
+    border-top-right-radius: 55pt 25pt;
+    border-bottom-right-radius: 55pt 25pt;
+    border-bottom-left-radius: 55pt 25pt;
+}
+</xmp></code></blockquote>
+						<p class="gquote-info">这段代码等同于 border-radius: 55pt/25pt</p>
+					</div>
+				</li>
+				<li>对应的脚本特性分别为：<strong>borderTopLeftRadius, borderTopRightRadius, borderBottomRightRadius, borderBottomLeftRadius</strong>。</li>
+			</ul>
+		</div>
+	</section>
+	<section id="compatible" class="g-mod g-attr">
+		<h2 class="tit">兼容性：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">粉色</span> = 部分支持</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th>Values</th>
+						<th>IE</th>
+						<th>Firefox</th>
+						<th>Chrome</th>
+						<th>Safari</th>
+						<th>Opera</th>
+						<th>iOS Safari</th>
+						<th>Android Browser</th>
+						<th>Android Chrome</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td rowspan="2"><strong>Basic Support</strong></td>
+						<td class="unsupport">8.0+</td>
+						<td class="support" rowspan="2">40.0+</td>
+						<td class="support" rowspan="2">40.0+</td>
+						<td class="support" rowspan="2">8.0+</td>
+						<td class="support" rowspan="2">40.0+</td>
+						<td class="support" rowspan="2">8.0+</td>
+						<td class="support" rowspan="2">4.4+</td>
+						<td class="support" rowspan="2">28.0+</td>
+					</tr>
+					<tr>
+						<td class="support">9.0+</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+	<section id="example" class="g-mod g-attr">
+		<h2 class="tit">示例：</h2>
+		<div class="cont">
+			<textarea cols="90" rows="10">
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="utf-8" />
+<title>border-radius_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<style>
+ul{margin:0;padding:0;}
+li{list-style:none;margin:10px 0 0 0;padding:10px;background:#bbb;}
+.test .one{border-radius:10px;}
+.test .two{border-radius:10px 20px;}
+.test .three{border-radius:10px 20px 30px;}
+.test .four{border-radius:10px 20px 30px 40px;}
+.test2 .one{border-radius:10px/5px;}
+.test2 .two{border-radius:10px 20px/5px 10px;}
+.test2 .three{border-radius:10px 20px 30px/5px 10px 15px;}
+.test2 .four{border-radius:10px 20px 30px 40px/5px 10px 15px 20px;}
+</style>
+</head>
+<body>
+<h2>水平与垂直半径相同时：</h2>
+<ul class="test">
+	<li class="one">提供1个参数<br />border-radius:10px;</li>
+	<li class="two">提供2个参数<br />border-radius:10px 20px;</li>
+	<li class="three">提供3个参数<br />border-radius:10px 20px 30px;</li>
+	<li class="four">提供4个参数<br />border-radius:10px 20px 30px 40px;</li>
+</ul>
+<h2>水平与垂直半径不同时：</h2>
+<ul class="test2">
+	<li class="one">提供1个参数<br />border-radius:10px/5px;</li>
+	<li class="two">提供2个参数<br />border-radius:10px 20px/5px 10px;</li>
+	<li class="three">提供3个参数<br />border-radius:10px 20px 30px/5px 10px 15px;</li>
+	<li class="four">提供4个参数<br />border-radius:10px 20px 30px 40px/5px 10px 15px 20px;</li>
+</ul>
+</body>
+</html>
+			</textarea>
+			<p><input type="button" value="运行" class="g-btn g-btn-sure" /></p>
+		</div>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/inner.js"></script>
+</body>
+</html>

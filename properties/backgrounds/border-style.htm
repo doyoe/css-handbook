@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="utf-8" />
+<title>border-style</title>
+<meta name="description" content="CSS3参考手册之：border-style" />
+<meta name="keywords" content="border-style, css3, css3参考手册" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../../skin/article.css" />
+</head>
+<body>
+<nav id="guide">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="../index.htm">属性列表</a>
+		<span>&#187;</span>
+		<a href="index.htm" id="category" rel="properties/backgrounds" name="border-style">背景与边框属性</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它背景边框参考</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入快速分类导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">border-style</h1>
+		<ul class="info">
+			<li><strong>版本：CSS1</strong></li>
+			<li>2018.3.6</li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="syntax" class="g-mod g-attr">
+		<h2 id="shorthand" class="tit">简写属性语法：</h2>
+		<div class="cont">
+			<p><strong>border-style</strong>：<a href="#line-style">&lt;line-style&gt;</a>{1,4}</p>
+			<p><strong>默认值</strong>：<mark class="defaultvalue">看每个独立属性</mark></p>
+			<p><strong>适用于</strong>：所有元素</p>
+			<p><strong>继承性</strong>：无</p>
+			<p><strong>动画性</strong>：否</p>
+			<p><strong>计算值</strong>：看每个独立属性</p>
+			<p><strong>媒　体</strong>：视觉</p>
+		</div>
+		<h2 id="individual" class="tit">分拆独立属性语法：</h2>
+		<div class="cont">
+			<p><strong><a href="#border-*-style">border-*-style</a></strong>：<a href="#line-style">&lt;line-style&gt;</a></p>
+			<p id="border-*-style"><strong>border-*-style</strong> = <code class="g-property">border-top-style</code>,<code class="g-property">border-right-style</code>,<code class="g-property">border-bottom-style</code>,<code class="g-property">border-left-style</code></p>
+			<p><strong>默认值</strong>：<mark class="defaultvalue">none</mark></p>
+			<p><strong>适用于</strong>：所有元素</p>
+			<p><strong>继承性</strong>：无</p>
+			<p><strong>动画性</strong>：否</p>
+			<p><strong>计算值</strong>：指定值</p>
+			<p><strong>媒　体</strong>：视觉</p>
+		</div>
+		<p id="line-style" class="sharing"><strong>&lt;line-style&gt;</strong> = none | hidden | dotted | dashed | solid | double | groove | ridge | inset | outset</p>
+	</section>
+	<section id="value" class="g-mod g-attr">
+		<h2 class="tit">取值：</h2>
+		<div class="cont">
+			<dl>
+				<dt>none：</dt>
+				<dd>无轮廓。当定义了该值时，<a href="border-color.htm" class="g-property">border-color</a>将被忽略，<a href="border-width.htm" class="g-property">border-width</a>计算值为<code class="g-value">0</code>，除非边框轮廓应用了<a href="border-image.htm" class="g-property">border-image</a>。</dd>
+				<dt>hidden：</dt>
+				<dd>隐藏边框。</dd>
+				<dt>dotted：</dt>
+				<dd>点状轮廓。</dd>
+				<dt>dashed：</dt>
+				<dd>虚线轮廓。</dd>
+				<dt>solid：</dt>
+				<dd>实线轮廓</dd>
+				<dt>double：</dt>
+				<dd>双线轮廓。两条单线与其间隔的和等于指定的<a href="border-width.htm" class="g-property">border-width</a>值</dd>
+				<dt>groove：</dt>
+				<dd>3D凹槽轮廓。</dd>
+				<dt>ridge：</dt>
+				<dd>3D凸槽轮廓。</dd>
+				<dt>inset：</dt>
+				<dd>3D凹边轮廓。</dd>
+				<dt>outset：</dt>
+				<dd>3D凸边轮廓。</dd>
+			</dl>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
+		<h2 class="tit">说明：</h2>
+		<div class="cont">
+			<strong>定义元素的边框样式。</strong>
+			<ul>
+				<li><code class="g-property">border-style</code>如果提供全部四个参数值，将按上、右、下、左的顺序作用于四边；只提供一个，将用于全部的四边；提供两个，第一个用于上、下，第二个用于左、右；提供三个，第一个用于上，第二个用于左、右，第三个用于下。</li>
+				<li>如果<a href="border-width.htm" class="g-property">border-width</a>等于<code class="g-value">0</code>，<code class="g-property">border-style</code>及其分拆独立属性将失效。</li>
+				<li>对应的脚本特性分别为：<strong>borderStyle, borderTopStyle, borderRightStyle, borderBottomStyle, borderLeftStyle</strong>。</li>
+			</ul>
+		</div>
+	</section>
+	<section id="compatible" class="g-mod g-attr">
+		<h2 class="tit">兼容性：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">粉色</span> = 部分支持</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th>Values</th>
+						<th>IE</th>
+						<th>Firefox</th>
+						<th>Chrome</th>
+						<th>Safari</th>
+						<th>Opera</th>
+						<th>iOS Safari</th>
+						<th>Android Browser</th>
+						<th>Android Chrome</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><strong>Basic Support</strong></td>
+						<td class="support">8.0+</td>
+						<td class="support">40.0+</td>
+						<td class="support">40.0+</td>
+						<td class="support">8.0+</td>
+						<td class="support">40.0+</td>
+						<td class="support">8.0+</td>
+						<td class="support">4.4+</td>
+						<td class="support">28.0+</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+	<section id="example" class="g-mod g-attr">
+		<h2 class="tit">示例：</h2>
+		<div class="cont">
+			<textarea cols="90" rows="10">
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="utf-8" />
+<title>border-style_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<style>
+div{float:left;margin-right:5px;}
+.none{padding:10px;border:0 none;background:#eee;}
+.hidden{padding:10px;border:3px hidden #000;background:#eee;}
+.dotted{padding:10px;border:3px dotted #000;background:#eee;}
+.dashed{padding:10px;border:3px dashed #000;background:#eee;}
+.solid{padding:10px;border:3px solid #000;background:#eee;}
+.double{padding:10px;border:3px double #000;background:#eee;}
+.groove{padding:10px;border:3px groove #000;background:#eee;}
+.ridge{padding:10px;border:3px ridge #000;background:#eee;}
+.inset{padding:10px;border:3px inset #000;background:#eee;}
+.outset{padding:10px;border:3px outset #000;background:#eee;}
+</style>
+</head>
+<body>
+<div class="none">none</div>
+<div class="hidden">hidden</div>
+<div class="dotted">dotted</div>
+<div class="dashed">dashed</div>
+<div class="solid">solid</div>
+<div class="double">double</div>
+<div class="groove">groove</div>
+<div class="ridge">ridge</div>
+<div class="inset">inset</div>
+<div class="outset">outset</div>
+</body>
+</html>
+			</textarea>
+			<p><input type="button" value="运行" class="g-btn g-btn-sure" /></p>
+		</div>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/inner.js"></script>
+</body>
+</html>
