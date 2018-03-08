@@ -122,6 +122,23 @@
 						<p class="gquote-info">上面 2 段代码是等效的。</p>
 					</div>
 				</li>
+				<li>
+					<p>当该属性的值定义为百分比时，其垂直和水平方向的计算值要分别参照图像边框区域的的宽和高进行换算</p>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>举个例子：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp>.demo {
+	width: 200px;
+	height: 100px;
+	padding: 20px;
+	border: 10px solid;
+	border-image-source: linear-gradient(red, yellow);
+	border-image-slice: 5;
+	border-image-width: 10%;
+}
+</xmp></code></blockquote>
+	<p class="gquote-info">此时，<code class="g-property">border-image-width</code>的计算值是<code class="g-value">16px 26px</code>。</p>
+					</div>
+				</li>
 				<li>对应的脚本特性为<strong>borderImageWidth</strong>。</li>
 			</ul>
 		</div>
