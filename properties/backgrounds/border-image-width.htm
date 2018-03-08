@@ -103,6 +103,25 @@
 						</div>
 					</div>
 				</li>
+				<li>
+					<p>当该属性的值定义为<code class="g-value">auto</code>，将会直接使用<a href="border-image-slice.htm" class="g-property">border-image-slice</a>的定义。</p>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>举个例子：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp>.demo {
+	border: 10px solid;
+	border-image-source: linear-gradient(red, yellow);
+	border-image-slice: 5;
+}
+.demo {
+	border: 10px solid;
+	border-image-source: linear-gradient(red, yellow);
+	border-image-slice: 5;
+	border-image-width: auto;
+}
+</xmp></code></blockquote>
+						<p class="gquote-info">上面 2 段代码是等效的。</p>
+					</div>
+				</li>
 				<li>对应的脚本特性为<strong>borderImageWidth</strong>。</li>
 			</ul>
 		</div>
