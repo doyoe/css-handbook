@@ -81,7 +81,28 @@
 			<strong>定义元素边框图像的厚度。</strong>
 			<ul>
 				<li>该属性用于指定使用多厚的边框来承载被裁剪后的图像。</li>
-				<li>当该属性省略未定义时，因为默认值是<code class="g-value">1</code>，所以该属性的计算值会是<code class="g-code">1 * border-width</code>，相当于会直接使用<a href="border-width.htm" class="g-property">border-width</a>的定义。</li>
+				<li>
+					<p>当该属性省略未定义时，因为默认值是<code class="g-value">1</code>，所以该属性的计算值会是<code class="g-code">1 * border-width</code>，相当于会直接使用<a href="border-width.htm" class="g-property">border-width</a>的定义。</p>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>举个例子：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp>.demo {
+	border-width: 10px;
+	border-style: solid;
+	border-image-source: linear-gradient(red, yellow);
+	border-image-slice: 5;
+}
+</xmp></code></blockquote>
+						<div class="gquote-info">
+							<p>这个例子中，<code class="g-property">border-image-width</code>省略未定义，所以<code class="g-property">border-image-width</code>将会使用<code class="g-property">border-width</code>所定义的值。</p>
+							<p>从这个例子的可以看到，以下三种情况是等效的：</p>
+							<ul>
+								<li><code class="g-property">border-image-width</code>省略未定义；</li>
+								<li><code class="g-property">border-image-width</code>属性值为<code class="g-value">1</code>；</li>
+								<li><code class="g-property">border-image-width</code>属性值为<code class="g-value">10px</code>；</li>
+							</ul>
+						</div>
+					</div>
+				</li>
 				<li>对应的脚本特性为<strong>borderImageWidth</strong>。</li>
 			</ul>
 		</div>
