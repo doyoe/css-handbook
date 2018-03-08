@@ -184,24 +184,18 @@ if (!Global.isLocal && Global.name) {
 					//'rotation-point' : []
 				},
 				dimension : {
-					'index' : ['尺寸(Ddimension)','其它尺寸属性参考'],
+					'index' : ['尺寸与补白(Ddimension)','其它尺寸与补白参考'],
 					'width' : [],
 					'min-width' : [],
 					'max-width' : [],
 					'height' : [],
 					'min-height' : [],
-					'max-height' : []
-				},
-				margin : {
-					'index' : ['外补白(Margin)','其它外补白属性参考'],
+					'max-height' : [],
 					'margin' : [],
 					'margin-top' : [],
 					'margin-right' : [],
 					'margin-bottom' : [],
-					'margin-left' : []
-				},
-				padding : {
-					'index' : ['内补白(Padding)','其它内补白属性参考'],
+					'margin-left' : [],
 					'padding' : [],
 					'padding-top' : [],
 					'padding-right' : [],
