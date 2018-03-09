@@ -192,15 +192,7 @@ if (!Global.isLocal && Global.name) {
 					'min-height' : [],
 					'max-height' : [],
 					'margin' : [],
-					'margin-top' : [],
-					'margin-right' : [],
-					'margin-bottom' : [],
-					'margin-left' : [],
-					'padding' : [],
-					'padding-top' : [],
-					'padding-right' : [],
-					'padding-bottom' : [],
-					'padding-left' : []
+					'padding' : []
 				},
 				backgrounds : {
 					'index' : ['背景与边框(Backgrounds and Borders)','其它背景边框参考'],
