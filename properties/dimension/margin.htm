@@ -97,16 +97,13 @@
 	<section id="intro" class="g-mod g-attr">
 		<h2 class="tit">说明：</h2>
 		<div class="cont">
-			<strong>检索或设置对象四边的外延边距。</strong>
+			<strong>简写属性。为元素设置所有四个方向（上右下左）的外边距。</strong>
 			<ul>
-				<li>如果提供全部四个参数值，将按上、右、下、左的顺序作用于四边。</li>
-				<li>如果只提供一个，将用于全部的四边。</li>
-				<li>如果提供两个，第一个用于上、下，第二个用于左、右。</li>
-				<li>如果提供三个，第一个用于上，第二个用于左、右，第三个用于下。</li>
-				<li>非替代(non-Replaced)行内元素可以使用该属性设置左、右两边的外补丁；若要设置上、下两边的外补丁，必须先使该元素表现为块级或行内块级。</li>
+				<li><code class="g-property">margin</code>属性接受<code class="g-code">1~4</code>个参数值。如果提供四个参数值，将按上、右、下、左的顺序作用于四边；提供三个，第一个用于上，第二个用于左、右，第三个用于下；提供两个，第一个用于上、下，第二个用于左、右；只提供一个，同时用于的四边。</li>
+				<li>非替代(non-replaced)行内元素可以使用该属性定义<a href="#horizontal-margin" class="g-property">horizontal-margin</a>；若要定义<a href="#vertical-margin" class="g-property">vertical-margin</a>，必须改变元素为块级或行内块级。</li>
 				<li>外延边距始终透明。</li>
 				<li>
-					<strong>某些相邻的margin会发生合并，我们称之为margin折叠：</strong>
+					<p>某些相邻的margin会发生合并，我们称之为margin折叠：</p>
 					<div class="gquote">
 						<p class="gquote-tit"><strong>示例：</strong></p>
 						<blockquote class="gquote-cont"><pre><code>h2{margin:10px 0;}
