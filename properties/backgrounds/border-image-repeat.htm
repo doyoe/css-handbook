@@ -42,7 +42,7 @@
 		<h1 class="tit">border-image-repeat</h1>
 		<ul class="info">
 			<li><strong>版本：CSS3</strong></li>
-			<li>2018.3.12</li>
+			<li>2018.3.13</li>
 		</ul>
 		<!-- 插入浏览器信息 -->
 	</section>
@@ -53,7 +53,7 @@
 		<div class="cont">
 			<p><strong>border-image-repeat</strong>：[ stretch | repeat | round | space ]{1,2}</p>
 			<p><strong>默认值</strong>：<mark class="defaultvalue">stretch</mark></p>
-			<p><strong>适用于</strong>：所有元素，除table元素设置了 &lt;' <a href="../table/border-collapse.htm">border-collapse</a> '&gt; 为collapse之外</p>
+			<p><strong>适用于</strong>：所有元素，除table元素设置了<a href="../table/border-collapse.htm" class="g-property">border-collapse</a>属性值为<code class="g-value">collapse</code>之外</p>
 			<p><strong>继承性</strong>：无</p>
 			<p><strong>动画性</strong>：否</p>
 			<p><strong>计算值</strong>：指定值</p>
@@ -65,13 +65,13 @@
 		<div class="cont">
 			<dl>
 				<dt>stretch：</dt>
-				<dd>指定用拉伸方式来填充边框背景图。</dd>
+				<dd>将被分割的图像使用拉伸的方式来填充满边框图像区域。</dd>
 				<dt>repeat：</dt>
-				<dd>指定用平铺方式来填充边框背景图。当图片碰到边界时，如果超过则被截断。</dd>
+				<dd>将被分割的图像使用重复平铺的方式来填充满边框图像区域。当图像碰到边界时，如果超过则被截断。</dd>
 				<dt>round：</dt>
-				<dd>指定用平铺方式来填充边框背景图。图片会根据边框的尺寸动态调整图片的大小直至正好可以铺满整个边框。</dd>
+				<dd>与 repeat 关键字类似，也是通过重复平铺进行填充。不同在于，会根据边框图像区域的尺寸动态调整被分割的图像大小直至正好可以铺满整个区域。</dd>
 				<dt>space：</dt>
-				<dd>指定用平铺方式来填充边框背景图。图片会根据边框的尺寸动态调整图片的之间的间距直至正好可以铺满整个边框。</dd>
+				<dd>与 repeat 关键字类似，也是通过重复平铺进行填充。不同在于，会根据边框图像区域的尺寸动态调整被分割的图像间的间距直至正好可以铺满整个区域。</dd>
 			</dl>
 		</div>
 	</section>
@@ -148,17 +148,32 @@
 <title>border-image-repeat_CSS参考手册_web前端开发参考手册系列</title>
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <style>
-.test{
+.demo{
+	margin: 30px;
 	padding: 10px;
+	border: 27px solid;
 	border-image-source: url(skin/border.png);
 	border-image-slice: 27;
-	border-image-width: auto;
+}
+.demo1 {
+	border-image-repeat: stretch;
+}
+.demo2 {
 	border-image-repeat: repeat;
+}
+.demo3 {
+	border-image-repeat: round;
+}
+.demo4 {
+	border-image-repeat: space;
 }
 </style>
 </head>
 <body>
-<div class="test">用图片来做边框</div>
+<div class="demo demo1">使用 stretch 关键字来拉伸填充</div>
+<div class="demo demo2">使用 repeat 关键字来重复平铺填充</div>
+<div class="demo demo3">使用 round 关键字来拉伸填充</div>
+<div class="demo demo4">使用 space 关键字来拉伸填充</div>
 </body>
 </html>
 			</textarea>
