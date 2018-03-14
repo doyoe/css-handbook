@@ -84,6 +84,26 @@
 			<strong>检索或设置对象的背景图像的尺寸大小。</strong>
 			<ul>
 				<li>该属性接受<code class="g-code">1~2</code>个参数值（<code class="g-value">cover</code>和<code class="g-value">contain</code>关键字只接受一个）。如果提供两个，第一个用于定义背景图像宽度，第二个定义高度；只提供一个，该值用于定义背景图像的宽度，高度将依据图像宽度定义进行等比缩放计算得到。</li>
+				<li>
+					<p>当属性值为百分比时，参照背景图像的<a href="background-origin" class="g-property">background-origin</a>区域大小进行换算（而不是包含块大小）。</p>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>百分比参照计算：</strong></p>
+						<blockquote class="gquote-cont"><pre><code>.demo {
+	width: 200px;
+	height: 200px;
+	padding: 20px;
+	background-image: url(test.jpg);
+	background-repeat: no-repeat;
+	background-size: 50% 50%;
+}</code></pre></blockquote>
+						<p class="gquote-info">因为<a href="background-origin" class="g-property">background-origin</a>的默认值为<code class="g-value">padding-box</code>（即包含padding），所以此时，背景图像的计算值为：<code class="g-value">120px 120px</code></p>
+						<p class="gquote-tit"><strong>改变background-origin的取值：</strong></p>
+						<blockquote class="gquote-cont"><pre><code>.demo {
+	background-origin: content-box;
+}</code></pre></blockquote>
+						<p class="gquote-info">由于将<a href="background-origin" class="g-property">background-origin</a>设置为了<code class="g-value">content-box</code>（即内容区域），所以此时，背景图像的计算值为：<code class="g-value">100px 100px</code></p>
+					</div>
+				</li>
 				<li>对应的脚本特性为：<strong>backgroundSize</strong>。</li>
 			</ul>
 		</div>
