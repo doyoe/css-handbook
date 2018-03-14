@@ -42,7 +42,7 @@
 		<h1 class="tit">background-position</h1>
 		<ul class="info">
 			<li><strong>版本：CSS1/3</strong></li>
-			<li>媒体：视觉</li>
+			<li>2018.3.14</li>
 		</ul>
 		<!-- 插入浏览器信息 -->
 	</section>
@@ -64,6 +64,7 @@
 			<p><strong>继承性</strong>：无</p>
 			<p><strong>动画性</strong>：是</p>
 			<p><strong>计算值</strong>：指定值</p>
+			<p><strong>媒　体</strong>：视觉</p>
 		</div>
 	</section>
 	<section id="value" class="g-mod g-attr">
@@ -71,26 +72,26 @@
 		<div class="cont">
 			<dl>
 				<dt><a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a>：</dt>
-				<dd>用百分比指定背景图像填充的位置。可以为负值。其参考的尺寸为容器大小减去背景图片大小</dd>
+				<dd>用百分比指定背景图像在元素中出现的位置。可以为负值。其参考的尺寸为容器大小减去背景图片大小</dd>
 				<dt><a href="../../values/length/length.htm">&lt;length&gt;</a>：</dt>
-				<dd>用长度值指定背景图像填充的位置。可以为负值。</dd>
+				<dd>用长度值指定背景图像在元素中出现的位置。可以为负值。</dd>
 				<dt>center：</dt>
-				<dd>背景图像横向和纵向居中。</dd>
+				<dd>背景图像横向或纵向居中。</dd>
 				<dt>left：</dt>
-				<dd>背景图像在横向上填充从左边开始。</dd>
+				<dd>背景图像从元素左边开始出现。</dd>
 				<dt>right：</dt>
-				<dd>背景图像在横向上填充从右边开始。</dd>
+				<dd>背景图像从元素右边开始出现。</dd>
 				<dt>top：</dt>
-				<dd>背景图像在纵向上填充从顶部开始。</dd>
+				<dd>背景图像从元素顶部开始出现。</dd>
 				<dt>bottom：</dt>
-				<dd>背景图像在纵向上填充从底部开始。</dd>
+				<dd>背景图像从元素底部开始出现。</dd>
 			</dl>
 		</div>
 	</section>
 	<section id="intro" class="g-mod g-attr">
 		<h2 class="tit">说明：</h2>
 		<div class="cont">
-			<strong>设置或检索对象的背景图像位置。必须先指定 &lt;' <a href="background-image.htm">background-image</a> '&gt; 属性。</strong>
+			<strong>指定背景图像在元素中出现的位置。</strong>
 			<ul>
 				<li>该属性提供2个参数值<span class="g-color-light">（CSS3中已允许提供3，4个值）</span>。</li>
 				<li class="g-color-light">如果提供三或四个，每个<a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a>或<a href="../../values/length/length.htm">&lt;length&gt;</a>偏移前都必须跟着一个边界关键字（即left | right | top | bottom，不包括center），偏移量相对关键字位置进行偏移。</li>
