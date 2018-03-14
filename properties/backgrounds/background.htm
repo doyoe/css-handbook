@@ -90,50 +90,49 @@
 		<div class="cont">
 			<strong>简写属性。定义元素的背景特性（背景色<a href="background-color.htm" class="g-property">background-color</a>不能设置多组）。</strong>
 			<ul>
-				<li>一个元素可以设置多重背景图像。</li>
-				<li>每组属性间使用逗号分隔。</li>
-				<li>如果设置的多重背景图之间存在着交集（即存在着重叠关系），前面的背景图会覆盖在后面的背景图之上。</li>
+				<li>一个元素可以设置多组背景图像，每组属性间使用逗号分隔。</li>
+				<li>如果设置的多组背景图之间存在着交集（即存在着重叠关系），前面的背景图会覆盖在后面的背景图之上。</li>
 				<li>
 					<strong>示例：假设要在同一个元素上定义3个背景图像</strong>
 					<div class="gquote">
 						<p class="gquote-tit"><strong>缩写方式：</strong></p>
-						<blockquote class="gquote-cont"><pre><code>background:url(test1.jpg) no-repeat scroll 10px 20px/50px 60px content-box padding-box,
-	   url(test1.jpg) no-repeat scroll 10px 20px/70px 90px content-box padding-box,
-	   url(test1.jpg) no-repeat scroll 10px 20px/110px 130px content-box padding-box #aaa;</code></pre></blockquote>
-						<p class="gquote-info">注意， &lt;' <a href="background-color.htm">background-color</a> '&gt; 只能设置一次，且由于写在前面的背景会叠在之后的背景之上，所以背景色通常都定义在最后一组上，避免背景色将图像盖住。</p>
+						<blockquote class="gquote-cont"><pre><code>background: url(test1.jpg) no-repeat scroll 10px 20px/50px 60px content-box padding-box,
+	   url(test2.jpg) no-repeat scroll 10px 20px/70px 90px content-box padding-box,
+	   url(test3.jpg) no-repeat scroll 10px 20px/110px 130px content-box padding-box #aaa;</code></pre></blockquote>
+						<p class="gquote-info">注意，因为<a href="background-color.htm" class="g-property">background-color</a>不能设置多组，且前面的背景会叠在之后的背景之上，所以背景色通常都定义在最后一组上，避免背景色将图像盖住。</p>
 					</div>
 					<div class="gquote">
 						<p class="gquote-tit"><strong>拆分方式：</strong></p>
-						<blockquote class="gquote-cont"><pre><code>background-image:url(test1.jpg),url(test2.jpg),url(test3.jpg);
-background-repeat:no-repeat,no-repeat,no-repeat;
-background-attachment:scroll,scroll,scroll;
-background-position:10px 20px,10px 20px,10px 20px;
-background-size:50px 60px,70px 90px,110px 130px;
-background-origin:content-box,content-box,content-box;
-background-clip:padding-box,padding-box,padding-box;
-background-color:#aaa;</code></pre></blockquote>
+						<blockquote class="gquote-cont"><pre><code>background-image: url(test1.jpg), url(test2.jpg), url(test3.jpg);
+background-repeat: no-repeat, no-repeat, no-repeat;
+background-attachment: scroll, scroll, scroll;
+background-position: 10px 20px, 10px 20px, 10px 20px;
+background-size: 50px 60px, 70px 90px, 110px 130px;
+background-origin: content-box, content-box, content-box;
+background-clip: padding-box, padding-box, padding-box;
+background-color: #aaa;</code></pre></blockquote>
 					</div>
 				</li>
 				<li>
 					<p>如果定义了多个背景图片，而其他属性只有一个参数值，则表明所有背景图片的该属性都应用同一个参数值。据此可以对上面的例子进行缩写：</p>
 					<div class="gquote">
 						<p class="gquote-tit"><strong>缩写方式：</strong></p>
-						<blockquote class="gquote-cont"><pre><code>background-image:url(test1.jpg),url(test2.jpg),url(test3.jpg);
-background-repeat:no-repeat;
-background-attachment:scroll;
-background-position:10px 20px;
-background-size:50px 60px,70px 90px,110px 130px;
-background-origin:content-box;
-background-clip:padding-box;
-background-color:#aaa;</code></pre></blockquote>
+						<blockquote class="gquote-cont"><pre><code>background-image: url(test1.jpg), url(test2.jpg), url(test3.jpg);
+background-repeat: no-repeat;
+background-attachment: scroll;
+background-position: 10px 20px;
+background-size: 50px 60px,70px 90px,110px 130px;
+background-origin: content-box;
+background-clip: padding-box;
+background-color: #aaa;</code></pre></blockquote>
 					</div>
-					<p>如果定义了多个背景图片，而 &lt;' <a href="background-origin.htm">background-origin</a> '&gt; 和 &lt;' <a href="background-clip.htm">background-clip</a> '&gt; 设置了相同的值。可这样缩写：</p>
+					<p>如果定义了多个背景图片，而<a href="background-origin.htm" class="g-property">background-origin</a>和<a href="background-clip.htm" class="g-property">background-clip</a>设置了相同的值。可这样缩写：</p>
 					<div class="gquote">
 						<p class="gquote-tit"><strong>缩写方式：</strong></p>
-						<blockquote class="gquote-cont"><pre><code>background:url(test1.jpg) no-repeat scroll 10px 20px/50px 60px padding-box,
+						<blockquote class="gquote-cont"><pre><code>background: url(test1.jpg) no-repeat scroll 10px 20px/50px 60px padding-box,
 	   url(test1.jpg) no-repeat scroll 10px 20px/70px 90px padding-box,
 	   url(test1.jpg) no-repeat scroll 10px 20px/110px 130px padding-box #aaa;</code></pre></blockquote>
-						<p class="gquote-info">这表示 &lt;' <a href="background-origin.htm">background-origin</a> '&gt; 和 &lt;' <a href="background-clip.htm">background-clip</a> '&gt; 都使用了padding-box参数值。</p>
+	   <p class="gquote-info">这表示<a href="background-origin.htm" class="g-property">background-origin</a>和<a href="background-clip.htm" class="g-property">background-clip</a>都使用了<code class="g-value">padding-box</code>参数值。</p>
 					</div>
 
 				</li>
