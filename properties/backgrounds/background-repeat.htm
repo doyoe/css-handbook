@@ -85,9 +85,8 @@
 		<div class="cont">
 			<strong>定义元素的背景图像如何填充。</strong>
 			<ul>
-				<li>该属性接受<code class="g-code">1~2</code>个参数值，如果提供两个参数值，第一个用于横向，第二个用于纵向；提供一个，则同时应用于横向与纵向。</li>
-				<li>如果只提供1个参数，则用于横向和纵向。<em class="g-color-light">特殊值repeat-x和repeat-y除外，因为repeat-x相当于repeat no-repeat，repeat-y相当于no-repeat repeat，即其实repeat-x和repeat-y等价于提供了2个参数值</em></li>
-				<li>对应的脚本特性为<strong>backgroundRepeat</strong>。</li>
+				<li>该属性接受<code class="g-code">1~2</code>个参数值，如果提供两个参数值，第一个用于横向，第二个用于纵向；提供一个，则同时应用于横向与纵向，<em class="g-color-light">特殊值repeat-x和repeat-y除外，因为repeat-x相当于repeat no-repeat，repeat-y相当于no-repeat repeat，即其实repeat-x和repeat-y等价于提供了2个参数值</em></li>
+				<li>对应的脚本特性为：<strong>backgroundRepeat</strong>。</li>
 			</ul>
 		</div>
 	</section>
@@ -116,28 +115,18 @@
 				<tbody>
 					<tr>
 						<td><strong>Basic Support</strong></td>
-						<td class="support">6.0+</td>
-						<td class="support">2.0+</td>
-						<td class="support" rowspan="5">4.0+</td>
-						<td class="support" rowspan="5">3.1+</td>
-						<td class="support" rowspan="5">15.0+</td>
-						<td class="support" rowspan="5">3.2+</td>
-						<td class="support" rowspan="5">2.1+</td>
-						<td class="support" rowspan="5">18.0+</td>
+						<td class="support">8.0+</td>
+						<td class="support" rowspan="5">40.0+</td>
+						<td class="support" rowspan="5">40.0+</td>
+						<td class="support" rowspan="5">8.0+</td>
+						<td class="support" rowspan="5">40.0+</td>
+						<td class="support" rowspan="5">8.0+</td>
+						<td class="support" rowspan="5">4.4+</td>
+						<td class="support" rowspan="5">28.0+</td>
 					</tr>
 					<tr>
-						<td rowspan="2">2个参数值</td>
-						<td class="unsupport">6.0-8.0</td>
-						<td class="unsupport">2.0-12.0</td>
-					</tr>
-					<tr>
-						<td class="support">9.0+</td>
-						<td class="support">13.0+</td>
-					</tr>
-					<tr>
-						<td rowspan="2"><ins class="g-color-css3-new">space</ins> | <ins class="g-color-css3-new">round</ins></td>
-						<td class="unsupport">6.0-8.0</td>
-						<td class="unsupport" rowspan="2">2.0-38.0</td>
+						<td rowspan="2">2个参数值<br /><ins class="g-color-css3-new">space</ins>与<ins class="g-color-css3-new">round</ins>关键字<br />Multiple background repeat</td>
+						<td class="unsupport">8.0</td>
 					</tr>
 					<tr>
 						<td class="support">9.0+</td>
