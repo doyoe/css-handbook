@@ -67,21 +67,21 @@
 		<div class="cont">
 			<dl>
 				<dt><a href="background-image.htm" class="g-property">background-image</a>：</dt>
-				<dd>指定对象的背景图像。可以是真实图片路径或使用渐变创建的“背景图像”</dd>
+				<dd>指定元素使用的背景图像。可以是图片路径或使用渐变创建的“背景图像”</dd>
 				<dt><a href="background-position.htm" class="g-property">background-position</a>：</dt>
-				<dd>指定对象的背景图像位置。</dd>
+				<dd>指定背景图像在元素中出现的位置。</dd>
 				<dt><a href="background-size.htm" class="g-property">background-size</a>：</dt>
-				<dd>指定对象的背景图像的尺寸大小。</dd>
+				<dd>指定背景图像尺寸。</dd>
 				<dt><a href="background-repeat.htm" class="g-property">background-repeat</a>：</dt>
-				<dd>指定对象的背景图像如何铺排填充。</dd>
+				<dd>指定背景图像如何填充。</dd>
 				<dt><a href="background-attachment.htm" class="g-property">background-attachment</a>：</dt>
-				<dd>指定对象的背景图像是随对象内容滚动还是固定的。</dd>
+				<dd>指定背景图像是随元素内容滚动还是固定的。</dd>
 				<dt><a href="background-origin.htm" class="g-property">background-origin</a>：</dt>
-				<dd>指定对象的背景图像显示的原点。</dd>
+				<dd>指定背景图像从元素的哪个区域作为显示的原点。</dd>
 				<dt><a href="background-clip.htm" class="g-property">background-clip</a>：</dt>
-				<dd>指定对象的背景图像向外裁剪的区域。</dd>
+				<dd>指定背景图像向外裁剪的区域。</dd>
 				<dt><a href="background-color.htm" class="g-property">background-color</a>：</dt>
-				<dd>指定对象的背景颜色。</dd>
+				<dd>指定背景颜色。</dd>
 			</dl>
 		</div>
 	</section>
@@ -126,6 +126,8 @@ background-origin: content-box;
 background-clip: padding-box;
 background-color: #aaa;</code></pre></blockquote>
 					</div>
+				</li>
+				<li>
 					<p>如果定义了多个背景图片，而<a href="background-origin.htm" class="g-property">background-origin</a>和<a href="background-clip.htm" class="g-property">background-clip</a>设置了相同的值。可这样缩写：</p>
 					<div class="gquote">
 						<p class="gquote-tit"><strong>缩写方式：</strong></p>
@@ -175,59 +177,20 @@ background-color: #aaa;</code></pre></blockquote>
 					</tr>
 					<tr>
 						<td rowspan="2">Multiple backgrounds</td>
-						<td class="unsupport">6.0-8.0</td>
-						<td class="unsupport">2.0-3.5</td>
-						<td class="support" rowspan="2">4.0+</td>
-						<td class="support" rowspan="2">3.1+</td>
-						<td class="support" rowspan="2">3.5+</td>
-						<td class="support" rowspan="2">3.2+</td>
-						<td class="support" rowspan="2">2.1+</td>
-						<td class="support" rowspan="2">18.0+</td>
+						<td class="unsupport">8.0</td>
+						<td class="support" rowspan="2">40.0+</td>
+						<td class="support" rowspan="2">40.0+</td>
+						<td class="support" rowspan="2">8.0+</td>
+						<td class="support" rowspan="2">40.0+</td>
+						<td class="support" rowspan="2">8.0+</td>
+						<td class="support" rowspan="2">4.4+</td>
+						<td class="support" rowspan="2">28.0+</td>
 					</tr>
 					<tr>
 						<td class="support">9.0+</td>
-						<td class="support">3.6+</td>
-					</tr>
-					<tr>
-						<td rowspan="2">background-size <sup><a href="#support1">#1</a></sup></td>
-						<td class="unsupport">6.0-8.0</td>
-						<td class="unsupport">2.0-3.5</td>
-						<td class="unsupport">4.0-14.0</td>
-						<td class="unsupport">6.0-6.1</td>
-						<td class="support" rowspan="2">15.0+</td>
-						<td class="unsupport">6.0-6.1</td>
-						<td class="unsupport">2.1-4.3</td>
-						<td class="support" rowspan="4">18.0+</td>
-					</tr>
-					<tr>
-						<td class="support">9.0+</td>
-						<td class="support">3.6+</td>
-						<td class="support">15.0+</td>
-						<td class="support">7.0+</td>
-						<td class="support">7.0+</td>
-						<td class="support">4.4+</td>
-					</tr>
-					<tr>
-						<td rowspan="2">background-origin<br />background-clip <sup><a href="#support2">#2</a></sup></td>
-						<td class="unsupport">6.0-8.0</td>
-						<td class="unsupport">2.0-3.5</td>
-						<td class="support" rowspan="2">4.0+</td>
-						<td class="support" rowspan="2">6.0+</td>
-						<td class="support" rowspan="2">15.0+</td>
-						<td class="support" rowspan="2">6.0+</td>
-						<td class="unsupport">2.1-2.3</td>
-					</tr>
-					<tr>
-						<td class="support">9.0+</td>
-						<td class="support">3.6+</td>
-						<td class="support">3.0+</td>
 					</tr>
 				</tbody>
 			</table>
-			<ol class="support-info">
-				<li id="support1">&lt;' <a href="background-size.htm">background-size</a> '&gt; 写入缩写方式。</li>
-				<li id="support2">&lt;' <a href="background-origin.htm">background-origin</a> '&gt; || &lt;' <a href="background-clip.htm">background-clip</a> '&gt; 写入缩写方式。</li>
-			</ol>
 		</div>
 	</section>
 	<section id="example" class="g-mod g-attr">
