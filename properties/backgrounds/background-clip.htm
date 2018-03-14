@@ -42,7 +42,7 @@
 		<h1 class="tit">background-clip</h1>
 		<ul class="info">
 			<li><strong>版本：CSS3</strong></li>
-			<li>媒体：视觉</li>
+			<li>2018.3.14</li>
 		</ul>
 		<!-- 插入浏览器信息 -->
 	</section>
@@ -58,6 +58,7 @@
 			<p><strong>继承性</strong>：无</p>
 			<p><strong>动画性</strong>：否</p>
 			<p><strong>计算值</strong>：指定值</p>
+			<p><strong>媒　体</strong>：视觉</p>
 		</div>
 	</section>
 	<section id="value" class="g-mod g-attr">
@@ -80,7 +81,7 @@
 		<div class="cont">
 			<strong>指定对象的背景图像向外裁剪的区域。</strong>
 			<ul>
-				<li>对应的脚本特性为<strong>backgroundClip</strong>。</li>
+				<li>对应的脚本特性为：<strong>backgroundClip</strong>。</li>
 			</ul>
 		</div>
 	</section>
@@ -108,33 +109,31 @@
 				</thead>
 				<tbody>
 					<tr>
-						<td rowspan="3"><strong>Basic Support</strong></td>
-						<td class="unsupport">6.0-8.0</td>
-						<td class="unsupport">2.0-3.5</td>
-						<td class="support" rowspan="4">4.0+</td>
-						<td class="support" rowspan="4">6.0+</td>
-						<td class="support" rowspan="4">15.0+</td>
-						<td class="support" rowspan="4">6.0+</td>
-						<td class="support">2.1-2.3 <sup class="fix">-webkit-</sup></td>
-						<td class="support" rowspan="4">18.0+</td>
+						<td rowspan="2"><strong>Basic Support</strong></td>
+						<td class="unsupport">8.0</td>
+						<td class="support" rowspan="2">40.0</td>
+						<td class="support" rowspan="4">40.0+</td>
+						<td class="support" rowspan="4">8.0+</td>
+						<td class="support" rowspan="4">40.0+</td>
+						<td class="support" rowspan="4">8.0+</td>
+						<td class="support" rowspan="4">4.4+</td>
+						<td class="support" rowspan="4">28.0+</td>
 					</tr>
 					<tr>
-						<td class="support" rowspan="2">9.0+</td>
-						<td class="support">3.6 <sup class="fix">-moz-</sup></td>
-						<td class="support" rowspan="3">3.0+</td>
+						<td class="support">9.0+</td>
 					</tr>
 					<tr>
-						<td class="support">4.0+</td>
+						<td rowspan="2">text <sup><a href="#support1">#1</a></sup></td>
+						<td class="unsupport" rowspan="2">8.0-16.0</td>
+						<td class="unsupport">2.0-48.0</td>
 					</tr>
 					<tr>
-						<td>text <sup><a href="#support1">#1</a></sup></td>
-						<td class="unsupport">6.0-11.0</td>
-						<td class="unsupport">2.0-38.0</td>
+						<td class="support">49.0+</td>
 					</tr>
 				</tbody>
 			</table>
 			<ol class="support-info">
-				<li id="support1">text属性值，目前为webkit only <a href="http://www.webkit.org/blog/164/background-clip-text/" class="external" target="_blank">[1]</a> <a href="http://www.css3.info/webkit-introduces-background-cliptext/" class="external" target="_blank">[2]</a>。</li>
+				<li id="support1">text属性值，目前为webkit only <a href="http://www.webkit.org/blog/164/background-clip-text/" class="external" target="_blank">[1]</a> <a href="http://www.css3.info/webkit-introduces-background-cliptext/" class="external" target="_blank">[2]</a>，使用方式：<code class="g-code">-webkit-background-clip: text</code>。</li>
 			</ol>
 		</div>
 	</section>
