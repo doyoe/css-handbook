@@ -83,10 +83,8 @@
 		<div class="cont">
 			<strong>检索或设置对象的背景图像的尺寸大小。</strong>
 			<ul>
-				<li>该属性提供2个参数值(特性值cover和contain除外)。</li>
-				<li>如果提供两个，第一个用于定义背景图像的宽度，第二个用于定义背景图像的高度。</li>
-				<li>如果只提供一个，该值将用于定义背景图像的宽度，第2个值默认为auto，即高度为auto，此时背景图以提供的宽度作为参照来进行等比缩放。</li>
-				<li>对应的脚本特性为<strong>backgroundSize</strong>。</li>
+				<li>该属性接受<code class="g-code">1~2</code>个参数值（<code class="g-value">cover</code>和<code class="g-value">contain</code>关键字只接受一个）。如果提供两个，第一个用于定义背景图像宽度，第二个定义高度；只提供一个，该值用于定义背景图像的宽度，高度将依据图像宽度定义进行等比缩放计算得到。</li>
+				<li>对应的脚本特性为：<strong>backgroundSize</strong>。</li>
 			</ul>
 		</div>
 	</section>
