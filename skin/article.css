@@ -141,6 +141,7 @@ ol.gitem{list-style-type:decimal;}
 #value dl{zoom:1;overflow:hidden;}
 #value dt{clear:left;float:left;font-weight:bold;}
 #value dt.css3-value{color:#f60;}
+#value dd{_height:23px;min-height:23px;}
 /* module: intro */
 #intro ul{list-style-type:disc;padding:0 2em;}
 /* module: example */
