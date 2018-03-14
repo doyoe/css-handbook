@@ -72,7 +72,7 @@
 		<div class="cont">
 			<dl>
 				<dt><a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a>：</dt>
-				<dd>用百分比指定背景图像在元素中出现的位置。可以为负值。其参考的尺寸为容器大小减去背景图片大小</dd>
+				<dd>用百分比指定背景图像在元素中出现的位置。可以为负值。参考容器尺寸减去背景图尺寸进行换算。</dd>
 				<dt><a href="../../values/length/length.htm">&lt;length&gt;</a>：</dt>
 				<dd>用长度值指定背景图像在元素中出现的位置。可以为负值。</dd>
 				<dt>center：</dt>
@@ -93,19 +93,19 @@
 		<div class="cont">
 			<strong>指定背景图像在元素中出现的位置。</strong>
 			<ul>
-				<li>该属性提供2个参数值<span class="g-color-light">（CSS3中已允许提供3，4个值）</span>。</li>
-				<li class="g-color-light">如果提供三或四个，每个<a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a>或<a href="../../values/length/length.htm">&lt;length&gt;</a>偏移前都必须跟着一个边界关键字（即left | right | top | bottom，不包括center），偏移量相对关键字位置进行偏移。</li>
+				<li>该属性接受<code class="g-code">1~4</code>个参数值。</li>
 				<li>
+					<p>如果提供三或四个，每个 <a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a> 或 <a href="../../values/length/length.htm">&lt;length&gt;</a> 偏移量之前都必须跟着一个边界关键字（即left | right | top | bottom，不包括center），偏移量相对关键字位置进行偏移。</p>
 					<strong>示例：假设要定义背景图像在容器中右下方，并且距离右边和底部各有20px</strong>
 					<div class="gquote">
 						<p class="gquote-tit"><strong>缩写方式：</strong></p>
-						<blockquote class="gquote-cont"><pre><code>background:url(test1.jpg) no-repeat right 20px bottom 20px;</code></pre></blockquote>
+						<blockquote class="gquote-cont"><pre><code>background: url(test1.jpg) no-repeat right 20px bottom 20px;</code></pre></blockquote>
 					</div>
 					<strong>你也可以设置3个参数值：</strong>
 					<div class="gquote">
 						<p class="gquote-tit"><strong>拆分方式：</strong></p>
-						<blockquote class="gquote-cont"><pre><code>background:url(test1.jpg) no-repeat left bottom 10px;</code></pre></blockquote>
-						<p class="gquote-info">要注意的是：设置3个或4个值，偏移量前必须有关键字。也就是说，形如："10px bottom 20px" ，这样的参数设置是错误的，因为10px前面没有关键字。</p>
+						<blockquote class="gquote-cont"><pre><code>background: url(test1.jpg) no-repeat left bottom 10px;</code></pre></blockquote>
+						<p class="gquote-info">要注意的是：设置3个或4个值，偏移量前必须有边界关键字。也就是说，形如：<code class="g-value">10px bottom 20px</code>，这样的参数设置是错误的，因为10px前面没有关键字。</p>
 					</div>
 				</li>
 				<li>如果提供两个，第一个用于横坐标，第二个用于纵坐标。</li>
