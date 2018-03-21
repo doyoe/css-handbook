@@ -42,7 +42,7 @@
 		<h1 class="tit">font-size-adjust</h1>
 		<ul class="info">
 			<li><strong>版本：CSS3</strong></li>
-			<li>媒体：视觉</li>
+			<li>2018.3.21</li>
 		</ul>
 		<!-- 插入浏览器信息 -->
 	</section>
@@ -57,6 +57,7 @@
 			<p><strong>继承性</strong>：有</p>
 			<p><strong>动画性</strong>：当值为 <a href="../../values/numeric/number.htm">&lt;number&gt;</a> 时</p>
 			<p><strong>计算值</strong>：指定值</p>
+			<p><strong>媒　体</strong>：视觉</p>
 		</div>
 	</section>
 	<section id="value" class="g-mod g-attr">
@@ -73,13 +74,13 @@
 	<section id="intro" class="g-mod g-attr">
 		<h2 class="tit">说明：</h2>
 		<div class="cont">
-			<strong>设置或检索对象的 aspect 值，用以保持首选字体的 x-height。</strong>
+			<strong>定义元素的 aspect 值，用以保持首选字体的 x-height。</strong>
 			<ul>
 				<li>字体的小写字母 "x" 的高度与字号之间的比率被称为一个字体的 aspect 值</li>
 				<li>高 aspect 值的字体被设置为很小的尺寸时会更易阅读。举例：Verdana 的 aspect 值是 0.58（意味着当字体尺寸为 100px 时，它的 x-height 是 58px）。Times New Roman 的 aspect 值是 0.46。这就意味着 Verdana 在小尺寸时比 Times New Roman 更易阅读。</li>
 				<li>可以使用这个公式来为可用字体推演出合适的字号：可应用到可用字体的字体尺寸 = 首选字体的字体尺寸 * （font-size-adjust 值 / 可用字体的 aspect 值）</li>
 				<li>详述：如果 14px 的 Verdana（aspect 值是 0.58）不可用，但是某个可用的字体的 aspect 值是 0.46，那么替代字体的尺寸将是 14 * (0.58/0.46) = 17.65px。</li>
-				<li>对应的脚本特性为<strong>fontSizeAdjust</strong>。</li>
+				<li>对应的脚本特性为：<strong>fontSizeAdjust</strong>。</li>
 			</ul>
 		</div>
 	</section>
@@ -107,18 +108,15 @@
 				</thead>
 				<tbody>
 					<tr>
-						<td rowspan="2"><strong>Basic Support</strong></td>
-						<td class="unsupport" rowspan="2">6.0-11.0</td>
-						<td class="unsupport">2.0</td>
-						<td class="unsupport" rowspan="2">4.0-43.0</td>
-						<td class="unsupport" rowspan="2">3.1-8.1</td>
-						<td class="unsupport" rowspan="2">15.0-28.0</td>
-						<td class="unsupport" rowspan="2">3.2-8.1</td>
-						<td class="unsupport" rowspan="2">2.1-4.4.4</td>
-						<td class="unsupport" rowspan="2">18.0-40.0</td>
-					</tr>
-					<tr>
-						<td class="support">3.0+</td>
+						<td><strong>Basic Support</strong></td>
+						<td class="unsupport">8.0-16.0</td>
+						<td class="support">40.0</td>
+						<td class="unsupport">40.0-64.0</td>
+						<td class="unsupport">8.0-11.0</td>
+						<td class="unsupport">40.0-50.0</td>
+						<td class="unsupport">8.0-11.3</td>
+						<td class="unsupport">4.4-62.0</td>
+						<td class="unsupport">28.0-64.0</td>
 					</tr>
 				</tbody>
 			</table>
