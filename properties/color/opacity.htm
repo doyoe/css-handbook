@@ -42,7 +42,7 @@
 		<h1 class="tit">opacity</h1>
 		<ul class="info">
 			<li><strong>版本：CSS3</strong></li>
-			<li>媒体：视觉</li>
+			<li>2018.3.21</li>
 		</ul>
 		<!-- 插入浏览器信息 -->
 	</section>
@@ -57,6 +57,7 @@
 			<p><strong>继承性</strong>：无</p>
 			<p><strong>动画性</strong>：是</p>
 			<p><strong>计算值</strong>：指定值</p>
+			<p><strong>媒　体</strong>：视觉</p>
 		</div>
 	</section>
 	<section id="value" class="g-mod g-attr">
@@ -64,7 +65,7 @@
 		<div class="cont">
 			<dl>
 				<dt><a href="../../values/numeric/number.htm">&lt;number&gt;</a>：</dt>
-				<dd>使用浮点数指定对象的不透明度。值被约束在[0.0-1.0]范围内，如果超过了这个范围，其计算结果将截取到与之最相近的值。</dd>
+				<dd>使用浮点数指定对象的不透明度。值被约束在<code class="g-value">0.0~1.0</code>范围内，如果超过了这个范围，其计算结果将截取到与之最相近的值。</dd>
 			</dl>
 		</div>
 	</section>
@@ -73,6 +74,8 @@
 		<div class="cont">
 			<strong>检索或设置对象的不透明度。</strong>
 			<ul>
+				<li>当一个元素定义了<code class="g-property">opacity</code>属性，并且值<code class="g-value">小于1</code>时，那么它的子元素也会同样拥有相同的透明度。</li>
+				<li>当一个元素定义了<code class="g-property">opacity</code>属性，并且值<code class="g-value">小于1</code>时，将会创建一个新的堆叠上下文；如果其它的元素为非定位元素，那么该元素的堆叠级别将会高于其它元素。</li>
 				<li>
 					<strong>对于尚不支持opacity属性的IE浏览器可以使用IE私有的滤镜属性来实现与opacity相同的效果</strong>
 					<div class="gquote">
@@ -82,8 +85,7 @@ div{opacity:.5;} /* for IE9 and other browsers */</code></pre></blockquote>
 						<p class="gquote-info">以上2段代码的效果相同</p>
 					</div>
 				</li>
-				<li>元素定义了值小于1的opacity，将会产生局部层叠上下文。</li>
-				<li>对应的脚本特性为<strong>opacity</strong>。</li>
+				<li>对应的脚本特性为：<strong>opacity</strong>。</li>
 			</ul>
 		</div>
 	</section>
@@ -112,14 +114,14 @@ div{opacity:.5;} /* for IE9 and other browsers */</code></pre></blockquote>
 				<tbody>
 					<tr>
 						<td rowspan="2"><strong>Basic Support</strong></td>
-						<td class="unsupport">6.0-8.0</td>
-						<td class="support" rowspan="2">2.0+</td>
-						<td class="support" rowspan="2">4.0+</td>
-						<td class="support" rowspan="2">3.1+</td>
-						<td class="support" rowspan="2">15.0+</td>
-						<td class="support" rowspan="2">3.2+</td>
-						<td class="support" rowspan="2">2.1+</td>
-						<td class="support" rowspan="2">18.0+</td>
+						<td class="unsupport">8.0</td>
+						<td class="support" rowspan="2">40.0+</td>
+						<td class="support" rowspan="2">40.0+</td>
+						<td class="support" rowspan="2">8.0+</td>
+						<td class="support" rowspan="2">40.0+</td>
+						<td class="support" rowspan="2">8.0+</td>
+						<td class="support" rowspan="2">4.4+</td>
+						<td class="support" rowspan="2">28.0+</td>
 					</tr>
 					<tr>
 						<td class="support">9.0+</td>
