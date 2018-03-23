@@ -42,7 +42,7 @@
 		<h1 class="tit">tab-size</h1>
 		<ul class="info">
 			<li><strong>版本：CSS3</strong></li>
-			<li>媒体：视觉</li>
+			<li>2018.3.23</li>
 		</ul>
 		<!-- 插入浏览器信息 -->
 	</section>
@@ -51,19 +51,20 @@
 	<section id="syntax" class="g-mod g-attr">
 		<h2 class="tit">语法：</h2>
 		<div class="cont">
-			<p><strong>tab-size</strong>：<a href="../../values/numeric/integer.htm">&lt;integer&gt;</a> | <a href="../../values/length/length.htm">&lt;length&gt;</a></p>
+			<p><strong>tab-size</strong>：<a href="../../values/numeric/number.htm">&lt;number&gt;</a> | <a href="../../values/length/length.htm">&lt;length&gt;</a></p>
 			<p><strong>默认值</strong>：<mark class="defaultvalue">8</mark></p>
 			<p><strong>适用于</strong>：块容器</p>
 			<p><strong>继承性</strong>：有</p>
-			<p><strong>动画性</strong>：当值为 <a href="../../values/length/length.htm">&lt;length&gt;</a> 时</p>
+			<p><strong>动画性</strong>：是</p>
 			<p><strong>计算值</strong>：指定值</p>
+			<p><strong>媒　体</strong>：视觉</p>
 		</div>
 	</section>
 	<section id="value" class="g-mod g-attr">
 		<h2 class="tit">取值：</h2>
 		<div class="cont">
 			<dl>
-				<dt><a href="../../values/numeric/integer.htm">&lt;integer&gt;</a>：</dt>
+				<dt><a href="../../values/numeric/number.htm">&lt;number&gt;</a>：</dt>
 				<dd>用整数值指定制表符的长度。不允许负值。</dd>
 				<dt><a href="../../values/length/length.htm">&lt;length&gt;</a>：</dt>
 				<dd>用长度值指定制表符的长度。不允许负值。</dd>
@@ -75,7 +76,7 @@
 		<div class="cont">
 			<strong>检索或设置对象中的制表符的长度。</strong>
 			<ul>
-				<li>该属性决定了制表符(U+0009)的宽度，整数代表空格(U+0020)的倍数(如：tab-size:4; 表示制表符宽度是4个空格的宽度)</li>
+				<li>该属性决定了制表符(U+0009)的宽度，<code class="g-value">number</code>代表空格(U+0020)的倍数(如：tab-size:4; 表示制表符宽度是4个空格的宽度)</li>
 				<li>只有当 &lt;' <a href="white-space.htm">white-space</a> '&gt; 的属性值为：<code class="incode">pre | pre-wrap</code>时，该属性的定义才有效</li>
 				<li>对应的脚本特性为<strong>tabSize</strong>。</li>
 			</ul>

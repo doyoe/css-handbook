@@ -727,7 +727,6 @@ if (!Global.isLocal && Global.name) {
 			'</div>'+
 			'<div class="g-transition list"><ul>'+
 			'<li><a href="#" class="weibo">新浪微博</a></li>'+
-			'<li><a href="#" class="txweibo">腾讯微博</a></li>'+
 			'<li><a href="#" class="qq">QQ空间</a></li>'+
 			'<li><a href="#" class="renren">人人网</a></li>'+
 			'<li><a href="#" class="douban">豆瓣</a></li>'+
@@ -762,12 +761,6 @@ if (!Global.isLocal && Global.name) {
 		// QQ空间
 		container.delegate('.qq', 'click', function() {
 			window.open('http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?site=www.tuan2.com&title=' + '' + '&desc=' + title + '&summary=' + '' + '&url=' + url + '&pics=' + pic, '_blank');
-			return false;
-		});
-
-		// 腾讯微博
-		container.delegate('.txweibo', 'click', function() {
-			window.open('http://v.t.qq.com/share/share.php?title=' + title + '&url=' + url + '&pic=' + pic, '_blank');
 			return false;
 		});
 
