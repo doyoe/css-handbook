@@ -42,7 +42,7 @@
 		<h1 class="tit">word-break</h1>
 		<ul class="info">
 			<li><strong>版本：CSS3</strong></li>
-			<li>媒体：视觉</li>
+			<li>2018.3.23</li>
 		</ul>
 		<!-- 插入浏览器信息 -->
 	</section>
@@ -51,13 +51,14 @@
 	<section id="syntax" class="g-mod g-attr">
 		<h2 class="tit">语法：</h2>
 		<div class="cont">
-			<p><strong>word-break</strong>：normal | keep-all | break-all</p>
+			<p><strong>word-break</strong>：normal | keep-all | break-all | break-word</p>
 			<p><strong>默认值</strong>：<mark class="defaultvalue">normal</mark></p>
 			<p><strong>适用于</strong>：所有元素</p>
 			<p><strong>继承性</strong>：有</p>
 			<p><strong>动画性</strong>：否</p>
 			<p><strong>计算值</strong>：指定值</p>
-			<p><strong>相关属性</strong>：&lt;' <a href="word-wrap.htm">word-wrap</a> '&gt;</p>
+			<p><strong>相关属性</strong>：<a href="word-wrap.htm" class="g-property">word-wrap</a></p>
+			<p><strong>媒　体</strong>：视觉</p>
 		</div>
 	</section>
 	<section id="value" class="g-mod g-attr">
@@ -65,11 +66,13 @@
 		<div class="cont">
 			<dl>
 				<dt>normal：</dt>
-				<dd>依照亚洲语言和非亚洲语言的文本规则，允许在字内换行。</dd>
+				<dd>默认的换行规则。依据各自语言的规则，允许在字间发生换行。</dd>
 				<dt>keep-all：</dt>
-				<dd>与所有非亚洲语言的normal相同。对于中文，韩文，日文，不允许字断开。适合包含少量亚洲文本的非亚洲文本。</dd>
+				<dd>对于 CJK（中文，韩文，日文）文本不允许在字符内发生换行。Non-CJK 文本表现同<code class="g-value">normal</code></dd>
 				<dt>break-all：</dt>
-				<dd>该行为与亚洲语言的normal相同。也允许非亚洲语言文本行的任意字内断开。该值适合包含一些非亚洲文本的亚洲文本，比如使连续的英文字母间断行。</dd>
+				<dd>对于 Non-CJK 文本允许在任意字符内发生换行。该值适合包含一些非亚洲文本的亚洲文本，比如使连续的英文字符断行。</dd>
+				<dt>break-word：</dt>
+				<dd>与<code class="g-value">break-all</code>相同，不同的地方在于它要求一个没有断行破发点的词必须保持为一个整体单位。这与<a href="word-wrap.htm" class="g-property">word-wrap</a>的<code class="g-value">break-word</code>值效果相同</dd>
 			</dl>
 		</div>
 	</section>
