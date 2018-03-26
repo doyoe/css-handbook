@@ -240,7 +240,6 @@ if (!Global.isLocal && Global.name) {
 					'white-space' : [],
 					'tab-size' : [],
 					'word-break' : [],
-					'word-wrap' : [],
 					'overflow-wrap' : [],
 					'text-align' : [],
 					'text-align-last' : [],

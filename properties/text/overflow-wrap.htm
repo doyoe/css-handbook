@@ -2,9 +2,9 @@
 <html lang="zh-cmn-Hans">
 <head>
 <meta charset="utf-8" />
-<title>overflow-wrap</title>
-<meta name="description" content="CSS3参考手册之:overflow-wrap" />
-<meta name="keywords" content="overflow-wrap, css3, css3参考手册" />
+<title>word-wrap/overflow-wrap</title>
+<meta name="description" content="CSS3参考手册之: word-wrap, overflow-wrap" />
+<meta name="keywords" content="word-wrap, css3, css3参考手册" />
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <meta name="robots" content="all" />
 <!--[if lte IE 8]>
@@ -39,10 +39,10 @@
 </nav>
 <header id="hd">
 	<section id="title" class="g-mod">
-		<h1 class="tit">overflow-wrap</h1>
+		<h1 class="tit">word-wrap/overflow-wrap</h1>
 		<ul class="info">
-			<li><strong>版本：CSS3/4</strong></li>
-			<li>媒体：视觉</li>
+			<li><strong>版本：CSS3</strong></li>
+			<li>2018.3.23</li>
 		</ul>
 		<!-- 插入浏览器信息 -->
 	</section>
@@ -51,13 +51,14 @@
 	<section id="syntax" class="g-mod g-attr">
 		<h2 class="tit">语法：</h2>
 		<div class="cont">
-			<p><strong>overflow-wrap</strong>：normal | break-word</p>
+			<p><strong>word-wrap, overflow-wrap</strong>：normal | break-word | break-spaces</p>
 			<p><strong>默认值</strong>：<mark class="defaultvalue">normal</mark></p>
 			<p><strong>适用于</strong>：所有元素</p>
 			<p><strong>继承性</strong>：有</p>
 			<p><strong>动画性</strong>：否</p>
 			<p><strong>计算值</strong>：指定值</p>
-			<p><strong>相关属性</strong>：&lt;' <a href="word-wrap.htm">word-wrap</a> '&gt; || &lt;' <a href="word-break.htm">word-break</a> '&gt;</p>
+			<p><strong>相关属性</strong>：<a href="word-break.htm" class="g-property">word-break</a></p>
+			<p><strong>媒　体</strong>：视觉</p>
 		</div>
 	</section>
 	<section id="value" class="g-mod g-attr">
@@ -67,7 +68,7 @@
 				<dt>normal：</dt>
 				<dd>允许内容顶开或溢出指定的容器边界。</dd>
 				<dt>break-word：</dt>
-				<dd>内容将在边界内换行。如果需要，单词内部允许断行。</dd>
+				<dd>内容将在边界内换行，如果需要，单词内部允许断行。它要求一个没有断行破发点的词必须保持为一个整体单位，如果当前行无法放下需要被打断的单词，为了保持完整性，会将整个单词放到下一行进行展示。这与<a href="word-break.htm" class="g-property">word-break</a>的<code class="g-value">break-word</code>值效果相同</dd>
 			</dl>
 		</div>
 	</section>
@@ -76,9 +77,9 @@
 		<div class="cont">
 			<strong>设置或检索当内容超过指定容器的边界时是否断行。</strong>
 			<ul>
-				<li class="g-color-light">CSS3中将 &lt;' <a href="word-wrap.htm">word-wrap</a> '&gt; 改名为 &lt;' overflow-wrap '&gt;；</li>
-				<li>由于历史原因，当你使用 &lt;' overflow-wrap '&gt; 时，最好同时使用 &lt;' <a href="word-wrap.htm">word-wrap</a> '&gt; 作为备选，作向前兼容。</li>
-				<li>对应的脚本特性为<strong>overflowWrap</strong>。</li>
+				<li class="g-color-light">作为IE的私有属性之一，IE5.5率先实现了<code class="g-property">word-wrap</code>，后期被w3c采纳成标准属性；</li>
+				<li class="g-color-light">CSS3中将<code class="g-property">word-wrap</code>改名为<code class="g-property">overflow-wrap</code>；</li>
+				<li>对应的脚本特性为：<strong>wordWrap, overflowWrap</strong>。</li>
 			</ul>
 		</div>
 	</section>
@@ -106,25 +107,46 @@
 				</thead>
 				<tbody>
 					<tr>
-						<td rowspan="2"><strong>Basic Support</strong></td>
-						<td class="unsupport" rowspan="2">6.0-11.0</td>
-						<td class="unsupport" rowspan="2">2.0-40.0</td>
-						<td class="unsupport">4.0-22.0</td>
-						<td class="unsupport">6.0</td>
-						<td class="support" rowspan="2">15.0+</td>
-						<td class="unsupport">6.0-6.1</td>
-						<td class="unsupport">2.1-4.3</td>
-						<td class="unsupport">18.0-21.0</td>
+						<td><strong>Basic Support</strong> <sup><a href="#support1">#1</a></sup></td>
+						<td class="support">8.0+</td>
+						<td class="support">40.0</td>
+						<td class="support">40.0+</td>
+						<td class="support">8.0+</td>
+						<td class="support">40.0+</td>
+						<td class="support">8.0+</td>
+						<td class="support">4.4+</td>
+						<td class="support">28.0+</td>
 					</tr>
 					<tr>
-						<td class="support">23.0+</td>
-						<td class="support">6.1+</td>
-						<td class="support">7.0+</td>
-						<td class="support">4.4.0+</td>
-						<td class="support">22.0+</td>
+						<td rowspan="2">overflow-wrap</td>
+						<td class="unsupport" rowspan="2">8.0-16.0</td>
+						<td class="unsupport">40.0-48.0</td>
+						<td class="support" rowspan="2">40.0+</td>
+						<td class="support" rowspan="2">8.0+</td>
+						<td class="support" rowspan="2">40.0+</td>
+						<td class="support" rowspan="2">8.0+</td>
+						<td class="support" rowspan="2">4.4+</td>
+						<td class="support" rowspan="2">28.0+</td>
+					</tr>
+					<tr>
+						<td class="support">49.0+</td>
+					</tr>
+					<tr>
+						<td>break-spaces<br />Key Value</td>
+						<td class="unsupport">8.0-16.0</td>
+						<td class="unsupport">40.0-58.0</td>
+						<td class="unsupport">40.0-64</td>
+						<td class="unsupport">8.0-10.0</td>
+						<td class="unsupport">40.0-50.0</td>
+						<td class="unsupport">8.0-11.3</td>
+						<td class="unsupport">4.4-62.0</td>
+						<td class="unsupport">28.0-64.0</td>
 					</tr>
 				</tbody>
 			</table>
+			<ol class="support-info">
+				<li id="support1">Basic Support 指的是<code class="g-code">word-wrap: normal | break-word</code>。</li>
+			</ol>
 		</div>
 	</section>
 	<section id="example" class="g-mod g-attr">
@@ -135,12 +157,12 @@
 <html lang="zh-cmn-Hans">
 <head>
 <meta charset="utf-8" />
-<title>overflow-wrap_CSS参考手册_web前端开发参考手册系列</title>
+<title>word-wrap, overflow-wrap_CSS参考手册_web前端开发参考手册系列</title>
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <style>
 .test p{width:100px;border:1px solid #000;background-color:#eee;}
-.normal p{word-wrap:normal;overflow-wrap:normal;}
-.break-word p{word-wrap:break-word;overflow-wrap:break-word;}
+.normal p{word-wrap:normal;}
+.break-word p{word-wrap:break-word;}
 </style>
 </head>
 <body>
