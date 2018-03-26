@@ -82,6 +82,43 @@
 			<strong>定义元素内容文本的字间与字符间的换行行为。</strong>
 			<ul>
 				<li>对于解决防止页面中出现连续无意义的长字符打破布局，应该使用<code class="g-value">break-all | break-word</code>属性值；</li>
+				<li>
+					<p>同为强制打断单词的<code class="g-value">break-all</code>与<code class="g-value">break-word</code>的两个值，需要了解她们间的主要区别（下述2个示例需要在webkit/blink浏览器下查看）：</p>
+					<style>
+					.test1, .test2 {
+						background: #eee;
+						width: 140px;
+						font-size: 14px;
+						text-align: left !important;
+					}
+					.test1 {
+						word-break: break-all;
+					}
+					.test2 {
+						word-break: break-word;
+					}
+					</style>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>break-all：</strong></p>
+						<div class="gquote-cont">
+							<div class="img test1">做一个示例让大家更好的区分wordbreakbreakword与wordbreakbreakall的实际应用效果</div>
+							<blockquote class="code"><code><xmp>.test1 {
+	word-break: break-all;
+}</xmp></code></blockquote>
+						</div>
+						<p class="gquote-info">break-all会在文本内容遇见边界时，强制将文本打断换行，而不考虑单词是否是完整的一个单位</p>
+					</div>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>break-word：</strong></p>
+						<div class="gquote-cont">
+							<div class="img test2">做一个示例让大家更好的区分wordbreakbreakword与wordbreakbreakall的实际应用效果</div>
+							<blockquote class="code"><code><xmp>.test2 {
+	word-break: break-word;
+}</xmp></code></blockquote>
+						</div>
+						<p class="gquote-info">break-word同样也会在文本内容遇见边界时，强制将文本打断换行，不同的在于它会考虑单词是否完整，如果当前行无法放下需要被打断的单词，为了保持完整性，会将整个单词放到下一行进行展示</p>
+					</div>
+				</li>
 				<li>对应的脚本特性为：<strong>wordBreak</strong>。</li>
 			</ul>
 		</div>
@@ -178,21 +215,26 @@
 .normal p{word-break:normal;}
 .break-all p{word-break:break-all;}
 .keep-all p{word-break:keep-all;}
+.break-word p{word-break:break-word;}
 </style>
 </head>
 <body>
 <ul class="test">
 	<li class="normal">
 		<strong>normal：</strong>
-		<p>aaabbbcccdddeeefffggghhhiiijjjkkklllmmmnnn</p>
+		<p>测试效果aaabbbcccdddeeefffggghhhiiijjjkkklllmmmnnn</p>
 	</li>
 	<li class="break-all">
 		<strong>break-word：</strong>
-		<p>aaabbbcccdddeeefffggghhhiiijjjkkklllmmmnnn</p>
+		<p>测试效果aaabbbcccdddeeefffggghhhiiijjjkkklllmmmnnn</p>
 	</li>
 	<li class="keep-all">
 		<strong>keep-all：</strong>
-		<p>aaabbbcccdddeeefffggghhhiiijjjkkklllmmmnnn</p>
+		<p>测试效果aaabbbcccdddeeefffggghhhiiijjjkkklllmmmnnn</p>
+	</li>
+	<li class="break-word">
+		<strong>break-word：</strong>
+		<p>测试效果aaabbbcccdddeeefffggghhhiiijjjkkklllmmmnnn</p>
 	</li>
 </ul>
 </body>
