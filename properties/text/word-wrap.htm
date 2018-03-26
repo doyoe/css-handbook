@@ -51,7 +51,7 @@
 	<section id="syntax" class="g-mod g-attr">
 		<h2 class="tit">语法：</h2>
 		<div class="cont">
-			<p><strong>word-wrap</strong>：normal | break-word | break-spaces</p>
+			<p><strong>word-wrap, overflow-wrap</strong>：normal | break-word | break-spaces</p>
 			<p><strong>默认值</strong>：<mark class="defaultvalue">normal</mark></p>
 			<p><strong>适用于</strong>：所有元素</p>
 			<p><strong>继承性</strong>：有</p>
@@ -107,21 +107,46 @@
 				</thead>
 				<tbody>
 					<tr>
-						<td rowspan="2"><strong>Basic Support</strong></td>
-						<td class="support" rowspan="2">6.0+</td>
-						<td class="unsupport">2.0-3.0</td>
-						<td class="support" rowspan="2">4.0+</td>
-						<td class="support" rowspan="2">6.0+</td>
-						<td class="support" rowspan="2">15.0+</td>
-						<td class="support" rowspan="2">6.0+</td>
-						<td class="support" rowspan="2">2.1+</td>
-						<td class="support" rowspan="2">18.0+</td>
+						<td><strong>Basic Support</strong> <sup><a href="#support1">#1</a></sup></td>
+						<td class="support">8.0+</td>
+						<td class="support">40.0</td>
+						<td class="support">40.0+</td>
+						<td class="support">8.0+</td>
+						<td class="support">40.0+</td>
+						<td class="support">8.0+</td>
+						<td class="support">4.4+</td>
+						<td class="support">28.0+</td>
 					</tr>
 					<tr>
-						<td class="support">3.5+</td>
+						<td rowspan="2">overflow-wrap</td>
+						<td class="unsupport" rowspan="2">8.0-16.0</td>
+						<td class="unsupport">40.0-48.0</td>
+						<td class="support" rowspan="2">40.0+</td>
+						<td class="support" rowspan="2">8.0+</td>
+						<td class="support" rowspan="2">40.0+</td>
+						<td class="support" rowspan="2">8.0+</td>
+						<td class="support" rowspan="2">4.4+</td>
+						<td class="support" rowspan="2">28.0+</td>
+					</tr>
+					<tr>
+						<td class="support">49.0+</td>
+					</tr>
+					<tr>
+						<td>break-spaces<br />Key Value</td>
+						<td class="unsupport">8.0-16.0</td>
+						<td class="unsupport">40.0-58.0</td>
+						<td class="unsupport">40.0-64</td>
+						<td class="unsupport">8.0-10.0</td>
+						<td class="unsupport">40.0-50.0</td>
+						<td class="unsupport">8.0-11.3</td>
+						<td class="unsupport">4.4-62.0</td>
+						<td class="unsupport">28.0-64.0</td>
 					</tr>
 				</tbody>
 			</table>
+			<ol class="support-info">
+				<li id="support1">Basic Support 指的是<code class="g-code">word-wrap: normal | break-word</code>。</li>
+			</ol>
 		</div>
 	</section>
 	<section id="example" class="g-mod g-attr">
@@ -132,7 +157,7 @@
 <html lang="zh-cmn-Hans">
 <head>
 <meta charset="utf-8" />
-<title>word-wrap_CSS参考手册_web前端开发参考手册系列</title>
+<title>word-wrap, overflow-wrap_CSS参考手册_web前端开发参考手册系列</title>
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <style>
 .test p{width:100px;border:1px solid #000;background-color:#eee;}
