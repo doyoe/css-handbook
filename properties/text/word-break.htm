@@ -81,9 +81,8 @@
 		<div class="cont">
 			<strong>定义元素内容文本的字间与字符间的换行行为。</strong>
 			<ul>
-				<li>对于解决防止页面中出现连续无意义的长字符打破布局，应该使用<code class="incode">break-all</code>属性值；</li>
-				<li class="g-color-light">作为IE的私有属性之一，IE5.5率先实现了 &lt;' word-break '&gt; ，后期被w3c采纳成标准属性；</li>
-				<li>对应的脚本特性为<strong>wordBreak</strong>。</li>
+				<li>对于解决防止页面中出现连续无意义的长字符打破布局，应该使用<code class="g-value">break-all | break-word</code>属性值；</li>
+				<li>对应的脚本特性为：<strong>wordBreak</strong>。</li>
 			</ul>
 		</div>
 	</section>
@@ -123,22 +122,44 @@
 					</tr>
 					<tr>
 						<td rowspan="2">keep-all</td>
-						<td class="support" rowspan="2">6.0+</td>
-						<td class="unsupport">2.0-14.0</td>
-						<td class="unsupport" rowspan="2">4.0-45.0</td>
-						<td class="unsupport" rowspan="2">6.0-8.0</td>
-						<td class="unsupport" rowspan="2">15.0-29.0</td>
-						<td class="unsupport" rowspan="2">6.0-8.3</td>
-						<td class="unsupport" rowspan="2">2.1-4.4.4</td>
-						<td class="unsupport" rowspan="2">18.0-42.0</td>
+						<td class="support" rowspan="2">8.0+</td>
+						<td class="support" rowspan="2">40.0+</td>
+						<td class="unsupport">40.0-43.0</td>
+						<td class="unsupport">8.0</td>
+						<td class="support" rowspan="2">40.0+</td>
+						<td class="unsupport">8.0-8.4</td>
+						<td class="unsupport">4.4-43.0</td>
+						<td class="unsupport">28.0-43.0</td>
 					</tr>
 					<tr>
-						<td class="support">15.0+</td>
+						<td class="support">44.0+</td>
+						<td class="support">9.0+</td>
+						<td class="support">9.0+</td>
+						<td class="support">44.0+</td>
+						<td class="support">44.0+</td>
+					</tr>
+					<tr>
+						<td rowspan="2">break-word <sup><a href="#support1">#1</a></sup></td>
+						<td class="unsupport" rowspan="2">8.0-16.0</td>
+						<td class="unsupport" rowspan="2">40.0-58.0</td>
+						<td class="unsupport">40.0-43.0</td>
+						<td class="unsupport">8.0</td>
+						<td class="support" rowspan="2">40.0+</td>
+						<td class="unsupport">8.0-8.4</td>
+						<td class="unsupport">4.4-43.0</td>
+						<td class="unsupport">28.0-43.0</td>
+					</tr>
+					<tr>
+						<td class="support">44.0+</td>
+						<td class="support">9.0+</td>
+						<td class="support">9.0+</td>
+						<td class="support">44.0+</td>
+						<td class="support">44.0+</td>
 					</tr>
 				</tbody>
 			</table>
 			<ol class="support-info">
-				<li id="support1">不支持：keep-all 作为参数值。</li>
+				<li id="support1">Safari, Chrome, Opera 以及其他 WebKit/Blink 内核浏览器还支持<code class="g-value">break-word</code>属性值，不过对于版本的支持性，上述表格数据不一定准确。</li>
 			</ol>
 		</div>
 	</section>
