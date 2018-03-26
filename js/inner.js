@@ -177,11 +177,7 @@ if (!Global.isLocal && Global.name) {
 					'float' : [],
 					'clear' : [],
 					'visibility' : [],
-					'overflow' : [],
-					'overflow-x' : [],
-					'overflow-y' : []
-					//'rotation' : [],
-					//'rotation-point' : []
+					'overflow' : []
 				},
 				dimension : {
 					'index' : ['尺寸与补白(Ddimension)','其它尺寸与补白参考'],
