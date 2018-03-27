@@ -110,6 +110,7 @@
 						height: 0;
 						content: "\0020";
 						overflow: hidden;
+						font: 0/0 arial;
 					}
 					</style>
 					<div class="gquote">
@@ -125,7 +126,7 @@
 								<li>首先，所有主流浏览器都支持<code class="g-property">text-align</code>的<code class="g-value">justify</code>属性值；</li>
 								<li>其次，在这个例子中每个 p 都只有一行（所以既是第一行也是最后一行），所以无法通过定义<code class="g-code">text-align: justify</code>来实现两端对齐，因为<code class="g-code">text-align: justify</code>不会处理块级内容文本的最后一行。</li>
 								<li>再次，好在有一个专门用来处理最后一行对齐的属性<a href="text-align-last.htm" class="g-property">text-align-last</a>，可以通过定义<code class="g-code">text-align-last: justify</code>来实现单行文本两端对齐。遗憾的是，不少浏览器尚不支持该属性。</li>
-								<li>综上所述，我们无法简单的通过使用<code class="g-property">text-align</code>或者<code class="g-property">text-align-last</code>来实现单行文本两端对齐。那么可以换个思路，想办法让它们变成多行文本，使用伪元素派生一行新的占位内容是个不错的选择，此时再实现两端对齐，只需要<code class="g-property">text-align</code>就行了。但是 IE7 及以下浏览器不支持伪元素，如果要支持的话，可以直接使用<code class="g-property">text-align-last</code>。</li>
+								<li>综上所述，我们无法简单的通过使用<code class="g-property">text-align</code>或者<code class="g-property">text-align-last</code>来实现单行文本两端对齐。那么可以换个思路，想办法让它们变成多行文本，使用伪元素派生一行新的占位内容是个不错的选择，此时再实现两端对齐，只需要<code class="g-property">text-align</code>就行了。但是 IE7 及以下浏览器不支持伪元素，如果要支持的话，可以直接使用<code class="g-property">text-align-last</code>。实现及效果如下：</li>
 							</ol>
 						</div>
 						<div class="gquote-cont">
@@ -147,7 +148,6 @@
 }</xmp></code></blockquote>
 						</div>
 					</div>
-					<p>查看 <a href="http://demo.doyoe.com/css3/justify/" class="external" rel="external" target="_blank">css两端对齐详解</a> <a href="http://demo.doyoe.com/css3/justify/justify-for-all.htm" class="external" rel="external" target="_blank">css两端对齐效果demo</a></p>
 				</li>
 				<li>对应的脚本特性为：<strong>textAlign</strong>。</li>
 			</ul>
