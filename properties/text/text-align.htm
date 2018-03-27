@@ -97,46 +97,54 @@
 				<li>
 					<strong>依据上述的一些描述，我们可以来实现一个两端对齐的示例：</strong>
 					<style>
-					.demo {
+					.demo p {
 						background: #eee;
 						width: 140px;
-						padding: 10px;
+						padding: 3px 10px;
 						text-align: justify !important;
 						text-align-last: justify;
 					}
+					.demo p::after {
+						display: inline-block;
+						width: 100%;
+						height: 0;
+						content: "\0020";
+						overflow: hidden;
+					}
 					</style>
 					<div class="gquote">
-						<p class="gquote-tit"><strong>break-all：</strong></p>
+						<p class="gquote-tit"><strong>单行文本两端对齐示例：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp><div class="demo">
+	<p>我是谁</p>
+	<p>你又是谁</p>
+	<p>世界末日2012</p>
+</div></xmp></code></blockquote>
+						<div class="gquote-info">
+							<strong>如果要实现本例中单行两端对齐，可以这样做：</strong>
+							<ol class="gitem">
+								<li>首先，所有主流浏览器都支持<code class="g-property">text-align</code>的<code class="g-value">justify</code>属性值；</li>
+								<li>其次，在这个例子中每个 p 都只有一行（所以既是第一行也是最后一行），所以无法通过定义<code class="g-code">text-align: justify</code>来实现两端对齐，因为<code class="g-code">text-align: justify</code>不会处理块级内容文本的最后一行。</li>
+								<li>再次，好在有一个专门用来处理最后一行对齐的属性<a href="text-align-last.htm" class="g-property">text-align-last</a>，可以通过定义<code class="g-code">text-align-last: justify</code>来实现单行文本两端对齐。遗憾的是，不少浏览器尚不支持该属性。</li>
+								<li>综上所述，我们无法简单的通过使用<code class="g-property">text-align</code>或者<code class="g-property">text-align-last</code>来实现单行文本两端对齐。那么可以换个思路，想办法让它们变成多行文本，使用伪元素派生一行新的占位内容是个不错的选择，此时再实现两端对齐，只需要<code class="g-property">text-align</code>就行了。但是 IE7 及以下浏览器不支持伪元素，如果要支持的话，可以直接使用<code class="g-property">text-align-last</code>。</li>
+							</ol>
+						</div>
 						<div class="gquote-cont">
 							<div class="img demo">
 								<p>我是谁</p>
 								<p>你又是谁</p>
 								<p>世界末日2012</p>
 							</div>
-							<blockquote class="code"><code><xmp>.demo {
-	text-align: justify; /* For IE Browser */
-	text-align-last: justify; /* 处理最后一行两端对齐 */
+							<blockquote class="code"><code><xmp>.demo p {
+	text-align: justify;
+	text-align-last: justify;
 }
-<div class="demo">
-	<p>我是谁</p>
-	<p>你又是谁</p>
-	<p>世界末日2012</p>
-</div></xmp></code></blockquote>
-						</div>
-						<div class="gquote-info">
-							<strong>需注意几点：</strong>
-							<ul class="gitem">
-								<li>所有主流浏览器都支持<code class="g-property">text-align</code>的<code class="g-value">justify</code>属性值；</li>
-								<li><code class="g-property">text-align</code>不处理块内的最后一行，这个例子中每个 p 都只有一行（所以既是第一行也是最后一行），仅设置<code class="g-value">justify</code>无法让该行两端对齐；</li>
-								<li><a href="text-align-last.htm" class="g-property">text-align-last</a>是用来处理块内的最后一行的，所以当要设置单行文本两端对齐时，需使用该属性。遗憾的是，不少浏览器尚不支持该属性；</li>
-							</ul>
-							<strong>依据上述的点，要实现本例中单行两端对齐，可以这样做：</strong>
-							<ol class="gitem">
-								<li>首先，因为每个 p 都只有一行，所以无法使用 </li>
-								<li>由于所有浏览器都支持 text-align 的 justify 属性值，但不全支持 <a href="text-align-last.htm">text-align-last</a>，我们可以对非IE及IE7以上浏览器使用伪对象生成额外的内容（IE7及以下浏览器不支持伪对象，使用<a href="text-align-last.htm">text-align-last</a>处理），置于第二行并将其隐藏，这时第一行文本（即要对齐的那个单行文本）可使用text-align:justify来对齐</li>
-								<li>支持 <a href="text-align-last.htm">text-align-last</a> 的浏览器，如IE, Firefox使用 <a href="text-align-last.htm">text-align-last</a> 处理，不支持的浏览器使用如上述方法处理；</li>
-							</ol>
-							<p>所以就目前情况来看，使用第一种方案是比较简约的，可以轻易的兼容IE5.5-10, Firefox, Chrome, Safari, Opera</p>
+.demo p::after {
+    display: inline-block;
+    width: 100%;
+    height: 0;
+    content: "\0020";
+    overflow: hidden;
+}</xmp></code></blockquote>
 						</div>
 					</div>
 					<p>查看 <a href="http://demo.doyoe.com/css3/justify/" class="external" rel="external" target="_blank">css两端对齐详解</a> <a href="http://demo.doyoe.com/css3/justify/justify-for-all.htm" class="external" rel="external" target="_blank">css两端对齐效果demo</a></p>
