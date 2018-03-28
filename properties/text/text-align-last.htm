@@ -87,25 +87,41 @@
 			<strong>定义块内文本内容的最后一行（包括块内仅有一行文本的情况，这时既是第一行也是最后一行）或者被强制打断的行的对齐方式</strong>
 			<ul>
 				<li>
-					<p>对于<code class="g-property">text-align-last</code>来讲，一个块内文本内容可能会存在多个<strong>最后一行</strong></p>
+					<p>对于<code class="g-property">text-align-last</code>来讲，一个块内文本内容可能会存在多个<strong>最后一行</strong>，如下例：</p>
+					<style>
+					.demo, .demo2 {
+						background: #eee;
+						width: 195px;
+						text-align: left !important;
+					}
+					.demo2 {
+						text-align: justify !important;
+						text-align-last: justify;
+					}
+					</style>
 					<div class="gquote">
 						<p class="gquote-tit"><strong>如何区别最后一行：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp><div class="demo">一个块内文本内容可能会存在多个所谓的最后一行<br />这些最后一行都是 text-align-last 的服务范围</div></xmp></code></blockquote>
 						<div class="gquote-cont">
-							<div class="img demo">
-								<p>我是谁</p>
-								<p>你又是谁</p>
-								<p>世界末日2012</p>
-							</div>
-							<blockquote class="code"><code><xmp>.demo p {
-	text-align: justify;
-	text-align-last: justify;
-}
-.demo p::after {
-    display: inline-block;
-    width: 100%;
-    height: 0;
-    content: "\0020";
-    overflow: hidden;
+							<div class="img demo">一个块内文本内容可能会存在多个所谓的最后一行<br />这些最后一行都是 text-align-last 的服务范围</div>
+							<blockquote class="code"><code><xmp>.demo {
+	width: 200px;
+	background: #eee;
+}</xmp></code></blockquote>
+						</div>
+						<div class="gquote-info">
+							<p>如上，我们将一段文本置入宽度为 200px 的 .demo 元素中，这段文本被 br 元素强制打断了，所有我们能看到这段文本最终显示为了 4 行，此时对于 text-align-last 来讲，将有 2 个最后一行：</p>
+							<ul>
+								<li>最后一行（即例子中的第4行，真实的最后一行）</li>
+								<li>第二行（因为第二行是被 br 强制打断的，所以该行也将被当成最后一行）</li>
+							</ul>
+							<p>这意味着第2行与第4行都无法通过 text-align: justify 来实现两端对齐，而需要使用 text-align-last</p>
+						</div>
+						<div class="gquote-cont">
+							<div class="img demo2">一个块内文本内容可能会存在多个所谓的最后一行<br />这些最后一行都是 text-align-last 的服务范围</div>
+							<blockquote class="code"><code><xmp>.demo {
+	text-align: justify; /* 作用于1，3两行 */
+	text-align-last: justify; /* 作用于2，4两行 */
 }</xmp></code></blockquote>
 						</div>
 					</div>
