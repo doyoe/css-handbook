@@ -66,7 +66,7 @@
 		<div class="cont">
 			<dl>
 				<dt>normal：</dt>
-				<dd>默认间隔</dd>
+				<dd>默认间隔。计算值为<code class="g-value">0</code></dd>
 				<dt><a href="../../values/length/length.htm">&lt;length&gt;</a>：</dt>
 				<dd>用长度值指定间隔。可以为负值。</dd>
 				<dt><a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a>：</dt>
@@ -79,9 +79,9 @@
 		<div class="cont">
 			<strong>指定单词之间的额外间隙。</strong>
 			<ul>
-				<li>该属性将指定的间隔添加到每个单词(词内不发生)之后，但最后一个字将被排除在外。</li>
-				<li>判断是否为单词的依据是单词间是否有空格。</li>
-				<li>对应的脚本特性为<strong>wordSpacing</strong>。</li>
+				<li>该属性可以将指定的额外间隙添加到每个单词之后，最后一个单词不添加，这意外着可以通过该属性控制单词间的间隙大小。</li>
+				<li>判断是否为单词的依据是单词间是否有单词分割符，比如：空格。</li>
+				<li>对应的脚本特性为：<strong>wordSpacing</strong>。</li>
 			</ul>
 		</div>
 	</section>
@@ -110,25 +110,25 @@
 				<tbody>
 					<tr>
 						<td><strong>Basic Support</strong></td>
-						<td class="support">6.0+</td>
-						<td class="support">2.0+</td>
-						<td class="support">4.0+</td>
-						<td class="support">6.0+</td>
-						<td class="support">15.0+</td>
-						<td class="support">6.0+</td>
-						<td class="support">2.1+</td>
-						<td class="support">18.0+</td>
+						<td class="support">8.0+</td>
+						<td class="support">40.0+</td>
+						<td class="support">40.0+</td>
+						<td class="support">8.0+</td>
+						<td class="support">40.0+</td>
+						<td class="support">8.0+</td>
+						<td class="support">4.4+</td>
+						<td class="support">28.0+</td>
 					</tr>
 					<tr>
 						<td><a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a></td>
-						<td class="unsupport">6.0-11.0</td>
-						<td class="unsupport">2.0-37.0</td>
-						<td class="unsupport">4.0-41.0</td>
-						<td class="unsupport">6.0-8.0</td>
-						<td class="unsupport">15.0-27.0</td>
-						<td class="unsupport">6.0-8.3</td>
-						<td class="unsupport">2.1-4.4.4</td>
-						<td class="unsupport">18.0-40.0</td>
+						<td class="unsupport">8.0-11.0</td>
+						<td class="unsupport">40.0-59.0</td>
+						<td class="unsupport">40.0-65.0</td>
+						<td class="unsupport">8.0-11.0</td>
+						<td class="unsupport">40.0-50.0</td>
+						<td class="unsupport">8.0-11.3</td>
+						<td class="unsupport">4.4-62.0</td>
+						<td class="unsupport">28.0-64.0</td>
 					</tr>
 				</tbody>
 			</table>
