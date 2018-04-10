@@ -61,7 +61,7 @@
       "maxSubjectLength": 100,
       "subjectPattern": ".+",
       "subjectPatternErrorMsg": "请输入message信息!",
-      "helpMessage": "Commit message 格式错误, \n请查看规范: http://wiki.corp.qunar.com/pages/viewpage.action?pageId=159698767"
+      "helpMessage": "Commit message 格式错误，必须指定 commit type 类型"
     }
   }
 }
