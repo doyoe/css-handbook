@@ -42,7 +42,7 @@
 		<h1 class="tit">text-shadow</h1>
 		<ul class="info">
 			<li><strong>版本：CSS3</strong></li>
-			<li>媒体：视觉</li>
+			<li>2018.4.10</li>
 		</ul>
 		<!-- 插入浏览器信息 -->
 	</section>
@@ -58,6 +58,7 @@
 			<p><strong>继承性</strong>：有</p>
 			<p><strong>动画性</strong>：是</p>
 			<p><strong>计算值</strong>：1个颜色加3个绝对长度</p>
+			<p><strong>媒　体</strong>：视觉</p>
 		</div>
 	</section>
 	<section id="value" class="g-mod g-attr">
@@ -80,10 +81,11 @@
 	<section id="intro" class="g-mod g-attr">
 		<h2 class="tit">说明：</h2>
 		<div class="cont">
-			<strong>设置或检索对象中文本的文字是否有阴影及模糊效果。</strong>参阅 &lt;' <a href="../border/box-shadow.htm">box-shadow</a> '&gt; 属性。
+			<strong>定义文字是否有阴影及模糊效果。</strong>参阅<a href="../border/box-shadow.htm" class="g-property">box-shadow</a>属性。
 			<ul>
 				<li>可以设定多组效果，每组参数值以逗号分隔。多组阴影特殊效果，Demo: <a href="http://demo.doyoe.com/css3/text-shadow/fire-text.htm" target="_blank" class="external" rel="external">火焰文字</a> <a href="http://demo.doyoe.com/css3/text-shadow/neon-text.htm" target="_blank" class="external" rel="external">霓虹文字</a></li>
-				<li>对应的脚本特性为<strong>textShadow</strong>。</li>
+				<li>如果定义了多组阴影效果，它们的 z-ordering 和多个<code class="g-property">box-shadow</code>规则相同，第一个阴影在最上面，以此类推。</li>
+				<li>对应的脚本特性为：<strong>textShadow</strong>。</li>
 			</ul>
 		</div>
 	</section>
@@ -112,18 +114,17 @@
 				<tbody>
 					<tr>
 						<td rowspan="2"><strong>Basic Support</strong></td>
-						<td class="unsupport">6.0-9.0</td>
-						<td class="unsupport">2.0-3.0</td>
-						<td class="support" rowspan="2">4.0+</td>
-						<td class="support" rowspan="2">6.0+</td>
-						<td class="support" rowspan="2">15.0+</td>
-						<td class="support" rowspan="2">6.0+</td>
-						<td class="support" rowspan="2">2.1+</td>
-						<td class="support" rowspan="2">18.0+</td>
+						<td class="unsupport">8.0-9.0</td>
+						<td class="support" rowspan="2">40.0+</td>
+						<td class="support" rowspan="2">40.0+</td>
+						<td class="support" rowspan="2">8.0+</td>
+						<td class="support" rowspan="2">40.0+</td>
+						<td class="support" rowspan="2">8.0+</td>
+						<td class="support" rowspan="2">4.4+</td>
+						<td class="support" rowspan="2">28.0+</td>
 					</tr>
 					<tr>
 						<td class="support">10.0+</td>
-						<td class="support">3.5+</td>
 					</tr>
 				</tbody>
 			</table>
