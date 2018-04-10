@@ -65,11 +65,11 @@
 		<h2 class="tit">取值：</h2>
 		<div class="cont">
 			<dl>
-				<dt>&lt;' <a href="text-decoration-line.htm">text-decoration-line</a> '&gt;：</dt>
-				<dd>指定文本装饰的种类。<em class="g-color-light">相当于CSS2.1的 &lt;' text-decoration '&gt; 属性，可取值：none | underline | overline | line-through | blink</em></dd>
-				<dt>&lt;' <a href="text-decoration-style.htm">text-decoration-style</a> '&gt;：</dt>
+				<dt><a href="text-decoration-line.htm" class="g-property">text-decoration-line</a>：</dt>
+				<dd>指定文本装饰的种类。<em class="g-color-light">相当于CSS2.1的<code class="g-property">text-decoration</code>属性，可取值：none | underline | overline | line-through | blink</em></dd>
+				<dt><a href="text-decoration-style.htm" class="g-property">text-decoration-style</a>：</dt>
 				<dd>指定文本装饰的样式。</dd>
-				<dt>&lt;' <a href="text-decoration-color.htm">text-decoration-color</a> '&gt;：</dt>
+				<dt><a href="text-decoration-color.htm" class="g-property">text-decoration-color</a>：</dt>
 				<dd>指定文本装饰的颜色。</dd>
 			</dl>
 		</div>
@@ -77,10 +77,10 @@
 	<section id="intro" class="g-mod g-attr">
 		<h2 class="tit">说明：</h2>
 		<div class="cont">
-			<strong>复合属性。检索或设置对象中的文本的装饰。</strong>
+			<strong>简写属性。定义元素的文本装饰。</strong>
 			<ul>
-				<li>所有浏览器均支持CSS2.1中的 &lt;' text-decoration '&gt; 属性，在CSS3中，该属性定义被移植到其新的分解属性 &lt;' <a href="text-decoration-line.htm">text-decoration-line</a> '&gt; 上；</li>
-				<li>对应的脚本特性为<strong>textDecoration</strong>。</li>
+				<li>所有浏览器均支持 CSS2.1 中的<code class="g-property">text-decoration</code>属性，在CSS3中，该属性定义被移植到其新的分解属性<a href="text-decoration-line.htm" class="g-property">text-decoration-line</a>上；</li>
+				<li>对应的脚本特性为：<strong>textDecoration</strong>。</li>
 			</ul>
 		</div>
 	</section>
@@ -109,39 +109,34 @@
 				<tbody>
 					<tr>
 						<td><strong>Basic Support</strong></td>
-						<td class="support">6.0+</td>
-						<td class="support">2.0+</td>
-						<td class="support">4.0+</td>
-						<td class="support">6.0+</td>
-						<td class="support">15.0+</td>
-						<td class="support">6.0+</td>
-						<td class="support">2.1+</td>
-						<td class="support">18.0+</td>
+						<td class="support">8.0+</td>
+						<td class="support">40.0+</td>
+						<td class="support">40.0+</td>
+						<td class="support">8.0+</td>
+						<td class="support">40.0+</td>
+						<td class="support">8.0+</td>
+						<td class="support">4.4+</td>
+						<td class="support">28.0+</td>
 					</tr>
 					<tr>
-						<td rowspan="3">CSS3复合属性</td>
-						<td class="unsupport" rowspan="3">6.0-11.0</td>
-						<td class="unsupport">2.0-5.0</td>
-						<td class="unsupport" rowspan="3">4.0-45.0</td>
-						<td class="unsupport">6.0-7.0</td>
-						<td class="unsupport" rowspan="3">15.0-29.0</td>
-						<td class="unsupport">6.0-7.1</td>
-						<td class="unsupport" rowspan="3">2.1-4.4.4</td>
-						<td class="unsupport" rowspan="3">18.0-42.0</td>
+						<td rowspan="2">CSS3简写方式</td>
+						<td class="unsupport" rowspan="2">8.0-16.0</td>
+						<td class="support" rowspan="2">40.0+</td>
+						<td class="unsupport">40.0-56.0</td>
+						<td class="support" rowspan="2">8.0+<sup class="fix">-webkit-</sup></td>
+						<td class="unsupport">40.0-43.0</td>
+						<td class="support" rowspan="2">8.0+<sup class="fix">-webkit-</sup></td>
+						<td class="unsupport">4.4-56.0</td>
+						<td class="unsupport">28.0-56.0</td>
 					</tr>
 					<tr>
-						<td class="support">6.0-35.0<sup class="fix">-moz-</sup></td>
-						<td class="support" rowspan="2">7.1-8.0<sup class="fix">-webkit-</sup><sup><a href="#support1">#1</a></sup></td>
-						<td class="support" rowspan="2">8.0-8.3<sup class="fix">-webkit-</sup><sup><a href="#support1">#1</a></sup></td>
-					</tr>
-					<tr>
-						<td class="support">36.0+</td>
+						<td class="support">57.0+</td>
+						<td class="support">44.0+</td>
+						<td class="support">57.0+</td>
+						<td class="support">57.0+</td>
 					</tr>
 				</tbody>
 			</table>
-			<ol class="support-info">
-				<li id="support1">支持 &lt;' <a href="text-decoration-style.htm">text-decoration-style</a> '&gt; 写入 &lt;' <a href="text-decoration.htm">text-decoration</a> '&gt; 缩写方式，但其<code class="incode">dotted | dashed</code>属性值会表现为实线。</li>
-			</ol>
 		</div>
 	</section>
 	<section id="example" class="g-mod g-attr">
