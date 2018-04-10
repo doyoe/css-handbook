@@ -42,7 +42,7 @@
 		<h1 class="tit">text-decoration-skip</h1>
 		<ul class="info">
 			<li><strong>版本：CSS3</strong></li>
-			<li>媒体：视觉</li>
+			<li>2018.4.10</li>
 		</ul>
 		<!-- 插入浏览器信息 -->
 	</section>
@@ -57,6 +57,7 @@
 			<p><strong>继承性</strong>：是</p>
 			<p><strong>动画性</strong>：否</p>
 			<p><strong>计算值</strong>：指定的值</p>
+			<p><strong>媒　体</strong>：视觉</p>
 		</div>
 	</section>
 	<section id="value" class="g-mod g-attr">
@@ -81,9 +82,9 @@
 	<section id="intro" class="g-mod g-attr">
 		<h2 class="tit">说明：</h2>
 		<div class="cont">
-			<strong>检索或设置对象中的文本装饰线条必须略过内容中的哪些部分。</strong>
+			<strong>定义元素文本装饰线条必须略过内容中的哪些部分。</strong>
 			<ul>
-				<li>对应的脚本特性为<strong>textDecorationSkip</strong>。</li>
+				<li>对应的脚本特性为：<strong>textDecorationSkip</strong>。</li>
 			</ul>
 		</div>
 	</section>
@@ -111,24 +112,20 @@
 				</thead>
 				<tbody>
 					<tr>
-						<td rowspan="2"><strong>Basic Support</strong></td>
-						<td class="unsupport" rowspan="2">6.0-11.0</td>
-						<td class="unsupport" rowspan="2">2.0-40.0</td>
-						<td class="unsupport" rowspan="2">4.0-45.0</td>
-						<td class="unsupport">6.0-7.0</td>
-						<td class="unsupport" rowspan="2">15.0-29.0</td>
-						<td class="unsupport">6.0-7.1</td>
-						<td class="unsupport" rowspan="2">2.1-4.4.4</td>
-						<td class="unsupport" rowspan="2">18.0-42.0</td>
-					</tr>
-					<tr>
-						<td class="partsupport">7.1-8.0<sup class="fix">-webkit-</sup><sup><a href="#support1">#1</a></sup></td>
-						<td class="partsupport">8.0-8.3<sup class="fix">-webkit-</sup><sup><a href="#support1">#1</a></sup></td>
+						<td><strong>Basic Support</strong></td>
+						<td class="unsupport">8.0-16.0</td>
+						<td class="unsupport">40.0-59.0</td>
+						<td class="unsupport">40.0-64.0</td>
+						<td class="partsupport">8.0-11.0<sup class="fix">-webkit-</sup><sup><a href="#support1">#1</a></sup></td>
+						<td class="unsupport">15.0-29.0</td>
+						<td class="partsupport">8.0-11.3<sup class="fix">-webkit-</sup><sup><a href="#support1">#1</a></sup></td>
+						<td class="unsupport">4.4-62.0</td>
+						<td class="unsupport">28.0-64.0</td>
 					</tr>
 				</tbody>
 			</table>
 			<ol class="support-info">
-				<li id="support1">支持该属性，但未实现效果。</li>
+				<li id="support1">仅支持<code class="g-value">none</code>, <code class="g-value">objects</code>和<code class="g-value">ink</code>取值</li>
 			</ol>
 		</div>
 	</section>
@@ -149,12 +146,10 @@
     -webkit-text-decoration: underline;
     -moz-text-decoration: underline;
     text-decoration: underline;
-    padding: 0 50px;
-}
-.test li {
     -webkit-text-decoration-skip: objects;
     -moz-text-decoration-skip: objects;
     text-decoration-skip: objects;
+    padding: 0 50px;
 }
 .test span {
     display: inline-block;
