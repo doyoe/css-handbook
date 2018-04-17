@@ -42,22 +42,33 @@
 		<h1 class="tit">overflow</h1>
 		<ul class="info">
 			<li><strong>版本：CSS2/3</strong></li>
-			<li>媒体：视觉</li>
+			<li>2018.3.6</li>
 		</ul>
 		<!-- 插入浏览器信息 -->
 	</section>
 </header>
 <section id="bd">
 	<section id="syntax" class="g-mod g-attr">
-		<h2 class="tit">语法：</h2>
+		<h2 class="tit">简写属性语法：</h2>
 		<div class="cont">
-			<p><strong>overflow</strong>：<a href="#overflow-style">&lt;overflow-style&gt;</a></p>
-			<p id="overflow-style"><strong>&lt;overflow-style&gt;</strong> = <mark class="defaultvalue">visible</mark> | hidden | scroll | auto | <ins class="g-color-css3-new" title="css3">paged-x</ins> | <ins class="g-color-css3-new" title="css3">paged-y</ins> | <ins class="g-color-css3-new" title="css3">paged-x-controls</ins> | <ins class="g-color-css3-new" title="css3">paged-y-controls</ins> | <ins class="g-color-css3-new" title="css3">fragments</ins></p>
+			<p><strong>overflow</strong>：<mark class="defaultvalue">visible</mark> | hidden | scroll | auto | <ins class="g-color-css3-new" title="css3">clip</ins></p>
+			<p><strong>默认值</strong>：<mark class="defaultvalue">看每个独立属性</mark></p>
+			<p><strong>适用于</strong>：块容器，伸缩盒容器，grid容器</p>
+			<p><strong>继承性</strong>：无</p>
+			<p><strong>动画性</strong>：否</p>
+			<p><strong>计算值</strong>：看每个独立属性</p>
+			<p><strong>媒　体</strong>：视觉</p>
+		</div>
+		<h2 class="tit">分拆独立属性语法：</h2>
+		<div class="cont">
+			<p><strong><a href="#overflow-*">overflow-*</a></strong>：<mark class="defaultvalue">visible</mark> | hidden | scroll | auto | <ins class="g-color-css3-new" title="css3">clip</ins></p>
+			<p id="overflow-*"><strong>overflow-*</strong> = <code class="g-property">overflow-x</code>,<code class="g-property">overflow-y</code></p>
 			<p><strong>默认值</strong>：<mark class="defaultvalue">visible</mark></p>
 			<p><strong>适用于</strong>：块容器，伸缩盒容器，grid容器</p>
 			<p><strong>继承性</strong>：无</p>
 			<p><strong>动画性</strong>：否</p>
-			<p><strong>计算值</strong>：指定值</p>
+			<p><strong>计算值</strong>：指定值，除了当<code class="g-property">overflow-x</code>,<code class="g-property">overflow-y</code>之一设置为<code class="g-value">非 visible</code>时另一个属性会自动将默认值<code class="g-value">visible</code>计算为<code class="g-value">auto</code>外</p>
+			<p><strong>媒　体</strong>：视觉</p>
 		</div>
 	</section>
 	<section id="value" class="g-mod g-attr">
@@ -69,19 +80,11 @@
 				<dt>hidden：</dt>
 				<dd>隐藏溢出容器的内容且不出现滚动条。</dd>
 				<dt>scroll：</dt>
-				<dd>隐藏溢出容器的内容，溢出的内容将以卷动滚动条的方式呈现。</dd>
+				<dd>隐藏溢出容器的内容，溢出的内容可以通过滚动呈现。</dd>
 				<dt>auto：</dt>
-				<dd>当内容没有溢出容器时不出现滚动条，当内容溢出容器时出现滚动条，按需出现滚动条。此为body对象和textarea的默认值。</dd>
-				<dt class="css3-value g-color-css3-new">paged-x：</dt>
-				<dd>TODO...（CSS3）</dd>
-				<dt class="css3-value g-color-css3-new">paged-y：</dt>
-				<dd>TODO...（CSS3）</dd>
-				<dt class="css3-value g-color-css3-new">paged-x-controls：</dt>
-				<dd>TODO...（CSS3）</dd>
-				<dt class="css3-value g-color-css3-new">paged-y-controls：</dt>
-				<dd>TODO...（CSS3）</dd>
-				<dt class="css3-value g-color-css3-new">fragments：</dt>
-				<dd>TODO...（CSS3）</dd>
+				<dd>当内容没有溢出容器时不出现滚动条，当内容溢出容器时出现滚动条，按需出现滚动条。<code class="g-code">textarea</code>元素的<code class="g-property">overflow</code>默认值就是<code class="g-value">auto</code>。</dd>
+				<dt class="css3-value g-color-css3-new">clip：</dt>
+				<dd>与<code class="g-value">hidden</code>一样，<code class="g-value">clip</code>也被用来隐藏溢出容器的内容且不出现滚动条。不同的地方在于，<code class="g-value">clip</code>是一个完全禁止滚动的容器，而<code class="g-value">hidden</code>仍然可以通过编程机制让内容可以滚动。</dd>
 			</dl>
 		</div>
 		<div class="related">
@@ -91,11 +94,41 @@
 	<section id="intro" class="g-mod g-attr">
 		<h2 class="tit">说明：</h2>
 		<div class="cont">
-			<strong>复合属性。检索或设置对象处理溢出内容的方式。</strong>参阅<a href="overflow-x.htm">overflow-x</a>、<a href="overflow-y.htm">overflow-y</a>属性
+			<strong>定义了元素处理溢出内容的方式。</strong>
 			<ul>
-				<li>overflow的效果等同于<a href="overflow-x.htm">overflow-x</a> + <a href="overflow-y.htm">overflow-y</a>。</li>
-				<li>对于table来说，假如<a href="../table/table-layout.htm">table-layout</a>属性设置为fixed，则td对象支持带有默认值为hidden的overflow属性。如果设为hidden，scroll或者auto，那么超出td尺寸的内容将被剪切。如果设为visible，将导致额外的文本溢出到右边或左边（视direction属性设置而定）的单元格。</li>
-				<li>对应的脚本特性为<strong>overflow</strong>。</li>
+				<li>
+					<p><code class="g-property">overflow</code>的效果等同于<code class="g-property">overflow-x</code> + <code class="g-property">overflow-y</code>。</p>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>举个例子：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp>.demo {
+	overflow: hidden;
+}
+等同于：
+.demo {
+	overflow-x: hidden;
+	oveflow-y: hidden;
+}
+</xmp></code></blockquote>
+					</div>
+				</li>
+				<li>当块级元素定义了<code class="g-property">overflow</code>属性（包括<code class="g-property">overflow-x</code>与<code class="g-property">overflow-y</code>）值为<code class="g-value">非 visibile</code>时，将会为它的内容创建一个新的块格式化上下文（BFC）。</li>
+				<li>对于<code class="g-code">table</code>元素来说，假如其<a href="../table/table-layout.htm" class="g-property">table-layout</a>属性设置为<code class="g-value">fixed</code>，则<code class="g-code">td</code>、<code class="g-code">th</code>元素支持将<code class="g-property">overflow</code>设为<code class="g-value">hidden</code>、<code class="g-value">scroll</code>或<code class="g-value">auto</code>，此时超出单元格尺寸的内容将被剪切。如果设为<code class="g-value">visible</code>，将导致额外的文本溢出到右边或左边（视<a href="../writing-modes/direction.htm" class="g-property">direction</a>属性设置而定）的单元格。</li>
+				<li><code class="g-property">overflow-x</code>属性用于指定元素水平方向上的内容溢出时的处理方式，<code class="g-property">overflow-y</code>属性用于指定元素垂直方向上的内容溢出时的处理方式。</li>
+				<li>
+					<p>当<code class="g-property">overflow-x</code>,<code class="g-property">overflow-y</code>中任意一个属性值的定义为<code class="g-value">非 visible</code>时，另一个属性会自动将默认值<code class="g-value">visible</code>计算为<code class="g-value">auto</code>。</p>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>举个例子：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp>.demo {
+	overflow-x: hidden;
+}
+等同于：
+.demo {
+	overflow-x: hidden;
+	oveflow-y: auto;
+}
+</xmp></code></blockquote>
+				</li>
+				<li>对应的脚本特性分别为：<strong>overflow, overflowX, overflowY</strong>。</li>
 			</ul>
 		</div>
 	</section>
@@ -124,47 +157,25 @@
 				<tbody>
 					<tr>
 						<td><strong>Basic Support</strong></td>
-						<td class="support">6.0+</td>
-						<td class="support">2.0+</td>
-						<td class="support">4.0+</td>
-						<td class="support">3.1+</td>
-						<td class="support">7.0+</td>
-						<td class="support">3.2+</td>
-						<td class="support">2.1+</td>
-						<td class="support">18.0+</td>
+						<td class="support">8.0+</td>
+						<td class="support">40.0+</td>
+						<td class="support">40.0+</td>
+						<td class="support">8.0+</td>
+						<td class="support">40.0+</td>
+						<td class="support">8.0+</td>
+						<td class="support">4.4+</td>
+						<td class="support">28.0+</td>
 					</tr>
 					<tr>
-						<td><ins class="g-color-css3-new">page-*</ins></td>
+						<td><ins class="g-color-css3-new">clip</ins></td>
+						<td class="unsupport">16.0</td>
+						<td class="unsupport">58.0</td>
+						<td class="unsupport">64.0</td>
 						<td class="unsupport">11.0</td>
-						<td class="unsupport">38.0</td>
-						<td class="unsupport">43.0</td>
-						<td class="support">?-8.1<br /><sup class="fix">-webkit-</sup></td>
-						<td class="unsupport">28.0</td>
-						<td class="support">?-8.1<br /><sup class="fix">-webkit-</sup></td>
-						<td class="unsupport">4.4.4</td>
-						<td class="unsupport">40.0</td>
-					</tr>
-					<tr>
-						<td><ins class="g-color-css3-new">page-*-controls</ins></td>
+						<td class="unsupport">50.0</td>
 						<td class="unsupport">11.0</td>
-						<td class="unsupport">38.0</td>
-						<td class="unsupport">43.0</td>
-						<td class="unsupport">8.1</td>
-						<td class="unsupport">28.0</td>
-						<td class="unsupport">8.1</td>
-						<td class="unsupport">4.4.4</td>
-						<td class="unsupport">40.0</td>
-					</tr>
-					<tr>
-						<td><ins class="g-color-css3-new">fragments</ins></td>
-						<td class="unsupport">11.0</td>
-						<td class="unsupport">38.0</td>
-						<td class="unsupport">43.0</td>
-						<td class="unsupport">8.1</td>
-						<td class="unsupport">28.0</td>
-						<td class="unsupport">8.1</td>
-						<td class="unsupport">4.4.4</td>
-						<td class="unsupport">40.0</td>
+						<td class="unsupport">62.0</td>
+						<td class="unsupport">64.0</td>
 					</tr>
 				</tbody>
 			</table>

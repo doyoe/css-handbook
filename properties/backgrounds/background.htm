@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="utf-8" />
+<title>background</title>
+<meta name="description" content="CSS3参考手册之：background" />
+<meta name="keywords" content="background, css3, css3参考手册" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../../skin/article.css" />
+</head>
+<body>
+<nav id="guide">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="../index.htm">属性列表</a>
+		<span>&#187;</span>
+		<a href="index.htm" id="category" rel="properties/backgrounds" name="background">背景与边框属性</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它背景边框参考</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入快速分类导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">background</h1>
+		<ul class="info">
+			<li><strong>版本：CSS1/3</strong></li>
+			<li>2018.3.14</li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="syntax" class="g-mod g-attr">
+		<h2 class="tit">语法：</h2>
+		<div class="cont">
+			<p><strong>background</strong>：[ <a href="#dfn-syntax">&lt;bg-layer&gt;</a>, ]* <a href="#dfn-syntax2">&lt;final-bg-layer&gt;</a></p>
+			<p id="dfn-syntax"><strong>&lt;bg-layer&gt;</strong> = &lt;bg-image&gt; || &lt;position&gt; [ / &lt;bg-size&gt; ]? || &lt;repeat-style&gt; || &lt;attachment&gt; || &lt;box&gt; || &lt;box&gt;</p>
+			<p id="dfn-syntax2"><strong>&lt;final-bg-layer&gt;</strong> = &lt;bg-image&gt; || &lt;position&gt; [ / &lt;bg-size&gt; ]? || &lt;repeat-style&gt; || &lt;attachment&gt; || &lt;box&gt; || &lt;box&gt; || <a href="background-color.htm" class="g-property">background-color</a></p>
+			<p><strong>默认值</strong>：<mark class="defaultvalue">看每个独立属性</mark></p>
+			<p><strong>适用于</strong>：所有元素</p>
+			<p><strong>继承性</strong>：无</p>
+			<p><strong>动画性</strong>：看每个独立属性</p>
+			<p><strong>计算值</strong>：看每个独立属性</p>
+			<p><strong>媒　体</strong>：视觉</p>
+		</div>
+	</section>
+	<section id="value" class="g-mod g-attr">
+		<h2 class="tit">取值：</h2>
+		<div class="cont">
+			<dl>
+				<dt><a href="background-image.htm" class="g-property">background-image</a>：</dt>
+				<dd>指定元素使用的背景图像。可以是图片路径或使用渐变创建的“背景图像”</dd>
+				<dt><a href="background-position.htm" class="g-property">background-position</a>：</dt>
+				<dd>指定背景图像在元素中出现的位置。</dd>
+				<dt><a href="background-size.htm" class="g-property">background-size</a>：</dt>
+				<dd>指定背景图像尺寸。</dd>
+				<dt><a href="background-repeat.htm" class="g-property">background-repeat</a>：</dt>
+				<dd>指定背景图像如何填充。</dd>
+				<dt><a href="background-attachment.htm" class="g-property">background-attachment</a>：</dt>
+				<dd>定义滚动时背景图像相对于谁固定。</dd>
+				<dt><a href="background-origin.htm" class="g-property">background-origin</a>：</dt>
+				<dd>指定背景图像从元素的哪个区域作为显示的原点。</dd>
+				<dt><a href="background-clip.htm" class="g-property">background-clip</a>：</dt>
+				<dd>指定背景图像向外裁剪的区域。</dd>
+				<dt><a href="background-color.htm" class="g-property">background-color</a>：</dt>
+				<dd>指定背景颜色。</dd>
+			</dl>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
+		<h2 class="tit">说明：</h2>
+		<div class="cont">
+			<strong>简写属性。定义元素的背景特性（背景色<a href="background-color.htm" class="g-property">background-color</a>不能设置多组）。</strong>
+			<ul>
+				<li>一个元素可以设置多组背景图像，每组属性间使用逗号分隔。</li>
+				<li>如果设置的多组背景图之间存在着交集（即存在着重叠关系），前面的背景图会覆盖在后面的背景图之上。</li>
+				<li>
+					<strong>示例：假设要在同一个元素上定义3个背景图像</strong>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>缩写方式：</strong></p>
+						<blockquote class="gquote-cont"><pre><code>background: url(test1.jpg) no-repeat scroll 10px 20px/50px 60px content-box padding-box,
+	   url(test2.jpg) no-repeat scroll 10px 20px/70px 90px content-box padding-box,
+	   url(test3.jpg) no-repeat scroll 10px 20px/110px 130px content-box padding-box #aaa;</code></pre></blockquote>
+						<p class="gquote-info">注意，因为<a href="background-color.htm" class="g-property">background-color</a>不能设置多组，且前面的背景会叠在之后的背景之上，所以背景色通常都定义在最后一组上，避免背景色将图像盖住。</p>
+					</div>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>拆分方式：</strong></p>
+						<blockquote class="gquote-cont"><pre><code>background-image: url(test1.jpg), url(test2.jpg), url(test3.jpg);
+background-repeat: no-repeat, no-repeat, no-repeat;
+background-attachment: scroll, scroll, scroll;
+background-position: 10px 20px, 10px 20px, 10px 20px;
+background-size: 50px 60px, 70px 90px, 110px 130px;
+background-origin: content-box, content-box, content-box;
+background-clip: padding-box, padding-box, padding-box;
+background-color: #aaa;</code></pre></blockquote>
+					</div>
+				</li>
+				<li>
+					<p>如果定义了多个背景图片，而其他属性只有一个参数值，则表明所有背景图片的该属性都应用同一个参数值。据此可以对上面的例子进行缩写：</p>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>缩写方式：</strong></p>
+						<blockquote class="gquote-cont"><pre><code>background-image: url(test1.jpg), url(test2.jpg), url(test3.jpg);
+background-repeat: no-repeat;
+background-attachment: scroll;
+background-position: 10px 20px;
+background-size: 50px 60px,70px 90px,110px 130px;
+background-origin: content-box;
+background-clip: padding-box;
+background-color: #aaa;</code></pre></blockquote>
+					</div>
+				</li>
+				<li>
+					<p>如果定义了多个背景图片，而<a href="background-origin.htm" class="g-property">background-origin</a>和<a href="background-clip.htm" class="g-property">background-clip</a>设置了相同的值。可这样缩写：</p>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>缩写方式：</strong></p>
+						<blockquote class="gquote-cont"><pre><code>background: url(test1.jpg) no-repeat scroll 10px 20px/50px 60px padding-box,
+	   url(test1.jpg) no-repeat scroll 10px 20px/70px 90px padding-box,
+	   url(test1.jpg) no-repeat scroll 10px 20px/110px 130px padding-box #aaa;</code></pre></blockquote>
+	   <p class="gquote-info">这表示<a href="background-origin.htm" class="g-property">background-origin</a>和<a href="background-clip.htm" class="g-property">background-clip</a>都使用了<code class="g-value">padding-box</code>参数值。</p>
+					</div>
+				</li>
+				<li>对应的脚本特性为：<strong>background</strong>。</li>
+			</ul>
+		</div>
+	</section>
+	<section id="compatible" class="g-mod g-attr">
+		<h2 class="tit">兼容性：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">粉色</span> = 部分支持</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th>Values</th>
+						<th>IE</th>
+						<th>Firefox</th>
+						<th>Chrome</th>
+						<th>Safari</th>
+						<th>Opera</th>
+						<th>iOS Safari</th>
+						<th>Android Browser</th>
+						<th>Android Chrome</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><strong>Basic Support</strong></td>
+						<td class="support">8.0+</td>
+						<td class="support">40.0+</td>
+						<td class="support">40.0+</td>
+						<td class="support">8.0+</td>
+						<td class="support">40.0+</td>
+						<td class="support">8.0+</td>
+						<td class="support">4.4+</td>
+						<td class="support">28.0+</td>
+					</tr>
+					<tr>
+						<td rowspan="2">Multiple backgrounds</td>
+						<td class="unsupport">8.0</td>
+						<td class="support" rowspan="2">40.0+</td>
+						<td class="support" rowspan="2">40.0+</td>
+						<td class="support" rowspan="2">8.0+</td>
+						<td class="support" rowspan="2">40.0+</td>
+						<td class="support" rowspan="2">8.0+</td>
+						<td class="support" rowspan="2">4.4+</td>
+						<td class="support" rowspan="2">28.0+</td>
+					</tr>
+					<tr>
+						<td class="support">9.0+</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+	<section id="example" class="g-mod g-attr">
+		<h2 class="tit">示例：</h2>
+		<div class="cont">
+			<textarea cols="90" rows="10">
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="utf-8" />
+<title>Multiple backgrounds_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<style>
+.test {
+width: 300px;
+height: 300px;
+background: url(skin/p_103x196_1.jpg) no-repeat 10px 20px/60px 60px padding-box,
+		   url(skin/p_103x196_1.jpg) no-repeat 50px 60px/60px 80px padding-box,
+		   url(skin/p_103x196_1.jpg) no-repeat 90px 100px/60px padding-box #aaa;
+}
+</style>
+</head>
+<body>
+<div class="test">定义多重背景图像</div>
+</body>
+</html>
+			</textarea>
+			<p><input type="button" value="运行" class="g-btn g-btn-sure" /></p>
+		</div>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/inner.js"></script>
+</body>
+</html>

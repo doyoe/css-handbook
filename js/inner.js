@@ -177,74 +177,33 @@ if (!Global.isLocal && Global.name) {
 					'float' : [],
 					'clear' : [],
 					'visibility' : [],
-					'overflow' : [],
-					'overflow-x' : [],
-					'overflow-y' : []
-					//'rotation' : [],
-					//'rotation-point' : []
+					'overflow' : []
 				},
 				dimension : {
-					'index' : ['尺寸(Ddimension)','其它尺寸属性参考'],
+					'index' : ['尺寸与补白(Ddimension)','其它尺寸与补白参考'],
 					'width' : [],
 					'min-width' : [],
 					'max-width' : [],
 					'height' : [],
 					'min-height' : [],
-					'max-height' : []
-				},
-				margin : {
-					'index' : ['外补白(Margin)','其它外补白属性参考'],
+					'max-height' : [],
 					'margin' : [],
-					'margin-top' : [],
-					'margin-right' : [],
-					'margin-bottom' : [],
-					'margin-left' : []
+					'padding' : []
 				},
-				padding : {
-					'index' : ['内补白(Padding)','其它内补白属性参考'],
-					'padding' : [],
-					'padding-top' : [],
-					'padding-right' : [],
-					'padding-bottom' : [],
-					'padding-left' : []
-				},
-				border : {
-					'index' : ['边框(Border)','其它边框属性参考'],
+				backgrounds : {
+					'index' : ['背景与边框(Backgrounds and Borders)','其它背景边框参考'],
 					'border' : [],
 					'border-width' : [],
 					'border-style' : [],
 					'border-color' : [],
-					'border-top' : [],
-					'border-top-width' : [],
-					'border-top-style' : [],
-					'border-top-color' : [],
-					'border-right' : [],
-					'border-right-width' : [],
-					'border-right-style' : [],
-					'border-right-color' : [],
-					'border-bottom' : [],
-					'border-bottom-width' : [],
-					'border-bottom-style' : [],
-					'border-bottom-color' : [],
-					'border-left' : [],
-					'border-left-width' : [],
-					'border-left-style' : [],
-					'border-left-color' : [],
-					'border-radius' : [],
-					'border-top-left-radius' : [],
-					'border-top-right-radius' : [],
-					'border-bottom-right-radius' : [],
-					'border-bottom-left-radius' : [],
 					'box-shadow' : [],
+					'border-radius' : [],
 					'border-image' : [],
 					'border-image-source' : [],
 					'border-image-slice' : [],
 					'border-image-width' : [],
 					'border-image-outset' : [],
-					'border-image-repeat' : []
-				},
-				background : {
-					'index' : ['背景(Background)','其它背景属性参考'],
+					'border-image-repeat' : [],
 					'background' : [],
 					'background-color' : [],
 					'background-image' : [],
@@ -277,7 +236,6 @@ if (!Global.isLocal && Global.name) {
 					'white-space' : [],
 					'tab-size' : [],
 					'word-break' : [],
-					'word-wrap' : [],
 					'overflow-wrap' : [],
 					'text-align' : [],
 					'text-align-last' : [],
@@ -454,23 +412,16 @@ if (!Global.isLocal && Global.name) {
 					'filter' : [],
 					'behavior' : []
 				},
-				'only-firefox' : {
-					'index' : ['Only Firefox','Only Firefox属性'],
-					'border-colors' : [],
-					'border-top-colors' : [],
-					'border-right-colors' : [],
-					'border-bottom-colors' : [],
-					'border-left-colors' : []
-				},
 				'only-webkit' : {
 					'index' : ['Only Webkit','Only Webkit属性'],
-					'box-reflect' : [],
-					'text-fill-color' : [],
-					'text-stroke' : [],
-					'text-stroke-width' : [],
-					'text-stroke-color' : [],
-					'tap-highlight-color' : [],
-					'user-drag' : []
+					'-webkit-box-reflect' : [],
+					'-webkit-text-fill-color' : [],
+					'-webkit-text-stroke' : [],
+					'-webkit-text-stroke-width' : [],
+					'-webkit-text-stroke-color' : [],
+					'-webkit-tap-highlight-color' : [],
+					'-webkit-user-drag' : [],
+					'-webkit-overflow-scrolling' : []
 				}
 			},
 
@@ -732,93 +683,6 @@ if (!Global.isLocal && Global.name) {
 	if(s.length){new creatMenu(s);}
 })();
 
-/*
- * 404页面随机数据
- */
-(function(){
-	var data = [
-		{
-			name : '陈思桥',
-			sex : '男',
-			birth : '1991年6月',
-			date : '2000年8月21日',
-			local : '广西贵港市郁江大桥下',
-			info : '失踪时只有9岁，身高140厘米，单眼皮，下颌处有一块跌跤缝针疤痕，前额上有个小漩涡...',
-			photo : 'http://qzonestyle.gtimg.cn/qzone_v6/lostchild/images/chensiqiao.jpg',
-			detail : 'http://bbs.baobeihuijia.com/thread-46886-1-1.html'
-		},
-		{
-			name : '尹思源',
-			sex : '女',
-			birth : '1993年01月25日',
-			date : '2000年07月05日',
-			local : '吉林省辽源市东辽县金岗镇原西柳九井102宿舍',
-			info : '短发，小眼睛，单眼皮，一个头旋,左胳膊有一块大拇指甲大的青色胎记...',
-			photo : 'http://qzonestyle.gtimg.cn/qzone_v6/lostchild/images/yinsiyuan.jpg',
-			detail : 'http://bbs.baobeihuijia.com/thread-129469-1-1.html'
-		},
-		{
-			name : '杨依林',
-			sex : '女',
-			birth : '2003年9月20日',
-			date : '2007年11月23日',
-			local : '河南省郸城县宜路镇于李庄村',
-			info : '河南东部口音；单眼皮，嘴唇下面磕了一个小疤，右脚大脚趾坐自行车的时候绊了一个疤；失踪时上穿蓝袄,下穿...',
-			photo : 'http://qzonestyle.gtimg.cn/qzone_v6/lostchild/images/yangyilin.jpg',
-			detail : 'http://bbs.baobeihuijia.com/thread-129468-1-1.html'
-		}
-	];
-	var getRandomNum = function(start,end){
-		return Math.round(start + Math.random()*(end - start));
-	};
-	var getData = function(num){
-
-		//异常处理
-		if(data.length < num || !num){return false;}
-
-		else{return data[num-1];}
-	};
-	var drawHtml = function(data){
-		var found = $('#found');
-
-		//异常处理
-		if(!data){return false;}
-
-		found.find('dd[type=name]').html(data['name']);
-		found.find('dd[type=sex]').html(data['sex']);
-		found.find('dd[type=birth]').html(data['birth']);
-		found.find('dd[type=date]').html(data['date']);
-		found.find('dd[type=local]').html(data['local']);
-		found.find('span[type=info]').html(data['info']);
-		found.find('img[type=photo]').attr('src',data['photo']).attr('title',data['name']).attr('alt',data['name']);
-		found.find('a[type=detail]').attr('href',data['detail']);
-	};
-
-	//init
-	(function(){
-		var found = $('#found'),
-			trans = $('#trans');
-
-		//异常处理
-		if(!found.length||!trans.length){return false};
-
-		//只在iframe层显示找小孩的那个页面。跳转过程中显示
-		if(window == window.top){return false;}
-
-		//显示找小孩的页面
-		found.show();
-		trans.hide();
-
-		//取得随机数
-		var num = getRandomNum(1,3);
-
-		//根据数值取得知识库中固定的某条数据
-		var data = getData(num);
-
-		//绘制404页面
-		drawHtml(data);
-	})();
-})();
 
 /*
  * 页面内的小功能
@@ -840,7 +704,7 @@ if (!Global.isLocal && Global.name) {
 				'<li><a href="https://github.com/doyoe/css-handbook/issues" target="_blank" rel="external" class="external">Issues</a></li>'+
 				'<li><a href="https://github.com/doyoe/css-handbook/pulls" target="_blank" rel="external" class="external">Pull Requests</a></li>'+
 			'</ul>'+
-			'<p>Base Browsers: IE6.0+, Firefox2.0+, Chrome4.0+, Safari6.0+, Opera15.0+</p>'+
+			'<p>Base Browsers: IE8.0+, Firefox40.0+, Chrome40.0+, iOS8.0+, Android4.4+, Opera40.0+</p>'+
 		'</div>';
 
 		$('#title').append(testBrowser);
@@ -858,7 +722,6 @@ if (!Global.isLocal && Global.name) {
 			'</div>'+
 			'<div class="g-transition list"><ul>'+
 			'<li><a href="#" class="weibo">新浪微博</a></li>'+
-			'<li><a href="#" class="txweibo">腾讯微博</a></li>'+
 			'<li><a href="#" class="qq">QQ空间</a></li>'+
 			'<li><a href="#" class="renren">人人网</a></li>'+
 			'<li><a href="#" class="douban">豆瓣</a></li>'+
@@ -893,12 +756,6 @@ if (!Global.isLocal && Global.name) {
 		// QQ空间
 		container.delegate('.qq', 'click', function() {
 			window.open('http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?site=www.tuan2.com&title=' + '' + '&desc=' + title + '&summary=' + '' + '&url=' + url + '&pics=' + pic, '_blank');
-			return false;
-		});
-
-		// 腾讯微博
-		container.delegate('.txweibo', 'click', function() {
-			window.open('http://v.t.qq.com/share/share.php?title=' + title + '&url=' + url + '&pic=' + pic, '_blank');
 			return false;
 		});
 
@@ -1053,142 +910,6 @@ Global.folding($('.g-combobox',topDocument));
 	});
 
 	dytree.prop('loaded', true);
-
-})();
-
-
-/*
- *  构造函数 ：弹出层
- *             可选择性配置关闭弹出层，拖拽，内部翻页的效果。
- *
- *  配置列表 ：
- *              popSelector : '#pop' ,//弹出层的选择器
- *              closeBtnSelector : '#pop .btn-close', //弹出层的关闭按钮的选择器,不填的情况下默认为没有关闭按钮
- *              titleSelector : '#pop .pop-hd',//弹出层的头部的选择器,以实现拖拽效果,如果不需要拖拽效果,可不配置此项。
- *              pagesSelector : "#pop .content",//弹出层的需翻页的部分的选择器,以实现翻页效果,如果不需要翻页效果,可不配置此项。
- *              nextBtnSelector : '#pop .next',//当弹出层有翻页效果时,下一页按钮的选择器,无翻页效果可不配置此项。
- *              prevBtnSelector : '#pop .prev',//当弹出层有翻页效果时,上一页按钮的选择器,无翻页效果可不配置此项。
- *              startPage : 0,//当弹出层有翻页效果时,起始的页面编号,可不配置,默认为0,无翻页效果可不配置此项。
- *  依赖jquery.js;
- */
-(function (){
-
-
-	var popUp = function(opts){
-		var obj = this;
-
-		this._doConfig(opts);
-		this._makeDomCenter();
-		this._withChangePages();
-		this._withDrag();
-		this.dom.fadeIn(1000);
-		this.mask();
-		this.closeBtn.click(function (e){e.preventDefault();obj.clear();});
-
-		$(window.top).on('resize',function (){obj._makeDomCenter();});
-		$(window.top).on('scroll',function (){obj._makeDomCenter();});
-	}
-
-	//使弹出层居中
-	popUp.prototype._makeDomCenter = function (){
-		var height = this.dom.outerHeight(),
-			width = this.dom.outerWidth(),
-			xtop = $(window.top).height() > height?($(window.top).height()-height)/2 + $(window.top).scrollTop() : 0,
-			xleft = $(window.top).width() > width?($(window.top).width()-width)/2 + $(window.top).scrollLeft() : 0 ;
-
-		this.dom.css("top",xtop).css("left",xleft);
-	}
-
-	//内部翻页功能
-	popUp.prototype._withChangePages = function (){
-		if (!this.pages){return false;};
-		var obj = this,
-			pagesLength = obj.pages.length,
-			changePage = function (){
-				obj.pages.hide();
-				obj.pages.eq(obj.curPage).show();
-				obj._makeDomCenter();
-			};
-		$(obj.nextBtn).click(function (){obj.curPage = obj.curPage>=pagesLength-1?0:obj.curPage+1;changePage();});
-		$(obj.prevBtn).click(function (){obj.curPage = obj.curPage<1?pagesLength-1:obj.curPage-1;changePage();});
-	}
-
-	// 接收配置参数
-	popUp.prototype._doConfig = function (opts){
-		this.dom = opts.popSelector ? $(opts.popSelector,topDocument) : '';
-		this.closeBtn = opts.closeBtnSelector ? $(opts.closeBtnSelector,topDocument) : '';
-		this.hd = opts.titleSelector ? $(opts.titleSelector,topDocument) : '';
-		this.pages = opts.pagesSelector ? $(opts.pagesSelector,topDocument) : '' ;
-		this.nextBtn = opts.nextBtnSelector ? $(opts.nextBtnSelector,topDocument) : '' ;
-		this.prevBtn = opts.prevBtnSelector ? $(opts.prevBtnSelector,topDocument) : '' ;
-		this.curPage = opts.startPage || 0 ;
-	}
-
-	//拖拽功能
-	popUp.prototype._withDrag = function () {
-		if (!this.hd){return false;};
-		var onDrag = false,
-			disX = disY = 0,
-			obj = this;
-		obj.hd.mousedown(function (event){
-			var event = event || window.event;
-			onDrag = true;
-			disX = event.clientX - obj.dom.offset().left;
-			disY = event.clientY - obj.dom.offset().top;
-			return false;
-		});
-		$(topDocument).mousemove(function (event){
-			if (!onDrag) return;
-			var event = event || window.event;
-				iL = event.clientX - disX,
-				iT = event.clientY - disY,
-				maxL = topDocument.documentElement.clientWidth - obj.dom.outerWidth();
-				maxT = topDocument.documentElement.clientHeight - obj.dom.outerHeight();
-			iL = iL < 0 ? 0 : iL;
-			iL = iL > maxL ? maxL : iL;
-			iT = iT < 0 ? 0 : iT;
-			iT = iT > maxT ? maxT : iT;
-			obj.dom.css('marginTop',0).css('marginLeft',0).css('left',iL + "px").css('top',iT + "px");
-			return false;
-		});
-		$(topDocument).mouseup(function (){onDrag = false;});
-	}
-
-	//添加蒙版
-	popUp.prototype.mask = function (){
-		var str = '';
-		str += '<section id="mask" style="position:absolute;top:0px;left:0;width:100%;height:'+$(topDocument).height()+'px;z-index:100;background:#000;opacity:0.5;filter:alpha(opacity=50)"></section>'
-		$('body',topDocument).append(str);
-	}
-
-	//关闭弹出层
-	popUp.prototype.clear = function (){
-		this.dom.hide();
-		$("#mask",topDocument).remove();
-		$(window.top).off('resize');
-		$(window.top).off('scroll');
-	}
-
-	window.popUp = popUp;
-
-	//弹出层的调用
-	(function(){
-
-		//非IE下第二次打开不用重新注册事件
-		if( Global.notIE && $('#offer',topDocument).prop('loaded')){return false};
-		$('.offer', topDocument).on({
-			click : function(e){
-				e.preventDefault();
-				var opts = {
-					popSelector : '#contribute',
-					closeBtnSelector : '#contribute .g-btn-popup-close',
-					titleSelector : '#contribute .g-popup-hd'
-				}
-				new popUp(opts);
-				$('#offer', topDocument).prop('loaded', true);
-			}
-		})
-	})()
 
 })();
 

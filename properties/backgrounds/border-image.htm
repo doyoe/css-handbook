@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="utf-8" />
+<title>border-image</title>
+<meta name="description" content="CSS3参考手册之：border-image" />
+<meta name="keywords" content="border-image, css3, css3参考手册" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../../skin/article.css" />
+</head>
+<body>
+<nav id="guide">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="../index.htm">属性列表</a>
+		<span>&#187;</span>
+		<a href="index.htm" id="category" rel="properties/backgrounds" name="border-image">背景与边框属性</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它背景边框参考</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入快速分类导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">border-image</h1>
+		<ul class="info">
+			<li><strong>版本：CSS3</strong></li>
+			<li>2018.3.7</li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="syntax" class="g-mod g-attr">
+		<h2 class="tit">语法：</h2>
+		<div class="cont">
+			<p><strong>border-image</strong>：<a href="border-image-source.htm" class="g-property">border-image-source</a> || <a href="border-image-slice.htm" class="g-property">border-image-slice</a> [ / <a href="border-image-width.htm" class="g-property">border-image-width</a> | / <a href="border-image-width.htm" class="g-property">border-image-width</a> ? / <a href="border-image-outset.htm" class="g-property">border-image-outset</a> ]? || <a href="border-image-repeat.htm" class="g-property">border-image-repeat</a></p>
+			<p><strong>默认值</strong>：<mark class="defaultvalue">看每个独立属性</mark></p>
+			<p><strong>适用于</strong>：看每个独立属性</p>
+			<p><strong>继承性</strong>：无</p>
+			<p><strong>动画性</strong>：看每个独立属性</p>
+			<p><strong>计算值</strong>：看每个独立属性</p>
+			<p><strong>媒　体</strong>：视觉</p>
+		</div>
+	</section>
+	<section id="value" class="g-mod g-attr">
+		<h2 class="tit">取值：</h2>
+		<div class="cont">
+			<dl>
+				<dt><a href="border-image-source.htm" class="g-property">border-image-source</a>：</dt>
+				<dd>定义元素边框背景图像，可以是图片路径或使用渐变创建的“背景图像”。</dd>
+				<dt><a href="border-image-slice.htm" class="g-property">border-image-slice</a>：</dt>
+				<dd>定义元素边框背景图像从什么位置开始分割。</dd>
+				<dt><a href="border-image-width.htm" class="g-property">border-image-width</a>：</dt>
+				<dd>定义元素边框背景图像厚度。</dd>
+				<dt><a href="border-image-outset.htm" class="g-property">border-image-outset</a>：</dt>
+				<dd>定义元素边框背景图像的外延尺寸。</dd>
+				<dt><a href="border-image-repeat.htm" class="g-property">border-image-repeat</a>：</dt>
+				<dd>定义元素边框背景图像的平铺方式。</dd>
+			</dl>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
+		<h2 class="tit">说明：</h2>
+		<div class="cont">
+			<strong>简写属性。定义将图像应用到元素的边框上</strong>
+			<ul>
+				<li>
+					<p>使用图像替代<a href="border-style.htm" class="g-property">border-style</a>去定义边框样式。当<code class="g-property">border-image</code>为<code class="g-value">none</code>或图像不可见时，将会显示<a href="border-style.htm" class="g-property">border-style</a>所定义的边框样式效果。</p>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>示例：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp>.test {
+	border: 10px solid gray;
+	border-image: url(test.png) 10/10px;
+}</xmp></code></blockquote>
+	<p class="gquote-info">如果例子中的图片不可见，或者未被加载，则会以<code class="g-property">border</code>的定义呈现，如果图片载入成功，则以<code class="g-property">border-image</code>的定义呈现。</p>
+					</div>
+				</li>
+				<li><code class="g-property">border-image</code>属性生效的前提是定义了<a href="border-width.htm" class="g-property">border-width</a>和<a href="border-style.htm" class="g-property">border-style</a>。</li>
+				<li>对应的脚本特性为：<strong>borderImage</strong>。</li>
+			</ul>
+		</div>
+	</section>
+	<section id="compatible" class="g-mod g-attr">
+		<h2 class="tit">兼容性：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">粉色</span> = 部分支持</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th>Values</th>
+						<th>IE</th>
+						<th>Firefox</th>
+						<th>Chrome</th>
+						<th>Safari</th>
+						<th>Opera</th>
+						<th>iOS Safari</th>
+						<th>Android Browser</th>
+						<th>Android Chrome</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td rowspan="4"><strong>Basic Support</strong></td>
+						<td class="unsupport">10.0</td>
+						<td class="partsupport">40.0-49 <sup><a href="#support2">#2</a></sup></td>
+						<td class="partsupport">40.0-50.0 <sup><a href="#support1">#1</a> <a href="#support2">#2</a></sup></td>
+						<td class="partsupport">8.0-9.0 <sup><a href="#support1">#1</a> <a href="#support2">#2</a> <a href="#support3">#3</a></sup></td>
+						<td class="partsupport" rowspan="4">40.0+ <sup><a href="#support2">#2</a></sup></td>
+						<td class="partsupport">8.0-9.2 <sup><a href="#support1">#1</a> <a href="#support2">#2</a> <a href="#support3">#3</a></sup></td>
+						<td class="partsupport" rowspan="4">4.4-62.0 <sup><a href="#support1">#1</a> <a href="#support2">#2</a></sup></td>
+						<td class="partsupport">40.0-50.0 <sup><a href="#support1">#1</a> <a href="#support2">#2</a></sup></td>
+					</tr>
+					<tr>
+						<td class="support">11.0</td>
+						<td class="support" rowspan="3">50.0+</td>
+						<td class="partsupport" rowspan="3">51.0-64.0 <sup><a href="#support2">#2</a></sup></td>
+						<td class="partsupport" rowspan="3">9.1-11.1 <sup><a href="#support1">#1</a></sup></td>
+						<td class="partsupport" rowspan="3">9.3-11.3 <sup><a href="#support1">#1</a></sup></td>
+						<td class="partsupport" rowspan="3">51.0-64.0 <sup><a href="#support2">#2</a></sup></td>
+					</tr>
+					<tr>
+						<td class="partsupport">12.0-13.0 <sup><a href="#support1">#1</a></sup></td>
+					</tr>
+					<tr>
+						<td class="support">14.0+</td>
+					</tr>
+				</tbody>
+			</table>
+			<ol class="support-info">
+				<li id="support1">当<code class="g-property">border-style</code>属性值为<code class="g-value">none</code>时，<code class="g-property">border-image</code>仍然会奏效，<a href="https://bugs.webkit.org/show_bug.cgi?id=99922" rel="external" class="external" target="_blank">See</a>；</li>
+				<li id="support2">不支持<a href="border-image-repeat.htm" class="g-property">border-image-repeat</a>属性的<code class="g-value">space</code>取值；</li>
+				<li id="support3">不支持<a href="border-image-repeat.htm" class="g-property">border-image-repeat</a>属性的<code class="g-value">round</code>取值；</li>
+			</ol>
+		</div>
+	</section>
+	<section id="example" class="g-mod g-attr">
+		<h2 class="tit">示例：</h2>
+		<div class="cont">
+			<textarea cols="90" rows="10">
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="utf-8" />
+<title>border-image_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<style>
+.test {
+	border-width: 2px 9px;
+	border-style: solid;
+	border-color: orange;
+	border-image: url(skin/button.png) 2 9 fill repeat;
+}
+</style>
+</head>
+<body>
+<div class="test">用图片来做边框</div>
+</body>
+</html>
+			</textarea>
+			<p><input type="button" value="运行" class="g-btn g-btn-sure" /></p>
+		</div>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/inner.js"></script>
+</body>
+</html>

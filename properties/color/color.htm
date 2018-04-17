@@ -42,7 +42,7 @@
 		<h1 class="tit">color</h1>
 		<ul class="info">
 			<li><strong>版本：CSS1</strong></li>
-			<li>媒体：视觉</li>
+			<li>2018.3.21</li>
 		</ul>
 		<!-- 插入浏览器信息 -->
 	</section>
@@ -57,6 +57,7 @@
 			<p><strong>继承性</strong>：有</p>
 			<p><strong>动画性</strong>：是</p>
 			<p><strong>计算值</strong>：指定值</p>
+			<p><strong>媒　体</strong>：视觉</p>
 		</div>
 	</section>
 	<section id="value" class="g-mod g-attr">
@@ -73,20 +74,20 @@
 		<div class="cont">
 			<strong>检索或设置对象的文本颜色。无默认值</strong>
 			<ul>
-				<li>可以使用<a href="../../values/color/color-name.htm">Color Name(颜色名称)</a>, <a href="../../values/color/hex.htm">HEX</a>, <a href="../../values/color/rgb.htm">RGB</a>, <a href="../../values/color/rgba.htm">RGBA</a>, <a href="../../values/color/hsl.htm">HSL</a>, <a href="../../values/color/hsla.htm">HSLA</a>, <a href="../../values/color/transparent.htm">transparent</a>来指定color。</li>
+				<li>可以使用<a href="../../values/color/color-name.htm" class="g-value">Color Name(颜色名称)</a>, <a href="../../values/color/hex.htm" class="g-value">HEX</a>, <a href="../../values/color/rgb.htm" class="g-value">RGB</a>, <a href="../../values/color/rgba.htm">RGBA</a>, <a href="../../values/color/hsl.htm" class="g-value">HSL</a>, <a href="../../values/color/hsla.htm" class="g-value">HSLA</a>, <a href="../../values/color/transparent.htm" class="g-value">transparent</a>来指定color。</li>
 				<li>注意，用颜色名称指定color可能不被一些浏览器接受。</li>
 				<li>
-					<p>color属性值被间接用来提供一个中间值 <a href="../../values/color/currentColor.htm">currentColor</a> 以供其他接受颜色值的属性使用。</p>
+					<p><code class="g-property">color</code>属性值被间接用来提供一个中间值<a href="../../values/color/currentColor.htm" class="g-value">currentColor</a>以供其他接受颜色值的属性使用。</p>
 					<div class="gquote">
 						<p class="gquote-tit"><strong>示例：</strong></p>
 						<blockquote class="gquote-cont"><code><xmp>div {
 	border: 10px solid;
 	color: red;
 }</xmp></code></blockquote>
-						<p class="gquote-info">如上代码，没有定义边框的颜色，但定义了color的颜色为red，那么这时red将会作为一个间接值 <a href="../../values/color/currentColor.htm">currentColor</a> 提供给边框颜色属性，所以最终边框色也为red。</p>
+						<p class="gquote-info">如上代码，没有定义边框的颜色，但定义了color的颜色为red，那么这时red将会作为一个间接值<a href="../../values/color/currentColor.htm" class="g-value">currentColor</a>提供给边框颜色属性，所以最终边框色也为red。</p>
 					</div>
 				</li>
-				<li>对应的脚本特性为<strong>color</strong>。</li>
+				<li>对应的脚本特性为：<strong>color</strong>。</li>
 			</ul>
 		</div>
 	</section>
@@ -115,18 +116,18 @@
 				<tbody>
 					<tr>
 						<td><strong>Basic Support</strong></td>
-						<td class="support">6.0+</td>
-						<td class="support" rowspan="3">2.0+</td>
-						<td class="support" rowspan="3">4.0+</td>
-						<td class="support" rowspan="3">3.1+</td>
-						<td class="support" rowspan="3">15.0+</td>
-						<td class="support" rowspan="3">3.2+</td>
-						<td class="support" rowspan="3">2.1+</td>
-						<td class="support" rowspan="3">18.0+</td>
+						<td class="support">8.0+</td>
+						<td class="support" rowspan="3">40.0+</td>
+						<td class="support" rowspan="3">40.0+</td>
+						<td class="support" rowspan="3">8.0+</td>
+						<td class="support" rowspan="3">40.0+</td>
+						<td class="support" rowspan="3">8.0+</td>
+						<td class="support" rowspan="3">4.4+</td>
+						<td class="support" rowspan="3">28.0+</td>
 					</tr>
 					<tr>
 						<td rowspan="2">RGBA, HSL, HSLA,<br />transparent</td>
-						<td class="unsupport">6.0-8.0</td>
+						<td class="unsupport">8.0</td>
 					</tr>
 					<tr>
 						<td class="support">9.0+</td>

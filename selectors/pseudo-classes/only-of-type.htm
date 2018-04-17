@@ -56,10 +56,43 @@
 	<section id="intro" class="g-mod g-attr">
 		<h2 class="tit">说明：</h2>
 		<div class="cont">
-			<strong>匹配同类型中的唯一的一个同级兄弟元素E。</strong>
+			<strong>匹配父元素的所有子元素中唯一的那个子元素E。</strong>
+			<p>需要注意2个要点：</p>
 			<ul>
-				<li>要使该属性生效，E元素必须是某个元素的子元素，E的父元素最高是html，即E可以是html的子元素，也就是说E可以是body</li>
-				<li>该选择符总是能命中父元素的唯一同类型子元素E，不论该元素的位置</li>
+				<li>首先，因为匹配的是父元素的子元素，这意味着E元素必须作为某个元素的子元素存在（E元素的父元素最高是html，也就是说E元素最高是body，这表示任何非html的元素都符合这个约束，因为html元素是根元素）。</li>
+				<li>
+					<p>其次，父元素可以有多个子元素，但其中的子元素E必须是唯一的，不能出现多个。</p>
+					<strong>来看下面的例子：</strong>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>有如下一段CSS：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp>.demo span:only-of-type { color: #f00; }</xmp></code></blockquote>
+						<p class="gquote-info">该选择器表示要匹配 .demo 下唯一的span元素</p>
+					</div>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>示例一，假设有如下HTML：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp><div class="demo">
+	<span>span1</span>
+</div></xmp></code></blockquote>
+						<p class="gquote-info">毫无疑问，因为span1是 .demo 唯一的子元素，所以span1会被命中</p>
+					</div>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>示例二，假设有如下HTML：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp><div class="demo">
+	<p>p1</p>
+	<span>span1</span>
+</div></xmp></code></blockquote>
+						<p class="gquote-info">可以看到span1也会被命中，虽然此例中.demo有2个子元素，但span1是.demo唯一的span子元素</p>
+					</div>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>示例三，假设有如下HTML：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp><div class="demo">
+	<p>p1</p>
+	<span>span1</span>
+	<span>span2</span>
+</div></xmp></code></blockquote>
+						<p class="gquote-info">此时span将不会被命中，因为.demo有2个span子元素，不满足唯一性要求。</p>
+					</div>
+				</li>
 			</ul>
 		</div>
 	</section>

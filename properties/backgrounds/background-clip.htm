@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="utf-8" />
+<title>background-clip</title>
+<meta name="description" content="CSS3参考手册之：background-clip" />
+<meta name="keywords" content="background-clip, css3, css3参考手册" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../../skin/article.css" />
+</head>
+<body>
+<nav id="guide">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="../index.htm">属性列表</a>
+		<span>&#187;</span>
+		<a href="index.htm" id="category" rel="properties/backgrounds" name="background-clip">背景与边框属性</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它背景边框参考</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入快速分类导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">background-clip</h1>
+		<ul class="info">
+			<li><strong>版本：CSS3</strong></li>
+			<li>2018.3.14</li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="syntax" class="g-mod g-attr">
+		<h2 class="tit">语法：</h2>
+		<div class="cont">
+			<p><strong>background-clip</strong>：<a href="#dfn-syntax">&lt;box&gt;</a> [ , <a href="#dfn-syntax">&lt;box&gt;</a> ]*</p>
+			<p id="dfn-syntax"><strong>&lt;box&gt;</strong> = border-box | padding-box | content-box | text</p>
+			<p><strong>默认值</strong>：<mark class="defaultvalue">border-box</mark></p>
+			<p><strong>适用于</strong>：所有元素</p>
+			<p><strong>继承性</strong>：无</p>
+			<p><strong>动画性</strong>：否</p>
+			<p><strong>计算值</strong>：指定值</p>
+			<p><strong>媒　体</strong>：视觉</p>
+		</div>
+	</section>
+	<section id="value" class="g-mod g-attr">
+		<h2 class="tit">取值：</h2>
+		<div class="cont">
+			<dl>
+				<dt>border-box：</dt>
+				<dd>从border区域（含border）开始向外裁剪背景。</dd>
+				<dt>padding-box：</dt>
+				<dd>从padding区域（含padding）开始向外裁剪背景。</dd>
+				<dt>content-box：</dt>
+				<dd>从content区域开始向外裁剪背景。</dd>
+				<dt>text：</dt>
+				<dd>从前景内容的形状（比如文字）作为裁剪区域向外裁剪，如此即可实现使用背景作为填充色之类的遮罩效果。<a href="http://demo.doyoe.com/css3/background-clip/mask-text2.htm" target="_blank" class="external" rel="external">遮罩效果</a> <span class="g-color-light">See with Webkit</span></dd>
+			</dl>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
+		<h2 class="tit">说明：</h2>
+		<div class="cont">
+			<strong>指定对象的背景图像向外裁剪的区域。</strong>
+			<ul>
+				<li>对应的脚本特性为：<strong>backgroundClip</strong>。</li>
+			</ul>
+		</div>
+	</section>
+	<section id="compatible" class="g-mod g-attr">
+		<h2 class="tit">兼容性：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">粉色</span> = 部分支持</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th>Values</th>
+						<th>IE</th>
+						<th>Firefox</th>
+						<th>Chrome</th>
+						<th>Safari</th>
+						<th>Opera</th>
+						<th>iOS Safari</th>
+						<th>Android Browser</th>
+						<th>Android Chrome</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td rowspan="2"><strong>Basic Support</strong></td>
+						<td class="unsupport">8.0</td>
+						<td class="support" rowspan="4">40.0</td>
+						<td class="support" rowspan="6">40.0+</td>
+						<td class="support" rowspan="6">8.0+</td>
+						<td class="support" rowspan="6">40.0+</td>
+						<td class="support" rowspan="6">8.0+</td>
+						<td class="support" rowspan="6">4.4+</td>
+						<td class="support" rowspan="6">28.0+</td>
+					</tr>
+					<tr>
+						<td class="support">9.0+</td>
+					</tr>
+					<tr>
+						<td rowspan="2">Multiple background clip</td>
+						<td class="unsupport">8.0</td>
+					</tr>
+					<tr>
+						<td class="support">9.0+</td>
+					</tr>
+					<tr>
+						<td rowspan="2">text <sup><a href="#support1">#1</a></sup></td>
+						<td class="unsupport" rowspan="2">8.0-16.0</td>
+						<td class="unsupport">2.0-48.0</td>
+					</tr>
+					<tr>
+						<td class="support">49.0+</td>
+					</tr>
+				</tbody>
+			</table>
+			<ol class="support-info">
+				<li id="support1">text属性值，目前为webkit only <a href="http://www.webkit.org/blog/164/background-clip-text/" class="external" target="_blank">[1]</a> <a href="http://www.css3.info/webkit-introduces-background-cliptext/" class="external" target="_blank">[2]</a>，使用方式：<code class="g-code">-webkit-background-clip: text</code>。</li>
+			</ol>
+		</div>
+	</section>
+	<section id="example" class="g-mod g-attr">
+		<h2 class="tit">示例：</h2>
+		<div class="cont">
+			<textarea cols="90" rows="10">
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="utf-8" />
+<title>background-clip_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<style>
+h1{font-size:20px;}
+h2{font-size:16px;}
+p{width:200px;height:200px;margin:0;padding:20px;border:10px dashed #666;background:#aaa url(skin/p_103x196_1.jpg) no-repeat;background-origin:border-box;}
+.border-box p{background-clip:border-box;}
+.padding-box p{background-clip:padding-box;}
+.content-box p{background-clip:content-box;}
+.text p{width:auto;height:auto;background-repeat:repeat;-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:bold;font-size:120px;}
+</style>
+</head>
+<body>
+<h1>background-clip</h1>
+<ul class="test">
+	<li class="border-box">
+		<h2>border-box</h2>
+		<p>从border区域（不含border）开始向外裁剪背景</p>
+	</li>
+	<li class="padding-box">
+		<h2>padding-box</h2>
+		<p>从padding区域（不含padding）开始向外裁剪背景</p>
+	</li>
+	<li class="content-box">
+		<h2>content-box</h2>
+		<p>从content区域开始向外裁剪背景</p>
+	</li>
+	<li class="text">
+		<h2>text</h2>
+		<p>从前景内容的形状作为裁剪区域向外裁剪背景</p>
+	</li>
+</ul>
+</body>
+</html>
+			</textarea>
+			<p><input type="button" value="运行" class="g-btn g-btn-sure" /></p>
+		</div>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/inner.js"></script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="utf-8" />
+<title>background-size</title>
+<meta name="description" content="CSS3参考手册之：background-size" />
+<meta name="keywords" content="background-size, css3, css3参考手册" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../../skin/article.css" />
+</head>
+<body>
+<nav id="guide">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="../index.htm">属性列表</a>
+		<span>&#187;</span>
+		<a href="index.htm" id="category" rel="properties/backgrounds" name="background-size">背景与边框属性</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它背景边框参考</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入快速分类导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">background-size</h1>
+		<ul class="info">
+			<li><strong>版本：CSS3</strong></li>
+			<li>2018.3.14</li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="syntax" class="g-mod g-attr">
+		<h2 class="tit">语法：</h2>
+		<div class="cont">
+			<p><strong>background-size</strong>：<a href="#dfn-syntax">&lt;bg-size&gt;</a> [ , <a href="#dfn-syntax">&lt;bg-size&gt;</a> ]*</p>
+			<p id="dfn-syntax"><strong>&lt;bg-size&gt;</strong> =  [ <a href="../../values/length/length.htm">&lt;length&gt;</a> | <a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a> | auto ]{1,2} | cover | contain</p>
+			<p><strong>默认值</strong>：<mark class="defaultvalue">auto</mark></p>
+			<p><strong>适用于</strong>：所有元素</p>
+			<p><strong>继承性</strong>：无</p>
+			<p><strong>动画性</strong>：是，除非使用值为关键字</p>
+			<p><strong>计算值</strong>：指定值</p>
+			<p><strong>媒　体</strong>：视觉</p>
+		</div>
+	</section>
+	<section id="value" class="g-mod g-attr">
+		<h2 class="tit">取值：</h2>
+		<div class="cont">
+			<dl>
+				<dt><a href="../../values/length/length.htm">&lt;length&gt;</a>：</dt>
+				<dd>用长度值指定背景图像大小。不允许负值。</dd>
+				<dt><a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a>：</dt>
+				<dd>用百分比指定背景图像大小。不允许负值。</dd>
+				<dt>auto：</dt>
+				<dd>背景图像的真实大小。</dd>
+				<dt>cover：</dt>
+				<dd>将背景图像等比缩放到完全覆盖容器，背景图像有可能超出容器。</dd>
+				<dt>contain：</dt>
+				<dd>将背景图像等比缩放到宽度或高度与容器的宽度或高度相等，背景图像始终被包含在容器内。</dd>
+			</dl>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
+		<h2 class="tit">说明：</h2>
+		<div class="cont">
+			<strong>定义背景图像的尺寸大小</strong>
+			<ul>
+				<li>该属性接受<code class="g-code">1~2</code>个参数值（<code class="g-value">cover</code>和<code class="g-value">contain</code>关键字只接受一个）。如果提供两个，第一个用于定义背景图像宽度，第二个定义高度；只提供一个，该值用于定义背景图像的宽度，高度将依据图像宽度定义进行等比缩放计算得到。</li>
+				<li>
+					<p>当属性值为百分比时，参照背景图像的<a href="background-origin" class="g-property">background-origin</a>区域大小进行换算（而不是包含块大小）。</p>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>百分比参照计算：</strong></p>
+						<blockquote class="gquote-cont"><pre><code>.demo {
+	width: 200px;
+	height: 200px;
+	padding: 20px;
+	background-image: url(test.jpg);
+	background-repeat: no-repeat;
+	background-size: 50% 50%;
+}</code></pre></blockquote>
+						<p class="gquote-info">因为<a href="background-origin" class="g-property">background-origin</a>的默认值为<code class="g-value">padding-box</code>（即包含padding），所以此时，背景图像的计算值为：<code class="g-value">120px 120px</code></p>
+						<p class="gquote-tit"><strong>改变background-origin的取值：</strong></p>
+						<blockquote class="gquote-cont"><pre><code>.demo {
+	background-origin: content-box;
+}</code></pre></blockquote>
+						<p class="gquote-info">由于将<a href="background-origin" class="g-property">background-origin</a>设置为了<code class="g-value">content-box</code>（即内容区域），所以此时，背景图像的计算值为：<code class="g-value">100px 100px</code></p>
+					</div>
+				</li>
+				<li>对应的脚本特性为：<strong>backgroundSize</strong>。</li>
+			</ul>
+		</div>
+	</section>
+	<section id="compatible" class="g-mod g-attr">
+		<h2 class="tit">兼容性：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">粉色</span> = 部分支持</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th>Values</th>
+						<th>IE</th>
+						<th>Firefox</th>
+						<th>Chrome</th>
+						<th>Safari</th>
+						<th>Opera</th>
+						<th>iOS Safari</th>
+						<th>Android Browser</th>
+						<th>Android Chrome</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><strong>Basic Support</strong></td>
+						<td class="support">8.0+</td>
+						<td class="support" rowspan="3">40.0+</td>
+						<td class="support" rowspan="3">40.0+</td>
+						<td class="support" rowspan="3">8.0+</td>
+						<td class="support" rowspan="3">40.0+</td>
+						<td class="support" rowspan="3">8.0+</td>
+						<td class="support" rowspan="3">4.4+</td>
+						<td class="support" rowspan="3">28.0+</td>
+					</tr>
+					<tr>
+						<td rowspan="2">Multiple background size</td>
+						<td class="unsupport">8.0</td>
+					</tr>
+					<tr>
+						<td class="support">9.0+</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+	<section id="example" class="g-mod g-attr">
+		<h2 class="tit">示例：</h2>
+		<div class="cont">
+			<textarea cols="90" rows="10">
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="utf-8" />
+<title>background-size_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<style>
+h1{font-size:20px;}
+h2{font-size:16px;}
+p{border:10px dashed #666;width:300px;height:300px;padding:20px;background:url(skin/p_103x196_1.jpg) no-repeat;}
+.cover p{background-size:cover;}
+.contain p{background-size:contain;}
+.length p{background-size:100px 140px;}
+</style>
+</head>
+<body>
+<h1>background-size</h1>
+<ul class="test">
+	<li class="cover">
+		<h2>cover</h2>
+		<p>将背景图像等比缩放到完全覆盖容器，背景图像有可能超出容器。</p>
+	</li>
+	<li class="contain">
+		<h2>contain</h2>
+		<p>将背景图像等比缩放到宽度或高度与容器的宽度或高度相等，背景图像始终被包含在容器内。</p>
+	</li>
+	<li class="length">
+		<h2>length</h2>
+		<p>自定义背景图像大小</p>
+	</li>
+</ul>
+</body>
+</html>
+			</textarea>
+			<p><input type="button" value="运行" class="g-btn g-btn-sure" /></p>
+		</div>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/inner.js"></script>
+</body>
+</html>

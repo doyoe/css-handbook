@@ -56,10 +56,45 @@
 	<section id="intro" class="g-mod g-attr">
 		<h2 class="tit">说明：</h2>
 		<div class="cont">
-			<strong>匹配同类型中的倒数第n个同级兄弟元素E。</strong>
+			<strong>匹配父元素的倒数第n个子元素E。</strong>
+			<p>需要注意3个要点：</p>
 			<ul>
-				<li>要使该属性生效，E元素必须是某个元素的子元素，E的父元素最高是html，即E可以是html的子元素，也就是说E可以是body</li>
-				<li>该选择符总是能命中父元素的倒数第n个为E的子元素，不论倒数第n个子元素是否为E</li>
+				<li>首先，因为匹配的是父元素的子元素，这意味着E元素必须作为某个元素的子元素存在（E元素的父元素最高是html，也就是说E元素最高是body，这表示任何非html的元素都符合这个约束，因为html元素是根元素。）</li>
+				<li>
+					<p>其次，匹配的是父元素的倒数第n个为E的子元素（被命中的不一定是倒数第n个子元素，因为匹配的不是倒数第n个子元素，而是倒数第n个为E的子元素）</p>
+					<strong>来看下面这个例子：</strong>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>HTML示例代码：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp><div class="demo">
+	<p>p1</p>
+	<p>p2</p>
+	<span>span1</span>
+	<p>p3</p>
+	<span>span2</span>
+</div></xmp></code></blockquote>
+						<p class="gquote-tit"><strong>如上HTML，要命中倒数第1个p元素，代码如下：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp>.demo p:nth-last-of-type(1) { color: #f00; }</xmp></code></blockquote>
+						<p class="gquote-info">此时p3会被命中，虽然p3是 .demo 的倒数第2个子元素，但却是倒数第1个为p的子元素</p>
+					</div>
+				</li>
+				<li>
+					<p>再次，只能匹配与E元素同级的元素，即：E元素的兄弟元素</p>
+					<strong>来看下面这个例子：</strong>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>HTML示例代码：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp><div class="demo">
+	<span>span1</span>
+	<p>
+		<span>span2</span>
+		<span>span3</span>
+	</p>
+	<span>span4</span>
+</div></xmp></code></blockquote>
+						<p class="gquote-tit"><strong>如上HTML，你将不能通过下面的代码命中span3：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp>.demo span:nth-last-of-type(2) { color: #f00; }</xmp></code></blockquote>
+						<p class="gquote-info">因为span3并不是.demo的倒数第二个span子元素，而是p的倒数第一个span子元素，上述选择符最终命中的会是span1和span2</p>
+					</div>
+				</li>
 			</ul>
 		</div>
 	</section>
@@ -113,13 +148,13 @@
 <title>结构性伪类选择符 E:nth-last-of-type(n)_CSS参考手册_web前端开发参考手册系列</title>
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <style>
-p:nth-last-of-type(1) {
+.demo p:nth-last-of-type(1) {
 	color: #f00;
 }
 </style>
 </head>
 <body>
-<div class="test">
+<div class="demo">
 	<p>我是一个p元素</p>
 	<div>我是一个div元素</div>
 	<p>我是一个p元素</p>

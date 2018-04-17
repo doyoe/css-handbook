@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="utf-8" />
+<title>border-image-source</title>
+<meta name="description" content="CSS3参考手册之：border-image-source" />
+<meta name="keywords" content="border-image-source, css3, css3参考手册" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../../skin/article.css" />
+</head>
+<body>
+<nav id="guide">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="../index.htm">属性列表</a>
+		<span>&#187;</span>
+		<a href="index.htm" id="category" rel="properties/backgrounds" name="border-image-source">背景与边框属性</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它背景边框参考</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入快速分类导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">border-image-source</h1>
+		<ul class="info">
+			<li><strong>版本：CSS3</strong></li>
+			<li>2018.3.8</li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="syntax" class="g-mod g-attr">
+		<h2 class="tit">语法：</h2>
+		<div class="cont">
+			<p><strong>border-image-source</strong>：none | <a href="../../values/image/image.htm">&lt;image&gt;</a></p>
+			<p><strong>默认值</strong>：<mark class="defaultvalue">none</mark></p>
+			<p><strong>适用于</strong>：所有元素，除table元素设置了<a href="../table/border-collapse.htm" class="g-property">border-collapse</a>属性值为<code class="g-value">collapse</code>之外</p>
+			<p><strong>继承性</strong>：无</p>
+			<p><strong>动画性</strong>：否</p>
+			<p><strong>计算值</strong>：指定值</p>
+			<p><strong>媒　体</strong>：视觉</p>
+		</div>
+	</section>
+	<section id="value" class="g-mod g-attr">
+		<h2 class="tit">取值：</h2>
+		<div class="cont">
+			<dl>
+				<dt>none：</dt>
+				<dd>无背景图片。</dd>
+				<dt><a href="../../values/image/image.htm">&lt;image&gt;</a>：</dt>
+				<dd>使用绝对或相对地址指或者创建渐变色来确定图像。</dd>
+			</dl>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
+		<h2 class="tit">说明：</h2>
+		<div class="cont">
+			<strong>定义元素边框样式所使用的图像。</strong>
+			<ul>
+				<li>指定一个图像用来替代<a href="border-style.htm" class="g-property">border-style</a>所定义的边框样式。当<a href="border-image.htm" class="g-property">border-image</a>为<code class="g-value">none</code>或图像不可见时，将会显示<code class="g-property">border-style</code>所定义的边框样式效果。</li>
+				<li>
+					<p>除了直接使用图片来作为边框样式外，还可以绘制渐变来作为边框样式。</p>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>使用渐变绘制作为边框样式示例：</strong></p>
+						<div class="gquote-cont">
+							<style>
+							.img {
+								width: 100px;
+								padding: 20px;
+								border: 10px solid;
+								border-image: linear-gradient(red, yellow) 10;
+							}
+							</style>
+							<div class="img">渐变边框效果</div>
+							<blockquote class="code"><code><xmp>.test {
+	border: 10px solid;
+	border-image: linear-gradient(red, yellow) 10;
+}</xmp></code></blockquote>
+						</div>
+						<p class="gquote-info">在这个例子中，绘制了一个线性渐变作为图像来替代边框样式，我们得到了一个渐变的边框效果。</p>
+					</div>
+				</li>
+				<li>对应的脚本特性为：<strong>borderImageSource</strong>。</li>
+			</ul>
+		</div>
+	</section>
+	<section id="compatible" class="g-mod g-attr">
+		<h2 class="tit">兼容性：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">粉色</span> = 部分支持</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th>Values</th>
+						<th>IE</th>
+						<th>Firefox</th>
+						<th>Chrome</th>
+						<th>Safari</th>
+						<th>Opera</th>
+						<th>iOS Safari</th>
+						<th>Android Browser</th>
+						<th>Android Chrome</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td rowspan="2"><strong>Basic Support</strong></td>
+						<td class="unsupport">10.0</td>
+						<td class="support" rowspan="2">40.0+</td>
+						<td class="support" rowspan="2">40.0+</td>
+						<td class="support" rowspan="2">8.0+</td>
+						<td class="support" rowspan="2">40.0+</td>
+						<td class="support" rowspan="2">8.0+</td>
+						<td class="support" rowspan="2">4.4+</td>
+						<td class="support" rowspan="2">40.0+</td>
+					</tr>
+					<tr>
+						<td class="support">11.0+</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+	<section id="example" class="g-mod g-attr">
+		<h2 class="tit">示例：</h2>
+		<div class="cont">
+			<textarea cols="90" rows="10">
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="utf-8" />
+<title>border-image-source_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<style>
+.test {
+	padding: 10px;
+	border: 27px solid;
+	border-image-source: url(skin/border.png);
+	border-image-slice: 27;
+	border-image-width: 27px;
+}
+</style>
+</head>
+<body>
+<div class="test">用图片来做边框</div>
+</body>
+</html>
+			</textarea>
+			<p><input type="button" value="运行" class="g-btn g-btn-sure" /></p>
+		</div>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/inner.js"></script>
+</body>
+</html>

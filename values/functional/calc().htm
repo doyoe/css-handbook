@@ -98,15 +98,16 @@
 						<td class="unsupport">18.0</td>
 					</tr>
 					<tr>
-						<td class="support" rowspan="2">9.0+</td>
+						<td class="partsupport">9.0 <sup><a href="#support1">#1</a></sup></td>
 						<td class="support">4.0-15.0<br /><sup class="fix">-moz-</sup></td>
 						<td class="support">19.0-25.0<br /><sup class="fix">-webkit-</sup></td>
 						<td class="support">6.0<br /><sup class="fix">-webkit-</sup></td>
 						<td class="support">6.0-6.1<br /><sup class="fix">-webkit-</sup></td>
-						<td class="partsupport" rowspan="2">4.4-4.4.4</td>
+						<td class="partsupport" rowspan="2">4.4-4.4.4 <sup><a href="#support2">#2</a></sup></td>
 						<td class="support">19.0-25.0<br /><sup class="fix">-webkit-</sup></td>
 					</tr>
 					<tr>
+						<td class="support">10.0+</td>
 						<td class="support">16.0+</td>
 						<td class="support">26.0+</td>
 						<td class="support">6.1+</td>
@@ -115,6 +116,10 @@
 					</tr>
 				</tbody>
 			</table>
+			<ol class="support-info">
+				<li id="support1">当在 <a href="../../properties/background/background-position.htm" class="g-property">background-position</a>中使用<code class="g-code">calc()</code>时将会导致浏览器崩溃；</li>
+				<li id="support2">部分版本在使用<code class="g-code">calc()</code>时，乘法和除法可能无效；</li>
+			</ol>
 		</div>
 	</section>
 	<section class="g-mod g-attr" id="example">

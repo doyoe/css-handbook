@@ -42,7 +42,7 @@
 		<h1 class="tit">word-spacing</h1>
 		<ul class="info">
 			<li><strong>版本：CSS1/3</strong></li>
-			<li>媒体：视觉</li>
+			<li>2018.4.8</li>
 		</ul>
 		<!-- 插入浏览器信息 -->
 	</section>
@@ -57,7 +57,8 @@
 			<p><strong>继承性</strong>：有</p>
 			<p><strong>动画性</strong>：非normal值时</p>
 			<p><strong>计算值</strong>：指定值</p>
-			<p><strong>相关属性</strong>：&lt;' <a href="letter-spacing.htm">letter-spacing</a> '&gt;</p>
+			<p><strong>相关属性</strong>：<a href="letter-spacing.htm" class="g-property">letter-spacing</a></p>
+			<p><strong>媒　体</strong>：视觉</p>
 		</div>
 	</section>
 	<section id="value" class="g-mod g-attr">
@@ -65,22 +66,22 @@
 		<div class="cont">
 			<dl>
 				<dt>normal：</dt>
-				<dd>默认间隔</dd>
+				<dd>默认间隔。计算值为<code class="g-value">0</code></dd>
 				<dt><a href="../../values/length/length.htm">&lt;length&gt;</a>：</dt>
-				<dd>用长度值指定间隔。可以为负值。</dd>
+				<dd>用长度值指定单词间隔。可以为负值。</dd>
 				<dt><a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a>：</dt>
-				<dd>用百分比指定间隔。可以为负值。（CSS3）</dd>
+				<dd>用百分比指定单词间隔。可以为负值。（CSS3）</dd>
 			</dl>
 		</div>
 	</section>
 	<section id="intro" class="g-mod g-attr">
 		<h2 class="tit">说明：</h2>
 		<div class="cont">
-			<strong>检索或设置对象中的单词之间的最小，最大和最佳间隙。</strong>
+			<strong>指定单词之间的额外间隙。</strong>
 			<ul>
-				<li>该属性将指定的间隔添加到每个单词(词内不发生)之后，但最后一个字将被排除在外。</li>
-				<li>判断是否为单词的依据是单词间是否有空格。</li>
-				<li>对应的脚本特性为<strong>wordSpacing</strong>。</li>
+				<li>该属性可以将指定的额外间隙添加到每个单词之后，最后一个单词不添加，这意外着可以通过该属性控制单词间的间隙大小。</li>
+				<li>判断是否为单词的依据是单词间是否有单词分割符，比如：空格。</li>
+				<li>对应的脚本特性为：<strong>wordSpacing</strong>。</li>
 			</ul>
 		</div>
 	</section>
@@ -109,25 +110,28 @@
 				<tbody>
 					<tr>
 						<td><strong>Basic Support</strong></td>
-						<td class="support">6.0+</td>
-						<td class="support">2.0+</td>
-						<td class="support">4.0+</td>
-						<td class="support">6.0+</td>
-						<td class="support">15.0+</td>
-						<td class="support">6.0+</td>
-						<td class="support">2.1+</td>
-						<td class="support">18.0+</td>
+						<td class="support">8.0+</td>
+						<td class="support">40.0+</td>
+						<td class="support">40.0+</td>
+						<td class="support">8.0+</td>
+						<td class="support">40.0+</td>
+						<td class="support">8.0+</td>
+						<td class="support">4.4+</td>
+						<td class="support">28.0+</td>
 					</tr>
 					<tr>
-						<td><a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a></td>
-						<td class="unsupport">6.0-11.0</td>
-						<td class="unsupport">2.0-37.0</td>
-						<td class="unsupport">4.0-41.0</td>
-						<td class="unsupport">6.0-8.0</td>
-						<td class="unsupport">15.0-27.0</td>
-						<td class="unsupport">6.0-8.3</td>
-						<td class="unsupport">2.1-4.4.4</td>
-						<td class="unsupport">18.0-40.0</td>
+						<td rowspan="2"><a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a></td>
+						<td class="unsupport" rowspan="2">8.0-16.0</td>
+						<td class="unsupport">40.0-?</td>
+						<td class="unsupport" rowspan="2">40.0-65.0</td>
+						<td class="unsupport" rowspan="2">8.0-11.0</td>
+						<td class="unsupport" rowspan="2">40.0-50.0</td>
+						<td class="unsupport" rowspan="2">8.0-11.3</td>
+						<td class="unsupport" rowspan="2">4.4-62.0</td>
+						<td class="unsupport" rowspan="2">28.0-64.0</td>
+					</tr>
+					<tr>
+						<td class="support">?-59.0</td>
 					</tr>
 				</tbody>
 			</table>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="utf-8" />
+<title>box-shadow</title>
+<meta name="description" content="CSS3参考手册之：box-shadow" />
+<meta name="keywords" content="box-shadow, css3, css3参考手册" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../../skin/article.css" />
+</head>
+<body>
+<nav id="guide">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="../index.htm">属性列表</a>
+		<span>&#187;</span>
+		<a href="index.htm" id="category" rel="properties/backgrounds" name="box-shadow">背景与边框属性</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它背景边框参考</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入快速分类导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">box-shadow</h1>
+		<ul class="info">
+			<li><strong>版本：CSS3</strong></li>
+			<li>2018.3.6</li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="syntax" class="g-mod g-attr">
+		<h2 class="tit">语法：</h2>
+		<div class="cont">
+			<p><strong>box-shadow</strong>：none | <a href="#dfn-syntax">&lt;shadow&gt;</a> [ , <a href="#dfn-syntax">&lt;shadow&gt;</a> ]*</p>
+			<p id="dfn-syntax"><strong>&lt;shadow&gt;</strong> = inset? && <a href="../../values/length/length.htm">&lt;length&gt;</a>{2,4} && <a href="../../values/color/color.htm">&lt;color&gt;</a>?</p>
+			<p><strong>默认值</strong>：<mark class="defaultvalue">none</mark></p>
+			<p><strong>适用于</strong>：所有元素</p>
+			<p><strong>继承性</strong>：无</p>
+			<p><strong>动画性</strong>：是，除了内、外阴影切换时</p>
+			<p><strong>计算值</strong>：指定值</p>
+			<p><strong>媒　体</strong>：视觉</p>
+		</div>
+	</section>
+	<section id="value" class="g-mod g-attr">
+		<h2 class="tit">取值：</h2>
+		<div class="cont">
+			<dl>
+				<dt>none：</dt>
+				<dd>无阴影</dd>
+				<dt><a href="../../values/length/length.htm">&lt;length&gt;</a>①：</dt>
+				<dd>第 1 个长度值定义元素的阴影水平偏移值。正值，阴影出现在元素右侧；负值，则阴影出现在元素左侧</dd>
+				<dt><a href="../../values/length/length.htm">&lt;length&gt;</a>②：</dt>
+				<dd>第 2 个长度值定义元素的阴影垂直偏移值。正值，阴影出现在元素底部；负值，则阴影出现在元素顶部</dd>
+				<dt><a href="../../values/length/length.htm">&lt;length&gt;</a>③：</dt>
+				<dd>第 3 个长度值定义元素的阴影模糊值半径（如果提供了）。该值越大阴影边缘越模糊，若该值为<code class="g-value">0</code>，阴影边缘不出现模糊。不允许负值</dd>
+				<dt><a href="../../values/length/length.htm">&lt;length&gt;</a>④：</dt>
+				<dd>第 4 个长度值定义元素的阴影外延值（如果提供了）。正值，阴影将向四面扩展；负值，则阴影向里收缩</dd>
+				<dt><a href="../../values/color/color.htm">&lt;color&gt;</a>：</dt>
+				<dd>定义元素阴影的颜色。如果该值未定义，阴影颜色将默认取当前最近的文本颜色</dd>
+				<dt>inset：</dt>
+				<dd>定义元素的阴影类型为内阴影。该值为空时，则元素的阴影类型为外阴影</dd>
+			</dl>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
+		<h2 class="tit">说明：</h2>
+		<div class="cont">
+			<strong>定义元素的阴影。</strong>参阅<a href="../text-decoration/text-shadow.htm" class="g-property">text-shadow</a>属性
+			<ul>
+				<li><code class="g-property">box-shadow</code>可以设定多组阴影效果，每组参数值以逗号分隔。该属性可以对几乎所有元素的生成框产生阴影。如果元素同时设置了<a href="border-radius.htm" class="g-property">border-radius</a>，阴影也会有圆角效果。</li>
+				<li>如果定义了多组阴影效果，它们的 z-ordering 和多个<code class="g-property">text-shadow</code>规则相同，第一个阴影在最上面，以此类推。</li>
+				<li>对应的脚本特性为：<strong>boxShadow</strong>。</li>
+			</ul>
+		</div>
+	</section>
+	<section id="compatible" class="g-mod g-attr">
+		<h2 class="tit">兼容性：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">粉色</span> = 部分支持</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th>Values</th>
+						<th>IE</th>
+						<th>Firefox</th>
+						<th>Chrome</th>
+						<th>Safari</th>
+						<th>Opera</th>
+						<th>iOS Safari</th>
+						<th>Android Browser</th>
+						<th>Android Chrome</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td rowspan="3"><strong>Basic Support</strong></td>
+						<td class="unsupport">8.0</td>
+						<td rowspan="2" class="support">40.0+</td>
+						<td rowspan="2" class="support">40.0+</td>
+						<td rowspan="2" class="support">8.0+</td>
+						<td rowspan="2" class="support">40.0+</td>
+						<td rowspan="2" class="support">8.0+</td>
+						<td rowspan="2" class="support">4.4+</td>
+						<td rowspan="2" class="support">28.0+</td>
+					</tr>
+					<tr>
+						<td class="support">9.0+</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+	<section id="example" class="g-mod g-attr">
+		<h2 class="tit">示例：</h2>
+		<div class="cont">
+			<textarea cols="90" rows="10">
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="utf-8" />
+<title>box-shadow_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<style>
+.test li {
+	margin-top: 20px;
+	list-style: none;
+	width: 400px;
+	padding: 10px;
+	background: #eee;
+}
+.test .outset {
+	box-shadow: 5px 5px rgba(0, 0, 0, .6);
+}
+.test .outset-blur {
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, .6);
+}
+.test .outset-extension {
+	box-shadow: 5px 5px 5px 10px rgba(0, 0, 0, .6);
+}
+.test .inset {
+	box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, .6) inset;
+}
+.test .multiple-shadow {
+	box-shadow:
+		0 0 5px 3px rgba(255, 0, 0, .6),
+		0 0 5px 6px rgba(0, 182, 0, .6),
+		0 0 5px 10px rgba(255, 255, 0, .6);
+}
+</style>
+</head>
+<body>
+<ul class="test">
+	<li class="outset">外阴影常规效果<br />box-shadow:5px 5px rgba(0,0,0,.6);</li>
+	<li class="outset-blur">外阴影模糊效果<br />box-shadow:5px 5px 5px rgba(0,0,0,.6);</li>
+	<li class="outset-extension">外阴影模糊外延效果<br />box-shadow:5px 5px 5px 10px rgba(0,0,0,.6);</li>
+	<li class="inset">内阴影效果<br />box-shadow:2px 2px 5px 1px rgba(0,0,0,.6) inset;</li>
+	<li class="multiple-shadow">外阴影模糊效果<br />box-shadow:5px 5px 5px rgba(0,0,0,.6);</li>
+</ul>
+</body>
+</html>
+			</textarea>
+			<p><input type="button" value="运行" class="g-btn g-btn-sure" /></p>
+		</div>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/inner.js"></script>
+</body>
+</html>

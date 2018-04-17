@@ -42,7 +42,7 @@
 		<h1 class="tit">display</h1>
 		<ul class="info">
 			<li><strong>版本：CSS2/3</strong></li>
-			<li>2015.8.11</li>
+			<li>2018.2.27</li>
 		</ul>
 		<!-- 插入浏览器信息 -->
 	</section>
@@ -65,7 +65,7 @@
 		<div class="cont">
 			<dl>
 				<dt>none：</dt>
-				<dd>隐藏对象。与<a href="visibility.htm">visibility</a>属性的hidden值不同，其不为被隐藏的对象保留其物理空间</dd>
+				<dd>隐藏对象。与<a href="visibility.htm" class="g-property">visibility</a>属性的<code class="g-value">hidden</code>值不同，其不为被隐藏的对象保留其物理空间</dd>
 				<dt>inline：</dt>
 				<dd>指定对象为内联元素。</dd>
 				<dt>block：</dt>
@@ -137,19 +137,8 @@
 		<div class="cont">
 			<strong>设置或检索对象是否及如何显示。</strong>
 			<ul>
-				<li>如果display设置为none，<a href="float.htm">float</a>及<a href="../positioning/position.htm">position</a>属性定义将不生效；</li>
-				<li>如果<a href="../positioning/position.htm">position</a>既不是static也不是relative或者<a href="float.htm">float</a>不是none或者元素是根元素，当display:inline-table时，display的计算值为table；当display:inline | inline-block | run-in | table-* 系时，display的计算值为block，其它情况为指定值；</li>
-				<li>
-					<p class="g-color-light">IE6,7支持inline元素转换成inline-block，但不支持block元素转换成inline-block，所以非inline元素在IE6,7下要转换成inline-block，需先转换成inline，然后触发hasLayout，以此来获得和inline-block类似的效果；你可以这样：</p>
-					<div class="gquote">
-						<p class="gquote-tit"><strong>全兼容的inline-block：</strong></p>
-						<blockquote class="gquote-cont"><code><xmp>div {
-	display: inline-block;
-	*display: inline;
-	*zoom: 1;
-}</xmp></code></blockquote>
-					</div>
-				</li>
+				<li>如果<code class="g-property">display</code>设置为<code class="g-value">none</code>，<a href="float.htm" class="g-property">float</a>及<a href="../positioning/position.htm" class="g-property">position</a>属性定义将不生效；</li>
+				<li>如果<a href="../positioning/position.htm" class="g-property">position</a>既不是<code class="g-value">static</code>也不是<code class="g-value">relative</code>或者<a href="float.htm" class="g-property">float</a>不是<code class="g-value">none</code>或者该元素是根元素，当<code class="g-code">display: inline-table</code>时，<code class="g-property">display</code>的计算值为<code class="g-value">table</code>；当<code class="g-code">display: inline | inline-block | run-in | table-*</code>系时，<code class="g-property">display</code>的计算值为<code class="g-value">block</code>，其它情况为指定值；</li>
 				<li>对应的脚本特性为<strong>display</strong>。</li>
 			</ul>
 		</div>
@@ -179,118 +168,70 @@
 				<tbody>
 					<tr>
 						<td><strong>Basic Support</strong> <sup><a href="#support1">#1</a></sup></td>
-						<td class="support">6.0+</td>
-						<td class="support">2.0+</td>
-						<td class="support">4.0+</td>
-						<td class="support">6.0+</td>
-						<td class="support">15.0+</td>
-						<td class="support">6.0+</td>
-						<td class="support">2.1+</td>
-						<td class="support">18.0+</td>
+						<td rowspan="4" class="support">8.0+</td>
+						<td rowspan="4" class="support">40.0+</td>
+						<td rowspan="4" class="support">40.0+</td>
+						<td rowspan="4" class="support">8.0+</td>
+						<td rowspan="4" class="support">40.0+</td>
+						<td rowspan="4" class="support">8.0+</td>
+						<td rowspan="4" class="support">4.4+</td>
+						<td rowspan="4" class="support">28.0+</td>
 					</tr>
 					<tr>
-						<td rowspan="2">inline-block</td>
-						<td class="partsupport">6.0-7.0 <sup><a href="#support3">#3</a></sup></td>
-						<td class="support" rowspan="2">2.0+</td>
-						<td class="support" rowspan="2">4.0+</td>
-						<td class="support" rowspan="2">6.0+</td>
-						<td class="support" rowspan="2">15.0+</td>
-						<td class="support" rowspan="2">6.0+</td>
-						<td class="support" rowspan="2">2.1+</td>
-						<td class="support" rowspan="2">18.0+</td>
+						<td>inline-block</td>
 					</tr>
 					<tr>
-						<td class="support">8.0+</td>
+						<td>table系 <sup><a href="#support2">#2</a></sup></td>
 					</tr>
 					<tr>
-						<td rowspan="2">table系 <sup><a href="#support2">#2</a></sup></td>
-						<td class="unsupport">6.0-7.0</td>
-						<td class="support" rowspan="2">2.0+</td>
-						<td class="support" rowspan="2">4.0+</td>
-						<td class="support" rowspan="2">6.0+</td>
-						<td class="support" rowspan="2">15.0+</td>
-						<td class="support" rowspan="2">6.0+</td>
-						<td class="support" rowspan="2">2.1+</td>
-						<td class="support" rowspan="2">18.0+</td>
-					</tr>
-					<tr>
-						<td class="support">8.0+</td>
-					</tr>
-					<tr>
-						<td rowspan="2"><ins class="g-color-css3-new">run-in</ins></td>
-						<td class="unsupport">6.0-7.0</td>
-						<td class="unsupport">2.0-25.0</td>
-						<td class="support" rowspan="2">4.0+</td>
-						<td class="support" rowspan="2">6.0+</td>
-						<td class="support" rowspan="2">15.0+</td>
-						<td class="support" rowspan="2">6.0+</td>
-						<td class="support" rowspan="2">2.1+</td>
-						<td class="support" rowspan="2">18.0+</td>
-					</tr>
-					<tr>
-						<td class="support">8.0+</td>
-						<td class="support">26.0+</td>
+						<td><ins class="g-color-css3-new">run-in</ins></td>
 					</tr>
 					<tr>
 						<td><ins class="g-color-css3-new">box</ins> | <ins class="g-color-css3-new">inline-box</ins></td>
-						<td class="unsupport">6.0-11.0</td>
-						<td class="support">2.0-38.0<br /><sup class="fix">-moz-</sup></td>
-						<td class="support">4.0-43.0<br /><sup class="fix">-webkit-</sup></td>
-						<td class="support">3.1-8.1<br /><sup class="fix">-webkit-</sup></td>
-						<td class="support">15.0-28.0<br /><sup class="fix">-webkit-</sup></td>
-						<td class="support">3.2-8.1<br /><sup class="fix">-webkit-</sup></td>
-						<td class="support">2.1-4.4.4<br /><sup class="fix">-webkit-</sup></td>
-						<td class="support">18.0-40.0<br /><sup class="fix">-webkit-</sup></td>
+						<td class="unsupport">8.0+</td>
+						<td class="support">40.0+<br /><sup class="fix">-moz-</sup></td>
+						<td class="support">40.0+<br /><sup class="fix">-webkit-</sup></td>
+						<td class="support">8.0+<br /><sup class="fix">-webkit-</sup></td>
+						<td class="support">40.0+<br /><sup class="fix">-webkit-</sup></td>
+						<td class="support">8.0+<br /><sup class="fix">-webkit-</sup></td>
+						<td class="support">4.4+<br /><sup class="fix">-webkit-</sup></td>
+						<td class="support">28.0+<br /><sup class="fix">-webkit-</sup></td>
 					</tr>
 					<tr>
 						<td rowspan="2"><ins class="g-color-css3-new">flexbox</ins> | <ins class="g-color-css3-new">inline-flexbox</ins></td>
-						<td class="unsupport">6.0-9.0</td>
-						<td class="unsupport" rowspan="2">2.0-38.0</td>
-						<td class="unsupport" rowspan="2">4.0-43.0</td>
-						<td class="unsupport" rowspan="2">3.1-8.1</td>
-						<td class="unsupport" rowspan="2">15.0-28.0</td>
-						<td class="unsupport" rowspan="2">3.2-8.1</td>
-						<td class="unsupport" rowspan="2">2.1-4.4.4</td>
-						<td class="unsupport" rowspan="2">18.0-40.0</td>
+						<td class="unsupport">8.0-9.0</td>
+						<td class="unsupport" rowspan="2">40.0+</td>
+						<td class="unsupport" rowspan="2">40.0+</td>
+						<td class="unsupport" rowspan="2">8.0+</td>
+						<td class="unsupport" rowspan="2">40.0+</td>
+						<td class="unsupport" rowspan="2">8.0+</td>
+						<td class="unsupport" rowspan="2">4.4+</td>
+						<td class="unsupport" rowspan="2">28.0+</td>
 					</tr>
 					<tr>
 						<td class="support">10.0-11.0<br /><sup class="fix">-ms-</sup></td>
 					</tr>
 					<tr>
-						<td rowspan="3"><ins class="g-color-css3-new">flex</ins> | <ins class="g-color-css3-new">inline-flex</ins></td>
-						<td class="unsupport">6.0-10.0</td>
-						<td class="unsupport">2.0-21.0</td>
-						<td class="unsupport">4.0-20.0</td>
-						<td class="unsupport">6.0</td>
-						<td class="support">15.0+<sup class="fix">-webkit-</sup></td>
-						<td class="unsupport">6.0-6.1</td>
-						<td class="unsupport">2.1-4.3</td>
-						<td class="unsupport">18.0-19.0</td>
+						<td rowspan="2"><ins class="g-color-css3-new">flex</ins> | <ins class="g-color-css3-new">inline-flex</ins></td>
+						<td class="unsupport">8.0-10.0</td>
+						<td rowspan="2" class="support">40.0+</td>
+						<td rowspan="2" class="support">40.0+</td>
+						<td class="support">8.0+<sup class="fix">-webkit-</sup></td>
+						<td rowspan="2" class="support">40.0+</td>
+						<td class="support">8.0+<sup class="fix">-webkit-</sup></td>
+						<td rowspan="2" class="support">4.4+</td>
+						<td rowspan="2" class="support">28.0+</td>
 					</tr>
 					<tr>
-						<td class="support" rowspan="2">11.0+</td>
-						<td class="support" rowspan="2">22.0+</td>
-						<td class="support">21.0+<sup class="fix">-webkit-</sup></td>
-						<td class="support">6.1+<sup class="fix">-webkit-</sup></td>
-						<td class="support" rowspan="2">17.0+</td>
-						<td class="support">7.0+<sup class="fix">-webkit-</sup></td>
-						<td class="support" rowspan="2">4.4+</td>
-						<td class="support">20.0+<sup class="fix">-webkit-</sup></td>
-					</tr>
-					<tr>
-						<td class="support">29.0+</td>
-						<td class="support">9.0+</td>
-						<td class="support">9.0+</td>
-						<td class="support">28.0+</td>
+						<td class="support">11.0+</td>
+						<td rowspan="2" class="support">9.0+</td>
+						<td rowspan="2" class="support">9.0+</td>
 					</tr>
 				</tbody>
 			</table>
 			<ol class="support-info">
-				<li id="support1">Basic Support包含值：none | inline | block | list-item | inline-block</li>
-				<li id="support2">table系包含值：table | inline-table | table-caption | table-cell | table-row | table-row-group | table-column | table-column-group | table-footer-group | table-header-group</li>
-				<li id="support3">IE6,7只支持inline元素设置为inline-block，其它类型元素均不可以</li>
-				<!-- <li id="support3">不支持：<ins class="g-color-css3-new" title="css3">ruby</ins> | <ins class="g-color-css3-new" title="css3">ruby-base</ins> | <ins class="g-color-css3-new" title="css3">ruby-text</ins> | <ins class="g-color-css3-new" title="css3">ruby-base-group</ins> | <ins class="g-color-css3-new" title="css3">ruby-text-group</ins> 属性值。</li>
-				<li id="support4">不支持：<ins class="g-color-css3-new" title="css3">compact</ins> 属性值。</li> -->
+				<li id="support1">Basic Support 包含值：none | inline | block | list-item | inline-block</li>
+				<li id="support2">table 系包含值：table | inline-table | table-caption | table-cell | table-row | table-row-group | table-column | table-column-group | table-footer-group | table-header-group</li>
 			</ol>
 		</div>
 	</section>

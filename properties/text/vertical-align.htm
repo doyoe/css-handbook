@@ -42,7 +42,7 @@
 		<h1 class="tit">vertical-align</h1>
 		<ul class="info">
 			<li><strong>版本：CSS1/2</strong></li>
-			<li>媒体：视觉</li>
+			<li>2018.4.8</li>
 		</ul>
 		<!-- 插入浏览器信息 -->
 	</section>
@@ -53,10 +53,11 @@
 		<div class="cont">
 			<p><strong>vertical-align</strong>：baseline | sub | super | top | text-top | middle | bottom | text-bottom | <a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a> | <a href="../../values/length/length.htm">&lt;length&gt;</a></p>
 			<p><strong>默认值</strong>：<mark class="defaultvalue">baseline</mark></p>
-			<p><strong>适用于</strong>：内联及 table-cell 元素</p>
+			<p><strong>适用于</strong>：内联级与 table-cell 元素</p>
 			<p><strong>继承性</strong>：无</p>
 			<p><strong>动画性</strong>：当值为 <a href="../../values/length/length.htm">&lt;length&gt;</a> 时</p>
 			<p><strong>计算值</strong>：指定值</p>
+			<p><strong>媒　体</strong>：视觉</p>
 		</div>
 	</section>
 	<section id="value" class="g-mod g-attr">
@@ -64,34 +65,34 @@
 		<div class="cont">
 			<dl>
 				<dt>baseline：</dt>
-				<dd>将支持valign特性的对象的内容与基线对齐</dd>
+				<dd>把当前盒的基线与父级盒的基线对齐。如果该盒没有基线，就将底部外边距的边界和父级的基线对齐</dd>
 				<dt>sub：</dt>
-				<dd>垂直对齐文本的下标</dd>
+				<dd>把当前盒的基线降低到合适的位置作为父级盒的下标（该值不影响该元素文本的字体大小）</dd>
 				<dt>super：</dt>
-				<dd>垂直对齐文本的上标</dd>
-				<dt>top：</dt>
-				<dd>将支持valign特性的对象的内容与对象顶端对齐</dd>
+				<dd>把当前盒的基线提升到合适的位置作为父级盒的上标（该值不影响该元素文本的字体大小）</dd>
 				<dt>text-top：</dt>
-				<dd>将支持valign特性的对象的文本与对象顶端对齐</dd>
-				<dt>middle：</dt>
-				<dd>将支持valign特性的对象的内容与对象中部对齐</dd>
-				<dt>bottom：</dt>
-				<dd>将支持valign特性的对象的文本与对象底端对齐</dd>
+				<dd>把当前盒的top和父级的内容区的top对齐</dd>
 				<dt>text-bottom：</dt>
-				<dd>将支持valign特性的对象的文本与对象顶端对齐</dd>
+				<dd>把当前盒的bottom和父级的内容区的bottom对齐</dd>
+				<dt>middle：</dt>
+				<dd>把当前盒的垂直中心和父级盒的基线加上父级的半x-height对齐</dd>
+				<dt>top：</dt>
+				<dd>把当前盒的top与行盒的top对齐</dd>
+				<dt>bottom：</dt>
+				<dd>把当前盒的bottom与行盒的bottom对齐</dd>
 				<dt><a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a>：</dt>
-				<dd>用百分比指定由基线算起的偏移量。可以为负值。基线对于百分数来说就是0%。</dd>
+				<dd>把当前盒提升（正值）或者降低（负值）这个距离，百分比相对line-height计算。当值为0%时等同于baseline。</dd>
 				<dt><a href="../../values/length/length.htm">&lt;length&gt;</a>：</dt>
-				<dd>用长度值指定由基线算起的偏移量。可以为负值。基线对于数值来说为0。（CSS2）</dd>
+				<dd>把当前盒提升（正值）或者降低（负值）这个距离。当值为0时等同于baseline。（CSS2）</dd>
 			</dl>
 		</div>
 	</section>
 	<section id="intro" class="g-mod g-attr">
 		<h2 class="tit">说明：</h2>
 		<div class="cont">
-			<strong>设置或检索内联元素在行框内的垂直对其方式。</strong>
+			<strong>定义行内元素在行框内的垂直对齐方式。</strong>
 			<ul>
-				<li>对应的脚本特性为<strong>verticalAlign</strong>。</li>
+				<li>对应的脚本特性为：<strong>verticalAlign</strong>。</li>
 			</ul>
 		</div>
 	</section>
@@ -120,14 +121,14 @@
 				<tbody>
 					<tr>
 						<td><strong>Basic Support</strong></td>
-						<td class="support">6.0+</td>
-						<td class="support">2.0+</td>
-						<td class="support">4.0+</td>
-						<td class="support">6.0+</td>
-						<td class="support">15.0+</td>
-						<td class="support">6.0+</td>
-						<td class="support">2.1+</td>
-						<td class="support">18.0+</td>
+						<td class="support">8.0+</td>
+						<td class="support">40.0+</td>
+						<td class="support">40.0+</td>
+						<td class="support">8.0+</td>
+						<td class="support">40.0+</td>
+						<td class="support">8.0+</td>
+						<td class="support">4.4+</td>
+						<td class="support">28.0+</td>
 					</tr>
 				</tbody>
 			</table>

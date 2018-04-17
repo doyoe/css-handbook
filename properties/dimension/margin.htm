@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="utf-8" />
+<title>margin</title>
+<meta name="description" content="CSS3参考手册之：margin" />
+<meta name="keywords" content="margin, css3, css3参考手册" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../../skin/article.css" />
+</head>
+<body>
+<nav id="guide" class="g-mod">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="../index.htm">属性列表</a>
+		<span>&#187;</span>
+		<a href="index.htm" id="category" rel="properties/dimension" name="margin">尺寸与补白属性</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它尺寸与补白参考</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入快速分类导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">margin</h1>
+		<ul class="info">
+			<li><strong>版本：CSS1</strong></li>
+			<li>2018.3.12</li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="syntax" class="g-mod g-attr">
+		<h2 class="tit">简写属性语法：</h2>
+		<div class="cont">
+			<p><strong>margin</strong>：[ <a href="../../values/length/index.htm">&lt;length&gt;</a> | <a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a> | auto ]{1,4}</p>
+			<p><strong>默认值</strong>：<mark class="defaultvalue">看每个独立属性</mark></p>
+			<p><strong>适用于</strong>：所有元素，除<code class="g-value">非 table | inline-table | table-caption</code>的表格类元素之外</p>
+			<p><strong>继承性</strong>：无</p>
+			<p><strong>动画性</strong>：看每个独立属性</p>
+			<p><strong>计算值</strong>：看每个独立属性</p>
+			<p><strong>媒　体</strong>：视觉</p>
+		</div>
+		<h2 class="tit">分拆纵向独立属性语法：</h2>
+		<div class="cont">
+			<p><strong><a href="#vertical-margin">vertical-margin</a></strong>：<a href="../../values/length/index.htm">&lt;length&gt;</a> | <a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a> | auto</p>
+			<p id="vertical-margin"><strong>vertical-margin</strong> = <code class="g-property">margin-top</code>,<code class="g-property">margin-bottom</code></p>
+			<p><strong>默认值</strong>：<mark class="defaultvalue">0</mark></p>
+			<p><strong>适用于</strong>：所有元素，除<code class="g-value">非 table | inline-table | table-caption</code>的表格类元素和非替代行内元素之外</p>
+			<p><strong>继承性</strong>：无</p>
+			<p><strong>动画性</strong>：当取值为 <a href="../../values/length/index.htm">&lt;length&gt;</a> | <a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a> 时</p>
+			<p><strong>计算值</strong>：指定的百分比或绝对长度值</p>
+			<p><strong>媒　体</strong>：视觉</p>
+		</div>
+		<h2 class="tit">分拆横向独立属性语法：</h2>
+		<div class="cont">
+			<p><strong><a href="#horizontal-margin">horizontal-margin</a></strong>：<a href="../../values/length/index.htm">&lt;length&gt;</a> | <a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a> | auto</p>
+			<p id="horizontal-margin"><strong>horizontal-margin</strong> = <code class="g-property">margin-right</code>,<code class="g-property">margin-left</code></p>			<p><strong>默认值</strong>：<mark class="defaultvalue">0</mark></p>
+			<p><strong>适用于</strong>：所有元素，除<code class="g-value">非 table | inline-table | table-caption</code>的表格类元素之外</p>
+			<p><strong>继承性</strong>：无</p>
+			<p><strong>动画性</strong>：当取值为 <a href="../../values/length/index.htm">&lt;length&gt;</a> | <a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a> 时</p>
+			<p><strong>计算值</strong>：指定的百分比或绝对长度值</p>
+			<p><strong>媒　体</strong>：视觉</p>
+		</div>
+	</section>
+	<section id="value" class="g-mod g-attr">
+		<h2 class="tit">取值：</h2>
+		<div class="cont">
+			<dl>
+				<dt>auto：</dt>
+				<dd>水平（默认）书写模式下，<a href="#vertical-margin" class="g-property">vertical-margin</a>计算值为<code class="g-value">0</code>，<a href="#horizontal-margin" class="g-property">horizontal-margin</a>取决于包含块的剩余可用空间。详见：<a href="http://blog.doyoe.com/2013/11/29/css/margin%E7%B3%BB%E5%88%97%E4%B9%8Bkeyword%20auto/" rel="external" class="external" target="_blank">margin系列之keyword auto</a></dd>
+				<dt><a href="../../values/length/index.htm">&lt;length&gt;</a>：</dt>
+				<dd>用长度值来定义外补白。可以为负值</dd>
+				<dt><a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a>：</dt>
+				<dd>用百分比来定义外补白。水平（默认）书写模式下，参照其包含块的<a href="../dimension/width.htm" class="g-property">width</a>进行计算，其它情况参照<a href="../dimension/height.htm" class="g-property">height</a>，可以为负值</dd>
+			</dl>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
+		<h2 class="tit">说明：</h2>
+		<div class="cont">
+			<strong>简写属性。为元素设置所有四个方向（上右下左）的外边距。</strong>
+			<ul>
+				<li><code class="g-property">margin</code>属性接受<code class="g-code">1~4</code>个参数值。如果提供四个参数值，将按上、右、下、左的顺序作用于四边；提供三个，第一个用于上，第二个用于左、右，第三个用于下；提供两个，第一个用于上、下，第二个用于左、右；只提供一个，同时用于四边。</li>
+				<li>非替代(non-replaced)行内元素可以使用该属性定义<a href="#horizontal-margin" class="g-property">horizontal-margin</a>；若要定义<a href="#vertical-margin" class="g-property">vertical-margin</a>，必须改变元素为块级或行内块级。</li>
+				<li>外延边距始终透明，即不可见也无法设置背景等任何样式。</li>
+				<li>
+					<p>某些相邻的margin会发生合并，我们称之为margin折叠：</p>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>示例：</strong></p>
+						<blockquote class="gquote-cont"><pre><code>h2{margin:10px 0;}
+div{margin:20px 0;}
+......
+&lt;h2&gt;这是一个标题&lt;/h2&gt;
+&lt;div&gt;
+	&lt;h2&gt;这是又一个标题&lt;/h2&gt;
+&lt;/div&gt;</code></pre></blockquote>
+						<p class="gquote-info">本例中，第1个h2的margin-bottom，div的margin-top，第2个h2的margin-top是相邻的，三者会被合并取其中最大的那个值作为最后的间隙，所以它们之间的margin间隙最后是（20px）。</p>
+					</div>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>如果给上例中的div加上border的话：</strong></p>
+						<blockquote class="gquote-cont"><pre><code>h2{margin:10px 0;}
+div{margin:20px 0;border:1px solid #aaa;}
+......
+&lt;h2&gt;这是一个标题&lt;/h2&gt;
+&lt;div&gt;
+	&lt;h2&gt;这是又一个标题&lt;/h2&gt;
+&lt;/div&gt;</code></pre></blockquote>
+						<p class="gquote-info">本例中，第一个h2的margin-bottom（10px），div的margin-top（20px）将被合并，但第二个h2的margin-top不与它们合并，因为它被border分隔，不与它们相邻。</p>
+					</div>
+				</li>
+				<li>
+					<strong>margin折叠常规认知：</strong>
+					<ul class="gitem">
+						<li>margin折叠只发生在块级元素上；</li>
+						<li>浮动元素的margin不与任何margin发生折叠；</li>
+						<li>设置了属性<a href="../layout/overflow.htm" class="g-property">overflow</a>且值为<code class="g-value">非visible</code>的块级元素，将不与它的子元素发生margin折叠；</li>
+						<li>绝对定位元素的margin不与任何margin发生折叠；</li>
+						<li>根元素的margin不与其它任何margin发生折叠；</li>
+					</ul>
+				</li>
+				<li>对应的脚本特性为：<strong>margin</strong>。</li>
+			</ul>
+			<strong>分拆纵向独立属性。为元素设置上、下外边距。</strong>
+			<ul>
+				<li>替代(Replaced)行内元素可以应用该属性；非替代(non-Replaced)行内元素要使用该属性必须改变元素为块级或行内块级。</li>
+				<li>水平（默认）书写模式下，margin 合并只发生在<a href="#vertical-margin" class="g-property">vertical-margin</a>上。</li>
+				<li>对应的脚本特性分别为：<strong>marginTop, marginBottom</strong>。</li>
+			</ul>
+			<strong>分拆横向独立属性。为元素设置上、下外边距。</strong>
+			<ul>
+				<li>所有的行内元素均可以应用该属性。</li>
+				<li>默认情况下，<a href="#horizontal-margin" class="g-property">horizontal-margin</a>不会发生 margin 折叠，除非将书写模式改变为纵向。</li>
+				<li>对应的脚本特性分别为：<strong>marginRight, marginLeft</strong>。</li>
+			</ul>
+		</div>
+	</section>
+	<section id="compatible" class="g-mod g-attr">
+		<h2 class="tit">兼容性：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">粉色</span> = 部分支持</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th>Values</th>
+						<th>IE</th>
+						<th>Firefox</th>
+						<th>Chrome</th>
+						<th>Safari</th>
+						<th>Opera</th>
+						<th>iOS Safari</th>
+						<th>Android Browser</th>
+						<th>Android Chrome</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><strong>Basic Support</strong></td>
+						<td class="support">8.0+</td>
+						<td class="support">40.0+</td>
+						<td class="support">40.0+</td>
+						<td class="support">8.0+</td>
+						<td class="support">40.0+</td>
+						<td class="support">8.0+</td>
+						<td class="support">4.4+</td>
+						<td class="support">28.0+</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+	<section id="example" class="g-mod g-attr">
+		<h2 class="tit">示例：</h2>
+		<div class="cont">
+			<textarea cols="90" rows="10">
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="utf-8" />
+<title>margin_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<style>
+.test {
+	margin: 20px;
+	background: #eee;
+}
+</style>
+</head>
+<body>
+<div class="test">注意我距上、右、下、左的距离</div>
+</body>
+</html>
+			</textarea>
+			<p><input type="button" value="运行" class="g-btn g-btn-sure" /></p>
+		</div>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/inner.js"></script>
+</body>
+</html>

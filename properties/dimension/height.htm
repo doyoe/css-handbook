@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <title>height</title>
-<meta name="description" content="CSS3参考手册之:height" />
+<meta name="description" content="CSS3参考手册之：height" />
 <meta name="keywords" content="height, css3, css3参考手册" />
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <meta name="robots" content="all" />
@@ -19,14 +19,14 @@
 		<span>&#187;</span>
 		<a href="../index.htm">属性列表</a>
 		<span>&#187;</span>
-		<a href="index.htm" id="category" rel="properties/dimension" name="height">尺寸属性</a>
+		<a href="index.htm" id="category" rel="properties/dimension" name="height">尺寸与补白属性</a>
 		<span>&#187;</span>
 	</div>
 	<div class="to">
 		<span class="label">相关内容：</span>
 		<div class="g-combobox g-transition">
 			<a href="?" class="g-transition target">
-				<strong>其它尺寸属性参考</strong>
+				<strong>其它尺寸与补白参考</strong>
 				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
 			</a>
 			<div class="list ghide">
@@ -42,7 +42,7 @@
 		<h1 class="tit">height</h1>
 		<ul class="info">
 			<li><strong>版本：CSS1</strong></li>
-			<li>媒体：视觉</li>
+			<li>2018.2.28</li>
 		</ul>
 		<!-- 插入浏览器信息 -->
 	</section>
@@ -53,10 +53,11 @@
 		<div class="cont">
 			<p><strong>height</strong>：<a href="../../values/length/length.htm">&lt;length&gt;</a> | <a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a> | auto</p>
 			<p><strong>默认值</strong>：<mark class="defaultvalue">auto</mark></p>
-			<p><strong>适用于</strong>：除非置换内联元素，table-column, table-column-group之外的所有元素</p>
+			<p><strong>适用于</strong>：除<code class="g-value">非置换内联元素，table-row, table-row-group</code>之外的所有元素</p>
 			<p><strong>继承性</strong>：无</p>
-			<p><strong>动画性</strong>：当值为<a href="../../values/length/length.htm">&lt;length&gt;</a> | <a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a>时</p>
+			<p><strong>动画性</strong>：当值为 <a href="../../values/length/length.htm">&lt;length&gt;</a> | <a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a> 时</p>
 			<p><strong>计算值</strong>：指定的值</p>
+			<p><strong>媒　体</strong>：视觉</p>
 		</div>
 	</section>
 	<section id="value" class="g-mod g-attr">
@@ -75,11 +76,11 @@
 	<section id="intro" class="g-mod g-attr">
 		<h2 class="tit">说明：</h2>
 		<div class="cont">
-			<strong>检索或设置对象的高度。</strong>
+			<strong>定义了元素内容区（Content Area）的高度</strong>
 			<ul>
-				<li>对于img对象来说，仅指定此属性，其<a href="width.htm">width</a>值将根据图片源尺寸等比例缩放。</li>
-				<li>对于盒模型规则，请参阅<a href="../user-interface/box-sizing.htm">box-sizing</a>属性。</li>
-				<li>对应的脚本特性为<strong>height</strong>。</li>
+				<li>对于<code class="g-code">img</code>元素来说，若仅指定此属性，其<a href="width.htm" class="g-property">width</a>值将会根据图片源尺寸进行等比例缩放。</li>
+				<li><code class="g-property">width</code>属性是盒模型的重要组成部分，对于盒模型规则，请参阅<a href="../user-interface/box-sizing.htm" class="g-property">box-sizing</a>属性。</li>
+				<li>对应的脚本特性为：<strong>height</strong>。</li>
 			</ul>
 		</div>
 	</section>
@@ -108,14 +109,14 @@
 				<tbody>
 					<tr>
 						<td><strong>Basic Support</strong></td>
-						<td class="support">6.0+</td>
-						<td class="support">2.0+</td>
-						<td class="support">4.0+</td>
-						<td class="support">3.1+</td>
-						<td class="support">3.5+</td>
-						<td class="support">3.2+</td>
-						<td class="support">2.1+</td>
-						<td class="support">18.0+</td>
+						<td class="support">8.0+</td>
+						<td class="support">40.0+</td>
+						<td class="support">40.0+</td>
+						<td class="support">8.0+</td>
+						<td class="support">40.0+</td>
+						<td class="support">8.0+</td>
+						<td class="support">4.4+</td>
+						<td class="support">28.0+</td>
 					</tr>
 				</tbody>
 			</table>

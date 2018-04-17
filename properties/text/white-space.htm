@@ -42,7 +42,7 @@
 		<h1 class="tit">white-space</h1>
 		<ul class="info">
 			<li><strong>版本：CSS1</strong></li>
-			<li>媒体：视觉</li>
+			<li>2018.3.21</li>
 		</ul>
 		<!-- 插入浏览器信息 -->
 	</section>
@@ -57,6 +57,7 @@
 			<p><strong>继承性</strong>：有</p>
 			<p><strong>动画性</strong>：否</p>
 			<p><strong>计算值</strong>：指定值</p>
+			<p><strong>媒　体</strong>：视觉</p>
 		</div>
 	</section>
 	<section id="value" class="g-mod g-attr">
@@ -64,24 +65,24 @@
 		<div class="cont">
 			<dl>
 				<dt>normal：</dt>
-				<dd>默认处理方式。</dd>
+				<dd>默认处理方式。会将序列的空格合并为一个，内部是否换行由换行规则决定。</dd>
 				<dt>pre：</dt>
-				<dd>用等宽字体显示预先格式化的文本，不合并文字间的空白距离，当文字超出边界时不换行。可查阅pre对象</dd>
+				<dd>原封不动的保留你输入时的状态，空格、换行都会保留，并且当文字超出边界时不换行。等同 pre 元素效果</dd>
 				<dt>nowrap：</dt>
-				<dd>强制在同一行内显示所有文本，合并文本间的多余空白，直到文本结束或者遭遇br对象。</dd>
+				<dd>与<code class="g-value">normal</code>值一致，不同的是会强制所有文本在同一行内显示。</dd>
 				<dt>pre-wrap：</dt>
-				<dd>用等宽字体显示预先格式化的文本，不合并文字间的空白距离，当文字碰到边界时发生换行。</dd>
+				<dd>与<code class="g-value">pre</code>值一致，不同的是文字超出边界时将自动换行。</dd>
 				<dt>pre-line：</dt>
-				<dd>保持文本的换行，不保留文字间的空白距离，当文字碰到边界时发生换行。</dd>
+				<dd>与<code class="g-value">normal</code>值一致，但是会保留文本输入时的换行。</dd>
 			</dl>
 		</div>
 	</section>
 	<section id="intro" class="g-mod g-attr">
 		<h2 class="tit">说明：</h2>
 		<div class="cont">
-			<strong>设置或检索对象内空格的处理方式。</strong>
+			<strong>指定元素是否保留文本间的空格、换行；指定文本超过边界时是否换行。</strong>
 			<ul>
-				<li>对应的脚本特性为<strong>whiteSpace</strong>。</li>
+				<li>对应的脚本特性为：<strong>whiteSpace</strong>。</li>
 			</ul>
 		</div>
 	</section>
@@ -110,38 +111,14 @@
 				<tbody>
 					<tr>
 						<td><strong>Basic Support</strong></td>
-						<td class="support">6.0+</td>
-						<td class="support">2.0+</td>
-						<td class="support">4.0+</td>
-						<td class="support">6.0+</td>
-						<td class="support">15.0+</td>
-						<td class="support">6.0+</td>
-						<td class="support">2.1+</td>
-						<td class="support">18.0+</td>
-					</tr>
-					<tr>
-						<td rowspan="2">pre-wrap</td>
-						<td class="unsupport">6.0-7.0</td>
-						<td class="support">2.0 <sup class="fix">-moz-</sup></td>
-						<td class="support" rowspan="4">4.0+</td>
-						<td class="support" rowspan="4">6.0+</td>
-						<td class="support" rowspan="4">15.0+</td>
-						<td class="support" rowspan="4">6.0+</td>
-						<td class="support" rowspan="4">2.1+</td>
-						<td class="support" rowspan="4">18.0+</td>
-					</tr>
-					<tr>
 						<td class="support">8.0+</td>
-						<td class="support">3.0+</td>
-					</tr>
-					<tr>
-						<td rowspan="2">pre-line</td>
-						<td class="unsupport">6.0-7.0</td>
-						<td class="unsupport">2.0-3.0</td>
-					</tr>
-					<tr>
+						<td class="support">40.0+</td>
+						<td class="support">40.0+</td>
 						<td class="support">8.0+</td>
-						<td class="support">3.5+</td>
+						<td class="support">40.0+</td>
+						<td class="support">8.0+</td>
+						<td class="support">4.4+</td>
+						<td class="support">28.0+</td>
 					</tr>
 				</tbody>
 			</table>

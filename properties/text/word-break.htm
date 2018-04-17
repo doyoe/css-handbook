@@ -42,7 +42,7 @@
 		<h1 class="tit">word-break</h1>
 		<ul class="info">
 			<li><strong>版本：CSS3</strong></li>
-			<li>媒体：视觉</li>
+			<li>2018.3.26</li>
 		</ul>
 		<!-- 插入浏览器信息 -->
 	</section>
@@ -51,13 +51,14 @@
 	<section id="syntax" class="g-mod g-attr">
 		<h2 class="tit">语法：</h2>
 		<div class="cont">
-			<p><strong>word-break</strong>：normal | keep-all | break-all</p>
+			<p><strong>word-break</strong>：normal | keep-all | break-all | break-word</p>
 			<p><strong>默认值</strong>：<mark class="defaultvalue">normal</mark></p>
 			<p><strong>适用于</strong>：所有元素</p>
 			<p><strong>继承性</strong>：有</p>
 			<p><strong>动画性</strong>：否</p>
 			<p><strong>计算值</strong>：指定值</p>
-			<p><strong>相关属性</strong>：&lt;' <a href="word-wrap.htm">word-wrap</a> '&gt;</p>
+			<p><strong>相关属性</strong>：<a href="word-wrap.htm" class="g-property">word-wrap/overflow-wrap</a></p>
+			<p><strong>媒　体</strong>：视觉</p>
 		</div>
 	</section>
 	<section id="value" class="g-mod g-attr">
@@ -65,22 +66,61 @@
 		<div class="cont">
 			<dl>
 				<dt>normal：</dt>
-				<dd>依照亚洲语言和非亚洲语言的文本规则，允许在字内换行。</dd>
+				<dd>默认的换行规则。依据各自语言的规则，允许在字间发生换行。</dd>
 				<dt>keep-all：</dt>
-				<dd>与所有非亚洲语言的normal相同。对于中文，韩文，日文，不允许字断开。适合包含少量亚洲文本的非亚洲文本。</dd>
+				<dd>对于 CJK（中文，韩文，日文）文本不允许在字符内发生换行。Non-CJK 文本表现同<code class="g-value">normal</code></dd>
 				<dt>break-all：</dt>
-				<dd>该行为与亚洲语言的normal相同。也允许非亚洲语言文本行的任意字内断开。该值适合包含一些非亚洲文本的亚洲文本，比如使连续的英文字母间断行。</dd>
+				<dd>对于 Non-CJK 文本允许在任意字符内发生换行。该值适合包含一些非亚洲文本的亚洲文本，比如使连续的英文字符断行。</dd>
+				<dt>break-word：</dt>
+				<dd>与<code class="g-value">break-all</code>相同，不同的地方在于它要求一个没有断行破发点的词必须保持为一个整体单位。这与<a href="word-wrap.htm" class="g-property">word-wrap</a>的<code class="g-value">break-word</code>值效果相同</dd>
 			</dl>
 		</div>
 	</section>
 	<section id="intro" class="g-mod g-attr">
 		<h2 class="tit">说明：</h2>
 		<div class="cont">
-			<strong>设置或检索对象内文本的字内换行行为。</strong>
+			<strong>定义元素内容文本的字间与字符间的换行行为。</strong>
 			<ul>
-				<li>对于解决防止页面中出现连续无意义的长字符打破布局，应该使用<code class="incode">break-all</code>属性值；</li>
-				<li class="g-color-light">作为IE的私有属性之一，IE5.5率先实现了 &lt;' word-break '&gt; ，后期被w3c采纳成标准属性；</li>
-				<li>对应的脚本特性为<strong>wordBreak</strong>。</li>
+				<li class="g-color-light">作为IE的私有属性之一，IE5.5率先实现了<code class="g-property">word-break</code>，后期被w3c采纳成标准属性；</li>
+				<li>对于解决防止页面中出现连续无意义的长字符打破布局，应该使用<code class="g-value">break-all | break-word</code>属性值；</li>
+				<li>
+					<p>同为强制打断单词的<code class="g-value">break-all</code>与<code class="g-value">break-word</code>的两个值，需要了解她们间的主要区别（下述2个示例需要在webkit/blink浏览器下查看）：</p>
+					<style>
+					.test1, .test2 {
+						background: #eee;
+						width: 140px;
+						font-size: 14px;
+						text-align: left !important;
+					}
+					.test1 {
+						word-break: break-all;
+					}
+					.test2 {
+						word-break: break-word;
+					}
+					</style>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>break-all：</strong></p>
+						<div class="gquote-cont">
+							<div class="img test1">做一个示例让大家更好的区分wordbreakbreakword与wordbreakbreakall的实际应用效果</div>
+							<blockquote class="code"><code><xmp>.test1 {
+	word-break: break-all;
+}</xmp></code></blockquote>
+						</div>
+						<p class="gquote-info">break-all会在文本内容遇见边界时，强制将文本打断换行，而不考虑单词是否是完整的一个单位</p>
+					</div>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>break-word：</strong></p>
+						<div class="gquote-cont">
+							<div class="img test2">做一个示例让大家更好的区分wordbreakbreakword与wordbreakbreakall的实际应用效果</div>
+							<blockquote class="code"><code><xmp>.test2 {
+	word-break: break-word;
+}</xmp></code></blockquote>
+						</div>
+						<p class="gquote-info">break-word同样也会在文本内容遇见边界时，强制将文本打断换行，不同的在于它会考虑单词是否完整，如果当前行无法放下需要被打断的单词，为了保持完整性，会将整个单词放到下一行进行展示</p>
+					</div>
+				</li>
+				<li>对应的脚本特性为：<strong>wordBreak</strong>。</li>
 			</ul>
 		</div>
 	</section>
@@ -108,37 +148,56 @@
 				</thead>
 				<tbody>
 					<tr>
-						<td rowspan="2"><strong>Basic Support</strong></td>
-						<td class="support" rowspan="2">6.0+</td>
-						<td class="unsupport">2.0-14.0</td>
-						<td class="support" rowspan="2">4.0+</td>
-						<td class="support" rowspan="2">6.0+</td>
-						<td class="support" rowspan="2">15.0+</td>
-						<td class="support" rowspan="2">6.0+</td>
-						<td class="support" rowspan="2">2.1+</td>
-						<td class="support" rowspan="2">18.0+</td>
-					</tr>
-					<tr>
-						<td class="support">15.0+</td>
+						<td><strong>Basic Support</strong></td>
+						<td class="support">8.0+</td>
+						<td class="support">40.0+</td>
+						<td class="support">40.0+</td>
+						<td class="support">8.0+</td>
+						<td class="support">40.0+</td>
+						<td class="support">8.0+</td>
+						<td class="support">4.4+</td>
+						<td class="support">28.0+</td>
 					</tr>
 					<tr>
 						<td rowspan="2">keep-all</td>
-						<td class="support" rowspan="2">6.0+</td>
-						<td class="unsupport">2.0-14.0</td>
-						<td class="unsupport" rowspan="2">4.0-45.0</td>
-						<td class="unsupport" rowspan="2">6.0-8.0</td>
-						<td class="unsupport" rowspan="2">15.0-29.0</td>
-						<td class="unsupport" rowspan="2">6.0-8.3</td>
-						<td class="unsupport" rowspan="2">2.1-4.4.4</td>
-						<td class="unsupport" rowspan="2">18.0-42.0</td>
+						<td class="support" rowspan="2">8.0+</td>
+						<td class="support" rowspan="2">40.0+</td>
+						<td class="unsupport">40.0-43.0</td>
+						<td class="unsupport">8.0</td>
+						<td class="support" rowspan="2">40.0+</td>
+						<td class="unsupport">8.0-8.4</td>
+						<td class="unsupport">4.4-43.0</td>
+						<td class="unsupport">28.0-43.0</td>
 					</tr>
 					<tr>
-						<td class="support">15.0+</td>
+						<td class="support">44.0+</td>
+						<td class="support">9.0+</td>
+						<td class="support">9.0+</td>
+						<td class="support">44.0+</td>
+						<td class="support">44.0+</td>
+					</tr>
+					<tr>
+						<td rowspan="2">break-word <sup><a href="#support1">#1</a></sup></td>
+						<td class="unsupport" rowspan="2">8.0-16.0</td>
+						<td class="unsupport" rowspan="2">40.0-58.0</td>
+						<td class="unsupport">40.0-43.0</td>
+						<td class="unsupport">8.0</td>
+						<td class="support" rowspan="2">40.0+</td>
+						<td class="unsupport">8.0-8.4</td>
+						<td class="unsupport">4.4-43.0</td>
+						<td class="unsupport">28.0-43.0</td>
+					</tr>
+					<tr>
+						<td class="support">44.0+</td>
+						<td class="support">9.0+</td>
+						<td class="support">9.0+</td>
+						<td class="support">44.0+</td>
+						<td class="support">44.0+</td>
 					</tr>
 				</tbody>
 			</table>
 			<ol class="support-info">
-				<li id="support1">不支持：keep-all 作为参数值。</li>
+				<li id="support1">Safari, Chrome, Opera 以及其他 WebKit/Blink 内核浏览器还支持<code class="g-value">break-word</code>属性值，不过对于版本的支持性，上述表格数据不一定准确。</li>
 			</ol>
 		</div>
 	</section>
@@ -157,21 +216,26 @@
 .normal p{word-break:normal;}
 .break-all p{word-break:break-all;}
 .keep-all p{word-break:keep-all;}
+.break-word p{word-break:break-word;}
 </style>
 </head>
 <body>
 <ul class="test">
 	<li class="normal">
 		<strong>normal：</strong>
-		<p>aaabbbcccdddeeefffggghhhiiijjjkkklllmmmnnn</p>
+		<p>测试效果aaabbbcccdddeeefffggghhhiiijjjkkklllmmmnnn</p>
 	</li>
 	<li class="break-all">
-		<strong>break-word：</strong>
-		<p>aaabbbcccdddeeefffggghhhiiijjjkkklllmmmnnn</p>
+		<strong>break-all：</strong>
+		<p>测试效果aaabbbcccdddeeefffggghhhiiijjjkkklllmmmnnn</p>
 	</li>
 	<li class="keep-all">
 		<strong>keep-all：</strong>
-		<p>aaabbbcccdddeeefffggghhhiiijjjkkklllmmmnnn</p>
+		<p>测试效果aaabbbcccdddeeefffggghhhiiijjjkkklllmmmnnn</p>
+	</li>
+	<li class="break-word">
+		<strong>break-word：</strong>
+		<p>测试效果aaabbbcccdddeeefffggghhhiiijjjkkklllmmmnnn</p>
 	</li>
 </ul>
 </body>

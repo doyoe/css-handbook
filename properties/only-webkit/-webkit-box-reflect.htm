@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="utf-8" />
+<title>-webkit-box-reflect</title>
+<meta name="description" content="CSS3参考手册之: -webkit-box-reflect" />
+<meta name="keywords" content="-webkit-box-reflect, css3, css3参考手册" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../../skin/article.css" />
+</head>
+<body>
+<nav id="guide" class="g-mod">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="../index.htm">属性列表</a>
+		<span>&#187;</span>
+		<a href="index.htm" id="category" rel="properties/only-webkit" name="-webkit-box-reflect">Only Webkit属性</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它Only Webkit属性</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入快速分类导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">-webkit-box-reflect</h1>
+		<ul class="info">
+			<li><strong>版本：CSS3</strong></li>
+			<li>媒体：视觉</li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="syntax" class="g-mod g-attr">
+		<h2 class="tit">语法：</h2>
+		<div class="cont">
+			<p><strong>-webkit-box-reflect</strong>：none | <a href="#dfn-syntax">&lt;direction&gt;</a> <a href="#dfn-syntax2">&lt;offset&gt;</a>? <a href="#dfn-syntax3">&lt;mask-box-image&gt;</a>?</p>
+			<p id="dfn-syntax"><strong>&lt;direction&gt;</strong> = above | below | left | right</p>
+			<p id="dfn-syntax2"><strong>&lt;offset&gt;</strong> = <a href="../../values/length/index.htm">&lt;length&gt;</a> | <a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a></p>
+			<p id="dfn-syntax3"><strong>&lt;mask-box-image&gt;</strong> =  none | <a href="../../values/textual/url.htm">&lt;url&gt;</a> | <a href="../../values/image/linear-gradient().htm">&lt;linear-gradient&gt;</a> | <a href="../../values/image/radial-gradient().htm">&lt;radial-gradient&gt;</a> | <a href="../../values/image/repeating-linear-gradient().htm">&lt;repeating-linear-gradient&gt;</a> | <a href="../../values/image/repeating-radial-gradient().htm">&lt;repeating-radial-gradient&gt;</a></p>
+			<p><strong>默认值</strong>：<mark class="defaultvalue">none</mark></p>
+			<p><strong>适用于</strong>：所有元素</p>
+			<p><strong>继承性</strong>：无</p>
+			<p><strong>动画性</strong>：否</p>
+			<p><strong>计算值</strong>：指定值</p>
+		</div>
+	</section>
+	<section id="value" class="g-mod g-attr">
+		<h2 class="tit">取值：</h2>
+		<div class="cont">
+			<dl>
+				<dt>none：</dt>
+				<dd>无倒影</dd>
+			</dl>
+			<h3 class="g-color-light">&lt;direction&gt;　Demo: <a href="http://demo.doyoe.com/css3/box-reflect/reflect-direction.htm" target="_blank" class="external" rel="external">简单图片倒影</a> <span class="g-color-light">See with Webkit</span></h3>
+			<dl>
+				<dt>above：</dt>
+				<dd>指定倒影在对象的上边</dd>
+				<dt>below：</dt>
+				<dd>指定倒影在对象的下边</dd>
+				<dt>left：</dt>
+				<dd>指定倒影在对象的左边</dd>
+				<dt>right：</dt>
+				<dd>指定倒影在对象的右边</dd>
+			</dl>
+			<h3 class="g-color-light">&lt;offset&gt;　Demo: <a href="http://demo.doyoe.com/css3/box-reflect/reflect-offset.htm" target="_blank" class="external" rel="external">图片与倒影间隔</a> <span class="g-color-light">See with Webkit</span></h3>
+			<dl>
+				<dt><a href="../../values/length/index.htm">&lt;length&gt;</a>：</dt>
+				<dd>用长度值来定义倒影与对象之间的间隔。可以为负值</dd>
+				<dt><a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a>：</dt>
+				<dd>用百分比来定义倒影与对象之间的间隔。可以为负值</dd>
+			</dl>
+			<h3 class="g-color-light">&lt;mask-box-image&gt;　Demo: <a href="http://demo.doyoe.com/css3/box-reflect/reflect-image.htm" target="_blank" class="external" rel="external">更真实的图片倒影</a> <a href="http://demo.doyoe.com/css3/box-reflect/reflect-text.htm" target="_blank" class="external" rel="external">文字倒影与渐变</a> <span class="g-color-light">See with Webkit</span></h3>
+			<dl>
+				<dt>none：</dt>
+				<dd>无遮罩图像</dd>
+				<dt><a href="../../values/textual/url.htm">&lt;url&gt;</a>：</dt>
+				<dd>使用绝对或相对地址指定遮罩图像。</dd>
+				<dt><a href="../../values/image/linear-gradient().htm">&lt;linear-gradient&gt;</a>：</dt>
+				<dd>使用线性渐变创建遮罩图像。</dd>
+				<dt><a href="../../values/image/radial-gradient().htm">&lt;radial-gradient&gt;</a>：</dt>
+				<dd>使用径向(放射性)渐变创建遮罩图像。</dd>
+				<dt><a href="../../values/image/repeating-linear-gradient().htm">&lt;repeating-linear-gradient&gt;</a>：</dt>
+				<dd>使用重复的线性渐变创建背遮罩像。</dd>
+				<dt><a href="../../values/image/repeating-radial-gradient().htm">&lt;repeating-radial-gradient&gt;</a>：</dt>
+				<dd>使用重复的径向(放射性)渐变创建遮罩图像。</dd>
+			</dl>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
+		<h2 class="tit">说明：</h2>
+		<div class="cont">
+			<strong>设置或检索对象倒影。</strong>
+			<ul>
+				<li>假设定义了 <a href="#dfn-syntax3">&lt;mask-box-image&gt;</a>，<a href="#dfn-syntax2">&lt;offset&gt;</a>必须指定，否则可以省略</li>
+				<li>对应的脚本特性为<strong>boxReflect</strong>。</li>
+			</ul>
+		</div>
+	</section>
+	<section id="compatible" class="g-mod g-attr">
+		<h2 class="tit">兼容性：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">粉色</span> = 部分支持</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th>Values</th>
+						<th>IE</th>
+						<th>Firefox</th>
+						<th>Chrome</th>
+						<th>Safari</th>
+						<th>Opera</th>
+						<th>iOS Safari</th>
+						<th>Android Browser</th>
+						<th>Android Chrome</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><strong>Basic Support</strong></td>
+						<td class="unsupport">6.0-11.0</td>
+						<td class="unsupport">2.0-40.0</td>
+						<td class="support">4.0-45.0<sup class="fix">-webkit-</sup></td>
+						<td class="support">4.0-8.0<sup class="fix">-webkit-</sup></td>
+						<td class="support">15.0-29.0<sup class="fix">-webkit-</sup></td>
+						<td class="support">4.0-8.3<sup class="fix">-webkit-</sup></td>
+						<td class="support">2.1-4.4.4<sup class="fix">-webkit-</sup><sup><a href="#support1">#1</a></sup></td>
+						<td class="support">18.0-42.0<sup class="fix">-webkit-</sup></td>
+					</tr>
+				</tbody>
+			</table>
+			<ol class="support-info">
+				<li id="support1">需要注意的是4.0以前的安卓系统需要使用老式的渐变语法，详见<a href="../../values/image/gradient.htm">&lt;gradient&gt;</a>下的各种渐变支持数据。</li>
+			</ol>
+		</div>
+	</section>
+	<section id="example" class="g-mod g-attr">
+		<h2 class="tit">示例：</h2>
+		<div class="cont">
+			<textarea cols="90" rows="10">
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="utf-8" />
+<title>-webkit-box-reflect_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<style>
+html,body{
+	margin:50px 0;
+}
+.reflect{
+	width:950px;
+	margin:0 auto;
+	-webkit-box-reflect:below 0 -webkit-linear-gradient(transparent,transparent 50%,rgba(255,255,255,.3));
+	font:bold 100px/1.231 georgia,sans-serif;
+	text-transform:uppercase;
+}
+</style>
+</head>
+<body>
+<div class="reflect">你看到倒影了么？</div>
+</body>
+</html>
+			</textarea>
+			<p><input type="button" value="运行" class="g-btn g-btn-sure" /></p>
+		</div>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/inner.js"></script>
+</body>
+</html>

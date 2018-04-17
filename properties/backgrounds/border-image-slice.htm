@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="utf-8" />
+<title>border-image-slice</title>
+<meta name="description" content="CSS3参考手册之：border-image-slice" />
+<meta name="keywords" content="border-image-slice, css3, css3参考手册" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../../skin/article.css" />
+</head>
+<body>
+<nav id="guide">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="../index.htm">属性列表</a>
+		<span>&#187;</span>
+		<a href="index.htm" id="category" rel="properties/backgrounds" name="border-image-slice">背景与边框属性</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它背景边框参考</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入快速分类导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">border-image-slice</h1>
+		<ul class="info">
+			<li><strong>版本：CSS3</strong></li>
+			<li>2018.3.8</li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="syntax" class="g-mod g-attr">
+		<h2 class="tit">语法：</h2>
+		<div class="cont">
+			<p><strong>border-image-slice</strong>：[ <a href="../../values/numeric/number.htm">&lt;number&gt;</a> | <a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a> ]{1,4} && fill?</p>
+			<p><strong>默认值</strong>：<mark class="defaultvalue">100%</mark></p>
+			<p><strong>适用于</strong>：所有元素，除table元素设置了<a href="../table/border-collapse.htm" class="g-property">border-collapse</a>属性值为<code class="g-value">collapse</code>之外</p>
+			<p><strong>继承性</strong>：无</p>
+			<p><strong>动画性</strong>：否</p>
+			<p><strong>计算值</strong>：指定值</p>
+			<p><strong>媒　体</strong>：视觉</p>
+		</div>
+	</section>
+	<section id="value" class="g-mod g-attr">
+		<h2 class="tit">取值：</h2>
+		<div class="cont">
+			<dl>
+				<dt><a href="../../values/numeric/number.htm">&lt;number&gt;</a>：</dt>
+				<dd>用浮点数指定图像分割的位置。数字代表在图像上的像素位置或向量坐标。不允许负值。</dd>
+				<dt><a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a>：</dt>
+				<dd>用百分比指定图像分割的位置。垂直和水平方向的百分比分别参照图片的宽和高进行换算。不允许负值。</dd>
+				<dt>fill：</dt>
+				<dd>保留裁减后的中间区域，其铺排方式遵循<a href="border-image-repeat.htm" class="g-property">border-image-repeat</a>的定义。</dd>
+			</dl>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
+		<h2 class="tit">说明：</h2>
+		<div class="cont">
+			<strong>用以指定从哪 4 个位置分割图像（遵循上右下左的顺序）。</strong>
+			<ul>
+				<li>
+					<p>该属性指定从上，右，下，左 4 个方位来分割图像，将图像分成4个角，4条边和中间区域共9份，中间区域始终是透明的（即没图像填充），除非加上关键字<code class="g-value">fill</code>。</p>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>图像分割示例：</strong></p>
+						<div class="gquote-cont">
+							<figure class="img">
+								<img src="images/slice.png" alt="图像分割示例" />
+								<figcaption>（图一）此图修改于 w3.org 的示例</figcaption>
+							</figure>
+							<blockquote class="code"><code><xmp>.demo {
+	border-image-slice: 25% 30% 12% 20%;
+}</xmp></code></blockquote>
+						</div>
+						<p class="gquote-info">图一中 A, B, C, D 表示从上右下左对图像进行4次分割。图像被分割成 1, 2, 3, 4 这4个角和 5, 6, 7, 8 这4条边，最后包括中间部分9。其中中间的部分 9 默认不会被图像填充，除非定义了关键字<code class="g-value">fill</code></p>
+					</div>
+				</li>
+				<li>除<code class="g-value">fill</code>关键字外，该属性接受<code class="g-code">1~4</code>个参数值，如果提供全部四个参数值，将按上、右、下、左的顺序进行分割；提供三个，第一个用于上，第二个用于左、右，第三个用于下；提供两个，第一个用于上、下，第二个用于左、右；只提供一个，上右下左都使用该值进行分割。</li>
+				<li>对应的脚本特性为：<strong>borderImageSlice</strong>。</li>
+			</ul>
+		</div>
+	</section>
+	<section id="compatible" class="g-mod g-attr">
+		<h2 class="tit">兼容性：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">粉色</span> = 部分支持</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th>Values</th>
+						<th>IE</th>
+						<th>Firefox</th>
+						<th>Chrome</th>
+						<th>Safari</th>
+						<th>Opera</th>
+						<th>iOS Safari</th>
+						<th>Android Browser</th>
+						<th>Android Chrome</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td rowspan="2"><strong>Basic Support</strong></td>
+						<td class="unsupport">10.0</td>
+						<td class="support" rowspan="2">40.0+</td>
+						<td class="support" rowspan="2">40.0+</td>
+						<td class="support" rowspan="2">8.0+</td>
+						<td class="support" rowspan="2">40.0+</td>
+						<td class="support" rowspan="2">8.0+</td>
+						<td class="support" rowspan="2">4.4+</td>
+						<td class="support" rowspan="2">40.0+</td>
+					</tr>
+					<tr>
+						<td class="support">11.0+</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+	<section id="example" class="g-mod g-attr">
+		<h2 class="tit">示例：</h2>
+		<div class="cont">
+			<textarea cols="90" rows="10">
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="utf-8" />
+<title>border-image-slice_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<style>
+.test1,
+.test2 {
+	margin-top: 10px;
+	padding: 5px;
+	border-width: 1px 9px;
+	border-style: solid;
+	border-color: orange;
+	border-image-source: url(skin/button.png);
+	border-image-repeat: repeat stretch;
+}
+.test1 {
+	border-image-slice: 1 9;
+}
+.test2 {
+	border-image-slice: 1 9 fill;
+}
+</style>
+</head>
+<body>
+<div class="test1">不保留裁减后的中间区域</div>
+<div class="test2">保留裁减后的中间区域</div>
+</body>
+</html>
+			</textarea>
+			<p><input type="button" value="运行" class="g-btn g-btn-sure" /></p>
+		</div>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/inner.js"></script>
+</body>
+</html>

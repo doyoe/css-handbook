@@ -42,6 +42,7 @@
 		<h1 class="tit">E:last-of-type</h1>
 		<ul class="info">
 			<li><strong>版本：CSS3</strong></li>
+			<li>修订: 2017.8.3</li>
 		</ul>
 		<!-- 插入浏览器信息 -->
 	</section>
@@ -56,10 +57,45 @@
 	<section id="intro" class="g-mod g-attr">
 		<h2 class="tit">说明：</h2>
 		<div class="cont">
-			<strong>匹配同类型中的最后一个同级兄弟元素E。</strong>
+			<strong>匹配父元素下的所有E子元素中的倒数第一个。</strong>
+			<p>需要注意3个要点：</p>
 			<ul>
-				<li>要使该属性生效，E元素必须是某个元素的子元素，E的父元素最高是html，即E可以是html的子元素，也就是说E可以是body</li>
-				<li>该选择符总是能命中父元素的倒数第1个为E的子元素，不论倒数第1个子元素是否为E</li>
+				<li>首先，因为匹配的是父元素的子元素，这意味着E元素必须作为某个元素的子元素存在（E元素的父元素最高是html，也就是说E元素最高是body，这表示任何非html的元素都符合这个约束，因为html元素是根元素。）</li>
+				<li>
+					<p>其次，匹配的是父元素的第一个E子元素（要注意：被命中的不一定是父元素的第一个子元素，因为排在子元素首位的不一定是E元素，它可能在子元素列表中的任何位置）</p>
+					<strong>来看下面这个例子：</strong>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>HTML示例代码：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp><div class="demo">
+	<p>p1</p>
+	<p>p2</p>
+	<span>span1</span>
+	<p>p3</p>
+	<span>span2</span>
+</div></xmp></code></blockquote>
+						<p class="gquote-tit"><strong>如上HTML，假设要命中第1个span元素，代码如下：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp>.demo span:first-of-type { color: #f00; }</xmp></code></blockquote>
+						<p class="gquote-info">此时 .demo 的第3个子元素会被命中，因为 .demo 的第3个子元素正好是第1个span元素</p>
+					</div>
+				</li>
+				<li>
+					<p>再次，只能匹配与E元素同级的元素，即：E元素的兄弟元素</p>
+					<strong>来看下面这个例子：</strong>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>HTML示例代码：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp><div class="demo">
+	<span>span1</span>
+	<p>
+		<span>span2</span>
+		<span>span3</span>
+	</p>
+	<span>span4</span>
+</div></xmp></code></blockquote>
+						<p class="gquote-tit"><strong>如上HTML，如果我想匹配其中的第1个span，代码如下：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp>.demo span:first-of-type { color: #f00; }</xmp></code></blockquote>
+						<p class="gquote-info">结果span1和span2都会被命中，因为span1和span2分属不同的父元素，并且都是其父元素的首个span元素，所以都会被命中</p>
+					</div>
+				</li>
 			</ul>
 		</div>
 	</section>

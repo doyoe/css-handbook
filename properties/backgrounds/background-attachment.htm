@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="utf-8" />
+<title>background-attachment</title>
+<meta name="description" content="CSS3参考手册之：background-attachment" />
+<meta name="keywords" content="background-attachment, css3, css3参考手册" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../../skin/article.css" />
+</head>
+<body>
+<nav id="guide">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="../index.htm">属性列表</a>
+		<span>&#187;</span>
+		<a href="index.htm" id="category" rel="properties/backgrounds" name="background-attachment">背景与边框属性</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它背景边框参考</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入快速分类导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">background-attachment</h1>
+		<ul class="info">
+			<li><strong>版本：CSS1/3</strong></li>
+			<li>2018.3.14</li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="syntax" class="g-mod g-attr">
+		<h2 class="tit">语法：</h2>
+		<div class="cont">
+			<p><strong>background-attachment</strong>：<a href="#dfn-syntax">&lt;attachment&gt;</a> <ins class="g-color-css3-new" title="css3">[ , <a href="#dfn-syntax">&lt;attachment&gt;</a> ]*</ins></p>
+			<p id="dfn-syntax"><strong>&lt;attachment&gt;</strong> = fixed | scroll | <ins class="g-color-css3-new" title="css3">local</ins></p>
+			<p><strong>默认值</strong>：<mark class="defaultvalue">scroll</mark></p>
+			<p><strong>适用于</strong>：所有元素</p>
+			<p><strong>继承性</strong>：无</p>
+			<p><strong>动画性</strong>：否</p>
+			<p><strong>计算值</strong>：指定值</p>
+			<p><strong>媒　体</strong>：视觉</p>
+		</div>
+	</section>
+	<section id="value" class="g-mod g-attr">
+		<h2 class="tit">取值：</h2>
+		<div class="cont">
+			<dl>
+				<dt>fixed：</dt>
+				<dd>背景图像相对于视口（viewport）固定。</dd>
+				<dt>scroll：</dt>
+				<dd>背景图像相对于元素固定，也就是说当元素内容滚动时背景图像不会跟着滚动，因为背景图像总是要跟着元素本身。但会随元素的祖先元素或窗体一起滚动。</dd>
+				<dt class="g-color-css3-new">local：</dt>
+				<dd>背景图像相对于元素内容固定，也就是说当元素随元素滚动时背景图像也会跟着滚动，因为背景图像总是要跟着内容。（CSS3）</dd>
+			</dl>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
+		<h2 class="tit">说明：</h2>
+		<div class="cont">
+			<strong>定义滚动时背景图像相对于谁固定。</strong>
+			<ul>
+				<li>对应的脚本特性为：<strong>backgroundAttachment</strong>。</li>
+			</ul>
+		</div>
+	</section>
+	<section id="compatible" class="g-mod g-attr">
+		<h2 class="tit">兼容性：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">粉色</span> = 部分支持</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th>Values</th>
+						<th>IE</th>
+						<th>Firefox</th>
+						<th>Chrome</th>
+						<th>Safari</th>
+						<th>Opera</th>
+						<th>iOS Safari</th>
+						<th>Android Browser</th>
+						<th>Android Chrome</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><strong>Basic Support</strong></td>
+						<td class="support">8.0+</td>
+						<td class="support" rowspan="3">40.0+</td>
+						<td class="support" rowspan="3">40.0+</td>
+						<td class="support" rowspan="3">8.0+</td>
+						<td class="support" rowspan="3">40.0+</td>
+						<td class="partsupport" rowspan="3">8.0-11.2 <sup><a href="#support1">#1</a></sup></td>
+						<td class="support" rowspan="3">4.4+</td>
+						<td class="support" rowspan="3">28.0+</td>
+					</tr>
+					<tr>
+						<td rowspan="2"><ins class="g-color-css3-new" title="css3">local</ins>关键字<br />Multiple background attachment</td>
+						<td class="unsupport">8.0</td>
+					</tr>
+					<tr>
+						<td class="support">9.0+</td>
+					</tr>
+				</tbody>
+			</table>
+			<ol class="support-info">
+				<li id="support1">仅当未定义<code class="g-code">-webkit-overflow-scrolling: touch</code>时，支持<code class="g-value">local</code>关键字；</li>
+			</ol>
+		</div>
+	</section>
+	<section id="example" class="g-mod g-attr">
+		<h2 class="tit">示例：</h2>
+		<div class="cont">
+			<textarea cols="90" rows="10">
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="utf-8" />
+<title>background-attachment_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<style>
+body {
+	background-image: url(skin/p_103x196_1.jpg);
+	background-repeat: no-repeat;
+	background-position: 50% 200px;
+	background-attachment: fixed;
+}
+</style>
+</head>
+<body>
+	<p>背景图像不随窗体内容滚动始终固定</p>
+	<p>文字内容</p>
+	<p>文字内容</p>
+	<p>文字内容</p>
+	<p>文字内容</p>
+	<p>文字内容</p>
+	<p>文字内容</p>
+	<p>文字内容</p>
+	<p>文字内容</p>
+	<p>文字内容</p>
+	<p>文字内容</p>
+	<p>文字内容</p>
+	<p>文字内容</p>
+	<p>文字内容</p>
+	<p>文字内容</p>
+	<p>文字内容</p>
+	<p>文字内容</p>
+	<p>文字内容</p>
+	<p>文字内容</p>
+	<p>文字内容</p>
+	<p>文字内容</p>
+	<p>文字内容</p>
+	<p>文字内容</p>
+	<p>文字内容</p>
+	<p>文字内容</p>
+	<p>文字内容</p>
+	<p>文字内容</p>
+	<p>文字内容</p>
+	<p>文字内容</p>
+	<p>文字内容</p>
+	<p>文字内容</p>
+	<p>文字内容</p>
+	<p>文字内容</p>
+	<p>文字内容</p>
+	<p>文字内容</p>
+	<p>文字内容</p>
+	<p>文字内容</p>
+	<p>文字内容</p>
+	<p>背景图像不随窗体内容滚动始终固定</p>
+</body>
+</html>
+			</textarea>
+			<p><input type="button" value="运行" class="g-btn g-btn-sure" /></p>
+		</div>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/inner.js"></script>
+</body>
+</html>

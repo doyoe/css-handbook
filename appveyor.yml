@@ -1,0 +1,33 @@
+install:
+  # 安装npm包
+  - npm install
+
+test_script:
+  - npm run test
+
+before_build:
+  # 下载HTML Help Workshop
+  - curl -L -o "%TEMP%\htmlhelp.exe" https://download.microsoft.com/download/0/A/9/0A939EF6-E31C-430F-A3DF-DFAE7960D564/htmlhelp.exe
+  # 解压htmlhelp.exe到%TEMP%\HTML Help Workshop
+  - 7z x "%TEMP%\htmlhelp.exe" -o"%TEMP%\HTML Help Workshop"
+
+build_script:
+  # 编译chm文件
+  - npm run build
+
+after_build:
+  # 压缩chm文件为zip包
+  - echo chm格式的电子书打开是空白的解决办法：>CHM_blank_solution.txt
+  - echo.>>CHM_blank_solution.txt
+  - echo 1. 右键单击该 chm格式的电子书，然后单击“属性”。>>CHM_blank_solution.txt
+  - echo 2. 单击“取消阻止”或者选“解除锁定”。>>CHM_blank_solution.txt
+  - echo.>>CHM_blank_solution.txt
+  - echo 详见：http://jingyan.baidu.com/article/6079ad0e491bd228ff86db8a.html>>CHM_blank_solution.txt
+  - 7z a css.zip css.chm CHM_blank_solution.txt
+
+artifacts:
+  - path: css.chm
+    name: CSS参考手册
+
+  - path: css.zip
+    name: CSS参考手册 压缩包

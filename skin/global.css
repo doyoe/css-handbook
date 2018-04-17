@@ -45,42 +45,6 @@ a:hover{color:#C30;text-decoration:underline;}
 .g-btn-download{overflow:hidden;width:152px;height:34px;padding:14px 8px 0 34px;background:url(btn.png) no-repeat;color:#fff;text-align:left;text-shadow:1px 1px 3px rgba(0,0,0,.5);vertical-align:middle;}
 .g-btn-download strong{color:#9ED55E;font-size:18px;font-family:georgia,serif;}
 .g-btn-download:hover{color:#eee;}
-/* comm: g-popup */
-.g-popup{display:none;position:absolute;z-index:101;top:50%;left:50%;margin-top:0;border:1px solid #0382AD;border-radius:5px;background:#ddd;-webkit-box-shadow:0px 0px 5px rgba(0,0,0,.5);box-shadow:0px 0px 5px rgba(0,0,0,.5);}
-.g-popup:hover{-webkit-box-shadow:0px 0px 10px rgba(0,0,0,.5);box-shadow:0px 0px 10px rgba(0,0,0,.5);-moz-animation:glint 2s ease-in-out infinite;-webkit-animation:glint 2s ease-in-out infinite;-o-animation:glint 2s ease-in-out infinite;-ms-animation:glint 2s ease-in-out infinite;animation:glint 2s ease-in-out infinite;}
-.g-popup .inner{position:relative;min-height:240px;_height:240px;border-radius:5px;background:#fff;}
-.g-popup-hd{*zoom:1;overflow:hidden;margin:1px;padding:0 8px;background:#eee;-moz-user-select:none;cursor:move;}
-.g-popup-hd .title{float:left;padding:3px 0;font:bold 14px/1.5 georgia,arial,simsun;}
-.g-popup-hd .act{float:right;}
-.g-popup-hd .act .g-btn-popup-close{position:relative;top:-1px;}
-.g-popup-bd{position:relative;padding:8px 8px 40px;border-top:1px solid #bbb;font-size:14px;}
-.g-popup-ft{position:absolute;bottom:0;width:100%;text-align:right;}
-.g-popup-ft p{padding:8px;}
-@-moz-keyframes glint{
-	0%{box-shadow:0px 0px 10px rgba(0,0,0,.5);}
-	50%{box-shadow:0px 0px 10px rgba(50,200,250,.5);}
-	100%{box-shadow:0px 0px 10px rgba(0,0,0,.5);}
-}
-@-webkit-keyframes glint{
-	0%{box-shadow:0px 0px 10px rgba(0,0,0,.5);}
-	50%{-webkit-box-shadow:0px 0px 10px rgba(50,200,250,.5);box-shadow:0px 0px 10px rgba(50,200,250,.5);}
-	100%{box-shadow:0px 0px 10px rgba(0,0,0,.5);}
-}
-@-o-keyframes glint{
-	0%{box-shadow:0px 0px 10px rgba(0,0,0,.5);}
-	50%{box-shadow:0px 0px 10px rgba(50,200,250,.5);}
-	100%{box-shadow:0px 0px 10px rgba(0,0,0,.5);}
-}
-@-ms-keyframes glint{
-	0%{box-shadow:0px 0px 10px rgba(0,0,0,.5);}
-	50%{box-shadow:0px 0px 10px rgba(50,200,250,.5);}
-	100%{box-shadow:0px 0px 10px rgba(0,0,0,.5);}
-}
-@keyframes glint{
-	0%{box-shadow:0px 0px 10px rgba(0,0,0,.5);}
-	50%{box-shadow:0px 0px 10px rgba(50,200,250,.5);}
-	100%{box-shadow:0px 0px 10px rgba(0,0,0,.5);}
-}
 /* comm: g-tree */
 .g-tree ul{position:relative;display:none;margin-left:17px;}
 .g-tree li{padding:1px 0;}
@@ -90,11 +54,7 @@ a:hover{color:#C30;text-decoration:underline;}
 .g-tree li .css3-new,.level-type .css3-new{background-position:0 -54px;}
 .g-tree li .css3-change,.level-type .css3-change{background-position:0 -76px;}
 .g-tree dfn,.g-tree a{color:#000;cursor:pointer;}
-.g-tree a {
-	display: inline-block;;
-	border-radius: 3px;
-	padding: 0 2px;
-}
+.g-tree a {display: inline-block;border-radius: 3px;padding: 0 2px;}
 .g-tree a:hover{color:#000;text-decoration:none;}
 .g-tree .css3-new a,.g-tree .css3-new a:hover{color:#f60;}
 .g-tree .css3-change a,.g-tree .css3-change a:hover{color:#6a5acd;}

@@ -42,6 +42,7 @@
 		<h1 class="tit">E:first-of-type</h1>
 		<ul class="info">
 			<li><strong>版本：CSS3</strong></li>
+			<li>2017.8.3</li>
 		</ul>
 		<!-- 插入浏览器信息 -->
 	</section>
@@ -56,10 +57,44 @@
 	<section id="intro" class="g-mod g-attr">
 		<h2 class="tit">说明：</h2>
 		<div class="cont">
-			<strong>匹配同类型中的第一个同级兄弟元素E。</strong>
+			<strong>匹配父元素下第一个类型为E的子元素。</strong>
+			<p>需要注意3个要点：</p>
 			<ul>
-				<li>要使该属性生效，E元素必须是某个元素的子元素，E的父元素最高是html，即E可以是html的子元素，也就是说E可以是body</li>
-				<li>该选择符总是能命中父元素的第1个为E的子元素，不论第1个子元素是否为E</li>
+				<li>首先，该选择符要匹配的是类型为E的子元素，这意味着E元素必须作为某个元素的子元素存在（E元素的父元素最高是html，也就是说E元素本身最高只能是body，这表示任何非html的元素都符合这个约束，因为html元素是根元素。）</li>
+				<li>
+					<p>其次，该选择符要匹配的是父元素第一个类型为E的子元素，这意味着被命中的元素不一定是父元素的第一个子元素（因为排在父元素首位的不一定是E元素，E元素可能在子元素列表中的任何位置）。<strong>来看下面这个例子：</strong></p>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>HTML 代码：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp><div class="demo">
+	<p>p1</p>
+	<p>p2</p>
+	<span>span1</span>
+	<p>p3</p>
+	<span>span2</span>
+</div></xmp></code></blockquote>
+						<p class="gquote-tit"><strong>如上HTML，我们要命中父元素 .demo 的第一个 span 子元素，CSS 代码如下：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp>.demo span:first-of-type { color: #f00; }</xmp></code></blockquote>
+						<p class="gquote-info">此时 .demo 的第1个元素并没有被匹配到，而是匹配到了第3个子元素，因为第3个子元素正好是 .demo 的第1个span子元素</p>
+					</div>
+				</li>
+				<li>
+					<p>再次，只能匹配与E元素同级的元素，即：E元素的兄弟元素</p>
+					<strong>来看下面这个例子：</strong>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>HTML示例代码：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp><div class="demo">
+	<span>span1</span>
+	<p>
+		<span>span2</span>
+		<span>span3</span>
+	</p>
+	<span>span4</span>
+</div></xmp></code></blockquote>
+						<p class="gquote-tit"><strong>如上HTML，如果我想匹配其中的第1个span，代码如下：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp>.demo span:first-of-type { color: #f00; }</xmp></code></blockquote>
+						<p class="gquote-info">结果span1和span2都会被命中，因为span1和span2分属不同的父元素，并且都是其父元素的首个span元素，所以都会被命中</p>
+					</div>
+				</li>
 			</ul>
 		</div>
 	</section>
@@ -86,7 +121,7 @@
 				</thead>
 				<tbody>
 					<tr>
-						<td class="unsupport">6.0-8.0</td>
+						<td class="unsupport">8.0</td>
 						<td class="support" rowspan="2">2.0+</td>
 						<td class="support" rowspan="2">4.0+</td>
 						<td class="support" rowspan="2">3.1+</td>
@@ -113,13 +148,13 @@
 <title>结构性伪类选择符 E:first-of-type_CSS参考手册_web前端开发参考手册系列</title>
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <style>
-p:first-of-type {
+.demo p:first-of-type {
 	color: #f00;
 }
 </style>
 </head>
 <body>
-<div class="test">
+<div class="demo">
 	<div>我是一个div元素</div>
 	<p>我是一个p元素</p>
 	<p>我是一个p元素</p>

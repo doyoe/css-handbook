@@ -42,7 +42,7 @@
 		<h1 class="tit">float</h1>
 		<ul class="info">
 			<li><strong>版本：CSS1</strong></li>
-			<li>媒体：视觉</li>
+			<li>2018.2.27</li>
 		</ul>
 		<!-- 插入浏览器信息 -->
 	</section>
@@ -57,6 +57,7 @@
 			<p><strong>继承性</strong>：无</p>
 			<p><strong>动画性</strong>：否</p>
 			<p><strong>计算值</strong>：指定值</p>
+			<p><strong>媒体</strong>：视觉</p>
 		</div>
 	</section>
 	<section id="value" class="g-mod g-attr">
@@ -64,21 +65,21 @@
 		<div class="cont">
 			<dl>
 				<dt>none：</dt>
-				<dd>设置对象不浮动</dd>
+				<dd>设置元素不浮动</dd>
 				<dt>left：</dt>
-				<dd>设置对象浮在左边</dd>
+				<dd>设置元素浮在左边</dd>
 				<dt>right：</dt>
-				<dd>设置对象浮在右边</dd>
+				<dd>设置元素浮在右边</dd>
 			</dl>
 		</div>
 	</section>
 	<section id="intro" class="g-mod g-attr">
 		<h2 class="tit">说明：</h2>
 		<div class="cont">
-			<strong>该属性的值指出了对象是否及如何浮动。</strong>请参阅<a href="clear.htm">clear</a>属性
+			<strong>定义了元素向左或者向右浮动放置。</strong>请参阅<a href="clear.htm" class="g-property">clear</a>属性
 			<ul>
-				<li>如果<a href="float.htm">float</a>不是none，当display:inline-table时，display的计算值为table；当display:inline | inline-block | run-in | table-* 系时，display的计算值为block，其它情况为指定值；</li>
-				<li>float在绝对定位和<a href="display.htm">display</a>为none时不生效。</li>
+				<li>如果<code class="g-property">float</code>不是<code class="g-value">none</code>，当<code class="g-code">display: inline-table</code>时，<a href="display.htm" class="g-property">display</a>的计算值为<code class="g-value">table</code>；当<code class="g-code">display: inline | inline-block | run-in | table-*</code>系时，<code class="g-property">display</code>的计算值为<code class="g-value">block</code>，其它情况为指定值；</li>
+				<li>当一个元素是绝对定位元素或者定义了<code class="g-property">display</code>为<code class="g-value">none</code>时，<code class="g-property">float</code>定义不生效。</li>
 				<li>对应的脚本特性为<strong>styleFloat</strong>（IE）或<strong>cssFloat</strong>（非IE）。<em class="glight">(注意这里为styleFloat或cssFloat，而不是float)</em></li>
 			</ul>
 		</div>
@@ -108,14 +109,14 @@
 				<tbody>
 					<tr>
 						<td><strong>Basic Support</strong></td>
-						<td class="support">6.0+</td>
-						<td class="support">2.0+</td>
-						<td class="support">4.0+</td>
-						<td class="support">3.1+</td>
-						<td class="support">7.0+</td>
-						<td class="support">3.2+</td>
-						<td class="support">2.1+</td>
-						<td class="support">18.0+</td>
+						<td class="support">8.0+</td>
+						<td class="support">40.0+</td>
+						<td class="support">40.0+</td>
+						<td class="support">8.0+</td>
+						<td class="support">40.0+</td>
+						<td class="support">8.0+</td>
+						<td class="support">4.4+</td>
+						<td class="support">28.0+</td>
 					</tr>
 				</tbody>
 			</table>

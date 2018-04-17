@@ -48,7 +48,9 @@
 	<section id="use-guides" class="g-mod g-about">
 		<h2>手册使用说明 The Instruction</h2>
 		<ul>
-			<li class="g-color-light"><strong>手册在接下来将只更新IE6.0+, Firefox4.0+, Chrome4.0+, Safari4.0+, Opera15.0+（Opera从15.0开始转入webkit阵营）的支持数据，低于这些版本的数据将不再更新，共同期望未来前端的环境越来越好。</strong></li>
+			<li class="g-color-light"><strong>手册在接下来将只更新 IE8.0+, Firefox40.0+, Chrome40.0+, iOS8.0+, Android4.4+, Android Chrome28.0+, Opera40.0+（Opera从15.0开始转入webkit阵营）的支持数据，低于这些版本的数据将不再更新，共同期望未来前端的环境越来越好。</strong></li>
+			<li>对于 `IE` 和 `Edge`，手册是合并到一起体现的。`IE11.0 及之前` 的版本为 `IE 浏览器`，`IE12.0 及以后` 的版本为 `Edge 浏览器`，阅读者可根据版本来确定。</li>
+			<li>Android 4.4 开始将 Webview 由 Webkit 切换到 Chromium，4.4.2 内置的是 chromium 30，5.0 内置的是 chromium 37，不同的厂商会存在差异。需要注意的是虽然 Android 4.4 将 Webview 切换到 Chromium，但是这仍然与 Android Chrome 是有区别的，如果你想升级 Android Webview 只能通过升级手机系统来实现，单纯升级 Android Chrome 并不能改变 Android Webview 的版本</li>
 			<li>关于本手册一些特定阅读方式的说明</li>
 			<li>关于本手册存在的一些问题说明及解决方法</li>
 		</ul>
@@ -136,38 +138,30 @@
 								<tbody>
 									<tr>
 										<td rowspan="3"><strong>Basic Support</strong></td>
-										<td class="unsupport">6.0-10.0</td>
-										<td class="unsupport">2.0-21.0</td>
-										<td class="unsupport">4.0-20.0</td>
-										<td class="unsupport">6.0</td>
-										<td class="support">15.0+<sup class="fix">-webkit-</sup></td>
-										<td class="unsupport">6.0-6.1</td>
-										<td class="unsupport">2.1-4.3</td>
-										<td class="unsupport">18.0-19.0</td>
+										<td class="unsupport">9.0</td>
+										<td rowspan="3" class="support">40.0+</td>
+										<td rowspan="3" class="support">40.0+</td>
+										<td class="support">8.0+<sup class="fix">-webkit-</sup></td>
+										<td rowspan="3" class="support">40.0+</td>
+										<td class="support">8.0+<sup class="fix">-webkit-</sup></td>
+										<td rowspan="3" class="support">4.4+</td>
+										<td rowspan="3" class="support">28.0+</td>
 									</tr>
 									<tr>
-										<td class="support" rowspan="2">11.0+</td>
-										<td class="support" rowspan="2">22.0+</td>
-										<td class="support">21.0+<sup class="fix">-webkit-</sup></td>
-										<td class="support">6.1+<sup class="fix">-webkit-</sup></td>
-										<td class="support" rowspan="2">17.0+</td>
-										<td class="support">7.0+<sup class="fix">-webkit-</sup></td>
-										<td class="support" rowspan="2">4.4+</td>
-										<td class="support">20.0+<sup class="fix">-webkit-</sup></td>
+										<td class="partsupport">10.0-11.0</td>
+										<td rowspan="2" class="support">9.0</td>
+										<td rowspan="2" class="support">9.0</td>
 									</tr>
 									<tr>
-										<td class="support">29.0+</td>
-										<td class="support">9.0+</td>
-										<td class="support">9.0+</td>
-										<td class="support">28.0+</td>
+										<td class="support">12.0+</td>
 									</tr>
 								</tbody>
 							</table>
 						</div>
 						<strong>假设上述表格是对属性<a href="../properties/flex/order.htm" class="property">order</a>的兼容性说明，那表示：</strong>
-						<p>IE6.0-10.0不支持该属性，11.0及以后支持该属性；</p>
-						<p>Firefox2.0-21.0不支持该属性，22.0及以后支持该属性；</p>
-						<p>Chrome4.0-20.0不支持该属性，21.0及以后支持该属性但需加厂商前缀 <strong class="g-color-light">-webkit-</strong>，29.0开始支持不带厂商前缀的标准写法；</p>
+						<p>IE9.0及之前的版本不支持该属性，10.0-11.0部分支持该属性（需要使用2012版语法），12.0以后（即edge浏览器）支持该属性；</p>
+						<p>Firefox, Chrome, Opera,Android 全面支持该属性；</p>
+						<p>Safari 与 iOS Safari 8.0 使用该属性需加 <strong class="g-color-light">-webkit-</strong> 前缀，9.0及以后版本完全支持该属性；</p>
 					</li>
 				</ul>
 			</li>

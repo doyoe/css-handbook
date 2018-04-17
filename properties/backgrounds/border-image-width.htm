@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="utf-8" />
+<title>border-image-width</title>
+<meta name="description" content="CSS3参考手册之：border-image-width" />
+<meta name="keywords" content="border-image-width, css3, css3参考手册" />
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<meta name="robots" content="all" />
+<!--[if lte IE 8]>
+<script src="../../js/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="../../skin/article.css" />
+</head>
+<body>
+<nav id="guide">
+	<div class="from">
+		<a href="http://css.doyoe.com/" target="_blank">CSS3参考手册</a>
+		<span>&#187;</span>
+		<a href="../index.htm">属性列表</a>
+		<span>&#187;</span>
+		<a href="index.htm" id="category" rel="properties/backgrounds" name="border-image-width">背景与边框属性</a>
+		<span>&#187;</span>
+	</div>
+	<div class="to">
+		<span class="label">相关内容：</span>
+		<div class="g-combobox g-transition">
+			<a href="?" class="g-transition target">
+				<strong>其它背景边框参考</strong>
+				<span>选择其它项<!--[if lte IE 7]><ins>IE7 and earlier, Get to die</ins><![endif]--></span>
+			</a>
+			<div class="g-transition list">
+				<ul>
+					<!-- 插入快速分类导航 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<header id="hd">
+	<section id="title" class="g-mod">
+		<h1 class="tit">border-image-width</h1>
+		<ul class="info">
+			<li><strong>版本：CSS3</strong></li>
+			<li>2018.3.8</li>
+		</ul>
+		<!-- 插入浏览器信息 -->
+	</section>
+</header>
+<section id="bd">
+	<section id="syntax" class="g-mod g-attr">
+		<h2 class="tit">语法：</h2>
+		<div class="cont">
+			<p><strong>border-image-width</strong>：[ <a href="../../values/length/length.htm">&lt;length&gt;</a> | <a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a> | <a href="../../values/numeric/number.htm">&lt;number&gt;</a> | auto ]{1,4}</p>
+			<p><strong>默认值</strong>：<mark class="defaultvalue">1</mark></p>
+			<p><strong>适用于</strong>：所有元素，除table元素设置了<a href="../table/border-collapse.htm" class="g-property">border-collapse</a>属性值为<code class="g-value">collapse</code>之外</p>
+			<p><strong>继承性</strong>：无</p>
+			<p><strong>动画性</strong>：否</p>
+			<p><strong>计算值</strong>：指定值</p>
+			<p><strong>媒　体</strong>：视觉</p>
+		</div>
+	</section>
+	<section id="value" class="g-mod g-attr">
+		<h2 class="tit">取值：</h2>
+		<div class="cont">
+			<dl>
+				<dt><a href="../../values/length/length.htm">&lt;length&gt;</a>：</dt>
+				<dd>用长度值指定图像边框的厚度。不允许负值。</dd>
+				<dt><a href="../../values/numeric/percentage.htm">&lt;percentage&gt;</a>：</dt>
+				<dd>用百分比指定图像边框的厚度。参照图像边框区域的大小（包含border和padding）进行换算。不允许负值。</dd>
+				<dt><a href="../../values/numeric/number.htm">&lt;number&gt;</a>：</dt>
+				<dd>用浮点数指定图像边框的厚度。该值表示为<a href="border-width.htm" class="g-property">border-width</a>的倍数，若值为<code class="g-value">2</code>，则使用值为<code class="g-code">2 * border-width</code>。不允许负值。</dd>
+				<dt>auto：</dt>
+				<dd>如果<code class="g-value">auto</code>值被设置，则<code class="g-property">border-image-width</code>采用与<a href="border-image-slice.htm" class="g-property">border-image-slice</a>相同的值。</dd>
+			</dl>
+		</div>
+	</section>
+	<section id="intro" class="g-mod g-attr">
+		<h2 class="tit">说明：</h2>
+		<div class="cont">
+			<strong>定义元素边框图像的厚度。</strong>
+			<ul>
+				<li>该属性用于指定使用多厚的边框来承载被裁剪后的图像。</li>
+				<li>
+					<p>当该属性省略未定义时，因为默认值是<code class="g-value">1</code>，所以该属性的计算值会是<code class="g-code">1 * border-width</code>，相当于会直接使用<a href="border-width.htm" class="g-property">border-width</a>的定义。</p>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>举个例子：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp>.demo {
+	border-width: 10px;
+	border-style: solid;
+	border-image-source: linear-gradient(red, yellow);
+	border-image-slice: 5;
+}
+</xmp></code></blockquote>
+						<div class="gquote-info">
+							<p>这个例子中，<code class="g-property">border-image-width</code>省略未定义，所以<code class="g-property">border-image-width</code>将会使用<code class="g-property">border-width</code>所定义的值。</p>
+							<p>从这个例子的可以看到，以下三种情况是等效的：</p>
+							<ul>
+								<li><code class="g-property">border-image-width</code>省略未定义；</li>
+								<li><code class="g-property">border-image-width</code>属性值为<code class="g-value">1</code>；</li>
+								<li><code class="g-property">border-image-width</code>属性值为<code class="g-value">10px</code>；</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li>
+					<p>当该属性的值定义为<code class="g-value">auto</code>，将会直接使用<a href="border-image-slice.htm" class="g-property">border-image-slice</a>的定义。</p>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>举个例子：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp>.demo {
+	border: 10px solid;
+	border-image-source: linear-gradient(red, yellow);
+	border-image-slice: 5;
+}
+.demo {
+	border: 10px solid;
+	border-image-source: linear-gradient(red, yellow);
+	border-image-slice: 5;
+	border-image-width: auto;
+}
+</xmp></code></blockquote>
+						<p class="gquote-info">上面 2 段代码是等效的。</p>
+					</div>
+				</li>
+				<li>
+					<p>当该属性的值定义为百分比时，其垂直和水平方向的计算值要分别参照图像边框区域的的宽和高进行换算</p>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>举个例子：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp>.demo {
+	width: 200px;
+	height: 100px;
+	padding: 20px;
+	border: 10px solid;
+	border-image-source: linear-gradient(red, yellow);
+	border-image-slice: 5;
+	border-image-width: 10%;
+}
+</xmp></code></blockquote>
+	<p class="gquote-info">此时，<code class="g-property">border-image-width</code>的计算值是<code class="g-value">16px 26px</code>。即，垂直方向：<code class="g-code">(100+20*2+10*2)*10%=16px</code>，水平方向：<code class="g-code">(200+20*2+10*2)*10%=26px</code></p>
+					</div>
+				</li>
+				<li>对应的脚本特性为：<strong>borderImageWidth</strong>。</li>
+			</ul>
+		</div>
+	</section>
+	<section id="compatible" class="g-mod g-attr">
+		<h2 class="tit">兼容性：</h2>
+		<div class="cont">
+			<ul class="support-type">
+				<li><span class="support">浅绿</span> = 支持</li>
+				<li><span class="unsupport">红色</span> = 不支持</li>
+				<li><span class="partsupport">粉色</span> = 部分支持</li>
+			</ul>
+			<table class="g-data">
+				<thead>
+					<tr>
+						<th>Values</th>
+						<th>IE</th>
+						<th>Firefox</th>
+						<th>Chrome</th>
+						<th>Safari</th>
+						<th>Opera</th>
+						<th>iOS Safari</th>
+						<th>Android Browser</th>
+						<th>Android Chrome</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td rowspan="2"><strong>Basic Support</strong></td>
+						<td class="unsupport">10.0</td>
+						<td class="support" rowspan="2">40.0+</td>
+						<td class="support" rowspan="2">40.0+</td>
+						<td class="support" rowspan="2">8.0+</td>
+						<td class="support" rowspan="2">40.0+</td>
+						<td class="support" rowspan="2">8.0+</td>
+						<td class="support" rowspan="2">4.4+</td>
+						<td class="support" rowspan="2">40.0+</td>
+					</tr>
+					<tr>
+						<td class="support">11.0+</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+	<section id="example" class="g-mod g-attr">
+		<h2 class="tit">示例：</h2>
+		<div class="cont">
+			<textarea cols="90" rows="10">
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="utf-8" />
+<title>border-image-width_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
+<style>
+.test {
+	padding: 10px;
+	border: 27px solid;
+	border-image-source: url(skin/border.png);
+	border-image-slice: 27;
+	border-image-width: auto;
+}
+</style>
+</head>
+<body>
+<div class="test">用图片来做边框</div>
+</body>
+</html>
+			</textarea>
+			<p><input type="button" value="运行" class="g-btn g-btn-sure" /></p>
+		</div>
+	</section>
+</section>
+<footer id="ft">
+	<aside id="rights" class="g-mod">
+		<!-- 插入浏览器及版权信息 -->
+	</aside>
+</footer>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/inner.js"></script>
+</body>
+</html>

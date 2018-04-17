@@ -56,25 +56,43 @@
 	<section id="intro" class="g-mod g-attr">
 		<h2 class="tit">说明：</h2>
 		<div class="cont">
-			<strong>匹配同类型中的第n个同级兄弟元素E。</strong>
+			<strong>匹配父元素的第n个子元素E。</strong>
+			<p>需要注意3个要点：</p>
 			<ul>
-				<li>要使该属性生效，E元素必须是某个元素的子元素，E的父元素最高是html，即E可以是html的子元素，也就是说E可以是body</li>
-				<li>该选择符总是能命中父元素的第n个为E的子元素，不论第n个子元素是否为E</li>
+				<li>首先，因为匹配的是父元素的子元素，这意味着E元素必须作为某个元素的子元素存在（E元素的父元素最高是html，也就是说E元素最高是body，这表示任何非html的元素都符合这个约束，因为html元素是根元素。）</li>
 				<li>
-					<strong>有一点需要注意的是：</strong>
+					<p>其次，匹配的是父元素的第n个为E的子元素（被命中的不一定是第n个子元素，因为匹配的不是第n个子元素，而是第n个为E的子元素）</p>
+					<strong>来看下面这个例子：</strong>
 					<div class="gquote">
 						<p class="gquote-tit"><strong>HTML示例代码：</strong></p>
-						<blockquote class="gquote-cont"><code><xmp><div>
-	<p>第1个p</p>
-	<p>第2个p</p>
-	<span>第1个span</span>
-	<p>第3个p</p>
-	<span>第2个span</span>
+						<blockquote class="gquote-cont"><code><xmp><div class="demo">
+	<p>p1</p>
+	<p>p2</p>
+	<span>span1</span>
+	<p>p3</p>
+	<span>span2</span>
 </div></xmp></code></blockquote>
-						<p class="gquote-tit"><strong>如上HTML，假设要命中第一个span：</strong></p>
-						<blockquote class="gquote-cont"><code><xmp>span:nth-of-type(1){color:#f00;}</xmp></code></blockquote>
-						<p class="gquote-tit"><strong>如果使用E:nth-child(n)：</strong></p>
-						<blockquote class="gquote-cont"><code><xmp>span:nth-child(3){color:#f00;}</xmp></code></blockquote>
+						<p class="gquote-tit"><strong>如上HTML，假设要命中第3个p元素，代码如下：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp>.demo p:nth-of-type(3) { color: #f00; }</xmp></code></blockquote>
+						<p class="gquote-info">可以看到此时 .demo 的第4个子元素会被命中，因为 .demo 的第4个子元素才是它的第3个p子元素</p>
+					</div>
+				</li>
+				<li>
+					<p>再次，只能匹配与E元素同级的元素，即：E元素的兄弟元素</p>
+					<strong>来看下面这个例子：</strong>
+					<div class="gquote">
+						<p class="gquote-tit"><strong>HTML示例代码：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp><div class="demo">
+	<span>span1</span>
+	<p>
+		<span>span2</span>
+		<span>span3</span>
+	</p>
+	<span>span4</span>
+</div></xmp></code></blockquote>
+						<p class="gquote-tit"><strong>如上HTML，如果我想匹配其中的第2个span，代码如下：</strong></p>
+						<blockquote class="gquote-cont"><code><xmp>.demo span:nth-of-type(2) { color: #f00; }</xmp></code></blockquote>
+						<p class="gquote-info">结果span2确实没有被命中，因为span2并不是.demo的第2个span子元素。从代码中能看到span1和span4是同级，span2和span3同级，因为span3和span4分别是这2组层级中的第2个span，所以最终span3和span4都被命中了。</p>
 					</div>
 				</li>
 			</ul>
@@ -130,13 +148,13 @@
 <title>结构性伪类选择符 E:nth-of-type(n)_CSS参考手册_web前端开发参考手册系列</title>
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <style>
-p:nth-of-type(2) {
+.demo p:nth-of-type(2) {
 	color: #f00;
 }
 </style>
 </head>
 <body>
-<div class="test">
+<div class="demo">
 	<p>我是一个p元素</p>
 	<div>我是一个div元素</div>
 	<p>我是一个p元素</p>
