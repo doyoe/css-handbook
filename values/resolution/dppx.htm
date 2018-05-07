@@ -88,23 +88,24 @@
 				</thead>
 				<tbody>
 					<tr>
-						<td class="unsupport">6.0-8.0</td>
-						<td class="unsupport">2.0-15.0</td>
-						<td class="unsupport">4.0-28.0</td>
-						<td class="unsupport" rowspan="2">3.1-8.1</td>
-						<td class="support" rowspan="2">15.0+</td>
-						<td class="unsupport" rowspan="2">3.2-8.1</td>
-						<td class="unsupport" rowspan="2">2.1-4.4.4</td>
-						<td class="unsupport">18.0-29.0</td>
+						<td class="unsupport">8.0-11.0</td>
+						<td class="support" rowspan="2">40.0+</td>
+						<td class="support" rowspan="2">40.0+</td>
+						<td class="support" rowspan="2">8.0-11.1<sup class="fix">-webkit-</sup><sup><a href="#support1">#1</a></sup></td>
+						<td class="support" rowspan="2">40.0+</td>
+						<td class="support" rowspan="2">8.0-11.3<sup class="fix">-webkit-</sup><sup><a href="#support1">#1</a></sup></td>
+						<td class="support" rowspan="2">4.4+</td>
+						<td class="support">28.0<sup class="fix">-webkit-</sup><sup><a href="#support1">#1</a></sup></td>
 					</tr>
 					<tr>
-						<td class="support">9.0+</td>
-						<td class="support">16.0+</td>
-						<td class="support">29.0+</td>
+						<td class="support">12.0+</td>
 						<td class="support">29.0+</td>
 					</tr>
 				</tbody>
 			</table>
+			<ol class="support-info">
+				<li id="support1">支持<code class="g-code">dpcm</code>单位，但不支持<a href="../../properties/media-queries/resolution.htm" class="g-property">min/max-resolution</a>媒体查询，所以仍然需要使用非标准的<a href="../../properties/media-queries/device-pixel-ratio.htm" class="g-property">min/max-device-pixel-ratio</a>来替代，并且加上<code class="g-code">-webkit-</code>厂商前缀。</li>
+			</ol>
 		</div>
 	</section>
 	<section class="g-mod g-attr" id="example">
