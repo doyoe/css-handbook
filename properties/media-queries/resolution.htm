@@ -68,7 +68,7 @@
 		<div class="cont">
 			<strong>定义设备屏幕的像素密度（即屏幕质量）。如：96dpi, 300dpi, 118dpcm</strong>
 			<ul>
-				<li>本特性接受min和max前缀，因此可以派生出<em class="g-color-light">min-resolution</em>和<em class="g-color-light">max-resolution</em>两个媒体特性。</li>
+				<li>本特性接受<code class="g-code">min</code>和<code class="g-code">max</code>前缀，因此可以派生出<code class="g-property">min-resolution</code>和<code class="g-property">max-resolution</code>两个媒体特性。</li>
 				<li class="gquote">
 					<p class="gquote-tit"><strong>简单列举几个应用示例：</strong></p>
 					<blockquote class="gquote-cont"><pre><code>@media screen and (resolution){ … }
@@ -89,29 +89,38 @@
 			<table class="g-data">
 				<thead>
 					<tr>
-						<th><a href="#title" title="查看本文档测试时所用浏览器版本">支持版本</a>\类型</th>
-						<th><span class="browser-ie">IE</span></th>
-						<th><span class="browser-firefox">Firefox</span></th>
-						<th><span class="browser-safari">Safari</span></th>
-						<th><span class="browser-chrome">Chrome</span></th>
-						<th><span class="browser-opera">Opera</span></th>
+						<th>Values</th>
+						<th>IE</th>
+						<th>Firefox</th>
+						<th>Chrome</th>
+						<th>Safari</th>
+						<th>Opera</th>
+						<th>iOS Safari</th>
+						<th>Android Browser</th>
+						<th>Android Chrome</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<th>较早版本</th>
-						<td class="unsupport">6-8</td>
-						<td rowspan="2" class="support">4</td>
-						<td rowspan="2" class="unsupport">5.1.7</td>
-						<td rowspan="2" class="unsupport">13-23</td>
-						<td rowspan="2" class="support">11.5</td>
+						<td rowspan="2"><strong>Basic Support</strong></td>
+						<td class="unsupport">8.0</td>
+						<td class="support" rowspan="2">40.0+</td>
+						<td class="support" rowspan="2">40.0+</td>
+						<td class="support" rowspan="2">8.0-11.1<sup class="fix">-webkit-</sup><sup><a href="#support1">#1</a></sup></td>
+						<td class="support" rowspan="2">40.0+</td>
+						<td class="support" rowspan="2">8.0-11.3<sup class="fix">-webkit-</sup><sup><a href="#support1">#1</a></sup></td>
+						<td class="support" rowspan="2">4.4+</td>
+						<td class="support">28.0<sup class="fix">-webkit-</sup><sup><a href="#support1">#1</a></sup></td>
 					</tr>
 					<tr>
-						<th>较近版本</th>
-						<td class="support">9</td>
+						<td class="support">9.0+</td>
+						<td class="support">29.0+</td>
 					</tr>
 				</tbody>
 			</table>
+			<ol class="support-info">
+				<li id="support1">支持<code class="g-code">dpi</code>单位，但不支持<a href="../../properties/media-queries/resolution.htm" class="g-property">min/max-resolution</a>媒体查询，所以仍然需要使用非标准的<a href="../../properties/media-queries/device-pixel-ratio.htm" class="g-property">min/max-device-pixel-ratio</a>来替代，并且加上<code class="g-code">-webkit-</code>厂商前缀。</li>
+			</ol>
 		</div>
 	</section>
 	<section id="example" class="g-mod g-attr">
