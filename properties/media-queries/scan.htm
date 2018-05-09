@@ -70,7 +70,7 @@
 		<div class="cont">
 			<strong>定义电视类设备的扫描工序。</strong>
 			<ul>
-				<li>本特性不接受min和max前缀。</li>
+				<li>本特性不接受<code class="g-code">min</code>和<code class="g-code">max</code>前缀。</li>
 				<li class="gquote">
 					<p class="gquote-tit"><strong>简单列举几个应用示例：</strong></p>
 					<blockquote class="gquote-cont"><pre><code>@media tv and (scan:progressive){ … }
@@ -93,22 +93,28 @@
 						<th>Values</th>
 						<th>IE</th>
 						<th>Firefox</th>
-						<th>Safari</th>
 						<th>Chrome</th>
+						<th>Safari</th>
 						<th>Opera</th>
+						<th>iOS Safari</th>
+						<th>Android Browser</th>
+						<th>Android Chrome</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
 						<th rowspan="2"><strong>Basic Support</strong></th>
-						<td class="unsupport">6-8</td>
-						<td rowspan="2" class="support">4</td>
-						<td rowspan="2" class="unsupport">5.1.7</td>
-						<td rowspan="2" class="unsupport">13-23</td>
-						<td rowspan="2" class="support">11.5</td>
+						<td class="unsupport">8.0</td>
+						<td rowspan="2" class="support">40.0+</td>
+						<td rowspan="2" class="support">40.0+</td>
+						<td rowspan="2" class="support">8.0+</td>
+						<td rowspan="2" class="support">40.0+</td>
+						<td rowspan="2" class="support">8.0+</td>
+						<td rowspan="2" class="support">4.4+</td>
+						<td rowspan="2" class="support">28.0+</td>
 					</tr>
 					<tr>
-						<td class="support">9</td>
+						<td class="support">9.0+</td>
 					</tr>
 				</tbody>
 			</table>
@@ -125,15 +131,13 @@
 <title>scan of media features_CSS参考手册_web前端开发参考手册系列</title>
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <style>
-@media tv and (scan:progressive){
-	body{color:#f00;}
+@media tv and (scan: progressive){
+	body {color: #f00;}
 }
 </style>
 </head>
 <body>
 <div class="test">当你的电视类设备的扫描工序为progressive时，本行文字显示为红色</div>
-<script>
-</script>
 </body>
 </html>
 			</textarea>
