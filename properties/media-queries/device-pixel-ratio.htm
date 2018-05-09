@@ -2,9 +2,9 @@
 <html lang="zh-cmn-Hans">
 <head>
 <meta charset="utf-8" />
-<title>resolution of media queries</title>
-<meta name="description" content="CSS3参考手册之: resolution of media queries" />
-<meta name="keywords" content="resolution of media queries, css3, css3参考手册" />
+<title>device-pixel-ratio of media queries</title>
+<meta name="description" content="CSS3参考手册之: device-pixel-ratio of media queries" />
+<meta name="keywords" content="device-pixel-ratio of media queries, css3, css3参考手册" />
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <meta name="robots" content="all" />
 <!--[if lte IE 8]>
@@ -19,7 +19,7 @@
 		<span>&#187;</span>
 		<a href="../index.htm">属性列表</a>
 		<span>&#187;</span>
-		<a href="index.htm" id="category" rel="properties/media-queries" name="resolution">媒体查询属性</a>
+		<a href="index.htm" id="category" rel="properties/media-queries" name="device-pixel-ratio">媒体查询属性</a>
 		<span>&#187;</span>
 	</div>
 	<div class="to">
@@ -39,10 +39,10 @@
 </nav>
 <header id="hd">
 	<section id="title" class="g-mod">
-		<h1 class="tit">Media Queries: resolution</h1>
+		<h1 class="tit">Media Queries: device-pixel-ratio</h1>
 		<ul class="info">
 			<li><strong>版本：CSS3</strong></li>
-			<li>2018.5.7</li>
+			<li>2018.5.9</li>
 		</ul>
 		<!-- 插入浏览器信息 -->
 	</section>
@@ -51,14 +51,14 @@
 	<section id="syntax" class="g-mod g-attr">
 		<h2 class="tit">语法：</h2>
 		<div class="cont">
-			<p><strong>resolution</strong>：<a href="../../values/resolution/resolution.htm">&lt;resolution&gt;</a></p>
+			<p><strong>device-pixel-ratio</strong>：<a href="../../values/numeric/number.htm">&lt;number&gt;</a></p>
 		</div>
 	</section>
 	<section id="value" class="g-mod g-attr">
 		<h2 class="tit">取值：</h2>
 		<div class="cont">
 			<dl>
-				<dt><a href="../../values/resolution/resolution.htm">&lt;resolution&gt;</a>：</dt>
+				<dt><a href="../../values/numeric/number.htm.htm">&lt;number&gt;</a>：</dt>
 				<dd>用以定义设备屏幕的像素密度。不允许负值</dd>
 			</dl>
 		</div>
@@ -66,7 +66,7 @@
 	<section id="intro" class="g-mod g-attr">
 		<h2 class="tit">说明：</h2>
 		<div class="cont">
-			<strong>定义设备屏幕的像素密度（即屏幕质量）。如：96dpi, 300dpi, 118dpcm</strong>
+			<strong>定义设备屏幕的像素密度（即屏幕质量）。</strong>
 			<ul>
 				<li>本特性接受<code class="g-code">min</code>和<code class="g-code">max</code>前缀，因此可以派生出<code class="g-property">min-resolution</code>和<code class="g-property">max-resolution</code>两个媒体特性。</li>
 				<li class="gquote">
