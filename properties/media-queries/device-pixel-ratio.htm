@@ -115,22 +115,24 @@
 					<tr>
 						<td rowspan="2"><strong>Basic Support</strong></td>
 						<td class="unsupport">8.0</td>
-						<td class="support" rowspan="2">40.0+</td>
-						<td class="support" rowspan="2">40.0+</td>
-						<td class="unsupport" rowspan="2">8.0-11.1<sup class="fix">-webkit-</sup><sup><a href="#support1">#1</a></sup></td>
-						<td class="support" rowspan="2">40.0+</td>
-						<td class="unsupport" rowspan="2">8.0-11.3<sup class="fix">-webkit-</sup><sup><a href="#support1">#1</a></sup></td>
-						<td class="support" rowspan="2">4.4+</td>
-						<td class="unsupport">28.0<sup class="fix">-webkit-</sup><sup><a href="#support1">#1</a></sup></td>
+						<td class="partsupport" rowspan="2">40.0+<sup><a href="#support1">#1</a></sup></td>
+						<td class="support" rowspan="2">40.0+<sup class="fix">-webkit-</sup><sup><a href="#support2">#2</a></sup></td>
+						<td class="support" rowspan="2">8.0-11.1<sup class="fix">-webkit-</sup><sup><a href="#support3">#3</a></sup></td>
+						<td class="support" rowspan="2">40.0+<sup class="fix">-webkit-</sup><sup><a href="#support2">#2</a></sup></td>
+						<td class="support" rowspan="2">8.0-11.3<sup class="fix">-webkit-</sup><sup><a href="#support3">#3</a></sup></td>
+						<td class="support" rowspan="2">4.4+<sup class="fix">-webkit-</sup><sup><a href="#support2">#2</a></sup></td>
+						<td class="support">28.0<sup class="fix">-webkit-</sup><sup><a href="#support3">#3</a></sup></td>
 					</tr>
 					<tr>
-						<td class="support">9.0+</td>
-						<td class="support">29.0+</td>
+						<td class="partsupport">9.0+<sup><a href="#support1">#1</a></sup></td>
+						<td class="support">29.0+<sup class="fix">-webkit-</sup><sup><a href="#support2">#2</a></sup></td>
 					</tr>
 				</tbody>
 			</table>
 			<ol class="support-info">
-				<li id="support1">不支持<a href="../../properties/media-queries/resolution.htm" class="g-property">min/max-resolution</a>媒体查询，可以使用非标准的<a href="../../properties/media-queries/device-pixel-ratio.htm" class="g-property">min/max-device-pixel-ratio</a>来替代，并需加上<code class="g-code">-webkit-</code>厂商前缀。</li>
+				<li id="support1">不支持非标准的<a href="../../properties/media-queries/device-pixel-ratio.htm" class="g-property">min/max-device-pixel-ratio</a>媒体查询特性，推荐使用标准特性<a href="../../properties/media-queries/resolution.htm" class="g-property">min/max-resolution</a>替代。</li>
+				<li id="support2">同时支持标准的<a href="../../properties/media-queries/resolution.htm" class="g-property">min/max-resolution</a>媒体查询特性，推荐直接使用标准特性。</li>
+				<li id="support3">不支持标准的<a href="../../properties/media-queries/resolution.htm" class="g-property">min/max-resolution</a>媒体查询特性。</li>
 			</ol>
 		</div>
 	</section>
