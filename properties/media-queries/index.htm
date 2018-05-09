@@ -49,9 +49,9 @@
 	<section id="syntax" class="g-mod g-attr">
 		<h2 class="tit">语法：</h2>
 		<div class="cont">
-			<p><strong>&lt;media_query_list&gt;</strong>：[<a href="#dfn-syntax">&lt;media_query&gt;</a>[',' <a href="#dfn-syntax">&lt;media_query&gt;</a>]*]?</p>
+			<p><strong>&lt;media_query_list&gt;</strong>：[<a href="#dfn-syntax">&lt;media_query&gt;</a>[, <a href="#dfn-syntax">&lt;media_query&gt;</a>]*]?</p>
 			<p id="dfn-syntax"><strong>&lt;media_query&gt;</strong>：[only | not]? <a href="../../appendix/media-types.htm">&lt;media_type&gt;</a> [and <a href="#dfn-syntax2">&lt;expression&gt;</a>]* | <a href="#dfn-syntax2">&lt;expression&gt;</a> [and <a href="#dfn-syntax2">&lt;expression&gt;</a>]*</p>
-			<p id="dfn-syntax2"><strong>&lt;expression&gt;</strong>：'('<a href="#media-features-listing">&lt;media_feature&gt;</a>[:&lt;value&gt;]?')'</p>
+			<p id="dfn-syntax2"><strong>&lt;expression&gt;</strong>：(<a href="#media-features-listing">&lt;media_feature&gt;</a>[:&lt;value&gt;]?)</p>
 		</div>
 	</section>
 	<section id="intro" class="g-mod g-attr">
@@ -62,13 +62,13 @@
 				<li>媒体查询让 CSS 可以更精确作用于不同的媒体类型和同一媒体的不同条件。</li>
 				<li>媒体查询的大部分媒体特性都接受<code class="g-code">min</code>和<code class="g-code">max</code>用于表达<code class="g-code">大于或等于</code>和<code class="g-code">小与或等于</code>。如：<a href="width.htm" class="g-property">width</a>会有<code class="g-property">min-width</code>和<code class="g-property">max-width</code></li>
 				<li>
-					<p>媒体查询可以被用在CSS中的@media和@import规则上，也可以被用在HTML和XML中。</p>
+					<p>媒体查询可以被用在 CSS 中的 @media 和 @import 规则上，也可以被用在 HTML 和 XML 中。</p>
 					<div class="gquote">
 						<p class="gquote-tit"><strong>示例代码：</strong></p>
-						<blockquote class="gquote-cont"><pre><code>@media screen and (width:800px){ … }
-@import url(example.css) screen and (width:800px);
-&lt;link media="screen and (width:800px)" rel="stylesheet" href="example.css" /&gt;
-&lt;?xml-stylesheet media="screen and (width:800px)" rel="stylesheet" href="example.css" ?&gt;</code></pre></blockquote>
+						<blockquote class="gquote-cont"><code><xmp>@media screen and (width:800px){ … }
+@import url(example.css) screen and (width: 800px);
+<link media="screen and (width: 800px)" rel="stylesheet" href="example.css" />
+<?xml-stylesheet media="screen and (width: 800px)" rel="stylesheet" href="example.css" ?></xmp></code></blockquote>
 					</div>
 				</li>
 			</ul>

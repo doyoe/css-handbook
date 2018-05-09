@@ -73,15 +73,15 @@
 					<p>需要注意的是，本特性接受的值是 <a href="../../values/numeric/number.htm">&lt;number&gt;</a>，不需要单位（但相当于使用了隐式的 <a href="dppx.htm">dppx</a> 单位）；而<a href="resolution.htm" class="g-property">resolution</a>接受的值是 <a href="../../values/resolution/resolution.htm">&lt;resolution&gt;</a>，单位可以是 <a href="dpi.htm">dpi</a>, <a href="dpcm.htm">dpcm</a> 和 <a href="dppx.htm">dppx</a>。</p>
 					<div class="gquote">
 						<p class="gquote-tit"><strong>下述两种定义效果等同：</strong></p>
-						<blockquote class="gquote-cont"><code><xmp>@media (-webkit-max-device-pixel-ratio: 1.49) { ... }
-@media (max-resolution: 1.49dppx) { ... }</xmp></code></blockquote>
+						<blockquote class="gquote-cont"><code><xmp>@media (-webkit-max-device-pixel-ratio: 1.49) { … }
+@media (max-resolution: 1.49dppx) { … }</xmp></code></blockquote>
 					</div>
 				</li>
 				<li>
 					<p>本特性接受<code class="g-code">min</code>和<code class="g-code">max</code>前缀，因此可以派生出<code class="g-property">min-device-pixel-ratio</code>和<code class="g-property">max-device-pixel-ratio</code>两个媒体特性。</p>
 					<div class="gquote">
 						<p class="gquote-tit"><strong>简单列举几个应用示例：</strong></p>
-						<blockquote class="gquote-cont"><code><xmp>@media screen and (-webkit-device-pixel-ratio){ ... }
+						<blockquote class="gquote-cont"><code><xmp>@media screen and (-webkit-device-pixel-ratio){ … }
 @import url(example.css) screen and (-webkit-min-device-pixel-ratio: 2);
 <link media="screen and (-webkit-min-device-pixel-ratio: 2)" rel="stylesheet" href="example.css" /></xmp></code></blockquote>
 					</div>
