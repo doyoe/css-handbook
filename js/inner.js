@@ -396,6 +396,7 @@ if (!Global.isLocal && Global.name) {
 					'color-index' : [],
 					'monochrome' : [],
 					'resolution' : [],
+					'device-pixel-ratio' : [],
 					'scan' : [],
 					'grid' : []
 				},
