@@ -58,7 +58,7 @@
 		<h2 class="tit">取值：</h2>
 		<div class="cont">
 			<dl>
-				<dt><a href="../../values/numeric/number.htm.htm">&lt;number&gt;</a>：</dt>
+				<dt><a href="../../values/numeric/number.htm">&lt;number&gt;</a>：</dt>
 				<dd>用以定义设备屏幕的像素密度。不允许负值</dd>
 			</dl>
 		</div>
@@ -68,7 +68,9 @@
 		<div class="cont">
 			<strong>定义设备屏幕的像素密度（即屏幕质量）。</strong>
 			<ul>
-				<li>本特性接受<code class="g-code">min</code>和<code class="g-code">max</code>前缀，因此可以派生出<code class="g-property">min-resolution</code>和<code class="g-property">max-resolution</code>两个媒体特性。</li>
+				<li>本特性为非标准特性，与<a href="resolution.htm" class="g-property">resolution</a>特性能力相同，用来定义设备屏幕的质量。</li>
+				<li>需要注意的是，本特性接受的值是 <a href="../../values/numeric/number.htm">&lt;number&gt;</a>，不需要单位（但相当于使用了隐式的 <a href="dppx.htm">dppx</a> 单位）；而<a href="resolution.htm" class="g-property">resolution</a>接受的值是 <a href="../../values/resolution/resolution.htm">&lt;resolution&gt;</a>，单位可以是 <a href="dpi.htm">dpi</a>, <a href="dpcm.htm">dpcm</a> 和 <a href="dppx.htm">dppx</a>。</li>
+				<li>本特性接受<code class="g-code">min</code>和<code class="g-code">max</code>前缀，因此可以派生出<code class="g-property">min-device-pixel-ratio</code>和<code class="g-property">max-device-pixel-ratio</code>两个媒体特性。</li>
 				<li class="gquote">
 					<p class="gquote-tit"><strong>简单列举几个应用示例：</strong></p>
 					<blockquote class="gquote-cont"><pre><code>@media screen and (resolution){ … }
