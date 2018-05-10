@@ -42,7 +42,7 @@
 		<h1 class="tit">Media Queries: device-height</h1>
 		<ul class="info">
 			<li><strong>版本：CSS3</strong></li>
-			<li>接受min/max：是</li>
+			<li>2018.5.10</li>
 		</ul>
 		<!-- 插入浏览器信息 -->
 	</section>
@@ -52,6 +52,7 @@
 		<h2 class="tit">语法：</h2>
 		<div class="cont">
 			<p><strong>device-height</strong>：<a href="../../values/length/length.htm">&lt;length&gt;</a></p>
+			<p><strong>接受min/max前缀</strong>：是</p>
 		</div>
 	</section>
 	<section id="value" class="g-mod g-attr">
@@ -59,7 +60,7 @@
 		<div class="cont">
 			<dl>
 				<dt><a href="../../values/length/length.htm">&lt;length&gt;</a>：</dt>
-				<dd>用长度值来定义高度。不允许负值</dd>
+				<dd>用长度值来指定屏幕可见高度。不允许负值</dd>
 			</dl>
 		</div>
 	</section>
@@ -68,12 +69,12 @@
 		<div class="cont">
 			<strong>定义输出设备的屏幕可见高度。</strong>
 			<ul>
-				<li>本特性接受min和max前缀，因此可以派生出<em class="g-color-light">min-device-height</em>和<em class="g-color-light">max-device-height</em>两个媒体特性。
+				<li>本特性接受<code class="g-code">min</code>和<code class="g-code">max</code>前缀，因此可以派生出<code class="g-property">min-device-height</code>和<code class="g-property">max-device-height</code>两个媒体特性。
 					<div class="gquote">
 						<p class="gquote-tit"><strong>简单列举几个应用示例：</strong></p>
-						<blockquote class="gquote-cont"><code><xmp>@media screen and (device-height:800px){ … }
-@import url(example.css) screen and (min-device-height:800px);
-<link media="screen and (min-device-height:300px) and (max-device-height:900px)" rel="stylesheet" href="example.css" /></xmp></code></blockquote>
+						<blockquote class="gquote-cont"><code><xmp>@media screen and (device-height: 800px){ … }
+@import url(example.css) screen and (min-device-height: 800px);
+<link media="screen and (min-device-height: 300px) and (max-device-height: 900px)" rel="stylesheet" href="example.css" /></xmp></code></blockquote>
 					</div>
 				</li>
 			</ul>
@@ -104,29 +105,20 @@
 				<tbody>
 					<tr>
 						<td rowspan="2"><strong>Basic Support</strong></td>
-						<td class="unsupport">6.0-8.0</td>
-						<td class="unsupport">2.0-3.0</td>
-						<td class="partsupport">4.0-25.0<sup><a href="#support1">#1</a></sup></td>
-						<td class="partsupport">6.0<sup><a href="#support1">#1</a></sup></td>
-						<td class="support" rowspan="2">15.0+</td>
-						<td class="partsupport">6.0-6.1<sup><a href="#support1">#1</a></sup></td>
-						<td class="partsupport">2.1-4.3<sup><a href="#support1">#1</a></sup></td>
-						<td class="partsupport">18.0-24.0<sup><a href="#support1">#1</a></sup></td>
+						<td class="unsupport">8.0</td>
+						<td class="support" rowspan="2">40.0</td>
+						<td class="support" rowspan="2">40.0+</td>
+						<td class="support" rowspan="2">8.0+</td>
+						<td class="support" rowspan="2">40.0+</td>
+						<td class="support" rowspan="2">8.0+</td>
+						<td class="support" rowspan="2">4.4+</td>
+						<td class="support" rowspan="2">28.0+</td>
 					</tr>
 					<tr>
-						<td class="partsupport">9.0-11.0<sup><a href="#support1">#1</a></sup></td>
-						<td class="support">3.5+</td>
-						<td class="support">26.0+</td>
-						<td class="support">6.1+</td>
-						<td class="support">7.0+</td>
-						<td class="support">4.4+</td>
-						<td class="support">25.0+</td>
+						<td class="support">9.0+</td>
 					</tr>
 				</tbody>
 			</table>
-			<ol class="support-info">
-				<li id="support1">不支持嵌套媒体查询。</li>
-			</ol>
 		</div>
 	</section>
 	<section id="example" class="g-mod g-attr">
@@ -140,8 +132,8 @@
 <title>media features device-height_CSS参考手册_web前端开发参考手册系列</title>
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <style>
-@media screen and (min-device-height:800px){
-	body{color:#f00;}
+@media screen and (min-device-height: 800px){
+	body { color: #f00; }
 }
 </style>
 </head>
