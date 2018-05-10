@@ -42,7 +42,7 @@
 		<h1 class="tit">Media Queries: width</h1>
 		<ul class="info">
 			<li><strong>版本：CSS3</strong></li>
-			<li>媒体：视觉</li>
+			<li>2018.5.10</li>
 		</ul>
 		<!-- 插入浏览器信息 -->
 	</section>
@@ -60,7 +60,7 @@
 		<div class="cont">
 			<dl>
 				<dt><a href="../../values/length/length.htm">&lt;length&gt;</a>：</dt>
-				<dd>用长度值来定义宽度。不允许负值</dd>
+				<dd>用长度值来指定页面可见区域宽度。不允许负值</dd>
 			</dl>
 		</div>
 	</section>
@@ -69,14 +69,14 @@
 		<div class="cont">
 			<strong>定义输出设备中的页面可见区域宽度。</strong>
 			<ul>
-				<li>与<a href="../dimension/width.htm">盒模型width</a>不同，<a href="width.htm">媒体特性width</a>的取值只能是<a href="../../values/length/length.htm">&lt;length&gt;</a>。</li>
-				<li>本特性接受min和max前缀，因此可以派生出<em class="g-color-light">min-width</em>和<em class="g-color-light">max-width</em>两个媒体特性。</li>
+				<li>与盒模型<a href="../dimension/width.htm" class="g-property">width</a>不同，媒体特性<code class="g-property">width</code>的取值只能是 <a href="../../values/length/length.htm">&lt;length&gt;</a>。</li>
+				<li>本特性接受<code class="g-code">min</code>和<code class="g-code">max</code>前缀，因此可以派生出<code class="g-property">min-width</code>和<code class="g-property">max-width</code>两个媒体特性。</li>
 				<li class="gquote">
 					<p class="gquote-tit"><strong>简单列举几个应用示例：</strong></p>
-					<blockquote class="gquote-cont"><pre><code>@media screen and (width){ … }
-@import url(example.css) screen and (width:800px);
-&lt;link media="screen and (min-width:400px) and (max-width:900px)" rel="stylesheet" href="example.css" /&gt;
-&lt;?xml-stylesheet media="not screen and (width:800px)" rel="stylesheet" href="example.css" ?&gt;</code></pre></blockquote>
+					<blockquote class="gquote-cont"><code><xmp>@media screen and (width){ … }
+@import url(example.css) screen and (width: 800px);
+<link media="screen and (min-width: 400px) and (max-width: 900px)" rel="stylesheet" href="example.css" />
+<?xml-stylesheet media="not screen and (width: 800px)" rel="stylesheet" href="example.css" ?></xmp></code></blockquote>
 				</li>
 			</ul>
 		</div>
@@ -106,34 +106,25 @@
 				<tbody>
 					<tr>
 						<td rowspan="3"><strong>Basic Support</strong></td>
-						<td class="unsupport">6.0-8.0</td>
-						<td class="unsupport">2.0-3.0</td>
-						<td class="partsupport">4.0-25.0<sup><a href="#support1">#1</a></sup></td>
-						<td class="partsupport">6.0<sup><a href="#support1">#1</a></sup></td>
-						<td class="support" rowspan="3">15.0+</td>
-						<td class="partsupport">6.0-6.1<sup><a href="#support1">#1</a></sup></td>
-						<td class="partsupport">2.1-4.3<sup><a href="#support1">#1</a></sup></td>
-						<td class="partsupport">18.0-24.0<sup><a href="#support1">#1</a></sup></td>
+						<td class="unsupport">8.0</td>
+						<td class="support" rowspan="3">40.0+</td>
+						<td class="support" rowspan="3">40.0+</td>
+						<td class="support" rowspan="3">8.0+</td>
+						<td class="support" rowspan="3">40.0+</td>
+						<td class="support" rowspan="3">8.0+</td>
+						<td class="support" rowspan="3">4.4+</td>
+						<td class="support" rowspan="3">28.0+</td>
 					</tr>
 					<tr>
-						<td class="partsupport">9.0<sup><a href="#support1">#1</a> <a href="#support2">#2</a></sup></td>
-						<td class="partsupport">3.5-9.0<sup><a href="#support3">#3</a></sup></td>
-						<td class="support" rowspan="2">26.0+</td>
-						<td class="support" rowspan="2">6.1+</td>
-						<td class="support" rowspan="2">7.0+</td>
-						<td class="support" rowspan="2">4.4+</td>
-						<td class="support" rowspan="2">25.0+</td>
+						<td class="partsupport">9.0<sup><a href="#support1">#1</a></sup></td>
 					</tr>
 					<tr>
-						<td class="partsupport">10.0-11.0<sup><a href="#support1">#1</a></sup></td>
 						<td class="support">10.0+</td>
 					</tr>
 				</tbody>
 			</table>
 			<ol class="support-info">
-				<li id="support1">不支持嵌套媒体查询。</li>
-				<li id="support2">使用width作为媒体查询条件，是包含滚动条在内的</li>
-				<li id="support3">支持min-width但却无效。</li>
+				<li id="support1">使用<code class="g-property">width</code>作为媒体查询条件，是包含滚动条在内的</li>
 			</ol>
 		</div>
 	</section>
@@ -148,8 +139,8 @@
 <title>media features width_CSS参考手册_web前端开发参考手册系列</title>
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <style>
-@media all and (min-width:500px) and (max-width:1000px){
-	body{color:#f00;}
+@media all and (min-width: 500px) and (max-width: 1000px){
+	body { color: #f00; }
 }
 </style>
 </head>
