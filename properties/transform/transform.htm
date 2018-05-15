@@ -212,78 +212,197 @@
 <title>2D transform_CSS参考手册_web前端开发参考手册系列</title>
 <meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" />
 <style>
-h1{clear:both;padding-top:10px;font-size:16px;font-family:Arial;}
-.test{zoom:1;width:700px;margin:0;padding:0;list-style:none;}
-.test li{float:left;margin:20px 30px 0 0;border:1px solid #000;}
-.test li p{width:300px;height:100px;margin:0;background:#ddd;}
-.test .matrix{-moz-transform:matrix(0,1,1,1,10px,10px);-webkit-transform:matrix(0,1,1,1,10,10);-ms-transform:matrix(0,1,1,1,10,10);transform:matrix(0,1,1,1,10,10);}
+body{margin-left:30px;}
+h1{clear:both;padding-top:20px;font-size:16px;font-family:Arial;}
+.test{zoom:1;margin:0;padding:0;list-style:none;}
+.test li{display:inline-block;margin:20px 30px 0 0;border:2px solid #5e5e5e;margin:30px;}
+.test li p{width:200px;height:100px;margin:0;background:rgba(220, 218, 218, 0.82);;}
+.test .matrix p{-moz-transform:matrix(0, 1, -1, 1, 20, 20);-webkit-transform:matrix(0, 1, -1, 1, 20, 20);-ms-transform:matrix(0, 1, -1, 1, 20, 20);transform:matrix(0, 1, -1, 1, 20, 20);}
+.test .matrix2 p{-moz-transform:translate(20px,20px) rotate(90deg) skew(45deg);-ms-transform:translate(20px,20px) rotate(90deg) skew(45deg);-webkit-transform:translate(20px,20px) rotate(90deg) skew(45deg);transform:translate(20px,20px) rotate(90deg) skew(45deg);}
 .test .translate p{-moz-transform:translate(5%,10px);-webkit-transform:translate(10px,10px);-ms-transform:translate(10px,10px);transform:translate(10px,10px);}
 .test .translate2 p{-moz-transform:translate(-10px,-10px);-webkit-transform:translate(-10px,-10px);-ms-transform:translate(-10px,-10px);transform:translate(-10px,-10px);}
 .test .translateX p{-moz-transform:translateX(20px);-webkit-transform:translateX(20px);-ms-transform:translateX(20px);transform:translateX(20px);}
 .test .translate3 p{-moz-transform:translate(20px);-webkit-transform:translate(20px);-ms-transform:translate(20px);transform:translate(20px);}
 .test .translateY p{-moz-transform:translateY(10px);-webkit-transform:translateY(10px);-ms-transform:translateY(10px);transform:translateY(10px);}
 .test .translate4 p{-moz-transform:translate(0,10px);-webkit-transform:translate(0,10px);-ms-transform:translate(0,10px);transform:translate(0,10px);}
-.test .rotate{-moz-transform:rotate(-5deg);-webkit-transform:rotate(-5deg);-ms-transform:rotate(-5deg);transform:rotate(-5deg);}
-.test .rotate2{-moz-transform:rotate(5deg);-webkit-transform:rotate(5deg);-ms-transform:rotate(5deg);transform:rotate(5deg);}
-.test .scale{-moz-transform:scale(.8);-webkit-transform:scale(.8);-ms-transform:scale(.8);transform:scale(.8);}
-.test .scale2{-moz-transform:scale(1.2);-webkit-transform:scale(1.2);-ms-transform:scale(1.2);transform:scale(1.2);}
-.test .skew{-moz-transform:skew(-5deg);-webkit-transform:skew(-5deg);-ms-transform:skew(-5deg);transform:skew(-5deg);}
-.test .skew2{-moz-transform:skew(-5deg,-5deg);-webkit-transform:skew(-5deg,-5deg);-ms-transform:skew(-5deg,-5deg);transform:skew(-5deg,-5deg);}
+.test .rotate p{-moz-transform:rotate(-5deg);-webkit-transform:rotate(-5deg);-ms-transform:rotate(-5deg);transform:rotate(-5deg);}
+.test .rotate2 p{-moz-transform:rotate(5deg);-webkit-transform:rotate(5deg);-ms-transform:rotate(5deg);transform:rotate(5deg);}
+.test .scale p{-moz-transform:scale(.8);-webkit-transform:scale(.8);-ms-transform:scale(.8);transform:scale(.8);}
+.test .scalex p{-moz-transform:scaleX(.8);-webkit-transform:scaleX(.8);-ms-transform:scaleX(.8);transform:scaleX(.8);}
+.test .scaley p{-moz-transform:scaleY(1.2);-webkit-transform:scaleY(1.2);-ms-transform:scaleY(1.2);transform:scaleY(1.2);}
+.test .scale2 p{-moz-transform:scale(1.2);-webkit-transform:scale(1.2);-ms-transform:scale(1.2);transform:scale(1.2);}
+.test .skew p{-moz-transform:skew(-15deg);-webkit-transform:skew(-15deg);-ms-transform:skew(-15deg);transform:skew(-15deg);}
+.test .skewx p{-moz-transform:skewX(15deg);-webkit-transform:skewX(15deg);-ms-transform:skewX(15deg);transform:skewX(15deg);}
+.test .skewy p{-moz-transform:skewY(15deg);-webkit-transform:skewY(15deg);transform:skewY(15deg);}
+.test .skew2 p{-moz-transform:skew(-15deg,-15deg);-webkit-transform:skew(-15deg,-15deg);-ms-transform:skew(-15deg,-15deg);transform:skew(-15deg,-15deg);}
+.test .per{perspective:200px;}
+.test .matrix3d p{-moz-transform:matrix3d(0.642788, 0.766044, 0, 0, -0.766044, 0.642788, 0, 0, 0, 0, 1, 0, 0, 0, 50, 1);
+	-webkit-transform:matrix3d(0.642788, 0.766044, 0, 0, -0.766044, 0.642788, 0, 0, 0, 0, 1, 0, 0, 0, 50, 1);
+	transform:matrix3d(0.642788, 0.766044, 0, 0, -0.766044, 0.642788, 0, 0, 0, 0, 1, 0, 0, 0, 50, 1);}
+.test .matrix3d2 p{-moz-transform:rotateZ(50deg) translateZ(50px);-ms-transform:rotateZ(50deg) translateZ(50px);-webkit-transform:rotateZ(50deg) translateZ(50px);transform:rotateZ(50deg) translateZ(50px);}
+.test .translatez p{-moz-transform:translateZ(-50px);-webkit-transform:translateZ(-50px);-ms-transform:translateZ(-50px);transform:translateZ(-50px);}
+.test .translatez1 p{-moz-transform:translateZ(50px);-webkit-transform:translateZ(50px);-ms-transform:translateZ(50px);transform:translateZ(50px);}
+.test .translate3d p{-moz-transform:translate3d(10px,10px,-50px);-webkit-transform:translate3d(10px,10px,-50px);-ms-transform:translate3d(10px,10px,-50px);transform:translate3d(10px,10px,-50px);}
+.test .translate3d2 p{-moz-transform:translate3d(10px,10px,50px);-webkit-transform:translate3d(10px,10px,50px);-ms-transform:translate3d(10px,10px,50px);transform:translate3d(10px,10px,50px);}
+.test .rotate3d p{-moz-transform:rotate3d(0.5,0.5,0.5,50deg);-webkit-transform:rotate3d(0.5,0.5,0.5,50deg);-ms-transform:rotate3d(0.5,0.5,0.5,50deg);transform:rotate3d(0.5,0.5,0.5,50deg);}
+.test .rotatex p{-moz-transform:rotateX(50deg);-webkit-transform:rotateX(50deg);-ms-transform:rotateX(50deg);transform:rotateX(50deg);}
+.test .rotatey p{-moz-transform:rotateY(50deg);-webkit-transform:rotateY(50deg);-ms-transform:rotateY(50deg);transform:rotateY(50deg);}
+.test .rotatez p{-moz-transform:rotateZ(50deg);-webkit-transform:rotateZ(50deg);-ms-transform:rotateZ(50deg);transform:rotateZ(50deg);}
+.test .scalez p{-moz-transform:scaleZ(.8) rotateX(50deg);-webkit-transform:scaleZ(.8) rotateX(50deg);-ms-transform:scaleZ(.8) rotateX(50deg);transform:scaleZ(.8) rotateX(50deg);}
+.test .scalez2 p{-moz-transform:scaleZ(2) rotateX(50deg);-webkit-transform:scaleZ(2) rotateX(50deg);-ms-transform:scaleZ(2) rotateX(50deg);transform:scaleZ(2) rotateX(50deg);}
+.test .scale3d p{-moz-transform:scale3d(0.8,0.8,0.8) rotateX(50deg);-webkit-transform:scale3d(0.8,0.8,0.8) rotateX(50deg);-ms-transform:scale3d(0.8,0.8,0.8) rotateX(50deg);transform:scale3d(0.8,0.8,0.8) rotateX(50deg);}
+.test .scale3d2 p{-moz-transform:scale3d(1,1,0.8) rotateX(50deg);-webkit-transform:scale3d(1,1,0.8) rotateX(50deg);-ms-transform:scale3d(1,1,0.8) rotateX(50deg);transform:scale3d(1,1,0.8) rotateX(50deg);}
+
 </style>
 </head>
 <body>
 <h1>矩阵变换：matrix()</h1>
+<p>  matrix(0, 1, -1, 1, 20, 20)  等价于 translate(20px,20px) rotate(90deg) skew(45deg);</p>
 <ul class="test">
 	<li class="matrix">
-		<p>transform:matrix(0,1,1,1,10,10)</p>
+		<p>matrix(0, 1, -1, 1, 20, 20)</p>
+	</li>
+	<li class='matrix2'>
+		<p>translate(20px,20px) rotate(90deg) skew(45deg)</p>
 	</li>
 </ul>
 <h1>平移：translate(), translateX(), translateY()</h1>
 <ul class="test">
 	<li class="translate">
-		<p>transform:translate(5%,10px)</p>
+		 <p>translate(5%,10px)</p>
 	</li>
 	<li class="translate2">
-		<p>transform:translate(-10px,-10px)</p>
+		 <p>translate(-10px,-10px)</p>
 	</li>
 	<li class="translateX">
-		<p>transform:translateX(20px)</p>
+		 <p>translateX(20px)</p>
 	</li>
 	<li class="translate3">
-		<p>transform:translate(20px)</p>
+		 <p>translate(20px)</p>
 	</li>
 	<li class="translateY">
-		<p>transform:translateY(10px)</p>
+		 <p>translateY(10px)</p>
 	</li>
 	<li class="translate4">
-		<p>transform:translate(0,10px)</p>
+		 <p>translate(0,10px)</p>
 	</li>
 </ul>
 <h1>旋转：rotate()</h1>
 <ul class="test">
 	<li class="rotate">
-		<p>transform:rotate(-15deg)</p>
+		 <p>rotate(-5deg)</p>
 	</li>
 	<li class="rotate2">
-		<p>transform:rotate(15deg)</p>
+		 <p>rotate(5deg)</p>
 	</li>
 </ul>
-<h1>缩放：scale()</h1>
+<h1>缩放：scale(),scaleX(),scaleY()</h1>
 <ul class="test">
 	<li class="scale">
-		<p>transform:scale(.8)</p>
+		 <p>scale(.8)</p>
 	</li>
 	<li class="scale2">
-		<p>transform:scale(1.2)</p>
+		 <p>scale(1.2)</p>
+	</li>
+	<li class="scalex">
+		 <p>scaleX(0.8)</p>
+	</li>
+	<li class="scaley">
+		 <p>scaleY(1.2)</p>
 	</li>
 </ul>
-<h1>扭曲：skew()</h1>
+<h1>扭曲：skew(),skewX(),skewY()</h1>
 <ul class="test">
 	<li class="skew">
-		<p>transform:skew(-5deg)</p>
+		 <p>skew(-15deg)</p>
 	</li>
 	<li class="skew2">
-		<p>transform:skew(-5deg,-5deg)</p>
+		 <p>skew(-15deg,-15deg)</p>
+	</li>
+	<li class="skewx">
+		 <p>skewX(15deg)</p>
+	</li>
+	<li class="skewy">
+		 <p>skewY(15deg)</p>
+	</li>
+</ul>
+
+	<h1><h2>3D效果</h2></h1>
+	<hr>
+<h1>矩阵：matrix3d();</h1>
+	<p>matrix3d(0.642788, 0.766044, 0, 0, -0.766044, 0.642788, 0, 0, 0, 0, 1, 0, 0, 0, 50, 1) 即rotateZ(50deg) translateZ(50px)的效果</p>
+<ul class="test">
+	<li class="matrix3d">
+		 <p>matrix3d</p>
+	</li>
+	<li class="matrix3d2">
+		 <p>rotateZ(50deg) translateZ(50px)</p>
+	</li>
+	<li class="per matrix3d">
+		 <p>matrix3d,200perspective</p>
+	</li>
+</ul>
+<h1>平移：translate3d(),translateZ()</h1>
+<ul class="test">
+	<p>在父元素perspective:200px下的效果</p>
+	<li class="per translate3d">
+		<p>translate3d(10px,10px,-50px)</p>
+	</li>
+	<li class="per translate3d2">
+		<p>translate3d(10px,10px,50px)</p>
+	</li>
+	<li class="per translatez">
+		<p>translateZ(-50px)</p>
+	</li>
+	<li class="per translatez1">
+		<p>translateZ(50px)</p>
+	</li>
+</ul>
+<h1>旋转: rotate3d(),rotateX(),rotateY(),rotateZ()</h1>
+<p>父元素perspective:0;</p>
+<ul class="test">
+	<li class="rotatex">
+		<p>rotateX(50deg)</p>
+	</li>
+	<li class="rotatey">
+		<p>rotateY(50deg)</p>
+	</li>
+	<li class="rotatez">
+		<p>rotateZ(50deg)</p>
+	</li>
+	<li class="rotate3d">
+		<p>rotate3d(0.5,0.5,0.5,50deg)</p>
+	</li>
+</ul>
+<p>父元素perspective:200px;</p>
+<ul class="test">
+	<li class="per rotatex">
+		<p>rotateX(50deg)</p>
+	</li>
+	<li class="per rotatey">
+		<p>rotateY(50deg)</p>
+	</li>
+	<li class="per rotatez">
+		<p>rotateZ(50deg)</p>
+	</li>
+	<li class="per rotate3d">
+		<p>rotate3d(0.5,0.5,0.5,50deg)</p>
+	</li>
+</ul>
+<h1>缩放：scale3d(),scaleZ()</h1>
+<p>单独使用无效果，需配合其他变形函数一起使用，下面样例添加rotateX(50deg)效果</p>
+<ul class="test">
+	<li class="per scale3d">
+		 <p>scale3d(0.8,0.8,0.8)</p>
+	</li>
+	<li class="per scale3d2">
+		 <p>scale3d(1,1,0.8)</p>
+	</li>
+	<li class="per scalez">
+		 <p>scaleZ(0.8)</p>
+	</li>
+	<li class="per scalez2">
+		 <p>scaleZ(2)</p>
 	</li>
 </ul>
 </body>
